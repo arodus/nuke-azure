@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.1 [CommitSha: 8eca516b].
+// Generated with Nuke.CodeGeneration, Version: 0.6.2 [CommitSha: ff25463a].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureMaps.json.
 
 using JetBrains.Annotations;

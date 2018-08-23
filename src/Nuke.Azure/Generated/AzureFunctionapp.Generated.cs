@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.1 [CommitSha: 8eca516b].
+// Generated with Nuke.CodeGeneration, Version: 0.6.2 [CommitSha: ff25463a].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureFunctionapp.json.
 
 using JetBrains.Annotations;
@@ -108,6 +108,22 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureFunctionappConfig(Configure<AzureFunctionappConfigSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureFunctionappDeploymentListPublishingProfiles(Configure<AzureFunctionappDeploymentListPublishingProfilesSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentListPublishingProfilesSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureFunctionappIdentityAssign(Configure<AzureFunctionappIdentityAssignSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappIdentityAssignSettings());
@@ -127,22 +143,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureFunctionappIdentityShow(Configure<AzureFunctionappIdentityShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappIdentityShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureFunctionappConfig(Configure<AzureFunctionappConfigSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureFunctionappDeploymentListPublishingProfiles(Configure<AzureFunctionappDeploymentListPublishingProfilesSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentListPublishingProfilesSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -244,22 +244,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureFunctionappDeploymentUserSet(Configure<AzureFunctionappDeploymentUserSetSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentUserSetSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureFunctionappDeploymentUserShow(Configure<AzureFunctionappDeploymentUserShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentUserShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureFunctionappDeploymentSourceConfig(Configure<AzureFunctionappDeploymentSourceConfigSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentSourceConfigSettings());
@@ -311,6 +295,22 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureFunctionappDeploymentSourceUpdateToken(Configure<AzureFunctionappDeploymentSourceUpdateTokenSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentSourceUpdateTokenSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureFunctionappDeploymentUserSet(Configure<AzureFunctionappDeploymentUserSetSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentUserSetSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureFunctionappDeploymentUserShow(Configure<AzureFunctionappDeploymentUserShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentUserShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -682,6 +682,76 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureFunctionappConfigSettings
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureFunctionappConfigSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("functionapp config")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureFunctionappDeploymentListPublishingProfilesSettings
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureFunctionappDeploymentListPublishingProfilesSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
+        /// <summary><p>Name of the function app.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("functionapp deployment list-publishing-profiles")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureFunctionappIdentityAssignSettings
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
@@ -802,76 +872,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureFunctionappConfigSettings
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureFunctionappConfigSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("functionapp config")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureFunctionappDeploymentListPublishingProfilesSettings
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureFunctionappDeploymentListPublishingProfilesSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>Name of the function app.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("functionapp deployment list-publishing-profiles")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureFunctionappConfigAppsettingsDeleteSettings
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
@@ -965,9 +965,11 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        public virtual string Settings { get; internal set; }
+        public virtual IReadOnlyDictionary<string, object> Settings => SettingsInternal.AsReadOnly();
+        internal Dictionary<string, object> SettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        public virtual string SlotSettings { get; internal set; }
+        public virtual IReadOnlyDictionary<string, object> SlotSettings => SlotSettingsInternal.AsReadOnly();
+        internal Dictionary<string, object> SlotSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -984,8 +986,8 @@ namespace Nuke.Azure
               .Add("functionapp config appsettings set")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--settings {value}", Settings)
-              .Add("--slot-settings {value}", SlotSettings)
+              .Add("--settings {value}", Settings, "{key}={value}", separator: ' ')
+              .Add("--slot-settings {value}", SlotSettings, "{key}={value}", separator: ' ')
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1355,76 +1357,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureFunctionappDeploymentUserSetSettings
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureFunctionappDeploymentUserSetSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>User name.</p></summary>
-        public virtual string UserName { get; internal set; }
-        /// <summary><p>Password, will prompt if not specified.</p></summary>
-        public virtual string Password { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("functionapp deployment user set")
-              .Add("--user-name {value}", UserName)
-              .Add("--password {value}", Password, secret: true)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureFunctionappDeploymentUserShowSettings
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureFunctionappDeploymentUserShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("functionapp deployment user show")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureFunctionappDeploymentSourceConfigSettings
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
@@ -1730,6 +1662,76 @@ namespace Nuke.Azure
             arguments
               .Add("functionapp deployment source update-token")
               .Add("--git-token {value}", GitToken)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureFunctionappDeploymentUserSetSettings
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureFunctionappDeploymentUserSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
+        /// <summary><p>User name.</p></summary>
+        public virtual string UserName { get; internal set; }
+        /// <summary><p>Password, will prompt if not specified.</p></summary>
+        public virtual string Password { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("functionapp deployment user set")
+              .Add("--user-name {value}", UserName)
+              .Add("--password {value}", Password, secret: true)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureFunctionappDeploymentUserShowSettings
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureFunctionappDeploymentUserShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("functionapp deployment user show")
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3089,6 +3091,238 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureFunctionappConfigSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureFunctionappConfigSettingsExtensions
+    {
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSettings SetDebug(this AzureFunctionappConfigSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSettings ResetDebug(this AzureFunctionappConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSettings SetHelp(this AzureFunctionappConfigSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSettings ResetHelp(this AzureFunctionappConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSettings SetOutput(this AzureFunctionappConfigSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSettings ResetOutput(this AzureFunctionappConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSettings SetQuery(this AzureFunctionappConfigSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSettings ResetQuery(this AzureFunctionappConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSettings SetVerbose(this AzureFunctionappConfigSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSettings ResetVerbose(this AzureFunctionappConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureFunctionappDeploymentListPublishingProfilesSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureFunctionappDeploymentListPublishingProfilesSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetName(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetName(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetResourceGroup(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetResourceGroup(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetDebug(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetDebug(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetHelp(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetHelp(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetOutput(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetOutput(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetQuery(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetQuery(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetVerbose(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetVerbose(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureFunctionappIdentityAssignSettingsExtensions
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
@@ -3527,238 +3761,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureFunctionappConfigSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappConfigSettingsExtensions
-    {
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSettings SetDebug(this AzureFunctionappConfigSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSettings ResetDebug(this AzureFunctionappConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSettings SetHelp(this AzureFunctionappConfigSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSettings ResetHelp(this AzureFunctionappConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSettings SetOutput(this AzureFunctionappConfigSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSettings ResetOutput(this AzureFunctionappConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSettings SetQuery(this AzureFunctionappConfigSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSettings ResetQuery(this AzureFunctionappConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSettings SetVerbose(this AzureFunctionappConfigSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSettings ResetVerbose(this AzureFunctionappConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureFunctionappDeploymentListPublishingProfilesSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappDeploymentListPublishingProfilesSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetName(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetName(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetResourceGroup(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetResourceGroup(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetDebug(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetDebug(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetHelp(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetHelp(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetOutput(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetOutput(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetQuery(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetQuery(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings SetVerbose(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentListPublishingProfilesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentListPublishingProfilesSettings ResetVerbose(this AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureFunctionappConfigAppsettingsDeleteSettingsExtensions
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
@@ -4088,38 +4090,86 @@ namespace Nuke.Azure
         }
         #endregion
         #region Settings
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/> to a new dictionary.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settings)
+        public static AzureFunctionappConfigAppsettingsSetSettings SetSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, IDictionary<string, object> settings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Settings = settings;
+            toolSettings.SettingsInternal = settings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings ResetSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
+        public static AzureFunctionappConfigAppsettingsSetSettings ClearSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Settings = null;
+            toolSettings.SettingsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings AddSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settingKey, object settingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Add(settingKey, settingValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings RemoveSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settingKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Remove(settingKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settingKey, object settingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal[settingKey] = settingValue;
             return toolSettings;
         }
         #endregion
         #region SlotSettings
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/> to a new dictionary.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettings)
+        public static AzureFunctionappConfigAppsettingsSetSettings SetSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, IDictionary<string, object> slotSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettings = slotSettings;
+            toolSettings.SlotSettingsInternal = slotSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings ResetSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
+        public static AzureFunctionappConfigAppsettingsSetSettings ClearSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettings = null;
+            toolSettings.SlotSettingsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings AddSlotSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettingKey, object slotSettingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Add(slotSettingKey, slotSettingValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings RemoveSlotSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettingKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Remove(slotSettingKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetSlotSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettingKey, object slotSettingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal[slotSettingKey] = slotSettingValue;
             return toolSettings;
         }
         #endregion
@@ -5529,238 +5579,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureFunctionappDeploymentUserSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappDeploymentUserSetSettingsExtensions
-    {
-        #region UserName
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.UserName"/>.</em></p><p>User name.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings SetUserName(this AzureFunctionappDeploymentUserSetSettings toolSettings, string userName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UserName = userName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.UserName"/>.</em></p><p>User name.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings ResetUserName(this AzureFunctionappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UserName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Password
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.Password"/>.</em></p><p>Password, will prompt if not specified.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings SetPassword(this AzureFunctionappDeploymentUserSetSettings toolSettings, string password)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = password;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.Password"/>.</em></p><p>Password, will prompt if not specified.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings ResetPassword(this AzureFunctionappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings SetDebug(this AzureFunctionappDeploymentUserSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings ResetDebug(this AzureFunctionappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings SetHelp(this AzureFunctionappDeploymentUserSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings ResetHelp(this AzureFunctionappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings SetOutput(this AzureFunctionappDeploymentUserSetSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings ResetOutput(this AzureFunctionappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings SetQuery(this AzureFunctionappDeploymentUserSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings ResetQuery(this AzureFunctionappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings SetVerbose(this AzureFunctionappDeploymentUserSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserSetSettings ResetVerbose(this AzureFunctionappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureFunctionappDeploymentUserShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappDeploymentUserShowSettingsExtensions
-    {
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserShowSettings SetDebug(this AzureFunctionappDeploymentUserShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserShowSettings ResetDebug(this AzureFunctionappDeploymentUserShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserShowSettings SetHelp(this AzureFunctionappDeploymentUserShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserShowSettings ResetHelp(this AzureFunctionappDeploymentUserShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserShowSettings SetOutput(this AzureFunctionappDeploymentUserShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserShowSettings ResetOutput(this AzureFunctionappDeploymentUserShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserShowSettings SetQuery(this AzureFunctionappDeploymentUserShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserShowSettings ResetQuery(this AzureFunctionappDeploymentUserShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserShowSettings SetVerbose(this AzureFunctionappDeploymentUserShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappDeploymentUserShowSettings ResetVerbose(this AzureFunctionappDeploymentUserShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureFunctionappDeploymentSourceConfigSettingsExtensions
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
@@ -6979,6 +6797,238 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentSourceUpdateTokenSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureFunctionappDeploymentSourceUpdateTokenSettings ResetVerbose(this AzureFunctionappDeploymentSourceUpdateTokenSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureFunctionappDeploymentUserSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureFunctionappDeploymentUserSetSettingsExtensions
+    {
+        #region UserName
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.UserName"/>.</em></p><p>User name.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings SetUserName(this AzureFunctionappDeploymentUserSetSettings toolSettings, string userName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UserName = userName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.UserName"/>.</em></p><p>User name.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings ResetUserName(this AzureFunctionappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UserName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Password
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.Password"/>.</em></p><p>Password, will prompt if not specified.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings SetPassword(this AzureFunctionappDeploymentUserSetSettings toolSettings, string password)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = password;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.Password"/>.</em></p><p>Password, will prompt if not specified.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings ResetPassword(this AzureFunctionappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings SetDebug(this AzureFunctionappDeploymentUserSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings ResetDebug(this AzureFunctionappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings SetHelp(this AzureFunctionappDeploymentUserSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings ResetHelp(this AzureFunctionappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings SetOutput(this AzureFunctionappDeploymentUserSetSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings ResetOutput(this AzureFunctionappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings SetQuery(this AzureFunctionappDeploymentUserSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings ResetQuery(this AzureFunctionappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings SetVerbose(this AzureFunctionappDeploymentUserSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserSetSettings ResetVerbose(this AzureFunctionappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureFunctionappDeploymentUserShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureFunctionappDeploymentUserShowSettingsExtensions
+    {
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserShowSettings SetDebug(this AzureFunctionappDeploymentUserShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserShowSettings ResetDebug(this AzureFunctionappDeploymentUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserShowSettings SetHelp(this AzureFunctionappDeploymentUserShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserShowSettings ResetHelp(this AzureFunctionappDeploymentUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserShowSettings SetOutput(this AzureFunctionappDeploymentUserShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserShowSettings ResetOutput(this AzureFunctionappDeploymentUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserShowSettings SetQuery(this AzureFunctionappDeploymentUserShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserShowSettings ResetQuery(this AzureFunctionappDeploymentUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentUserShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserShowSettings SetVerbose(this AzureFunctionappDeploymentUserShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentUserShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentUserShowSettings ResetVerbose(this AzureFunctionappDeploymentUserShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

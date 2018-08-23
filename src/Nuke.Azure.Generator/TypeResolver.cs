@@ -113,7 +113,7 @@ namespace Nuke.Azure.Generator
                 typeReference.Type = "int";
             else if (IsDictionary(summary))
             {
-                typeReference.Type = "Dictionary<string,string>";
+                typeReference.Type = "Dictionary<string, object>";
                 typeReference.ItemFormat = "{key}={value}";
                 typeReference.Separator = ' ';
             }
@@ -155,6 +155,7 @@ namespace Nuke.Azure.Generator
         private bool IsBoolFlag(Parameter parameter)
         {
             return parameter.Summary.StartsWith("Specifies whether", StringComparison.OrdinalIgnoreCase)
+                   || parameter.Name.StartsWith("--no-") //--no-wait, --no-auto-upgrade ...
                    || parameter.Summary.StartsWith("Show the")
                    || parameter.Summary == "Show public ip address, FQDN, and power states. command will run slow."
                    || parameter.Summary.IndexOf("Wheter", StringComparison.OrdinalIgnoreCase) == 0 || parameter.FormatString == "--service-principal"
@@ -182,7 +183,8 @@ namespace Nuke.Azure.Generator
             return summary.IndexOf("Space-separated list of key=value pairs", StringComparison.OrdinalIgnoreCase) >= 0
                    || summary.IndexOf("in space-separated key=value pairs", StringComparison.OrdinalIgnoreCase) >= 0
                    || summary.EndsWith(" in 'key=value' format.", StringComparison.OrdinalIgnoreCase)
-                   || summary.IndexOf("A list of name-value pairs", StringComparison.OrdinalIgnoreCase) == 0;
+                   || summary.IndexOf("A list of name-value pairs", StringComparison.OrdinalIgnoreCase) == 0
+                   || summary.StartsWith("Space-separated") && summary.EndsWith("in a format of <name>=<value>.");
         }
 
         private bool IsCommaSeparatedList(string summary)

@@ -6,27 +6,27 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/midb.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/mi.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/elastic-pool.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/server.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/db.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/failover-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/dw.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/db/threat-policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/db/op.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/db/audit-policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/db/tde.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/db/replica.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/elastic-pool/op.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/server/firewall-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/server/vnet-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/server/tde-key.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/server/key.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/server/conn-policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/server/dns-alias.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sql/server/ad-admin.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/db.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/dw.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/elastic-pool.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/failover-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/mi.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/midb.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/server.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/db/audit-policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/db/op.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/db/replica.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/db/tde.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/db/threat-policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/elastic-pool/op.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/server/ad-admin.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/server/conn-policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/server/dns-alias.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/server/firewall-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/server/key.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/server/tde-key.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sql/server/vnet-rule.yml"
   ],
   "name": "AzureSql",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest",
@@ -63,944 +63,6 @@
             "type": "string",
             "format": "--usage {value}",
             "help": "Name of usage metric to return."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MidbCreate",
-      "definiteArgument": "sql midb create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ManagedInstance",
-            "type": "string",
-            "format": "--managed-instance {value}",
-            "help": "Name of the Azure SQL managed instance."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Azure SQL Managed Database."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Collation",
-            "type": "string",
-            "format": "--collation {value}",
-            "help": "The collation of the Azure SQL Managed Database collation to use, e.g.: SQL_Latin1_General_CP1_CI_AS or Latin1_General_100_CS_AS_SC."
-          },
-          {
-            "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
-            "help": "Do not wait for the long-running operation to finish."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MidbDelete",
-      "definiteArgument": "sql midb delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ManagedInstance",
-            "type": "string",
-            "format": "--managed-instance {value}",
-            "help": "Name of the Azure SQL managed instance."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Azure SQL Managed Database."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "Yes",
-            "type": "string",
-            "format": "--yes {value}",
-            "help": "Do not prompt for confirmation."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MidbList",
-      "definiteArgument": "sql midb list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ManagedInstance",
-            "type": "string",
-            "format": "--managed-instance {value}",
-            "help": "Name of the Azure SQL managed instance."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MidbRestore",
-      "definiteArgument": "sql midb restore",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "DestName",
-            "type": "string",
-            "format": "--dest-name {value}",
-            "help": "Name of the managed database that will be created as the restore destination."
-          },
-          {
-            "name": "ManagedInstance",
-            "type": "string",
-            "format": "--managed-instance {value}",
-            "help": "Name of the Azure SQL managed instance."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Azure SQL Managed Database."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "DestMi",
-            "type": "string",
-            "format": "--dest-mi {value}",
-            "help": "Name of the managed instance to restore managed database to. This can be same managed instance, or another managed instance on same subscription. When not specified it defaults to source managed instance."
-          },
-          {
-            "name": "DestResourceGroup",
-            "type": "string",
-            "format": "--dest-resource-group {value}",
-            "help": "Name of the resource group of the managed instance to restore managed database to. When not specified it defaults to source resource group."
-          },
-          {
-            "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "Time",
-            "type": "string",
-            "format": "--time {value}",
-            "help": "The point in time of the source database that will be restored to create the new database. Must be greater than or equal to the source database's earliestRestoreDate value. Time should be in following format: \"YYYY-MM-DDTHH:MM:SS\"."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MidbShow",
-      "definiteArgument": "sql midb show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ManagedInstance",
-            "type": "string",
-            "format": "--managed-instance {value}",
-            "help": "Name of the Azure SQL managed instance."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Azure SQL Managed Database."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MiCreate",
-      "definiteArgument": "sql mi create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AdminPassword",
-            "type": "string",
-            "format": "--admin-password {value}",
-            "secret": true,
-            "help": "The administrator login password (required for managed instance creation)."
-          },
-          {
-            "name": "AdminUser",
-            "type": "string",
-            "format": "--admin-user {value}",
-            "help": "Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation)."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The managed instance name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "help": "Name or ID of the subnet that allows access to an Azure Sql Managed Instance. If subnet name is provided, --vnet-name must be provided."
-          },
-          {
-            "name": "AssignIdentity",
-            "type": "string",
-            "format": "--assign-identity {value}",
-            "help": "Generate and assign an Azure Active Directory Identity for this managed instance for use with key management services like Azure KeyVault."
-          },
-          {
-            "name": "Capacity",
-            "type": "string",
-            "format": "--capacity {value}",
-            "help": "The capacity of the managed instance in vcores."
-          },
-          {
-            "name": "LicenseType",
-            "type": "SqlMiLicenseType",
-            "format": "--license-type {value}",
-            "help": "The license type to apply for this managed instance."
-          },
-          {
-            "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "Storage",
-            "type": "string",
-            "format": "--storage {value}",
-            "help": "The storage size of the managed instance. Storage size must be specified in increments of 32 GB."
-          },
-          {
-            "name": "VnetName",
-            "type": "string",
-            "format": "--vnet-name {value}",
-            "help": "The virtual network name."
-          },
-          {
-            "name": "Edition",
-            "type": "string",
-            "format": "--edition {value}",
-            "help": "The edition component of the sku. Allowed value is GeneralPurpose."
-          },
-          {
-            "name": "Family",
-            "type": "string",
-            "format": "--family {value}",
-            "help": "The compute generation component of the sku. Allowed values include: Gen4, Gen5."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MiDelete",
-      "definiteArgument": "sql mi delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The managed instance name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "Yes",
-            "type": "string",
-            "format": "--yes {value}",
-            "help": "Do not prompt for confirmation."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MiList",
-      "definiteArgument": "sql mi list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MiShow",
-      "definiteArgument": "sql mi show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The managed instance name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MiUpdate",
-      "definiteArgument": "sql mi update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The managed instance name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AdminPassword",
-            "type": "string",
-            "format": "--admin-password {value}",
-            "secret": true,
-            "help": "The administrator login password (required for managed instance creation)."
-          },
-          {
-            "name": "AssignIdentity",
-            "type": "string",
-            "format": "--assign-identity {value}",
-            "help": "Generate and assign an Azure Active Directory Identity for this managed instance for use with key management services like Azure KeyVault. If identity is already assigned - do nothing."
-          },
-          {
-            "name": "Capacity",
-            "type": "string",
-            "format": "--capacity {value}",
-            "help": "The capacity of the managed instance in vcores."
-          },
-          {
-            "name": "LicenseType",
-            "type": "SqlMiLicenseType",
-            "format": "--license-type {value}",
-            "help": "The license type to apply for this managed instance."
-          },
-          {
-            "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "Storage",
-            "type": "string",
-            "format": "--storage {value}",
-            "help": "The storage size of the managed instance. Storage size must be specified in increments of 32 GB."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ElasticPoolCreate",
-      "definiteArgument": "sql elastic-pool create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the elastic pool."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "DbDtuMax",
-            "type": "string",
-            "format": "--db-dtu-max {value}",
-            "help": "The maximum capacity (in DTUs or vcores) any one database can consume."
-          },
-          {
-            "name": "DbDtuMin",
-            "type": "string",
-            "format": "--db-dtu-min {value}",
-            "help": "The minumum capacity (in DTUs or vcores) each database is guaranteed."
-          },
-          {
-            "name": "LicenseType",
-            "type": "SqlMiLicenseType",
-            "format": "--license-type {value}",
-            "help": "The license type to apply for this elastic pool."
-          },
-          {
-            "name": "MaxSize",
-            "type": "string",
-            "format": "--max-size {value}",
-            "help": "The max storage size. If no unit is specified, defaults to bytes (B)."
-          },
-          {
-            "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "ZoneRedundant",
-            "type": "bool",
-            "format": "--zone-redundant",
-            "help": "Specifies whether to enable zone redundancy."
-          },
-          {
-            "name": "Capacity",
-            "type": "string",
-            "format": "--capacity {value}",
-            "help": "The capacity component of the sku in integer number of DTUs or vcores."
-          },
-          {
-            "name": "Edition",
-            "type": "string",
-            "format": "--edition {value}",
-            "help": "The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical."
-          },
-          {
-            "name": "Family",
-            "type": "string",
-            "format": "--family {value}",
-            "help": "The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ElasticPoolDelete",
-      "definiteArgument": "sql elastic-pool delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the elastic pool."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
-            "help": "Do not wait for the long-running operation to finish."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ElasticPoolList",
-      "definiteArgument": "sql elastic-pool list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "The number of elements in the collection to skip."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ElasticPoolListDbs",
-      "definiteArgument": "sql elastic-pool list-dbs",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the elastic pool."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ElasticPoolListEditions",
-      "definiteArgument": "sql elastic-pool list-editions",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Available",
-            "type": "string",
-            "format": "--available {value}",
-            "help": "If specified, show only results that are available in the specified region."
-          },
-          {
-            "name": "ShowDetails",
-            "type": "SqlElasticPoolListEditionsShowDetails",
-            "format": "--show-details {value}",
-            "help": "List of additional details to include in output."
-          },
-          {
-            "name": "Dtu",
-            "type": "int",
-            "format": "--dtu {value}",
-            "help": "Number of DTUs to search for. If unspecified, all DTU sizes are shown."
-          },
-          {
-            "name": "Edition",
-            "type": "string",
-            "format": "--edition {value}",
-            "help": "Edition to search for. If unspecified, all editions are shown."
-          },
-          {
-            "name": "Vcores",
-            "type": "int",
-            "format": "--vcores {value}",
-            "help": "Number of vcores to search for. If unspecified, all vcore sizes are shown."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ElasticPoolShow",
-      "definiteArgument": "sql elastic-pool show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the elastic pool."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ElasticPoolUpdate",
-      "definiteArgument": "sql elastic-pool update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the elastic pool."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "DbDtuMax",
-            "type": "string",
-            "format": "--db-dtu-max {value}",
-            "help": "The maximum capacity (in DTUs or vcores) any one database can consume."
-          },
-          {
-            "name": "DbDtuMin",
-            "type": "string",
-            "format": "--db-dtu-min {value}",
-            "help": "The minumum capacity (in DTUs or vcores) each database is guaranteed."
-          },
-          {
-            "name": "MaxSize",
-            "type": "string",
-            "format": "--max-size {value}",
-            "help": "The max storage size. If no unit is specified, defaults to bytes (B)."
-          },
-          {
-            "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "ZoneRedundant",
-            "type": "bool",
-            "format": "--zone-redundant",
-            "help": "Specifies whether to enable zone redundancy."
-          },
-          {
-            "name": "Capacity",
-            "type": "string",
-            "format": "--capacity {value}",
-            "help": "The capacity component of the sku in integer number of DTUs or vcores."
-          },
-          {
-            "name": "Edition",
-            "type": "string",
-            "format": "--edition {value}",
-            "help": "The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical."
-          },
-          {
-            "name": "Family",
-            "type": "string",
-            "format": "--family {value}",
-            "help": "The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerCreate",
-      "definiteArgument": "sql server create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AdminPassword",
-            "type": "string",
-            "format": "--admin-password {value}",
-            "secret": true,
-            "help": "The administrator login password (required for server creation)."
-          },
-          {
-            "name": "AdminUser",
-            "type": "string",
-            "format": "--admin-user {value}",
-            "help": "Administrator username for the server. Once created it cannot be changed."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AssignIdentity",
-            "type": "string",
-            "format": "--assign-identity {value}",
-            "help": "Generate and assign an Azure Active Directory Identity for this serverfor use with key management services like Azure KeyVault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerDelete",
-      "definiteArgument": "sql server delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Yes",
-            "type": "string",
-            "format": "--yes {value}",
-            "help": "Do not prompt for confirmation."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerList",
-      "definiteArgument": "sql server list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerListUsages",
-      "definiteArgument": "sql server list-usages",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerShow",
-      "definiteArgument": "sql server show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerUpdate",
-      "definiteArgument": "sql server update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AdminPassword",
-            "type": "string",
-            "format": "--admin-password {value}",
-            "secret": true,
-            "help": "The administrator login password."
-          },
-          {
-            "name": "Assign_identity",
-            "type": "string",
-            "format": "--assign_identity {value}",
-            "help": "Generate and assign an Azure Active Directory Identity for this serverfor use with key management services like Azure KeyVault."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
       }
@@ -1048,14 +110,14 @@
           },
           {
             "name": "LicenseType",
-            "type": "SqlMiLicenseType",
+            "type": "SqlDbLicenseType",
             "format": "--license-type {value}",
             "help": "The license type to apply for this database."
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           },
           {
@@ -1122,7 +184,7 @@
           },
           {
             "name": "LicenseType",
-            "type": "SqlMiLicenseType",
+            "type": "SqlDbLicenseType",
             "format": "--license-type {value}",
             "help": "The license type to apply for this database."
           },
@@ -1134,8 +196,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           },
           {
@@ -1226,8 +288,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           },
           {
@@ -1550,14 +612,14 @@
           },
           {
             "name": "LicenseType",
-            "type": "SqlMiLicenseType",
+            "type": "SqlDbLicenseType",
             "format": "--license-type {value}",
             "help": "The license type to apply for this database."
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           },
           {
@@ -1706,8 +768,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           },
           {
@@ -1745,6 +807,610 @@
             "type": "string",
             "format": "--service-objective {value}",
             "help": "The name of the new service objective. If this is a standalone db service objective and the db is currently in an elastic pool, then the db is removed from the pool."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DwCreate",
+      "definiteArgument": "sql dw create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the data warehouse."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Collation",
+            "type": "string",
+            "format": "--collation {value}",
+            "help": "The collation of the data warehouse."
+          },
+          {
+            "name": "MaxSize",
+            "type": "string",
+            "format": "--max-size {value}",
+            "help": "The max storage size. If no unit is specified, defaults to bytes (B)."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "ZoneRedundant",
+            "type": "string",
+            "format": "--zone-redundant {value}",
+            "help": "Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones."
+          },
+          {
+            "name": "ServiceObjective",
+            "type": "string",
+            "format": "--service-objective {value}",
+            "help": "The service objective for the new database. For example: DW100, DW1000c."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DwDelete",
+      "definiteArgument": "sql dw delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the data warehouse."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DwList",
+      "definiteArgument": "sql dw list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DwPause",
+      "definiteArgument": "sql dw pause",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the data warehouse."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DwResume",
+      "definiteArgument": "sql dw resume",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the data warehouse."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DwShow",
+      "definiteArgument": "sql dw show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the data warehouse."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DwUpdate",
+      "definiteArgument": "sql dw update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the data warehouse."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "MaxSize",
+            "type": "string",
+            "format": "--max-size {value}",
+            "help": "The max storage size. If no unit is specified, defaults to bytes (B)."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "ServiceObjective",
+            "type": "string",
+            "format": "--service-objective {value}",
+            "help": "The service objective of the data warehouse. For example: DW100, DW1000c."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ElasticPoolCreate",
+      "definiteArgument": "sql elastic-pool create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the elastic pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "DbDtuMax",
+            "type": "string",
+            "format": "--db-dtu-max {value}",
+            "help": "The maximum capacity (in DTUs or vcores) any one database can consume."
+          },
+          {
+            "name": "DbDtuMin",
+            "type": "string",
+            "format": "--db-dtu-min {value}",
+            "help": "The minumum capacity (in DTUs or vcores) each database is guaranteed."
+          },
+          {
+            "name": "LicenseType",
+            "type": "SqlDbLicenseType",
+            "format": "--license-type {value}",
+            "help": "The license type to apply for this elastic pool."
+          },
+          {
+            "name": "MaxSize",
+            "type": "string",
+            "format": "--max-size {value}",
+            "help": "The max storage size. If no unit is specified, defaults to bytes (B)."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "ZoneRedundant",
+            "type": "bool",
+            "format": "--zone-redundant",
+            "help": "Specifies whether to enable zone redundancy."
+          },
+          {
+            "name": "Capacity",
+            "type": "string",
+            "format": "--capacity {value}",
+            "help": "The capacity component of the sku in integer number of DTUs or vcores."
+          },
+          {
+            "name": "Edition",
+            "type": "string",
+            "format": "--edition {value}",
+            "help": "The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical."
+          },
+          {
+            "name": "Family",
+            "type": "string",
+            "format": "--family {value}",
+            "help": "The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ElasticPoolDelete",
+      "definiteArgument": "sql elastic-pool delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the elastic pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ElasticPoolList",
+      "definiteArgument": "sql elastic-pool list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "The number of elements in the collection to skip."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ElasticPoolListDbs",
+      "definiteArgument": "sql elastic-pool list-dbs",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the elastic pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ElasticPoolListEditions",
+      "definiteArgument": "sql elastic-pool list-editions",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Available",
+            "type": "string",
+            "format": "--available {value}",
+            "help": "If specified, show only results that are available in the specified region."
+          },
+          {
+            "name": "ShowDetails",
+            "type": "SqlElasticPoolListEditionsShowDetails",
+            "format": "--show-details {value}",
+            "help": "List of additional details to include in output."
+          },
+          {
+            "name": "Dtu",
+            "type": "int",
+            "format": "--dtu {value}",
+            "help": "Number of DTUs to search for. If unspecified, all DTU sizes are shown."
+          },
+          {
+            "name": "Edition",
+            "type": "string",
+            "format": "--edition {value}",
+            "help": "Edition to search for. If unspecified, all editions are shown."
+          },
+          {
+            "name": "Vcores",
+            "type": "int",
+            "format": "--vcores {value}",
+            "help": "Number of vcores to search for. If unspecified, all vcore sizes are shown."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ElasticPoolShow",
+      "definiteArgument": "sql elastic-pool show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the elastic pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ElasticPoolUpdate",
+      "definiteArgument": "sql elastic-pool update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the elastic pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "DbDtuMax",
+            "type": "string",
+            "format": "--db-dtu-max {value}",
+            "help": "The maximum capacity (in DTUs or vcores) any one database can consume."
+          },
+          {
+            "name": "DbDtuMin",
+            "type": "string",
+            "format": "--db-dtu-min {value}",
+            "help": "The minumum capacity (in DTUs or vcores) each database is guaranteed."
+          },
+          {
+            "name": "MaxSize",
+            "type": "string",
+            "format": "--max-size {value}",
+            "help": "The max storage size. If no unit is specified, defaults to bytes (B)."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "ZoneRedundant",
+            "type": "bool",
+            "format": "--zone-redundant",
+            "help": "Specifies whether to enable zone redundancy."
+          },
+          {
+            "name": "Capacity",
+            "type": "string",
+            "format": "--capacity {value}",
+            "help": "The capacity component of the sku in integer number of DTUs or vcores."
+          },
+          {
+            "name": "Edition",
+            "type": "string",
+            "format": "--edition {value}",
+            "help": "The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical."
+          },
+          {
+            "name": "Family",
+            "type": "string",
+            "format": "--family {value}",
+            "help": "The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5."
           },
           {
             "name": "Add",
@@ -2008,15 +1674,34 @@
       }
     },
     {
-      "postfix": "DwCreate",
-      "definiteArgument": "sql dw create",
+      "postfix": "MiCreate",
+      "definiteArgument": "sql mi create",
       "settingsClass": {
         "properties": [
+          {
+            "name": "AdminPassword",
+            "type": "string",
+            "format": "--admin-password {value}",
+            "secret": true,
+            "help": "The administrator login password (required for managed instance creation)."
+          },
+          {
+            "name": "AdminUser",
+            "type": "string",
+            "format": "--admin-user {value}",
+            "help": "Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation)."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the data warehouse."
+            "help": "The managed instance name."
           },
           {
             "name": "ResourceGroup",
@@ -2025,60 +1710,72 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Server",
+            "name": "Subnet",
             "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+            "format": "--subnet {value}",
+            "help": "Name or ID of the subnet that allows access to an Azure Sql Managed Instance. If subnet name is provided, --vnet-name must be provided."
           },
           {
-            "name": "Collation",
+            "name": "AssignIdentity",
             "type": "string",
-            "format": "--collation {value}",
-            "help": "The collation of the data warehouse."
+            "format": "--assign-identity {value}",
+            "help": "Generate and assign an Azure Active Directory Identity for this managed instance for use with key management services like Azure KeyVault."
           },
           {
-            "name": "MaxSize",
+            "name": "Capacity",
             "type": "string",
-            "format": "--max-size {value}",
-            "help": "The max storage size. If no unit is specified, defaults to bytes (B)."
+            "format": "--capacity {value}",
+            "help": "The capacity of the managed instance in vcores."
+          },
+          {
+            "name": "LicenseType",
+            "type": "SqlDbLicenseType",
+            "format": "--license-type {value}",
+            "help": "The license type to apply for this managed instance."
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           },
           {
-            "name": "Tags",
+            "name": "Storage",
             "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+            "format": "--storage {value}",
+            "help": "The storage size of the managed instance. Storage size must be specified in increments of 32 GB."
           },
           {
-            "name": "ZoneRedundant",
+            "name": "VnetName",
             "type": "string",
-            "format": "--zone-redundant {value}",
-            "help": "Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones."
+            "format": "--vnet-name {value}",
+            "help": "The virtual network name."
           },
           {
-            "name": "ServiceObjective",
+            "name": "Edition",
             "type": "string",
-            "format": "--service-objective {value}",
-            "help": "The service objective for the new database. For example: DW100, DW1000c."
+            "format": "--edition {value}",
+            "help": "The edition component of the sku. Allowed value is GeneralPurpose."
+          },
+          {
+            "name": "Family",
+            "type": "string",
+            "format": "--family {value}",
+            "help": "The compute generation component of the sku. Allowed values include: Gen4, Gen5."
           }
         ]
       }
     },
     {
-      "postfix": "DwDelete",
-      "definiteArgument": "sql dw delete",
+      "postfix": "MiDelete",
+      "definiteArgument": "sql mi delete",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the data warehouse."
+            "help": "The managed instance name."
           },
           {
             "name": "ResourceGroup",
@@ -2087,15 +1784,9 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           },
           {
@@ -2108,8 +1799,8 @@
       }
     },
     {
-      "postfix": "DwList",
-      "definiteArgument": "sql dw list",
+      "postfix": "MiList",
+      "definiteArgument": "sql mi list",
       "settingsClass": {
         "properties": [
           {
@@ -2117,52 +1808,40 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
           }
         ]
       }
     },
     {
-      "postfix": "DwPause",
-      "definiteArgument": "sql dw pause",
+      "postfix": "MiShow",
+      "definiteArgument": "sql mi show",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the data warehouse."
+            "help": "The managed instance name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
           }
         ]
       }
     },
     {
-      "postfix": "DwResume",
-      "definiteArgument": "sql dw resume",
+      "postfix": "MiUpdate",
+      "definiteArgument": "sql mi update",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the data warehouse."
+            "help": "The managed instance name."
           },
           {
             "name": "ResourceGroup",
@@ -2171,80 +1850,41 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Server",
+            "name": "AdminPassword",
             "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DwShow",
-      "definiteArgument": "sql dw show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the data warehouse."
+            "format": "--admin-password {value}",
+            "secret": true,
+            "help": "The administrator login password (required for managed instance creation)."
           },
           {
-            "name": "ResourceGroup",
+            "name": "AssignIdentity",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+            "format": "--assign-identity {value}",
+            "help": "Generate and assign an Azure Active Directory Identity for this managed instance for use with key management services like Azure KeyVault. If identity is already assigned - do nothing."
           },
           {
-            "name": "Server",
+            "name": "Capacity",
             "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DwUpdate",
-      "definiteArgument": "sql dw update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the data warehouse."
+            "format": "--capacity {value}",
+            "help": "The capacity of the managed instance in vcores."
           },
           {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "MaxSize",
-            "type": "string",
-            "format": "--max-size {value}",
-            "help": "The max storage size. If no unit is specified, defaults to bytes (B)."
+            "name": "LicenseType",
+            "type": "SqlDbLicenseType",
+            "format": "--license-type {value}",
+            "help": "The license type to apply for this managed instance."
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           },
           {
-            "name": "ServiceObjective",
+            "name": "Storage",
             "type": "string",
-            "format": "--service-objective {value}",
-            "help": "The service objective of the data warehouse. For example: DW100, DW1000c."
+            "format": "--storage {value}",
+            "help": "The storage size of the managed instance. Storage size must be specified in increments of 32 GB."
           },
           {
             "name": "Add",
@@ -2274,8 +1914,368 @@
       }
     },
     {
-      "postfix": "DbThreatPolicyShow",
-      "definiteArgument": "sql db threat-policy show",
+      "postfix": "MidbCreate",
+      "definiteArgument": "sql midb create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ManagedInstance",
+            "type": "string",
+            "format": "--managed-instance {value}",
+            "help": "Name of the Azure SQL managed instance."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Azure SQL Managed Database."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Collation",
+            "type": "string",
+            "format": "--collation {value}",
+            "help": "The collation of the Azure SQL Managed Database collation to use, e.g.: SQL_Latin1_General_CP1_CI_AS or Latin1_General_100_CS_AS_SC."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MidbDelete",
+      "definiteArgument": "sql midb delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ManagedInstance",
+            "type": "string",
+            "format": "--managed-instance {value}",
+            "help": "Name of the Azure SQL managed instance."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Azure SQL Managed Database."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MidbList",
+      "definiteArgument": "sql midb list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ManagedInstance",
+            "type": "string",
+            "format": "--managed-instance {value}",
+            "help": "Name of the Azure SQL managed instance."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MidbRestore",
+      "definiteArgument": "sql midb restore",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DestName",
+            "type": "string",
+            "format": "--dest-name {value}",
+            "help": "Name of the managed database that will be created as the restore destination."
+          },
+          {
+            "name": "ManagedInstance",
+            "type": "string",
+            "format": "--managed-instance {value}",
+            "help": "Name of the Azure SQL managed instance."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Azure SQL Managed Database."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "DestMi",
+            "type": "string",
+            "format": "--dest-mi {value}",
+            "help": "Name of the managed instance to restore managed database to. This can be same managed instance, or another managed instance on same subscription. When not specified it defaults to source managed instance."
+          },
+          {
+            "name": "DestResourceGroup",
+            "type": "string",
+            "format": "--dest-resource-group {value}",
+            "help": "Name of the resource group of the managed instance to restore managed database to. When not specified it defaults to source resource group."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Time",
+            "type": "string",
+            "format": "--time {value}",
+            "help": "The point in time of the source database that will be restored to create the new database. Must be greater than or equal to the source database's earliestRestoreDate value. Time should be in following format: \"YYYY-MM-DDTHH:MM:SS\"."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MidbShow",
+      "definiteArgument": "sql midb show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ManagedInstance",
+            "type": "string",
+            "format": "--managed-instance {value}",
+            "help": "Name of the Azure SQL managed instance."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Azure SQL Managed Database."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerCreate",
+      "definiteArgument": "sql server create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AdminPassword",
+            "type": "string",
+            "format": "--admin-password {value}",
+            "secret": true,
+            "help": "The administrator login password (required for server creation)."
+          },
+          {
+            "name": "AdminUser",
+            "type": "string",
+            "format": "--admin-user {value}",
+            "help": "Administrator username for the server. Once created it cannot be changed."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AssignIdentity",
+            "type": "string",
+            "format": "--assign-identity {value}",
+            "help": "Generate and assign an Azure Active Directory Identity for this serverfor use with key management services like Azure KeyVault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerDelete",
+      "definiteArgument": "sql server delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerList",
+      "definiteArgument": "sql server list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerListUsages",
+      "definiteArgument": "sql server list-usages",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerShow",
+      "definiteArgument": "sql server show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerUpdate",
+      "definiteArgument": "sql server update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AdminPassword",
+            "type": "string",
+            "format": "--admin-password {value}",
+            "secret": true,
+            "help": "The administrator login password."
+          },
+          {
+            "name": "Assign_identity",
+            "type": "string",
+            "format": "--assign_identity {value}",
+            "help": "Generate and assign an Azure Active Directory Identity for this serverfor use with key management services like Azure KeyVault."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DbAuditPolicyShow",
+      "definiteArgument": "sql db audit-policy show",
       "settingsClass": {
         "properties": [
           {
@@ -2300,8 +2300,8 @@
       }
     },
     {
-      "postfix": "DbThreatPolicyUpdate",
-      "definiteArgument": "sql db threat-policy update",
+      "postfix": "DbAuditPolicyUpdate",
+      "definiteArgument": "sql db audit-policy update",
       "settingsClass": {
         "properties": [
           {
@@ -2323,34 +2323,22 @@
             "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "EmailAccountAdmins",
-            "type": "SqlDbThreatPolicyUpdateEmailAccountAdmins",
-            "format": "--email-account-admins {value}",
-            "help": "Whether the alert is sent to the account administrators."
-          },
-          {
-            "name": "EmailAddresses",
+            "name": "Actions",
             "type": "string",
-            "format": "--email-addresses {value}",
-            "help": "List of email addresses that alerts are sent to."
-          },
-          {
-            "name": "DisabledAlerts",
-            "type": "string",
-            "format": "--disabled-alerts {value}",
-            "help": "List of disabled alerts."
+            "format": "--actions {value}",
+            "help": "List of actions and action groups to audit."
           },
           {
             "name": "RetentionDays",
             "type": "string",
             "format": "--retention-days {value}",
-            "help": "The number of days to retain threat detection logs."
+            "help": "The number of days to retain audit logs."
           },
           {
             "name": "State",
-            "type": "SqlDbThreatPolicyUpdateState",
+            "type": "SqlDbAuditPolicyUpdateState",
             "format": "--state {value}",
-            "help": "Threat detection policy state."
+            "help": "Auditing policy state."
           },
           {
             "name": "StorageAccount",
@@ -2456,202 +2444,6 @@
       }
     },
     {
-      "postfix": "DbAuditPolicyShow",
-      "definiteArgument": "sql db audit-policy show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Azure SQL Database."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DbAuditPolicyUpdate",
-      "definiteArgument": "sql db audit-policy update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Azure SQL Database."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Actions",
-            "type": "string",
-            "format": "--actions {value}",
-            "help": "List of actions and action groups to audit."
-          },
-          {
-            "name": "RetentionDays",
-            "type": "string",
-            "format": "--retention-days {value}",
-            "help": "The number of days to retain audit logs."
-          },
-          {
-            "name": "State",
-            "type": "SqlDbThreatPolicyUpdateEmailAccountAdmins",
-            "format": "--state {value}",
-            "help": "Auditing policy state."
-          },
-          {
-            "name": "StorageAccount",
-            "type": "string",
-            "format": "--storage-account {value}",
-            "help": "Name of the storage account."
-          },
-          {
-            "name": "StorageEndpoint",
-            "type": "string",
-            "format": "--storage-endpoint {value}",
-            "help": "The storage account endpoint."
-          },
-          {
-            "name": "StorageKey",
-            "type": "string",
-            "format": "--storage-key {value}",
-            "help": "Access key for the storage account."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DbTdeListActivity",
-      "definiteArgument": "sql db tde list-activity",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Database",
-            "type": "string",
-            "format": "--database {value}",
-            "help": "Name of the Azure SQL Database."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DbTdeSet",
-      "definiteArgument": "sql db tde set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Database",
-            "type": "string",
-            "format": "--database {value}",
-            "help": "Name of the Azure SQL Database."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Status",
-            "type": "SqlDbThreatPolicyUpdateEmailAccountAdmins",
-            "format": "--status {value}",
-            "help": "Status of the transparent data encryption."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DbTdeShow",
-      "definiteArgument": "sql db tde show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Database",
-            "type": "string",
-            "format": "--database {value}",
-            "help": "Name of the Azure SQL Database."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "DbReplicaCreate",
       "definiteArgument": "sql db replica create",
       "settingsClass": {
@@ -2682,14 +2474,14 @@
           },
           {
             "name": "LicenseType",
-            "type": "SqlMiLicenseType",
+            "type": "SqlDbLicenseType",
             "format": "--license-type {value}",
             "help": "The license type to apply for this database."
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           },
           {
@@ -2840,6 +2632,214 @@
       }
     },
     {
+      "postfix": "DbTdeListActivity",
+      "definiteArgument": "sql db tde list-activity",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Database",
+            "type": "string",
+            "format": "--database {value}",
+            "help": "Name of the Azure SQL Database."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DbTdeSet",
+      "definiteArgument": "sql db tde set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Database",
+            "type": "string",
+            "format": "--database {value}",
+            "help": "Name of the Azure SQL Database."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Status",
+            "type": "SqlDbAuditPolicyUpdateState",
+            "format": "--status {value}",
+            "help": "Status of the transparent data encryption."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DbTdeShow",
+      "definiteArgument": "sql db tde show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Database",
+            "type": "string",
+            "format": "--database {value}",
+            "help": "Name of the Azure SQL Database."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DbThreatPolicyShow",
+      "definiteArgument": "sql db threat-policy show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Azure SQL Database."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DbThreatPolicyUpdate",
+      "definiteArgument": "sql db threat-policy update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Azure SQL Database."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "EmailAccountAdmins",
+            "type": "SqlDbAuditPolicyUpdateState",
+            "format": "--email-account-admins {value}",
+            "help": "Whether the alert is sent to the account administrators."
+          },
+          {
+            "name": "EmailAddresses",
+            "type": "string",
+            "format": "--email-addresses {value}",
+            "help": "List of email addresses that alerts are sent to."
+          },
+          {
+            "name": "DisabledAlerts",
+            "type": "string",
+            "format": "--disabled-alerts {value}",
+            "help": "List of disabled alerts."
+          },
+          {
+            "name": "RetentionDays",
+            "type": "string",
+            "format": "--retention-days {value}",
+            "help": "The number of days to retain threat detection logs."
+          },
+          {
+            "name": "State",
+            "type": "SqlDbThreatPolicyUpdateState",
+            "format": "--state {value}",
+            "help": "Threat detection policy state."
+          },
+          {
+            "name": "StorageAccount",
+            "type": "string",
+            "format": "--storage-account {value}",
+            "help": "Name of the storage account."
+          },
+          {
+            "name": "StorageEndpoint",
+            "type": "string",
+            "format": "--storage-endpoint {value}",
+            "help": "The storage account endpoint."
+          },
+          {
+            "name": "StorageKey",
+            "type": "string",
+            "format": "--storage-key {value}",
+            "help": "Access key for the storage account."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "ElasticPoolOpCancel",
       "definiteArgument": "sql elastic-pool op cancel",
       "settingsClass": {
@@ -2898,53 +2898,21 @@
       }
     },
     {
-      "postfix": "ServerFirewallRuleCreate",
-      "definiteArgument": "sql server firewall-rule create",
+      "postfix": "ServerAdAdminCreate",
+      "definiteArgument": "sql server ad-admin create",
       "settingsClass": {
         "properties": [
           {
-            "name": "EndIpAddress",
+            "name": "DisplayName",
             "type": "string",
-            "format": "--end-ip-address {value}",
-            "help": "The end IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses."
+            "format": "--display-name {value}",
+            "help": "Display name of the Azure AD administrator user or group."
           },
           {
-            "name": "Name",
+            "name": "ObjectId",
             "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the firewall rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "StartIpAddress",
-            "type": "string",
-            "format": "--start-ip-address {value}",
-            "help": "The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerFirewallRuleDelete",
-      "definiteArgument": "sql server firewall-rule delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the firewall rule."
+            "format": "--object-id {value}",
+            "help": "The unique ID of the Azure AD administrator."
           },
           {
             "name": "ResourceGroup",
@@ -2962,8 +2930,8 @@
       }
     },
     {
-      "postfix": "ServerFirewallRuleList",
-      "definiteArgument": "sql server firewall-rule list",
+      "postfix": "ServerAdAdminDelete",
+      "definiteArgument": "sql server ad-admin delete",
       "settingsClass": {
         "properties": [
           {
@@ -2982,142 +2950,8 @@
       }
     },
     {
-      "postfix": "ServerFirewallRuleShow",
-      "definiteArgument": "sql server firewall-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the firewall rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerFirewallRuleUpdate",
-      "definiteArgument": "sql server firewall-rule update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the firewall rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "EndIpAddress",
-            "type": "string",
-            "format": "--end-ip-address {value}",
-            "help": "The end IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses."
-          },
-          {
-            "name": "StartIpAddress",
-            "type": "string",
-            "format": "--start-ip-address {value}",
-            "help": "The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleCreate",
-      "definiteArgument": "sql server vnet-rule create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the virtual network rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "help": "Name or ID of the subnet that allows access to an Azure Sql Server. If subnet name is provided, --vnet-name must be provided."
-          },
-          {
-            "name": "IgnoreMissingEndpoint",
-            "type": "bool",
-            "format": "--ignore-missing-endpoint",
-            "help": "Create firewall rule before the virtual network has vnet service endpoint enabled."
-          },
-          {
-            "name": "VnetName",
-            "type": "string",
-            "format": "--vnet-name {value}",
-            "help": "The virtual network name."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleDelete",
-      "definiteArgument": "sql server vnet-rule delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the virtual network rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleList",
-      "definiteArgument": "sql server vnet-rule list",
+      "postfix": "ServerAdAdminList",
+      "definiteArgument": "sql server ad-admin list",
       "settingsClass": {
         "properties": [
           {
@@ -3136,42 +2970,10 @@
       }
     },
     {
-      "postfix": "ServerVnetRuleShow",
-      "definiteArgument": "sql server vnet-rule show",
+      "postfix": "ServerAdAdminUpdate",
+      "definiteArgument": "sql server ad-admin update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the virtual network rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleUpdate",
-      "definiteArgument": "sql server vnet-rule update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the virtual network rule."
-          },
           {
             "name": "ResourceGroup",
             "type": "string",
@@ -3185,16 +2987,16 @@
             "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Subnet",
+            "name": "DisplayName",
             "type": "string",
-            "format": "--subnet {value}",
-            "help": "Name or ID of the subnet that allows access to an Azure Sql Server. If subnet name is provided, --vnet-name must be provided."
+            "format": "--display-name {value}",
+            "help": "Display name of the Azure AD administrator user or group."
           },
           {
-            "name": "IgnoreMissingEndpoint",
-            "type": "bool",
-            "format": "--ignore-missing-endpoint",
-            "help": "Create firewall rule before the virtual network has vnet service endpoint enabled."
+            "name": "ObjectId",
+            "type": "string",
+            "format": "--object-id {value}",
+            "help": "The unique ID of the Azure AD administrator."
           },
           {
             "name": "Add",
@@ -3219,156 +3021,6 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerTdeKeySet",
-      "definiteArgument": "sql server tde-key set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerKeyType",
-            "type": "SqlServerTdeKeySetServerKeyType",
-            "format": "--server-key-type {value}",
-            "help": "The type of the server key."
-          },
-          {
-            "name": "Kid",
-            "type": "string",
-            "format": "--kid {value}",
-            "help": "The Azure Key Vault key identifier of the server key to be made encryption protector.An example key identifier is \"<a href=\"https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901\">https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901</a>\"."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerTdeKeyShow",
-      "definiteArgument": "sql server tde-key show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerKeyCreate",
-      "definiteArgument": "sql server key create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Kid",
-            "type": "string",
-            "format": "--kid {value}",
-            "help": "The Azure Key Vault key identifier of the server key. An example key identifier is \"<a href=\"https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901\">https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901</a>\"."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerKeyDelete",
-      "definiteArgument": "sql server key delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Kid",
-            "type": "string",
-            "format": "--kid {value}",
-            "help": "The Azure Key Vault key identifier of the server key. An example key identifier is \"<a href=\"https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901\">https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901</a>\"."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerKeyList",
-      "definiteArgument": "sql server key list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerKeyShow",
-      "definiteArgument": "sql server key show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Kid",
-            "type": "string",
-            "format": "--kid {value}",
-            "help": "The Azure Key Vault key identifier of the server key. An example key identifier is \"<a href=\"https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901\">https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901</a>\"."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Server",
-            "type": "string",
-            "format": "--server {value}",
-            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
           }
         ]
       }
@@ -3586,21 +3238,53 @@
       }
     },
     {
-      "postfix": "ServerAdAdminCreate",
-      "definiteArgument": "sql server ad-admin create",
+      "postfix": "ServerFirewallRuleCreate",
+      "definiteArgument": "sql server firewall-rule create",
       "settingsClass": {
         "properties": [
           {
-            "name": "DisplayName",
+            "name": "EndIpAddress",
             "type": "string",
-            "format": "--display-name {value}",
-            "help": "Display name of the Azure AD administrator user or group."
+            "format": "--end-ip-address {value}",
+            "help": "The end IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses."
           },
           {
-            "name": "ObjectId",
+            "name": "Name",
             "type": "string",
-            "format": "--object-id {value}",
-            "help": "The unique ID of the Azure AD administrator."
+            "format": "--name {value}",
+            "help": "The name of the firewall rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "StartIpAddress",
+            "type": "string",
+            "format": "--start-ip-address {value}",
+            "help": "The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerFirewallRuleDelete",
+      "definiteArgument": "sql server firewall-rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the firewall rule."
           },
           {
             "name": "ResourceGroup",
@@ -3618,8 +3302,8 @@
       }
     },
     {
-      "postfix": "ServerAdAdminDelete",
-      "definiteArgument": "sql server ad-admin delete",
+      "postfix": "ServerFirewallRuleList",
+      "definiteArgument": "sql server firewall-rule list",
       "settingsClass": {
         "properties": [
           {
@@ -3638,8 +3322,124 @@
       }
     },
     {
-      "postfix": "ServerAdAdminList",
-      "definiteArgument": "sql server ad-admin list",
+      "postfix": "ServerFirewallRuleShow",
+      "definiteArgument": "sql server firewall-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the firewall rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerFirewallRuleUpdate",
+      "definiteArgument": "sql server firewall-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the firewall rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "EndIpAddress",
+            "type": "string",
+            "format": "--end-ip-address {value}",
+            "help": "The end IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses."
+          },
+          {
+            "name": "StartIpAddress",
+            "type": "string",
+            "format": "--start-ip-address {value}",
+            "help": "The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerKeyCreate",
+      "definiteArgument": "sql server key create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Kid",
+            "type": "string",
+            "format": "--kid {value}",
+            "help": "The Azure Key Vault key identifier of the server key. An example key identifier is \"<a href=\"https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901\">https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901</a>\"."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerKeyDelete",
+      "definiteArgument": "sql server key delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Kid",
+            "type": "string",
+            "format": "--kid {value}",
+            "help": "The Azure Key Vault key identifier of the server key. An example key identifier is \"<a href=\"https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901\">https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901</a>\"."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerKeyList",
+      "definiteArgument": "sql server key list",
       "settingsClass": {
         "properties": [
           {
@@ -3658,8 +3458,34 @@
       }
     },
     {
-      "postfix": "ServerAdAdminUpdate",
-      "definiteArgument": "sql server ad-admin update",
+      "postfix": "ServerKeyShow",
+      "definiteArgument": "sql server key show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Kid",
+            "type": "string",
+            "format": "--kid {value}",
+            "help": "The Azure Key Vault key identifier of the server key. An example key identifier is \"<a href=\"https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901\">https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901</a>\"."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerTdeKeySet",
+      "definiteArgument": "sql server tde-key set",
       "settingsClass": {
         "properties": [
           {
@@ -3675,16 +3501,190 @@
             "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "DisplayName",
-            "type": "string",
-            "format": "--display-name {value}",
-            "help": "Display name of the Azure AD administrator user or group."
+            "name": "ServerKeyType",
+            "type": "SqlServerTdeKeySetServerKeyType",
+            "format": "--server-key-type {value}",
+            "help": "The type of the server key."
           },
           {
-            "name": "ObjectId",
+            "name": "Kid",
             "type": "string",
-            "format": "--object-id {value}",
-            "help": "The unique ID of the Azure AD administrator."
+            "format": "--kid {value}",
+            "help": "The Azure Key Vault key identifier of the server key to be made encryption protector.An example key identifier is \"<a href=\"https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901\">https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901</a>\"."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerTdeKeyShow",
+      "definiteArgument": "sql server tde-key show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleCreate",
+      "definiteArgument": "sql server vnet-rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the virtual network rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "Name or ID of the subnet that allows access to an Azure Sql Server. If subnet name is provided, --vnet-name must be provided."
+          },
+          {
+            "name": "IgnoreMissingEndpoint",
+            "type": "bool",
+            "format": "--ignore-missing-endpoint",
+            "help": "Create firewall rule before the virtual network has vnet service endpoint enabled."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "The virtual network name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleDelete",
+      "definiteArgument": "sql server vnet-rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the virtual network rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleList",
+      "definiteArgument": "sql server vnet-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleShow",
+      "definiteArgument": "sql server vnet-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the virtual network rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleUpdate",
+      "definiteArgument": "sql server vnet-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the virtual network rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Server",
+            "type": "string",
+            "format": "--server {value}",
+            "help": "Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "Name or ID of the subnet that allows access to an Azure Sql Server. If subnet name is provided, --vnet-name must be provided."
+          },
+          {
+            "name": "IgnoreMissingEndpoint",
+            "type": "bool",
+            "format": "--ignore-missing-endpoint",
+            "help": "Create firewall rule before the virtual network has vnet service endpoint enabled."
           },
           {
             "name": "Add",
@@ -3748,25 +3748,10 @@
   ],
   "enumerations": [
     {
-      "name": "SqlMiLicenseType",
+      "name": "SqlDbLicenseType",
       "values": [
         "baseprice",
         "licenseincluded"
-      ]
-    },
-    {
-      "name": "SqlElasticPoolListEditionsShowDetails",
-      "values": [
-        "db-max-dtu",
-        "db-max-size",
-        "db-min-dtu",
-        "max-size"
-      ]
-    },
-    {
-      "name": "SqlDbListEditionsShowDetails",
-      "values": [
-        "max-size"
       ]
     },
     {
@@ -3799,6 +3784,21 @@
       ]
     },
     {
+      "name": "SqlDbListEditionsShowDetails",
+      "values": [
+        "max-size"
+      ]
+    },
+    {
+      "name": "SqlElasticPoolListEditionsShowDetails",
+      "values": [
+        "db-max-dtu",
+        "db-max-size",
+        "db-min-dtu",
+        "max-size"
+      ]
+    },
+    {
       "name": "SqlDbShowConnectionStringClient",
       "values": [
         "ado.net",
@@ -3817,7 +3817,7 @@
       ]
     },
     {
-      "name": "SqlDbThreatPolicyUpdateEmailAccountAdmins",
+      "name": "SqlDbAuditPolicyUpdateState",
       "values": [
         "disabled",
         "enabled"
@@ -3832,18 +3832,18 @@
       ]
     },
     {
-      "name": "SqlServerTdeKeySetServerKeyType",
-      "values": [
-        "azurekeyvault",
-        "servicemanaged"
-      ]
-    },
-    {
       "name": "SqlServerConnPolicyUpdateConnectionType",
       "values": [
         "default",
         "proxy",
         "redirect"
+      ]
+    },
+    {
+      "name": "SqlServerTdeKeySetServerKeyType",
+      "values": [
+        "azurekeyvault",
+        "servicemanaged"
       ]
     }
   ]

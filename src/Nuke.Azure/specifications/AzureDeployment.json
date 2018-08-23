@@ -6,8 +6,8 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/deployment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/deployment/operation.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/deployment/operation.yml"
   ],
   "name": "AzureDeployment",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/deployment?view=azure-cli-latest",
@@ -33,8 +33,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           },
           {
@@ -71,8 +71,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           }
         ]

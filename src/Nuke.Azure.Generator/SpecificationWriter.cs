@@ -9,6 +9,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using Nuke.Azure.Generator.Model;
 using Nuke.Azure.Generator.Utilities;
+using Nuke.CodeGeneration;
 using Nuke.Common;
 
 namespace Nuke.Azure.Generator
@@ -22,31 +23,21 @@ namespace Nuke.Azure.Generator
             string baseNamespace)
         {
             ControlFlow.Assert(tools.Count == categories.Count, "tools.Count == categories.Count()");
-            var pairs = tools.Select(x =>
-                new KeyValuePair<SpecificationGenerator.ToolContext, TableOfContentsEntry>(x,
-                    categories.Single(y => y.Uid.NotNull().Replace("az", "azure").ToPascalCase('_', '-') == x.Tool.Name)));
 
-            foreach (var pair in pairs)
+            foreach (var toolContext in tools)
             {
                 var toolDirectory = outputFolder;
-                var ns = pair.Key.Namespace.Replace(baseNamespace, string.Empty).TrimStart('.');
+                var ns = toolContext.Namespace.Replace(baseNamespace, string.Empty).TrimStart('.');
                 if (!string.IsNullOrEmpty(ns))
                 {
-                    toolDirectory = pair.Key.Namespace.Replace(baseNamespace, string.Empty).Split(separator: '.')
+                    toolDirectory = toolContext.Namespace.Replace(baseNamespace, string.Empty).Split(separator: '.')
                         .Aggregate(toolDirectory, Path.Combine);
                 }
 
                 Directory.CreateDirectory(toolDirectory);
-
-                var toolPath = Path.Combine(toolDirectory, pair.Key.Tool.Name + ".json");
-                File.WriteAllText(toolPath,
-                    JsonConvert.SerializeObject(pair.Key.Tool,
-                        new JsonSerializerSettings
-                        {
-                            NullValueHandling = NullValueHandling.Ignore,
-                            Formatting = Formatting.Indented,
-                            DefaultValueHandling = DefaultValueHandling.Include
-                        }));
+                var toolPath = Path.Combine(toolDirectory, toolContext.Tool.Name + ".json");
+                toolContext.Tool.DefinitionFile = toolPath;
+                ToolSerializer.Save(toolContext.Tool);
             }
         }
     }

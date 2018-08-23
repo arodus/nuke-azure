@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.1 [CommitSha: 8eca516b].
+// Generated with Nuke.CodeGeneration, Version: 0.6.2 [CommitSha: ff25463a].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureMysql.json.
 
 using JetBrains.Annotations;
@@ -39,6 +39,54 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureMysql(Configure<AzureMysqlSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMysqlDbCreate(Configure<AzureMysqlDbCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlDbCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMysqlDbDelete(Configure<AzureMysqlDbDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlDbDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMysqlDbList(Configure<AzureMysqlDbListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlDbListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMysqlDbShow(Configure<AzureMysqlDbShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlDbShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMysqlServerLogsDownload(Configure<AzureMysqlServerLogsDownloadSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerLogsDownloadSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMysqlServerLogsList(Configure<AzureMysqlServerLogsListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerLogsListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -108,49 +156,25 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlDbCreate(Configure<AzureMysqlDbCreateSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureMysqlServerConfigurationList(Configure<AzureMysqlServerConfigurationListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlDbCreateSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlDbDelete(Configure<AzureMysqlDbDeleteSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureMysqlServerConfigurationSet(Configure<AzureMysqlServerConfigurationSetSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlDbDeleteSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationSetSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlDbList(Configure<AzureMysqlDbListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureMysqlServerConfigurationShow(Configure<AzureMysqlServerConfigurationShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlDbListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlDbShow(Configure<AzureMysqlDbShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlDbShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlServerLogsDownload(Configure<AzureMysqlServerLogsDownloadSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerLogsDownloadSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlServerLogsList(Configure<AzureMysqlServerLogsListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerLogsListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -191,30 +215,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureMysqlServerFirewallRuleUpdate(Configure<AzureMysqlServerFirewallRuleUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerFirewallRuleUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlServerConfigurationList(Configure<AzureMysqlServerConfigurationListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlServerConfigurationSet(Configure<AzureMysqlServerConfigurationSetSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationSetSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlServerConfigurationShow(Configure<AzureMysqlServerConfigurationShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -283,409 +283,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlServerCreateSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlServerCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
-        public virtual string SkuName { get; internal set; }
-        /// <summary><p>The number of days a backup is retained.</p></summary>
-        public virtual string BackupRetention { get; internal set; }
-        /// <summary><p>Enable Geo-redundant or not for server backup.</p></summary>
-        public virtual string GeoRedundantBackup { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Enable ssl enforcement or not when connect to server.</p></summary>
-        public virtual MysqlServerSslEnforcement SslEnforcement { get; internal set; }
-        /// <summary><p>The max storage size of the server. Unit is megabytes.</p></summary>
-        public virtual string StorageSize { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Server version.</p></summary>
-        public virtual string Version { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string AdminUser { get; internal set; }
-        /// <summary><p>The password of the administrator login.</p></summary>
-        public virtual string AdminPassword { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql server create")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--sku-name {value}", SkuName)
-              .Add("--backup-retention {value}", BackupRetention)
-              .Add("--geo-redundant-backup {value}", GeoRedundantBackup)
-              .Add("--location {value}", Location)
-              .Add("--ssl-enforcement {value}", SslEnforcement)
-              .Add("--storage-size {value}", StorageSize)
-              .Add("--tags {value}", Tags)
-              .Add("--version {value}", Version)
-              .Add("--admin-user {value}", AdminUser)
-              .Add("--admin-password {value}", AdminPassword, secret: true)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlServerDeleteSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlServerDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Do not prompt for confirmation.</p></summary>
-        public virtual string Yes { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql server delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--yes {value}", Yes)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlServerGeorestoreSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlServerGeorestoreSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name or ID of the source server to restore from.</p></summary>
-        public virtual string SourceServer { get; internal set; }
-        /// <summary><p>The max days of retention, unit is days.</p></summary>
-        public virtual string BackupRetention { get; internal set; }
-        /// <summary><p>Enable Geo-redundant or not for server backup.</p></summary>
-        public virtual string GeoRedundantBackup { get; internal set; }
-        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
-        /// <summary><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
-        public virtual string SkuName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql server georestore")
-              .Add("--location {value}", Location)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--source-server {value}", SourceServer)
-              .Add("--backup-retention {value}", BackupRetention)
-              .Add("--geo-redundant-backup {value}", GeoRedundantBackup)
-              .Add("--no-wait {value}", NoWait)
-              .Add("--sku-name {value}", SkuName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlServerListSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlServerListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql server list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlServerRestoreSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlServerRestoreSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The point in time to restore from (ISO8601 format), e.g., 2017-04-26T02:10:00+08:00.</p></summary>
-        public virtual string RestorePointInTime { get; internal set; }
-        /// <summary><p>The name or ID of the source server to restore from.</p></summary>
-        public virtual string SourceServer { get; internal set; }
-        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql server restore")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--restore-point-in-time {value}", RestorePointInTime)
-              .Add("--source-server {value}", SourceServer)
-              .Add("--no-wait {value}", NoWait)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlServerShowSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlServerShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql server show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlServerUpdateSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlServerUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The password of the administrator login.</p></summary>
-        public virtual string AdminPassword { get; internal set; }
-        /// <summary><p>The number of days a backup is retained.</p></summary>
-        public virtual string BackupRetention { get; internal set; }
-        /// <summary><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
-        public virtual string SkuName { get; internal set; }
-        /// <summary><p>Enable ssl enforcement or not when connect to server.</p></summary>
-        public virtual MysqlServerSslEnforcement SslEnforcement { get; internal set; }
-        /// <summary><p>The max storage size of the server. Unit is megabytes.</p></summary>
-        public virtual string StorageSize { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql server update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--admin-password {value}", AdminPassword, secret: true)
-              .Add("--backup-retention {value}", BackupRetention)
-              .Add("--sku-name {value}", SkuName)
-              .Add("--ssl-enforcement {value}", SslEnforcement)
-              .Add("--storage-size {value}", StorageSize)
-              .Add("--tags {value}", Tags)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlServerWaitSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlServerWaitSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
-        public virtual string Custom { get; internal set; }
-        /// <summary><p>Wait until the resource exists.</p></summary>
-        public virtual string Exists { get; internal set; }
-        /// <summary><p>Polling interval in seconds.</p></summary>
-        public virtual string Interval { get; internal set; }
-        /// <summary><p>Maximum wait in seconds.</p></summary>
-        public virtual string Timeout { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql server wait")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--custom {value}", Custom)
-              .Add("--exists {value}", Exists)
-              .Add("--interval {value}", Interval)
-              .Add("--timeout {value}", Timeout)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -954,6 +551,532 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureMysqlServerCreateSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlServerCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
+        public virtual string SkuName { get; internal set; }
+        /// <summary><p>The number of days a backup is retained.</p></summary>
+        public virtual string BackupRetention { get; internal set; }
+        /// <summary><p>Enable Geo-redundant or not for server backup.</p></summary>
+        public virtual string GeoRedundantBackup { get; internal set; }
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Enable ssl enforcement or not when connect to server.</p></summary>
+        public virtual MysqlServerSslEnforcement SslEnforcement { get; internal set; }
+        /// <summary><p>The max storage size of the server. Unit is megabytes.</p></summary>
+        public virtual string StorageSize { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Server version.</p></summary>
+        public virtual string Version { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string AdminUser { get; internal set; }
+        /// <summary><p>The password of the administrator login.</p></summary>
+        public virtual string AdminPassword { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql server create")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--sku-name {value}", SkuName)
+              .Add("--backup-retention {value}", BackupRetention)
+              .Add("--geo-redundant-backup {value}", GeoRedundantBackup)
+              .Add("--location {value}", Location)
+              .Add("--ssl-enforcement {value}", SslEnforcement)
+              .Add("--storage-size {value}", StorageSize)
+              .Add("--tags {value}", Tags)
+              .Add("--version {value}", Version)
+              .Add("--admin-user {value}", AdminUser)
+              .Add("--admin-password {value}", AdminPassword, secret: true)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlServerDeleteSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlServerDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql server delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--yes {value}", Yes)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlServerGeorestoreSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlServerGeorestoreSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name or ID of the source server to restore from.</p></summary>
+        public virtual string SourceServer { get; internal set; }
+        /// <summary><p>The max days of retention, unit is days.</p></summary>
+        public virtual string BackupRetention { get; internal set; }
+        /// <summary><p>Enable Geo-redundant or not for server backup.</p></summary>
+        public virtual string GeoRedundantBackup { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
+        public virtual string SkuName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql server georestore")
+              .Add("--location {value}", Location)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--source-server {value}", SourceServer)
+              .Add("--backup-retention {value}", BackupRetention)
+              .Add("--geo-redundant-backup {value}", GeoRedundantBackup)
+              .Add("--no-wait", NoWait)
+              .Add("--sku-name {value}", SkuName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlServerListSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlServerListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql server list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlServerRestoreSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlServerRestoreSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The point in time to restore from (ISO8601 format), e.g., 2017-04-26T02:10:00+08:00.</p></summary>
+        public virtual string RestorePointInTime { get; internal set; }
+        /// <summary><p>The name or ID of the source server to restore from.</p></summary>
+        public virtual string SourceServer { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql server restore")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--restore-point-in-time {value}", RestorePointInTime)
+              .Add("--source-server {value}", SourceServer)
+              .Add("--no-wait", NoWait)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlServerShowSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlServerShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql server show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlServerUpdateSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlServerUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The password of the administrator login.</p></summary>
+        public virtual string AdminPassword { get; internal set; }
+        /// <summary><p>The number of days a backup is retained.</p></summary>
+        public virtual string BackupRetention { get; internal set; }
+        /// <summary><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
+        public virtual string SkuName { get; internal set; }
+        /// <summary><p>Enable ssl enforcement or not when connect to server.</p></summary>
+        public virtual MysqlServerSslEnforcement SslEnforcement { get; internal set; }
+        /// <summary><p>The max storage size of the server. Unit is megabytes.</p></summary>
+        public virtual string StorageSize { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql server update")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--admin-password {value}", AdminPassword, secret: true)
+              .Add("--backup-retention {value}", BackupRetention)
+              .Add("--sku-name {value}", SkuName)
+              .Add("--ssl-enforcement {value}", SslEnforcement)
+              .Add("--storage-size {value}", StorageSize)
+              .Add("--tags {value}", Tags)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlServerWaitSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlServerWaitSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
+        public virtual string Custom { get; internal set; }
+        /// <summary><p>Wait until the resource exists.</p></summary>
+        public virtual string Exists { get; internal set; }
+        /// <summary><p>Polling interval in seconds.</p></summary>
+        public virtual string Interval { get; internal set; }
+        /// <summary><p>Maximum wait in seconds.</p></summary>
+        public virtual string Timeout { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql server wait")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--custom {value}", Custom)
+              .Add("--exists {value}", Exists)
+              .Add("--interval {value}", Interval)
+              .Add("--timeout {value}", Timeout)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlServerConfigurationListSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlServerConfigurationListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql server configuration list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlServerConfigurationSetSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlServerConfigurationSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>The name of the server configuration.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        public virtual string Value { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql server configuration set")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--value {value}", Value)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlServerConfigurationShowSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlServerConfigurationShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>The name of the server configuration.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql server configuration show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureMysqlServerFirewallRuleCreateSettings
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
@@ -1174,129 +1297,6 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlServerConfigurationListSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlServerConfigurationListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql server configuration list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlServerConfigurationSetSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlServerConfigurationSetSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>The name of the server configuration.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
-        public virtual string Value { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql server configuration set")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--value {value}", Value)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlServerConfigurationShowSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlServerConfigurationShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>The name of the server configuration.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql server configuration show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1628,1672 +1628,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureMysqlSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureMysqlSettings ResetVerbose(this AzureMysqlSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlServerCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetName(this AzureMysqlServerCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetName(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetResourceGroup(this AzureMysqlServerCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetResourceGroup(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SkuName
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.SkuName"/>.</em></p><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetSkuName(this AzureMysqlServerCreateSettings toolSettings, string skuName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SkuName = skuName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.SkuName"/>.</em></p><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetSkuName(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SkuName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region BackupRetention
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.BackupRetention"/>.</em></p><p>The number of days a backup is retained.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetBackupRetention(this AzureMysqlServerCreateSettings toolSettings, string backupRetention)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BackupRetention = backupRetention;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.BackupRetention"/>.</em></p><p>The number of days a backup is retained.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetBackupRetention(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BackupRetention = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GeoRedundantBackup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.GeoRedundantBackup"/>.</em></p><p>Enable Geo-redundant or not for server backup.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetGeoRedundantBackup(this AzureMysqlServerCreateSettings toolSettings, string geoRedundantBackup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GeoRedundantBackup = geoRedundantBackup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.GeoRedundantBackup"/>.</em></p><p>Enable Geo-redundant or not for server backup.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetGeoRedundantBackup(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GeoRedundantBackup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetLocation(this AzureMysqlServerCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetLocation(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SslEnforcement
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.SslEnforcement"/>.</em></p><p>Enable ssl enforcement or not when connect to server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetSslEnforcement(this AzureMysqlServerCreateSettings toolSettings, MysqlServerSslEnforcement sslEnforcement)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SslEnforcement = sslEnforcement;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.SslEnforcement"/>.</em></p><p>Enable ssl enforcement or not when connect to server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetSslEnforcement(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SslEnforcement = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StorageSize
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.StorageSize"/>.</em></p><p>The max storage size of the server. Unit is megabytes.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetStorageSize(this AzureMysqlServerCreateSettings toolSettings, string storageSize)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageSize = storageSize;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.StorageSize"/>.</em></p><p>The max storage size of the server. Unit is megabytes.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetStorageSize(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageSize = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetTags(this AzureMysqlServerCreateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetTags(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Version
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Version"/>.</em></p><p>Server version.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetVersion(this AzureMysqlServerCreateSettings toolSettings, string version)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = version;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Version"/>.</em></p><p>Server version.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetVersion(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AdminUser
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.AdminUser"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetAdminUser(this AzureMysqlServerCreateSettings toolSettings, string adminUser)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AdminUser = adminUser;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.AdminUser"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetAdminUser(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AdminUser = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AdminPassword
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.AdminPassword"/>.</em></p><p>The password of the administrator login.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetAdminPassword(this AzureMysqlServerCreateSettings toolSettings, string adminPassword)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AdminPassword = adminPassword;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.AdminPassword"/>.</em></p><p>The password of the administrator login.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetAdminPassword(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AdminPassword = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetDebug(this AzureMysqlServerCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetDebug(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetHelp(this AzureMysqlServerCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetHelp(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetOutput(this AzureMysqlServerCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetOutput(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetQuery(this AzureMysqlServerCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetQuery(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings SetVerbose(this AzureMysqlServerCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerCreateSettings ResetVerbose(this AzureMysqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlServerDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings SetName(this AzureMysqlServerDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings ResetName(this AzureMysqlServerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings SetResourceGroup(this AzureMysqlServerDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings ResetResourceGroup(this AzureMysqlServerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Yes
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings SetYes(this AzureMysqlServerDeleteSettings toolSettings, string yes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = yes;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings ResetYes(this AzureMysqlServerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings SetDebug(this AzureMysqlServerDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings ResetDebug(this AzureMysqlServerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings SetHelp(this AzureMysqlServerDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings ResetHelp(this AzureMysqlServerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings SetOutput(this AzureMysqlServerDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings ResetOutput(this AzureMysqlServerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings SetQuery(this AzureMysqlServerDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings ResetQuery(this AzureMysqlServerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings SetVerbose(this AzureMysqlServerDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerDeleteSettings ResetVerbose(this AzureMysqlServerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlServerGeorestoreSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerGeorestoreSettingsExtensions
-    {
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetLocation(this AzureMysqlServerGeorestoreSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetLocation(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetName(this AzureMysqlServerGeorestoreSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetName(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetResourceGroup(this AzureMysqlServerGeorestoreSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetResourceGroup(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SourceServer
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.SourceServer"/>.</em></p><p>The name or ID of the source server to restore from.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetSourceServer(this AzureMysqlServerGeorestoreSettings toolSettings, string sourceServer)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourceServer = sourceServer;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.SourceServer"/>.</em></p><p>The name or ID of the source server to restore from.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetSourceServer(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourceServer = null;
-            return toolSettings;
-        }
-        #endregion
-        #region BackupRetention
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.BackupRetention"/>.</em></p><p>The max days of retention, unit is days.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetBackupRetention(this AzureMysqlServerGeorestoreSettings toolSettings, string backupRetention)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BackupRetention = backupRetention;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.BackupRetention"/>.</em></p><p>The max days of retention, unit is days.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetBackupRetention(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BackupRetention = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GeoRedundantBackup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.GeoRedundantBackup"/>.</em></p><p>Enable Geo-redundant or not for server backup.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetGeoRedundantBackup(this AzureMysqlServerGeorestoreSettings toolSettings, string geoRedundantBackup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GeoRedundantBackup = geoRedundantBackup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.GeoRedundantBackup"/>.</em></p><p>Enable Geo-redundant or not for server backup.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetGeoRedundantBackup(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GeoRedundantBackup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoWait
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetNoWait(this AzureMysqlServerGeorestoreSettings toolSettings, string noWait)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = noWait;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetNoWait(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SkuName
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.SkuName"/>.</em></p><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetSkuName(this AzureMysqlServerGeorestoreSettings toolSettings, string skuName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SkuName = skuName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.SkuName"/>.</em></p><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetSkuName(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SkuName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetDebug(this AzureMysqlServerGeorestoreSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetDebug(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetHelp(this AzureMysqlServerGeorestoreSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetHelp(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetOutput(this AzureMysqlServerGeorestoreSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetOutput(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetQuery(this AzureMysqlServerGeorestoreSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetQuery(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetVerbose(this AzureMysqlServerGeorestoreSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetVerbose(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlServerListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerListSettings SetResourceGroup(this AzureMysqlServerListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerListSettings ResetResourceGroup(this AzureMysqlServerListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerListSettings SetDebug(this AzureMysqlServerListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerListSettings ResetDebug(this AzureMysqlServerListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerListSettings SetHelp(this AzureMysqlServerListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerListSettings ResetHelp(this AzureMysqlServerListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerListSettings SetOutput(this AzureMysqlServerListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerListSettings ResetOutput(this AzureMysqlServerListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerListSettings SetQuery(this AzureMysqlServerListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerListSettings ResetQuery(this AzureMysqlServerListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerListSettings SetVerbose(this AzureMysqlServerListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerListSettings ResetVerbose(this AzureMysqlServerListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlServerRestoreSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerRestoreSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings SetName(this AzureMysqlServerRestoreSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings ResetName(this AzureMysqlServerRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings SetResourceGroup(this AzureMysqlServerRestoreSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings ResetResourceGroup(this AzureMysqlServerRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region RestorePointInTime
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.RestorePointInTime"/>.</em></p><p>The point in time to restore from (ISO8601 format), e.g., 2017-04-26T02:10:00+08:00.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings SetRestorePointInTime(this AzureMysqlServerRestoreSettings toolSettings, string restorePointInTime)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RestorePointInTime = restorePointInTime;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.RestorePointInTime"/>.</em></p><p>The point in time to restore from (ISO8601 format), e.g., 2017-04-26T02:10:00+08:00.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings ResetRestorePointInTime(this AzureMysqlServerRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RestorePointInTime = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SourceServer
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.SourceServer"/>.</em></p><p>The name or ID of the source server to restore from.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings SetSourceServer(this AzureMysqlServerRestoreSettings toolSettings, string sourceServer)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourceServer = sourceServer;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.SourceServer"/>.</em></p><p>The name or ID of the source server to restore from.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings ResetSourceServer(this AzureMysqlServerRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourceServer = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoWait
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings SetNoWait(this AzureMysqlServerRestoreSettings toolSettings, string noWait)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = noWait;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings ResetNoWait(this AzureMysqlServerRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings SetDebug(this AzureMysqlServerRestoreSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings ResetDebug(this AzureMysqlServerRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings SetHelp(this AzureMysqlServerRestoreSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings ResetHelp(this AzureMysqlServerRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings SetOutput(this AzureMysqlServerRestoreSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings ResetOutput(this AzureMysqlServerRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings SetQuery(this AzureMysqlServerRestoreSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings ResetQuery(this AzureMysqlServerRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings SetVerbose(this AzureMysqlServerRestoreSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings ResetVerbose(this AzureMysqlServerRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlServerShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings SetName(this AzureMysqlServerShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings ResetName(this AzureMysqlServerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings SetResourceGroup(this AzureMysqlServerShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings ResetResourceGroup(this AzureMysqlServerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings SetDebug(this AzureMysqlServerShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings ResetDebug(this AzureMysqlServerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings SetHelp(this AzureMysqlServerShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings ResetHelp(this AzureMysqlServerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings SetOutput(this AzureMysqlServerShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings ResetOutput(this AzureMysqlServerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings SetQuery(this AzureMysqlServerShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings ResetQuery(this AzureMysqlServerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings SetVerbose(this AzureMysqlServerShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerShowSettings ResetVerbose(this AzureMysqlServerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlServerUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetName(this AzureMysqlServerUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetName(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetResourceGroup(this AzureMysqlServerUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetResourceGroup(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AdminPassword
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.AdminPassword"/>.</em></p><p>The password of the administrator login.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetAdminPassword(this AzureMysqlServerUpdateSettings toolSettings, string adminPassword)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AdminPassword = adminPassword;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.AdminPassword"/>.</em></p><p>The password of the administrator login.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetAdminPassword(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AdminPassword = null;
-            return toolSettings;
-        }
-        #endregion
-        #region BackupRetention
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.BackupRetention"/>.</em></p><p>The number of days a backup is retained.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetBackupRetention(this AzureMysqlServerUpdateSettings toolSettings, string backupRetention)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BackupRetention = backupRetention;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.BackupRetention"/>.</em></p><p>The number of days a backup is retained.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetBackupRetention(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BackupRetention = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SkuName
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.SkuName"/>.</em></p><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetSkuName(this AzureMysqlServerUpdateSettings toolSettings, string skuName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SkuName = skuName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.SkuName"/>.</em></p><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetSkuName(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SkuName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SslEnforcement
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.SslEnforcement"/>.</em></p><p>Enable ssl enforcement or not when connect to server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetSslEnforcement(this AzureMysqlServerUpdateSettings toolSettings, MysqlServerSslEnforcement sslEnforcement)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SslEnforcement = sslEnforcement;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.SslEnforcement"/>.</em></p><p>Enable ssl enforcement or not when connect to server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetSslEnforcement(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SslEnforcement = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StorageSize
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.StorageSize"/>.</em></p><p>The max storage size of the server. Unit is megabytes.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetStorageSize(this AzureMysqlServerUpdateSettings toolSettings, string storageSize)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageSize = storageSize;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.StorageSize"/>.</em></p><p>The max storage size of the server. Unit is megabytes.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetStorageSize(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageSize = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetTags(this AzureMysqlServerUpdateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetTags(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetAdd(this AzureMysqlServerUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetAdd(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetForceString(this AzureMysqlServerUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetForceString(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetRemove(this AzureMysqlServerUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetRemove(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetSet(this AzureMysqlServerUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetSet(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetDebug(this AzureMysqlServerUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetDebug(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetHelp(this AzureMysqlServerUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetHelp(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetOutput(this AzureMysqlServerUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetOutput(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetQuery(this AzureMysqlServerUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetQuery(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetVerbose(this AzureMysqlServerUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetVerbose(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlServerWaitSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerWaitSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings SetName(this AzureMysqlServerWaitSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings ResetName(this AzureMysqlServerWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings SetResourceGroup(this AzureMysqlServerWaitSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings ResetResourceGroup(this AzureMysqlServerWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Custom
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Custom"/>.</em></p><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings SetCustom(this AzureMysqlServerWaitSettings toolSettings, string custom)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Custom = custom;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Custom"/>.</em></p><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings ResetCustom(this AzureMysqlServerWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Custom = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Exists
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Exists"/>.</em></p><p>Wait until the resource exists.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings SetExists(this AzureMysqlServerWaitSettings toolSettings, string exists)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Exists = exists;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Exists"/>.</em></p><p>Wait until the resource exists.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings ResetExists(this AzureMysqlServerWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Exists = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Interval
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Interval"/>.</em></p><p>Polling interval in seconds.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings SetInterval(this AzureMysqlServerWaitSettings toolSettings, string interval)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Interval = interval;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Interval"/>.</em></p><p>Polling interval in seconds.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings ResetInterval(this AzureMysqlServerWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Interval = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Timeout
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Timeout"/>.</em></p><p>Maximum wait in seconds.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings SetTimeout(this AzureMysqlServerWaitSettings toolSettings, string timeout)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = timeout;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Timeout"/>.</em></p><p>Maximum wait in seconds.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings ResetTimeout(this AzureMysqlServerWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings SetDebug(this AzureMysqlServerWaitSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings ResetDebug(this AzureMysqlServerWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings SetHelp(this AzureMysqlServerWaitSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings ResetHelp(this AzureMysqlServerWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings SetOutput(this AzureMysqlServerWaitSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings ResetOutput(this AzureMysqlServerWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings SetQuery(this AzureMysqlServerWaitSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings ResetQuery(this AzureMysqlServerWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings SetVerbose(this AzureMysqlServerWaitSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerWaitSettings ResetVerbose(this AzureMysqlServerWaitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4328,6 +2662,2176 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureMysqlServerCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlServerCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetName(this AzureMysqlServerCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetName(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetResourceGroup(this AzureMysqlServerCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetResourceGroup(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SkuName
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.SkuName"/>.</em></p><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetSkuName(this AzureMysqlServerCreateSettings toolSettings, string skuName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkuName = skuName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.SkuName"/>.</em></p><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetSkuName(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkuName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BackupRetention
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.BackupRetention"/>.</em></p><p>The number of days a backup is retained.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetBackupRetention(this AzureMysqlServerCreateSettings toolSettings, string backupRetention)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BackupRetention = backupRetention;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.BackupRetention"/>.</em></p><p>The number of days a backup is retained.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetBackupRetention(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BackupRetention = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GeoRedundantBackup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.GeoRedundantBackup"/>.</em></p><p>Enable Geo-redundant or not for server backup.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetGeoRedundantBackup(this AzureMysqlServerCreateSettings toolSettings, string geoRedundantBackup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GeoRedundantBackup = geoRedundantBackup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.GeoRedundantBackup"/>.</em></p><p>Enable Geo-redundant or not for server backup.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetGeoRedundantBackup(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GeoRedundantBackup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetLocation(this AzureMysqlServerCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetLocation(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SslEnforcement
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.SslEnforcement"/>.</em></p><p>Enable ssl enforcement or not when connect to server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetSslEnforcement(this AzureMysqlServerCreateSettings toolSettings, MysqlServerSslEnforcement sslEnforcement)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SslEnforcement = sslEnforcement;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.SslEnforcement"/>.</em></p><p>Enable ssl enforcement or not when connect to server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetSslEnforcement(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SslEnforcement = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StorageSize
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.StorageSize"/>.</em></p><p>The max storage size of the server. Unit is megabytes.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetStorageSize(this AzureMysqlServerCreateSettings toolSettings, string storageSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageSize = storageSize;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.StorageSize"/>.</em></p><p>The max storage size of the server. Unit is megabytes.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetStorageSize(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetTags(this AzureMysqlServerCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetTags(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Version
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Version"/>.</em></p><p>Server version.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetVersion(this AzureMysqlServerCreateSettings toolSettings, string version)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = version;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Version"/>.</em></p><p>Server version.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetVersion(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AdminUser
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.AdminUser"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetAdminUser(this AzureMysqlServerCreateSettings toolSettings, string adminUser)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminUser = adminUser;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.AdminUser"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetAdminUser(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminUser = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AdminPassword
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.AdminPassword"/>.</em></p><p>The password of the administrator login.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetAdminPassword(this AzureMysqlServerCreateSettings toolSettings, string adminPassword)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminPassword = adminPassword;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.AdminPassword"/>.</em></p><p>The password of the administrator login.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetAdminPassword(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminPassword = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetDebug(this AzureMysqlServerCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetDebug(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetHelp(this AzureMysqlServerCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetHelp(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetOutput(this AzureMysqlServerCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetOutput(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetQuery(this AzureMysqlServerCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetQuery(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetVerbose(this AzureMysqlServerCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetVerbose(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlServerDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlServerDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings SetName(this AzureMysqlServerDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings ResetName(this AzureMysqlServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings SetResourceGroup(this AzureMysqlServerDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings ResetResourceGroup(this AzureMysqlServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings SetYes(this AzureMysqlServerDeleteSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings ResetYes(this AzureMysqlServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings SetDebug(this AzureMysqlServerDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings ResetDebug(this AzureMysqlServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings SetHelp(this AzureMysqlServerDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings ResetHelp(this AzureMysqlServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings SetOutput(this AzureMysqlServerDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings ResetOutput(this AzureMysqlServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings SetQuery(this AzureMysqlServerDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings ResetQuery(this AzureMysqlServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings SetVerbose(this AzureMysqlServerDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings ResetVerbose(this AzureMysqlServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlServerGeorestoreSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlServerGeorestoreSettingsExtensions
+    {
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetLocation(this AzureMysqlServerGeorestoreSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetLocation(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetName(this AzureMysqlServerGeorestoreSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetName(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetResourceGroup(this AzureMysqlServerGeorestoreSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetResourceGroup(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SourceServer
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.SourceServer"/>.</em></p><p>The name or ID of the source server to restore from.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetSourceServer(this AzureMysqlServerGeorestoreSettings toolSettings, string sourceServer)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourceServer = sourceServer;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.SourceServer"/>.</em></p><p>The name or ID of the source server to restore from.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetSourceServer(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourceServer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BackupRetention
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.BackupRetention"/>.</em></p><p>The max days of retention, unit is days.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetBackupRetention(this AzureMysqlServerGeorestoreSettings toolSettings, string backupRetention)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BackupRetention = backupRetention;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.BackupRetention"/>.</em></p><p>The max days of retention, unit is days.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetBackupRetention(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BackupRetention = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GeoRedundantBackup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.GeoRedundantBackup"/>.</em></p><p>Enable Geo-redundant or not for server backup.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetGeoRedundantBackup(this AzureMysqlServerGeorestoreSettings toolSettings, string geoRedundantBackup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GeoRedundantBackup = geoRedundantBackup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.GeoRedundantBackup"/>.</em></p><p>Enable Geo-redundant or not for server backup.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetGeoRedundantBackup(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GeoRedundantBackup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetNoWait(this AzureMysqlServerGeorestoreSettings toolSettings, bool? noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetNoWait(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureMysqlServerGeorestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings EnableNoWait(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureMysqlServerGeorestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings DisableNoWait(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureMysqlServerGeorestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ToggleNoWait(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region SkuName
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.SkuName"/>.</em></p><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetSkuName(this AzureMysqlServerGeorestoreSettings toolSettings, string skuName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkuName = skuName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.SkuName"/>.</em></p><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetSkuName(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkuName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetDebug(this AzureMysqlServerGeorestoreSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetDebug(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetHelp(this AzureMysqlServerGeorestoreSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetHelp(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetOutput(this AzureMysqlServerGeorestoreSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetOutput(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetQuery(this AzureMysqlServerGeorestoreSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetQuery(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetVerbose(this AzureMysqlServerGeorestoreSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetVerbose(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlServerListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlServerListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings SetResourceGroup(this AzureMysqlServerListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings ResetResourceGroup(this AzureMysqlServerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings SetDebug(this AzureMysqlServerListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings ResetDebug(this AzureMysqlServerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings SetHelp(this AzureMysqlServerListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings ResetHelp(this AzureMysqlServerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings SetOutput(this AzureMysqlServerListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings ResetOutput(this AzureMysqlServerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings SetQuery(this AzureMysqlServerListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings ResetQuery(this AzureMysqlServerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings SetVerbose(this AzureMysqlServerListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings ResetVerbose(this AzureMysqlServerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlServerRestoreSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlServerRestoreSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetName(this AzureMysqlServerRestoreSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ResetName(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetResourceGroup(this AzureMysqlServerRestoreSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ResetResourceGroup(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region RestorePointInTime
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.RestorePointInTime"/>.</em></p><p>The point in time to restore from (ISO8601 format), e.g., 2017-04-26T02:10:00+08:00.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetRestorePointInTime(this AzureMysqlServerRestoreSettings toolSettings, string restorePointInTime)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RestorePointInTime = restorePointInTime;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.RestorePointInTime"/>.</em></p><p>The point in time to restore from (ISO8601 format), e.g., 2017-04-26T02:10:00+08:00.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ResetRestorePointInTime(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RestorePointInTime = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SourceServer
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.SourceServer"/>.</em></p><p>The name or ID of the source server to restore from.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetSourceServer(this AzureMysqlServerRestoreSettings toolSettings, string sourceServer)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourceServer = sourceServer;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.SourceServer"/>.</em></p><p>The name or ID of the source server to restore from.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ResetSourceServer(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourceServer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetNoWait(this AzureMysqlServerRestoreSettings toolSettings, bool? noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ResetNoWait(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureMysqlServerRestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings EnableNoWait(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureMysqlServerRestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings DisableNoWait(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureMysqlServerRestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ToggleNoWait(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetDebug(this AzureMysqlServerRestoreSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ResetDebug(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetHelp(this AzureMysqlServerRestoreSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ResetHelp(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetOutput(this AzureMysqlServerRestoreSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ResetOutput(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetQuery(this AzureMysqlServerRestoreSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ResetQuery(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetVerbose(this AzureMysqlServerRestoreSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ResetVerbose(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlServerShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlServerShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings SetName(this AzureMysqlServerShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings ResetName(this AzureMysqlServerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings SetResourceGroup(this AzureMysqlServerShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings ResetResourceGroup(this AzureMysqlServerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings SetDebug(this AzureMysqlServerShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings ResetDebug(this AzureMysqlServerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings SetHelp(this AzureMysqlServerShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings ResetHelp(this AzureMysqlServerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings SetOutput(this AzureMysqlServerShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings ResetOutput(this AzureMysqlServerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings SetQuery(this AzureMysqlServerShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings ResetQuery(this AzureMysqlServerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings SetVerbose(this AzureMysqlServerShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings ResetVerbose(this AzureMysqlServerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlServerUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlServerUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetName(this AzureMysqlServerUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetName(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetResourceGroup(this AzureMysqlServerUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetResourceGroup(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AdminPassword
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.AdminPassword"/>.</em></p><p>The password of the administrator login.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetAdminPassword(this AzureMysqlServerUpdateSettings toolSettings, string adminPassword)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminPassword = adminPassword;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.AdminPassword"/>.</em></p><p>The password of the administrator login.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetAdminPassword(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminPassword = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BackupRetention
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.BackupRetention"/>.</em></p><p>The number of days a backup is retained.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetBackupRetention(this AzureMysqlServerUpdateSettings toolSettings, string backupRetention)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BackupRetention = backupRetention;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.BackupRetention"/>.</em></p><p>The number of days a backup is retained.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetBackupRetention(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BackupRetention = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SkuName
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.SkuName"/>.</em></p><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetSkuName(this AzureMysqlServerUpdateSettings toolSettings, string skuName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkuName = skuName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.SkuName"/>.</em></p><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetSkuName(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkuName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SslEnforcement
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.SslEnforcement"/>.</em></p><p>Enable ssl enforcement or not when connect to server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetSslEnforcement(this AzureMysqlServerUpdateSettings toolSettings, MysqlServerSslEnforcement sslEnforcement)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SslEnforcement = sslEnforcement;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.SslEnforcement"/>.</em></p><p>Enable ssl enforcement or not when connect to server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetSslEnforcement(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SslEnforcement = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StorageSize
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.StorageSize"/>.</em></p><p>The max storage size of the server. Unit is megabytes.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetStorageSize(this AzureMysqlServerUpdateSettings toolSettings, string storageSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageSize = storageSize;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.StorageSize"/>.</em></p><p>The max storage size of the server. Unit is megabytes.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetStorageSize(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetTags(this AzureMysqlServerUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetTags(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetAdd(this AzureMysqlServerUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetAdd(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetForceString(this AzureMysqlServerUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetForceString(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetRemove(this AzureMysqlServerUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetRemove(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetSet(this AzureMysqlServerUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetSet(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetDebug(this AzureMysqlServerUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetDebug(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetHelp(this AzureMysqlServerUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetHelp(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetOutput(this AzureMysqlServerUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetOutput(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetQuery(this AzureMysqlServerUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetQuery(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetVerbose(this AzureMysqlServerUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetVerbose(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlServerWaitSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlServerWaitSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetName(this AzureMysqlServerWaitSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings ResetName(this AzureMysqlServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetResourceGroup(this AzureMysqlServerWaitSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings ResetResourceGroup(this AzureMysqlServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Custom
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Custom"/>.</em></p><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetCustom(this AzureMysqlServerWaitSettings toolSettings, string custom)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Custom = custom;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Custom"/>.</em></p><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings ResetCustom(this AzureMysqlServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Custom = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Exists
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Exists"/>.</em></p><p>Wait until the resource exists.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetExists(this AzureMysqlServerWaitSettings toolSettings, string exists)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Exists = exists;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Exists"/>.</em></p><p>Wait until the resource exists.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings ResetExists(this AzureMysqlServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Exists = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Interval
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Interval"/>.</em></p><p>Polling interval in seconds.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetInterval(this AzureMysqlServerWaitSettings toolSettings, string interval)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Interval = interval;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Interval"/>.</em></p><p>Polling interval in seconds.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings ResetInterval(this AzureMysqlServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Interval = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Timeout
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Timeout"/>.</em></p><p>Maximum wait in seconds.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetTimeout(this AzureMysqlServerWaitSettings toolSettings, string timeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = timeout;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Timeout"/>.</em></p><p>Maximum wait in seconds.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings ResetTimeout(this AzureMysqlServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetDebug(this AzureMysqlServerWaitSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings ResetDebug(this AzureMysqlServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetHelp(this AzureMysqlServerWaitSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings ResetHelp(this AzureMysqlServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetOutput(this AzureMysqlServerWaitSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings ResetOutput(this AzureMysqlServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetQuery(this AzureMysqlServerWaitSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings ResetQuery(this AzureMysqlServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetVerbose(this AzureMysqlServerWaitSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings ResetVerbose(this AzureMysqlServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlServerConfigurationListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlServerConfigurationListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings SetResourceGroup(this AzureMysqlServerConfigurationListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings ResetResourceGroup(this AzureMysqlServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings SetServerName(this AzureMysqlServerConfigurationListSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings ResetServerName(this AzureMysqlServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings SetDebug(this AzureMysqlServerConfigurationListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings ResetDebug(this AzureMysqlServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings SetHelp(this AzureMysqlServerConfigurationListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings ResetHelp(this AzureMysqlServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings SetOutput(this AzureMysqlServerConfigurationListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings ResetOutput(this AzureMysqlServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings SetQuery(this AzureMysqlServerConfigurationListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings ResetQuery(this AzureMysqlServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings SetVerbose(this AzureMysqlServerConfigurationListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings ResetVerbose(this AzureMysqlServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlServerConfigurationSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlServerConfigurationSetSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings SetName(this AzureMysqlServerConfigurationSetSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings ResetName(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings SetResourceGroup(this AzureMysqlServerConfigurationSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings ResetResourceGroup(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings SetServerName(this AzureMysqlServerConfigurationSetSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings ResetServerName(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Value
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings SetValue(this AzureMysqlServerConfigurationSetSettings toolSettings, string value)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Value = value;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings ResetValue(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Value = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings SetDebug(this AzureMysqlServerConfigurationSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings ResetDebug(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings SetHelp(this AzureMysqlServerConfigurationSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings ResetHelp(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings SetOutput(this AzureMysqlServerConfigurationSetSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings ResetOutput(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings SetQuery(this AzureMysqlServerConfigurationSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings ResetQuery(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings SetVerbose(this AzureMysqlServerConfigurationSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings ResetVerbose(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlServerConfigurationShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlServerConfigurationShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetName(this AzureMysqlServerConfigurationShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetName(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetResourceGroup(this AzureMysqlServerConfigurationShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetResourceGroup(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetServerName(this AzureMysqlServerConfigurationShowSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetServerName(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetDebug(this AzureMysqlServerConfigurationShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetDebug(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetHelp(this AzureMysqlServerConfigurationShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetHelp(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetOutput(this AzureMysqlServerConfigurationShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetOutput(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetQuery(this AzureMysqlServerConfigurationShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetQuery(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetVerbose(this AzureMysqlServerConfigurationShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetVerbose(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureMysqlServerFirewallRuleCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
@@ -5224,462 +5728,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureMysqlServerFirewallRuleUpdateSettings ResetVerbose(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlServerConfigurationListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerConfigurationListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetResourceGroup(this AzureMysqlServerConfigurationListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetResourceGroup(this AzureMysqlServerConfigurationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetServerName(this AzureMysqlServerConfigurationListSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetServerName(this AzureMysqlServerConfigurationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetDebug(this AzureMysqlServerConfigurationListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetDebug(this AzureMysqlServerConfigurationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetHelp(this AzureMysqlServerConfigurationListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetHelp(this AzureMysqlServerConfigurationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetOutput(this AzureMysqlServerConfigurationListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetOutput(this AzureMysqlServerConfigurationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetQuery(this AzureMysqlServerConfigurationListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetQuery(this AzureMysqlServerConfigurationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetVerbose(this AzureMysqlServerConfigurationListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetVerbose(this AzureMysqlServerConfigurationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlServerConfigurationSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerConfigurationSetSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetName(this AzureMysqlServerConfigurationSetSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetName(this AzureMysqlServerConfigurationSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetResourceGroup(this AzureMysqlServerConfigurationSetSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetResourceGroup(this AzureMysqlServerConfigurationSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetServerName(this AzureMysqlServerConfigurationSetSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetServerName(this AzureMysqlServerConfigurationSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Value
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetValue(this AzureMysqlServerConfigurationSetSettings toolSettings, string value)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Value = value;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetValue(this AzureMysqlServerConfigurationSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Value = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetDebug(this AzureMysqlServerConfigurationSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetDebug(this AzureMysqlServerConfigurationSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetHelp(this AzureMysqlServerConfigurationSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetHelp(this AzureMysqlServerConfigurationSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetOutput(this AzureMysqlServerConfigurationSetSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetOutput(this AzureMysqlServerConfigurationSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetQuery(this AzureMysqlServerConfigurationSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetQuery(this AzureMysqlServerConfigurationSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetVerbose(this AzureMysqlServerConfigurationSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetVerbose(this AzureMysqlServerConfigurationSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlServerConfigurationShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerConfigurationShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetName(this AzureMysqlServerConfigurationShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetName(this AzureMysqlServerConfigurationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetResourceGroup(this AzureMysqlServerConfigurationShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetResourceGroup(this AzureMysqlServerConfigurationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetServerName(this AzureMysqlServerConfigurationShowSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetServerName(this AzureMysqlServerConfigurationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetDebug(this AzureMysqlServerConfigurationShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetDebug(this AzureMysqlServerConfigurationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetHelp(this AzureMysqlServerConfigurationShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetHelp(this AzureMysqlServerConfigurationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetOutput(this AzureMysqlServerConfigurationShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetOutput(this AzureMysqlServerConfigurationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetQuery(this AzureMysqlServerConfigurationShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetQuery(this AzureMysqlServerConfigurationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetVerbose(this AzureMysqlServerConfigurationShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetVerbose(this AzureMysqlServerConfigurationShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

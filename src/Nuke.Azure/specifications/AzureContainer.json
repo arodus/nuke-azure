@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/container.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/container.yml"
   ],
   "name": "AzureContainer",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest",
@@ -70,7 +70,7 @@
           },
           {
             "name": "AzureEnvironmentVariables",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--environment-variables {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -114,8 +114,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           },
           {
@@ -144,7 +144,7 @@
           },
           {
             "name": "Secrets",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--secrets {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -159,7 +159,7 @@
           },
           {
             "name": "SecureEnvironmentVariables",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--secure-environment-variables {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",

@@ -12,14 +12,9 @@ pipeline {
 				checkout scm
             }
         }
-        stage('Compile') {
-            steps {
-                sh '/bin/bash ./build.sh Compile'
-            }
-        }
         stage('Test') {
             steps {
-                sh '/bin/bash ./build.sh Test -Skip'
+                sh '/bin/bash ./build.sh Test'
             }
             post {
                 always {
@@ -27,29 +22,9 @@ pipeline {
                 }
             }
         }
-		stage('Clone') {
-            steps {
-                sh '/bin/bash ./build.sh Clone -Skip'
-            }
-        }
-        stage('GenerateSpecifications') {
-            steps {
-                sh '/bin/bash ./build.sh GenerateSpecifications -Skip'
-            }
-        }
-		stage('GenerateTools') {
-            steps {
-                sh '/bin/bash ./build.sh GenerateTools -Skip'
-            }
-        }
-        stage('CompilePlugin') {
-            steps {
-                sh '/bin/bash ./build.sh CompilePlugin -Skip'
-            }
-        }
         stage('Pack') {
             steps {
-                sh '/bin/bash ./build.sh Pack -Skip'
+                sh '/bin/bash ./build.sh Pack'
             }
 			post {
 				success {

@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.1 [CommitSha: 8eca516b].
+// Generated with Nuke.CodeGeneration, Version: 0.6.2 [CommitSha: ff25463a].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAks.json.
 
 using JetBrains.Annotations;
@@ -281,9 +281,9 @@ namespace Nuke.Azure
         /// <summary><p>The Kubernetes network plugin to use.</p></summary>
         public virtual string NetworkPlugin { get; internal set; }
         /// <summary><p>Do not use or create a local SSH key.</p></summary>
-        public virtual string NoSshKey { get; internal set; }
+        public virtual bool? NoSshKey { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
+        public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Number of nodes in the Kubernetes node pool. After creating a cluster, you can change the size of its node pool with `az aks scale`.</p></summary>
         public virtual int? NodeCount { get; internal set; }
         /// <summary><p>Size in GB of the OS disk for each node in the node pool. Minimum 30 GB.</p></summary>
@@ -339,8 +339,8 @@ namespace Nuke.Azure
               .Add("--location {value}", Location)
               .Add("--max-pods {value}", MaxPods)
               .Add("--network-plugin {value}", NetworkPlugin)
-              .Add("--no-ssh-key {value}", NoSshKey)
-              .Add("--no-wait {value}", NoWait)
+              .Add("--no-ssh-key", NoSshKey)
+              .Add("--no-wait", NoWait)
               .Add("--node-count {value}", NodeCount)
               .Add("--node-osdisk-size {value}", NodeOsdiskSize)
               .Add("--node-vm-size {value}", NodeVmSize)
@@ -375,7 +375,7 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
+        public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -394,7 +394,7 @@ namespace Nuke.Azure
               .Add("aks delete")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--no-wait {value}", NoWait)
+              .Add("--no-wait", NoWait)
               .Add("--yes {value}", Yes)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -422,7 +422,7 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
+        public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -440,7 +440,7 @@ namespace Nuke.Azure
               .Add("--addons {value}", Addons, separator: ',')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--no-wait {value}", NoWait)
+              .Add("--no-wait", NoWait)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -467,7 +467,7 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
+        public virtual bool? NoWait { get; internal set; }
         /// <summary><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data.</p></summary>
         public virtual string WorkspaceResourceId { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -487,7 +487,7 @@ namespace Nuke.Azure
               .Add("--addons {value}", Addons, separator: ',')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--no-wait {value}", NoWait)
+              .Add("--no-wait", NoWait)
               .Add("--workspace-resource-id {value}", WorkspaceResourceId)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -857,7 +857,7 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
+        public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -875,7 +875,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--node-count {value}", NodeCount)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--no-wait {value}", NoWait)
+              .Add("--no-wait", NoWait)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -939,7 +939,7 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
+        public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -959,7 +959,7 @@ namespace Nuke.Azure
               .Add("--kubernetes-version {value}", KubernetesVersion)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--no-wait {value}", NoWait)
+              .Add("--no-wait", NoWait)
               .Add("--yes {value}", Yes)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1701,7 +1701,7 @@ namespace Nuke.Azure
         #region NoSshKey
         /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.NoSshKey"/>.</em></p><p>Do not use or create a local SSH key.</p></summary>
         [Pure]
-        public static AzureAksCreateSettings SetNoSshKey(this AzureAksCreateSettings toolSettings, string noSshKey)
+        public static AzureAksCreateSettings SetNoSshKey(this AzureAksCreateSettings toolSettings, bool? noSshKey)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoSshKey = noSshKey;
@@ -1715,11 +1715,35 @@ namespace Nuke.Azure
             toolSettings.NoSshKey = null;
             return toolSettings;
         }
+        /// <summary><p><em>Enables <see cref="AzureAksCreateSettings.NoSshKey"/>.</em></p><p>Do not use or create a local SSH key.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings EnableNoSshKey(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoSshKey = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAksCreateSettings.NoSshKey"/>.</em></p><p>Do not use or create a local SSH key.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings DisableNoSshKey(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoSshKey = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAksCreateSettings.NoSshKey"/>.</em></p><p>Do not use or create a local SSH key.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ToggleNoSshKey(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoSshKey = !toolSettings.NoSshKey;
+            return toolSettings;
+        }
         #endregion
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
-        public static AzureAksCreateSettings SetNoWait(this AzureAksCreateSettings toolSettings, string noWait)
+        public static AzureAksCreateSettings SetNoWait(this AzureAksCreateSettings toolSettings, bool? noWait)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = noWait;
@@ -1731,6 +1755,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAksCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings EnableNoWait(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAksCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings DisableNoWait(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAksCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ToggleNoWait(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
             return toolSettings;
         }
         #endregion
@@ -2093,7 +2141,7 @@ namespace Nuke.Azure
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureAksDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
-        public static AzureAksDeleteSettings SetNoWait(this AzureAksDeleteSettings toolSettings, string noWait)
+        public static AzureAksDeleteSettings SetNoWait(this AzureAksDeleteSettings toolSettings, bool? noWait)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = noWait;
@@ -2105,6 +2153,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAksDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksDeleteSettings EnableNoWait(this AzureAksDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAksDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksDeleteSettings DisableNoWait(this AzureAksDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAksDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksDeleteSettings ToggleNoWait(this AzureAksDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
             return toolSettings;
         }
         #endregion
@@ -2323,7 +2395,7 @@ namespace Nuke.Azure
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureAksDisableAddonsSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
-        public static AzureAksDisableAddonsSettings SetNoWait(this AzureAksDisableAddonsSettings toolSettings, string noWait)
+        public static AzureAksDisableAddonsSettings SetNoWait(this AzureAksDisableAddonsSettings toolSettings, bool? noWait)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = noWait;
@@ -2335,6 +2407,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAksDisableAddonsSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings EnableNoWait(this AzureAksDisableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAksDisableAddonsSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings DisableNoWait(this AzureAksDisableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAksDisableAddonsSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings ToggleNoWait(this AzureAksDisableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
             return toolSettings;
         }
         #endregion
@@ -2535,7 +2631,7 @@ namespace Nuke.Azure
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
-        public static AzureAksEnableAddonsSettings SetNoWait(this AzureAksEnableAddonsSettings toolSettings, string noWait)
+        public static AzureAksEnableAddonsSettings SetNoWait(this AzureAksEnableAddonsSettings toolSettings, bool? noWait)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = noWait;
@@ -2547,6 +2643,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAksEnableAddonsSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings EnableNoWait(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAksEnableAddonsSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings DisableNoWait(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAksEnableAddonsSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings ToggleNoWait(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
             return toolSettings;
         }
         #endregion
@@ -4053,7 +4173,7 @@ namespace Nuke.Azure
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureAksScaleSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
-        public static AzureAksScaleSettings SetNoWait(this AzureAksScaleSettings toolSettings, string noWait)
+        public static AzureAksScaleSettings SetNoWait(this AzureAksScaleSettings toolSettings, bool? noWait)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = noWait;
@@ -4065,6 +4185,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAksScaleSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksScaleSettings EnableNoWait(this AzureAksScaleSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAksScaleSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksScaleSettings DisableNoWait(this AzureAksScaleSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAksScaleSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksScaleSettings ToggleNoWait(this AzureAksScaleSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
             return toolSettings;
         }
         #endregion
@@ -4357,7 +4501,7 @@ namespace Nuke.Azure
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureAksUpgradeSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
-        public static AzureAksUpgradeSettings SetNoWait(this AzureAksUpgradeSettings toolSettings, string noWait)
+        public static AzureAksUpgradeSettings SetNoWait(this AzureAksUpgradeSettings toolSettings, bool? noWait)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = noWait;
@@ -4369,6 +4513,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAksUpgradeSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksUpgradeSettings EnableNoWait(this AzureAksUpgradeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAksUpgradeSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksUpgradeSettings DisableNoWait(this AzureAksUpgradeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAksUpgradeSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksUpgradeSettings ToggleNoWait(this AzureAksUpgradeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
             return toolSettings;
         }
         #endregion

@@ -152,7 +152,7 @@ class Build : NukeBuild
             SpecificationGenerator.GenerateSpecifications(generationSettings);
         });
 
-    Target GenerateTools => _ => _
+    Target GenerateAddon => _ => _
         .After(GenerateSpecifications)
         .Executes(() =>
         {
@@ -208,8 +208,8 @@ class Build : NukeBuild
             });
         });
 
-    Target CompilePlugin => _ => _
-        .DependsOn(GenerateTools, Clean)
+    Target CompileAddon => _ => _
+        .DependsOn(GenerateAddon, Clean)
         .Executes(() =>
         {
             DotNetRestore(s => DefaultDotNetRestore.SetProjectFile(AddonProject));
@@ -217,7 +217,7 @@ class Build : NukeBuild
         });
 
     Target Pack => _ => _
-        .DependsOn(CompilePlugin)
+        .DependsOn(CompileAddon)
         .Executes(() =>
         {
             var releaseNotes = ExtractChangelogSectionNotes(ChangelogFile)
@@ -263,7 +263,7 @@ class Build : NukeBuild
         .Requires(() => LatestCliRelease != null)
         .OnlyWhen(() => IsUpdateAvailable($"{c_addonName} v{ParseVersion(LatestCliRelease)}", ChangelogFile))
         .WhenSkipped(DependencyBehavior.Skip)
-        .DependsOn(CompilePlugin, GenerateSpecifications)
+        .DependsOn(CompileAddon, GenerateSpecifications)
         .Executes(async () =>
         {
             var release = GetReleaseInformation(LatestCliReleases.Value, ParseVersion);
@@ -317,7 +317,7 @@ class Build : NukeBuild
         });
 
     Target PrepareRelease => _ => _
-        .Before(CompilePlugin)
+        .Before(CompileAddon)
         .DependsOn(Changelog, Clean)
         .Executes(() =>
         {
