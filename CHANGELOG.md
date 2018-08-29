@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## [vNext]
+
+## [0.5.3] / 2018-08-29
 - Changed supported version to [Azure CLI v2.0.45](https://docs.microsoft.com/cli/azure/release-notes-azure-cli?view=azure-cli-latest#August-28-2018).
 ## [0.5.2] / 2018-08-23
 - Changed argument types from `Dictionary<string, string>` to `Dictionary<string, object>`.
@@ -78,7 +80,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ## [0.1.0] / 2018-05-09
 - First release.
 
-[vNext]: https://github.com/nuke-build/azure/compare/0.5.2...HEAD
+[vNext]: https://github.com/nuke-build/azure/compare/0.5.3...HEAD
+[0.5.3]: https://github.com/nuke-build/azure/compare/0.5.2...0.5.3
 [0.5.2]: https://github.com/nuke-build/azure/compare/0.5.1...0.5.2
 [0.5.1]: https://github.com/nuke-build/azure/compare/0.5.0...0.5.1
 [0.5.0]: https://github.com/nuke-build/azure/compare/0.4.0...0.5.0
@@ -88,3 +91,4 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 [0.3.1]: https://github.com/nuke-build/azure/compare/0.2.1...0.3.1
 [0.2.1]: https://github.com/nuke-build/azure/compare/0.1.0...0.2.1
 [0.1.0]: https://github.com/nuke-build/azure/tree/0.1.0
+
