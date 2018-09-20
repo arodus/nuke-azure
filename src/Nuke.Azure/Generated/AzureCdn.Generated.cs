@@ -463,11 +463,11 @@ namespace Nuke.Azure
         public virtual bool? NoHttp { get; internal set; }
         /// <summary><p>Indicates whether HTTPS traffic is not allowed on the endpoint. Default is to allow HTTPS traffic.</p></summary>
         public virtual bool? NoHttps { get; internal set; }
-        /// <summary><p>The host header CDN sends along with content requests to origin. The default value is the host name of the origin.</p></summary>
+        /// <summary><p>The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.</p></summary>
         public virtual string OriginHostHeader { get; internal set; }
-        /// <summary><p>The path used when CDN sends request to origin.</p></summary>
+        /// <summary><p>A directory path on the origin that CDN can use to retreive content from, e.g. contoso.cloudapp.net/originpath.</p></summary>
         public virtual string OriginPath { get; internal set; }
-        /// <summary><p>Defines the query string caching behavior.</p></summary>
+        /// <summary><p>Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.</p></summary>
         public virtual CdnEndpointQueryStringCaching QueryStringCaching { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
@@ -820,11 +820,11 @@ namespace Nuke.Azure
         public virtual bool? NoHttp { get; internal set; }
         /// <summary><p>Indicates whether HTTPS traffic is not allowed on the endpoint. Default is to allow HTTPS traffic.</p></summary>
         public virtual bool? NoHttps { get; internal set; }
-        /// <summary><p>The host header CDN sends along with content requests to origin. The default value is the host name of the origin.</p></summary>
+        /// <summary><p>The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.</p></summary>
         public virtual string OriginHostHeader { get; internal set; }
-        /// <summary><p>The path used when CDN sends request to origin.</p></summary>
+        /// <summary><p>A directory path on the origin that CDN can use to retreive content from, e.g. contoso.cloudapp.net/originpath.</p></summary>
         public virtual string OriginPath { get; internal set; }
-        /// <summary><p>Defines the query string caching behavior.</p></summary>
+        /// <summary><p>Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.</p></summary>
         public virtual CdnEndpointQueryStringCaching QueryStringCaching { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
@@ -2312,7 +2312,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region OriginHostHeader
-        /// <summary><p><em>Sets <see cref="AzureCdnEndpointCreateSettings.OriginHostHeader"/>.</em></p><p>The host header CDN sends along with content requests to origin. The default value is the host name of the origin.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnEndpointCreateSettings.OriginHostHeader"/>.</em></p><p>The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.</p></summary>
         [Pure]
         public static AzureCdnEndpointCreateSettings SetOriginHostHeader(this AzureCdnEndpointCreateSettings toolSettings, string originHostHeader)
         {
@@ -2320,7 +2320,7 @@ namespace Nuke.Azure
             toolSettings.OriginHostHeader = originHostHeader;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnEndpointCreateSettings.OriginHostHeader"/>.</em></p><p>The host header CDN sends along with content requests to origin. The default value is the host name of the origin.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnEndpointCreateSettings.OriginHostHeader"/>.</em></p><p>The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.</p></summary>
         [Pure]
         public static AzureCdnEndpointCreateSettings ResetOriginHostHeader(this AzureCdnEndpointCreateSettings toolSettings)
         {
@@ -2330,7 +2330,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region OriginPath
-        /// <summary><p><em>Sets <see cref="AzureCdnEndpointCreateSettings.OriginPath"/>.</em></p><p>The path used when CDN sends request to origin.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnEndpointCreateSettings.OriginPath"/>.</em></p><p>A directory path on the origin that CDN can use to retreive content from, e.g. contoso.cloudapp.net/originpath.</p></summary>
         [Pure]
         public static AzureCdnEndpointCreateSettings SetOriginPath(this AzureCdnEndpointCreateSettings toolSettings, string originPath)
         {
@@ -2338,7 +2338,7 @@ namespace Nuke.Azure
             toolSettings.OriginPath = originPath;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnEndpointCreateSettings.OriginPath"/>.</em></p><p>The path used when CDN sends request to origin.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnEndpointCreateSettings.OriginPath"/>.</em></p><p>A directory path on the origin that CDN can use to retreive content from, e.g. contoso.cloudapp.net/originpath.</p></summary>
         [Pure]
         public static AzureCdnEndpointCreateSettings ResetOriginPath(this AzureCdnEndpointCreateSettings toolSettings)
         {
@@ -2348,7 +2348,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region QueryStringCaching
-        /// <summary><p><em>Sets <see cref="AzureCdnEndpointCreateSettings.QueryStringCaching"/>.</em></p><p>Defines the query string caching behavior.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnEndpointCreateSettings.QueryStringCaching"/>.</em></p><p>Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.</p></summary>
         [Pure]
         public static AzureCdnEndpointCreateSettings SetQueryStringCaching(this AzureCdnEndpointCreateSettings toolSettings, CdnEndpointQueryStringCaching queryStringCaching)
         {
@@ -2356,7 +2356,7 @@ namespace Nuke.Azure
             toolSettings.QueryStringCaching = queryStringCaching;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnEndpointCreateSettings.QueryStringCaching"/>.</em></p><p>Defines the query string caching behavior.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnEndpointCreateSettings.QueryStringCaching"/>.</em></p><p>Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.</p></summary>
         [Pure]
         public static AzureCdnEndpointCreateSettings ResetQueryStringCaching(this AzureCdnEndpointCreateSettings toolSettings)
         {
@@ -3762,7 +3762,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region OriginHostHeader
-        /// <summary><p><em>Sets <see cref="AzureCdnEndpointUpdateSettings.OriginHostHeader"/>.</em></p><p>The host header CDN sends along with content requests to origin. The default value is the host name of the origin.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnEndpointUpdateSettings.OriginHostHeader"/>.</em></p><p>The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.</p></summary>
         [Pure]
         public static AzureCdnEndpointUpdateSettings SetOriginHostHeader(this AzureCdnEndpointUpdateSettings toolSettings, string originHostHeader)
         {
@@ -3770,7 +3770,7 @@ namespace Nuke.Azure
             toolSettings.OriginHostHeader = originHostHeader;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnEndpointUpdateSettings.OriginHostHeader"/>.</em></p><p>The host header CDN sends along with content requests to origin. The default value is the host name of the origin.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnEndpointUpdateSettings.OriginHostHeader"/>.</em></p><p>The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.</p></summary>
         [Pure]
         public static AzureCdnEndpointUpdateSettings ResetOriginHostHeader(this AzureCdnEndpointUpdateSettings toolSettings)
         {
@@ -3780,7 +3780,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region OriginPath
-        /// <summary><p><em>Sets <see cref="AzureCdnEndpointUpdateSettings.OriginPath"/>.</em></p><p>The path used when CDN sends request to origin.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnEndpointUpdateSettings.OriginPath"/>.</em></p><p>A directory path on the origin that CDN can use to retreive content from, e.g. contoso.cloudapp.net/originpath.</p></summary>
         [Pure]
         public static AzureCdnEndpointUpdateSettings SetOriginPath(this AzureCdnEndpointUpdateSettings toolSettings, string originPath)
         {
@@ -3788,7 +3788,7 @@ namespace Nuke.Azure
             toolSettings.OriginPath = originPath;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnEndpointUpdateSettings.OriginPath"/>.</em></p><p>The path used when CDN sends request to origin.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnEndpointUpdateSettings.OriginPath"/>.</em></p><p>A directory path on the origin that CDN can use to retreive content from, e.g. contoso.cloudapp.net/originpath.</p></summary>
         [Pure]
         public static AzureCdnEndpointUpdateSettings ResetOriginPath(this AzureCdnEndpointUpdateSettings toolSettings)
         {
@@ -3798,7 +3798,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region QueryStringCaching
-        /// <summary><p><em>Sets <see cref="AzureCdnEndpointUpdateSettings.QueryStringCaching"/>.</em></p><p>Defines the query string caching behavior.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnEndpointUpdateSettings.QueryStringCaching"/>.</em></p><p>Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.</p></summary>
         [Pure]
         public static AzureCdnEndpointUpdateSettings SetQueryStringCaching(this AzureCdnEndpointUpdateSettings toolSettings, CdnEndpointQueryStringCaching queryStringCaching)
         {
@@ -3806,7 +3806,7 @@ namespace Nuke.Azure
             toolSettings.QueryStringCaching = queryStringCaching;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnEndpointUpdateSettings.QueryStringCaching"/>.</em></p><p>Defines the query string caching behavior.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnEndpointUpdateSettings.QueryStringCaching"/>.</em></p><p>Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.</p></summary>
         [Pure]
         public static AzureCdnEndpointUpdateSettings ResetQueryStringCaching(this AzureCdnEndpointUpdateSettings toolSettings)
         {

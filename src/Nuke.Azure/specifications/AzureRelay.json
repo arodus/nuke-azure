@@ -6,16 +6,16 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/relay.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/relay/wcfrelay.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/relay/namespace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/relay/hyco.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/relay/namespace/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/relay/hyco/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/relay/wcfrelay/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/relay/namespace/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/relay/hyco/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/relay/wcfrelay/authorization-rule/keys.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/relay.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/relay/wcfrelay.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/relay/namespace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/relay/hyco.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/relay/namespace/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/relay/hyco/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/relay/wcfrelay/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/relay/namespace/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/relay/hyco/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/relay/wcfrelay/authorization-rule/keys.yml"
   ],
   "name": "AzureRelay",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest",

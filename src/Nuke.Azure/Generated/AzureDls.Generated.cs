@@ -276,6 +276,46 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleCreate(Configure<AzureDlsAccountNetworkRuleCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleDelete(Configure<AzureDlsAccountNetworkRuleDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleList(Configure<AzureDlsAccountNetworkRuleListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleShow(Configure<AzureDlsAccountNetworkRuleShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleUpdate(Configure<AzureDlsAccountNetworkRuleUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureDlsFsAccessRemoveAll(Configure<AzureDlsFsAccessRemoveAllSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsAccessRemoveAllSettings());
@@ -1441,8 +1481,6 @@ namespace Nuke.Azure
         public virtual string IdProvider { get; internal set; }
         /// <summary><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
         public virtual string TrustedIdProviderName { get; internal set; }
-        /// <summary><p>Resource name.</p></summary>
-        public virtual string Name { get; internal set; }
         /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -1462,7 +1500,6 @@ namespace Nuke.Azure
               .Add("--account {value}", Account)
               .Add("--id-provider {value}", IdProvider)
               .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
-              .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1628,6 +1665,232 @@ namespace Nuke.Azure
               .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
               .Add("--id-provider {value}", IdProvider)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountNetworkRuleCreateSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountNetworkRuleCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The virtual network rule name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The subnet name or id for the virtual network rule.</p></summary>
+        public virtual string Subnet { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the virtual network rule.</p></summary>
+        public virtual string VnetName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account network-rule create")
+              .Add("--account-name {value}", AccountName)
+              .Add("--name {value}", Name)
+              .Add("--subnet {value}", Subnet)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vnet-name {value}", VnetName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountNetworkRuleDeleteSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountNetworkRuleDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The virtual network rule name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account network-rule delete")
+              .Add("--account-name {value}", AccountName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountNetworkRuleListSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountNetworkRuleListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account network-rule list")
+              .Add("--account-name {value}", AccountName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountNetworkRuleShowSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountNetworkRuleShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The virtual network rule name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account network-rule show")
+              .Add("--account-name {value}", AccountName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountNetworkRuleUpdateSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountNetworkRuleUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The virtual network rule name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of the subnet that allows access to DLS. If subnet name is provided, --name must be provided.</p></summary>
+        public virtual string Subnet { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The virtual network rule name.</p></summary>
+        public virtual string VnetName { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account network-rule update")
+              .Add("--account-name {value}", AccountName)
+              .Add("--name {value}", Name)
+              .Add("--subnet {value}", Subnet)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vnet-name {value}", VnetName)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -6198,24 +6461,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Name"/>.</em></p><p>Resource name.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetName(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Name"/>.</em></p><p>Resource name.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetName(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
         [Pure]
@@ -6926,6 +7171,892 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureDlsAccountTrustedProviderUpdateSettings ResetVerbose(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountNetworkRuleCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountNetworkRuleCreateSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleCreateSettings.AccountName"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings SetAccountName(this AzureDlsAccountNetworkRuleCreateSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleCreateSettings.AccountName"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings ResetAccountName(this AzureDlsAccountNetworkRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings SetName(this AzureDlsAccountNetworkRuleCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings ResetName(this AzureDlsAccountNetworkRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subnet
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Subnet"/>.</em></p><p>The subnet name or id for the virtual network rule.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings SetSubnet(this AzureDlsAccountNetworkRuleCreateSettings toolSettings, string subnet)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = subnet;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Subnet"/>.</em></p><p>The subnet name or id for the virtual network rule.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings ResetSubnet(this AzureDlsAccountNetworkRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings SetResourceGroup(this AzureDlsAccountNetworkRuleCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings ResetResourceGroup(this AzureDlsAccountNetworkRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleCreateSettings.VnetName"/>.</em></p><p>The name of the virtual network rule.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings SetVnetName(this AzureDlsAccountNetworkRuleCreateSettings toolSettings, string vnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = vnetName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleCreateSettings.VnetName"/>.</em></p><p>The name of the virtual network rule.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings ResetVnetName(this AzureDlsAccountNetworkRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings SetDebug(this AzureDlsAccountNetworkRuleCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings ResetDebug(this AzureDlsAccountNetworkRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings SetHelp(this AzureDlsAccountNetworkRuleCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings ResetHelp(this AzureDlsAccountNetworkRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings SetOutput(this AzureDlsAccountNetworkRuleCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings ResetOutput(this AzureDlsAccountNetworkRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings SetQuery(this AzureDlsAccountNetworkRuleCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings ResetQuery(this AzureDlsAccountNetworkRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings SetVerbose(this AzureDlsAccountNetworkRuleCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings ResetVerbose(this AzureDlsAccountNetworkRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountNetworkRuleDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountNetworkRuleDeleteSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.AccountName"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings SetAccountName(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.AccountName"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings ResetAccountName(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings SetName(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings ResetName(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings SetResourceGroup(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings ResetResourceGroup(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings SetDebug(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings ResetDebug(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings SetHelp(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings ResetHelp(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings SetOutput(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings ResetOutput(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings SetQuery(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings ResetQuery(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings SetVerbose(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings ResetVerbose(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountNetworkRuleListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountNetworkRuleListSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleListSettings.AccountName"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings SetAccountName(this AzureDlsAccountNetworkRuleListSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleListSettings.AccountName"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings ResetAccountName(this AzureDlsAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings SetResourceGroup(this AzureDlsAccountNetworkRuleListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings ResetResourceGroup(this AzureDlsAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings SetDebug(this AzureDlsAccountNetworkRuleListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings ResetDebug(this AzureDlsAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings SetHelp(this AzureDlsAccountNetworkRuleListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings ResetHelp(this AzureDlsAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings SetOutput(this AzureDlsAccountNetworkRuleListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings ResetOutput(this AzureDlsAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings SetQuery(this AzureDlsAccountNetworkRuleListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings ResetQuery(this AzureDlsAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings SetVerbose(this AzureDlsAccountNetworkRuleListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings ResetVerbose(this AzureDlsAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountNetworkRuleShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountNetworkRuleShowSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleShowSettings.AccountName"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings SetAccountName(this AzureDlsAccountNetworkRuleShowSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleShowSettings.AccountName"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings ResetAccountName(this AzureDlsAccountNetworkRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleShowSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings SetName(this AzureDlsAccountNetworkRuleShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleShowSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings ResetName(this AzureDlsAccountNetworkRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings SetResourceGroup(this AzureDlsAccountNetworkRuleShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings ResetResourceGroup(this AzureDlsAccountNetworkRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings SetDebug(this AzureDlsAccountNetworkRuleShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings ResetDebug(this AzureDlsAccountNetworkRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings SetHelp(this AzureDlsAccountNetworkRuleShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings ResetHelp(this AzureDlsAccountNetworkRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings SetOutput(this AzureDlsAccountNetworkRuleShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings ResetOutput(this AzureDlsAccountNetworkRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings SetQuery(this AzureDlsAccountNetworkRuleShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings ResetQuery(this AzureDlsAccountNetworkRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings SetVerbose(this AzureDlsAccountNetworkRuleShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings ResetVerbose(this AzureDlsAccountNetworkRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountNetworkRuleUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountNetworkRuleUpdateSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.AccountName"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetAccountName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.AccountName"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetAccountName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subnet
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Subnet"/>.</em></p><p>Name or ID of the subnet that allows access to DLS. If subnet name is provided, --name must be provided.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetSubnet(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string subnet)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = subnet;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Subnet"/>.</em></p><p>Name or ID of the subnet that allows access to DLS. If subnet name is provided, --name must be provided.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetSubnet(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetResourceGroup(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetResourceGroup(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.VnetName"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetVnetName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string vnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = vnetName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.VnetName"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetVnetName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetAdd(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetAdd(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetForceString(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetForceString(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetRemove(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetRemove(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetSet(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetSet(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetDebug(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetDebug(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetHelp(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetHelp(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetOutput(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetOutput(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetQuery(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetQuery(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetVerbose(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetVerbose(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

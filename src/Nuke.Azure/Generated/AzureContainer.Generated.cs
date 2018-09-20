@@ -92,9 +92,25 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureContainerRestart(Configure<AzureContainerRestartSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureContainerRestartSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureContainerShow(Configure<AzureContainerShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureContainerStop(Configure<AzureContainerStopSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureContainerStopSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -217,6 +233,16 @@ namespace Nuke.Azure
         public virtual string LogAnalyticsWorkspace { get; internal set; }
         /// <summary><p>The Log Analytics workspace key.</p></summary>
         public virtual string LogAnalyticsWorkspaceKey { get; internal set; }
+        /// <summary><p>The network profile name or id.</p></summary>
+        public virtual string NetworkProfile { get; internal set; }
+        /// <summary><p>The name of the subnet when creating a new VNET or referencing an existing one. Can also reference an existing subnet by ID.</p></summary>
+        public virtual string Subnet { get; internal set; }
+        /// <summary><p>The subnet IP address prefix to use when creating a new VNET in CIDR format.</p></summary>
+        public virtual string SubnetAddressPrefix { get; internal set; }
+        /// <summary><p>The IP address prefix to use when creating a new VNET in CIDR format.</p></summary>
+        public virtual string VnetAddressPrefix { get; internal set; }
+        /// <summary><p>The name of the VNET when creating a new one or referencing an existing one.</p></summary>
+        public virtual string VnetName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -263,6 +289,11 @@ namespace Nuke.Azure
               .Add("--registry-username {value}", RegistryUsername)
               .Add("--log-analytics-workspace {value}", LogAnalyticsWorkspace)
               .Add("--log-analytics-workspace-key {value}", LogAnalyticsWorkspaceKey)
+              .Add("--network-profile {value}", NetworkProfile)
+              .Add("--subnet {value}", Subnet)
+              .Add("--subnet-address-prefix {value}", SubnetAddressPrefix)
+              .Add("--vnet-address-prefix {value}", VnetAddressPrefix)
+              .Add("--vnet-name {value}", VnetName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -483,6 +514,44 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureContainerRestartSettings
+    /// <summary><p>Used within <see cref="AzureContainerTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureContainerRestartSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureContainer executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureContainerTasks.AzureContainerPath;
+        /// <summary><p>The name of the container group.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("container restart")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureContainerShowSettings
     /// <summary><p>Used within <see cref="AzureContainerTasks"/>.</p></summary>
     [PublicAPI]
@@ -510,6 +579,44 @@ namespace Nuke.Azure
         {
             arguments
               .Add("container show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureContainerStopSettings
+    /// <summary><p>Used within <see cref="AzureContainerTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureContainerStopSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureContainer executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureContainerTasks.AzureContainerPath;
+        /// <summary><p>The name of the container group.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("container stop")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
@@ -1348,6 +1455,96 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LogAnalyticsWorkspaceKey = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NetworkProfile
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.NetworkProfile"/>.</em></p><p>The network profile name or id.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetNetworkProfile(this AzureContainerCreateSettings toolSettings, string networkProfile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NetworkProfile = networkProfile;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.NetworkProfile"/>.</em></p><p>The network profile name or id.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetNetworkProfile(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NetworkProfile = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subnet
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Subnet"/>.</em></p><p>The name of the subnet when creating a new VNET or referencing an existing one. Can also reference an existing subnet by ID.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetSubnet(this AzureContainerCreateSettings toolSettings, string subnet)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = subnet;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Subnet"/>.</em></p><p>The name of the subnet when creating a new VNET or referencing an existing one. Can also reference an existing subnet by ID.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetSubnet(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SubnetAddressPrefix
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.SubnetAddressPrefix"/>.</em></p><p>The subnet IP address prefix to use when creating a new VNET in CIDR format.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetSubnetAddressPrefix(this AzureContainerCreateSettings toolSettings, string subnetAddressPrefix)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SubnetAddressPrefix = subnetAddressPrefix;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.SubnetAddressPrefix"/>.</em></p><p>The subnet IP address prefix to use when creating a new VNET in CIDR format.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetSubnetAddressPrefix(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SubnetAddressPrefix = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetAddressPrefix
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.VnetAddressPrefix"/>.</em></p><p>The IP address prefix to use when creating a new VNET in CIDR format.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetVnetAddressPrefix(this AzureContainerCreateSettings toolSettings, string vnetAddressPrefix)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetAddressPrefix = vnetAddressPrefix;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.VnetAddressPrefix"/>.</em></p><p>The IP address prefix to use when creating a new VNET in CIDR format.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetVnetAddressPrefix(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetAddressPrefix = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetName
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.VnetName"/>.</em></p><p>The name of the VNET when creating a new one or referencing an existing one.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetVnetName(this AzureContainerCreateSettings toolSettings, string vnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = vnetName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.VnetName"/>.</em></p><p>The name of the VNET when creating a new one or referencing an existing one.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetVnetName(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = null;
             return toolSettings;
         }
         #endregion
@@ -2239,6 +2436,140 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureContainerRestartSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureContainerTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureContainerRestartSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureContainerRestartSettings.Name"/>.</em></p><p>The name of the container group.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings SetName(this AzureContainerRestartSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerRestartSettings.Name"/>.</em></p><p>The name of the container group.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings ResetName(this AzureContainerRestartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureContainerRestartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings SetResourceGroup(this AzureContainerRestartSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerRestartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings ResetResourceGroup(this AzureContainerRestartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureContainerRestartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings SetDebug(this AzureContainerRestartSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerRestartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings ResetDebug(this AzureContainerRestartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureContainerRestartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings SetHelp(this AzureContainerRestartSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerRestartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings ResetHelp(this AzureContainerRestartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureContainerRestartSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings SetOutput(this AzureContainerRestartSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerRestartSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings ResetOutput(this AzureContainerRestartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureContainerRestartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings SetQuery(this AzureContainerRestartSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerRestartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings ResetQuery(this AzureContainerRestartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureContainerRestartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings SetVerbose(this AzureContainerRestartSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerRestartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureContainerRestartSettings ResetVerbose(this AzureContainerRestartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureContainerShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureContainerTasks"/>.</p></summary>
     [PublicAPI]
@@ -2365,6 +2696,140 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureContainerShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureContainerShowSettings ResetVerbose(this AzureContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureContainerStopSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureContainerTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureContainerStopSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureContainerStopSettings.Name"/>.</em></p><p>The name of the container group.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings SetName(this AzureContainerStopSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerStopSettings.Name"/>.</em></p><p>The name of the container group.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings ResetName(this AzureContainerStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureContainerStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings SetResourceGroup(this AzureContainerStopSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings ResetResourceGroup(this AzureContainerStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureContainerStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings SetDebug(this AzureContainerStopSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings ResetDebug(this AzureContainerStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureContainerStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings SetHelp(this AzureContainerStopSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings ResetHelp(this AzureContainerStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureContainerStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings SetOutput(this AzureContainerStopSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings ResetOutput(this AzureContainerStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureContainerStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings SetQuery(this AzureContainerStopSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings ResetQuery(this AzureContainerStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureContainerStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings SetVerbose(this AzureContainerStopSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureContainerStopSettings ResetVerbose(this AzureContainerStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

@@ -143,6 +143,8 @@ namespace Nuke.Azure
         public virtual int? NumberOfWorkers { get; internal set; }
         /// <summary><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small) etc.</p></summary>
         public virtual AppserviceSku Sku { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -163,6 +165,7 @@ namespace Nuke.Azure
               .Add("--location {value}", Location)
               .Add("--number-of-workers {value}", NumberOfWorkers)
               .Add("--sku {value}", Sku)
+              .Add("--tags {value}", Tags)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -590,6 +593,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Sku = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureAppservicePlanCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureAppservicePlanCreateSettings SetTags(this AzureAppservicePlanCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAppservicePlanCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureAppservicePlanCreateSettings ResetTags(this AzureAppservicePlanCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
             return toolSettings;
         }
         #endregion

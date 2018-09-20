@@ -1038,7 +1038,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureBatchTasks.AzureBatchPath;
         /// <summary><p>The ID of the pool from which you want to remove nodes.</p></summary>
         public virtual string PoolId { get; internal set; }
-        /// <summary><p>A file containing the node remove parameter specification in JSON format. If this parameter is specified, all 'Node Remove Arguments' are ignored.</p></summary>
+        /// <summary><p>A file containing the node remove parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Node Remove Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -1048,7 +1048,7 @@ namespace Nuke.Azure
         public virtual string AccountName { get; internal set; }
         /// <summary><p>Determines what to do with a node and its running task(s) after it has been selected for deallocation. The default value is requeue.</p></summary>
         public virtual BatchNodeNodeDeallocationOption NodeDeallocationOption { get; internal set; }
-        /// <summary><p>A list containing the IDs of the compute nodes to be removed from the specified pool. Space-separated values.</p></summary>
+        /// <summary><p>Required. A list containing the IDs of the compute nodes to be removed from the specified pool. Space-separated values.</p></summary>
         public virtual string NodeList { get; internal set; }
         /// <summary><p>The timeout for removal of compute nodes to the pool. The default value is 15 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request). Expected format is an ISO-8601 duration.</p></summary>
         public virtual string ResizeTimeout { get; internal set; }
@@ -1500,7 +1500,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureBatchTasks.AzureBatchPath;
         /// <summary><p>The ID of the job containing the task.</p></summary>
         public virtual string JobId { get; internal set; }
-        /// <summary><p>An opaque string representing the location of a compute node or a task that has run previously. You can pass the affinityId of a compute node to indicate that this task needs to run on that compute node. Note that this is just a soft affinity. If the target node is busy or unavailable at the time the task is scheduled, then the task will be scheduled elsewhere.</p></summary>
+        /// <summary><p>Required. An opaque string representing the location of a compute node or a task that has run previously. You can pass the affinityId of a compute node to indicate that this task needs to run on that compute node. Note that this is just a soft affinity. If the target node is busy or unavailable at the time the task is scheduled, then the task will be scheduled elsewhere.</p></summary>
         public virtual string AffinityId { get; internal set; }
         /// <summary><p>The space-separated list of IDs specifying the application packages to be installed. Space-separated application IDs with optional version in 'id[#version]' format.</p></summary>
         public virtual string ApplicationPackageReferences { get; internal set; }
@@ -1509,7 +1509,7 @@ namespace Nuke.Azure
         /// <summary><p>A list of environment variable settings for the task. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, object> EnvironmentSettings => EnvironmentSettingsInternal.AsReadOnly();
         internal Dictionary<string, object> EnvironmentSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-        /// <summary><p>The file containing the task(s) to create in JSON format, if this parameter is specified, all other parameters are ignored.</p></summary>
+        /// <summary><p>The file containing the task(s) to create in JSON(formatted to match REST API request body). When submitting multiple tasks, accepts either an array of tasks or a TaskAddCollectionParamater. If this parameter is specified, all other parameters are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task after the first attempt. If the maximum retry count is -1, the Batch service retries the task without limit. Resource files and application packages are only downloaded again if the task is retried on a new compute node.</p></summary>
         public virtual string MaxTaskRetryCount { get; internal set; }
@@ -1751,7 +1751,7 @@ namespace Nuke.Azure
         public virtual string JobId { get; internal set; }
         /// <summary><p>The ID of the task to update.</p></summary>
         public virtual string TaskId { get; internal set; }
-        /// <summary><p>A file containing the constraints specification in JSON format. If this parameter is specified, all 'Constraints Arguments' are ignored.</p></summary>
+        /// <summary><p>A file containing the constraints specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Constraints Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -1942,7 +1942,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatch executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchTasks.AzureBatchPath;
-        /// <summary><p>A file containing the pool specification in JSON format. If this parameter is specified, all 'Pool Arguments' are ignored.</p></summary>
+        /// <summary><p>A file containing the pool specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Pool Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -1960,8 +1960,10 @@ namespace Nuke.Azure
         public virtual string CertificateReferences { get; internal set; }
         /// <summary><p>Whether the pool permits direct communication between nodes. Enabling inter-node communication limits the maximum size of the pool due to deployment restrictions on the nodes of the pool. This may result in the pool not reaching its desired size. The default value is false. True if flag present.</p></summary>
         public virtual string EnableInterNodeCommunication { get; internal set; }
-        /// <summary><p>A string that uniquely identifies the pool within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two pool IDs within an account that differ only by case).</p></summary>
+        /// <summary><p>Required. A string that uniquely identifies the pool within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two pool IDs within an account that differ only by case).</p></summary>
         public virtual string Id { get; internal set; }
+        /// <summary><p>The maximum number of tasks that can run concurrently on a single compute node in the pool. The default value is 1. The maximum value of this setting depends on the size of the compute nodes in the pool (the vmSize setting).</p></summary>
+        public virtual string MaxTasksPerNode { get; internal set; }
         /// <summary><p>A list of name-value pairs associated with the pool as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
         internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
@@ -1971,19 +1973,19 @@ namespace Nuke.Azure
         public virtual string TargetDedicatedNodes { get; internal set; }
         /// <summary><p>The desired number of low-priority compute nodes in the pool. This property must not be specified if enableAutoScale is set to true. If enableAutoScale is set to false, then you must set either targetDedicatedNodes, targetLowPriorityNodes, or both.</p></summary>
         public virtual string TargetLowPriorityNodes { get; internal set; }
-        /// <summary><p>The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (<a href="https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/">https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/</a>). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (<a href="https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/">https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/</a>) or Sizes for Virtual Machines (Windows) (<a href="https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/">https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/</a>). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</p></summary>
+        /// <summary><p>Required. The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (<a href="https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/">https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/</a>). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (<a href="https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/">https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/</a>) or Sizes for Virtual Machines (Windows) (<a href="https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/">https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/</a>). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</p></summary>
         public virtual string VmSize { get; internal set; }
-        /// <summary><p>The Azure Guest OS family to be installed on the virtual machines in the pool. Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. For more information, see Azure Guest OS Releases (<a href="https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases">https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases</a>).</p></summary>
+        /// <summary><p>Required. The Azure Guest OS family to be installed on the virtual machines in the pool. Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. For more information, see Azure Guest OS Releases (<a href="https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases">https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases</a>).</p></summary>
         public virtual BatchPoolCreateOsFamily OsFamily { get; internal set; }
-        /// <summary><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p>Required. The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         public virtual string StartTaskCommandLine { get; internal set; }
-        /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line.  There is a maximum size for the list of resource files. When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
         public virtual string StartTaskResourceFiles { get; internal set; }
         /// <summary><p>Whether the Batch service should wait for the start task to complete successfully (that is, to exit with exit code 0) before scheduling any tasks on the compute node. If true and the start task fails on a compute node, the Batch service retries the start task up to its maximum retry count (maxTaskRetryCount). If the task has still not completed successfully after all retries, then the Batch service marks the compute node unusable, and will not schedule tasks to it. This condition can be detected via the node state and failure info details. If false, the Batch service will not wait for the start task to complete. In this case, other tasks can start executing on the compute node while the start task is still running; and even if the start task fails, new tasks will continue to be scheduled on the node. The default is false. True if flag present.</p></summary>
         public virtual string StartTaskWaitForSuccess { get; internal set; }
         /// <summary><p>OS image reference. This can be either 'publisher:offer:sku[:version]' format, or a fully qualified ARM image id of the form '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}'. If 'publisher:offer:sku[:version]' format, version is optional and if omitted latest will be used. Valid values can be retrieved via 'az batch pool node-agent-skus list'. For example: 'MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:latest'.</p></summary>
         public virtual string Image { get; internal set; }
-        /// <summary><p>The SKU of the Batch node agent to be provisioned on compute nodes in the pool. The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.</p></summary>
+        /// <summary><p>Required. The SKU of the Batch node agent to be provisioned on compute nodes in the pool. The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.</p></summary>
         public virtual string NodeAgentSkuId { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -2009,6 +2011,7 @@ namespace Nuke.Azure
               .Add("--certificate-references {value}", CertificateReferences)
               .Add("--enable-inter-node-communication {value}", EnableInterNodeCommunication)
               .Add("--id {value}", Id)
+              .Add("--max-tasks-per-node {value}", MaxTasksPerNode)
               .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
               .Add("--resize-timeout {value}", ResizeTimeout)
               .Add("--target-dedicated-nodes {value}", TargetDedicatedNodes)
@@ -2149,7 +2152,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureBatchTasks.AzureBatchPath;
         /// <summary><p>The ID of the pool to update.</p></summary>
         public virtual string PoolId { get; internal set; }
-        /// <summary><p>The file containing pool update properties parameter specification in JSON format. If this parameter is specified, all 'Pool Update Properties Parameter Arguments' are ignored.</p></summary>
+        /// <summary><p>The file containing pool update properties parameter specification in JSON(formatted to match REST API request body). If this parameter is specified, all 'Pool Update Properties Parameter Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -2157,13 +2160,12 @@ namespace Nuke.Azure
         public virtual string AccountKey { get; internal set; }
         /// <summary><p>The Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT.</p></summary>
         public virtual string AccountName { get; internal set; }
-        /// <summary><p>A list of application packages to be installed on each compute node in the pool. The list replaces any existing application package references on the pool. Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. If omitted, or if you specify an empty collection, any existing application packages references are removed from the pool.</p></summary>
+        /// <summary><p>Required. A list of application packages to be installed on each compute node in the pool. The list replaces any existing application package references on the pool. Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. If omitted, or if you specify an empty collection, any existing application packages references are removed from the pool.</p></summary>
         public virtual string ApplicationPackageReferences { get; internal set; }
-        /// <summary><p>A list of certificates to be installed on each compute node in the pool. This list replaces any existing certificate references configured on the pool. If you specify an empty collection, any existing certificate references are removed from the pool. For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</p></summary>
+        /// <summary><p>Required. A list of certificates to be installed on each compute node in the pool. This list replaces any existing certificate references configured on the pool. If you specify an empty collection, any existing certificate references are removed from the pool. For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</p></summary>
         public virtual string CertificateReferences { get; internal set; }
-        /// <summary><p>A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</p></summary>
-        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+        /// <summary><p>Required. A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</p></summary>
+        public virtual string Metadata { get; internal set; }
         /// <summary><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
         public virtual string StartTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the start task. Space-separated values in 'key=value' format.</p></summary>
@@ -2194,7 +2196,7 @@ namespace Nuke.Azure
               .Add("--account-name {value}", AccountName)
               .Add("--application-package-references {value}", ApplicationPackageReferences)
               .Add("--certificate-references {value}", CertificateReferences)
-              .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
+              .Add("--metadata {value}", Metadata)
               .Add("--start-task-command-line {value}", StartTaskCommandLine)
               .Add("--start-task-environment-settings {value}", StartTaskEnvironmentSettings, "{key}={value}", separator: ' ')
               .Add("--start-task-max-task-retry-count {value}", StartTaskMaxTaskRetryCount)
@@ -2290,7 +2292,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureBatchTasks.AzureBatchPath;
         /// <summary><p>The ID of the pool to update.</p></summary>
         public virtual string PoolId { get; internal set; }
-        /// <summary><p>A file containing the pool patch parameter specification in JSON format. If this parameter is specified, all 'Pool Arguments' are ignored.</p></summary>
+        /// <summary><p>A file containing the pool patch parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Pool Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -2305,14 +2307,14 @@ namespace Nuke.Azure
         /// <summary><p>A list of name-value pairs associated with the pool as metadata. If this element is present, it replaces any existing metadata configured on the pool. If you specify an empty collection, any metadata is removed from the pool. If omitted, any existing metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
         internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-        /// <summary><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p>Required. The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         public virtual string StartTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the start task. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, object> StartTaskEnvironmentSettings => StartTaskEnvironmentSettingsInternal.AsReadOnly();
         internal Dictionary<string, object> StartTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.</p></summary>
         public virtual string StartTaskMaxTaskRetryCount { get; internal set; }
-        /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line.  There is a maximum size for the list of resource files. When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
         public virtual string StartTaskResourceFiles { get; internal set; }
         /// <summary><p>Whether the Batch service should wait for the start task to complete successfully (that is, to exit with exit code 0) before scheduling any tasks on the compute node. If true and the start task fails on a compute node, the Batch service retries the start task up to its maximum retry count (maxTaskRetryCount). If the task has still not completed successfully after all retries, then the Batch service marks the compute node unusable, and will not schedule tasks to it. This condition can be detected via the node state and failure info details. If false, the Batch service will not wait for the start task to complete. In this case, other tasks can start executing on the compute node while the start task is still running; and even if the start task fails, new tasks will continue to be scheduled on the node. The default is false. Specify either 'true' or 'false' to update the property.</p></summary>
         public virtual string StartTaskWaitForSuccess { get; internal set; }
@@ -2435,7 +2437,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatch executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchTasks.AzureBatchPath;
-        /// <summary><p>A file containing the cloud job schedule specification in JSON format. If this parameter is specified, all 'Cloud Job Schedule Arguments' are ignored.</p></summary>
+        /// <summary><p>A file containing the cloud job schedule specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Cloud Job Schedule Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -2443,7 +2445,7 @@ namespace Nuke.Azure
         public virtual string AccountKey { get; internal set; }
         /// <summary><p>Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT.</p></summary>
         public virtual string AccountName { get; internal set; }
-        /// <summary><p>A string that uniquely identifies the schedule within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
+        /// <summary><p>Required. A string that uniquely identifies the schedule within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
         public virtual string Id { get; internal set; }
         /// <summary><p>A list of name-value pairs associated with the schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
@@ -2458,11 +2460,11 @@ namespace Nuke.Azure
         public virtual string JobMaxTaskRetryCount { get; internal set; }
         /// <summary><p>The maximum elapsed time that the job may run, measured from the time the job is created. If the job does not complete within the time limit, the Batch service terminates it and any tasks that are still running. In this case, the termination reason will be MaxWallClockTimeExpiry. If this property is not specified, there is no time limit on how long the job may run. Expected format is an ISO-8601 duration.</p></summary>
         public virtual string JobMaxWallClockTime { get; internal set; }
-        /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p>Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         public virtual string JobManagerTaskCommandLine { get; internal set; }
-        /// <summary><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
+        /// <summary><p>Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         public virtual string JobManagerTaskId { get; internal set; }
-        /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format.</p></summary>
         public virtual string JobManagerTaskResourceFiles { get; internal set; }
         /// <summary><p>The id of an existing pool. All the tasks of the job will run on the specified pool.</p></summary>
         public virtual string PoolId { get; internal set; }
@@ -2748,7 +2750,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureBatchTasks.AzureBatchPath;
         /// <summary><p>The ID of the job schedule to update.</p></summary>
         public virtual string JobScheduleId { get; internal set; }
-        /// <summary><p>A file containing the job schedule update parameter specification in JSON format. If this parameter is specified, all 'Job Schedule Arguments' are ignored.</p></summary>
+        /// <summary><p>A file containing the job schedule update parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Schedule Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -2770,14 +2772,14 @@ namespace Nuke.Azure
         public virtual string UsesTaskDependencies { get; internal set; }
         /// <summary><p>A list of application packages that the Batch service will deploy to the compute node before running the command line. Application packages are downloaded and deployed to a shared directory, not the task working directory. Therefore, if a referenced package is already on the compute node, and is up to date, then it is not re-downloaded; the existing copy on the compute node is used. If a referenced application package cannot be installed, for example because the package has been deleted or because download failed, the task fails. Space-separated application IDs with optional version in 'id[#version]' format.</p></summary>
         public virtual string JobManagerTaskApplicationPackageReferences { get; internal set; }
-        /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p>Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         public virtual string JobManagerTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, object> JobManagerTaskEnvironmentSettings => JobManagerTaskEnvironmentSettingsInternal.AsReadOnly();
         internal Dictionary<string, object> JobManagerTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-        /// <summary><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
+        /// <summary><p>Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         public virtual string JobManagerTaskId { get; internal set; }
-        /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format.</p></summary>
         public virtual string JobManagerTaskResourceFiles { get; internal set; }
         /// <summary><p>The id of an existing pool. All the tasks of the job will run on the specified pool.</p></summary>
         public virtual string PoolId { get; internal set; }
@@ -2855,7 +2857,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureBatchTasks.AzureBatchPath;
         /// <summary><p>The ID of the job schedule to update.</p></summary>
         public virtual string JobScheduleId { get; internal set; }
-        /// <summary><p>A file containing the job schedule patch parameter specification in JSON format. If this parameter is specified, all 'Job Schedule Arguments' are ignored.</p></summary>
+        /// <summary><p>A file containing the job schedule patch parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Schedule Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -2877,14 +2879,14 @@ namespace Nuke.Azure
         public virtual string UsesTaskDependencies { get; internal set; }
         /// <summary><p>A list of application packages that the Batch service will deploy to the compute node before running the command line. Application packages are downloaded and deployed to a shared directory, not the task working directory. Therefore, if a referenced package is already on the compute node, and is up to date, then it is not re-downloaded; the existing copy on the compute node is used. If a referenced application package cannot be installed, for example because the package has been deleted or because download failed, the task fails. Space-separated application IDs with optional version in 'id[#version]' format.</p></summary>
         public virtual string JobManagerTaskApplicationPackageReferences { get; internal set; }
-        /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p>Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         public virtual string JobManagerTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, object> JobManagerTaskEnvironmentSettings => JobManagerTaskEnvironmentSettingsInternal.AsReadOnly();
         internal Dictionary<string, object> JobManagerTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-        /// <summary><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
+        /// <summary><p>Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         public virtual string JobManagerTaskId { get; internal set; }
-        /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format.</p></summary>
         public virtual string JobManagerTaskResourceFiles { get; internal set; }
         /// <summary><p>The id of an existing pool. All the tasks of the job will run on the specified pool.</p></summary>
         public virtual string PoolId { get; internal set; }
@@ -3078,7 +3080,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatch executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchTasks.AzureBatchPath;
-        /// <summary><p>A file containing the job specification in JSON format. If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
+        /// <summary><p>A file containing the job specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -3086,7 +3088,7 @@ namespace Nuke.Azure
         public virtual string AccountKey { get; internal set; }
         /// <summary><p>Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT.</p></summary>
         public virtual string AccountName { get; internal set; }
-        /// <summary><p>A string that uniquely identifies the job within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
+        /// <summary><p>Required. A string that uniquely identifies the job within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
         public virtual string Id { get; internal set; }
         /// <summary><p>A list of name-value pairs associated with the job as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
@@ -3099,14 +3101,14 @@ namespace Nuke.Azure
         public virtual string JobMaxTaskRetryCount { get; internal set; }
         /// <summary><p>The maximum elapsed time that the job may run, measured from the time the job is created. If the job does not complete within the time limit, the Batch service terminates it and any tasks that are still running. In this case, the termination reason will be MaxWallClockTimeExpiry. If this property is not specified, there is no time limit on how long the job may run. Expected format is an ISO-8601 duration.</p></summary>
         public virtual string JobMaxWallClockTime { get; internal set; }
-        /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p>Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         public virtual string JobManagerTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, object> JobManagerTaskEnvironmentSettings => JobManagerTaskEnvironmentSettingsInternal.AsReadOnly();
         internal Dictionary<string, object> JobManagerTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-        /// <summary><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
+        /// <summary><p>Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         public virtual string JobManagerTaskId { get; internal set; }
-        /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format.</p></summary>
         public virtual string JobManagerTaskResourceFiles { get; internal set; }
         /// <summary><p>The id of an existing pool. All the tasks of the job will run on the specified pool.</p></summary>
         public virtual string PoolId { get; internal set; }
@@ -3386,7 +3388,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureBatchTasks.AzureBatchPath;
         /// <summary><p>The ID of the job whose properties you want to update.</p></summary>
         public virtual string JobId { get; internal set; }
-        /// <summary><p>A file containing the job update parameter specification in JSON format. If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
+        /// <summary><p>A file containing the job update parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -3464,7 +3466,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureBatchTasks.AzureBatchPath;
         /// <summary><p>The ID of the job whose properties you want to update.</p></summary>
         public virtual string JobId { get; internal set; }
-        /// <summary><p>A file containing the job patch parameter specification in JSON format. If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
+        /// <summary><p>A file containing the job patch parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -3913,9 +3915,9 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatch executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchTasks.AzureBatchPath;
-        /// <summary><p>Name of the Batch account.</p></summary>
+        /// <summary><p>Name of the batch account to show. If not specified will display currently set account.</p></summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the resource group.</p></summary>
+        /// <summary><p>Name of the resource group. If not specified will display currently set account.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -5097,7 +5099,7 @@ namespace Nuke.Azure
         public virtual string AccountKey { get; internal set; }
         /// <summary><p>Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT.</p></summary>
         public virtual string AccountName { get; internal set; }
-        /// <summary><p>An OData $filter clause.</p></summary>
+        /// <summary><p>An OData $filter clause. For more information on constructing this filter, see <a href="https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch</a>.</p></summary>
         public virtual string Filter { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -5560,7 +5562,7 @@ namespace Nuke.Azure
         public virtual string NodeId { get; internal set; }
         /// <summary><p>The ID of the pool that contains the compute node.</p></summary>
         public virtual string PoolId { get; internal set; }
-        /// <summary><p>A file containing the upload batch service logs configuration specification in JSON format. If this parameter is specified, all 'Upload Batch Service Logs Configuration Arguments' are ignored.</p></summary>
+        /// <summary><p>A file containing the upload batch service logs configuration specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Upload Batch Service Logs Configuration Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -5568,11 +5570,11 @@ namespace Nuke.Azure
         public virtual string AccountKey { get; internal set; }
         /// <summary><p>Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT.</p></summary>
         public virtual string AccountName { get; internal set; }
-        /// <summary><p>The URL of the container within Azure Blob Storage to which to upload the Batch Service log file(s). The URL must include a Shared Access Signature (SAS) granting write permissions to the container. The SAS duration must allow enough time for the upload to finish. The start time for SAS is optional and recommended to not be specified.</p></summary>
+        /// <summary><p>Required. The URL of the container within Azure Blob Storage to which to upload the Batch Service log file(s). The URL must include a Shared Access Signature (SAS) granting write permissions to the container. The SAS duration must allow enough time for the upload to finish. The start time for SAS is optional and recommended to not be specified.</p></summary>
         public virtual string ContainerUrl { get; internal set; }
         /// <summary><p>The end of the time range from which to upload Batch Service log file(s). Any log file containing a log message in the time range will be uploaded. This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested. If omitted, the default is to upload all logs available after the startTime. Expected format is an ISO-8601 timestamp.</p></summary>
         public virtual string EndTime { get; internal set; }
-        /// <summary><p>The start of the time range from which to upload Batch Service log file(s). Any log file containing a log message in the time range will be uploaded. This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested. Expected format is an ISO-8601 timestamp.</p></summary>
+        /// <summary><p>Required. The start of the time range from which to upload Batch Service log file(s). Any log file containing a log message in the time range will be uploaded. This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested. Expected format is an ISO-8601 timestamp.</p></summary>
         public virtual string StartTime { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -5619,7 +5621,7 @@ namespace Nuke.Azure
         public virtual string NodeId { get; internal set; }
         /// <summary><p>The ID of the pool that contains the compute node.</p></summary>
         public virtual string PoolId { get; internal set; }
-        /// <summary><p>A file containing the user specification in JSON format. If this parameter is specified, all 'User Arguments' are ignored.</p></summary>
+        /// <summary><p>A file containing the user specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'User Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -5631,7 +5633,7 @@ namespace Nuke.Azure
         public virtual string ExpiryTime { get; internal set; }
         /// <summary><p>Whether the account should be an administrator on the compute node. The default value is false. True if flag present.</p></summary>
         public virtual string IsAdmin { get; internal set; }
-        /// <summary><p>The user name of the account.</p></summary>
+        /// <summary><p>Required. The user name of the account.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>The password of the account. The password is required for Windows nodes (those created with 'cloudServiceConfiguration', or created with 'virtualMachineConfiguration' using a Windows image reference). For Linux compute nodes, the password can optionally be specified along with the sshPublicKey property.</p></summary>
         public virtual string Password { get; internal set; }
@@ -5739,7 +5741,7 @@ namespace Nuke.Azure
         public virtual string PoolId { get; internal set; }
         /// <summary><p>The name of the user account to update.</p></summary>
         public virtual string UserName { get; internal set; }
-        /// <summary><p>A file containing the node update user parameter specification in JSON format. If this parameter is specified, all 'Node Update User Arguments' are ignored.</p></summary>
+        /// <summary><p>A file containing the node update user parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Node Update User Arguments' are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.</p></summary>
         public virtual string AccountEndpoint { get; internal set; }
@@ -6824,7 +6826,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchNodeDeleteSettings.JsonFile"/>.</em></p><p>A file containing the node remove parameter specification in JSON format. If this parameter is specified, all 'Node Remove Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchNodeDeleteSettings.JsonFile"/>.</em></p><p>A file containing the node remove parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Node Remove Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchNodeDeleteSettings SetJsonFile(this AzureBatchNodeDeleteSettings toolSettings, string jsonFile)
         {
@@ -6832,7 +6834,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchNodeDeleteSettings.JsonFile"/>.</em></p><p>A file containing the node remove parameter specification in JSON format. If this parameter is specified, all 'Node Remove Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchNodeDeleteSettings.JsonFile"/>.</em></p><p>A file containing the node remove parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Node Remove Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchNodeDeleteSettings ResetJsonFile(this AzureBatchNodeDeleteSettings toolSettings)
         {
@@ -6914,7 +6916,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region NodeList
-        /// <summary><p><em>Sets <see cref="AzureBatchNodeDeleteSettings.NodeList"/>.</em></p><p>A list containing the IDs of the compute nodes to be removed from the specified pool. Space-separated values.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchNodeDeleteSettings.NodeList"/>.</em></p><p>Required. A list containing the IDs of the compute nodes to be removed from the specified pool. Space-separated values.</p></summary>
         [Pure]
         public static AzureBatchNodeDeleteSettings SetNodeList(this AzureBatchNodeDeleteSettings toolSettings, string nodeList)
         {
@@ -6922,7 +6924,7 @@ namespace Nuke.Azure
             toolSettings.NodeList = nodeList;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchNodeDeleteSettings.NodeList"/>.</em></p><p>A list containing the IDs of the compute nodes to be removed from the specified pool. Space-separated values.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchNodeDeleteSettings.NodeList"/>.</em></p><p>Required. A list containing the IDs of the compute nodes to be removed from the specified pool. Space-separated values.</p></summary>
         [Pure]
         public static AzureBatchNodeDeleteSettings ResetNodeList(this AzureBatchNodeDeleteSettings toolSettings)
         {
@@ -8750,7 +8752,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region AffinityId
-        /// <summary><p><em>Sets <see cref="AzureBatchTaskCreateSettings.AffinityId"/>.</em></p><p>An opaque string representing the location of a compute node or a task that has run previously. You can pass the affinityId of a compute node to indicate that this task needs to run on that compute node. Note that this is just a soft affinity. If the target node is busy or unavailable at the time the task is scheduled, then the task will be scheduled elsewhere.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchTaskCreateSettings.AffinityId"/>.</em></p><p>Required. An opaque string representing the location of a compute node or a task that has run previously. You can pass the affinityId of a compute node to indicate that this task needs to run on that compute node. Note that this is just a soft affinity. If the target node is busy or unavailable at the time the task is scheduled, then the task will be scheduled elsewhere.</p></summary>
         [Pure]
         public static AzureBatchTaskCreateSettings SetAffinityId(this AzureBatchTaskCreateSettings toolSettings, string affinityId)
         {
@@ -8758,7 +8760,7 @@ namespace Nuke.Azure
             toolSettings.AffinityId = affinityId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchTaskCreateSettings.AffinityId"/>.</em></p><p>An opaque string representing the location of a compute node or a task that has run previously. You can pass the affinityId of a compute node to indicate that this task needs to run on that compute node. Note that this is just a soft affinity. If the target node is busy or unavailable at the time the task is scheduled, then the task will be scheduled elsewhere.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchTaskCreateSettings.AffinityId"/>.</em></p><p>Required. An opaque string representing the location of a compute node or a task that has run previously. You can pass the affinityId of a compute node to indicate that this task needs to run on that compute node. Note that this is just a soft affinity. If the target node is busy or unavailable at the time the task is scheduled, then the task will be scheduled elsewhere.</p></summary>
         [Pure]
         public static AzureBatchTaskCreateSettings ResetAffinityId(this AzureBatchTaskCreateSettings toolSettings)
         {
@@ -8846,7 +8848,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchTaskCreateSettings.JsonFile"/>.</em></p><p>The file containing the task(s) to create in JSON format, if this parameter is specified, all other parameters are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchTaskCreateSettings.JsonFile"/>.</em></p><p>The file containing the task(s) to create in JSON(formatted to match REST API request body). When submitting multiple tasks, accepts either an array of tasks or a TaskAddCollectionParamater. If this parameter is specified, all other parameters are ignored.</p></summary>
         [Pure]
         public static AzureBatchTaskCreateSettings SetJsonFile(this AzureBatchTaskCreateSettings toolSettings, string jsonFile)
         {
@@ -8854,7 +8856,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchTaskCreateSettings.JsonFile"/>.</em></p><p>The file containing the task(s) to create in JSON format, if this parameter is specified, all other parameters are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchTaskCreateSettings.JsonFile"/>.</em></p><p>The file containing the task(s) to create in JSON(formatted to match REST API request body). When submitting multiple tasks, accepts either an array of tasks or a TaskAddCollectionParamater. If this parameter is specified, all other parameters are ignored.</p></summary>
         [Pure]
         public static AzureBatchTaskCreateSettings ResetJsonFile(this AzureBatchTaskCreateSettings toolSettings)
         {
@@ -9904,7 +9906,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchTaskResetSettings.JsonFile"/>.</em></p><p>A file containing the constraints specification in JSON format. If this parameter is specified, all 'Constraints Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchTaskResetSettings.JsonFile"/>.</em></p><p>A file containing the constraints specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Constraints Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchTaskResetSettings SetJsonFile(this AzureBatchTaskResetSettings toolSettings, string jsonFile)
         {
@@ -9912,7 +9914,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchTaskResetSettings.JsonFile"/>.</em></p><p>A file containing the constraints specification in JSON format. If this parameter is specified, all 'Constraints Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchTaskResetSettings.JsonFile"/>.</em></p><p>A file containing the constraints specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Constraints Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchTaskResetSettings ResetJsonFile(this AzureBatchTaskResetSettings toolSettings)
         {
@@ -10756,7 +10758,7 @@ namespace Nuke.Azure
     public static partial class AzureBatchPoolCreateSettingsExtensions
     {
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.JsonFile"/>.</em></p><p>A file containing the pool specification in JSON format. If this parameter is specified, all 'Pool Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.JsonFile"/>.</em></p><p>A file containing the pool specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Pool Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings SetJsonFile(this AzureBatchPoolCreateSettings toolSettings, string jsonFile)
         {
@@ -10764,7 +10766,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.JsonFile"/>.</em></p><p>A file containing the pool specification in JSON format. If this parameter is specified, all 'Pool Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.JsonFile"/>.</em></p><p>A file containing the pool specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Pool Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings ResetJsonFile(this AzureBatchPoolCreateSettings toolSettings)
         {
@@ -10918,7 +10920,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Id
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.Id"/>.</em></p><p>A string that uniquely identifies the pool within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two pool IDs within an account that differ only by case).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.Id"/>.</em></p><p>Required. A string that uniquely identifies the pool within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two pool IDs within an account that differ only by case).</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings SetId(this AzureBatchPoolCreateSettings toolSettings, string id)
         {
@@ -10926,12 +10928,30 @@ namespace Nuke.Azure
             toolSettings.Id = id;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.Id"/>.</em></p><p>A string that uniquely identifies the pool within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two pool IDs within an account that differ only by case).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.Id"/>.</em></p><p>Required. A string that uniquely identifies the pool within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two pool IDs within an account that differ only by case).</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings ResetId(this AzureBatchPoolCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MaxTasksPerNode
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.MaxTasksPerNode"/>.</em></p><p>The maximum number of tasks that can run concurrently on a single compute node in the pool. The default value is 1. The maximum value of this setting depends on the size of the compute nodes in the pool (the vmSize setting).</p></summary>
+        [Pure]
+        public static AzureBatchPoolCreateSettings SetMaxTasksPerNode(this AzureBatchPoolCreateSettings toolSettings, string maxTasksPerNode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxTasksPerNode = maxTasksPerNode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.MaxTasksPerNode"/>.</em></p><p>The maximum number of tasks that can run concurrently on a single compute node in the pool. The default value is 1. The maximum value of this setting depends on the size of the compute nodes in the pool (the vmSize setting).</p></summary>
+        [Pure]
+        public static AzureBatchPoolCreateSettings ResetMaxTasksPerNode(this AzureBatchPoolCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxTasksPerNode = null;
             return toolSettings;
         }
         #endregion
@@ -11032,7 +11052,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region VmSize
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.VmSize"/>.</em></p><p>The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (<a href="https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/">https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/</a>). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (<a href="https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/">https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/</a>) or Sizes for Virtual Machines (Windows) (<a href="https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/">https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/</a>). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.VmSize"/>.</em></p><p>Required. The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (<a href="https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/">https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/</a>). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (<a href="https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/">https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/</a>) or Sizes for Virtual Machines (Windows) (<a href="https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/">https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/</a>). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings SetVmSize(this AzureBatchPoolCreateSettings toolSettings, string vmSize)
         {
@@ -11040,7 +11060,7 @@ namespace Nuke.Azure
             toolSettings.VmSize = vmSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.VmSize"/>.</em></p><p>The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (<a href="https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/">https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/</a>). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (<a href="https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/">https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/</a>) or Sizes for Virtual Machines (Windows) (<a href="https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/">https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/</a>). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.VmSize"/>.</em></p><p>Required. The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (<a href="https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/">https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/</a>). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (<a href="https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/">https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/</a>) or Sizes for Virtual Machines (Windows) (<a href="https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/">https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/</a>). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings ResetVmSize(this AzureBatchPoolCreateSettings toolSettings)
         {
@@ -11050,7 +11070,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region OsFamily
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.OsFamily"/>.</em></p><p>The Azure Guest OS family to be installed on the virtual machines in the pool. Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. For more information, see Azure Guest OS Releases (<a href="https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases">https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases</a>).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.OsFamily"/>.</em></p><p>Required. The Azure Guest OS family to be installed on the virtual machines in the pool. Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. For more information, see Azure Guest OS Releases (<a href="https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases">https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases</a>).</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings SetOsFamily(this AzureBatchPoolCreateSettings toolSettings, BatchPoolCreateOsFamily osFamily)
         {
@@ -11058,7 +11078,7 @@ namespace Nuke.Azure
             toolSettings.OsFamily = osFamily;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.OsFamily"/>.</em></p><p>The Azure Guest OS family to be installed on the virtual machines in the pool. Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. For more information, see Azure Guest OS Releases (<a href="https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases">https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases</a>).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.OsFamily"/>.</em></p><p>Required. The Azure Guest OS family to be installed on the virtual machines in the pool. Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. For more information, see Azure Guest OS Releases (<a href="https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases">https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases</a>).</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings ResetOsFamily(this AzureBatchPoolCreateSettings toolSettings)
         {
@@ -11068,7 +11088,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StartTaskCommandLine
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.StartTaskCommandLine"/>.</em></p><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.StartTaskCommandLine"/>.</em></p><p>Required. The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings SetStartTaskCommandLine(this AzureBatchPoolCreateSettings toolSettings, string startTaskCommandLine)
         {
@@ -11076,7 +11096,7 @@ namespace Nuke.Azure
             toolSettings.StartTaskCommandLine = startTaskCommandLine;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.StartTaskCommandLine"/>.</em></p><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.StartTaskCommandLine"/>.</em></p><p>Required. The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings ResetStartTaskCommandLine(this AzureBatchPoolCreateSettings toolSettings)
         {
@@ -11086,7 +11106,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StartTaskResourceFiles
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.StartTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.StartTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line.  There is a maximum size for the list of resource files. When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings SetStartTaskResourceFiles(this AzureBatchPoolCreateSettings toolSettings, string startTaskResourceFiles)
         {
@@ -11094,7 +11114,7 @@ namespace Nuke.Azure
             toolSettings.StartTaskResourceFiles = startTaskResourceFiles;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.StartTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.StartTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line.  There is a maximum size for the list of resource files. When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings ResetStartTaskResourceFiles(this AzureBatchPoolCreateSettings toolSettings)
         {
@@ -11140,7 +11160,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region NodeAgentSkuId
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.NodeAgentSkuId"/>.</em></p><p>The SKU of the Batch node agent to be provisioned on compute nodes in the pool. The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.NodeAgentSkuId"/>.</em></p><p>Required. The SKU of the Batch node agent to be provisioned on compute nodes in the pool. The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings SetNodeAgentSkuId(this AzureBatchPoolCreateSettings toolSettings, string nodeAgentSkuId)
         {
@@ -11148,7 +11168,7 @@ namespace Nuke.Azure
             toolSettings.NodeAgentSkuId = nodeAgentSkuId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.NodeAgentSkuId"/>.</em></p><p>The SKU of the Batch node agent to be provisioned on compute nodes in the pool. The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.NodeAgentSkuId"/>.</em></p><p>Required. The SKU of the Batch node agent to be provisioned on compute nodes in the pool. The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings ResetNodeAgentSkuId(this AzureBatchPoolCreateSettings toolSettings)
         {
@@ -11740,7 +11760,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolResetSettings.JsonFile"/>.</em></p><p>The file containing pool update properties parameter specification in JSON format. If this parameter is specified, all 'Pool Update Properties Parameter Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolResetSettings.JsonFile"/>.</em></p><p>The file containing pool update properties parameter specification in JSON(formatted to match REST API request body). If this parameter is specified, all 'Pool Update Properties Parameter Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchPoolResetSettings SetJsonFile(this AzureBatchPoolResetSettings toolSettings, string jsonFile)
         {
@@ -11748,7 +11768,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolResetSettings.JsonFile"/>.</em></p><p>The file containing pool update properties parameter specification in JSON format. If this parameter is specified, all 'Pool Update Properties Parameter Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolResetSettings.JsonFile"/>.</em></p><p>The file containing pool update properties parameter specification in JSON(formatted to match REST API request body). If this parameter is specified, all 'Pool Update Properties Parameter Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchPoolResetSettings ResetJsonFile(this AzureBatchPoolResetSettings toolSettings)
         {
@@ -11812,7 +11832,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region ApplicationPackageReferences
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolResetSettings.ApplicationPackageReferences"/>.</em></p><p>A list of application packages to be installed on each compute node in the pool. The list replaces any existing application package references on the pool. Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. If omitted, or if you specify an empty collection, any existing application packages references are removed from the pool.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolResetSettings.ApplicationPackageReferences"/>.</em></p><p>Required. A list of application packages to be installed on each compute node in the pool. The list replaces any existing application package references on the pool. Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. If omitted, or if you specify an empty collection, any existing application packages references are removed from the pool.</p></summary>
         [Pure]
         public static AzureBatchPoolResetSettings SetApplicationPackageReferences(this AzureBatchPoolResetSettings toolSettings, string applicationPackageReferences)
         {
@@ -11820,7 +11840,7 @@ namespace Nuke.Azure
             toolSettings.ApplicationPackageReferences = applicationPackageReferences;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolResetSettings.ApplicationPackageReferences"/>.</em></p><p>A list of application packages to be installed on each compute node in the pool. The list replaces any existing application package references on the pool. Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. If omitted, or if you specify an empty collection, any existing application packages references are removed from the pool.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolResetSettings.ApplicationPackageReferences"/>.</em></p><p>Required. A list of application packages to be installed on each compute node in the pool. The list replaces any existing application package references on the pool. Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. If omitted, or if you specify an empty collection, any existing application packages references are removed from the pool.</p></summary>
         [Pure]
         public static AzureBatchPoolResetSettings ResetApplicationPackageReferences(this AzureBatchPoolResetSettings toolSettings)
         {
@@ -11830,7 +11850,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region CertificateReferences
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolResetSettings.CertificateReferences"/>.</em></p><p>A list of certificates to be installed on each compute node in the pool. This list replaces any existing certificate references configured on the pool. If you specify an empty collection, any existing certificate references are removed from the pool. For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolResetSettings.CertificateReferences"/>.</em></p><p>Required. A list of certificates to be installed on each compute node in the pool. This list replaces any existing certificate references configured on the pool. If you specify an empty collection, any existing certificate references are removed from the pool. For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</p></summary>
         [Pure]
         public static AzureBatchPoolResetSettings SetCertificateReferences(this AzureBatchPoolResetSettings toolSettings, string certificateReferences)
         {
@@ -11838,7 +11858,7 @@ namespace Nuke.Azure
             toolSettings.CertificateReferences = certificateReferences;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolResetSettings.CertificateReferences"/>.</em></p><p>A list of certificates to be installed on each compute node in the pool. This list replaces any existing certificate references configured on the pool. If you specify an empty collection, any existing certificate references are removed from the pool. For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolResetSettings.CertificateReferences"/>.</em></p><p>Required. A list of certificates to be installed on each compute node in the pool. This list replaces any existing certificate references configured on the pool. If you specify an empty collection, any existing certificate references are removed from the pool. For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</p></summary>
         [Pure]
         public static AzureBatchPoolResetSettings ResetCertificateReferences(this AzureBatchPoolResetSettings toolSettings)
         {
@@ -11848,44 +11868,20 @@ namespace Nuke.Azure
         }
         #endregion
         #region Metadata
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolResetSettings.Metadata"/> to a new dictionary.</em></p><p>A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolResetSettings.Metadata"/>.</em></p><p>Required. A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</p></summary>
         [Pure]
-        public static AzureBatchPoolResetSettings SetMetadata(this AzureBatchPoolResetSettings toolSettings, IDictionary<string, object> metadata)
+        public static AzureBatchPoolResetSettings SetMetadata(this AzureBatchPoolResetSettings toolSettings, string metadata)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
+            toolSettings.Metadata = metadata;
             return toolSettings;
         }
-        /// <summary><p><em>Clears <see cref="AzureBatchPoolResetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolResetSettings.Metadata"/>.</em></p><p>Required. A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</p></summary>
         [Pure]
-        public static AzureBatchPoolResetSettings ClearMetadata(this AzureBatchPoolResetSettings toolSettings)
+        public static AzureBatchPoolResetSettings ResetMetadata(this AzureBatchPoolResetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.MetadataInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchPoolResetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</p></summary>
-        [Pure]
-        public static AzureBatchPoolResetSettings AddMetadatum(this AzureBatchPoolResetSettings toolSettings, string metadatumKey, object metadatumValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureBatchPoolResetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</p></summary>
-        [Pure]
-        public static AzureBatchPoolResetSettings RemoveMetadatum(this AzureBatchPoolResetSettings toolSettings, string metadatumKey)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MetadataInternal.Remove(metadatumKey);
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchPoolResetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</p></summary>
-        [Pure]
-        public static AzureBatchPoolResetSettings SetMetadatum(this AzureBatchPoolResetSettings toolSettings, string metadatumKey, object metadatumValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
+            toolSettings.Metadata = null;
             return toolSettings;
         }
         #endregion
@@ -12434,7 +12430,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolSetSettings.JsonFile"/>.</em></p><p>A file containing the pool patch parameter specification in JSON format. If this parameter is specified, all 'Pool Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolSetSettings.JsonFile"/>.</em></p><p>A file containing the pool patch parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Pool Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchPoolSetSettings SetJsonFile(this AzureBatchPoolSetSettings toolSettings, string jsonFile)
         {
@@ -12442,7 +12438,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolSetSettings.JsonFile"/>.</em></p><p>A file containing the pool patch parameter specification in JSON format. If this parameter is specified, all 'Pool Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolSetSettings.JsonFile"/>.</em></p><p>A file containing the pool patch parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Pool Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchPoolSetSettings ResetJsonFile(this AzureBatchPoolSetSettings toolSettings)
         {
@@ -12584,7 +12580,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StartTaskCommandLine
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolSetSettings.StartTaskCommandLine"/>.</em></p><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolSetSettings.StartTaskCommandLine"/>.</em></p><p>Required. The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         [Pure]
         public static AzureBatchPoolSetSettings SetStartTaskCommandLine(this AzureBatchPoolSetSettings toolSettings, string startTaskCommandLine)
         {
@@ -12592,7 +12588,7 @@ namespace Nuke.Azure
             toolSettings.StartTaskCommandLine = startTaskCommandLine;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolSetSettings.StartTaskCommandLine"/>.</em></p><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolSetSettings.StartTaskCommandLine"/>.</em></p><p>Required. The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         [Pure]
         public static AzureBatchPoolSetSettings ResetStartTaskCommandLine(this AzureBatchPoolSetSettings toolSettings)
         {
@@ -12662,7 +12658,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StartTaskResourceFiles
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolSetSettings.StartTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolSetSettings.StartTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line.  There is a maximum size for the list of resource files. When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
         [Pure]
         public static AzureBatchPoolSetSettings SetStartTaskResourceFiles(this AzureBatchPoolSetSettings toolSettings, string startTaskResourceFiles)
         {
@@ -12670,7 +12666,7 @@ namespace Nuke.Azure
             toolSettings.StartTaskResourceFiles = startTaskResourceFiles;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolSetSettings.StartTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolSetSettings.StartTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line.  There is a maximum size for the list of resource files. When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
         [Pure]
         public static AzureBatchPoolSetSettings ResetStartTaskResourceFiles(this AzureBatchPoolSetSettings toolSettings)
         {
@@ -13146,7 +13142,7 @@ namespace Nuke.Azure
     public static partial class AzureBatchJobScheduleCreateSettingsExtensions
     {
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleCreateSettings.JsonFile"/>.</em></p><p>A file containing the cloud job schedule specification in JSON format. If this parameter is specified, all 'Cloud Job Schedule Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleCreateSettings.JsonFile"/>.</em></p><p>A file containing the cloud job schedule specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Cloud Job Schedule Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleCreateSettings SetJsonFile(this AzureBatchJobScheduleCreateSettings toolSettings, string jsonFile)
         {
@@ -13154,7 +13150,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleCreateSettings.JsonFile"/>.</em></p><p>A file containing the cloud job schedule specification in JSON format. If this parameter is specified, all 'Cloud Job Schedule Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleCreateSettings.JsonFile"/>.</em></p><p>A file containing the cloud job schedule specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Cloud Job Schedule Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleCreateSettings ResetJsonFile(this AzureBatchJobScheduleCreateSettings toolSettings)
         {
@@ -13218,7 +13214,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Id
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleCreateSettings.Id"/>.</em></p><p>A string that uniquely identifies the schedule within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleCreateSettings.Id"/>.</em></p><p>Required. A string that uniquely identifies the schedule within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleCreateSettings SetId(this AzureBatchJobScheduleCreateSettings toolSettings, string id)
         {
@@ -13226,7 +13222,7 @@ namespace Nuke.Azure
             toolSettings.Id = id;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleCreateSettings.Id"/>.</em></p><p>A string that uniquely identifies the schedule within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleCreateSettings.Id"/>.</em></p><p>Required. A string that uniquely identifies the schedule within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleCreateSettings ResetId(this AzureBatchJobScheduleCreateSettings toolSettings)
         {
@@ -13368,7 +13364,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskCommandLine
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleCreateSettings SetJobManagerTaskCommandLine(this AzureBatchJobScheduleCreateSettings toolSettings, string jobManagerTaskCommandLine)
         {
@@ -13376,7 +13372,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskCommandLine = jobManagerTaskCommandLine;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleCreateSettings ResetJobManagerTaskCommandLine(this AzureBatchJobScheduleCreateSettings toolSettings)
         {
@@ -13386,7 +13382,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskId
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskId"/>.</em></p><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskId"/>.</em></p><p>Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleCreateSettings SetJobManagerTaskId(this AzureBatchJobScheduleCreateSettings toolSettings, string jobManagerTaskId)
         {
@@ -13394,7 +13390,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskId = jobManagerTaskId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskId"/>.</em></p><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskId"/>.</em></p><p>Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleCreateSettings ResetJobManagerTaskId(this AzureBatchJobScheduleCreateSettings toolSettings)
         {
@@ -13404,7 +13400,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskResourceFiles
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleCreateSettings SetJobManagerTaskResourceFiles(this AzureBatchJobScheduleCreateSettings toolSettings, string jobManagerTaskResourceFiles)
         {
@@ -13412,7 +13408,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskResourceFiles = jobManagerTaskResourceFiles;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleCreateSettings ResetJobManagerTaskResourceFiles(this AzureBatchJobScheduleCreateSettings toolSettings)
         {
@@ -14578,7 +14574,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleResetSettings.JsonFile"/>.</em></p><p>A file containing the job schedule update parameter specification in JSON format. If this parameter is specified, all 'Job Schedule Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleResetSettings.JsonFile"/>.</em></p><p>A file containing the job schedule update parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Schedule Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleResetSettings SetJsonFile(this AzureBatchJobScheduleResetSettings toolSettings, string jsonFile)
         {
@@ -14586,7 +14582,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleResetSettings.JsonFile"/>.</em></p><p>A file containing the job schedule update parameter specification in JSON format. If this parameter is specified, all 'Job Schedule Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleResetSettings.JsonFile"/>.</em></p><p>A file containing the job schedule update parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Schedule Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleResetSettings ResetJsonFile(this AzureBatchJobScheduleResetSettings toolSettings)
         {
@@ -14806,7 +14802,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskCommandLine
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskCommandLine"/>.</em></p><p>Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleResetSettings SetJobManagerTaskCommandLine(this AzureBatchJobScheduleResetSettings toolSettings, string jobManagerTaskCommandLine)
         {
@@ -14814,7 +14810,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskCommandLine = jobManagerTaskCommandLine;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskCommandLine"/>.</em></p><p>Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleResetSettings ResetJobManagerTaskCommandLine(this AzureBatchJobScheduleResetSettings toolSettings)
         {
@@ -14866,7 +14862,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskId
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskId"/>.</em></p><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskId"/>.</em></p><p>Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleResetSettings SetJobManagerTaskId(this AzureBatchJobScheduleResetSettings toolSettings, string jobManagerTaskId)
         {
@@ -14874,7 +14870,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskId = jobManagerTaskId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskId"/>.</em></p><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskId"/>.</em></p><p>Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleResetSettings ResetJobManagerTaskId(this AzureBatchJobScheduleResetSettings toolSettings)
         {
@@ -14884,7 +14880,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskResourceFiles
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleResetSettings SetJobManagerTaskResourceFiles(this AzureBatchJobScheduleResetSettings toolSettings, string jobManagerTaskResourceFiles)
         {
@@ -14892,7 +14888,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskResourceFiles = jobManagerTaskResourceFiles;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleResetSettings ResetJobManagerTaskResourceFiles(this AzureBatchJobScheduleResetSettings toolSettings)
         {
@@ -15180,7 +15176,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleSetSettings.JsonFile"/>.</em></p><p>A file containing the job schedule patch parameter specification in JSON format. If this parameter is specified, all 'Job Schedule Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleSetSettings.JsonFile"/>.</em></p><p>A file containing the job schedule patch parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Schedule Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleSetSettings SetJsonFile(this AzureBatchJobScheduleSetSettings toolSettings, string jsonFile)
         {
@@ -15188,7 +15184,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleSetSettings.JsonFile"/>.</em></p><p>A file containing the job schedule patch parameter specification in JSON format. If this parameter is specified, all 'Job Schedule Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleSetSettings.JsonFile"/>.</em></p><p>A file containing the job schedule patch parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Schedule Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleSetSettings ResetJsonFile(this AzureBatchJobScheduleSetSettings toolSettings)
         {
@@ -15408,7 +15404,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskCommandLine
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskCommandLine"/>.</em></p><p>Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleSetSettings SetJobManagerTaskCommandLine(this AzureBatchJobScheduleSetSettings toolSettings, string jobManagerTaskCommandLine)
         {
@@ -15416,7 +15412,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskCommandLine = jobManagerTaskCommandLine;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskCommandLine"/>.</em></p><p>Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleSetSettings ResetJobManagerTaskCommandLine(this AzureBatchJobScheduleSetSettings toolSettings)
         {
@@ -15468,7 +15464,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskId
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskId"/>.</em></p><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskId"/>.</em></p><p>Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleSetSettings SetJobManagerTaskId(this AzureBatchJobScheduleSetSettings toolSettings, string jobManagerTaskId)
         {
@@ -15476,7 +15472,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskId = jobManagerTaskId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskId"/>.</em></p><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskId"/>.</em></p><p>Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleSetSettings ResetJobManagerTaskId(this AzureBatchJobScheduleSetSettings toolSettings)
         {
@@ -15486,7 +15482,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskResourceFiles
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleSetSettings SetJobManagerTaskResourceFiles(this AzureBatchJobScheduleSetSettings toolSettings, string jobManagerTaskResourceFiles)
         {
@@ -15494,7 +15490,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskResourceFiles = jobManagerTaskResourceFiles;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format.</p></summary>
         [Pure]
         public static AzureBatchJobScheduleSetSettings ResetJobManagerTaskResourceFiles(this AzureBatchJobScheduleSetSettings toolSettings)
         {
@@ -16284,7 +16280,7 @@ namespace Nuke.Azure
     public static partial class AzureBatchJobCreateSettingsExtensions
     {
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.JsonFile"/>.</em></p><p>A file containing the job specification in JSON format. If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.JsonFile"/>.</em></p><p>A file containing the job specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchJobCreateSettings SetJsonFile(this AzureBatchJobCreateSettings toolSettings, string jsonFile)
         {
@@ -16292,7 +16288,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobCreateSettings.JsonFile"/>.</em></p><p>A file containing the job specification in JSON format. If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobCreateSettings.JsonFile"/>.</em></p><p>A file containing the job specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchJobCreateSettings ResetJsonFile(this AzureBatchJobCreateSettings toolSettings)
         {
@@ -16356,7 +16352,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Id
-        /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.Id"/>.</em></p><p>A string that uniquely identifies the job within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.Id"/>.</em></p><p>Required. A string that uniquely identifies the job within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
         [Pure]
         public static AzureBatchJobCreateSettings SetId(this AzureBatchJobCreateSettings toolSettings, string id)
         {
@@ -16364,7 +16360,7 @@ namespace Nuke.Azure
             toolSettings.Id = id;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobCreateSettings.Id"/>.</em></p><p>A string that uniquely identifies the job within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobCreateSettings.Id"/>.</em></p><p>Required. A string that uniquely identifies the job within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
         [Pure]
         public static AzureBatchJobCreateSettings ResetId(this AzureBatchJobCreateSettings toolSettings)
         {
@@ -16488,7 +16484,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskCommandLine
-        /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         [Pure]
         public static AzureBatchJobCreateSettings SetJobManagerTaskCommandLine(this AzureBatchJobCreateSettings toolSettings, string jobManagerTaskCommandLine)
         {
@@ -16496,7 +16492,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskCommandLine = jobManagerTaskCommandLine;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         [Pure]
         public static AzureBatchJobCreateSettings ResetJobManagerTaskCommandLine(this AzureBatchJobCreateSettings toolSettings)
         {
@@ -16548,7 +16544,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskId
-        /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.JobManagerTaskId"/>.</em></p><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.JobManagerTaskId"/>.</em></p><p>Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         [Pure]
         public static AzureBatchJobCreateSettings SetJobManagerTaskId(this AzureBatchJobCreateSettings toolSettings, string jobManagerTaskId)
         {
@@ -16556,7 +16552,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskId = jobManagerTaskId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobCreateSettings.JobManagerTaskId"/>.</em></p><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobCreateSettings.JobManagerTaskId"/>.</em></p><p>Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         [Pure]
         public static AzureBatchJobCreateSettings ResetJobManagerTaskId(this AzureBatchJobCreateSettings toolSettings)
         {
@@ -16566,7 +16562,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskResourceFiles
-        /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format.</p></summary>
         [Pure]
         public static AzureBatchJobCreateSettings SetJobManagerTaskResourceFiles(this AzureBatchJobCreateSettings toolSettings, string jobManagerTaskResourceFiles)
         {
@@ -16574,7 +16570,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskResourceFiles = jobManagerTaskResourceFiles;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobCreateSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobCreateSettings.JobManagerTaskResourceFiles"/>.</em></p><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format.</p></summary>
         [Pure]
         public static AzureBatchJobCreateSettings ResetJobManagerTaskResourceFiles(this AzureBatchJobCreateSettings toolSettings)
         {
@@ -17704,7 +17700,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchJobResetSettings.JsonFile"/>.</em></p><p>A file containing the job update parameter specification in JSON format. If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobResetSettings.JsonFile"/>.</em></p><p>A file containing the job update parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchJobResetSettings SetJsonFile(this AzureBatchJobResetSettings toolSettings, string jsonFile)
         {
@@ -17712,7 +17708,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobResetSettings.JsonFile"/>.</em></p><p>A file containing the job update parameter specification in JSON format. If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobResetSettings.JsonFile"/>.</em></p><p>A file containing the job update parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchJobResetSettings ResetJsonFile(this AzureBatchJobResetSettings toolSettings)
         {
@@ -18096,7 +18092,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchJobSetSettings.JsonFile"/>.</em></p><p>A file containing the job patch parameter specification in JSON format. If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobSetSettings.JsonFile"/>.</em></p><p>A file containing the job patch parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchJobSetSettings SetJsonFile(this AzureBatchJobSetSettings toolSettings, string jsonFile)
         {
@@ -18104,7 +18100,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobSetSettings.JsonFile"/>.</em></p><p>A file containing the job patch parameter specification in JSON format. If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobSetSettings.JsonFile"/>.</em></p><p>A file containing the job patch parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchJobSetSettings ResetJsonFile(this AzureBatchJobSetSettings toolSettings)
         {
@@ -20004,7 +20000,7 @@ namespace Nuke.Azure
     public static partial class AzureBatchAccountShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureBatchAccountShowSettings.Name"/>.</em></p><p>Name of the Batch account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchAccountShowSettings.Name"/>.</em></p><p>Name of the batch account to show. If not specified will display currently set account.</p></summary>
         [Pure]
         public static AzureBatchAccountShowSettings SetName(this AzureBatchAccountShowSettings toolSettings, string name)
         {
@@ -20012,7 +20008,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchAccountShowSettings.Name"/>.</em></p><p>Name of the Batch account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchAccountShowSettings.Name"/>.</em></p><p>Name of the batch account to show. If not specified will display currently set account.</p></summary>
         [Pure]
         public static AzureBatchAccountShowSettings ResetName(this AzureBatchAccountShowSettings toolSettings)
         {
@@ -20022,7 +20018,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBatchAccountShowSettings.ResourceGroup"/>.</em></p><p>Name of the resource group.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchAccountShowSettings.ResourceGroup"/>.</em></p><p>Name of the resource group. If not specified will display currently set account.</p></summary>
         [Pure]
         public static AzureBatchAccountShowSettings SetResourceGroup(this AzureBatchAccountShowSettings toolSettings, string resourceGroup)
         {
@@ -20030,7 +20026,7 @@ namespace Nuke.Azure
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchAccountShowSettings.ResourceGroup"/>.</em></p><p>Name of the resource group.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchAccountShowSettings.ResourceGroup"/>.</em></p><p>Name of the resource group. If not specified will display currently set account.</p></summary>
         [Pure]
         public static AzureBatchAccountShowSettings ResetResourceGroup(this AzureBatchAccountShowSettings toolSettings)
         {
@@ -24776,7 +24772,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Filter
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolNodeCountsListSettings.Filter"/>.</em></p><p>An OData $filter clause.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolNodeCountsListSettings.Filter"/>.</em></p><p>An OData $filter clause. For more information on constructing this filter, see <a href="https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch</a>.</p></summary>
         [Pure]
         public static AzureBatchPoolNodeCountsListSettings SetFilter(this AzureBatchPoolNodeCountsListSettings toolSettings, string filter)
         {
@@ -24784,7 +24780,7 @@ namespace Nuke.Azure
             toolSettings.Filter = filter;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolNodeCountsListSettings.Filter"/>.</em></p><p>An OData $filter clause.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolNodeCountsListSettings.Filter"/>.</em></p><p>An OData $filter clause. For more information on constructing this filter, see <a href="https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch</a>.</p></summary>
         [Pure]
         public static AzureBatchPoolNodeCountsListSettings ResetFilter(this AzureBatchPoolNodeCountsListSettings toolSettings)
         {
@@ -26702,7 +26698,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchNodeServiceLogsUploadSettings.JsonFile"/>.</em></p><p>A file containing the upload batch service logs configuration specification in JSON format. If this parameter is specified, all 'Upload Batch Service Logs Configuration Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchNodeServiceLogsUploadSettings.JsonFile"/>.</em></p><p>A file containing the upload batch service logs configuration specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Upload Batch Service Logs Configuration Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchNodeServiceLogsUploadSettings SetJsonFile(this AzureBatchNodeServiceLogsUploadSettings toolSettings, string jsonFile)
         {
@@ -26710,7 +26706,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchNodeServiceLogsUploadSettings.JsonFile"/>.</em></p><p>A file containing the upload batch service logs configuration specification in JSON format. If this parameter is specified, all 'Upload Batch Service Logs Configuration Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchNodeServiceLogsUploadSettings.JsonFile"/>.</em></p><p>A file containing the upload batch service logs configuration specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Upload Batch Service Logs Configuration Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchNodeServiceLogsUploadSettings ResetJsonFile(this AzureBatchNodeServiceLogsUploadSettings toolSettings)
         {
@@ -26774,7 +26770,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region ContainerUrl
-        /// <summary><p><em>Sets <see cref="AzureBatchNodeServiceLogsUploadSettings.ContainerUrl"/>.</em></p><p>The URL of the container within Azure Blob Storage to which to upload the Batch Service log file(s). The URL must include a Shared Access Signature (SAS) granting write permissions to the container. The SAS duration must allow enough time for the upload to finish. The start time for SAS is optional and recommended to not be specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchNodeServiceLogsUploadSettings.ContainerUrl"/>.</em></p><p>Required. The URL of the container within Azure Blob Storage to which to upload the Batch Service log file(s). The URL must include a Shared Access Signature (SAS) granting write permissions to the container. The SAS duration must allow enough time for the upload to finish. The start time for SAS is optional and recommended to not be specified.</p></summary>
         [Pure]
         public static AzureBatchNodeServiceLogsUploadSettings SetContainerUrl(this AzureBatchNodeServiceLogsUploadSettings toolSettings, string containerUrl)
         {
@@ -26782,7 +26778,7 @@ namespace Nuke.Azure
             toolSettings.ContainerUrl = containerUrl;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchNodeServiceLogsUploadSettings.ContainerUrl"/>.</em></p><p>The URL of the container within Azure Blob Storage to which to upload the Batch Service log file(s). The URL must include a Shared Access Signature (SAS) granting write permissions to the container. The SAS duration must allow enough time for the upload to finish. The start time for SAS is optional and recommended to not be specified.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchNodeServiceLogsUploadSettings.ContainerUrl"/>.</em></p><p>Required. The URL of the container within Azure Blob Storage to which to upload the Batch Service log file(s). The URL must include a Shared Access Signature (SAS) granting write permissions to the container. The SAS duration must allow enough time for the upload to finish. The start time for SAS is optional and recommended to not be specified.</p></summary>
         [Pure]
         public static AzureBatchNodeServiceLogsUploadSettings ResetContainerUrl(this AzureBatchNodeServiceLogsUploadSettings toolSettings)
         {
@@ -26810,7 +26806,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StartTime
-        /// <summary><p><em>Sets <see cref="AzureBatchNodeServiceLogsUploadSettings.StartTime"/>.</em></p><p>The start of the time range from which to upload Batch Service log file(s). Any log file containing a log message in the time range will be uploaded. This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested. Expected format is an ISO-8601 timestamp.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchNodeServiceLogsUploadSettings.StartTime"/>.</em></p><p>Required. The start of the time range from which to upload Batch Service log file(s). Any log file containing a log message in the time range will be uploaded. This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested. Expected format is an ISO-8601 timestamp.</p></summary>
         [Pure]
         public static AzureBatchNodeServiceLogsUploadSettings SetStartTime(this AzureBatchNodeServiceLogsUploadSettings toolSettings, string startTime)
         {
@@ -26818,7 +26814,7 @@ namespace Nuke.Azure
             toolSettings.StartTime = startTime;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchNodeServiceLogsUploadSettings.StartTime"/>.</em></p><p>The start of the time range from which to upload Batch Service log file(s). Any log file containing a log message in the time range will be uploaded. This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested. Expected format is an ISO-8601 timestamp.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchNodeServiceLogsUploadSettings.StartTime"/>.</em></p><p>Required. The start of the time range from which to upload Batch Service log file(s). Any log file containing a log message in the time range will be uploaded. This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested. Expected format is an ISO-8601 timestamp.</p></summary>
         [Pure]
         public static AzureBatchNodeServiceLogsUploadSettings ResetStartTime(this AzureBatchNodeServiceLogsUploadSettings toolSettings)
         {
@@ -26962,7 +26958,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchNodeUserCreateSettings.JsonFile"/>.</em></p><p>A file containing the user specification in JSON format. If this parameter is specified, all 'User Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchNodeUserCreateSettings.JsonFile"/>.</em></p><p>A file containing the user specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'User Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchNodeUserCreateSettings SetJsonFile(this AzureBatchNodeUserCreateSettings toolSettings, string jsonFile)
         {
@@ -26970,7 +26966,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchNodeUserCreateSettings.JsonFile"/>.</em></p><p>A file containing the user specification in JSON format. If this parameter is specified, all 'User Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchNodeUserCreateSettings.JsonFile"/>.</em></p><p>A file containing the user specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'User Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchNodeUserCreateSettings ResetJsonFile(this AzureBatchNodeUserCreateSettings toolSettings)
         {
@@ -27070,7 +27066,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureBatchNodeUserCreateSettings.Name"/>.</em></p><p>The user name of the account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchNodeUserCreateSettings.Name"/>.</em></p><p>Required. The user name of the account.</p></summary>
         [Pure]
         public static AzureBatchNodeUserCreateSettings SetName(this AzureBatchNodeUserCreateSettings toolSettings, string name)
         {
@@ -27078,7 +27074,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchNodeUserCreateSettings.Name"/>.</em></p><p>The user name of the account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchNodeUserCreateSettings.Name"/>.</em></p><p>Required. The user name of the account.</p></summary>
         [Pure]
         public static AzureBatchNodeUserCreateSettings ResetName(this AzureBatchNodeUserCreateSettings toolSettings)
         {
@@ -27500,7 +27496,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JsonFile
-        /// <summary><p><em>Sets <see cref="AzureBatchNodeUserResetSettings.JsonFile"/>.</em></p><p>A file containing the node update user parameter specification in JSON format. If this parameter is specified, all 'Node Update User Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchNodeUserResetSettings.JsonFile"/>.</em></p><p>A file containing the node update user parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Node Update User Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchNodeUserResetSettings SetJsonFile(this AzureBatchNodeUserResetSettings toolSettings, string jsonFile)
         {
@@ -27508,7 +27504,7 @@ namespace Nuke.Azure
             toolSettings.JsonFile = jsonFile;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchNodeUserResetSettings.JsonFile"/>.</em></p><p>A file containing the node update user parameter specification in JSON format. If this parameter is specified, all 'Node Update User Arguments' are ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchNodeUserResetSettings.JsonFile"/>.</em></p><p>A file containing the node update user parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Node Update User Arguments' are ignored.</p></summary>
         [Pure]
         public static AzureBatchNodeUserResetSettings ResetJsonFile(this AzureBatchNodeUserResetSettings toolSettings)
         {

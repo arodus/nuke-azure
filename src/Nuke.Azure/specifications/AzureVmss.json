@@ -6,15 +6,15 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vmss.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vmss/disk.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vmss/diagnostics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vmss/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vmss/rolling-upgrade.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vmss/nic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vmss/extension.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vmss/encryption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vmss/extension/image.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vmss.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vmss/disk.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vmss/diagnostics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vmss/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vmss/rolling-upgrade.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vmss/nic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vmss/extension.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vmss/encryption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vmss/extension/image.yml"
   ],
   "name": "AzureVmss",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest",
@@ -109,7 +109,7 @@
             "type": "string",
             "format": "--secrets {value}",
             "secret": true,
-            "help": "One or many Key Vault secrets as JSON strings or files via `@&amp;lt;file path&amp;gt;` containing `[{ \"sourceVault\": { \"id\": \"value\" }, \"vaultCertificates\": [{ \"certificateUrl\": \"value\", \"certificateStore\": \"cert store name (only on windows)\"}] }]`."
+            "help": "One or many Key Vault secrets as JSON strings or files via `@{path}` containing `[{ \"sourceVault\": { \"id\": \"value\" }, \"vaultCertificates\": [{ \"certificateUrl\": \"value\", \"certificateStore\": \"cert store name (only on windows)\"}] }]`."
           },
           {
             "name": "SinglePlacementGroup",
@@ -401,6 +401,12 @@
             "type": "VmssCreateStorageSku",
             "format": "--storage-sku {value}",
             "help": "The SKU of the storage account with which to persist VM."
+          },
+          {
+            "name": "UltraSsdEnabled",
+            "type": "bool",
+            "format": "--ultra-ssd-enabled",
+            "help": "(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account."
           },
           {
             "name": "UseUnmanagedDisk",
@@ -1054,6 +1060,12 @@
             "type": "string",
             "format": "--size-gb {value}",
             "help": "Size in GB."
+          },
+          {
+            "name": "Sku",
+            "type": "VmssCreateStorageSku",
+            "format": "--sku {value}",
+            "help": "Underlying storage SKU."
           }
         ]
       }
@@ -1877,7 +1889,8 @@
       "values": [
         "premium_lrs",
         "standardssd_lrs",
-        "standard_lrs"
+        "standard_lrs",
+        "ultrassd_lrs"
       ]
     },
     {

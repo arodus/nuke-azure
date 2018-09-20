@@ -760,7 +760,7 @@ namespace Nuke.Azure
         public virtual string Location { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
-        /// <summary><p>One or many Key Vault secrets as JSON strings or files via `@&amp;lt;file path&amp;gt;` containing `[{ "sourceVault": { "id": "value" }, "vaultCertificates": [{ "certificateUrl": "value", "certificateStore": "cert store name (only on windows)"}] }]`.</p></summary>
+        /// <summary><p>One or many Key Vault secrets as JSON strings or files via `@{path}` containing `[{ "sourceVault": { "id": "value" }, "vaultCertificates": [{ "certificateUrl": "value", "certificateStore": "cert store name (only on windows)"}] }]`.</p></summary>
         public virtual string Secrets { get; internal set; }
         /// <summary><p>The VM size to be created. See <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/">https://azure.microsoft.com/en-us/pricing/details/virtual-machines/</a> for size info.</p></summary>
         public virtual string Size { get; internal set; }
@@ -843,6 +843,8 @@ namespace Nuke.Azure
         public virtual string StorageContainerName { get; internal set; }
         /// <summary><p>The SKU of the storage account with which to persist VM.</p></summary>
         public virtual VmCreateStorageSku StorageSku { get; internal set; }
+        /// <summary><p>(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
+        public virtual bool? UltraSsdEnabled { get; internal set; }
         /// <summary><p>Do not use managed disk to persist VM.</p></summary>
         public virtual string UseUnmanagedDisk { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -911,6 +913,7 @@ namespace Nuke.Azure
               .Add("--storage-account {value}", StorageAccount)
               .Add("--storage-container-name {value}", StorageContainerName)
               .Add("--storage-sku {value}", StorageSku)
+              .Add("--ultra-ssd-enabled", UltraSsdEnabled)
               .Add("--use-unmanaged-disk {value}", UseUnmanagedDisk)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -4663,7 +4666,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Secrets
-        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.Secrets"/>.</em></p><p>One or many Key Vault secrets as JSON strings or files via `@&amp;lt;file path&amp;gt;` containing `[{ "sourceVault": { "id": "value" }, "vaultCertificates": [{ "certificateUrl": "value", "certificateStore": "cert store name (only on windows)"}] }]`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.Secrets"/>.</em></p><p>One or many Key Vault secrets as JSON strings or files via `@{path}` containing `[{ "sourceVault": { "id": "value" }, "vaultCertificates": [{ "certificateUrl": "value", "certificateStore": "cert store name (only on windows)"}] }]`.</p></summary>
         [Pure]
         public static AzureVmCreateSettings SetSecrets(this AzureVmCreateSettings toolSettings, string secrets)
         {
@@ -4671,7 +4674,7 @@ namespace Nuke.Azure
             toolSettings.Secrets = secrets;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmCreateSettings.Secrets"/>.</em></p><p>One or many Key Vault secrets as JSON strings or files via `@&amp;lt;file path&amp;gt;` containing `[{ "sourceVault": { "id": "value" }, "vaultCertificates": [{ "certificateUrl": "value", "certificateStore": "cert store name (only on windows)"}] }]`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmCreateSettings.Secrets"/>.</em></p><p>One or many Key Vault secrets as JSON strings or files via `@{path}` containing `[{ "sourceVault": { "id": "value" }, "vaultCertificates": [{ "certificateUrl": "value", "certificateStore": "cert store name (only on windows)"}] }]`.</p></summary>
         [Pure]
         public static AzureVmCreateSettings ResetSecrets(this AzureVmCreateSettings toolSettings)
         {
@@ -5463,6 +5466,48 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.StorageSku = null;
+            return toolSettings;
+        }
+        #endregion
+        #region UltraSsdEnabled
+        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings SetUltraSsdEnabled(this AzureVmCreateSettings toolSettings, bool? ultraSsdEnabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UltraSsdEnabled = ultraSsdEnabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings ResetUltraSsdEnabled(this AzureVmCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UltraSsdEnabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureVmCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings EnableUltraSsdEnabled(this AzureVmCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UltraSsdEnabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureVmCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings DisableUltraSsdEnabled(this AzureVmCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UltraSsdEnabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureVmCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings ToggleUltraSsdEnabled(this AzureVmCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UltraSsdEnabled = !toolSettings.UltraSsdEnabled;
             return toolSettings;
         }
         #endregion
@@ -18573,6 +18618,7 @@ namespace Nuke.Azure
         public static VmCreateStorageSku premium_lrs = new VmCreateStorageSku { Value = "premium_lrs" };
         public static VmCreateStorageSku standardssd_lrs = new VmCreateStorageSku { Value = "standardssd_lrs" };
         public static VmCreateStorageSku standard_lrs = new VmCreateStorageSku { Value = "standard_lrs" };
+        public static VmCreateStorageSku ultrassd_lrs = new VmCreateStorageSku { Value = "ultrassd_lrs" };
     }
     #endregion
     #region VmEncryptionVolumeType

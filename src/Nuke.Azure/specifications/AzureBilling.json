@@ -6,10 +6,10 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/billing.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/billing/invoice.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/billing/enrollment-account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/billing/period.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/billing.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/billing/invoice.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/billing/enrollment-account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/billing/period.yml"
   ],
   "name": "AzureBilling",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest",

@@ -6,39 +6,41 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/cors.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/logging.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/queue.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/message.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/share.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/directory.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/file.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/metrics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/entity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/table.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/blob.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/container/lease.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/container/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/container/metadata.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/share/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/share/metadata.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/file/copy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/file/metadata.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/directory/metadata.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/table/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/account/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/account/network-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/queue/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/queue/metadata.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/blob/copy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/blob/incremental-copy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/blob/lease.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/blob/metadata.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/blob/service-properties.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/storage/blob/service-properties/delete-policy.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/cors.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/logging.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/queue.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/message.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/share.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/directory.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/file.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/metrics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/entity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/table.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/blob.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/container/lease.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/container/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/container/immutability-policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/container/legal-hold.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/container/metadata.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/share/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/share/metadata.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/file/copy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/file/metadata.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/directory/metadata.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/table/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/account/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/account/network-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/queue/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/queue/metadata.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/blob/copy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/blob/incremental-copy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/blob/lease.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/blob/metadata.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/blob/service-properties.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/storage/blob/service-properties/delete-policy.yml"
   ],
   "name": "AzureStorage",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest",
@@ -328,6 +330,12 @@
             "help": "The queue name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "FailOnExist",
             "type": "bool",
             "format": "--fail-on-exist",
@@ -386,6 +394,12 @@
             "help": "The queue name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "FailNotExist",
             "type": "bool",
             "format": "--fail-not-exist",
@@ -436,6 +450,12 @@
             "help": "The queue name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
@@ -478,6 +498,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The queue name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "Expiry",
@@ -548,6 +574,12 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "IncludeMetadata",
             "type": "string",
             "format": "--include-metadata {value}",
@@ -610,6 +642,12 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
@@ -652,6 +690,12 @@
             "type": "string",
             "format": "--queue-name {value}",
             "help": "The queue name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "Timeout",
@@ -710,6 +754,12 @@
             "help": "The queue name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
@@ -752,6 +802,12 @@
             "type": "string",
             "format": "--queue-name {value}",
             "help": "The queue name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "NumMessages",
@@ -810,6 +866,12 @@
             "help": "The queue name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "NumMessages",
             "type": "string",
             "format": "--num-messages {value}",
@@ -864,6 +926,12 @@
             "type": "string",
             "format": "--queue-name {value}",
             "help": "The queue name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "TimeToLive",
@@ -938,6 +1006,12 @@
             "type": "string",
             "format": "--visibility-timeout {value}",
             "help": "Specifies the new visibility timeout value, in seconds, relative to server time. The new value must be larger than or equal to 0, and cannot be larger than 7 days. The visibility timeout of a message cannot be set to a value later than the expiry time. A message can be updated until it has been deleted or has expired."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "Content",
@@ -3638,6 +3712,12 @@
             "help": "The container name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "FailOnExist",
             "type": "string",
             "format": "--fail-on-exist {value}",
@@ -3702,6 +3782,12 @@
             "help": "The container name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "FailNotExist",
             "type": "string",
             "format": "--fail-not-exist {value}",
@@ -3723,13 +3809,13 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -3768,6 +3854,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The container name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "Timeout",
@@ -3812,6 +3904,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The container name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "CacheControl",
@@ -3912,6 +4010,12 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "IncludeMetadata",
             "type": "string",
             "format": "--include-metadata {value}",
@@ -3974,6 +4078,12 @@
             "help": "The container name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseId",
             "type": "string",
             "format": "--lease-id {value}",
@@ -3995,13 +4105,13 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -4040,6 +4150,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The container name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "LeaseId",
@@ -4090,6 +4206,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The container name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "LeaseId",
@@ -4574,6 +4696,12 @@
             "help": "The blob name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "DeleteSnapshots",
             "type": "StorageBlobDeleteSnapshots",
             "format": "--delete-snapshots {value}",
@@ -4607,7 +4735,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -4619,7 +4747,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -4658,6 +4786,12 @@
             "type": "string",
             "format": "--source {value}",
             "help": "The blob container from where the files will be deleted."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "DeleteSnapshots",
@@ -4699,7 +4833,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -4711,7 +4845,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -4762,6 +4896,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The blob name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "EndRange",
@@ -4833,7 +4973,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -4845,7 +4985,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -4890,6 +5030,12 @@
             "type": "string",
             "format": "--source {value}",
             "help": "The blob container from where the files will be downloaded."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "Dryrun",
@@ -4966,6 +5112,12 @@
             "help": "The blob name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Snapshot",
             "type": "string",
             "format": "--snapshot {value}",
@@ -5020,6 +5172,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The blob name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "CacheControl",
@@ -5126,6 +5284,12 @@
             "help": "The container name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Delimiter",
             "type": "string",
             "format": "--delimiter {value}",
@@ -5206,6 +5370,12 @@
             "help": "The tier value to set the blob to."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
@@ -5262,6 +5432,12 @@
             "help": "The blob name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseId",
             "type": "string",
             "format": "--lease-id {value}",
@@ -5289,7 +5465,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -5301,7 +5477,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -5348,6 +5524,12 @@
             "help": "The blob name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseId",
             "type": "string",
             "format": "--lease-id {value}",
@@ -5377,7 +5559,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -5389,7 +5571,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -5434,6 +5616,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The blob name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "Timeout",
@@ -5484,6 +5672,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The blob name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "ContentCacheControl",
@@ -5543,7 +5737,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -5555,7 +5749,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -5606,6 +5800,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The blob name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "ContentCacheControl",
@@ -5715,7 +5915,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -5727,7 +5927,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -5772,6 +5972,12 @@
             "type": "string",
             "format": "--source {value}",
             "help": "The directory where the files to be uploaded are located."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "DestinationPath",
@@ -5893,7 +6099,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -5905,7 +6111,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -5950,6 +6156,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The blob name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "Protocol",
@@ -6002,6 +6214,12 @@
             "help": "The container name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseDuration",
             "type": "string",
             "format": "--lease-duration {value}",
@@ -6023,13 +6241,13 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -6070,6 +6288,12 @@
             "help": "The container name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseBreakPeriod",
             "type": "string",
             "format": "--lease-break-period {value}",
@@ -6085,13 +6309,13 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -6144,6 +6368,12 @@
             "help": "Proposed lease ID, in a GUID string format. The Blob service returns 400 (Invalid request) if the proposed lease ID is not in the correct format."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
@@ -6153,13 +6383,13 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -6206,6 +6436,12 @@
             "help": "Lease ID for active lease."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
@@ -6215,13 +6451,13 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -6268,6 +6504,12 @@
             "help": "Lease ID for active lease."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
@@ -6277,13 +6519,13 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -6328,6 +6570,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The stored access policy name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "Expiry",
@@ -6398,6 +6646,12 @@
             "help": "The stored access policy name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseId",
             "type": "string",
             "format": "--lease-id {value}",
@@ -6440,6 +6694,12 @@
             "type": "string",
             "format": "--container-name {value}",
             "help": "The container name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "LeaseId",
@@ -6492,6 +6752,12 @@
             "help": "The stored access policy name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseId",
             "type": "string",
             "format": "--lease-id {value}",
@@ -6540,6 +6806,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The stored access policy name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "Expiry",
@@ -6593,6 +6865,268 @@
       }
     },
     {
+      "postfix": "ContainerImmutabilityPolicyCreate",
+      "definiteArgument": "storage container immutability-policy create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+          },
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "help": "The container name."
+          },
+          {
+            "name": "Period",
+            "type": "string",
+            "format": "--period {value}",
+            "help": "The immutability period for the blobs in the container since the policy creation, in days."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "IfMatch",
+            "type": "string",
+            "format": "--if-match {value}",
+            "help": "The entity state (ETag) version of the immutability policy to update. A value of \"*\" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContainerImmutabilityPolicyDelete",
+      "definiteArgument": "storage container immutability-policy delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+          },
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "help": "The container name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "IfMatch",
+            "type": "string",
+            "format": "--if-match {value}",
+            "help": "The entity state (ETag) version of the immutability policy to update. A value of \"*\" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContainerImmutabilityPolicyExtend",
+      "definiteArgument": "storage container immutability-policy extend",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+          },
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "help": "The container name."
+          },
+          {
+            "name": "Period",
+            "type": "string",
+            "format": "--period {value}",
+            "help": "The immutability period for the blobs in the container since the policy creation, in days."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "IfMatch",
+            "type": "string",
+            "format": "--if-match {value}",
+            "help": "The entity state (ETag) version of the immutability policy to update. A value of \"*\" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContainerImmutabilityPolicyLock",
+      "definiteArgument": "storage container immutability-policy lock",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+          },
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "help": "The container name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "IfMatch",
+            "type": "string",
+            "format": "--if-match {value}",
+            "help": "The entity state (ETag) version of the immutability policy to update. A value of \"*\" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContainerImmutabilityPolicyShow",
+      "definiteArgument": "storage container immutability-policy show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+          },
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "help": "The container name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "IfMatch",
+            "type": "string",
+            "format": "--if-match {value}",
+            "help": "The entity state (ETag) version of the immutability policy to update. A value of \"*\" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContainerLegalHoldClear",
+      "definiteArgument": "storage container legal-hold clear",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+          },
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "help": "The container name."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContainerLegalHoldSet",
+      "definiteArgument": "storage container legal-hold set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+          },
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "help": "The container name."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContainerLegalHoldShow",
+      "definiteArgument": "storage container legal-hold show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only."
+          },
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "help": "The container name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "ContainerMetadataShow",
       "definiteArgument": "storage container metadata show",
       "settingsClass": {
@@ -6602,6 +7136,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The container name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "LeaseId",
@@ -6654,6 +7194,12 @@
             "help": "The container name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseId",
             "type": "string",
             "format": "--lease-id {value}",
@@ -6677,7 +7223,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -7976,6 +8522,12 @@
             "help": "The queue name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Expiry",
             "type": "string",
             "format": "--expiry {value}",
@@ -8038,6 +8590,12 @@
             "help": "The queue name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "AccountKey",
             "type": "string",
             "format": "--account-key {value}",
@@ -8074,6 +8632,12 @@
             "type": "string",
             "format": "--queue-name {value}",
             "help": "The queue name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "AccountKey",
@@ -8120,6 +8684,12 @@
             "help": "The queue name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "AccountKey",
             "type": "string",
             "format": "--account-key {value}",
@@ -8162,6 +8732,12 @@
             "type": "string",
             "format": "--queue-name {value}",
             "help": "The queue name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "Expiry",
@@ -8220,6 +8796,12 @@
             "help": "The queue name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
@@ -8262,6 +8844,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The queue name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "Metadata",
@@ -8328,6 +8916,12 @@
             "help": "The container name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseId",
             "type": "string",
             "format": "--lease-id {value}",
@@ -8382,6 +8976,12 @@
             "type": "string",
             "format": "--destination-container {value}",
             "help": "The container name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "DestinationLeaseId",
@@ -8544,6 +9144,12 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "DestinationContainer",
             "type": "string",
             "format": "--destination-container {value}",
@@ -8654,6 +9260,12 @@
             "help": "The blob name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseId",
             "type": "string",
             "format": "--lease-id {value}",
@@ -8708,6 +9320,12 @@
             "type": "string",
             "format": "--destination-container {value}",
             "help": "The container name."
+          },
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
           },
           {
             "name": "DestinationLeaseId",
@@ -8846,6 +9464,12 @@
             "help": "The container name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseDuration",
             "type": "string",
             "format": "--lease-duration {value}",
@@ -8873,7 +9497,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -8885,7 +9509,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -8932,6 +9556,12 @@
             "help": "The container name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseBreakPeriod",
             "type": "string",
             "format": "--lease-break-period {value}",
@@ -8953,7 +9583,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -8965,7 +9595,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -9024,6 +9654,12 @@
             "help": "Proposed lease ID, in a GUID string format. The Blob service returns 400 (Invalid request) if the proposed lease ID is not in the correct format."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
@@ -9039,7 +9675,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -9051,7 +9687,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -9104,6 +9740,12 @@
             "help": "Lease ID for active lease."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
@@ -9119,7 +9761,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -9131,7 +9773,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -9184,6 +9826,12 @@
             "help": "Lease ID for active lease."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
@@ -9199,7 +9847,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -9211,7 +9859,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -9258,6 +9906,12 @@
             "help": "The blob name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseId",
             "type": "string",
             "format": "--lease-id {value}",
@@ -9285,7 +9939,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -9297,7 +9951,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -9344,6 +9998,12 @@
             "help": "The blob name."
           },
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "LeaseId",
             "type": "string",
             "format": "--lease-id {value}",
@@ -9373,7 +10033,7 @@
             "name": "IfModifiedSince",
             "type": "string",
             "format": "--if-modified-since {value}",
-            "help": "Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "IfNoneMatch",
@@ -9385,7 +10045,7 @@
             "name": "IfUnmodifiedSince",
             "type": "string",
             "format": "--if-unmodified-since {value}",
-            "help": "Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
+            "help": "Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z')."
           },
           {
             "name": "AccountKey",
@@ -9419,6 +10079,12 @@
       "definiteArgument": "storage blob service-properties show",
       "settingsClass": {
         "properties": [
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
           {
             "name": "Timeout",
             "type": "string",
@@ -9458,6 +10124,12 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
+          {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
@@ -9495,6 +10167,12 @@
       "definiteArgument": "storage blob service-properties delete-policy update",
       "settingsClass": {
         "properties": [
+          {
+            "name": "AuthMode",
+            "type": "StorageQueueAuthMode",
+            "format": "--auth-mode {value}",
+            "help": "The mode in which to run the command. \"login\" mode will directly use your login credentials for the authentication. The legacy \"key\" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE."
+          },
           {
             "name": "DaysRetained",
             "type": "int",
@@ -9578,6 +10256,13 @@
         "options",
         "post",
         "put"
+      ]
+    },
+    {
+      "name": "StorageQueueAuthMode",
+      "values": [
+        "key",
+        "login"
       ]
     },
     {

@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/container.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/container.yml"
   ],
   "name": "AzureContainer",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest",
@@ -243,6 +243,36 @@
             "type": "string",
             "format": "--log-analytics-workspace-key {value}",
             "help": "The Log Analytics workspace key."
+          },
+          {
+            "name": "NetworkProfile",
+            "type": "string",
+            "format": "--network-profile {value}",
+            "help": "The network profile name or id."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "The name of the subnet when creating a new VNET or referencing an existing one. Can also reference an existing subnet by ID."
+          },
+          {
+            "name": "SubnetAddressPrefix",
+            "type": "string",
+            "format": "--subnet-address-prefix {value}",
+            "help": "The subnet IP address prefix to use when creating a new VNET in CIDR format."
+          },
+          {
+            "name": "VnetAddressPrefix",
+            "type": "string",
+            "format": "--vnet-address-prefix {value}",
+            "help": "The IP address prefix to use when creating a new VNET in CIDR format."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "The name of the VNET when creating a new one or referencing an existing one."
           }
         ]
       }
@@ -390,8 +420,48 @@
       }
     },
     {
+      "postfix": "Restart",
+      "definiteArgument": "container restart",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the container group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "Show",
       "definiteArgument": "container show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the container group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Stop",
+      "definiteArgument": "container stop",
       "settingsClass": {
         "properties": [
           {

@@ -420,6 +420,46 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorMetricsAlertCreate(Configure<AzureMonitorMetricsAlertCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorMetricsAlertCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorMetricsAlertDelete(Configure<AzureMonitorMetricsAlertDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorMetricsAlertDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorMetricsAlertList(Configure<AzureMonitorMetricsAlertListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorMetricsAlertListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorMetricsAlertShow(Configure<AzureMonitorMetricsAlertShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorMetricsAlertShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorMetricsAlertUpdate(Configure<AzureMonitorMetricsAlertUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorMetricsAlertUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsCategoriesList(Configure<AzureMonitorDiagnosticSettingsCategoriesListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsCategoriesListSettings());
@@ -2786,6 +2826,275 @@ namespace Nuke.Azure
               .Add("--autoscale-name {value}", AutoscaleName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--profile-name {value}", ProfileName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorMetricsAlertCreateSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorMetricsAlertCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>The condition which triggers the rule.</p></summary>
+        public virtual string Condition { get; internal set; }
+        /// <summary><p>Free-text description of the rule.</p></summary>
+        public virtual string Description { get; internal set; }
+        /// <summary><p>Name of the alert rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated list of scopes the rule applies to.</p></summary>
+        public virtual IReadOnlyList<string> Scopes => ScopesInternal.AsReadOnly();
+        internal List<string> ScopesInternal { get; set; } = new List<string>();
+        /// <summary><p>Add an action group and optional webhook properties to fire when the alert is triggered.</p></summary>
+        public virtual string Action { get; internal set; }
+        /// <summary><p>Automatically resolve the alert.</p></summary>
+        public virtual bool? AutoMitigate { get; internal set; }
+        /// <summary><p>Create the rule in a disabled state.</p></summary>
+        public virtual bool? Disabled { get; internal set; }
+        /// <summary><p>Frequency with which to evaluate the rule in "##h##m##s" format.</p></summary>
+        public virtual string EvaluationFrequency { get; internal set; }
+        /// <summary><p>Severity of the alert from 0 (low) to 4 (high).</p></summary>
+        public virtual string Severity { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Time over which to aggregate metrics in "##h##m##s" format.</p></summary>
+        public virtual string WindowSize { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor metrics alert create")
+              .Add("--condition {value}", Condition)
+              .Add("--description {value}", Description)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--scopes {value}", Scopes, separator: ' ')
+              .Add("--action {value}", Action)
+              .Add("--auto-mitigate", AutoMitigate)
+              .Add("--disabled", Disabled)
+              .Add("--evaluation-frequency {value}", EvaluationFrequency)
+              .Add("--severity {value}", Severity)
+              .Add("--tags {value}", Tags)
+              .Add("--window-size {value}", WindowSize)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorMetricsAlertDeleteSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorMetricsAlertDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name of the alert rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor metrics alert delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorMetricsAlertListSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorMetricsAlertListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor metrics alert list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorMetricsAlertShowSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorMetricsAlertShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name of the alert rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor metrics alert show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorMetricsAlertUpdateSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorMetricsAlertUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name of the alert rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Automatically resolve the alert.</p></summary>
+        public virtual bool? AutoMitigate { get; internal set; }
+        /// <summary><p>Free-text description of the rule.</p></summary>
+        public virtual string Description { get; internal set; }
+        /// <summary><p>Whether the metric alert rule is enabled.</p></summary>
+        public virtual bool? Enabled { get; internal set; }
+        /// <summary><p>Frequency with which to evaluate the rule in "##h##m##s" format.</p></summary>
+        public virtual string EvaluationFrequency { get; internal set; }
+        /// <summary><p>Space-separated list of scopes the rule applies to.</p></summary>
+        public virtual IReadOnlyList<string> Scopes => ScopesInternal.AsReadOnly();
+        internal List<string> ScopesInternal { get; set; } = new List<string>();
+        /// <summary><p>Severity of the alert from 0 (low) to 4 (high).</p></summary>
+        public virtual string Severity { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Time over which to aggregate metrics in "##h##m##s" format.</p></summary>
+        public virtual string WindowSize { get; internal set; }
+        /// <summary><p>Add an action group and optional webhook properties to fire when the alert is triggered.</p></summary>
+        public virtual string AddAction { get; internal set; }
+        /// <summary><p>Space-separated list of action group names to remove.</p></summary>
+        public virtual IReadOnlyList<string> RemoveActions => RemoveActionsInternal.AsReadOnly();
+        internal List<string> RemoveActionsInternal { get; set; } = new List<string>();
+        /// <summary><p>Add a condition which triggers the rule.</p></summary>
+        public virtual string AddCondition { get; internal set; }
+        /// <summary><p>Space-separated list of condition names to remove.</p></summary>
+        public virtual IReadOnlyList<string> RemoveConditions => RemoveConditionsInternal.AsReadOnly();
+        internal List<string> RemoveConditionsInternal { get; set; } = new List<string>();
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor metrics alert update")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--auto-mitigate", AutoMitigate)
+              .Add("--description {value}", Description)
+              .Add("--enabled", Enabled)
+              .Add("--evaluation-frequency {value}", EvaluationFrequency)
+              .Add("--scopes {value}", Scopes, separator: ' ')
+              .Add("--severity {value}", Severity)
+              .Add("--tags {value}", Tags)
+              .Add("--window-size {value}", WindowSize)
+              .Add("--add-action {value}", AddAction)
+              .Add("--remove-actions {value}", RemoveActions, separator: ' ')
+              .Add("--add-condition {value}", AddCondition)
+              .Add("--remove-conditions {value}", RemoveConditions, separator: ' ')
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -12886,6 +13195,1390 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureMonitorAutoscaleRuleListSettings ResetVerbose(this AzureMonitorAutoscaleRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorMetricsAlertCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorMetricsAlertCreateSettingsExtensions
+    {
+        #region Condition
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Condition"/>.</em></p><p>The condition which triggers the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetCondition(this AzureMonitorMetricsAlertCreateSettings toolSettings, string condition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Condition = condition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.Condition"/>.</em></p><p>The condition which triggers the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetCondition(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Condition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Description
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Description"/>.</em></p><p>Free-text description of the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetDescription(this AzureMonitorMetricsAlertCreateSettings toolSettings, string description)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Description = description;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.Description"/>.</em></p><p>Free-text description of the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetDescription(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Description = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetName(this AzureMonitorMetricsAlertCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetName(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetResourceGroup(this AzureMonitorMetricsAlertCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetResourceGroup(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Scopes
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Scopes"/> to a new list.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetScopes(this AzureMonitorMetricsAlertCreateSettings toolSettings, params string[] scopes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScopesInternal = scopes.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Scopes"/> to a new list.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetScopes(this AzureMonitorMetricsAlertCreateSettings toolSettings, IEnumerable<string> scopes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScopesInternal = scopes.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertCreateSettings.Scopes"/>.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings AddScopes(this AzureMonitorMetricsAlertCreateSettings toolSettings, params string[] scopes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScopesInternal.AddRange(scopes);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertCreateSettings.Scopes"/>.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings AddScopes(this AzureMonitorMetricsAlertCreateSettings toolSettings, IEnumerable<string> scopes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScopesInternal.AddRange(scopes);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorMetricsAlertCreateSettings.Scopes"/>.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ClearScopes(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScopesInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertCreateSettings.Scopes"/>.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings RemoveScopes(this AzureMonitorMetricsAlertCreateSettings toolSettings, params string[] scopes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(scopes);
+            toolSettings.ScopesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertCreateSettings.Scopes"/>.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings RemoveScopes(this AzureMonitorMetricsAlertCreateSettings toolSettings, IEnumerable<string> scopes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(scopes);
+            toolSettings.ScopesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Action
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Action"/>.</em></p><p>Add an action group and optional webhook properties to fire when the alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetAction(this AzureMonitorMetricsAlertCreateSettings toolSettings, string action)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Action = action;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.Action"/>.</em></p><p>Add an action group and optional webhook properties to fire when the alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetAction(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Action = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AutoMitigate
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.AutoMitigate"/>.</em></p><p>Automatically resolve the alert.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetAutoMitigate(this AzureMonitorMetricsAlertCreateSettings toolSettings, bool? autoMitigate)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoMitigate = autoMitigate;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.AutoMitigate"/>.</em></p><p>Automatically resolve the alert.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetAutoMitigate(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoMitigate = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureMonitorMetricsAlertCreateSettings.AutoMitigate"/>.</em></p><p>Automatically resolve the alert.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings EnableAutoMitigate(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoMitigate = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureMonitorMetricsAlertCreateSettings.AutoMitigate"/>.</em></p><p>Automatically resolve the alert.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings DisableAutoMitigate(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoMitigate = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureMonitorMetricsAlertCreateSettings.AutoMitigate"/>.</em></p><p>Automatically resolve the alert.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ToggleAutoMitigate(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoMitigate = !toolSettings.AutoMitigate;
+            return toolSettings;
+        }
+        #endregion
+        #region Disabled
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetDisabled(this AzureMonitorMetricsAlertCreateSettings toolSettings, bool? disabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = disabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetDisabled(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureMonitorMetricsAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings EnableDisabled(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureMonitorMetricsAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings DisableDisabled(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureMonitorMetricsAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ToggleDisabled(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = !toolSettings.Disabled;
+            return toolSettings;
+        }
+        #endregion
+        #region EvaluationFrequency
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.EvaluationFrequency"/>.</em></p><p>Frequency with which to evaluate the rule in "##h##m##s" format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetEvaluationFrequency(this AzureMonitorMetricsAlertCreateSettings toolSettings, string evaluationFrequency)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EvaluationFrequency = evaluationFrequency;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.EvaluationFrequency"/>.</em></p><p>Frequency with which to evaluate the rule in "##h##m##s" format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetEvaluationFrequency(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EvaluationFrequency = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Severity
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Severity"/>.</em></p><p>Severity of the alert from 0 (low) to 4 (high).</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetSeverity(this AzureMonitorMetricsAlertCreateSettings toolSettings, string severity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Severity = severity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.Severity"/>.</em></p><p>Severity of the alert from 0 (low) to 4 (high).</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetSeverity(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Severity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetTags(this AzureMonitorMetricsAlertCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetTags(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WindowSize
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.WindowSize"/>.</em></p><p>Time over which to aggregate metrics in "##h##m##s" format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetWindowSize(this AzureMonitorMetricsAlertCreateSettings toolSettings, string windowSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WindowSize = windowSize;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.WindowSize"/>.</em></p><p>Time over which to aggregate metrics in "##h##m##s" format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetWindowSize(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WindowSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetDebug(this AzureMonitorMetricsAlertCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetDebug(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetHelp(this AzureMonitorMetricsAlertCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetHelp(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetOutput(this AzureMonitorMetricsAlertCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetOutput(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetQuery(this AzureMonitorMetricsAlertCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetQuery(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetVerbose(this AzureMonitorMetricsAlertCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetVerbose(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorMetricsAlertDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorMetricsAlertDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertDeleteSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings SetName(this AzureMonitorMetricsAlertDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertDeleteSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings ResetName(this AzureMonitorMetricsAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings SetResourceGroup(this AzureMonitorMetricsAlertDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings ResetResourceGroup(this AzureMonitorMetricsAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings SetDebug(this AzureMonitorMetricsAlertDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings ResetDebug(this AzureMonitorMetricsAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings SetHelp(this AzureMonitorMetricsAlertDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings ResetHelp(this AzureMonitorMetricsAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings SetOutput(this AzureMonitorMetricsAlertDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings ResetOutput(this AzureMonitorMetricsAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings SetQuery(this AzureMonitorMetricsAlertDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings ResetQuery(this AzureMonitorMetricsAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings SetVerbose(this AzureMonitorMetricsAlertDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings ResetVerbose(this AzureMonitorMetricsAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorMetricsAlertListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorMetricsAlertListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings SetResourceGroup(this AzureMonitorMetricsAlertListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings ResetResourceGroup(this AzureMonitorMetricsAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings SetDebug(this AzureMonitorMetricsAlertListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings ResetDebug(this AzureMonitorMetricsAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings SetHelp(this AzureMonitorMetricsAlertListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings ResetHelp(this AzureMonitorMetricsAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings SetOutput(this AzureMonitorMetricsAlertListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings ResetOutput(this AzureMonitorMetricsAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings SetQuery(this AzureMonitorMetricsAlertListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings ResetQuery(this AzureMonitorMetricsAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings SetVerbose(this AzureMonitorMetricsAlertListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings ResetVerbose(this AzureMonitorMetricsAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorMetricsAlertShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorMetricsAlertShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertShowSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings SetName(this AzureMonitorMetricsAlertShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertShowSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings ResetName(this AzureMonitorMetricsAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings SetResourceGroup(this AzureMonitorMetricsAlertShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings ResetResourceGroup(this AzureMonitorMetricsAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings SetDebug(this AzureMonitorMetricsAlertShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings ResetDebug(this AzureMonitorMetricsAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings SetHelp(this AzureMonitorMetricsAlertShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings ResetHelp(this AzureMonitorMetricsAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings SetOutput(this AzureMonitorMetricsAlertShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings ResetOutput(this AzureMonitorMetricsAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings SetQuery(this AzureMonitorMetricsAlertShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings ResetQuery(this AzureMonitorMetricsAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings SetVerbose(this AzureMonitorMetricsAlertShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings ResetVerbose(this AzureMonitorMetricsAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorMetricsAlertUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorMetricsAlertUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetName(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetName(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetResourceGroup(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetResourceGroup(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AutoMitigate
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.AutoMitigate"/>.</em></p><p>Automatically resolve the alert.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetAutoMitigate(this AzureMonitorMetricsAlertUpdateSettings toolSettings, bool? autoMitigate)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoMitigate = autoMitigate;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.AutoMitigate"/>.</em></p><p>Automatically resolve the alert.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetAutoMitigate(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoMitigate = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureMonitorMetricsAlertUpdateSettings.AutoMitigate"/>.</em></p><p>Automatically resolve the alert.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings EnableAutoMitigate(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoMitigate = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureMonitorMetricsAlertUpdateSettings.AutoMitigate"/>.</em></p><p>Automatically resolve the alert.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings DisableAutoMitigate(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoMitigate = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureMonitorMetricsAlertUpdateSettings.AutoMitigate"/>.</em></p><p>Automatically resolve the alert.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ToggleAutoMitigate(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoMitigate = !toolSettings.AutoMitigate;
+            return toolSettings;
+        }
+        #endregion
+        #region Description
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Description"/>.</em></p><p>Free-text description of the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetDescription(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string description)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Description = description;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Description"/>.</em></p><p>Free-text description of the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetDescription(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Description = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Enabled
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Enabled"/>.</em></p><p>Whether the metric alert rule is enabled.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetEnabled(this AzureMonitorMetricsAlertUpdateSettings toolSettings, bool? enabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = enabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Enabled"/>.</em></p><p>Whether the metric alert rule is enabled.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetEnabled(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureMonitorMetricsAlertUpdateSettings.Enabled"/>.</em></p><p>Whether the metric alert rule is enabled.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings EnableEnabled(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureMonitorMetricsAlertUpdateSettings.Enabled"/>.</em></p><p>Whether the metric alert rule is enabled.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings DisableEnabled(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureMonitorMetricsAlertUpdateSettings.Enabled"/>.</em></p><p>Whether the metric alert rule is enabled.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ToggleEnabled(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = !toolSettings.Enabled;
+            return toolSettings;
+        }
+        #endregion
+        #region EvaluationFrequency
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.EvaluationFrequency"/>.</em></p><p>Frequency with which to evaluate the rule in "##h##m##s" format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetEvaluationFrequency(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string evaluationFrequency)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EvaluationFrequency = evaluationFrequency;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.EvaluationFrequency"/>.</em></p><p>Frequency with which to evaluate the rule in "##h##m##s" format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetEvaluationFrequency(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EvaluationFrequency = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Scopes
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Scopes"/> to a new list.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetScopes(this AzureMonitorMetricsAlertUpdateSettings toolSettings, params string[] scopes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScopesInternal = scopes.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Scopes"/> to a new list.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetScopes(this AzureMonitorMetricsAlertUpdateSettings toolSettings, IEnumerable<string> scopes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScopesInternal = scopes.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertUpdateSettings.Scopes"/>.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings AddScopes(this AzureMonitorMetricsAlertUpdateSettings toolSettings, params string[] scopes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScopesInternal.AddRange(scopes);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertUpdateSettings.Scopes"/>.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings AddScopes(this AzureMonitorMetricsAlertUpdateSettings toolSettings, IEnumerable<string> scopes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScopesInternal.AddRange(scopes);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorMetricsAlertUpdateSettings.Scopes"/>.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ClearScopes(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScopesInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertUpdateSettings.Scopes"/>.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings RemoveScopes(this AzureMonitorMetricsAlertUpdateSettings toolSettings, params string[] scopes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(scopes);
+            toolSettings.ScopesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertUpdateSettings.Scopes"/>.</em></p><p>Space-separated list of scopes the rule applies to.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings RemoveScopes(this AzureMonitorMetricsAlertUpdateSettings toolSettings, IEnumerable<string> scopes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(scopes);
+            toolSettings.ScopesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Severity
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Severity"/>.</em></p><p>Severity of the alert from 0 (low) to 4 (high).</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetSeverity(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string severity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Severity = severity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Severity"/>.</em></p><p>Severity of the alert from 0 (low) to 4 (high).</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetSeverity(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Severity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetTags(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetTags(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WindowSize
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.WindowSize"/>.</em></p><p>Time over which to aggregate metrics in "##h##m##s" format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetWindowSize(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string windowSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WindowSize = windowSize;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.WindowSize"/>.</em></p><p>Time over which to aggregate metrics in "##h##m##s" format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetWindowSize(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WindowSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AddAction
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.AddAction"/>.</em></p><p>Add an action group and optional webhook properties to fire when the alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetAddAction(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string addAction)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddAction = addAction;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.AddAction"/>.</em></p><p>Add an action group and optional webhook properties to fire when the alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetAddAction(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddAction = null;
+            return toolSettings;
+        }
+        #endregion
+        #region RemoveActions
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveActions"/> to a new list.</em></p><p>Space-separated list of action group names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetRemoveActions(this AzureMonitorMetricsAlertUpdateSettings toolSettings, params string[] removeActions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveActionsInternal = removeActions.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveActions"/> to a new list.</em></p><p>Space-separated list of action group names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetRemoveActions(this AzureMonitorMetricsAlertUpdateSettings toolSettings, IEnumerable<string> removeActions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveActionsInternal = removeActions.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveActions"/>.</em></p><p>Space-separated list of action group names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings AddRemoveActions(this AzureMonitorMetricsAlertUpdateSettings toolSettings, params string[] removeActions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveActionsInternal.AddRange(removeActions);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveActions"/>.</em></p><p>Space-separated list of action group names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings AddRemoveActions(this AzureMonitorMetricsAlertUpdateSettings toolSettings, IEnumerable<string> removeActions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveActionsInternal.AddRange(removeActions);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveActions"/>.</em></p><p>Space-separated list of action group names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ClearRemoveActions(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveActionsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveActions"/>.</em></p><p>Space-separated list of action group names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings RemoveRemoveActions(this AzureMonitorMetricsAlertUpdateSettings toolSettings, params string[] removeActions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(removeActions);
+            toolSettings.RemoveActionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveActions"/>.</em></p><p>Space-separated list of action group names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings RemoveRemoveActions(this AzureMonitorMetricsAlertUpdateSettings toolSettings, IEnumerable<string> removeActions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(removeActions);
+            toolSettings.RemoveActionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region AddCondition
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.AddCondition"/>.</em></p><p>Add a condition which triggers the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetAddCondition(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string addCondition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddCondition = addCondition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.AddCondition"/>.</em></p><p>Add a condition which triggers the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetAddCondition(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddCondition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region RemoveConditions
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveConditions"/> to a new list.</em></p><p>Space-separated list of condition names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetRemoveConditions(this AzureMonitorMetricsAlertUpdateSettings toolSettings, params string[] removeConditions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveConditionsInternal = removeConditions.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveConditions"/> to a new list.</em></p><p>Space-separated list of condition names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetRemoveConditions(this AzureMonitorMetricsAlertUpdateSettings toolSettings, IEnumerable<string> removeConditions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveConditionsInternal = removeConditions.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveConditions"/>.</em></p><p>Space-separated list of condition names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings AddRemoveConditions(this AzureMonitorMetricsAlertUpdateSettings toolSettings, params string[] removeConditions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveConditionsInternal.AddRange(removeConditions);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveConditions"/>.</em></p><p>Space-separated list of condition names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings AddRemoveConditions(this AzureMonitorMetricsAlertUpdateSettings toolSettings, IEnumerable<string> removeConditions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveConditionsInternal.AddRange(removeConditions);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveConditions"/>.</em></p><p>Space-separated list of condition names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ClearRemoveConditions(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveConditionsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveConditions"/>.</em></p><p>Space-separated list of condition names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings RemoveRemoveConditions(this AzureMonitorMetricsAlertUpdateSettings toolSettings, params string[] removeConditions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(removeConditions);
+            toolSettings.RemoveConditionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertUpdateSettings.RemoveConditions"/>.</em></p><p>Space-separated list of condition names to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings RemoveRemoveConditions(this AzureMonitorMetricsAlertUpdateSettings toolSettings, IEnumerable<string> removeConditions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(removeConditions);
+            toolSettings.RemoveConditionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetAdd(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetAdd(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetForceString(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetForceString(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetRemove(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetRemove(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetSet(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetSet(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetDebug(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetDebug(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetHelp(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetHelp(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetOutput(this AzureMonitorMetricsAlertUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetOutput(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetQuery(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetQuery(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetVerbose(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetVerbose(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

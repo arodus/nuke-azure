@@ -6,16 +6,18 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/iot.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/iot/hub.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/iot/dps.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/iot/dps/access-policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/iot/dps/linked-hub.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/iot/dps/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/iot/hub/consumer-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/iot/hub/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/iot/hub/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/iot/hub/job.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/iot.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/iot/hub.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/iot/dps.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/iot/dps/access-policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/iot/dps/linked-hub.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/iot/dps/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/iot/hub/consumer-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/iot/hub/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/iot/hub/route.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/iot/hub/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/iot/hub/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/iot/hub/routing-endpoint.yml"
   ],
   "name": "AzureIot",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest",
@@ -1306,6 +1308,240 @@
       }
     },
     {
+      "postfix": "HubRouteCreate",
+      "definiteArgument": "iot hub route create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "En",
+            "type": "string",
+            "format": "--en {value}",
+            "help": "Name of the routing endpoint."
+          },
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Route."
+          },
+          {
+            "name": "Source",
+            "type": "IotHubRouteSource",
+            "format": "--source {value}",
+            "help": "Source of the route."
+          },
+          {
+            "name": "Condition",
+            "type": "string",
+            "format": "--condition {value}",
+            "help": "Condition that is evaluated to apply the routing rule."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "help": "A boolean indicating whether to enable route to the Iot hub."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubRouteDelete",
+      "definiteArgument": "iot hub route delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Route."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Source",
+            "type": "IotHubRouteSource",
+            "format": "--source {value}",
+            "help": "Source of the route."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubRouteList",
+      "definiteArgument": "iot hub route list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Source",
+            "type": "IotHubRouteSource",
+            "format": "--source {value}",
+            "help": "Source of the route."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubRouteShow",
+      "definiteArgument": "iot hub route show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Route."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubRouteTest",
+      "definiteArgument": "iot hub route test",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ap",
+            "type": "string",
+            "format": "--ap {value}",
+            "help": "App properties of the route message."
+          },
+          {
+            "name": "Body",
+            "type": "string",
+            "format": "--body {value}",
+            "help": "Body of the route message."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Route."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Source",
+            "type": "IotHubRouteSource",
+            "format": "--source {value}",
+            "help": "Source of the route."
+          },
+          {
+            "name": "Sp",
+            "type": "string",
+            "format": "--sp {value}",
+            "help": "System properties of the route message."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubRouteUpdate",
+      "definiteArgument": "iot hub route update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Route."
+          },
+          {
+            "name": "Condition",
+            "type": "string",
+            "format": "--condition {value}",
+            "help": "Condition that is evaluated to apply the routing rule."
+          },
+          {
+            "name": "En",
+            "type": "string",
+            "format": "--en {value}",
+            "help": "Name of the routing endpoint."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "help": "A boolean indicating whether to enable route to the Iot hub."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Source",
+            "type": "IotHubRouteSource",
+            "format": "--source {value}",
+            "help": "Source of the route."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "HubPolicyCreate",
       "definiteArgument": "iot hub policy create",
       "settingsClass": {
@@ -1480,6 +1716,146 @@
           }
         ]
       }
+    },
+    {
+      "postfix": "HubRoutingEndpointCreate",
+      "definiteArgument": "iot hub routing-endpoint create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ConnectionString",
+            "type": "string",
+            "format": "--connection-string {value}",
+            "help": "Connection string of the Routing Endpoint."
+          },
+          {
+            "name": "EndpointName",
+            "type": "string",
+            "format": "--endpoint-name {value}",
+            "help": "Name of the Routing Endpoint."
+          },
+          {
+            "name": "EndpointResourceGroup",
+            "type": "string",
+            "format": "--endpoint-resource-group {value}",
+            "help": "Resource group of the Endpoint resoure."
+          },
+          {
+            "name": "EndpointSubscriptionId",
+            "type": "string",
+            "format": "--endpoint-subscription-id {value}",
+            "help": "SubscriptionId of the Endpoint resource."
+          },
+          {
+            "name": "EndpointType",
+            "type": "IotHubRoutingEndpointEndpointType",
+            "format": "--endpoint-type {value}",
+            "help": "Type of the Routing Endpoint."
+          },
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Container",
+            "type": "string",
+            "format": "--container {value}",
+            "help": "Name of the storage container."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubRoutingEndpointDelete",
+      "definiteArgument": "iot hub routing-endpoint delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "EndpointName",
+            "type": "string",
+            "format": "--endpoint-name {value}",
+            "help": "Name of the Routing Endpoint."
+          },
+          {
+            "name": "EndpointType",
+            "type": "IotHubRoutingEndpointEndpointType",
+            "format": "--endpoint-type {value}",
+            "help": "Type of the Routing Endpoint."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubRoutingEndpointList",
+      "definiteArgument": "iot hub routing-endpoint list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "EndpointType",
+            "type": "IotHubRoutingEndpointEndpointType",
+            "format": "--endpoint-type {value}",
+            "help": "Type of the Routing Endpoint."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubRoutingEndpointShow",
+      "definiteArgument": "iot hub routing-endpoint show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EndpointName",
+            "type": "string",
+            "format": "--endpoint-name {value}",
+            "help": "Name of the Routing Endpoint."
+          },
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
     }
   ],
   "commonTaskProperties": [
@@ -1549,6 +1925,25 @@
         "registrationstatusread",
         "registrationstatuswrite",
         "serviceconfig"
+      ]
+    },
+    {
+      "name": "IotHubRouteSource",
+      "values": [
+        "devicejoblifecycleevents",
+        "devicelifecycleevents",
+        "devicemessages",
+        "invalid",
+        "twinchangeevents"
+      ]
+    },
+    {
+      "name": "IotHubRoutingEndpointEndpointType",
+      "values": [
+        "azurestoragecontainer",
+        "eventhub",
+        "servicebusqueue",
+        "servicebustopic"
       ]
     }
   ]

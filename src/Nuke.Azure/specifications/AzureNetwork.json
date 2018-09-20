@@ -6,78 +6,86 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/ddos-protection.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/lb.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/asg.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/public-ip.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/dns.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/vpn-connection.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/express-route.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/watcher.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/nic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/vnet-gateway.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/local-gateway.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/route-table.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/vnet.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/traffic-manager.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/route-filter.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/nsg.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/vpn-connection/shared-key.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/vpn-connection/ipsec-policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/vnet/subnet.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/vnet/peering.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/probe.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/auth-cert.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/address-pool.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/frontend-port.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/waf-config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/http-settings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/ssl-cert.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/url-path-map.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/frontend-ip.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/redirect-config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/http-listener.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/ssl-policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/express-route/auth.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/express-route/peering.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/route-filter/rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/watcher/packet-capture.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/watcher/troubleshooting.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/watcher/flow-log.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/watcher/connection-monitor.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/route-table/route.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/lb/probe.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/lb/address-pool.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/lb/frontend-ip.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/lb/inbound-nat-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/lb/inbound-nat-pool.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/lb/rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/vnet-gateway/root-cert.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/vnet-gateway/revoked-cert.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/vnet-gateway/vpn-client.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/dns/record-set.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/dns/zone.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/nic/ip-config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/traffic-manager/endpoint.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/traffic-manager/profile.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/nsg/rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/url-path-map/rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/application-gateway/ssl-policy/predefined.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/dns/record-set/caa.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/dns/record-set/txt.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/dns/record-set/a.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/dns/record-set/mx.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/dns/record-set/srv.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/dns/record-set/ns.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/dns/record-set/ptr.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/dns/record-set/soa.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/dns/record-set/cname.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/dns/record-set/aaaa.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/nic/ip-config/address-pool.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/network/nic/ip-config/inbound-nat-rule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/service-endpoint.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/ddos-protection.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/lb.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/asg.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/public-ip.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/interface-endpoint.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/dns.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/vpn-connection.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/express-route.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/watcher.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/nic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/vnet-gateway.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/local-gateway.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/route-table.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/vnet.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/profile.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/traffic-manager.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/route-filter.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/nsg.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/vpn-connection/shared-key.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/vpn-connection/ipsec-policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/vnet/subnet.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/vnet/peering.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/service-endpoint/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/service-endpoint/policy-definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/probe.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/auth-cert.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/address-pool.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/frontend-port.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/waf-config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/http-settings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/ssl-cert.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/url-path-map.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/frontend-ip.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/redirect-config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/http-listener.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/ssl-policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/public-ip/prefix.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/express-route/auth.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/express-route/peering.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/route-filter/rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/watcher/packet-capture.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/watcher/troubleshooting.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/watcher/flow-log.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/watcher/connection-monitor.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/route-table/route.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/lb/probe.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/lb/address-pool.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/lb/frontend-ip.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/lb/inbound-nat-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/lb/inbound-nat-pool.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/lb/outbound-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/lb/rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/vnet-gateway/root-cert.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/vnet-gateway/revoked-cert.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/vnet-gateway/vpn-client.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/dns/record-set.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/dns/zone.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/nic/ip-config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/traffic-manager/endpoint.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/traffic-manager/profile.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/nsg/rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/url-path-map/rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/application-gateway/ssl-policy/predefined.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/express-route/peering/connection.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/dns/record-set/caa.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/dns/record-set/txt.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/dns/record-set/a.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/dns/record-set/mx.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/dns/record-set/srv.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/dns/record-set/ns.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/dns/record-set/ptr.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/dns/record-set/soa.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/dns/record-set/cname.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/dns/record-set/aaaa.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/nic/ip-config/address-pool.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/network/nic/ip-config/inbound-nat-rule.yml"
   ],
   "name": "AzureNetwork",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/network?view=azure-cli-latest",
@@ -87,6 +95,20 @@
     {
       "postfix": "ListUsages",
       "definiteArgument": "network list-usages",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceEndpointList",
+      "definiteArgument": "network service-endpoint list",
       "settingsClass": {
         "properties": [
           {
@@ -207,6 +229,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Tags",
@@ -650,6 +678,12 @@
             "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
+            "name": "PublicIpPrefix",
+            "type": "string",
+            "format": "--public-ip-prefix {value}",
+            "help": "Name or ID of a public IP prefix."
+          },
+          {
             "name": "ReverseFqdn",
             "type": "string",
             "format": "--reverse-fqdn {value}",
@@ -785,6 +819,12 @@
             "help": "Space-separated list of IP tags in 'TYPE=VAL' format."
           },
           {
+            "name": "PublicIpPrefix",
+            "type": "string",
+            "format": "--public-ip-prefix {value}",
+            "help": "Name or ID of a public IP prefix."
+          },
+          {
             "name": "ReverseFqdn",
             "type": "string",
             "format": "--reverse-fqdn {value}",
@@ -831,6 +871,46 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "InterfaceEndpointList",
+      "definiteArgument": "network interface-endpoint list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "InterfaceEndpointShow",
+      "definiteArgument": "network interface-endpoint show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the interface endpoint."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "Expands referenced resources."
           }
         ]
       }
@@ -1258,9 +1338,19 @@
       }
     },
     {
-      "postfix": "Dns",
-      "definiteArgument": "network dns",
-      "settingsClass": {}
+      "postfix": "DnsListReferences",
+      "definiteArgument": "network dns list-references",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "TargetResources",
+            "type": "List<string>",
+            "format": "--target-resources {value}",
+            "separator": " ",
+            "help": "Space-separated list of resource IDs you wish to query."
+          }
+        ]
+      }
     },
     {
       "postfix": "VpnConnectionCreate",
@@ -1518,6 +1608,12 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
+            "name": "AllowGlobalReach",
+            "type": "bool",
+            "format": "--allow-global-reach",
+            "help": "Enable global reach on the circuit."
+          },
+          {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
@@ -1717,6 +1813,12 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
+            "name": "AllowGlobalReach",
+            "type": "bool",
+            "format": "--allow-global-reach",
+            "help": "Enable global reach on the circuit."
+          },
+          {
             "name": "Bandwidth",
             "type": "string",
             "format": "--bandwidth {value}",
@@ -1886,6 +1988,74 @@
       "settingsClass": {}
     },
     {
+      "postfix": "WatcherRunConfigurationDiagnostic",
+      "definiteArgument": "network watcher run-configuration-diagnostic",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Destination",
+            "type": "string",
+            "format": "--destination {value}",
+            "help": "Traffic destination. Accepted values are '*', IP address/CIDR, or service tag."
+          },
+          {
+            "name": "Direction",
+            "type": "NetworkWatcherDirection",
+            "format": "--direction {value}",
+            "help": "Direction of the traffic."
+          },
+          {
+            "name": "Port",
+            "type": "string",
+            "format": "--port {value}",
+            "help": "Traffic destination port. Accepted values are '*', port number (3389) or port range (80-100)."
+          },
+          {
+            "name": "Protocol",
+            "type": "NetworkWatcherProtocol",
+            "format": "--protocol {value}",
+            "help": "Protocol to be verified on."
+          },
+          {
+            "name": "Queries",
+            "type": "string",
+            "format": "--queries {value}",
+            "help": "JSON list of queries to use. Use `@{path}` to load from a file."
+          },
+          {
+            "name": "Source",
+            "type": "string",
+            "format": "--source {value}",
+            "help": "Traffic source. Accepted values are '*', IP address/CIDR, or service tag."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the target resource to diagnose. If an ID is given, other resource arguments should not be given."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path. (ex: virtualMachineScaleSets/vmss1)."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "NetworkWatcherRunConfigurationDiagnosticResourceType",
+            "format": "--resource-type {value}",
+            "help": "The resource type."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "WatcherShowNextHop",
       "definiteArgument": "network watcher show-next-hop",
       "settingsClass": {
@@ -1987,6 +2157,12 @@
             "help": "Name or ID of the resource from which to originate traffic."
           },
           {
+            "name": "Protocol",
+            "type": "NetworkWatcherProtocol",
+            "format": "--protocol {value}",
+            "help": "Protocol to test on."
+          },
+          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
@@ -2015,6 +2191,26 @@
             "type": "string",
             "format": "--dest-resource {value}",
             "help": "Name or ID of the resource to receive traffic."
+          },
+          {
+            "name": "Headers",
+            "type": "List<string>",
+            "format": "--headers {value}",
+            "separator": " ",
+            "help": "Space-separated list of headers in `KEY=VALUE` format."
+          },
+          {
+            "name": "Method",
+            "type": "NetworkWatcherTestConnectivityMethod",
+            "format": "--method {value}",
+            "help": "HTTP method to use."
+          },
+          {
+            "name": "ValidStatusCodes",
+            "type": "List<string>",
+            "format": "--valid-status-codes {value}",
+            "separator": " ",
+            "help": "Space-separated list of HTTP status codes considered valid."
           }
         ]
       }
@@ -2038,7 +2234,7 @@
           },
           {
             "name": "Protocol",
-            "type": "NetworkWatcherTestIpFlowProtocol",
+            "type": "NetworkWatcherProtocol",
             "format": "--protocol {value}",
             "help": "Protocol to test."
           },
@@ -3601,6 +3797,72 @@
       }
     },
     {
+      "postfix": "ProfileDelete",
+      "definiteArgument": "network profile delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The network profile name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProfileList",
+      "definiteArgument": "network profile list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProfileShow",
+      "definiteArgument": "network profile show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The network profile name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "Expands referenced resources."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "TrafficManager",
       "definiteArgument": "network traffic-manager",
       "settingsClass": {}
@@ -3947,6 +4209,12 @@
             "help": "The virtual network connection shared key value."
           },
           {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Resource ID."
+          },
+          {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
@@ -4123,16 +4391,30 @@
             "help": "The virtual network (VNet) name."
           },
           {
+            "name": "Delegations",
+            "type": "List<string>",
+            "format": "--delegations {value}",
+            "separator": " ",
+            "help": "Space-separated list of services to whom the subnet should be delegated. (e.g. Microsoft.Sql/servers)."
+          },
+          {
             "name": "NetworkSecurityGroup",
             "type": "string",
             "format": "--network-security-group {value}",
-            "help": "Name or ID of network security group to associate with the subnet."
+            "help": "Name or ID of a network security group (NSG)."
           },
           {
             "name": "RouteTable",
             "type": "string",
             "format": "--route-table {value}",
             "help": "Name or ID of a route table to associate with the subnet."
+          },
+          {
+            "name": "ServiceEndpointPolicy",
+            "type": "List<string>",
+            "format": "--service-endpoint-policy {value}",
+            "separator": " ",
+            "help": "Space-separated list of names or IDs of service endpoint policies to apply."
           },
           {
             "name": "ServiceEndpoints",
@@ -4186,6 +4468,26 @@
             "type": "string",
             "format": "--vnet-name {value}",
             "help": "The virtual network (VNet) name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VnetSubnetListAvailableDelegations",
+      "definiteArgument": "network vnet subnet list-available-delegations",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           }
         ]
       }
@@ -4252,10 +4554,17 @@
             "help": "The address prefix in CIDR format."
           },
           {
+            "name": "Delegations",
+            "type": "List<string>",
+            "format": "--delegations {value}",
+            "separator": " ",
+            "help": "Space-separated list of services to whom the subnet should be delegated. (e.g. Microsoft.Sql/servers)."
+          },
+          {
             "name": "NetworkSecurityGroup",
             "type": "string",
             "format": "--network-security-group {value}",
-            "help": "Attach with existing network security group, both name or id are accepted. Use empty string \"\" to detach it."
+            "help": "Name or ID of a network security group (NSG). Use empty string \"\" to detach it."
           },
           {
             "name": "RouteTable",
@@ -4447,6 +4756,328 @@
             "type": "string",
             "format": "--vnet-name {value}",
             "help": "The virtual network (VNet) name."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceEndpointPolicyCreate",
+      "definiteArgument": "network service-endpoint policy create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the service endpoint policy."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceEndpointPolicyDelete",
+      "definiteArgument": "network service-endpoint policy delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the service endpoint policy."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceEndpointPolicyList",
+      "definiteArgument": "network service-endpoint policy list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceEndpointPolicyShow",
+      "definiteArgument": "network service-endpoint policy show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the service endpoint policy."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceEndpointPolicyUpdate",
+      "definiteArgument": "network service-endpoint policy update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the service endpoint policy."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceEndpointPolicyDefinitionCreate",
+      "definiteArgument": "network service-endpoint policy-definition create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the service endpoint policy definition."
+          },
+          {
+            "name": "PolicyName",
+            "type": "string",
+            "format": "--policy-name {value}",
+            "help": "Name of the service endpoint policy."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Service",
+            "type": "string",
+            "format": "--service {value}",
+            "help": "Service name the policy definition applies to."
+          },
+          {
+            "name": "ServiceResources",
+            "type": "List<string>",
+            "format": "--service-resources {value}",
+            "separator": " ",
+            "help": "Space-separated list of service resources the definition applies to."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "Description of the policy definition."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceEndpointPolicyDefinitionDelete",
+      "definiteArgument": "network service-endpoint policy-definition delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the service endpoint policy definition."
+          },
+          {
+            "name": "PolicyName",
+            "type": "string",
+            "format": "--policy-name {value}",
+            "help": "Name of the service endpoint policy."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceEndpointPolicyDefinitionList",
+      "definiteArgument": "network service-endpoint policy-definition list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "PolicyName",
+            "type": "string",
+            "format": "--policy-name {value}",
+            "help": "Name of the service endpoint policy."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceEndpointPolicyDefinitionShow",
+      "definiteArgument": "network service-endpoint policy-definition show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the service endpoint policy definition."
+          },
+          {
+            "name": "PolicyName",
+            "type": "string",
+            "format": "--policy-name {value}",
+            "help": "Name of the service endpoint policy."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceEndpointPolicyDefinitionUpdate",
+      "definiteArgument": "network service-endpoint policy-definition update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the service endpoint policy definition."
+          },
+          {
+            "name": "PolicyName",
+            "type": "string",
+            "format": "--policy-name {value}",
+            "help": "Name of the service endpoint policy."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "Description of the policy definition."
+          },
+          {
+            "name": "Service",
+            "type": "string",
+            "format": "--service {value}",
+            "help": "Service name the policy definition applies to."
+          },
+          {
+            "name": "ServiceResources",
+            "type": "List<string>",
+            "format": "--service-resources {value}",
+            "separator": " ",
+            "help": "Space-separated list of service resources the definition applies to."
           },
           {
             "name": "Add",
@@ -7121,6 +7752,154 @@
       }
     },
     {
+      "postfix": "PublicIpPrefixCreate",
+      "definiteArgument": "network public-ip prefix create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Length",
+            "type": "string",
+            "format": "--length {value}",
+            "help": "Length of the prefix (i.e. XX.XX.XX.XX/&lt;Length&gt;)."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the public IP prefix."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PublicIpPrefixDelete",
+      "definiteArgument": "network public-ip prefix delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the public IP prefix."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PublicIpPrefixList",
+      "definiteArgument": "network public-ip prefix list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PublicIpPrefixShow",
+      "definiteArgument": "network public-ip prefix show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the public IP prefix."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "Expands referenced resources."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PublicIpPrefixUpdate",
+      "definiteArgument": "network public-ip prefix update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the public IP prefix."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "ExpressRouteAuthCreate",
       "definiteArgument": "network express-route auth create",
       "settingsClass": {
@@ -7693,7 +8472,7 @@
             "name": "Filters",
             "type": "string",
             "format": "--filters {value}",
-            "help": "JSON encoded list of packet filters. Use `@&amp;lt;file path&amp;gt;` to load from file."
+            "help": "JSON encoded list of packet filters. Use `@{path}` to load from file."
           },
           {
             "name": "TimeLimit",
@@ -8652,6 +9431,12 @@
             "help": "Name or ID of the existing public IP to associate with the configuration."
           },
           {
+            "name": "PublicIpPrefix",
+            "type": "string",
+            "format": "--public-ip-prefix {value}",
+            "help": "Name or ID of a public IP prefix."
+          },
+          {
             "name": "Subnet",
             "type": "string",
             "format": "--subnet {value}",
@@ -8771,13 +9556,19 @@
             "name": "PrivateIpAddress",
             "type": "string",
             "format": "--private-ip-address {value}",
-            "help": "Static private IP address to associate with the configuration."
+            "help": "Static private IP address to associate with the configuration. Use \"\" to remove the static address and use a dynamic address instead."
           },
           {
             "name": "PublicIpAddress",
             "type": "string",
             "format": "--public-ip-address {value}",
             "help": "Name or ID of the existing public IP to associate with the configuration."
+          },
+          {
+            "name": "PublicIpPrefix",
+            "type": "string",
+            "format": "--public-ip-prefix {value}",
+            "help": "Name or ID of a public IP prefix."
           },
           {
             "name": "Subnet",
@@ -8858,6 +9649,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "EnableTcpReset",
+            "type": "bool",
+            "format": "--enable-tcp-reset",
+            "help": "Receive bidirectional TCP reset on TCP flow idle timeout or unexpected connection termination. Only used when protocol is set to TCP."
           },
           {
             "name": "FloatingIp",
@@ -8982,6 +9779,12 @@
             "help": "Port number."
           },
           {
+            "name": "EnableTcpReset",
+            "type": "bool",
+            "format": "--enable-tcp-reset",
+            "help": "Receive bidirectional TCP reset on TCP flow idle timeout or unexpected connection termination. Only used when protocol is set to TCP."
+          },
+          {
             "name": "FloatingIp",
             "type": "bool",
             "format": "--floating-ip",
@@ -9084,6 +9887,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "EnableTcpReset",
+            "type": "bool",
+            "format": "--enable-tcp-reset",
+            "help": "Receive bidirectional TCP reset on TCP flow idle timeout or unexpected connection termination. Only used when protocol is set to TCP."
           },
           {
             "name": "FrontendIpName",
@@ -9196,6 +10005,12 @@
             "help": "Port number."
           },
           {
+            "name": "EnableTcpReset",
+            "type": "bool",
+            "format": "--enable-tcp-reset",
+            "help": "Receive bidirectional TCP reset on TCP flow idle timeout or unexpected connection termination. Only used when protocol is set to TCP."
+          },
+          {
             "name": "FrontendIpName",
             "type": "string",
             "format": "--frontend-ip-name {value}",
@@ -9212,6 +10027,228 @@
             "type": "string",
             "format": "--frontend-port-range-start {value}",
             "help": "Port number."
+          },
+          {
+            "name": "Protocol",
+            "type": "NetworkLbInboundNatRuleProtocol",
+            "format": "--protocol {value}",
+            "help": "Network transport protocol."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LbOutboundRuleCreate",
+      "definiteArgument": "network lb outbound-rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AddressPool",
+            "type": "string",
+            "format": "--address-pool {value}",
+            "help": "Name or ID of the backend address pool."
+          },
+          {
+            "name": "FrontendIpConfigs",
+            "type": "List<string>",
+            "format": "--frontend-ip-configs {value}",
+            "separator": " ",
+            "help": "Space-separated list of frontend IP configuration names or IDs."
+          },
+          {
+            "name": "LbName",
+            "type": "string",
+            "format": "--lb-name {value}",
+            "help": "The load balancer name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the outbound rule."
+          },
+          {
+            "name": "Protocol",
+            "type": "NetworkLbInboundNatRuleProtocol",
+            "format": "--protocol {value}",
+            "help": "Network transport protocol."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "EnableTcpReset",
+            "type": "bool",
+            "format": "--enable-tcp-reset",
+            "help": "Receive bidirectional TCP reset on TCP flow idle timeout or unexpected connection termination. Only used when protocol is set to TCP."
+          },
+          {
+            "name": "IdleTimeout",
+            "type": "string",
+            "format": "--idle-timeout {value}",
+            "help": "Idle timeout in minutes."
+          },
+          {
+            "name": "OutboundPorts",
+            "type": "string",
+            "format": "--outbound-ports {value}",
+            "help": "The number of outbound ports to be used for NAT."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LbOutboundRuleDelete",
+      "definiteArgument": "network lb outbound-rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LbName",
+            "type": "string",
+            "format": "--lb-name {value}",
+            "help": "The name of the load balancer."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the outbound rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LbOutboundRuleList",
+      "definiteArgument": "network lb outbound-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LbName",
+            "type": "string",
+            "format": "--lb-name {value}",
+            "help": "The name of the load balancer."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LbOutboundRuleShow",
+      "definiteArgument": "network lb outbound-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LbName",
+            "type": "string",
+            "format": "--lb-name {value}",
+            "help": "The name of the load balancer."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the outbound rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LbOutboundRuleUpdate",
+      "definiteArgument": "network lb outbound-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LbName",
+            "type": "string",
+            "format": "--lb-name {value}",
+            "help": "The load balancer name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the outbound rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AddressPool",
+            "type": "string",
+            "format": "--address-pool {value}",
+            "help": "Name or ID of the backend address pool."
+          },
+          {
+            "name": "EnableTcpReset",
+            "type": "bool",
+            "format": "--enable-tcp-reset",
+            "help": "Receive bidirectional TCP reset on TCP flow idle timeout or unexpected connection termination. Only used when protocol is set to TCP."
+          },
+          {
+            "name": "FrontendIpConfigs",
+            "type": "List<string>",
+            "format": "--frontend-ip-configs {value}",
+            "separator": " ",
+            "help": "Space-separated list of frontend IP configuration names or IDs."
+          },
+          {
+            "name": "IdleTimeout",
+            "type": "string",
+            "format": "--idle-timeout {value}",
+            "help": "Idle timeout in minutes."
+          },
+          {
+            "name": "OutboundPorts",
+            "type": "string",
+            "format": "--outbound-ports {value}",
+            "help": "The number of outbound ports to be used for NAT."
           },
           {
             "name": "Protocol",
@@ -9292,6 +10329,18 @@
             "type": "string",
             "format": "--backend-pool-name {value}",
             "help": "The name of the backend address pool. If only one exists, omit to use as default."
+          },
+          {
+            "name": "DisableOutboundSnat",
+            "type": "bool",
+            "format": "--disable-outbound-snat",
+            "help": "Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule."
+          },
+          {
+            "name": "EnableTcpReset",
+            "type": "bool",
+            "format": "--enable-tcp-reset",
+            "help": "Receive bidirectional TCP reset on TCP flow idle timeout or unexpected connection termination. Only used when protocol is set to TCP."
           },
           {
             "name": "FloatingIp",
@@ -9432,6 +10481,18 @@
             "type": "string",
             "format": "--backend-port {value}",
             "help": "Port number."
+          },
+          {
+            "name": "DisableOutboundSnat",
+            "type": "bool",
+            "format": "--disable-outbound-snat",
+            "help": "Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule."
+          },
+          {
+            "name": "EnableTcpReset",
+            "type": "bool",
+            "format": "--enable-tcp-reset",
+            "help": "Receive bidirectional TCP reset on TCP flow idle timeout or unexpected connection termination. Only used when protocol is set to TCP."
           },
           {
             "name": "FloatingIp",
@@ -10562,24 +11623,6 @@
             "help": "Relative DNS name for the traffic manager profile. Resulting FQDN will be `&amp;lt;unique-dns-name&amp;gt;.trafficmanager.net` and must be globally unique."
           },
           {
-            "name": "MonitorPath",
-            "type": "string",
-            "format": "--monitor-path {value}",
-            "help": "Path to monitor."
-          },
-          {
-            "name": "MonitorPort",
-            "type": "string",
-            "format": "--monitor-port {value}",
-            "help": "Port to monitor."
-          },
-          {
-            "name": "MonitorProtocol",
-            "type": "NetworkLbProbeProtocol",
-            "format": "--monitor-protocol {value}",
-            "help": "Monitor protocol."
-          },
-          {
             "name": "Status",
             "type": "NetworkApplicationGatewayCreateHttpSettingsCookieBasedAffinity",
             "format": "--status {value}",
@@ -10596,6 +11639,42 @@
             "type": "string",
             "format": "--ttl {value}",
             "help": "DNS config time-to-live in seconds."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "help": "The interval in seconds at which health checks are conducted."
+          },
+          {
+            "name": "MaxFailures",
+            "type": "string",
+            "format": "--max-failures {value}",
+            "help": "The number of consecutive failed health checks tolerated before an endpoint is considered degraded."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "Path to monitor. Use \"\" for none."
+          },
+          {
+            "name": "Port",
+            "type": "string",
+            "format": "--port {value}",
+            "help": "Port to monitor."
+          },
+          {
+            "name": "Protocol",
+            "type": "NetworkLbProbeProtocol",
+            "format": "--protocol {value}",
+            "help": "Monitor protocol."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "The time in seconds allowed for endpoints to response to a health check."
           }
         ]
       }
@@ -10672,24 +11751,6 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "MonitorPath",
-            "type": "string",
-            "format": "--monitor-path {value}",
-            "help": "Path to monitor."
-          },
-          {
-            "name": "MonitorPort",
-            "type": "string",
-            "format": "--monitor-port {value}",
-            "help": "Port to monitor."
-          },
-          {
-            "name": "MonitorProtocol",
-            "type": "NetworkLbProbeProtocol",
-            "format": "--monitor-protocol {value}",
-            "help": "Monitor protocol."
-          },
-          {
             "name": "RoutingMethod",
             "type": "NetworkTrafficManagerProfileRoutingMethod",
             "format": "--routing-method {value}",
@@ -10712,6 +11773,42 @@
             "type": "string",
             "format": "--ttl {value}",
             "help": "DNS config time-to-live in seconds."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "help": "The interval in seconds at which health checks are conducted."
+          },
+          {
+            "name": "MaxFailures",
+            "type": "string",
+            "format": "--max-failures {value}",
+            "help": "The number of consecutive failed health checks tolerated before an endpoint is considered degraded."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "Path to monitor. Use \"\" for none."
+          },
+          {
+            "name": "Port",
+            "type": "string",
+            "format": "--port {value}",
+            "help": "Port to monitor."
+          },
+          {
+            "name": "Protocol",
+            "type": "NetworkLbProbeProtocol",
+            "format": "--protocol {value}",
+            "help": "Monitor protocol."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "The time in seconds allowed for endpoints to response to a health check."
           },
           {
             "name": "Add",
@@ -11159,6 +12256,120 @@
       }
     },
     {
+      "postfix": "ExpressRoutePeeringConnectionCreate",
+      "definiteArgument": "network express-route peering connection create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AddressPrefix",
+            "type": "string",
+            "format": "--address-prefix {value}",
+            "help": "/29 IP address space to carve out customer addresses for tunnels."
+          },
+          {
+            "name": "CircuitName",
+            "type": "string",
+            "format": "--circuit-name {value}",
+            "help": "ExpressRoute circuit name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the peering connection."
+          },
+          {
+            "name": "PeerCircuit",
+            "type": "string",
+            "format": "--peer-circuit {value}",
+            "help": "Name or ID of the peer ExpressRoute circuit."
+          },
+          {
+            "name": "PeeringName",
+            "type": "string",
+            "format": "--peering-name {value}",
+            "help": "Name of BGP peering (i.e. AzurePrivatePeering)."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AuthorizationKey",
+            "type": "string",
+            "format": "--authorization-key {value}",
+            "help": "The authorization key used when the peer circuit is in another subscription."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ExpressRoutePeeringConnectionDelete",
+      "definiteArgument": "network express-route peering connection delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CircuitName",
+            "type": "string",
+            "format": "--circuit-name {value}",
+            "help": "ExpressRoute circuit name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the peering connection."
+          },
+          {
+            "name": "PeeringName",
+            "type": "string",
+            "format": "--peering-name {value}",
+            "help": "Name of BGP peering (i.e. AzurePrivatePeering)."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ExpressRoutePeeringConnectionShow",
+      "definiteArgument": "network express-route peering connection show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CircuitName",
+            "type": "string",
+            "format": "--circuit-name {value}",
+            "help": "ExpressRoute circuit name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the peering connection."
+          },
+          {
+            "name": "PeeringName",
+            "type": "string",
+            "format": "--peering-name {value}",
+            "help": "Name of BGP peering (i.e. AzurePrivatePeering)."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "DnsRecordSetCaaAddRecord",
       "definiteArgument": "network dns record-set caa add-record",
       "settingsClass": {
@@ -11244,6 +12455,12 @@
             "itemFormat": "{key}={value}",
             "separator": " ",
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
+          },
+          {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
           },
           {
             "name": "Ttl",
@@ -11432,6 +12649,12 @@
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
           },
           {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
+          },
+          {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
@@ -11533,6 +12756,12 @@
             "itemFormat": "{key}={value}",
             "separator": " ",
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
+          },
+          {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
           },
           {
             "name": "Ttl",
@@ -11710,6 +12939,12 @@
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
           },
           {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
+          },
+          {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
@@ -11810,6 +13045,12 @@
             "itemFormat": "{key}={value}",
             "separator": " ",
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
+          },
+          {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
           },
           {
             "name": "Ttl",
@@ -11986,6 +13227,12 @@
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
           },
           {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
+          },
+          {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
@@ -12092,6 +13339,12 @@
             "itemFormat": "{key}={value}",
             "separator": " ",
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
+          },
+          {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
           },
           {
             "name": "Ttl",
@@ -12274,6 +13527,12 @@
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
           },
           {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
+          },
+          {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
@@ -12392,6 +13651,12 @@
             "itemFormat": "{key}={value}",
             "separator": " ",
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
+          },
+          {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
           },
           {
             "name": "Ttl",
@@ -12586,6 +13851,12 @@
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
           },
           {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
+          },
+          {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
@@ -12686,6 +13957,12 @@
             "itemFormat": "{key}={value}",
             "separator": " ",
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
+          },
+          {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
           },
           {
             "name": "Ttl",
@@ -12862,6 +14139,12 @@
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
           },
           {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
+          },
+          {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
@@ -12962,6 +14245,12 @@
             "itemFormat": "{key}={value}",
             "separator": " ",
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
+          },
+          {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
           },
           {
             "name": "Ttl",
@@ -13138,6 +14427,12 @@
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
           },
           {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
+          },
+          {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
@@ -13288,6 +14583,12 @@
             "itemFormat": "{key}={value}",
             "separator": " ",
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
+          },
+          {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
           },
           {
             "name": "Ttl",
@@ -13522,6 +14823,12 @@
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
           },
           {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
+          },
+          {
             "name": "Ttl",
             "type": "string",
             "format": "--ttl {value}",
@@ -13694,6 +15001,12 @@
             "itemFormat": "{key}={value}",
             "separator": " ",
             "help": "Metadata in space-separated key=value pairs. This overwrites any existing metadata."
+          },
+          {
+            "name": "TargetResource",
+            "type": "string",
+            "format": "--target-resource {value}",
+            "help": "ID of an Azure resource from which the DNS resource value is taken."
           },
           {
             "name": "Add",
@@ -13929,20 +15242,28 @@
         "standard_large",
         "standard_medium",
         "standard_small",
+        "standard_v2",
         "waf_large",
-        "waf_medium"
+        "waf_medium",
+        "waf_v2"
       ]
     },
     {
       "name": "NetworkVnetGatewaySku",
       "values": [
         "basic",
+        "ergw1az",
+        "ergw2az",
+        "ergw3az",
         "highperformance",
         "standard",
         "ultraperformance",
         "vpngw1",
+        "vpngw1az",
         "vpngw2",
-        "vpngw3"
+        "vpngw2az",
+        "vpngw3",
+        "vpngw3az"
       ]
     },
     {
@@ -14009,7 +15330,7 @@
       ]
     },
     {
-      "name": "NetworkWatcherTestIpFlowProtocol",
+      "name": "NetworkWatcherProtocol",
       "values": [
         "http",
         "https",
@@ -14042,6 +15363,27 @@
       ]
     },
     {
+      "name": "NetworkWatcherRunConfigurationDiagnosticResourceType",
+      "values": [
+        "applicationgateways",
+        "networkinterfaces",
+        "virtualmachines"
+      ]
+    },
+    {
+      "name": "NetworkWatcherTroubleshootingResourceType",
+      "values": [
+        "vnetgateway",
+        "vpnconnection"
+      ]
+    },
+    {
+      "name": "NetworkWatcherTestConnectivityMethod",
+      "values": [
+        "get"
+      ]
+    },
+    {
       "name": "NetworkVnetGatewayGatewayType",
       "values": [
         "expressroute",
@@ -14059,6 +15401,7 @@
       "name": "NetworkVnetGatewayClientProtocol",
       "values": [
         "ikev2",
+        "openvpn",
         "sstp"
       ]
     },
@@ -14193,13 +15536,6 @@
       "values": [
         "allow",
         "deny"
-      ]
-    },
-    {
-      "name": "NetworkWatcherTroubleshootingResourceType",
-      "values": [
-        "vnetgateway",
-        "vpnconnection"
       ]
     },
     {

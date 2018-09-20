@@ -6,12 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/cdn.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/cdn/origin.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/cdn/edge-node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/cdn/endpoint.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/cdn/profile.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/cdn/custom-domain.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/cdn.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/cdn/origin.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/cdn/edge-node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/cdn/endpoint.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/cdn/profile.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/cdn/custom-domain.yml"
   ],
   "name": "AzureCdn",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest",
@@ -163,19 +163,19 @@
             "name": "OriginHostHeader",
             "type": "string",
             "format": "--origin-host-header {value}",
-            "help": "The host header CDN sends along with content requests to origin. The default value is the host name of the origin."
+            "help": "The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default."
           },
           {
             "name": "OriginPath",
             "type": "string",
             "format": "--origin-path {value}",
-            "help": "The path used when CDN sends request to origin."
+            "help": "A directory path on the origin that CDN can use to retreive content from, e.g. contoso.cloudapp.net/originpath."
           },
           {
             "name": "QueryStringCaching",
             "type": "CdnEndpointQueryStringCaching",
             "format": "--query-string-caching {value}",
-            "help": "Defines the query string caching behavior."
+            "help": "Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL."
           },
           {
             "name": "Tags",
@@ -425,19 +425,19 @@
             "name": "OriginHostHeader",
             "type": "string",
             "format": "--origin-host-header {value}",
-            "help": "The host header CDN sends along with content requests to origin. The default value is the host name of the origin."
+            "help": "The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default."
           },
           {
             "name": "OriginPath",
             "type": "string",
             "format": "--origin-path {value}",
-            "help": "The path used when CDN sends request to origin."
+            "help": "A directory path on the origin that CDN can use to retreive content from, e.g. contoso.cloudapp.net/originpath."
           },
           {
             "name": "QueryStringCaching",
             "type": "CdnEndpointQueryStringCaching",
             "format": "--query-string-caching {value}",
-            "help": "Defines the query string caching behavior."
+            "help": "Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL."
           },
           {
             "name": "Tags",

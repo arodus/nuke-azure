@@ -2046,6 +2046,7 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public partial class ReservationsCatalogShowReservedResourceType : Enumeration
     {
+        public static ReservationsCatalogShowReservedResourceType cosmosdb = new ReservationsCatalogShowReservedResourceType { Value = "cosmosdb" };
         public static ReservationsCatalogShowReservedResourceType sqldatabases = new ReservationsCatalogShowReservedResourceType { Value = "sqldatabases" };
         public static ReservationsCatalogShowReservedResourceType suselinux = new ReservationsCatalogShowReservedResourceType { Value = "suselinux" };
         public static ReservationsCatalogShowReservedResourceType virtualmachines = new ReservationsCatalogShowReservedResourceType { Value = "virtualmachines" };

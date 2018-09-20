@@ -380,6 +380,54 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRouteCreate(Configure<AzureIotHubRouteCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRouteCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRouteDelete(Configure<AzureIotHubRouteDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRouteDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRouteList(Configure<AzureIotHubRouteListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRouteListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRouteShow(Configure<AzureIotHubRouteShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRouteShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRouteTest(Configure<AzureIotHubRouteTestSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRouteTestSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRouteUpdate(Configure<AzureIotHubRouteUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRouteUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureIotHubPolicyCreate(Configure<AzureIotHubPolicyCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubPolicyCreateSettings());
@@ -431,6 +479,38 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureIotHubJobShow(Configure<AzureIotHubJobShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubJobShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRoutingEndpointCreate(Configure<AzureIotHubRoutingEndpointCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRoutingEndpointCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRoutingEndpointDelete(Configure<AzureIotHubRoutingEndpointDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRoutingEndpointDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRoutingEndpointList(Configure<AzureIotHubRoutingEndpointListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRoutingEndpointListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRoutingEndpointShow(Configure<AzureIotHubRoutingEndpointShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRoutingEndpointShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -2283,6 +2363,291 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureIotHubRouteCreateSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRouteCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>Name of the routing endpoint.</p></summary>
+        public virtual string En { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>Name of the Route.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Source of the route.</p></summary>
+        public virtual IotHubRouteSource Source { get; internal set; }
+        /// <summary><p>Condition that is evaluated to apply the routing rule.</p></summary>
+        public virtual string Condition { get; internal set; }
+        /// <summary><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        public virtual bool? Enabled { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub route create")
+              .Add("--en {value}", En)
+              .Add("--hub-name {value}", HubName)
+              .Add("--name {value}", Name)
+              .Add("--source {value}", Source)
+              .Add("--condition {value}", Condition)
+              .Add("--enabled", Enabled)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRouteDeleteSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRouteDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>Name of the Route.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Source of the route.</p></summary>
+        public virtual IotHubRouteSource Source { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub route delete")
+              .Add("--hub-name {value}", HubName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--source {value}", Source)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRouteListSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRouteListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Source of the route.</p></summary>
+        public virtual IotHubRouteSource Source { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub route list")
+              .Add("--hub-name {value}", HubName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--source {value}", Source)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRouteShowSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRouteShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>Name of the Route.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub route show")
+              .Add("--hub-name {value}", HubName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRouteTestSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRouteTestSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>App properties of the route message.</p></summary>
+        public virtual string Ap { get; internal set; }
+        /// <summary><p>Body of the route message.</p></summary>
+        public virtual string Body { get; internal set; }
+        /// <summary><p>Name of the Route.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Source of the route.</p></summary>
+        public virtual IotHubRouteSource Source { get; internal set; }
+        /// <summary><p>System properties of the route message.</p></summary>
+        public virtual string Sp { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub route test")
+              .Add("--hub-name {value}", HubName)
+              .Add("--ap {value}", Ap)
+              .Add("--body {value}", Body)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--source {value}", Source)
+              .Add("--sp {value}", Sp)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRouteUpdateSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRouteUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>Name of the Route.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Condition that is evaluated to apply the routing rule.</p></summary>
+        public virtual string Condition { get; internal set; }
+        /// <summary><p>Name of the routing endpoint.</p></summary>
+        public virtual string En { get; internal set; }
+        /// <summary><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        public virtual bool? Enabled { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Source of the route.</p></summary>
+        public virtual IotHubRouteSource Source { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub route update")
+              .Add("--hub-name {value}", HubName)
+              .Add("--name {value}", Name)
+              .Add("--condition {value}", Condition)
+              .Add("--en {value}", En)
+              .Add("--enabled", Enabled)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--source {value}", Source)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureIotHubPolicyCreateSettings
     /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
     [PublicAPI]
@@ -2557,6 +2922,188 @@ namespace Nuke.Azure
               .Add("iot hub job show")
               .Add("--hub-name {value}", HubName)
               .Add("--job-id {value}", JobId)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRoutingEndpointCreateSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRoutingEndpointCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>Connection string of the Routing Endpoint.</p></summary>
+        public virtual string ConnectionString { get; internal set; }
+        /// <summary><p>Name of the Routing Endpoint.</p></summary>
+        public virtual string EndpointName { get; internal set; }
+        /// <summary><p>Resource group of the Endpoint resoure.</p></summary>
+        public virtual string EndpointResourceGroup { get; internal set; }
+        /// <summary><p>SubscriptionId of the Endpoint resource.</p></summary>
+        public virtual string EndpointSubscriptionId { get; internal set; }
+        /// <summary><p>Type of the Routing Endpoint.</p></summary>
+        public virtual IotHubRoutingEndpointEndpointType EndpointType { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>Name of the storage container.</p></summary>
+        public virtual string Container { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub routing-endpoint create")
+              .Add("--connection-string {value}", ConnectionString)
+              .Add("--endpoint-name {value}", EndpointName)
+              .Add("--endpoint-resource-group {value}", EndpointResourceGroup)
+              .Add("--endpoint-subscription-id {value}", EndpointSubscriptionId)
+              .Add("--endpoint-type {value}", EndpointType)
+              .Add("--hub-name {value}", HubName)
+              .Add("--container {value}", Container)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRoutingEndpointDeleteSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRoutingEndpointDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>Name of the Routing Endpoint.</p></summary>
+        public virtual string EndpointName { get; internal set; }
+        /// <summary><p>Type of the Routing Endpoint.</p></summary>
+        public virtual IotHubRoutingEndpointEndpointType EndpointType { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub routing-endpoint delete")
+              .Add("--hub-name {value}", HubName)
+              .Add("--endpoint-name {value}", EndpointName)
+              .Add("--endpoint-type {value}", EndpointType)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRoutingEndpointListSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRoutingEndpointListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>Type of the Routing Endpoint.</p></summary>
+        public virtual IotHubRoutingEndpointEndpointType EndpointType { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub routing-endpoint list")
+              .Add("--hub-name {value}", HubName)
+              .Add("--endpoint-type {value}", EndpointType)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRoutingEndpointShowSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRoutingEndpointShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>Name of the Routing Endpoint.</p></summary>
+        public virtual string EndpointName { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub routing-endpoint show")
+              .Add("--endpoint-name {value}", EndpointName)
+              .Add("--hub-name {value}", HubName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -9799,6 +10346,1200 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureIotHubRouteCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRouteCreateSettingsExtensions
+    {
+        #region En
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.En"/>.</em></p><p>Name of the routing endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings SetEn(this AzureIotHubRouteCreateSettings toolSettings, string en)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.En = en;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteCreateSettings.En"/>.</em></p><p>Name of the routing endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ResetEn(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.En = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings SetHubName(this AzureIotHubRouteCreateSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteCreateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ResetHubName(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings SetName(this AzureIotHubRouteCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteCreateSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ResetName(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Source
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings SetSource(this AzureIotHubRouteCreateSettings toolSettings, IotHubRouteSource source)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = source;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteCreateSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ResetSource(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Condition
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.Condition"/>.</em></p><p>Condition that is evaluated to apply the routing rule.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings SetCondition(this AzureIotHubRouteCreateSettings toolSettings, string condition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Condition = condition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteCreateSettings.Condition"/>.</em></p><p>Condition that is evaluated to apply the routing rule.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ResetCondition(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Condition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Enabled
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.Enabled"/>.</em></p><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings SetEnabled(this AzureIotHubRouteCreateSettings toolSettings, bool? enabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = enabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteCreateSettings.Enabled"/>.</em></p><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ResetEnabled(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureIotHubRouteCreateSettings.Enabled"/>.</em></p><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings EnableEnabled(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureIotHubRouteCreateSettings.Enabled"/>.</em></p><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings DisableEnabled(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureIotHubRouteCreateSettings.Enabled"/>.</em></p><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ToggleEnabled(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = !toolSettings.Enabled;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings SetResourceGroup(this AzureIotHubRouteCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ResetResourceGroup(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings SetDebug(this AzureIotHubRouteCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ResetDebug(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings SetHelp(this AzureIotHubRouteCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ResetHelp(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings SetOutput(this AzureIotHubRouteCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ResetOutput(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings SetQuery(this AzureIotHubRouteCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ResetQuery(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings SetVerbose(this AzureIotHubRouteCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ResetVerbose(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubRouteDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRouteDeleteSettingsExtensions
+    {
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings SetHubName(this AzureIotHubRouteDeleteSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings ResetHubName(this AzureIotHubRouteDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings SetName(this AzureIotHubRouteDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings ResetName(this AzureIotHubRouteDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings SetResourceGroup(this AzureIotHubRouteDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings ResetResourceGroup(this AzureIotHubRouteDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Source
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings SetSource(this AzureIotHubRouteDeleteSettings toolSettings, IotHubRouteSource source)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = source;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings ResetSource(this AzureIotHubRouteDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings SetDebug(this AzureIotHubRouteDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings ResetDebug(this AzureIotHubRouteDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings SetHelp(this AzureIotHubRouteDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings ResetHelp(this AzureIotHubRouteDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings SetOutput(this AzureIotHubRouteDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings ResetOutput(this AzureIotHubRouteDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings SetQuery(this AzureIotHubRouteDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings ResetQuery(this AzureIotHubRouteDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings SetVerbose(this AzureIotHubRouteDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings ResetVerbose(this AzureIotHubRouteDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubRouteListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRouteListSettingsExtensions
+    {
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings SetHubName(this AzureIotHubRouteListSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings ResetHubName(this AzureIotHubRouteListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings SetResourceGroup(this AzureIotHubRouteListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings ResetResourceGroup(this AzureIotHubRouteListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Source
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings SetSource(this AzureIotHubRouteListSettings toolSettings, IotHubRouteSource source)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = source;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteListSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings ResetSource(this AzureIotHubRouteListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings SetDebug(this AzureIotHubRouteListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings ResetDebug(this AzureIotHubRouteListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings SetHelp(this AzureIotHubRouteListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings ResetHelp(this AzureIotHubRouteListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings SetOutput(this AzureIotHubRouteListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings ResetOutput(this AzureIotHubRouteListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings SetQuery(this AzureIotHubRouteListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings ResetQuery(this AzureIotHubRouteListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings SetVerbose(this AzureIotHubRouteListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings ResetVerbose(this AzureIotHubRouteListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubRouteShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRouteShowSettingsExtensions
+    {
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings SetHubName(this AzureIotHubRouteShowSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings ResetHubName(this AzureIotHubRouteShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings SetName(this AzureIotHubRouteShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteShowSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings ResetName(this AzureIotHubRouteShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings SetResourceGroup(this AzureIotHubRouteShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings ResetResourceGroup(this AzureIotHubRouteShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings SetDebug(this AzureIotHubRouteShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings ResetDebug(this AzureIotHubRouteShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings SetHelp(this AzureIotHubRouteShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings ResetHelp(this AzureIotHubRouteShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings SetOutput(this AzureIotHubRouteShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings ResetOutput(this AzureIotHubRouteShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings SetQuery(this AzureIotHubRouteShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings ResetQuery(this AzureIotHubRouteShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings SetVerbose(this AzureIotHubRouteShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings ResetVerbose(this AzureIotHubRouteShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubRouteTestSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRouteTestSettingsExtensions
+    {
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetHubName(this AzureIotHubRouteTestSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetHubName(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ap
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Ap"/>.</em></p><p>App properties of the route message.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetAp(this AzureIotHubRouteTestSettings toolSettings, string ap)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Ap = ap;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.Ap"/>.</em></p><p>App properties of the route message.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetAp(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Ap = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Body
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Body"/>.</em></p><p>Body of the route message.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetBody(this AzureIotHubRouteTestSettings toolSettings, string body)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Body = body;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.Body"/>.</em></p><p>Body of the route message.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetBody(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Body = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetName(this AzureIotHubRouteTestSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetName(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetResourceGroup(this AzureIotHubRouteTestSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetResourceGroup(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Source
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetSource(this AzureIotHubRouteTestSettings toolSettings, IotHubRouteSource source)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = source;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetSource(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Sp
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Sp"/>.</em></p><p>System properties of the route message.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetSp(this AzureIotHubRouteTestSettings toolSettings, string sp)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sp = sp;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.Sp"/>.</em></p><p>System properties of the route message.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetSp(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sp = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetDebug(this AzureIotHubRouteTestSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetDebug(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetHelp(this AzureIotHubRouteTestSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetHelp(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetOutput(this AzureIotHubRouteTestSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetOutput(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetQuery(this AzureIotHubRouteTestSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetQuery(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetVerbose(this AzureIotHubRouteTestSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetVerbose(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubRouteUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRouteUpdateSettingsExtensions
+    {
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetHubName(this AzureIotHubRouteUpdateSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetHubName(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetName(this AzureIotHubRouteUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetName(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Condition
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Condition"/>.</em></p><p>Condition that is evaluated to apply the routing rule.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetCondition(this AzureIotHubRouteUpdateSettings toolSettings, string condition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Condition = condition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.Condition"/>.</em></p><p>Condition that is evaluated to apply the routing rule.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetCondition(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Condition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region En
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.En"/>.</em></p><p>Name of the routing endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetEn(this AzureIotHubRouteUpdateSettings toolSettings, string en)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.En = en;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.En"/>.</em></p><p>Name of the routing endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetEn(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.En = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Enabled
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Enabled"/>.</em></p><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetEnabled(this AzureIotHubRouteUpdateSettings toolSettings, bool? enabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = enabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.Enabled"/>.</em></p><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetEnabled(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureIotHubRouteUpdateSettings.Enabled"/>.</em></p><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings EnableEnabled(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureIotHubRouteUpdateSettings.Enabled"/>.</em></p><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings DisableEnabled(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureIotHubRouteUpdateSettings.Enabled"/>.</em></p><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ToggleEnabled(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = !toolSettings.Enabled;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetResourceGroup(this AzureIotHubRouteUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetResourceGroup(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Source
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetSource(this AzureIotHubRouteUpdateSettings toolSettings, IotHubRouteSource source)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = source;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetSource(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetDebug(this AzureIotHubRouteUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetDebug(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetHelp(this AzureIotHubRouteUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetHelp(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetOutput(this AzureIotHubRouteUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetOutput(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetQuery(this AzureIotHubRouteUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetQuery(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetVerbose(this AzureIotHubRouteUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetVerbose(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureIotHubPolicyCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
     [PublicAPI]
@@ -10845,6 +12586,722 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureIotHubRoutingEndpointCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRoutingEndpointCreateSettingsExtensions
+    {
+        #region ConnectionString
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.ConnectionString"/>.</em></p><p>Connection string of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetConnectionString(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string connectionString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectionString = connectionString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.ConnectionString"/>.</em></p><p>Connection string of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetConnectionString(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectionString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndpointName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetEndpointName(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string endpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = endpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetEndpointName(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndpointResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointResourceGroup"/>.</em></p><p>Resource group of the Endpoint resoure.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetEndpointResourceGroup(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string endpointResourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointResourceGroup = endpointResourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointResourceGroup"/>.</em></p><p>Resource group of the Endpoint resoure.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetEndpointResourceGroup(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndpointSubscriptionId
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointSubscriptionId"/>.</em></p><p>SubscriptionId of the Endpoint resource.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetEndpointSubscriptionId(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string endpointSubscriptionId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointSubscriptionId = endpointSubscriptionId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointSubscriptionId"/>.</em></p><p>SubscriptionId of the Endpoint resource.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetEndpointSubscriptionId(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointSubscriptionId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndpointType
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetEndpointType(this AzureIotHubRoutingEndpointCreateSettings toolSettings, IotHubRoutingEndpointEndpointType endpointType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointType = endpointType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetEndpointType(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetHubName(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetHubName(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Container
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Container"/>.</em></p><p>Name of the storage container.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetContainer(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string container)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Container = container;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Container"/>.</em></p><p>Name of the storage container.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetContainer(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Container = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetResourceGroup(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetResourceGroup(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetDebug(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetDebug(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetHelp(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetHelp(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetOutput(this AzureIotHubRoutingEndpointCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetOutput(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetQuery(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetQuery(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetVerbose(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetVerbose(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubRoutingEndpointDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRoutingEndpointDeleteSettingsExtensions
+    {
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetHubName(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetHubName(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndpointName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetEndpointName(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string endpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = endpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetEndpointName(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndpointType
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetEndpointType(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, IotHubRoutingEndpointEndpointType endpointType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointType = endpointType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetEndpointType(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetResourceGroup(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetResourceGroup(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetDebug(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetDebug(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetHelp(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetHelp(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetOutput(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetOutput(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetQuery(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetQuery(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetVerbose(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetVerbose(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubRoutingEndpointListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRoutingEndpointListSettingsExtensions
+    {
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetHubName(this AzureIotHubRoutingEndpointListSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetHubName(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndpointType
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetEndpointType(this AzureIotHubRoutingEndpointListSettings toolSettings, IotHubRoutingEndpointEndpointType endpointType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointType = endpointType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetEndpointType(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetResourceGroup(this AzureIotHubRoutingEndpointListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetResourceGroup(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetDebug(this AzureIotHubRoutingEndpointListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetDebug(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetHelp(this AzureIotHubRoutingEndpointListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetHelp(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetOutput(this AzureIotHubRoutingEndpointListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetOutput(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetQuery(this AzureIotHubRoutingEndpointListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetQuery(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetVerbose(this AzureIotHubRoutingEndpointListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetVerbose(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubRoutingEndpointShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRoutingEndpointShowSettingsExtensions
+    {
+        #region EndpointName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetEndpointName(this AzureIotHubRoutingEndpointShowSettings toolSettings, string endpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = endpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetEndpointName(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetHubName(this AzureIotHubRoutingEndpointShowSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetHubName(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetResourceGroup(this AzureIotHubRoutingEndpointShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetResourceGroup(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetDebug(this AzureIotHubRoutingEndpointShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetDebug(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetHelp(this AzureIotHubRoutingEndpointShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetHelp(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetOutput(this AzureIotHubRoutingEndpointShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetOutput(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetQuery(this AzureIotHubRoutingEndpointShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetQuery(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetVerbose(this AzureIotHubRoutingEndpointShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetVerbose(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region IotHubCreateSku
     /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
     [PublicAPI]
@@ -10895,6 +13352,33 @@ namespace Nuke.Azure
         public static IotDpsAccessPolicyRights registrationstatusread = new IotDpsAccessPolicyRights { Value = "registrationstatusread" };
         public static IotDpsAccessPolicyRights registrationstatuswrite = new IotDpsAccessPolicyRights { Value = "registrationstatuswrite" };
         public static IotDpsAccessPolicyRights serviceconfig = new IotDpsAccessPolicyRights { Value = "serviceconfig" };
+    }
+    #endregion
+    #region IotHubRouteSource
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class IotHubRouteSource : Enumeration
+    {
+        public static IotHubRouteSource devicejoblifecycleevents = new IotHubRouteSource { Value = "devicejoblifecycleevents" };
+        public static IotHubRouteSource devicelifecycleevents = new IotHubRouteSource { Value = "devicelifecycleevents" };
+        public static IotHubRouteSource devicemessages = new IotHubRouteSource { Value = "devicemessages" };
+        public static IotHubRouteSource invalid = new IotHubRouteSource { Value = "invalid" };
+        public static IotHubRouteSource twinchangeevents = new IotHubRouteSource { Value = "twinchangeevents" };
+    }
+    #endregion
+    #region IotHubRoutingEndpointEndpointType
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class IotHubRoutingEndpointEndpointType : Enumeration
+    {
+        public static IotHubRoutingEndpointEndpointType azurestoragecontainer = new IotHubRoutingEndpointEndpointType { Value = "azurestoragecontainer" };
+        public static IotHubRoutingEndpointEndpointType eventhub = new IotHubRoutingEndpointEndpointType { Value = "eventhub" };
+        public static IotHubRoutingEndpointEndpointType servicebusqueue = new IotHubRoutingEndpointEndpointType { Value = "servicebusqueue" };
+        public static IotHubRoutingEndpointEndpointType servicebustopic = new IotHubRoutingEndpointEndpointType { Value = "servicebustopic" };
     }
     #endregion
 }

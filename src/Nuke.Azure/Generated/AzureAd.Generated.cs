@@ -180,6 +180,14 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdUserGetMemberGroups(Configure<AzureAdUserGetMemberGroupsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdUserGetMemberGroupsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureAdUserList(Configure<AzureAdUserListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdUserListSettings());
@@ -1030,6 +1038,44 @@ namespace Nuke.Azure
             arguments
               .Add("ad user delete")
               .Add("--upn-or-object-id {value}", UpnOrObjectId)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdUserGetMemberGroupsSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdUserGetMemberGroupsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>The object ID or principal name of the user for which to get information.</p></summary>
+        public virtual string UpnOrObjectId { get; internal set; }
+        /// <summary><p>If true, only membership in security-enabled groups should be checked. Otherwise, membership in all groups should be checked.</p></summary>
+        public virtual string SecurityEnabledOnly { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad user get-member-groups")
+              .Add("--upn-or-object-id {value}", UpnOrObjectId)
+              .Add("--security-enabled-only {value}", SecurityEnabledOnly)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -4673,6 +4719,140 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAdUserDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAdUserDeleteSettings ResetVerbose(this AzureAdUserDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdUserGetMemberGroupsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdUserGetMemberGroupsSettingsExtensions
+    {
+        #region UpnOrObjectId
+        /// <summary><p><em>Sets <see cref="AzureAdUserGetMemberGroupsSettings.UpnOrObjectId"/>.</em></p><p>The object ID or principal name of the user for which to get information.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings SetUpnOrObjectId(this AzureAdUserGetMemberGroupsSettings toolSettings, string upnOrObjectId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UpnOrObjectId = upnOrObjectId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdUserGetMemberGroupsSettings.UpnOrObjectId"/>.</em></p><p>The object ID or principal name of the user for which to get information.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings ResetUpnOrObjectId(this AzureAdUserGetMemberGroupsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UpnOrObjectId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SecurityEnabledOnly
+        /// <summary><p><em>Sets <see cref="AzureAdUserGetMemberGroupsSettings.SecurityEnabledOnly"/>.</em></p><p>If true, only membership in security-enabled groups should be checked. Otherwise, membership in all groups should be checked.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings SetSecurityEnabledOnly(this AzureAdUserGetMemberGroupsSettings toolSettings, string securityEnabledOnly)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecurityEnabledOnly = securityEnabledOnly;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdUserGetMemberGroupsSettings.SecurityEnabledOnly"/>.</em></p><p>If true, only membership in security-enabled groups should be checked. Otherwise, membership in all groups should be checked.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings ResetSecurityEnabledOnly(this AzureAdUserGetMemberGroupsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecurityEnabledOnly = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdUserGetMemberGroupsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings SetDebug(this AzureAdUserGetMemberGroupsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdUserGetMemberGroupsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings ResetDebug(this AzureAdUserGetMemberGroupsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdUserGetMemberGroupsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings SetHelp(this AzureAdUserGetMemberGroupsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdUserGetMemberGroupsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings ResetHelp(this AzureAdUserGetMemberGroupsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdUserGetMemberGroupsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings SetOutput(this AzureAdUserGetMemberGroupsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdUserGetMemberGroupsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings ResetOutput(this AzureAdUserGetMemberGroupsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdUserGetMemberGroupsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings SetQuery(this AzureAdUserGetMemberGroupsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdUserGetMemberGroupsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings ResetQuery(this AzureAdUserGetMemberGroupsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdUserGetMemberGroupsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings SetVerbose(this AzureAdUserGetMemberGroupsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdUserGetMemberGroupsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdUserGetMemberGroupsSettings ResetVerbose(this AzureAdUserGetMemberGroupsSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

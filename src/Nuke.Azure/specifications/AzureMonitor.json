@@ -6,21 +6,22 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/diagnostic-settings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/metrics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/activity-log.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/autoscale.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/autoscale-settings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/alert.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/action-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/log-profiles.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/autoscale/profile.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/autoscale/rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/diagnostic-settings/categories.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/activity-log/alert.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/activity-log/alert/scope.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/monitor/activity-log/alert/action-group.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/diagnostic-settings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/metrics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/activity-log.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/autoscale.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/autoscale-settings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/alert.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/action-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/log-profiles.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/autoscale/profile.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/autoscale/rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/metrics/alert.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/diagnostic-settings/categories.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/activity-log/alert.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/activity-log/alert/scope.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/monitor/activity-log/alert/action-group.yml"
   ],
   "name": "AzureMonitor",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest",
@@ -1893,6 +1894,260 @@
             "type": "string",
             "format": "--profile-name {value}",
             "help": "Name of the autoscale profile."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MetricsAlertCreate",
+      "definiteArgument": "monitor metrics alert create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Condition",
+            "type": "string",
+            "format": "--condition {value}",
+            "help": "The condition which triggers the rule."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "Free-text description of the rule."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the alert rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Scopes",
+            "type": "List<string>",
+            "format": "--scopes {value}",
+            "separator": " ",
+            "help": "Space-separated list of scopes the rule applies to."
+          },
+          {
+            "name": "Action",
+            "type": "string",
+            "format": "--action {value}",
+            "help": "Add an action group and optional webhook properties to fire when the alert is triggered."
+          },
+          {
+            "name": "AutoMitigate",
+            "type": "bool",
+            "format": "--auto-mitigate",
+            "help": "Automatically resolve the alert."
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "format": "--disabled",
+            "help": "Create the rule in a disabled state."
+          },
+          {
+            "name": "EvaluationFrequency",
+            "type": "string",
+            "format": "--evaluation-frequency {value}",
+            "help": "Frequency with which to evaluate the rule in \"##h##m##s\" format."
+          },
+          {
+            "name": "Severity",
+            "type": "string",
+            "format": "--severity {value}",
+            "help": "Severity of the alert from 0 (low) to 4 (high)."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "WindowSize",
+            "type": "string",
+            "format": "--window-size {value}",
+            "help": "Time over which to aggregate metrics in \"##h##m##s\" format."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MetricsAlertDelete",
+      "definiteArgument": "monitor metrics alert delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the alert rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MetricsAlertList",
+      "definiteArgument": "monitor metrics alert list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MetricsAlertShow",
+      "definiteArgument": "monitor metrics alert show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the alert rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MetricsAlertUpdate",
+      "definiteArgument": "monitor metrics alert update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the alert rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AutoMitigate",
+            "type": "bool",
+            "format": "--auto-mitigate",
+            "help": "Automatically resolve the alert."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "Free-text description of the rule."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "help": "Whether the metric alert rule is enabled."
+          },
+          {
+            "name": "EvaluationFrequency",
+            "type": "string",
+            "format": "--evaluation-frequency {value}",
+            "help": "Frequency with which to evaluate the rule in \"##h##m##s\" format."
+          },
+          {
+            "name": "Scopes",
+            "type": "List<string>",
+            "format": "--scopes {value}",
+            "separator": " ",
+            "help": "Space-separated list of scopes the rule applies to."
+          },
+          {
+            "name": "Severity",
+            "type": "string",
+            "format": "--severity {value}",
+            "help": "Severity of the alert from 0 (low) to 4 (high)."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "WindowSize",
+            "type": "string",
+            "format": "--window-size {value}",
+            "help": "Time over which to aggregate metrics in \"##h##m##s\" format."
+          },
+          {
+            "name": "AddAction",
+            "type": "string",
+            "format": "--add-action {value}",
+            "help": "Add an action group and optional webhook properties to fire when the alert is triggered."
+          },
+          {
+            "name": "RemoveActions",
+            "type": "List<string>",
+            "format": "--remove-actions {value}",
+            "separator": " ",
+            "help": "Space-separated list of action group names to remove."
+          },
+          {
+            "name": "AddCondition",
+            "type": "string",
+            "format": "--add-condition {value}",
+            "help": "Add a condition which triggers the rule."
+          },
+          {
+            "name": "RemoveConditions",
+            "type": "List<string>",
+            "format": "--remove-conditions {value}",
+            "separator": " ",
+            "help": "Space-separated list of condition names to remove."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
       }

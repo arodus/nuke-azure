@@ -6,13 +6,13 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/ad.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/ad/app.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/ad/group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/ad/sp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/ad/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/ad/sp/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/ad/group/member.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/ad.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/ad/app.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/ad/group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/ad/sp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/ad/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/ad/sp/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/ad/group/member.yml"
   ],
   "name": "AzureAd",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest",
@@ -582,6 +582,26 @@
             "type": "string",
             "format": "--upn-or-object-id {value}",
             "help": "The object ID or principal name of the user to delete."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UserGetMemberGroups",
+      "definiteArgument": "ad user get-member-groups",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "UpnOrObjectId",
+            "type": "string",
+            "format": "--upn-or-object-id {value}",
+            "help": "The object ID or principal name of the user for which to get information."
+          },
+          {
+            "name": "SecurityEnabledOnly",
+            "type": "string",
+            "format": "--security-enabled-only {value}",
+            "help": "If true, only membership in security-enabled groups should be checked. Otherwise, membership in all groups should be checked."
           }
         ]
       }

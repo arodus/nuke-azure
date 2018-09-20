@@ -6,38 +6,38 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/application.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/task.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/pool.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/job-schedule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/job.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/location.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/job/task-counts.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/job/all-statistics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/job/prep-release-status.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/location/quotas.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/application/summary.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/application/package.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/task/file.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/task/subtask.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/account/autostorage-keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/account/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/pool/os.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/pool/usage-metrics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/pool/all-statistics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/pool/autoscale.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/pool/node-counts.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/pool/node-agent-skus.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/node/scheduling.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/node/file.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/node/remote-desktop.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/node/service-logs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/node/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/batch/node/remote-login-settings.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/application.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/task.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/pool.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/job-schedule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/location.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/job/task-counts.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/job/all-statistics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/job/prep-release-status.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/location/quotas.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/application/summary.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/application/package.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/task/file.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/task/subtask.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/account/autostorage-keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/account/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/pool/os.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/pool/usage-metrics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/pool/all-statistics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/pool/autoscale.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/pool/node-counts.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/pool/node-agent-skus.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/node/scheduling.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/node/file.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/node/remote-desktop.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/node/service-logs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/node/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/batch/node/remote-login-settings.yml"
   ],
   "name": "AzureBatch",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest",
@@ -230,7 +230,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "A file containing the node remove parameter specification in JSON format. If this parameter is specified, all 'Node Remove Arguments' are ignored."
+            "help": "A file containing the node remove parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Node Remove Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",
@@ -260,7 +260,7 @@
             "name": "NodeList",
             "type": "string",
             "format": "--node-list {value}",
-            "help": "A list containing the IDs of the compute nodes to be removed from the specified pool. Space-separated values."
+            "help": "Required. A list containing the IDs of the compute nodes to be removed from the specified pool. Space-separated values."
           },
           {
             "name": "ResizeTimeout",
@@ -651,7 +651,7 @@
             "name": "AffinityId",
             "type": "string",
             "format": "--affinity-id {value}",
-            "help": "An opaque string representing the location of a compute node or a task that has run previously. You can pass the affinityId of a compute node to indicate that this task needs to run on that compute node. Note that this is just a soft affinity. If the target node is busy or unavailable at the time the task is scheduled, then the task will be scheduled elsewhere."
+            "help": "Required. An opaque string representing the location of a compute node or a task that has run previously. You can pass the affinityId of a compute node to indicate that this task needs to run on that compute node. Note that this is just a soft affinity. If the target node is busy or unavailable at the time the task is scheduled, then the task will be scheduled elsewhere."
           },
           {
             "name": "ApplicationPackageReferences",
@@ -677,7 +677,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "The file containing the task(s) to create in JSON format, if this parameter is specified, all other parameters are ignored."
+            "help": "The file containing the task(s) to create in JSON(formatted to match REST API request body). When submitting multiple tasks, accepts either an array of tasks or a TaskAddCollectionParamater. If this parameter is specified, all other parameters are ignored."
           },
           {
             "name": "MaxTaskRetryCount",
@@ -931,7 +931,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "A file containing the constraints specification in JSON format. If this parameter is specified, all 'Constraints Arguments' are ignored."
+            "help": "A file containing the constraints specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Constraints Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",
@@ -1141,7 +1141,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "A file containing the pool specification in JSON format. If this parameter is specified, all 'Pool Arguments' are ignored."
+            "help": "A file containing the pool specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Pool Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",
@@ -1195,7 +1195,13 @@
             "name": "Id",
             "type": "string",
             "format": "--id {value}",
-            "help": "A string that uniquely identifies the pool within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two pool IDs within an account that differ only by case)."
+            "help": "Required. A string that uniquely identifies the pool within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two pool IDs within an account that differ only by case)."
+          },
+          {
+            "name": "MaxTasksPerNode",
+            "type": "string",
+            "format": "--max-tasks-per-node {value}",
+            "help": "The maximum number of tasks that can run concurrently on a single compute node in the pool. The default value is 1. The maximum value of this setting depends on the size of the compute nodes in the pool (the vmSize setting)."
           },
           {
             "name": "Metadata",
@@ -1227,25 +1233,25 @@
             "name": "VmSize",
             "type": "string",
             "format": "--vm-size {value}",
-            "help": "The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (<a href=\"https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/\">https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/</a>). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (<a href=\"https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/\">https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/</a>) or Sizes for Virtual Machines (Windows) (<a href=\"https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/\">https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/</a>). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series)."
+            "help": "Required. The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (<a href=\"https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/\">https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/</a>). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (<a href=\"https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/\">https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/</a>) or Sizes for Virtual Machines (Windows) (<a href=\"https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/\">https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/</a>). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series)."
           },
           {
             "name": "OsFamily",
             "type": "BatchPoolCreateOsFamily",
             "format": "--os-family {value}",
-            "help": "The Azure Guest OS family to be installed on the virtual machines in the pool. Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. For more information, see Azure Guest OS Releases (<a href=\"https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases\">https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases</a>)."
+            "help": "Required. The Azure Guest OS family to be installed on the virtual machines in the pool. Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. For more information, see Azure Guest OS Releases (<a href=\"https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases\">https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases</a>)."
           },
           {
             "name": "StartTaskCommandLine",
             "type": "string",
             "format": "--start-task-command-line {value}",
-            "help": "The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href=\"https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables\">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>)."
+            "help": "Required. The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href=\"https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables\">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>)."
           },
           {
             "name": "StartTaskResourceFiles",
             "type": "string",
             "format": "--start-task-resource-files {value}",
-            "help": "A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format."
+            "help": "A list of files that the Batch service will download to the compute node before running the command line.  There is a maximum size for the list of resource files. When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format."
           },
           {
             "name": "StartTaskWaitForSuccess",
@@ -1263,7 +1269,7 @@
             "name": "NodeAgentSkuId",
             "type": "string",
             "format": "--node-agent-sku-id {value}",
-            "help": "The SKU of the Batch node agent to be provisioned on compute nodes in the pool. The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation."
+            "help": "Required. The SKU of the Batch node agent to be provisioned on compute nodes in the pool. The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation."
           }
         ]
       }
@@ -1389,7 +1395,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "The file containing pool update properties parameter specification in JSON format. If this parameter is specified, all 'Pool Update Properties Parameter Arguments' are ignored."
+            "help": "The file containing pool update properties parameter specification in JSON(formatted to match REST API request body). If this parameter is specified, all 'Pool Update Properties Parameter Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",
@@ -1413,21 +1419,19 @@
             "name": "ApplicationPackageReferences",
             "type": "string",
             "format": "--application-package-references {value}",
-            "help": "A list of application packages to be installed on each compute node in the pool. The list replaces any existing application package references on the pool. Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. If omitted, or if you specify an empty collection, any existing application packages references are removed from the pool."
+            "help": "Required. A list of application packages to be installed on each compute node in the pool. The list replaces any existing application package references on the pool. Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. If omitted, or if you specify an empty collection, any existing application packages references are removed from the pool."
           },
           {
             "name": "CertificateReferences",
             "type": "string",
             "format": "--certificate-references {value}",
-            "help": "A list of certificates to be installed on each compute node in the pool. This list replaces any existing certificate references configured on the pool. If you specify an empty collection, any existing certificate references are removed from the pool. For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory."
+            "help": "Required. A list of certificates to be installed on each compute node in the pool. This list replaces any existing certificate references configured on the pool. If you specify an empty collection, any existing certificate references are removed from the pool. For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory."
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string, object>",
+            "type": "string",
             "format": "--metadata {value}",
-            "itemFormat": "{key}={value}",
-            "separator": " ",
-            "help": "A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool."
+            "help": "Required. A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool."
           },
           {
             "name": "StartTaskCommandLine",
@@ -1559,7 +1563,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "A file containing the pool patch parameter specification in JSON format. If this parameter is specified, all 'Pool Arguments' are ignored."
+            "help": "A file containing the pool patch parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Pool Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",
@@ -1603,7 +1607,7 @@
             "name": "StartTaskCommandLine",
             "type": "string",
             "format": "--start-task-command-line {value}",
-            "help": "The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href=\"https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables\">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>)."
+            "help": "Required. The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href=\"https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables\">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>)."
           },
           {
             "name": "StartTaskEnvironmentSettings",
@@ -1623,7 +1627,7 @@
             "name": "StartTaskResourceFiles",
             "type": "string",
             "format": "--start-task-resource-files {value}",
-            "help": "A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format."
+            "help": "A list of files that the Batch service will download to the compute node before running the command line.  There is a maximum size for the list of resource files. When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format."
           },
           {
             "name": "StartTaskWaitForSuccess",
@@ -1735,7 +1739,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "A file containing the cloud job schedule specification in JSON format. If this parameter is specified, all 'Cloud Job Schedule Arguments' are ignored."
+            "help": "A file containing the cloud job schedule specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Cloud Job Schedule Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",
@@ -1759,7 +1763,7 @@
             "name": "Id",
             "type": "string",
             "format": "--id {value}",
-            "help": "A string that uniquely identifies the schedule within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case)."
+            "help": "Required. A string that uniquely identifies the schedule within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case)."
           },
           {
             "name": "Metadata",
@@ -1803,19 +1807,19 @@
             "name": "JobManagerTaskCommandLine",
             "type": "string",
             "format": "--job-manager-task-command-line {value}",
-            "help": "The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href=\"https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables\">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>)."
+            "help": "Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href=\"https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables\">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>)."
           },
           {
             "name": "JobManagerTaskId",
             "type": "string",
             "format": "--job-manager-task-id {value}",
-            "help": "A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters."
+            "help": "Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters."
           },
           {
             "name": "JobManagerTaskResourceFiles",
             "type": "string",
             "format": "--job-manager-task-resource-files {value}",
-            "help": "A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format."
+            "help": "A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format."
           },
           {
             "name": "PoolId",
@@ -2083,7 +2087,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "A file containing the job schedule update parameter specification in JSON format. If this parameter is specified, all 'Job Schedule Arguments' are ignored."
+            "help": "A file containing the job schedule update parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Schedule Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",
@@ -2147,7 +2151,7 @@
             "name": "JobManagerTaskCommandLine",
             "type": "string",
             "format": "--job-manager-task-command-line {value}",
-            "help": "The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href=\"https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables\">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>)."
+            "help": "Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href=\"https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables\">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>)."
           },
           {
             "name": "JobManagerTaskEnvironmentSettings",
@@ -2161,13 +2165,13 @@
             "name": "JobManagerTaskId",
             "type": "string",
             "format": "--job-manager-task-id {value}",
-            "help": "A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters."
+            "help": "Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters."
           },
           {
             "name": "JobManagerTaskResourceFiles",
             "type": "string",
             "format": "--job-manager-task-resource-files {value}",
-            "help": "A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format."
+            "help": "A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format."
           },
           {
             "name": "PoolId",
@@ -2241,7 +2245,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "A file containing the job schedule patch parameter specification in JSON format. If this parameter is specified, all 'Job Schedule Arguments' are ignored."
+            "help": "A file containing the job schedule patch parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Schedule Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",
@@ -2305,7 +2309,7 @@
             "name": "JobManagerTaskCommandLine",
             "type": "string",
             "format": "--job-manager-task-command-line {value}",
-            "help": "The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href=\"https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables\">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>)."
+            "help": "Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href=\"https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables\">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>)."
           },
           {
             "name": "JobManagerTaskEnvironmentSettings",
@@ -2319,13 +2323,13 @@
             "name": "JobManagerTaskId",
             "type": "string",
             "format": "--job-manager-task-id {value}",
-            "help": "A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters."
+            "help": "Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters."
           },
           {
             "name": "JobManagerTaskResourceFiles",
             "type": "string",
             "format": "--job-manager-task-resource-files {value}",
-            "help": "A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format."
+            "help": "A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format."
           },
           {
             "name": "PoolId",
@@ -2517,7 +2521,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "A file containing the job specification in JSON format. If this parameter is specified, all 'Job Arguments' are ignored."
+            "help": "A file containing the job specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",
@@ -2541,7 +2545,7 @@
             "name": "Id",
             "type": "string",
             "format": "--id {value}",
-            "help": "A string that uniquely identifies the job within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case)."
+            "help": "Required. A string that uniquely identifies the job within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case)."
           },
           {
             "name": "Metadata",
@@ -2579,7 +2583,7 @@
             "name": "JobManagerTaskCommandLine",
             "type": "string",
             "format": "--job-manager-task-command-line {value}",
-            "help": "The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href=\"https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables\">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>)."
+            "help": "Required. The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href=\"https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables\">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>)."
           },
           {
             "name": "JobManagerTaskEnvironmentSettings",
@@ -2593,13 +2597,13 @@
             "name": "JobManagerTaskId",
             "type": "string",
             "format": "--job-manager-task-id {value}",
-            "help": "A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters."
+            "help": "Required. A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters."
           },
           {
             "name": "JobManagerTaskResourceFiles",
             "type": "string",
             "format": "--job-manager-task-resource-files {value}",
-            "help": "A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format."
+            "help": "A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. There is a maximum size for the list of resource files.  When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge. If this occurs, the collection of ResourceFiles must be reduced in size. This can be achieved using .zip files, Application Packages, or Docker Containers. Space-separated resource references in filename=blobsource format."
           },
           {
             "name": "PoolId",
@@ -2855,7 +2859,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "A file containing the job update parameter specification in JSON format. If this parameter is specified, all 'Job Arguments' are ignored."
+            "help": "A file containing the job update parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",
@@ -2955,7 +2959,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "A file containing the job patch parameter specification in JSON format. If this parameter is specified, all 'Job Arguments' are ignored."
+            "help": "A file containing the job patch parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",
@@ -3344,13 +3348,13 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the Batch account."
+            "help": "Name of the batch account to show. If not specified will display currently set account."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
-            "help": "Name of the resource group."
+            "help": "Name of the resource group. If not specified will display currently set account."
           }
         ]
       }
@@ -4318,7 +4322,7 @@
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
-            "help": "An OData $filter clause."
+            "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch</a>."
           }
         ]
       }
@@ -4738,7 +4742,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "A file containing the upload batch service logs configuration specification in JSON format. If this parameter is specified, all 'Upload Batch Service Logs Configuration Arguments' are ignored."
+            "help": "A file containing the upload batch service logs configuration specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Upload Batch Service Logs Configuration Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",
@@ -4762,7 +4766,7 @@
             "name": "ContainerUrl",
             "type": "string",
             "format": "--container-url {value}",
-            "help": "The URL of the container within Azure Blob Storage to which to upload the Batch Service log file(s). The URL must include a Shared Access Signature (SAS) granting write permissions to the container. The SAS duration must allow enough time for the upload to finish. The start time for SAS is optional and recommended to not be specified."
+            "help": "Required. The URL of the container within Azure Blob Storage to which to upload the Batch Service log file(s). The URL must include a Shared Access Signature (SAS) granting write permissions to the container. The SAS duration must allow enough time for the upload to finish. The start time for SAS is optional and recommended to not be specified."
           },
           {
             "name": "EndTime",
@@ -4774,7 +4778,7 @@
             "name": "StartTime",
             "type": "string",
             "format": "--start-time {value}",
-            "help": "The start of the time range from which to upload Batch Service log file(s). Any log file containing a log message in the time range will be uploaded. This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested. Expected format is an ISO-8601 timestamp."
+            "help": "Required. The start of the time range from which to upload Batch Service log file(s). Any log file containing a log message in the time range will be uploaded. This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested. Expected format is an ISO-8601 timestamp."
           }
         ]
       }
@@ -4800,7 +4804,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "A file containing the user specification in JSON format. If this parameter is specified, all 'User Arguments' are ignored."
+            "help": "A file containing the user specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'User Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",
@@ -4836,7 +4840,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The user name of the account."
+            "help": "Required. The user name of the account."
           },
           {
             "name": "Password",
@@ -4931,7 +4935,7 @@
             "name": "JsonFile",
             "type": "string",
             "format": "--json-file {value}",
-            "help": "A file containing the node update user parameter specification in JSON format. If this parameter is specified, all 'Node Update User Arguments' are ignored."
+            "help": "A file containing the node update user parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Node Update User Arguments' are ignored."
           },
           {
             "name": "AccountEndpoint",

@@ -6,21 +6,21 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/availability-set.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/disk.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/run-command.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/diagnostics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/unmanaged-disk.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/boot-diagnostics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/nic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/secret.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/image.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/extension.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/encryption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/vm/extension/image.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/availability-set.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/disk.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/run-command.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/diagnostics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/unmanaged-disk.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/boot-diagnostics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/nic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/secret.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/image.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/extension.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/encryption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/vm/extension/image.yml"
   ],
   "name": "AzureVm",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest",
@@ -161,7 +161,7 @@
             "type": "string",
             "format": "--secrets {value}",
             "secret": true,
-            "help": "One or many Key Vault secrets as JSON strings or files via `@&amp;lt;file path&amp;gt;` containing `[{ \"sourceVault\": { \"id\": \"value\" }, \"vaultCertificates\": [{ \"certificateUrl\": \"value\", \"certificateStore\": \"cert store name (only on windows)\"}] }]`."
+            "help": "One or many Key Vault secrets as JSON strings or files via `@{path}` containing `[{ \"sourceVault\": { \"id\": \"value\" }, \"vaultCertificates\": [{ \"certificateUrl\": \"value\", \"certificateStore\": \"cert store name (only on windows)\"}] }]`."
           },
           {
             "name": "Size",
@@ -404,6 +404,12 @@
             "type": "VmCreateStorageSku",
             "format": "--storage-sku {value}",
             "help": "The SKU of the storage account with which to persist VM."
+          },
+          {
+            "name": "UltraSsdEnabled",
+            "type": "bool",
+            "format": "--ultra-ssd-enabled",
+            "help": "(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account."
           },
           {
             "name": "UseUnmanagedDisk",
@@ -2805,7 +2811,8 @@
       "values": [
         "premium_lrs",
         "standardssd_lrs",
-        "standard_lrs"
+        "standard_lrs",
+        "ultrassd_lrs"
       ]
     },
     {

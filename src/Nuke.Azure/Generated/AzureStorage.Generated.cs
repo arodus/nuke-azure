@@ -844,6 +844,70 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureStorageContainerImmutabilityPolicyCreate(Configure<AzureStorageContainerImmutabilityPolicyCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureStorageContainerImmutabilityPolicyCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureStorageContainerImmutabilityPolicyDelete(Configure<AzureStorageContainerImmutabilityPolicyDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureStorageContainerImmutabilityPolicyDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureStorageContainerImmutabilityPolicyExtend(Configure<AzureStorageContainerImmutabilityPolicyExtendSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureStorageContainerImmutabilityPolicyExtendSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureStorageContainerImmutabilityPolicyLock(Configure<AzureStorageContainerImmutabilityPolicyLockSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureStorageContainerImmutabilityPolicyLockSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureStorageContainerImmutabilityPolicyShow(Configure<AzureStorageContainerImmutabilityPolicyShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureStorageContainerImmutabilityPolicyShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureStorageContainerLegalHoldClear(Configure<AzureStorageContainerLegalHoldClearSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureStorageContainerLegalHoldClearSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureStorageContainerLegalHoldSet(Configure<AzureStorageContainerLegalHoldSetSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureStorageContainerLegalHoldSetSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureStorageContainerLegalHoldShow(Configure<AzureStorageContainerLegalHoldShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureStorageContainerLegalHoldShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureStorageContainerMetadataShow(Configure<AzureStorageContainerMetadataShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerMetadataShowSettings());
@@ -1546,6 +1610,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The queue name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Specifies whether to throw an exception if the queue already exists.</p></summary>
         public virtual bool? FailOnExist { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
@@ -1576,6 +1642,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage queue create")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--fail-on-exist", FailOnExist)
               .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
               .Add("--timeout {value}", Timeout)
@@ -1603,6 +1670,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The queue name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Specifies whether to throw an exception if the queue doesn't exist.</p></summary>
         public virtual bool? FailNotExist { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -1630,6 +1699,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage queue delete")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--fail-not-exist", FailNotExist)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
@@ -1656,6 +1726,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The queue name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -1681,6 +1753,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage queue exists")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
@@ -1706,6 +1779,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The queue name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Specifies the UTC datetime (Y-m-d'T'H:M'Z') at which the SAS becomes invalid. Do not use if a stored access policy is referenced with --id that specifies this value.</p></summary>
         public virtual string Expiry { get; internal set; }
         /// <summary><p>Only permit requests made with the HTTPS protocol. If omitted, requests from both the HTTP and HTTPS protocol are permitted.</p></summary>
@@ -1741,6 +1816,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage queue generate-sas")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--expiry {value}", Expiry)
               .Add("--https-only {value}", HttpsOnly)
               .Add("--ip {value}", Ip)
@@ -1769,6 +1845,8 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureStorage executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Specifies that container metadata be returned in the response.</p></summary>
         public virtual string IncludeMetadata { get; internal set; }
         /// <summary><p>An opaque continuation token. This value can be retrieved from the next_marker field of a previous generator object if num_results was specified and that generator has finished enumerating results. If specified, this generator will begin returning results from the point where the previous generator stopped.</p></summary>
@@ -1801,6 +1879,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("storage queue list")
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--include-metadata {value}", IncludeMetadata)
               .Add("--marker {value}", Marker)
               .Add("--num-results {value}", NumResults)
@@ -1828,6 +1907,8 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureStorage executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -1852,6 +1933,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("storage queue stats")
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
@@ -1877,6 +1959,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The queue name.</p></summary>
         public virtual string QueueName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -1902,6 +1986,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage message clear")
               .Add("--queue-name {value}", QueueName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
@@ -1931,6 +2016,8 @@ namespace Nuke.Azure
         public virtual string PopReceipt { get; internal set; }
         /// <summary><p>The queue name.</p></summary>
         public virtual string QueueName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -1958,6 +2045,7 @@ namespace Nuke.Azure
               .Add("--id {value}", Id)
               .Add("--pop-receipt {value}", PopReceipt)
               .Add("--queue-name {value}", QueueName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
@@ -1983,6 +2071,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The queue name.</p></summary>
         public virtual string QueueName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>A nonzero integer value that specifies the number of messages to retrieve from the queue, up to a maximum of 32. If fewer are visible, the visible messages are returned. By default, a single message is retrieved from the queue with this operation.</p></summary>
         public virtual string NumMessages { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -2012,6 +2102,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage message get")
               .Add("--queue-name {value}", QueueName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--num-messages {value}", NumMessages)
               .Add("--timeout {value}", Timeout)
               .Add("--visibility-timeout {value}", VisibilityTimeout)
@@ -2039,6 +2130,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The queue name.</p></summary>
         public virtual string QueueName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>A nonzero integer value that specifies the number of messages to peek from the queue, up to a maximum of 32. By default, a single message is peeked from the queue with this operation.</p></summary>
         public virtual string NumMessages { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -2066,6 +2159,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage message peek")
               .Add("--queue-name {value}", QueueName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--num-messages {value}", NumMessages)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
@@ -2094,6 +2188,8 @@ namespace Nuke.Azure
         public virtual string Content { get; internal set; }
         /// <summary><p>The queue name.</p></summary>
         public virtual string QueueName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Specifies the time-to-live interval for the message, in seconds. The time-to-live may be any positive number or -1 for infinity. If this parameter is omitted, the default time-to-live is 7 days.</p></summary>
         public virtual string TimeToLive { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -2124,6 +2220,7 @@ namespace Nuke.Azure
               .Add("storage message put")
               .Add("--content {value}", Content)
               .Add("--queue-name {value}", QueueName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--time-to-live {value}", TimeToLive)
               .Add("--timeout {value}", Timeout)
               .Add("--visibility-timeout {value}", VisibilityTimeout)
@@ -2157,6 +2254,8 @@ namespace Nuke.Azure
         public virtual string QueueName { get; internal set; }
         /// <summary><p>Specifies the new visibility timeout value, in seconds, relative to server time. The new value must be larger than or equal to 0, and cannot be larger than 7 days. The visibility timeout of a message cannot be set to a value later than the expiry time. A message can be updated until it has been deleted or has expired.</p></summary>
         public virtual string VisibilityTimeout { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Message content, up to 64KB in size.</p></summary>
         public virtual string Content { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -2187,6 +2286,7 @@ namespace Nuke.Azure
               .Add("--pop-receipt {value}", PopReceipt)
               .Add("--queue-name {value}", QueueName)
               .Add("--visibility-timeout {value}", VisibilityTimeout)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--content {value}", Content)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
@@ -4686,6 +4786,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The container name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Throw an exception if the container already exists.</p></summary>
         public virtual string FailOnExist { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
@@ -4718,6 +4820,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage container create")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--fail-on-exist {value}", FailOnExist)
               .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
               .Add("--public-access", PublicAccess)
@@ -4746,15 +4849,17 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The container name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Throw an exception if the container does not exist.</p></summary>
         public virtual string FailNotExist { get; internal set; }
         /// <summary><p>If specified, delete_container only succeeds if the container's lease is active and matches this ID. Required if the container has an active lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -4779,6 +4884,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage container delete")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--fail-not-exist {value}", FailNotExist)
               .Add("--lease-id {value}", LeaseId)
               .Add("--timeout {value}", Timeout)
@@ -4808,6 +4914,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The container name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -4833,6 +4941,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage container exists")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
@@ -4858,6 +4967,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The container name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Response header value for Cache-Control when resource is accessed using this shared access signature.</p></summary>
         public virtual string CacheControl { get; internal set; }
         /// <summary><p>Response header value for Content-Disposition when resource is accessed using this shared access signature.</p></summary>
@@ -4903,6 +5014,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage container generate-sas")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--cache-control {value}", CacheControl)
               .Add("--content-disposition {value}", ContentDisposition)
               .Add("--content-encoding {value}", ContentEncoding)
@@ -4936,6 +5048,8 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureStorage executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Specifies that container metadata be returned in the response.</p></summary>
         public virtual string IncludeMetadata { get; internal set; }
         /// <summary><p>Specifies the maximum number of containers to return. A single list request may return up to 1000 contianers and potentially a continuation token which should be followed to get additional resutls.</p></summary>
@@ -4966,6 +5080,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("storage container list")
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--include-metadata {value}", IncludeMetadata)
               .Add("--num-results {value}", NumResults)
               .Add("--prefix {value}", Prefix)
@@ -4994,15 +5109,17 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The container name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>If specified, set_container_acl only succeeds if the container's lease is active and matches this ID.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Specifies whether data in the container may be accessed publically. By default, container data is private ("off") to the account owner. Use "blob" to allow public read access for blobs. Use "container" to allow public read and list access to the entire container.</p></summary>
         public virtual bool? PublicAccess { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -5027,6 +5144,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage container set-permission")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--public-access", PublicAccess)
               .Add("--timeout {value}", Timeout)
@@ -5056,6 +5174,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The container name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>If specified, get_container_properties only succeeds if the container's lease is active and matches this ID.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -5083,6 +5203,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage container show")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
@@ -5109,6 +5230,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The container name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>If specified, get_container_acl only succeeds if the container's lease is active and matches this ID.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -5136,6 +5259,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage container show-permission")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
@@ -5629,6 +5753,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The blob name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Required if the blob has associated snapshots.</p></summary>
         public virtual StorageBlobDeleteSnapshots DeleteSnapshots { get; internal set; }
         /// <summary><p>Required if the blob has an active lease.</p></summary>
@@ -5639,11 +5765,11 @@ namespace Nuke.Azure
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -5669,6 +5795,7 @@ namespace Nuke.Azure
               .Add("storage blob delete")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--delete-snapshots {value}", DeleteSnapshots)
               .Add("--lease-id {value}", LeaseId)
               .Add("--snapshot {value}", Snapshot)
@@ -5701,6 +5828,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The blob container from where the files will be deleted.</p></summary>
         public virtual string Source { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Required if the blob has associated snapshots.</p></summary>
         public virtual StorageBlobDeleteSnapshots DeleteSnapshots { get; internal set; }
         /// <summary><p>Show the summary of the operations to be taken instead of actually deleting the file(s).</p></summary>
@@ -5713,11 +5842,11 @@ namespace Nuke.Azure
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*).</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -5742,6 +5871,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage blob delete-batch")
               .Add("--source {value}", Source)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--delete-snapshots {value}", DeleteSnapshots)
               .Add("--dryrun", Dryrun)
               .Add("--lease-id {value}", LeaseId)
@@ -5779,6 +5909,8 @@ namespace Nuke.Azure
         public virtual string File { get; internal set; }
         /// <summary><p>The blob name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>End of byte range to use for downloading a section of the blob. If end_range is given, start_range must be provided. The start_range and end_range params are inclusive. Ex: start_range=0, end_range=511 will download first 512 bytes of blob.</p></summary>
         public virtual string EndRange { get; internal set; }
         /// <summary><p>Required if the blob has an active lease.</p></summary>
@@ -5801,11 +5933,11 @@ namespace Nuke.Azure
         public virtual string ValidateContent { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -5832,6 +5964,7 @@ namespace Nuke.Azure
               .Add("--container-name {value}", ContainerName)
               .Add("--file {value}", File)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--end-range {value}", EndRange)
               .Add("--lease-id {value}", LeaseId)
               .Add("--max-connections {value}", MaxConnections)
@@ -5872,6 +6005,8 @@ namespace Nuke.Azure
         public virtual string Destination { get; internal set; }
         /// <summary><p>The blob container from where the files will be downloaded.</p></summary>
         public virtual string Source { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Show the summary of the operations to be taken instead of actually downloading the file(s).</p></summary>
         public virtual bool? Dryrun { get; internal set; }
         /// <summary><p>Maximum number of parallel connections to use when the blob size exceeds 64MB.</p></summary>
@@ -5906,6 +6041,7 @@ namespace Nuke.Azure
               .Add("storage blob download-batch")
               .Add("--destination {value}", Destination)
               .Add("--source {value}", Source)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--dryrun", Dryrun)
               .Add("--max-connections {value}", MaxConnections)
               .Add("--no-progress", NoProgress)
@@ -5937,6 +6073,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The blob name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>The snapshot parameter is an opaque DateTime value that, when present, specifies the snapshot.</p></summary>
         public virtual string Snapshot { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -5965,6 +6103,7 @@ namespace Nuke.Azure
               .Add("storage blob exists")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--snapshot {value}", Snapshot)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
@@ -5993,6 +6132,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The blob name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Response header value for Cache-Control when resource is accessed using this shared access signature.</p></summary>
         public virtual string CacheControl { get; internal set; }
         /// <summary><p>Response header value for Content-Disposition when resource is accessed using this shared access signature.</p></summary>
@@ -6039,6 +6180,7 @@ namespace Nuke.Azure
               .Add("storage blob generate-sas")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--cache-control {value}", CacheControl)
               .Add("--content-disposition {value}", ContentDisposition)
               .Add("--content-encoding {value}", ContentEncoding)
@@ -6074,6 +6216,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The container name.</p></summary>
         public virtual string ContainerName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>When the request includes this parameter, the operation returns a BlobPrefix element in the result list that acts as a placeholder for all blobs whose names begin with the same substring up to the appearance of the delimiter character. The delimiter may be a single character or a string.</p></summary>
         public virtual string Delimiter { get; internal set; }
         /// <summary><p>Specifies additional datasets to include: (c)opy-info, (m)etadata, (s)napshots, (d)eleted-soft. Can be combined.</p></summary>
@@ -6107,6 +6251,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage blob list")
               .Add("--container-name {value}", ContainerName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--delimiter {value}", Delimiter)
               .Add("--include {value}", Include)
               .Add("--num-results {value}", NumResults)
@@ -6140,6 +6285,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>The tier value to set the blob to.</p></summary>
         public virtual string Tier { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>The timeout parameter is expressed in seconds. This method may make multiple calls to the Azure service and the timeout will apply to each call individually.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>The blob type.</p></summary>
@@ -6169,6 +6316,7 @@ namespace Nuke.Azure
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
               .Add("--tier {value}", Tier)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--type {value}", Type)
               .Add("--account-key {value}", AccountKey)
@@ -6197,6 +6345,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The blob name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Required if the blob has an active lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>The snapshot parameter is an opaque DateTime value that, when present, specifies the blob snapshot to retrieve.</p></summary>
@@ -6205,11 +6355,11 @@ namespace Nuke.Azure
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -6235,6 +6385,7 @@ namespace Nuke.Azure
               .Add("storage blob show")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--snapshot {value}", Snapshot)
               .Add("--timeout {value}", Timeout)
@@ -6268,6 +6419,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The blob name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Required if the blob has an active lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
@@ -6277,11 +6430,11 @@ namespace Nuke.Azure
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -6307,6 +6460,7 @@ namespace Nuke.Azure
               .Add("storage blob snapshot")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
               .Add("--timeout {value}", Timeout)
@@ -6340,6 +6494,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The blob name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -6366,6 +6522,7 @@ namespace Nuke.Azure
               .Add("storage blob undelete")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
@@ -6393,6 +6550,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The blob name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>The cache control string.</p></summary>
         public virtual string ContentCacheControl { get; internal set; }
         /// <summary><p>Conveys additional information about how to process the response payload, and can also be used to attach additional metadata.</p></summary>
@@ -6411,11 +6570,11 @@ namespace Nuke.Azure
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -6441,6 +6600,7 @@ namespace Nuke.Azure
               .Add("storage blob update")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--content-cache-control {value}", ContentCacheControl)
               .Add("--content-disposition {value}", ContentDisposition)
               .Add("--content-encoding {value}", ContentEncoding)
@@ -6481,6 +6641,8 @@ namespace Nuke.Azure
         public virtual string File { get; internal set; }
         /// <summary><p>The blob name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>The cache control string.</p></summary>
         public virtual string ContentCacheControl { get; internal set; }
         /// <summary><p>Conveys additional information about how to process the response payload, and can also be used to attach additional metadata.</p></summary>
@@ -6516,11 +6678,11 @@ namespace Nuke.Azure
         public virtual string ValidateContent { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -6547,6 +6709,7 @@ namespace Nuke.Azure
               .Add("--container-name {value}", ContainerName)
               .Add("--file {value}", File)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--content-cache-control {value}", ContentCacheControl)
               .Add("--content-disposition {value}", ContentDisposition)
               .Add("--content-encoding {value}", ContentEncoding)
@@ -6593,6 +6756,8 @@ namespace Nuke.Azure
         public virtual string Destination { get; internal set; }
         /// <summary><p>The directory where the files to be uploaded are located.</p></summary>
         public virtual string Source { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>The destination path that will be appended to the blob name.</p></summary>
         public virtual string DestinationPath { get; internal set; }
         /// <summary><p>Show the summary of the operations to be taken instead of actually uploading the file(s).</p></summary>
@@ -6632,11 +6797,11 @@ namespace Nuke.Azure
         public virtual string ValidateContent { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*).</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -6662,6 +6827,7 @@ namespace Nuke.Azure
               .Add("storage blob upload-batch")
               .Add("--destination {value}", Destination)
               .Add("--source {value}", Source)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--destination-path {value}", DestinationPath)
               .Add("--dryrun", Dryrun)
               .Add("--lease-id {value}", LeaseId)
@@ -6710,6 +6876,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The blob name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Protocol to use.</p></summary>
         public virtual StorageFileProtocol Protocol { get; internal set; }
         /// <summary><p>Shared access signature token created with generate_shared_access_signature.</p></summary>
@@ -6738,6 +6906,7 @@ namespace Nuke.Azure
               .Add("storage blob url")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--protocol {value}", Protocol)
               .Add("--sas-token {value}", SasToken)
               .Add("--snapshot {value}", Snapshot)
@@ -6764,15 +6933,17 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The container name.</p></summary>
         public virtual string ContainerName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires. A non-infinite lease can be between 15 and 60 seconds. A lease duration cannot be changed using renew or change. Default is -1 (infinite lease).</p></summary>
         public virtual string LeaseDuration { get; internal set; }
         /// <summary><p>Proposed lease ID, in a GUID string format. The Blob service returns 400 (Invalid request) if the proposed lease ID is not in the correct format.</p></summary>
         public virtual string ProposedLeaseId { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -6797,6 +6968,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage container lease acquire")
               .Add("--container-name {value}", ContainerName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-duration {value}", LeaseDuration)
               .Add("--proposed-lease-id {value}", ProposedLeaseId)
               .Add("--timeout {value}", Timeout)
@@ -6826,13 +6998,15 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The container name.</p></summary>
         public virtual string ContainerName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>This is the proposed duration of seconds that the lease should continue before it is broken, between 0 and 60 seconds. This break period is only used if it is shorter than the time remaining on the lease. If longer, the time remaining on the lease is used. A new lease will not be available before the break period has expired, but the lease may be held for longer than the break period. If this header does not appear with a break operation, a fixed-duration lease breaks after the remaining lease period elapses, and an infinite lease breaks immediately.</p></summary>
         public virtual string LeaseBreakPeriod { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -6857,6 +7031,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage container lease break")
               .Add("--container-name {value}", ContainerName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-break-period {value}", LeaseBreakPeriod)
               .Add("--timeout {value}", Timeout)
               .Add("--if-modified-since {value}", IfModifiedSince)
@@ -6889,11 +7064,13 @@ namespace Nuke.Azure
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Proposed lease ID, in a GUID string format. The Blob service returns 400 (Invalid request) if the proposed lease ID is not in the correct format.</p></summary>
         public virtual string ProposedLeaseId { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -6920,6 +7097,7 @@ namespace Nuke.Azure
               .Add("--container-name {value}", ContainerName)
               .Add("--lease-id {value}", LeaseId)
               .Add("--proposed-lease-id {value}", ProposedLeaseId)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--if-modified-since {value}", IfModifiedSince)
               .Add("--if-unmodified-since {value}", IfUnmodifiedSince)
@@ -6949,11 +7127,13 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>Lease ID for active lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -6979,6 +7159,7 @@ namespace Nuke.Azure
               .Add("storage container lease release")
               .Add("--container-name {value}", ContainerName)
               .Add("--lease-id {value}", LeaseId)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--if-modified-since {value}", IfModifiedSince)
               .Add("--if-unmodified-since {value}", IfUnmodifiedSince)
@@ -7008,11 +7189,13 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>Lease ID for active lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -7038,6 +7221,7 @@ namespace Nuke.Azure
               .Add("storage container lease renew")
               .Add("--container-name {value}", ContainerName)
               .Add("--lease-id {value}", LeaseId)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--if-modified-since {value}", IfModifiedSince)
               .Add("--if-unmodified-since {value}", IfUnmodifiedSince)
@@ -7067,6 +7251,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The stored access policy name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Expiration UTC datetime in (Y-m-d'T'H:M:S'Z').</p></summary>
         public virtual string Expiry { get; internal set; }
         /// <summary><p>The container lease ID.</p></summary>
@@ -7099,6 +7285,7 @@ namespace Nuke.Azure
               .Add("storage container policy create")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--expiry {value}", Expiry)
               .Add("--lease-id {value}", LeaseId)
               .Add("--permissions {value}", Permissions)
@@ -7129,6 +7316,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The stored access policy name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>The container lease ID.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -7155,6 +7344,7 @@ namespace Nuke.Azure
               .Add("storage container policy delete")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
@@ -7180,6 +7370,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The container name.</p></summary>
         public virtual string ContainerName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>The container lease ID.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -7205,6 +7397,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage container policy list")
               .Add("--container-name {value}", ContainerName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
@@ -7232,6 +7425,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The stored access policy name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>The container lease ID.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -7258,6 +7453,7 @@ namespace Nuke.Azure
               .Add("storage container policy show")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
@@ -7285,6 +7481,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The stored access policy name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Expiration UTC datetime in (Y-m-d'T'H:M:S'Z').</p></summary>
         public virtual string Expiry { get; internal set; }
         /// <summary><p>The container lease ID.</p></summary>
@@ -7317,6 +7515,7 @@ namespace Nuke.Azure
               .Add("storage container policy update")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--expiry {value}", Expiry)
               .Add("--lease-id {value}", LeaseId)
               .Add("--permissions {value}", Permissions)
@@ -7325,6 +7524,361 @@ namespace Nuke.Azure
               .Add("--account-name {value}", AccountName)
               .Add("--connection-string {value}", ConnectionString)
               .Add("--sas-token {value}", SasToken)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureStorageContainerImmutabilityPolicyCreateSettings
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureStorageContainerImmutabilityPolicyCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureStorage executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The container name.</p></summary>
+        public virtual string ContainerName { get; internal set; }
+        /// <summary><p>The immutability period for the blobs in the container since the policy creation, in days.</p></summary>
+        public virtual string Period { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        public virtual string IfMatch { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("storage container immutability-policy create")
+              .Add("--account-name {value}", AccountName)
+              .Add("--container-name {value}", ContainerName)
+              .Add("--period {value}", Period)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--if-match {value}", IfMatch)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureStorageContainerImmutabilityPolicyDeleteSettings
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureStorageContainerImmutabilityPolicyDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureStorage executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The container name.</p></summary>
+        public virtual string ContainerName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        public virtual string IfMatch { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("storage container immutability-policy delete")
+              .Add("--account-name {value}", AccountName)
+              .Add("--container-name {value}", ContainerName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--if-match {value}", IfMatch)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureStorageContainerImmutabilityPolicyExtendSettings
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureStorageContainerImmutabilityPolicyExtendSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureStorage executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The container name.</p></summary>
+        public virtual string ContainerName { get; internal set; }
+        /// <summary><p>The immutability period for the blobs in the container since the policy creation, in days.</p></summary>
+        public virtual string Period { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        public virtual string IfMatch { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("storage container immutability-policy extend")
+              .Add("--account-name {value}", AccountName)
+              .Add("--container-name {value}", ContainerName)
+              .Add("--period {value}", Period)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--if-match {value}", IfMatch)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureStorageContainerImmutabilityPolicyLockSettings
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureStorageContainerImmutabilityPolicyLockSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureStorage executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The container name.</p></summary>
+        public virtual string ContainerName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        public virtual string IfMatch { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("storage container immutability-policy lock")
+              .Add("--account-name {value}", AccountName)
+              .Add("--container-name {value}", ContainerName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--if-match {value}", IfMatch)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureStorageContainerImmutabilityPolicyShowSettings
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureStorageContainerImmutabilityPolicyShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureStorage executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The container name.</p></summary>
+        public virtual string ContainerName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        public virtual string IfMatch { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("storage container immutability-policy show")
+              .Add("--account-name {value}", AccountName)
+              .Add("--container-name {value}", ContainerName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--if-match {value}", IfMatch)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureStorageContainerLegalHoldClearSettings
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureStorageContainerLegalHoldClearSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureStorage executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The container name.</p></summary>
+        public virtual string ContainerName { get; internal set; }
+        /// <summary><p>Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("storage container legal-hold clear")
+              .Add("--account-name {value}", AccountName)
+              .Add("--container-name {value}", ContainerName)
+              .Add("--tags {value}", Tags)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureStorageContainerLegalHoldSetSettings
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureStorageContainerLegalHoldSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureStorage executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The container name.</p></summary>
+        public virtual string ContainerName { get; internal set; }
+        /// <summary><p>Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("storage container legal-hold set")
+              .Add("--account-name {value}", AccountName)
+              .Add("--container-name {value}", ContainerName)
+              .Add("--tags {value}", Tags)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureStorageContainerLegalHoldShowSettings
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureStorageContainerLegalHoldShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureStorage executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The container name.</p></summary>
+        public virtual string ContainerName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("storage container legal-hold show")
+              .Add("--account-name {value}", AccountName)
+              .Add("--container-name {value}", ContainerName)
+              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -7345,6 +7899,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The container name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>If specified, get_container_metadata only succeeds if the container's lease is active and matches this ID.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -7372,6 +7928,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage container metadata show")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
@@ -7398,6 +7955,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The container name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>If specified, set_container_metadata only succeeds if the container's lease is active and matches this ID.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
@@ -7405,7 +7964,7 @@ namespace Nuke.Azure
         internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -7430,6 +7989,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage container metadata update")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
               .Add("--timeout {value}", Timeout)
@@ -8758,6 +9318,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>The queue name.</p></summary>
         public virtual string QueueName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Expiration UTC datetime in (Y-m-d'T'H:M:S'Z').</p></summary>
         public virtual string Expiry { get; internal set; }
         /// <summary><p>Allowed values: (a)dd (p)rocess (r)ead (u)pdate. Can be combined.</p></summary>
@@ -8788,6 +9350,7 @@ namespace Nuke.Azure
               .Add("storage queue policy create")
               .Add("--name {value}", Name)
               .Add("--queue-name {value}", QueueName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--expiry {value}", Expiry)
               .Add("--permissions {value}", Permissions)
               .Add("--start {value}", Start)
@@ -8817,6 +9380,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>The queue name.</p></summary>
         public virtual string QueueName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
         /// <summary><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
@@ -8841,6 +9406,7 @@ namespace Nuke.Azure
               .Add("storage queue policy delete")
               .Add("--name {value}", Name)
               .Add("--queue-name {value}", QueueName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
               .Add("--connection-string {value}", ConnectionString)
@@ -8865,6 +9431,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The queue name.</p></summary>
         public virtual string QueueName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
         /// <summary><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
@@ -8888,6 +9456,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage queue policy list")
               .Add("--queue-name {value}", QueueName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
               .Add("--connection-string {value}", ConnectionString)
@@ -8914,6 +9483,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>The queue name.</p></summary>
         public virtual string QueueName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
         /// <summary><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
@@ -8938,6 +9509,7 @@ namespace Nuke.Azure
               .Add("storage queue policy show")
               .Add("--name {value}", Name)
               .Add("--queue-name {value}", QueueName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
               .Add("--connection-string {value}", ConnectionString)
@@ -8964,6 +9536,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>The queue name.</p></summary>
         public virtual string QueueName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Expiration UTC datetime in (Y-m-d'T'H:M:S'Z').</p></summary>
         public virtual string Expiry { get; internal set; }
         /// <summary><p>Allowed values: (a)dd (p)rocess (r)ead (u)pdate. Can be combined.</p></summary>
@@ -8994,6 +9568,7 @@ namespace Nuke.Azure
               .Add("storage queue policy update")
               .Add("--name {value}", Name)
               .Add("--queue-name {value}", QueueName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--expiry {value}", Expiry)
               .Add("--permissions {value}", Permissions)
               .Add("--start {value}", Start)
@@ -9021,6 +9596,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The queue name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -9046,6 +9623,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage queue metadata show")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
@@ -9071,6 +9649,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The queue name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
         internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
@@ -9099,6 +9679,7 @@ namespace Nuke.Azure
             arguments
               .Add("storage queue metadata update")
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
@@ -9129,6 +9710,8 @@ namespace Nuke.Azure
         public virtual string DestinationBlob { get; internal set; }
         /// <summary><p>The container name.</p></summary>
         public virtual string DestinationContainer { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Required if the destination blob has an active infinite lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -9158,6 +9741,7 @@ namespace Nuke.Azure
               .Add("--copy-id {value}", CopyId)
               .Add("--destination-blob {value}", DestinationBlob)
               .Add("--destination-container {value}", DestinationContainer)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
@@ -9186,6 +9770,8 @@ namespace Nuke.Azure
         public virtual string DestinationBlob { get; internal set; }
         /// <summary><p>The container name.</p></summary>
         public virtual string DestinationContainer { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>The lease ID specified for this header must match the lease ID of the destination blob. If the request does not include the lease ID or it is not valid, the operation fails with status code 412 (Precondition Failed).</p></summary>
         public virtual string DestinationLeaseId { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
@@ -9253,6 +9839,7 @@ namespace Nuke.Azure
               .Add("storage blob copy start")
               .Add("--destination-blob {value}", DestinationBlob)
               .Add("--destination-container {value}", DestinationContainer)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--destination-lease-id {value}", DestinationLeaseId)
               .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
               .Add("--timeout {value}", Timeout)
@@ -9296,6 +9883,8 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureStorage executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>The blob container where the selected source files or blobs will be copied to.</p></summary>
         public virtual string DestinationContainer { get; internal set; }
         /// <summary><p>The destination path that will be appended to the blob name.</p></summary>
@@ -9338,6 +9927,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("storage blob copy start-batch")
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--destination-container {value}", DestinationContainer)
               .Add("--destination-path {value}", DestinationPath)
               .Add("--dryrun {value}", Dryrun)
@@ -9376,6 +9966,8 @@ namespace Nuke.Azure
         public virtual string CopyId { get; internal set; }
         /// <summary><p>The blob name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Required if the destination blob has an active infinite lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -9405,6 +9997,7 @@ namespace Nuke.Azure
               .Add("--container-name {value}", ContainerName)
               .Add("--copy-id {value}", CopyId)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
@@ -9433,6 +10026,8 @@ namespace Nuke.Azure
         public virtual string DestinationBlob { get; internal set; }
         /// <summary><p>The container name.</p></summary>
         public virtual string DestinationContainer { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>The lease ID specified for this header must match the lease ID of the destination blob. If the request does not include the lease ID or it is not valid, the operation fails with status code 412 (Precondition Failed).</p></summary>
         public virtual string DestinationLeaseId { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
@@ -9488,6 +10083,7 @@ namespace Nuke.Azure
               .Add("storage blob incremental-copy start")
               .Add("--destination-blob {value}", DestinationBlob)
               .Add("--destination-container {value}", DestinationContainer)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--destination-lease-id {value}", DestinationLeaseId)
               .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
               .Add("--timeout {value}", Timeout)
@@ -9529,6 +10125,8 @@ namespace Nuke.Azure
         public virtual string BlobName { get; internal set; }
         /// <summary><p>The container name.</p></summary>
         public virtual string ContainerName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires. A non-infinite lease can be between 15 and 60 seconds. A lease duration cannot be changed using renew or change. Default is -1 (infinite lease).</p></summary>
         public virtual string LeaseDuration { get; internal set; }
         /// <summary><p>Proposed lease ID, in a GUID string format. The Blob service returns 400 (Invalid request) if the proposed lease ID is not in the correct format.</p></summary>
@@ -9537,11 +10135,11 @@ namespace Nuke.Azure
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -9567,6 +10165,7 @@ namespace Nuke.Azure
               .Add("storage blob lease acquire")
               .Add("--blob-name {value}", BlobName)
               .Add("--container-name {value}", ContainerName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-duration {value}", LeaseDuration)
               .Add("--proposed-lease-id {value}", ProposedLeaseId)
               .Add("--timeout {value}", Timeout)
@@ -9600,17 +10199,19 @@ namespace Nuke.Azure
         public virtual string BlobName { get; internal set; }
         /// <summary><p>The container name.</p></summary>
         public virtual string ContainerName { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>For a break operation, this is the proposed duration of seconds that the lease should continue before it is broken, between 0 and 60 seconds. This break period is only used if it is shorter than the time remaining on the lease. If longer, the time remaining on the lease is used. A new lease will not be available before the break period has expired, but the lease may be held for longer than the break period. If this header does not appear with a break operation, a fixed-duration lease breaks after the remaining lease period elapses, and an infinite lease breaks immediately.</p></summary>
         public virtual string LeaseBreakPeriod { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -9636,6 +10237,7 @@ namespace Nuke.Azure
               .Add("storage blob lease break")
               .Add("--blob-name {value}", BlobName)
               .Add("--container-name {value}", ContainerName)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-break-period {value}", LeaseBreakPeriod)
               .Add("--timeout {value}", Timeout)
               .Add("--if-match {value}", IfMatch)
@@ -9672,15 +10274,17 @@ namespace Nuke.Azure
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Proposed lease ID, in a GUID string format. The Blob service returns 400 (Invalid request) if the proposed lease ID is not in the correct format.</p></summary>
         public virtual string ProposedLeaseId { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -9708,6 +10312,7 @@ namespace Nuke.Azure
               .Add("--container-name {value}", ContainerName)
               .Add("--lease-id {value}", LeaseId)
               .Add("--proposed-lease-id {value}", ProposedLeaseId)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--if-match {value}", IfMatch)
               .Add("--if-modified-since {value}", IfModifiedSince)
@@ -9741,15 +10346,17 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>Lease ID for active lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -9776,6 +10383,7 @@ namespace Nuke.Azure
               .Add("--blob-name {value}", BlobName)
               .Add("--container-name {value}", ContainerName)
               .Add("--lease-id {value}", LeaseId)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--if-match {value}", IfMatch)
               .Add("--if-modified-since {value}", IfModifiedSince)
@@ -9809,15 +10417,17 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>Lease ID for active lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -9844,6 +10454,7 @@ namespace Nuke.Azure
               .Add("--blob-name {value}", BlobName)
               .Add("--container-name {value}", ContainerName)
               .Add("--lease-id {value}", LeaseId)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--if-match {value}", IfMatch)
               .Add("--if-modified-since {value}", IfModifiedSince)
@@ -9875,6 +10486,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The blob name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Required if the blob has an active lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>The snapshot parameter is an opaque value that, when present, specifies the blob snapshot to retrieve.</p></summary>
@@ -9883,11 +10496,11 @@ namespace Nuke.Azure
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -9913,6 +10526,7 @@ namespace Nuke.Azure
               .Add("storage blob metadata show")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--snapshot {value}", Snapshot)
               .Add("--timeout {value}", Timeout)
@@ -9946,6 +10560,8 @@ namespace Nuke.Azure
         public virtual string ContainerName { get; internal set; }
         /// <summary><p>The blob name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Required if the blob has an active lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
@@ -9955,11 +10571,11 @@ namespace Nuke.Azure
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
         public virtual string IfMatch { get; internal set; }
-        /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfModifiedSince { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.</p></summary>
         public virtual string IfNoneMatch { get; internal set; }
-        /// <summary><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         public virtual string IfUnmodifiedSince { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
@@ -9985,6 +10601,7 @@ namespace Nuke.Azure
               .Add("storage blob metadata update")
               .Add("--container-name {value}", ContainerName)
               .Add("--name {value}", Name)
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--lease-id {value}", LeaseId)
               .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
               .Add("--timeout {value}", Timeout)
@@ -10014,6 +10631,8 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureStorage executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -10038,6 +10657,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("storage blob service-properties show")
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
@@ -10061,6 +10681,8 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureStorage executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -10085,6 +10707,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("storage blob service-properties delete-policy show")
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--timeout {value}", Timeout)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
@@ -10108,6 +10731,8 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureStorage executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        public virtual StorageQueueAuthMode AuthMode { get; internal set; }
         /// <summary><p>Number of days that soft-deleted blob will be retained. Must be in range [1,365].</p></summary>
         public virtual int? DaysRetained { get; internal set; }
         /// <summary><p>Enables/disables soft-delete.</p></summary>
@@ -10134,6 +10759,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("storage blob service-properties delete-policy update")
+              .Add("--auth-mode {value}", AuthMode)
               .Add("--days-retained {value}", DaysRetained)
               .Add("--enable", Enable)
               .Add("--account-key {value}", AccountKey)
@@ -11595,6 +12221,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageQueueCreateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueCreateSettings SetAuthMode(this AzureStorageQueueCreateSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageQueueCreateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueCreateSettings ResetAuthMode(this AzureStorageQueueCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region FailOnExist
         /// <summary><p><em>Sets <see cref="AzureStorageQueueCreateSettings.FailOnExist"/>.</em></p><p>Specifies whether to throw an exception if the queue already exists.</p></summary>
         [Pure]
@@ -11885,6 +12529,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageQueueDeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueDeleteSettings SetAuthMode(this AzureStorageQueueDeleteSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageQueueDeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueDeleteSettings ResetAuthMode(this AzureStorageQueueDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region FailNotExist
         /// <summary><p><em>Sets <see cref="AzureStorageQueueDeleteSettings.FailNotExist"/>.</em></p><p>Specifies whether to throw an exception if the queue doesn't exist.</p></summary>
         [Pure]
@@ -12133,6 +12795,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageQueueExistsSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueExistsSettings SetAuthMode(this AzureStorageQueueExistsSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageQueueExistsSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueExistsSettings ResetAuthMode(this AzureStorageQueueExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureStorageQueueExistsSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         [Pure]
@@ -12336,6 +13016,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageQueueGenerateSasSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueGenerateSasSettings SetAuthMode(this AzureStorageQueueGenerateSasSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageQueueGenerateSasSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueGenerateSasSettings ResetAuthMode(this AzureStorageQueueGenerateSasSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -12617,6 +13315,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureStorageQueueListSettingsExtensions
     {
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageQueueListSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueListSettings SetAuthMode(this AzureStorageQueueListSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageQueueListSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueListSettings ResetAuthMode(this AzureStorageQueueListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region IncludeMetadata
         /// <summary><p><em>Sets <see cref="AzureStorageQueueListSettings.IncludeMetadata"/>.</em></p><p>Specifies that container metadata be returned in the response.</p></summary>
         [Pure]
@@ -12877,6 +13593,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureStorageQueueStatsSettingsExtensions
     {
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageQueueStatsSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueStatsSettings SetAuthMode(this AzureStorageQueueStatsSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageQueueStatsSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueStatsSettings ResetAuthMode(this AzureStorageQueueStatsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureStorageQueueStatsSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         [Pure]
@@ -13080,6 +13814,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageMessageClearSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageMessageClearSettings SetAuthMode(this AzureStorageMessageClearSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageMessageClearSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageMessageClearSettings ResetAuthMode(this AzureStorageMessageClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -13325,6 +14077,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageMessageDeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageMessageDeleteSettings SetAuthMode(this AzureStorageMessageDeleteSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageMessageDeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageMessageDeleteSettings ResetAuthMode(this AzureStorageMessageDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureStorageMessageDeleteSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         [Pure]
@@ -13528,6 +14298,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageMessageGetSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageMessageGetSettings SetAuthMode(this AzureStorageMessageGetSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageMessageGetSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageMessageGetSettings ResetAuthMode(this AzureStorageMessageGetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -13773,6 +14561,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageMessagePeekSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageMessagePeekSettings SetAuthMode(this AzureStorageMessagePeekSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageMessagePeekSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageMessagePeekSettings ResetAuthMode(this AzureStorageMessagePeekSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region NumMessages
         /// <summary><p><em>Sets <see cref="AzureStorageMessagePeekSettings.NumMessages"/>.</em></p><p>A nonzero integer value that specifies the number of messages to peek from the queue, up to a maximum of 32. By default, a single message is peeked from the queue with this operation.</p></summary>
         [Pure]
@@ -14012,6 +14818,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageMessagePutSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageMessagePutSettings SetAuthMode(this AzureStorageMessagePutSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageMessagePutSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageMessagePutSettings ResetAuthMode(this AzureStorageMessagePutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -14308,6 +15132,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.VisibilityTimeout = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageMessageUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageMessageUpdateSettings SetAuthMode(this AzureStorageMessageUpdateSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageMessageUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageMessageUpdateSettings ResetAuthMode(this AzureStorageMessageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -25909,6 +26751,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerCreateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerCreateSettings SetAuthMode(this AzureStorageContainerCreateSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerCreateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerCreateSettings ResetAuthMode(this AzureStorageContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region FailOnExist
         /// <summary><p><em>Sets <see cref="AzureStorageContainerCreateSettings.FailOnExist"/>.</em></p><p>Throw an exception if the container already exists.</p></summary>
         [Pure]
@@ -26217,6 +27077,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerDeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerDeleteSettings SetAuthMode(this AzureStorageContainerDeleteSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerDeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerDeleteSettings ResetAuthMode(this AzureStorageContainerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region FailNotExist
         /// <summary><p><em>Sets <see cref="AzureStorageContainerDeleteSettings.FailNotExist"/>.</em></p><p>Throw an exception if the container does not exist.</p></summary>
         [Pure]
@@ -26272,7 +27150,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerDeleteSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerDeleteSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerDeleteSettings SetIfModifiedSince(this AzureStorageContainerDeleteSettings toolSettings, string ifModifiedSince)
         {
@@ -26280,7 +27158,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerDeleteSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerDeleteSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerDeleteSettings ResetIfModifiedSince(this AzureStorageContainerDeleteSettings toolSettings)
         {
@@ -26290,7 +27168,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerDeleteSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerDeleteSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerDeleteSettings SetIfUnmodifiedSince(this AzureStorageContainerDeleteSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -26298,7 +27176,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerDeleteSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerDeleteSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerDeleteSettings ResetIfUnmodifiedSince(this AzureStorageContainerDeleteSettings toolSettings)
         {
@@ -26492,6 +27370,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerExistsSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerExistsSettings SetAuthMode(this AzureStorageContainerExistsSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerExistsSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerExistsSettings ResetAuthMode(this AzureStorageContainerExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -26698,6 +27594,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerGenerateSasSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerGenerateSasSettings SetAuthMode(this AzureStorageContainerGenerateSasSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerGenerateSasSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerGenerateSasSettings ResetAuthMode(this AzureStorageContainerGenerateSasSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -27069,6 +27983,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureStorageContainerListSettingsExtensions
     {
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerListSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerListSettings SetAuthMode(this AzureStorageContainerListSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerListSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerListSettings ResetAuthMode(this AzureStorageContainerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region IncludeMetadata
         /// <summary><p><em>Sets <see cref="AzureStorageContainerListSettings.IncludeMetadata"/>.</em></p><p>Specifies that container metadata be returned in the response.</p></summary>
         [Pure]
@@ -27329,6 +28261,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerSetPermissionSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerSetPermissionSettings SetAuthMode(this AzureStorageContainerSetPermissionSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerSetPermissionSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerSetPermissionSettings ResetAuthMode(this AzureStorageContainerSetPermissionSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseId
         /// <summary><p><em>Sets <see cref="AzureStorageContainerSetPermissionSettings.LeaseId"/>.</em></p><p>If specified, set_container_acl only succeeds if the container's lease is active and matches this ID.</p></summary>
         [Pure]
@@ -27408,7 +28358,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerSetPermissionSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerSetPermissionSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerSetPermissionSettings SetIfModifiedSince(this AzureStorageContainerSetPermissionSettings toolSettings, string ifModifiedSince)
         {
@@ -27416,7 +28366,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerSetPermissionSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerSetPermissionSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerSetPermissionSettings ResetIfModifiedSince(this AzureStorageContainerSetPermissionSettings toolSettings)
         {
@@ -27426,7 +28376,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerSetPermissionSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerSetPermissionSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerSetPermissionSettings SetIfUnmodifiedSince(this AzureStorageContainerSetPermissionSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -27434,7 +28384,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerSetPermissionSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerSetPermissionSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerSetPermissionSettings ResetIfUnmodifiedSince(this AzureStorageContainerSetPermissionSettings toolSettings)
         {
@@ -27628,6 +28578,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerShowSettings SetAuthMode(this AzureStorageContainerShowSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerShowSettings ResetAuthMode(this AzureStorageContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -27852,6 +28820,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerShowPermissionSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerShowPermissionSettings SetAuthMode(this AzureStorageContainerShowPermissionSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerShowPermissionSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerShowPermissionSettings ResetAuthMode(this AzureStorageContainerShowPermissionSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -30113,6 +31099,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobDeleteSettings SetAuthMode(this AzureStorageBlobDeleteSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobDeleteSettings ResetAuthMode(this AzureStorageBlobDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region DeleteSnapshots
         /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteSettings.DeleteSnapshots"/>.</em></p><p>Required if the blob has associated snapshots.</p></summary>
         [Pure]
@@ -30204,7 +31208,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobDeleteSettings SetIfModifiedSince(this AzureStorageBlobDeleteSettings toolSettings, string ifModifiedSince)
         {
@@ -30212,7 +31216,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobDeleteSettings ResetIfModifiedSince(this AzureStorageBlobDeleteSettings toolSettings)
         {
@@ -30240,7 +31244,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobDeleteSettings SetIfUnmodifiedSince(this AzureStorageBlobDeleteSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -30248,7 +31252,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobDeleteSettings ResetIfUnmodifiedSince(this AzureStorageBlobDeleteSettings toolSettings)
         {
@@ -30445,6 +31449,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteBatchSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobDeleteBatchSettings SetAuthMode(this AzureStorageBlobDeleteBatchSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteBatchSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobDeleteBatchSettings ResetAuthMode(this AzureStorageBlobDeleteBatchSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region DeleteSnapshots
         /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteBatchSettings.DeleteSnapshots"/>.</em></p><p>Required if the blob has associated snapshots.</p></summary>
         [Pure]
@@ -30578,7 +31600,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteBatchSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteBatchSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobDeleteBatchSettings SetIfModifiedSince(this AzureStorageBlobDeleteBatchSettings toolSettings, string ifModifiedSince)
         {
@@ -30586,7 +31608,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteBatchSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteBatchSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobDeleteBatchSettings ResetIfModifiedSince(this AzureStorageBlobDeleteBatchSettings toolSettings)
         {
@@ -30614,7 +31636,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteBatchSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteBatchSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobDeleteBatchSettings SetIfUnmodifiedSince(this AzureStorageBlobDeleteBatchSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -30622,7 +31644,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteBatchSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteBatchSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobDeleteBatchSettings ResetIfUnmodifiedSince(this AzureStorageBlobDeleteBatchSettings toolSettings)
         {
@@ -30855,6 +31877,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDownloadSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobDownloadSettings SetAuthMode(this AzureStorageBlobDownloadSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDownloadSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobDownloadSettings ResetAuthMode(this AzureStorageBlobDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region EndRange
         /// <summary><p><em>Sets <see cref="AzureStorageBlobDownloadSettings.EndRange"/>.</em></p><p>End of byte range to use for downloading a section of the blob. If end_range is given, start_range must be provided. The start_range and end_range params are inclusive. Ex: start_range=0, end_range=511 will download first 512 bytes of blob.</p></summary>
         [Pure]
@@ -31078,7 +32118,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobDownloadSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDownloadSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobDownloadSettings SetIfModifiedSince(this AzureStorageBlobDownloadSettings toolSettings, string ifModifiedSince)
         {
@@ -31086,7 +32126,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobDownloadSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDownloadSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobDownloadSettings ResetIfModifiedSince(this AzureStorageBlobDownloadSettings toolSettings)
         {
@@ -31114,7 +32154,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobDownloadSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDownloadSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobDownloadSettings SetIfUnmodifiedSince(this AzureStorageBlobDownloadSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -31122,7 +32162,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobDownloadSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDownloadSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobDownloadSettings ResetIfUnmodifiedSince(this AzureStorageBlobDownloadSettings toolSettings)
         {
@@ -31334,6 +32374,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Source = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDownloadBatchSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobDownloadBatchSettings SetAuthMode(this AzureStorageBlobDownloadBatchSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDownloadBatchSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobDownloadBatchSettings ResetAuthMode(this AzureStorageBlobDownloadBatchSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -31681,6 +32739,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobExistsSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobExistsSettings SetAuthMode(this AzureStorageBlobExistsSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobExistsSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobExistsSettings ResetAuthMode(this AzureStorageBlobExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Snapshot
         /// <summary><p><em>Sets <see cref="AzureStorageBlobExistsSettings.Snapshot"/>.</em></p><p>The snapshot parameter is an opaque DateTime value that, when present, specifies the snapshot.</p></summary>
         [Pure]
@@ -31920,6 +32996,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobGenerateSasSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobGenerateSasSettings SetAuthMode(this AzureStorageBlobGenerateSasSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobGenerateSasSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobGenerateSasSettings ResetAuthMode(this AzureStorageBlobGenerateSasSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -32309,6 +33403,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobListSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobListSettings SetAuthMode(this AzureStorageBlobListSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobListSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobListSettings ResetAuthMode(this AzureStorageBlobListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Delimiter
         /// <summary><p><em>Sets <see cref="AzureStorageBlobListSettings.Delimiter"/>.</em></p><p>When the request includes this parameter, the operation returns a BlobPrefix element in the result list that acts as a placeholder for all blobs whose names begin with the same substring up to the appearance of the delimiter character. The delimiter may be a single character or a string.</p></summary>
         [Pure]
@@ -32623,6 +33735,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobSetTierSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobSetTierSettings SetAuthMode(this AzureStorageBlobSetTierSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobSetTierSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobSetTierSettings ResetAuthMode(this AzureStorageBlobSetTierSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureStorageBlobSetTierSettings.Timeout"/>.</em></p><p>The timeout parameter is expressed in seconds. This method may make multiple calls to the Azure service and the timeout will apply to each call individually.</p></summary>
         [Pure]
@@ -32865,6 +33995,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobShowSettings SetAuthMode(this AzureStorageBlobShowSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobShowSettings ResetAuthMode(this AzureStorageBlobShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseId
         /// <summary><p><em>Sets <see cref="AzureStorageBlobShowSettings.LeaseId"/>.</em></p><p>Required if the blob has an active lease.</p></summary>
         [Pure]
@@ -32938,7 +34086,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobShowSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobShowSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobShowSettings SetIfModifiedSince(this AzureStorageBlobShowSettings toolSettings, string ifModifiedSince)
         {
@@ -32946,7 +34094,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobShowSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobShowSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobShowSettings ResetIfModifiedSince(this AzureStorageBlobShowSettings toolSettings)
         {
@@ -32974,7 +34122,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobShowSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobShowSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobShowSettings SetIfUnmodifiedSince(this AzureStorageBlobShowSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -32982,7 +34130,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobShowSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobShowSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobShowSettings ResetIfUnmodifiedSince(this AzureStorageBlobShowSettings toolSettings)
         {
@@ -33197,6 +34345,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobSnapshotSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobSnapshotSettings SetAuthMode(this AzureStorageBlobSnapshotSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobSnapshotSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobSnapshotSettings ResetAuthMode(this AzureStorageBlobSnapshotSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseId
         /// <summary><p><em>Sets <see cref="AzureStorageBlobSnapshotSettings.LeaseId"/>.</em></p><p>Required if the blob has an active lease.</p></summary>
         [Pure]
@@ -33294,7 +34460,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobSnapshotSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobSnapshotSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobSnapshotSettings SetIfModifiedSince(this AzureStorageBlobSnapshotSettings toolSettings, string ifModifiedSince)
         {
@@ -33302,7 +34468,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobSnapshotSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobSnapshotSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobSnapshotSettings ResetIfModifiedSince(this AzureStorageBlobSnapshotSettings toolSettings)
         {
@@ -33330,7 +34496,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobSnapshotSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobSnapshotSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobSnapshotSettings SetIfUnmodifiedSince(this AzureStorageBlobSnapshotSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -33338,7 +34504,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobSnapshotSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobSnapshotSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobSnapshotSettings ResetIfUnmodifiedSince(this AzureStorageBlobSnapshotSettings toolSettings)
         {
@@ -33550,6 +34716,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUndeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUndeleteSettings SetAuthMode(this AzureStorageBlobUndeleteSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUndeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUndeleteSettings ResetAuthMode(this AzureStorageBlobUndeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -33777,6 +34961,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUpdateSettings SetAuthMode(this AzureStorageBlobUpdateSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUpdateSettings ResetAuthMode(this AzureStorageBlobUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region ContentCacheControl
         /// <summary><p><em>Sets <see cref="AzureStorageBlobUpdateSettings.ContentCacheControl"/>.</em></p><p>The cache control string.</p></summary>
         [Pure]
@@ -33940,7 +35142,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobUpdateSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUpdateSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobUpdateSettings SetIfModifiedSince(this AzureStorageBlobUpdateSettings toolSettings, string ifModifiedSince)
         {
@@ -33948,7 +35150,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobUpdateSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUpdateSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobUpdateSettings ResetIfModifiedSince(this AzureStorageBlobUpdateSettings toolSettings)
         {
@@ -33976,7 +35178,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobUpdateSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUpdateSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobUpdateSettings SetIfUnmodifiedSince(this AzureStorageBlobUpdateSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -33984,7 +35186,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobUpdateSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUpdateSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobUpdateSettings ResetIfUnmodifiedSince(this AzureStorageBlobUpdateSettings toolSettings)
         {
@@ -34214,6 +35416,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUploadSettings SetAuthMode(this AzureStorageBlobUploadSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUploadSettings ResetAuthMode(this AzureStorageBlobUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -34572,7 +35792,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobUploadSettings SetIfModifiedSince(this AzureStorageBlobUploadSettings toolSettings, string ifModifiedSince)
         {
@@ -34580,7 +35800,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobUploadSettings ResetIfModifiedSince(this AzureStorageBlobUploadSettings toolSettings)
         {
@@ -34608,7 +35828,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobUploadSettings SetIfUnmodifiedSince(this AzureStorageBlobUploadSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -34616,7 +35836,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobUploadSettings ResetIfUnmodifiedSince(this AzureStorageBlobUploadSettings toolSettings)
         {
@@ -34828,6 +36048,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Source = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadBatchSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUploadBatchSettings SetAuthMode(this AzureStorageBlobUploadBatchSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadBatchSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUploadBatchSettings ResetAuthMode(this AzureStorageBlobUploadBatchSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -35246,7 +36484,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadBatchSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadBatchSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobUploadBatchSettings SetIfModifiedSince(this AzureStorageBlobUploadBatchSettings toolSettings, string ifModifiedSince)
         {
@@ -35254,7 +36492,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadBatchSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadBatchSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobUploadBatchSettings ResetIfModifiedSince(this AzureStorageBlobUploadBatchSettings toolSettings)
         {
@@ -35282,7 +36520,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadBatchSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadBatchSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobUploadBatchSettings SetIfUnmodifiedSince(this AzureStorageBlobUploadBatchSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -35290,7 +36528,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadBatchSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadBatchSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobUploadBatchSettings ResetIfUnmodifiedSince(this AzureStorageBlobUploadBatchSettings toolSettings)
         {
@@ -35502,6 +36740,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUrlSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUrlSettings SetAuthMode(this AzureStorageBlobUrlSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUrlSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUrlSettings ResetAuthMode(this AzureStorageBlobUrlSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -35729,6 +36985,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseAcquireSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLeaseAcquireSettings SetAuthMode(this AzureStorageContainerLeaseAcquireSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseAcquireSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLeaseAcquireSettings ResetAuthMode(this AzureStorageContainerLeaseAcquireSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseDuration
         /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseAcquireSettings.LeaseDuration"/>.</em></p><p>Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires. A non-infinite lease can be between 15 and 60 seconds. A lease duration cannot be changed using renew or change. Default is -1 (infinite lease).</p></summary>
         [Pure]
@@ -35784,7 +37058,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseAcquireSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseAcquireSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseAcquireSettings SetIfModifiedSince(this AzureStorageContainerLeaseAcquireSettings toolSettings, string ifModifiedSince)
         {
@@ -35792,7 +37066,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseAcquireSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseAcquireSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseAcquireSettings ResetIfModifiedSince(this AzureStorageContainerLeaseAcquireSettings toolSettings)
         {
@@ -35802,7 +37076,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseAcquireSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseAcquireSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseAcquireSettings SetIfUnmodifiedSince(this AzureStorageContainerLeaseAcquireSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -35810,7 +37084,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseAcquireSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseAcquireSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseAcquireSettings ResetIfUnmodifiedSince(this AzureStorageContainerLeaseAcquireSettings toolSettings)
         {
@@ -36007,6 +37281,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseBreakSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLeaseBreakSettings SetAuthMode(this AzureStorageContainerLeaseBreakSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseBreakSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLeaseBreakSettings ResetAuthMode(this AzureStorageContainerLeaseBreakSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseBreakPeriod
         /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseBreakSettings.LeaseBreakPeriod"/>.</em></p><p>This is the proposed duration of seconds that the lease should continue before it is broken, between 0 and 60 seconds. This break period is only used if it is shorter than the time remaining on the lease. If longer, the time remaining on the lease is used. A new lease will not be available before the break period has expired, but the lease may be held for longer than the break period. If this header does not appear with a break operation, a fixed-duration lease breaks after the remaining lease period elapses, and an infinite lease breaks immediately.</p></summary>
         [Pure]
@@ -36044,7 +37336,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseBreakSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseBreakSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseBreakSettings SetIfModifiedSince(this AzureStorageContainerLeaseBreakSettings toolSettings, string ifModifiedSince)
         {
@@ -36052,7 +37344,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseBreakSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseBreakSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseBreakSettings ResetIfModifiedSince(this AzureStorageContainerLeaseBreakSettings toolSettings)
         {
@@ -36062,7 +37354,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseBreakSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseBreakSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseBreakSettings SetIfUnmodifiedSince(this AzureStorageContainerLeaseBreakSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -36070,7 +37362,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseBreakSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseBreakSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseBreakSettings ResetIfUnmodifiedSince(this AzureStorageContainerLeaseBreakSettings toolSettings)
         {
@@ -36303,6 +37595,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseChangeSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLeaseChangeSettings SetAuthMode(this AzureStorageContainerLeaseChangeSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseChangeSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLeaseChangeSettings ResetAuthMode(this AzureStorageContainerLeaseChangeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseChangeSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         [Pure]
@@ -36322,7 +37632,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseChangeSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseChangeSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseChangeSettings SetIfModifiedSince(this AzureStorageContainerLeaseChangeSettings toolSettings, string ifModifiedSince)
         {
@@ -36330,7 +37640,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseChangeSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseChangeSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseChangeSettings ResetIfModifiedSince(this AzureStorageContainerLeaseChangeSettings toolSettings)
         {
@@ -36340,7 +37650,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseChangeSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseChangeSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseChangeSettings SetIfUnmodifiedSince(this AzureStorageContainerLeaseChangeSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -36348,7 +37658,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseChangeSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseChangeSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseChangeSettings ResetIfUnmodifiedSince(this AzureStorageContainerLeaseChangeSettings toolSettings)
         {
@@ -36563,6 +37873,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseReleaseSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLeaseReleaseSettings SetAuthMode(this AzureStorageContainerLeaseReleaseSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseReleaseSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLeaseReleaseSettings ResetAuthMode(this AzureStorageContainerLeaseReleaseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseReleaseSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         [Pure]
@@ -36582,7 +37910,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseReleaseSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseReleaseSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseReleaseSettings SetIfModifiedSince(this AzureStorageContainerLeaseReleaseSettings toolSettings, string ifModifiedSince)
         {
@@ -36590,7 +37918,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseReleaseSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseReleaseSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseReleaseSettings ResetIfModifiedSince(this AzureStorageContainerLeaseReleaseSettings toolSettings)
         {
@@ -36600,7 +37928,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseReleaseSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseReleaseSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseReleaseSettings SetIfUnmodifiedSince(this AzureStorageContainerLeaseReleaseSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -36608,7 +37936,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseReleaseSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseReleaseSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseReleaseSettings ResetIfUnmodifiedSince(this AzureStorageContainerLeaseReleaseSettings toolSettings)
         {
@@ -36823,6 +38151,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseRenewSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLeaseRenewSettings SetAuthMode(this AzureStorageContainerLeaseRenewSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseRenewSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLeaseRenewSettings ResetAuthMode(this AzureStorageContainerLeaseRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseRenewSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         [Pure]
@@ -36842,7 +38188,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseRenewSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseRenewSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseRenewSettings SetIfModifiedSince(this AzureStorageContainerLeaseRenewSettings toolSettings, string ifModifiedSince)
         {
@@ -36850,7 +38196,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseRenewSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseRenewSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseRenewSettings ResetIfModifiedSince(this AzureStorageContainerLeaseRenewSettings toolSettings)
         {
@@ -36860,7 +38206,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseRenewSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLeaseRenewSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseRenewSettings SetIfUnmodifiedSince(this AzureStorageContainerLeaseRenewSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -36868,7 +38214,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseRenewSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLeaseRenewSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerLeaseRenewSettings ResetIfUnmodifiedSince(this AzureStorageContainerLeaseRenewSettings toolSettings)
         {
@@ -37080,6 +38426,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerPolicyCreateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerPolicyCreateSettings SetAuthMode(this AzureStorageContainerPolicyCreateSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerPolicyCreateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerPolicyCreateSettings ResetAuthMode(this AzureStorageContainerPolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -37361,6 +38725,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerPolicyDeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerPolicyDeleteSettings SetAuthMode(this AzureStorageContainerPolicyDeleteSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerPolicyDeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerPolicyDeleteSettings ResetAuthMode(this AzureStorageContainerPolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseId
         /// <summary><p><em>Sets <see cref="AzureStorageContainerPolicyDeleteSettings.LeaseId"/>.</em></p><p>The container lease ID.</p></summary>
         [Pure]
@@ -37564,6 +38946,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ContainerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerPolicyListSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerPolicyListSettings SetAuthMode(this AzureStorageContainerPolicyListSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerPolicyListSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerPolicyListSettings ResetAuthMode(this AzureStorageContainerPolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -37791,6 +39191,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerPolicyShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerPolicyShowSettings SetAuthMode(this AzureStorageContainerPolicyShowSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerPolicyShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerPolicyShowSettings ResetAuthMode(this AzureStorageContainerPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseId
         /// <summary><p><em>Sets <see cref="AzureStorageContainerPolicyShowSettings.LeaseId"/>.</em></p><p>The container lease ID.</p></summary>
         [Pure]
@@ -38012,6 +39430,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerPolicyUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerPolicyUpdateSettings SetAuthMode(this AzureStorageContainerPolicyUpdateSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerPolicyUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerPolicyUpdateSettings ResetAuthMode(this AzureStorageContainerPolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -38251,6 +39687,1384 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureStorageContainerImmutabilityPolicyCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureStorageContainerImmutabilityPolicyCreateSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings SetAccountName(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings ResetAccountName(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ContainerName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings SetContainerName(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings, string containerName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = containerName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings ResetContainerName(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Period
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.Period"/>.</em></p><p>The immutability period for the blobs in the container since the policy creation, in days.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings SetPeriod(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings, string period)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Period = period;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.Period"/>.</em></p><p>The immutability period for the blobs in the container since the policy creation, in days.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings ResetPeriod(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Period = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings SetResourceGroup(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings ResetResourceGroup(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IfMatch
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.IfMatch"/>.</em></p><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings SetIfMatch(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings, string ifMatch)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IfMatch = ifMatch;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.IfMatch"/>.</em></p><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings ResetIfMatch(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IfMatch = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings SetDebug(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings ResetDebug(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings SetHelp(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings ResetHelp(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings SetOutput(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings ResetOutput(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings SetQuery(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings ResetQuery(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings SetVerbose(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyCreateSettings ResetVerbose(this AzureStorageContainerImmutabilityPolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureStorageContainerImmutabilityPolicyDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureStorageContainerImmutabilityPolicyDeleteSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings SetAccountName(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings ResetAccountName(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ContainerName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings SetContainerName(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings, string containerName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = containerName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings ResetContainerName(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings SetResourceGroup(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings ResetResourceGroup(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IfMatch
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.IfMatch"/>.</em></p><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings SetIfMatch(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings, string ifMatch)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IfMatch = ifMatch;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.IfMatch"/>.</em></p><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings ResetIfMatch(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IfMatch = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings SetDebug(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings ResetDebug(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings SetHelp(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings ResetHelp(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings SetOutput(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings ResetOutput(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings SetQuery(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings ResetQuery(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings SetVerbose(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyDeleteSettings ResetVerbose(this AzureStorageContainerImmutabilityPolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureStorageContainerImmutabilityPolicyExtendSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureStorageContainerImmutabilityPolicyExtendSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings SetAccountName(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings ResetAccountName(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ContainerName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings SetContainerName(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings, string containerName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = containerName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings ResetContainerName(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Period
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.Period"/>.</em></p><p>The immutability period for the blobs in the container since the policy creation, in days.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings SetPeriod(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings, string period)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Period = period;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.Period"/>.</em></p><p>The immutability period for the blobs in the container since the policy creation, in days.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings ResetPeriod(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Period = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings SetResourceGroup(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings ResetResourceGroup(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IfMatch
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.IfMatch"/>.</em></p><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings SetIfMatch(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings, string ifMatch)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IfMatch = ifMatch;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.IfMatch"/>.</em></p><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings ResetIfMatch(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IfMatch = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings SetDebug(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings ResetDebug(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings SetHelp(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings ResetHelp(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings SetOutput(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings ResetOutput(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings SetQuery(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings ResetQuery(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings SetVerbose(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyExtendSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyExtendSettings ResetVerbose(this AzureStorageContainerImmutabilityPolicyExtendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureStorageContainerImmutabilityPolicyLockSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureStorageContainerImmutabilityPolicyLockSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings SetAccountName(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings ResetAccountName(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ContainerName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings SetContainerName(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings, string containerName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = containerName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings ResetContainerName(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings SetResourceGroup(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings ResetResourceGroup(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IfMatch
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.IfMatch"/>.</em></p><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings SetIfMatch(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings, string ifMatch)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IfMatch = ifMatch;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.IfMatch"/>.</em></p><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings ResetIfMatch(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IfMatch = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings SetDebug(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings ResetDebug(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings SetHelp(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings ResetHelp(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings SetOutput(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings ResetOutput(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings SetQuery(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings ResetQuery(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings SetVerbose(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyLockSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyLockSettings ResetVerbose(this AzureStorageContainerImmutabilityPolicyLockSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureStorageContainerImmutabilityPolicyShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureStorageContainerImmutabilityPolicyShowSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings SetAccountName(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings ResetAccountName(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ContainerName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings SetContainerName(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings, string containerName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = containerName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings ResetContainerName(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings SetResourceGroup(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings ResetResourceGroup(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IfMatch
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.IfMatch"/>.</em></p><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings SetIfMatch(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings, string ifMatch)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IfMatch = ifMatch;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.IfMatch"/>.</em></p><p>The entity state (ETag) version of the immutability policy to update. A value of "*" can be used to apply the operation only if the immutability policy already exists. If omitted, this operation will always be applied.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings ResetIfMatch(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IfMatch = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings SetDebug(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings ResetDebug(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings SetHelp(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings ResetHelp(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings SetOutput(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings ResetOutput(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings SetQuery(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings ResetQuery(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings SetVerbose(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerImmutabilityPolicyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerImmutabilityPolicyShowSettings ResetVerbose(this AzureStorageContainerImmutabilityPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureStorageContainerLegalHoldClearSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureStorageContainerLegalHoldClearSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldClearSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings SetAccountName(this AzureStorageContainerLegalHoldClearSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldClearSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings ResetAccountName(this AzureStorageContainerLegalHoldClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ContainerName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldClearSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings SetContainerName(this AzureStorageContainerLegalHoldClearSettings toolSettings, string containerName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = containerName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldClearSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings ResetContainerName(this AzureStorageContainerLegalHoldClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldClearSettings.Tags"/>.</em></p><p>Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings SetTags(this AzureStorageContainerLegalHoldClearSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldClearSettings.Tags"/>.</em></p><p>Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings ResetTags(this AzureStorageContainerLegalHoldClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldClearSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings SetResourceGroup(this AzureStorageContainerLegalHoldClearSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldClearSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings ResetResourceGroup(this AzureStorageContainerLegalHoldClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldClearSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings SetDebug(this AzureStorageContainerLegalHoldClearSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldClearSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings ResetDebug(this AzureStorageContainerLegalHoldClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldClearSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings SetHelp(this AzureStorageContainerLegalHoldClearSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldClearSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings ResetHelp(this AzureStorageContainerLegalHoldClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldClearSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings SetOutput(this AzureStorageContainerLegalHoldClearSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldClearSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings ResetOutput(this AzureStorageContainerLegalHoldClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldClearSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings SetQuery(this AzureStorageContainerLegalHoldClearSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldClearSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings ResetQuery(this AzureStorageContainerLegalHoldClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldClearSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings SetVerbose(this AzureStorageContainerLegalHoldClearSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldClearSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldClearSettings ResetVerbose(this AzureStorageContainerLegalHoldClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureStorageContainerLegalHoldSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureStorageContainerLegalHoldSetSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldSetSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings SetAccountName(this AzureStorageContainerLegalHoldSetSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldSetSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings ResetAccountName(this AzureStorageContainerLegalHoldSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ContainerName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldSetSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings SetContainerName(this AzureStorageContainerLegalHoldSetSettings toolSettings, string containerName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = containerName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldSetSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings ResetContainerName(this AzureStorageContainerLegalHoldSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldSetSettings.Tags"/>.</em></p><p>Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings SetTags(this AzureStorageContainerLegalHoldSetSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldSetSettings.Tags"/>.</em></p><p>Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings ResetTags(this AzureStorageContainerLegalHoldSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings SetResourceGroup(this AzureStorageContainerLegalHoldSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings ResetResourceGroup(this AzureStorageContainerLegalHoldSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings SetDebug(this AzureStorageContainerLegalHoldSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings ResetDebug(this AzureStorageContainerLegalHoldSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings SetHelp(this AzureStorageContainerLegalHoldSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings ResetHelp(this AzureStorageContainerLegalHoldSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings SetOutput(this AzureStorageContainerLegalHoldSetSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings ResetOutput(this AzureStorageContainerLegalHoldSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings SetQuery(this AzureStorageContainerLegalHoldSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings ResetQuery(this AzureStorageContainerLegalHoldSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings SetVerbose(this AzureStorageContainerLegalHoldSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldSetSettings ResetVerbose(this AzureStorageContainerLegalHoldSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureStorageContainerLegalHoldShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureStorageContainerLegalHoldShowSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldShowSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings SetAccountName(this AzureStorageContainerLegalHoldShowSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldShowSettings.AccountName"/>.</em></p><p>The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings ResetAccountName(this AzureStorageContainerLegalHoldShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ContainerName
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldShowSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings SetContainerName(this AzureStorageContainerLegalHoldShowSettings toolSettings, string containerName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = containerName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldShowSettings.ContainerName"/>.</em></p><p>The container name.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings ResetContainerName(this AzureStorageContainerLegalHoldShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings SetResourceGroup(this AzureStorageContainerLegalHoldShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings ResetResourceGroup(this AzureStorageContainerLegalHoldShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings SetDebug(this AzureStorageContainerLegalHoldShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings ResetDebug(this AzureStorageContainerLegalHoldShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings SetHelp(this AzureStorageContainerLegalHoldShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings ResetHelp(this AzureStorageContainerLegalHoldShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings SetOutput(this AzureStorageContainerLegalHoldShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings ResetOutput(this AzureStorageContainerLegalHoldShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings SetQuery(this AzureStorageContainerLegalHoldShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings ResetQuery(this AzureStorageContainerLegalHoldShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerLegalHoldShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings SetVerbose(this AzureStorageContainerLegalHoldShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerLegalHoldShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageContainerLegalHoldShowSettings ResetVerbose(this AzureStorageContainerLegalHoldShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureStorageContainerMetadataShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
     [PublicAPI]
@@ -38272,6 +41086,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerMetadataShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerMetadataShowSettings SetAuthMode(this AzureStorageContainerMetadataShowSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerMetadataShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerMetadataShowSettings ResetAuthMode(this AzureStorageContainerMetadataShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -38499,6 +41331,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerMetadataUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerMetadataUpdateSettings SetAuthMode(this AzureStorageContainerMetadataUpdateSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerMetadataUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageContainerMetadataUpdateSettings ResetAuthMode(this AzureStorageContainerMetadataUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseId
         /// <summary><p><em>Sets <see cref="AzureStorageContainerMetadataUpdateSettings.LeaseId"/>.</em></p><p>If specified, set_container_metadata only succeeds if the container's lease is active and matches this ID.</p></summary>
         [Pure]
@@ -38578,7 +41428,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageContainerMetadataUpdateSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageContainerMetadataUpdateSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerMetadataUpdateSettings SetIfModifiedSince(this AzureStorageContainerMetadataUpdateSettings toolSettings, string ifModifiedSince)
         {
@@ -38586,7 +41436,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageContainerMetadataUpdateSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageContainerMetadataUpdateSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageContainerMetadataUpdateSettings ResetIfModifiedSince(this AzureStorageContainerMetadataUpdateSettings toolSettings)
         {
@@ -44423,6 +47273,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageQueuePolicyCreateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueuePolicyCreateSettings SetAuthMode(this AzureStorageQueuePolicyCreateSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageQueuePolicyCreateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueuePolicyCreateSettings ResetAuthMode(this AzureStorageQueuePolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Expiry
         /// <summary><p><em>Sets <see cref="AzureStorageQueuePolicyCreateSettings.Expiry"/>.</em></p><p>Expiration UTC datetime in (Y-m-d'T'H:M:S'Z').</p></summary>
         [Pure]
@@ -44683,6 +47551,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageQueuePolicyDeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueuePolicyDeleteSettings SetAuthMode(this AzureStorageQueuePolicyDeleteSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageQueuePolicyDeleteSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueuePolicyDeleteSettings ResetAuthMode(this AzureStorageQueuePolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region AccountKey
         /// <summary><p><em>Sets <see cref="AzureStorageQueuePolicyDeleteSettings.AccountKey"/>.</em></p><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         [Pure]
@@ -44868,6 +47754,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageQueuePolicyListSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueuePolicyListSettings SetAuthMode(this AzureStorageQueuePolicyListSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageQueuePolicyListSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueuePolicyListSettings ResetAuthMode(this AzureStorageQueuePolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -45077,6 +47981,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageQueuePolicyShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueuePolicyShowSettings SetAuthMode(this AzureStorageQueuePolicyShowSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageQueuePolicyShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueuePolicyShowSettings ResetAuthMode(this AzureStorageQueuePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region AccountKey
         /// <summary><p><em>Sets <see cref="AzureStorageQueuePolicyShowSettings.AccountKey"/>.</em></p><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         [Pure]
@@ -45280,6 +48202,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageQueuePolicyUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueuePolicyUpdateSettings SetAuthMode(this AzureStorageQueuePolicyUpdateSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageQueuePolicyUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueuePolicyUpdateSettings ResetAuthMode(this AzureStorageQueuePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -45525,6 +48465,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageQueueMetadataShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueMetadataShowSettings SetAuthMode(this AzureStorageQueueMetadataShowSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageQueueMetadataShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueMetadataShowSettings ResetAuthMode(this AzureStorageQueueMetadataShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureStorageQueueMetadataShowSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         [Pure]
@@ -45728,6 +48686,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageQueueMetadataUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueMetadataUpdateSettings SetAuthMode(this AzureStorageQueueMetadataUpdateSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageQueueMetadataUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageQueueMetadataUpdateSettings ResetAuthMode(this AzureStorageQueueMetadataUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -46015,6 +48991,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobCopyCancelSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobCopyCancelSettings SetAuthMode(this AzureStorageBlobCopyCancelSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobCopyCancelSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobCopyCancelSettings ResetAuthMode(this AzureStorageBlobCopyCancelSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseId
         /// <summary><p><em>Sets <see cref="AzureStorageBlobCopyCancelSettings.LeaseId"/>.</em></p><p>Required if the destination blob has an active infinite lease.</p></summary>
         [Pure]
@@ -46254,6 +49248,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DestinationContainer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobCopyStartSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobCopyStartSettings SetAuthMode(this AzureStorageBlobCopyStartSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobCopyStartSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobCopyStartSettings ResetAuthMode(this AzureStorageBlobCopyStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -46829,6 +49841,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureStorageBlobCopyStartBatchSettingsExtensions
     {
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobCopyStartBatchSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobCopyStartBatchSettings SetAuthMode(this AzureStorageBlobCopyStartBatchSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobCopyStartBatchSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobCopyStartBatchSettings ResetAuthMode(this AzureStorageBlobCopyStartBatchSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region DestinationContainer
         /// <summary><p><em>Sets <see cref="AzureStorageBlobCopyStartBatchSettings.DestinationContainer"/>.</em></p><p>The blob container where the selected source files or blobs will be copied to.</p></summary>
         [Pure]
@@ -47233,6 +50263,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobIncrementalCopyCancelSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobIncrementalCopyCancelSettings SetAuthMode(this AzureStorageBlobIncrementalCopyCancelSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobIncrementalCopyCancelSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobIncrementalCopyCancelSettings ResetAuthMode(this AzureStorageBlobIncrementalCopyCancelSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseId
         /// <summary><p><em>Sets <see cref="AzureStorageBlobIncrementalCopyCancelSettings.LeaseId"/>.</em></p><p>Required if the destination blob has an active infinite lease.</p></summary>
         [Pure]
@@ -47472,6 +50520,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DestinationContainer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobIncrementalCopyStartSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobIncrementalCopyStartSettings SetAuthMode(this AzureStorageBlobIncrementalCopyStartSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobIncrementalCopyStartSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobIncrementalCopyStartSettings ResetAuthMode(this AzureStorageBlobIncrementalCopyStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
             return toolSettings;
         }
         #endregion
@@ -47975,6 +51041,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseAcquireSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobLeaseAcquireSettings SetAuthMode(this AzureStorageBlobLeaseAcquireSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseAcquireSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobLeaseAcquireSettings ResetAuthMode(this AzureStorageBlobLeaseAcquireSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseDuration
         /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseAcquireSettings.LeaseDuration"/>.</em></p><p>Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires. A non-infinite lease can be between 15 and 60 seconds. A lease duration cannot be changed using renew or change. Default is -1 (infinite lease).</p></summary>
         [Pure]
@@ -48048,7 +51132,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseAcquireSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseAcquireSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseAcquireSettings SetIfModifiedSince(this AzureStorageBlobLeaseAcquireSettings toolSettings, string ifModifiedSince)
         {
@@ -48056,7 +51140,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseAcquireSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseAcquireSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseAcquireSettings ResetIfModifiedSince(this AzureStorageBlobLeaseAcquireSettings toolSettings)
         {
@@ -48084,7 +51168,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseAcquireSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseAcquireSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseAcquireSettings SetIfUnmodifiedSince(this AzureStorageBlobLeaseAcquireSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -48092,7 +51176,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseAcquireSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseAcquireSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseAcquireSettings ResetIfUnmodifiedSince(this AzureStorageBlobLeaseAcquireSettings toolSettings)
         {
@@ -48307,6 +51391,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseBreakSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobLeaseBreakSettings SetAuthMode(this AzureStorageBlobLeaseBreakSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseBreakSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobLeaseBreakSettings ResetAuthMode(this AzureStorageBlobLeaseBreakSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseBreakPeriod
         /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseBreakSettings.LeaseBreakPeriod"/>.</em></p><p>For a break operation, this is the proposed duration of seconds that the lease should continue before it is broken, between 0 and 60 seconds. This break period is only used if it is shorter than the time remaining on the lease. If longer, the time remaining on the lease is used. A new lease will not be available before the break period has expired, but the lease may be held for longer than the break period. If this header does not appear with a break operation, a fixed-duration lease breaks after the remaining lease period elapses, and an infinite lease breaks immediately.</p></summary>
         [Pure]
@@ -48362,7 +51464,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseBreakSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseBreakSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseBreakSettings SetIfModifiedSince(this AzureStorageBlobLeaseBreakSettings toolSettings, string ifModifiedSince)
         {
@@ -48370,7 +51472,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseBreakSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseBreakSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseBreakSettings ResetIfModifiedSince(this AzureStorageBlobLeaseBreakSettings toolSettings)
         {
@@ -48398,7 +51500,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseBreakSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseBreakSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseBreakSettings SetIfUnmodifiedSince(this AzureStorageBlobLeaseBreakSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -48406,7 +51508,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseBreakSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseBreakSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseBreakSettings ResetIfUnmodifiedSince(this AzureStorageBlobLeaseBreakSettings toolSettings)
         {
@@ -48657,6 +51759,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseChangeSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobLeaseChangeSettings SetAuthMode(this AzureStorageBlobLeaseChangeSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseChangeSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobLeaseChangeSettings ResetAuthMode(this AzureStorageBlobLeaseChangeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseChangeSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         [Pure]
@@ -48694,7 +51814,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseChangeSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseChangeSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseChangeSettings SetIfModifiedSince(this AzureStorageBlobLeaseChangeSettings toolSettings, string ifModifiedSince)
         {
@@ -48702,7 +51822,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseChangeSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseChangeSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseChangeSettings ResetIfModifiedSince(this AzureStorageBlobLeaseChangeSettings toolSettings)
         {
@@ -48730,7 +51850,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseChangeSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseChangeSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseChangeSettings SetIfUnmodifiedSince(this AzureStorageBlobLeaseChangeSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -48738,7 +51858,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseChangeSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseChangeSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseChangeSettings ResetIfUnmodifiedSince(this AzureStorageBlobLeaseChangeSettings toolSettings)
         {
@@ -48971,6 +52091,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseReleaseSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobLeaseReleaseSettings SetAuthMode(this AzureStorageBlobLeaseReleaseSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseReleaseSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobLeaseReleaseSettings ResetAuthMode(this AzureStorageBlobLeaseReleaseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseReleaseSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         [Pure]
@@ -49008,7 +52146,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseReleaseSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseReleaseSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseReleaseSettings SetIfModifiedSince(this AzureStorageBlobLeaseReleaseSettings toolSettings, string ifModifiedSince)
         {
@@ -49016,7 +52154,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseReleaseSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseReleaseSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseReleaseSettings ResetIfModifiedSince(this AzureStorageBlobLeaseReleaseSettings toolSettings)
         {
@@ -49044,7 +52182,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseReleaseSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseReleaseSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseReleaseSettings SetIfUnmodifiedSince(this AzureStorageBlobLeaseReleaseSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -49052,7 +52190,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseReleaseSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseReleaseSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseReleaseSettings ResetIfUnmodifiedSince(this AzureStorageBlobLeaseReleaseSettings toolSettings)
         {
@@ -49285,6 +52423,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseRenewSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobLeaseRenewSettings SetAuthMode(this AzureStorageBlobLeaseRenewSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseRenewSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobLeaseRenewSettings ResetAuthMode(this AzureStorageBlobLeaseRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseRenewSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         [Pure]
@@ -49322,7 +52478,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseRenewSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseRenewSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseRenewSettings SetIfModifiedSince(this AzureStorageBlobLeaseRenewSettings toolSettings, string ifModifiedSince)
         {
@@ -49330,7 +52486,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseRenewSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseRenewSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseRenewSettings ResetIfModifiedSince(this AzureStorageBlobLeaseRenewSettings toolSettings)
         {
@@ -49358,7 +52514,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseRenewSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobLeaseRenewSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseRenewSettings SetIfUnmodifiedSince(this AzureStorageBlobLeaseRenewSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -49366,7 +52522,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseRenewSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobLeaseRenewSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobLeaseRenewSettings ResetIfUnmodifiedSince(this AzureStorageBlobLeaseRenewSettings toolSettings)
         {
@@ -49581,6 +52737,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobMetadataShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobMetadataShowSettings SetAuthMode(this AzureStorageBlobMetadataShowSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobMetadataShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobMetadataShowSettings ResetAuthMode(this AzureStorageBlobMetadataShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseId
         /// <summary><p><em>Sets <see cref="AzureStorageBlobMetadataShowSettings.LeaseId"/>.</em></p><p>Required if the blob has an active lease.</p></summary>
         [Pure]
@@ -49654,7 +52828,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobMetadataShowSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobMetadataShowSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobMetadataShowSettings SetIfModifiedSince(this AzureStorageBlobMetadataShowSettings toolSettings, string ifModifiedSince)
         {
@@ -49662,7 +52836,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobMetadataShowSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobMetadataShowSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobMetadataShowSettings ResetIfModifiedSince(this AzureStorageBlobMetadataShowSettings toolSettings)
         {
@@ -49690,7 +52864,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobMetadataShowSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobMetadataShowSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobMetadataShowSettings SetIfUnmodifiedSince(this AzureStorageBlobMetadataShowSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -49698,7 +52872,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobMetadataShowSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobMetadataShowSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobMetadataShowSettings ResetIfUnmodifiedSince(this AzureStorageBlobMetadataShowSettings toolSettings)
         {
@@ -49913,6 +53087,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobMetadataUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobMetadataUpdateSettings SetAuthMode(this AzureStorageBlobMetadataUpdateSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobMetadataUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobMetadataUpdateSettings ResetAuthMode(this AzureStorageBlobMetadataUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region LeaseId
         /// <summary><p><em>Sets <see cref="AzureStorageBlobMetadataUpdateSettings.LeaseId"/>.</em></p><p>Required if the blob has an active lease.</p></summary>
         [Pure]
@@ -50010,7 +53202,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfModifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobMetadataUpdateSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobMetadataUpdateSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobMetadataUpdateSettings SetIfModifiedSince(this AzureStorageBlobMetadataUpdateSettings toolSettings, string ifModifiedSince)
         {
@@ -50018,7 +53210,7 @@ namespace Nuke.Azure
             toolSettings.IfModifiedSince = ifModifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobMetadataUpdateSettings.IfModifiedSince"/>.</em></p><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobMetadataUpdateSettings.IfModifiedSince"/>.</em></p><p>Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobMetadataUpdateSettings ResetIfModifiedSince(this AzureStorageBlobMetadataUpdateSettings toolSettings)
         {
@@ -50046,7 +53238,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IfUnmodifiedSince
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobMetadataUpdateSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobMetadataUpdateSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobMetadataUpdateSettings SetIfUnmodifiedSince(this AzureStorageBlobMetadataUpdateSettings toolSettings, string ifUnmodifiedSince)
         {
@@ -50054,7 +53246,7 @@ namespace Nuke.Azure
             toolSettings.IfUnmodifiedSince = ifUnmodifiedSince;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobMetadataUpdateSettings.IfUnmodifiedSince"/>.</em></p><p>Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobMetadataUpdateSettings.IfUnmodifiedSince"/>.</em></p><p>Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
         [Pure]
         public static AzureStorageBlobMetadataUpdateSettings ResetIfUnmodifiedSince(this AzureStorageBlobMetadataUpdateSettings toolSettings)
         {
@@ -50233,6 +53425,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureStorageBlobServicePropertiesShowSettingsExtensions
     {
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesShowSettings SetAuthMode(this AzureStorageBlobServicePropertiesShowSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesShowSettings ResetAuthMode(this AzureStorageBlobServicePropertiesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesShowSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         [Pure]
@@ -50421,6 +53631,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureStorageBlobServicePropertiesDeletePolicyShowSettingsExtensions
     {
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetAuthMode(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetAuthMode(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         [Pure]
@@ -50609,6 +53837,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureStorageBlobServicePropertiesDeletePolicyUpdateSettingsExtensions
     {
+        #region AuthMode
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetAuthMode(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, StorageQueueAuthMode authMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = authMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.AuthMode"/>.</em></p><p>The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetAuthMode(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthMode = null;
+            return toolSettings;
+        }
+        #endregion
         #region DaysRetained
         /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.DaysRetained"/>.</em></p><p>Number of days that soft-deleted blob will be retained. Must be in range [1,365].</p></summary>
         [Pure]
@@ -50847,6 +54093,17 @@ namespace Nuke.Azure
         public static StorageCorsAddMethods options = new StorageCorsAddMethods { Value = "options" };
         public static StorageCorsAddMethods post = new StorageCorsAddMethods { Value = "post" };
         public static StorageCorsAddMethods put = new StorageCorsAddMethods { Value = "put" };
+    }
+    #endregion
+    #region StorageQueueAuthMode
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class StorageQueueAuthMode : Enumeration
+    {
+        public static StorageQueueAuthMode key = new StorageQueueAuthMode { Value = "key" };
+        public static StorageQueueAuthMode login = new StorageQueueAuthMode { Value = "login" };
     }
     #endregion
     #region StorageShareDeleteDeleteSnapshots

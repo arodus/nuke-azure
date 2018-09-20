@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/cloud.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/cloud.yml"
   ],
   "name": "AzureCloud",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/cloud?view=azure-cli-latest",
@@ -356,6 +356,7 @@
       "name": "CloudProfile",
       "values": [
         "2017-03-09-profile",
+        "2018-03-01-hybrid",
         "latest"
       ]
     }

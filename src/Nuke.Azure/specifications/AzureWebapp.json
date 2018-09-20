@@ -6,23 +6,29 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/traffic-routing.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/log.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/auth.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/deployment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/config/connection-string.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/config/appsettings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/config/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/config/backup.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/config/hostname.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/config/ssl.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/deployment/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/deployment/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/deployment/slot.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/webapp/deployment/source.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/cors.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/traffic-routing.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/log.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/webjob.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/auth.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/deleted.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/config/storage-account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/config/connection-string.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/config/appsettings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/config/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/config/backup.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/config/hostname.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/config/ssl.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/webjob/triggered.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/webjob/continuous.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/deployment/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/deployment/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/deployment/slot.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/webapp/deployment/source.yml"
   ],
   "name": "AzureWebapp",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest",
@@ -131,6 +137,12 @@
             "type": "string",
             "format": "--startup-file {value}",
             "help": "Linux only. The web's startup file."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           }
         ]
       }
@@ -393,6 +405,96 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CorsAdd",
+      "definiteArgument": "webapp cors add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AllowedOrigins",
+            "type": "string",
+            "format": "--allowed-origins {value}",
+            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"*\" and remove all other origins from the list."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CorsRemove",
+      "definiteArgument": "webapp cors remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AllowedOrigins",
+            "type": "string",
+            "format": "--allowed-origins {value}",
+            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"*\" and remove all other origins from the list."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CorsShow",
+      "definiteArgument": "webapp cors show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
           }
         ]
       }
@@ -706,6 +808,11 @@
       }
     },
     {
+      "postfix": "Webjob",
+      "definiteArgument": "webapp webjob",
+      "settingsClass": {}
+    },
+    {
       "postfix": "AuthShow",
       "definiteArgument": "webapp auth show",
       "settingsClass": {
@@ -912,6 +1019,12 @@
             "help": "Enable or disable auto heal."
           },
           {
+            "name": "FtpsState",
+            "type": "WebappConfigSetFtpsState",
+            "format": "--ftps-state {value}",
+            "help": "Set the Ftps state value for an app. Default value is 'AllAllowed'."
+          },
+          {
             "name": "Http20Enabled",
             "type": "bool",
             "format": "--http20-enabled",
@@ -1025,6 +1138,70 @@
       }
     },
     {
+      "postfix": "DeletedList",
+      "definiteArgument": "webapp deleted list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "Name of the deleted web app slot."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeletedRestore",
+      "definiteArgument": "webapp deleted restore",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DeletedId",
+            "type": "string",
+            "format": "--deleted-id {value}",
+            "help": "Resource ID of the deleted web app."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the web app to restore the deleted content to."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "RestoreContentOnly",
+            "type": "string",
+            "format": "--restore-content-only {value}",
+            "help": "Restore only deleted files without web app settings."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "Slot to restore the deleted content to."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "DeploymentListPublishingProfiles",
       "definiteArgument": "webapp deployment list-publishing-profiles",
       "settingsClass": {
@@ -1046,6 +1223,200 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigStorageAccountAdd",
+      "definiteArgument": "webapp config storage-account add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccessKey",
+            "type": "string",
+            "format": "--access-key {value}",
+            "help": "Storage account access key."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Storage account name."
+          },
+          {
+            "name": "CustomId",
+            "type": "string",
+            "format": "--custom-id {value}",
+            "help": "Custom identifier."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ShareName",
+            "type": "string",
+            "format": "--share-name {value}",
+            "help": "Share name (Azure Files) or container name (Azure Blob Storage)."
+          },
+          {
+            "name": "StorageType",
+            "type": "WebappConfigStorageAccountStorageType",
+            "format": "--storage-type {value}",
+            "help": "Storage type."
+          },
+          {
+            "name": "MountPath",
+            "type": "string",
+            "format": "--mount-path {value}",
+            "help": "Path to mount storage volume within web app."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "SlotSetting",
+            "type": "string",
+            "format": "--slot-setting {value}",
+            "help": "Slot setting."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigStorageAccountDelete",
+      "definiteArgument": "webapp config storage-account delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CustomId",
+            "type": "string",
+            "format": "--custom-id {value}",
+            "help": "Custom identifier."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigStorageAccountList",
+      "definiteArgument": "webapp config storage-account list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigStorageAccountUpdate",
+      "definiteArgument": "webapp config storage-account update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CustomId",
+            "type": "string",
+            "format": "--custom-id {value}",
+            "help": "Custom identifier."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AccessKey",
+            "type": "string",
+            "format": "--access-key {value}",
+            "help": "Storage account access key."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Storage account name."
+          },
+          {
+            "name": "MountPath",
+            "type": "string",
+            "format": "--mount-path {value}",
+            "help": "Path to mount storage volume within web app."
+          },
+          {
+            "name": "ShareName",
+            "type": "string",
+            "format": "--share-name {value}",
+            "help": "Share name (Azure Files) or container name (Azure Blob Storage)."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "SlotSetting",
+            "type": "string",
+            "format": "--slot-setting {value}",
+            "help": "Slot setting."
+          },
+          {
+            "name": "StorageType",
+            "type": "WebappConfigStorageAccountStorageType",
+            "format": "--storage-type {value}",
+            "help": "Storage type."
           }
         ]
       }
@@ -1887,6 +2258,250 @@
       }
     },
     {
+      "postfix": "WebjobTriggeredList",
+      "definiteArgument": "webapp webjob triggered list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "WebjobTriggeredLog",
+      "definiteArgument": "webapp webjob triggered log",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WebjobName",
+            "type": "string",
+            "format": "--webjob-name {value}",
+            "help": "The name of the webjob."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "WebjobTriggeredRemove",
+      "definiteArgument": "webapp webjob triggered remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WebjobName",
+            "type": "string",
+            "format": "--webjob-name {value}",
+            "help": "The name of the webjob."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "WebjobTriggeredRun",
+      "definiteArgument": "webapp webjob triggered run",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WebjobName",
+            "type": "string",
+            "format": "--webjob-name {value}",
+            "help": "The name of the webjob."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "WebjobContinuousList",
+      "definiteArgument": "webapp webjob continuous list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "WebjobContinuousRemove",
+      "definiteArgument": "webapp webjob continuous remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WebjobName",
+            "type": "string",
+            "format": "--webjob-name {value}",
+            "help": "The name of the webjob."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "WebjobContinuousStart",
+      "definiteArgument": "webapp webjob continuous start",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WebjobName",
+            "type": "string",
+            "format": "--webjob-name {value}",
+            "help": "The name of the webjob."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "WebjobContinuousStop",
+      "definiteArgument": "webapp webjob continuous stop",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WebjobName",
+            "type": "string",
+            "format": "--webjob-name {value}",
+            "help": "The name of the webjob."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "DeploymentContainerConfig",
       "definiteArgument": "webapp deployment container config",
       "settingsClass": {
@@ -2471,6 +3086,21 @@
         "preview",
         "reset",
         "swap"
+      ]
+    },
+    {
+      "name": "WebappConfigSetFtpsState",
+      "values": [
+        "allallowed",
+        "disabled",
+        "ftpsonly"
+      ]
+    },
+    {
+      "name": "WebappConfigStorageAccountStorageType",
+      "values": [
+        "azureblob",
+        "azurefiles"
       ]
     },
     {
