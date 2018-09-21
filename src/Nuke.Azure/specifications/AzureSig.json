@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/sig.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/sig/image-version.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/sig/image-definition.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/sig.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/sig/image-definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/sig/image-version.yml"
   ],
   "name": "AzureSig",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest",
@@ -117,238 +117,6 @@
             "type": "string",
             "format": "--gallery {value}",
             "help": "Parameters supplied to the create or update gallery operation."
-          },
-          {
-            "name": "GalleryName",
-            "type": "string",
-            "format": "--gallery-name {value}",
-            "help": "Gallery name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageVersionCreate",
-      "definiteArgument": "sig image-version create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "GalleryImageDefinition",
-            "type": "string",
-            "format": "--gallery-image-definition {value}",
-            "help": "Gallery image definition."
-          },
-          {
-            "name": "GalleryImageVersion",
-            "type": "string",
-            "format": "--gallery-image-version {value}",
-            "help": "Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;."
-          },
-          {
-            "name": "GalleryName",
-            "type": "string",
-            "format": "--gallery-name {value}",
-            "help": "Gallery name."
-          },
-          {
-            "name": "ManagedImage",
-            "type": "string",
-            "format": "--managed-image {value}",
-            "help": "Image name(if in the same resource group) or resource id."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "EndOfLifeDate",
-            "type": "string",
-            "format": "--end-of-life-date {value}",
-            "help": "The end of life date, e.g. '2020-12-31'."
-          },
-          {
-            "name": "ExcludeFromLatest",
-            "type": "bool",
-            "format": "--exclude-from-latest",
-            "help": "The flag means that if it is set to true, people deploying VMs with version omitted will not use this version."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "ReplicaCount",
-            "type": "string",
-            "format": "--replica-count {value}",
-            "help": "Default replicate count. For region specific, use --target-regions."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "TargetRegions",
-            "type": "string",
-            "format": "--target-regions {value}",
-            "help": "Space separated region list, use \"&lt;region&gt;=&lt;replicate count&gt;\" to apply region specific replicate count."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageVersionDelete",
-      "definiteArgument": "sig image-version delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "GalleryImageDefinition",
-            "type": "string",
-            "format": "--gallery-image-definition {value}",
-            "help": "Gallery image definition."
-          },
-          {
-            "name": "GalleryImageVersion",
-            "type": "string",
-            "format": "--gallery-image-version {value}",
-            "help": "Gallery image version."
-          },
-          {
-            "name": "GalleryName",
-            "type": "string",
-            "format": "--gallery-name {value}",
-            "help": "Gallery name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageVersionList",
-      "definiteArgument": "sig image-version list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "GalleryImageDefinition",
-            "type": "string",
-            "format": "--gallery-image-definition {value}",
-            "help": "Gallery image definition."
-          },
-          {
-            "name": "GalleryName",
-            "type": "string",
-            "format": "--gallery-name {value}",
-            "help": "Gallery name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageVersionShow",
-      "definiteArgument": "sig image-version show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "GalleryImageDefinition",
-            "type": "string",
-            "format": "--gallery-image-definition {value}",
-            "help": "Gallery image definition."
-          },
-          {
-            "name": "GalleryImageVersionName",
-            "type": "string",
-            "format": "--gallery-image-version-name {value}",
-            "help": "The name of the gallery image version."
-          },
-          {
-            "name": "GalleryName",
-            "type": "string",
-            "format": "--gallery-name {value}",
-            "help": "Gallery name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Expand",
-            "type": "string",
-            "format": "--expand {value}",
-            "help": "The expand expression to apply on the operation, e.g. 'ReplicationStatus'."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageVersionUpdate",
-      "definiteArgument": "sig image-version update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "GalleryImageDefinition",
-            "type": "string",
-            "format": "--gallery-image-definition {value}",
-            "help": "Gallery image definition."
-          },
-          {
-            "name": "GalleryImageVersion",
-            "type": "string",
-            "format": "--gallery-image-version {value}",
-            "help": "Gallery image version."
-          },
-          {
-            "name": "GalleryImageVersionName",
-            "type": "string",
-            "format": "--gallery-image-version-name {value}",
-            "help": "The name of the gallery image version. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;."
           },
           {
             "name": "GalleryName",
@@ -617,6 +385,239 @@
             "type": "string",
             "format": "--gallery-image-definition {value}",
             "help": "Gallery image definition."
+          },
+          {
+            "name": "GalleryName",
+            "type": "string",
+            "format": "--gallery-name {value}",
+            "help": "Gallery name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageVersionCreate",
+      "definiteArgument": "sig image-version create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GalleryImageDefinition",
+            "type": "string",
+            "format": "--gallery-image-definition {value}",
+            "help": "Gallery image definition."
+          },
+          {
+            "name": "GalleryImageVersion",
+            "type": "string",
+            "format": "--gallery-image-version {value}",
+            "help": "Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;."
+          },
+          {
+            "name": "GalleryName",
+            "type": "string",
+            "format": "--gallery-name {value}",
+            "help": "Gallery name."
+          },
+          {
+            "name": "ManagedImage",
+            "type": "string",
+            "format": "--managed-image {value}",
+            "help": "Image name(if in the same resource group) or resource id."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "EndOfLifeDate",
+            "type": "string",
+            "format": "--end-of-life-date {value}",
+            "help": "The end of life date, e.g. '2020-12-31'."
+          },
+          {
+            "name": "ExcludeFromLatest",
+            "type": "bool",
+            "format": "--exclude-from-latest",
+            "help": "The flag means that if it is set to true, people deploying VMs with version omitted will not use this version."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "ReplicaCount",
+            "type": "string",
+            "format": "--replica-count {value}",
+            "help": "Default replicate count. For region specific, use --target-regions."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "TargetRegions",
+            "type": "List<string>",
+            "format": "--target-regions {value}",
+            "separator": " ",
+            "help": "Space separated region list, use \"&lt;region&gt;=&lt;replicate count&gt;\" to apply region specific replicate count."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageVersionDelete",
+      "definiteArgument": "sig image-version delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GalleryImageDefinition",
+            "type": "string",
+            "format": "--gallery-image-definition {value}",
+            "help": "Gallery image definition."
+          },
+          {
+            "name": "GalleryImageVersion",
+            "type": "string",
+            "format": "--gallery-image-version {value}",
+            "help": "Gallery image version."
+          },
+          {
+            "name": "GalleryName",
+            "type": "string",
+            "format": "--gallery-name {value}",
+            "help": "Gallery name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageVersionList",
+      "definiteArgument": "sig image-version list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GalleryImageDefinition",
+            "type": "string",
+            "format": "--gallery-image-definition {value}",
+            "help": "Gallery image definition."
+          },
+          {
+            "name": "GalleryName",
+            "type": "string",
+            "format": "--gallery-name {value}",
+            "help": "Gallery name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageVersionShow",
+      "definiteArgument": "sig image-version show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GalleryImageDefinition",
+            "type": "string",
+            "format": "--gallery-image-definition {value}",
+            "help": "Gallery image definition."
+          },
+          {
+            "name": "GalleryImageVersionName",
+            "type": "string",
+            "format": "--gallery-image-version-name {value}",
+            "help": "The name of the gallery image version."
+          },
+          {
+            "name": "GalleryName",
+            "type": "string",
+            "format": "--gallery-name {value}",
+            "help": "Gallery name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "The expand expression to apply on the operation, e.g. 'ReplicationStatus'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageVersionUpdate",
+      "definiteArgument": "sig image-version update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GalleryImageDefinition",
+            "type": "string",
+            "format": "--gallery-image-definition {value}",
+            "help": "Gallery image definition."
+          },
+          {
+            "name": "GalleryImageVersion",
+            "type": "string",
+            "format": "--gallery-image-version {value}",
+            "help": "Gallery image version."
+          },
+          {
+            "name": "GalleryImageVersionName",
+            "type": "string",
+            "format": "--gallery-image-version-name {value}",
+            "help": "The name of the gallery image version. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;."
           },
           {
             "name": "GalleryName",

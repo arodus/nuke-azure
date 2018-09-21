@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/resource.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/resource/link.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/resource/lock.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/resource.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/resource/link.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/resource/lock.yml"
   ],
   "name": "AzureResource",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest",
@@ -96,8 +96,9 @@
           },
           {
             "name": "Ids",
-            "type": "string",
+            "type": "List<string>",
             "format": "--ids {value}",
+            "separator": " ",
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
@@ -158,8 +159,9 @@
           },
           {
             "name": "Ids",
-            "type": "string",
+            "type": "List<string>",
             "format": "--ids {value}",
+            "separator": " ",
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
@@ -284,8 +286,9 @@
           },
           {
             "name": "Ids",
-            "type": "string",
+            "type": "List<string>",
             "format": "--ids {value}",
+            "separator": " ",
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
@@ -340,8 +343,9 @@
           },
           {
             "name": "Ids",
-            "type": "string",
+            "type": "List<string>",
             "format": "--ids {value}",
+            "separator": " ",
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
@@ -396,8 +400,9 @@
           },
           {
             "name": "Ids",
-            "type": "string",
+            "type": "List<string>",
             "format": "--ids {value}",
+            "separator": " ",
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
@@ -620,8 +625,9 @@
         "properties": [
           {
             "name": "Ids",
-            "type": "string",
+            "type": "List<string>",
             "format": "--ids {value}",
+            "separator": " ",
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
@@ -714,8 +720,9 @@
         "properties": [
           {
             "name": "Ids",
-            "type": "string",
+            "type": "List<string>",
             "format": "--ids {value}",
+            "separator": " ",
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
@@ -764,8 +771,9 @@
         "properties": [
           {
             "name": "Ids",
-            "type": "string",
+            "type": "List<string>",
             "format": "--ids {value}",
+            "separator": " ",
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {

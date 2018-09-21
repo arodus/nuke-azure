@@ -94,7 +94,8 @@ namespace Nuke.Azure
         /// <summary><p>Path to the Azure executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureTasks.AzurePath;
         /// <summary><p>Space-separated 'name=value' pairs for common argument defaults.</p></summary>
-        public virtual string Defaults { get; internal set; }
+        public virtual IReadOnlyDictionary<string, object> Defaults => DefaultsInternal.AsReadOnly();
+        internal Dictionary<string, object> DefaultsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -109,7 +110,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("configure")
-              .Add("--defaults {value}", Defaults)
+              .Add("--defaults {value}", Defaults, "{key}={value}", separator: ' ')
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -319,20 +320,44 @@ namespace Nuke.Azure
     public static partial class AzureConfigureSettingsExtensions
     {
         #region Defaults
-        /// <summary><p><em>Sets <see cref="AzureConfigureSettings.Defaults"/>.</em></p><p>Space-separated 'name=value' pairs for common argument defaults.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureConfigureSettings.Defaults"/> to a new dictionary.</em></p><p>Space-separated 'name=value' pairs for common argument defaults.</p></summary>
         [Pure]
-        public static AzureConfigureSettings SetDefaults(this AzureConfigureSettings toolSettings, string defaults)
+        public static AzureConfigureSettings SetDefaults(this AzureConfigureSettings toolSettings, IDictionary<string, object> defaults)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Defaults = defaults;
+            toolSettings.DefaultsInternal = defaults.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureConfigureSettings.Defaults"/>.</em></p><p>Space-separated 'name=value' pairs for common argument defaults.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureConfigureSettings.Defaults"/>.</em></p><p>Space-separated 'name=value' pairs for common argument defaults.</p></summary>
         [Pure]
-        public static AzureConfigureSettings ResetDefaults(this AzureConfigureSettings toolSettings)
+        public static AzureConfigureSettings ClearDefaults(this AzureConfigureSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Defaults = null;
+            toolSettings.DefaultsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureConfigureSettings.Defaults"/>.</em></p><p>Space-separated 'name=value' pairs for common argument defaults.</p></summary>
+        [Pure]
+        public static AzureConfigureSettings AddDefault(this AzureConfigureSettings toolSettings, string defaultKey, object defaultValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DefaultsInternal.Add(defaultKey, defaultValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureConfigureSettings.Defaults"/>.</em></p><p>Space-separated 'name=value' pairs for common argument defaults.</p></summary>
+        [Pure]
+        public static AzureConfigureSettings RemoveDefault(this AzureConfigureSettings toolSettings, string defaultKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DefaultsInternal.Remove(defaultKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureConfigureSettings.Defaults"/>.</em></p><p>Space-separated 'name=value' pairs for common argument defaults.</p></summary>
+        [Pure]
+        public static AzureConfigureSettings SetDefault(this AzureConfigureSettings toolSettings, string defaultKey, object defaultValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DefaultsInternal[defaultKey] = defaultValue;
             return toolSettings;
         }
         #endregion

@@ -6,18 +6,18 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/bot.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/bot/directline.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/bot/sms.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/bot/facebook.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/bot/msteams.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/bot/skype.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/bot/email.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/bot/authsetting.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/bot/slack.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/bot/kik.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/bot/telegram.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/bot/webchat.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/bot.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/bot/authsetting.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/bot/directline.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/bot/email.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/bot/facebook.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/bot/kik.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/bot/msteams.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/bot/skype.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/bot/slack.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/bot/sms.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/bot/telegram.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/bot/webchat.yml"
   ],
   "name": "AzureBot",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest",
@@ -298,6 +298,149 @@
       }
     },
     {
+      "postfix": "AuthsettingCreate",
+      "definiteArgument": "bot authsetting create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClientId",
+            "type": "string",
+            "format": "--client-id {value}",
+            "help": "Client ID associated with the service provider setting."
+          },
+          {
+            "name": "ClientSecret",
+            "type": "string",
+            "format": "--client-secret {value}",
+            "secret": true,
+            "help": "Client secret associated with the service provider setting."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ProviderScopeString",
+            "type": "string",
+            "format": "--provider-scope-string {value}",
+            "help": "The scope string associated with the service provider setting.The string should be delimited as needed for the service provider."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Service",
+            "type": "string",
+            "format": "--service {value}",
+            "help": "Name of the service provider. For a list of all service providers, use `az bot connection listserviceproviders`."
+          },
+          {
+            "name": "SettingName",
+            "type": "string",
+            "format": "--setting-name {value}",
+            "help": "Name of the oauth connection setting."
+          },
+          {
+            "name": "Parameters",
+            "type": "string",
+            "format": "--parameters {value}",
+            "help": "Parameter values for service provider parameters. Usage: --parameters key=value key1=value1."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AuthsettingDelete",
+      "definiteArgument": "bot authsetting delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SettingName",
+            "type": "string",
+            "format": "--setting-name {value}",
+            "help": "Name of the oauth connection setting."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AuthsettingList",
+      "definiteArgument": "bot authsetting list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AuthsettingListProviders",
+      "definiteArgument": "bot authsetting list-providers",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ProviderName",
+            "type": "string",
+            "format": "--provider-name {value}",
+            "help": "Service provider name for which to fetch details."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AuthsettingShow",
+      "definiteArgument": "bot authsetting show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SettingName",
+            "type": "string",
+            "format": "--setting-name {value}",
+            "help": "Name of the oauth connection setting."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "DirectlineCreate",
       "definiteArgument": "bot directline create",
       "settingsClass": {
@@ -389,21 +532,15 @@
       }
     },
     {
-      "postfix": "SmsCreate",
-      "definiteArgument": "bot sms create",
+      "postfix": "EmailCreate",
+      "definiteArgument": "bot email create",
       "settingsClass": {
         "properties": [
           {
-            "name": "AccountSid",
+            "name": "EmailAddress",
             "type": "string",
-            "format": "--account-sid {value}",
-            "help": "The account SID for the Twilio account."
-          },
-          {
-            "name": "AuthToken",
-            "type": "string",
-            "format": "--auth-token {value}",
-            "help": "The token token for the Twilio account."
+            "format": "--email-address {value}",
+            "help": "The email address for the bot."
           },
           {
             "name": "Name",
@@ -412,10 +549,11 @@
             "help": "The resource name of the bot."
           },
           {
-            "name": "Phone",
+            "name": "Password",
             "type": "string",
-            "format": "--phone {value}",
-            "help": "The phone number for the Twilio account."
+            "format": "--password {value}",
+            "secret": true,
+            "help": "The email password for the bot."
           },
           {
             "name": "ResourceGroup",
@@ -428,19 +566,13 @@
             "type": "bool",
             "format": "--add-disabled",
             "help": "Add the channel in a disabled state."
-          },
-          {
-            "name": "IsValidated",
-            "type": "bool",
-            "format": "--is-validated",
-            "help": "Whether or not the Twilio account has been validated for use with the bot."
           }
         ]
       }
     },
     {
-      "postfix": "SmsDelete",
-      "definiteArgument": "bot sms delete",
+      "postfix": "EmailDelete",
+      "definiteArgument": "bot email delete",
       "settingsClass": {
         "properties": [
           {
@@ -459,8 +591,8 @@
       }
     },
     {
-      "postfix": "SmsShow",
-      "definiteArgument": "bot sms show",
+      "postfix": "EmailShow",
+      "definiteArgument": "bot email show",
       "settingsClass": {
         "properties": [
           {
@@ -559,6 +691,97 @@
     {
       "postfix": "FacebookShow",
       "definiteArgument": "bot facebook show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WithSecrets",
+            "type": "bool",
+            "format": "--with-secrets",
+            "secret": true,
+            "help": "Show secrets in response for the channel."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KikCreate",
+      "definiteArgument": "bot kik create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "The API key for the Kik account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "UserName",
+            "type": "string",
+            "format": "--user-name {value}",
+            "help": "Kik user name."
+          },
+          {
+            "name": "AddDisabled",
+            "type": "bool",
+            "format": "--add-disabled",
+            "help": "Add the channel in a disabled state."
+          },
+          {
+            "name": "IsValidated",
+            "type": "bool",
+            "format": "--is-validated",
+            "help": "Whether or not the Kik account has been validated for use with the bot."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KikDelete",
+      "definiteArgument": "bot kik delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KikShow",
+      "definiteArgument": "bot kik show",
       "settingsClass": {
         "properties": [
           {
@@ -790,235 +1013,6 @@
       }
     },
     {
-      "postfix": "EmailCreate",
-      "definiteArgument": "bot email create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EmailAddress",
-            "type": "string",
-            "format": "--email-address {value}",
-            "help": "The email address for the bot."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "The email password for the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AddDisabled",
-            "type": "bool",
-            "format": "--add-disabled",
-            "help": "Add the channel in a disabled state."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EmailDelete",
-      "definiteArgument": "bot email delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EmailShow",
-      "definiteArgument": "bot email show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WithSecrets",
-            "type": "bool",
-            "format": "--with-secrets",
-            "secret": true,
-            "help": "Show secrets in response for the channel."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AuthsettingCreate",
-      "definiteArgument": "bot authsetting create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClientId",
-            "type": "string",
-            "format": "--client-id {value}",
-            "help": "Client ID associated with the service provider setting."
-          },
-          {
-            "name": "ClientSecret",
-            "type": "string",
-            "format": "--client-secret {value}",
-            "secret": true,
-            "help": "Client secret associated with the service provider setting."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ProviderScopeString",
-            "type": "string",
-            "format": "--provider-scope-string {value}",
-            "help": "The scope string associated with the service provider setting.The string should be delimited as needed for the service provider."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Service",
-            "type": "string",
-            "format": "--service {value}",
-            "help": "Name of the service provider. For a list of all service providers, use `az bot connection listserviceproviders`."
-          },
-          {
-            "name": "SettingName",
-            "type": "string",
-            "format": "--setting-name {value}",
-            "help": "Name of the oauth connection setting."
-          },
-          {
-            "name": "Parameters",
-            "type": "string",
-            "format": "--parameters {value}",
-            "help": "Parameter values for service provider parameters. Usage: --parameters key=value key1=value1."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AuthsettingDelete",
-      "definiteArgument": "bot authsetting delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "SettingName",
-            "type": "string",
-            "format": "--setting-name {value}",
-            "help": "Name of the oauth connection setting."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AuthsettingList",
-      "definiteArgument": "bot authsetting list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AuthsettingListProviders",
-      "definiteArgument": "bot authsetting list-providers",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ProviderName",
-            "type": "string",
-            "format": "--provider-name {value}",
-            "help": "Service provider name for which to fetch details."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AuthsettingShow",
-      "definiteArgument": "bot authsetting show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "SettingName",
-            "type": "string",
-            "format": "--setting-name {value}",
-            "help": "Name of the oauth connection setting."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "SlackCreate",
       "definiteArgument": "bot slack create",
       "settingsClass": {
@@ -1117,15 +1111,21 @@
       }
     },
     {
-      "postfix": "KikCreate",
-      "definiteArgument": "bot kik create",
+      "postfix": "SmsCreate",
+      "definiteArgument": "bot sms create",
       "settingsClass": {
         "properties": [
           {
-            "name": "Key",
+            "name": "AccountSid",
             "type": "string",
-            "format": "--key {value}",
-            "help": "The API key for the Kik account."
+            "format": "--account-sid {value}",
+            "help": "The account SID for the Twilio account."
+          },
+          {
+            "name": "AuthToken",
+            "type": "string",
+            "format": "--auth-token {value}",
+            "help": "The token token for the Twilio account."
           },
           {
             "name": "Name",
@@ -1134,16 +1134,16 @@
             "help": "The resource name of the bot."
           },
           {
+            "name": "Phone",
+            "type": "string",
+            "format": "--phone {value}",
+            "help": "The phone number for the Twilio account."
+          },
+          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "UserName",
-            "type": "string",
-            "format": "--user-name {value}",
-            "help": "Kik user name."
           },
           {
             "name": "AddDisabled",
@@ -1155,14 +1155,14 @@
             "name": "IsValidated",
             "type": "bool",
             "format": "--is-validated",
-            "help": "Whether or not the Kik account has been validated for use with the bot."
+            "help": "Whether or not the Twilio account has been validated for use with the bot."
           }
         ]
       }
     },
     {
-      "postfix": "KikDelete",
-      "definiteArgument": "bot kik delete",
+      "postfix": "SmsDelete",
+      "definiteArgument": "bot sms delete",
       "settingsClass": {
         "properties": [
           {
@@ -1181,8 +1181,8 @@
       }
     },
     {
-      "postfix": "KikShow",
-      "definiteArgument": "bot kik show",
+      "postfix": "SmsShow",
+      "definiteArgument": "bot sms show",
       "settingsClass": {
         "properties": [
           {

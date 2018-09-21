@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## [vNext]
 - Changed supported version to [Azure CLI v2.0.46](https://docs.microsoft.com/cli/azure/release-notes-azure-cli?view=azure-cli-latest#September-19-2018).
+- Changed the detection of types, therfore more arguments are generated with their respective type.
 ## [0.5.3] / 2018-08-29
 - Changed supported version to [Azure CLI v2.0.45](https://docs.microsoft.com/cli/azure/release-notes-azure-cli?view=azure-cli-latest#August-28-2018).
 ## [0.5.2] / 2018-08-23

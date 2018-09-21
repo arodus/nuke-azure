@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d93b0a2/latest/docs-ref-autogen/reference-index.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/reference-index.yml"
   ],
   "name": "Azure",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest",
@@ -20,8 +20,10 @@
         "properties": [
           {
             "name": "Defaults",
-            "type": "string",
+            "type": "Dictionary<string, object>",
             "format": "--defaults {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
             "help": "Space-separated 'name=value' pairs for common argument defaults."
           }
         ]

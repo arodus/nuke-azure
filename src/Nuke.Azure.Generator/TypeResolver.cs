@@ -157,6 +157,7 @@ namespace Nuke.Azure.Generator
             return parameter.Summary.StartsWith("Specifies whether", StringComparison.OrdinalIgnoreCase)
                    || parameter.Name.StartsWith("--no-") //--no-wait, --no-auto-upgrade ...
                    || parameter.Summary.StartsWith("Show the")
+                   || parameter.Summary.StartsWith("If true")
                    || parameter.Summary == "Show public ip address, FQDN, and power states. command will run slow."
                    || parameter.Summary.IndexOf("Wheter", StringComparison.OrdinalIgnoreCase) == 0 || parameter.FormatString == "--service-principal"
                    || parameter.FormatString == "--identity" || parameter.FormatString == "--allow-no-subscriptions"
@@ -172,19 +173,21 @@ namespace Nuke.Azure.Generator
 
         private bool IsInt(string summary)
         {
-            return summary.StartsWith("number", StringComparison.OrdinalIgnoreCase) || summary.Contains("Maximum Number")
-                                                                                    || summary.Contains("Minimum Number")
-                                                                                    || summary.IndexOf("The priority",
-                                                                                        StringComparison.OrdinalIgnoreCase) == 0;
+            return summary.StartsWith("number", StringComparison.OrdinalIgnoreCase) || summary.IndexOf("Maximum Number", StringComparison.OrdinalIgnoreCase) > -1
+                                                                                    || summary.IndexOf("Minimum Number", StringComparison.OrdinalIgnoreCase) > -1
+                                                                                    || summary.StartsWith("The priority",StringComparison.OrdinalIgnoreCase)
+                                                                                    || summary.StartsWith("limit the number", StringComparison.OrdinalIgnoreCase);
         }
 
         private bool IsDictionary(string summary)
         {
-            return summary.IndexOf("Space-separated list of key=value pairs", StringComparison.OrdinalIgnoreCase) >= 0
-                   || summary.IndexOf("in space-separated key=value pairs", StringComparison.OrdinalIgnoreCase) >= 0
-                   || summary.EndsWith(" in 'key=value' format.", StringComparison.OrdinalIgnoreCase)
-                   || summary.IndexOf("A list of name-value pairs", StringComparison.OrdinalIgnoreCase) == 0
-                   || summary.StartsWith("Space-separated") && summary.EndsWith("in a format of <name>=<value>.");
+            return summary.StartsWith("Space-separated list of key=value pairs", StringComparison.OrdinalIgnoreCase)
+                   || summary.StartsWith("Space-separated 'name=value'", StringComparison.OrdinalIgnoreCase)
+                   || summary.StartsWith("A list of name-value pairs", StringComparison.OrdinalIgnoreCase)
+                   || summary.StartsWith("Space-separated") && summary.EndsWith("in a format of <name>=<value>.")
+                   || summary.IndexOf("in space-separated key=value pairs", StringComparison.OrdinalIgnoreCase) > -1
+                   || summary.EndsWith(" in 'key=value' format.", StringComparison.OrdinalIgnoreCase);
+
         }
 
         private bool IsCommaSeparatedList(string summary)
@@ -194,8 +197,13 @@ namespace Nuke.Azure.Generator
 
         private bool IsSpaceSeparatedList(string summary)
         {
-            return !IsDictionary(summary) && (summary.IndexOf("Space-separated list of", StringComparison.OrdinalIgnoreCase) == 0
-                                              || summary.Contains("or specify individual disks"));
+            return !IsDictionary(summary) 
+                   && ( !summary.StartsWith("Space-separated tags", StringComparison.OrdinalIgnoreCase)
+                        && (summary.IndexOf("space-separated", StringComparison.OrdinalIgnoreCase) == 0 
+                        || summary.IndexOf("space separated", StringComparison.OrdinalIgnoreCase) == 0)
+                        || summary.IndexOf("(space-delimited)", StringComparison.OrdinalIgnoreCase) > -1
+                      )
+                   || summary.Contains("or specify individual disks");
         }
 
         private bool IsEnumeration(Parameter parameter)
