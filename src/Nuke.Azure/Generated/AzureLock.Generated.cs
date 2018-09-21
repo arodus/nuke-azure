@@ -142,7 +142,8 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureLock executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureLockTasks.AzureLockPath;
         /// <summary><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        public virtual string Ids { get; internal set; }
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the lock.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Provider namespace (Ex: 'Microsoft.Provider').</p></summary>
@@ -169,7 +170,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("lock delete")
-              .Add("--ids {value}", Ids)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--namespace {value}", Namespace)
               .Add("--parent {value}", Parent)
@@ -245,7 +246,8 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureLock executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureLockTasks.AzureLockPath;
         /// <summary><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        public virtual string Ids { get; internal set; }
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the lock.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Provider namespace (Ex: 'Microsoft.Provider').</p></summary>
@@ -272,7 +274,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("lock show")
-              .Add("--ids {value}", Ids)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--namespace {value}", Namespace)
               .Add("--parent {value}", Parent)
@@ -298,7 +300,8 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureLock executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureLockTasks.AzureLockPath;
         /// <summary><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        public virtual string Ids { get; internal set; }
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p></p></summary>
         public virtual LockLockType LockType { get; internal set; }
         /// <summary><p>Name of the lock.</p></summary>
@@ -329,7 +332,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("lock update")
-              .Add("--ids {value}", Ids)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--lock-type {value}", LockType)
               .Add("--name {value}", Name)
               .Add("--namespace {value}", Namespace)
@@ -596,20 +599,62 @@ namespace Nuke.Azure
     public static partial class AzureLockDeleteSettingsExtensions
     {
         #region Ids
-        /// <summary><p><em>Sets <see cref="AzureLockDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLockDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
         [Pure]
-        public static AzureLockDeleteSettings SetIds(this AzureLockDeleteSettings toolSettings, string ids)
+        public static AzureLockDeleteSettings SetIds(this AzureLockDeleteSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = ids;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLockDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLockDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
         [Pure]
-        public static AzureLockDeleteSettings ResetIds(this AzureLockDeleteSettings toolSettings)
+        public static AzureLockDeleteSettings SetIds(this AzureLockDeleteSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureLockDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockDeleteSettings AddIds(this AzureLockDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureLockDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockDeleteSettings AddIds(this AzureLockDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureLockDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockDeleteSettings ClearIds(this AzureLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureLockDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockDeleteSettings RemoveIds(this AzureLockDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureLockDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockDeleteSettings RemoveIds(this AzureLockDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
@@ -1026,20 +1071,62 @@ namespace Nuke.Azure
     public static partial class AzureLockShowSettingsExtensions
     {
         #region Ids
-        /// <summary><p><em>Sets <see cref="AzureLockShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLockShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
         [Pure]
-        public static AzureLockShowSettings SetIds(this AzureLockShowSettings toolSettings, string ids)
+        public static AzureLockShowSettings SetIds(this AzureLockShowSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = ids;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLockShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLockShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
         [Pure]
-        public static AzureLockShowSettings ResetIds(this AzureLockShowSettings toolSettings)
+        public static AzureLockShowSettings SetIds(this AzureLockShowSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureLockShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockShowSettings AddIds(this AzureLockShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureLockShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockShowSettings AddIds(this AzureLockShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureLockShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockShowSettings ClearIds(this AzureLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureLockShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockShowSettings RemoveIds(this AzureLockShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureLockShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockShowSettings RemoveIds(this AzureLockShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
@@ -1250,20 +1337,62 @@ namespace Nuke.Azure
     public static partial class AzureLockUpdateSettingsExtensions
     {
         #region Ids
-        /// <summary><p><em>Sets <see cref="AzureLockUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLockUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
         [Pure]
-        public static AzureLockUpdateSettings SetIds(this AzureLockUpdateSettings toolSettings, string ids)
+        public static AzureLockUpdateSettings SetIds(this AzureLockUpdateSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = ids;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLockUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLockUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
         [Pure]
-        public static AzureLockUpdateSettings ResetIds(this AzureLockUpdateSettings toolSettings)
+        public static AzureLockUpdateSettings SetIds(this AzureLockUpdateSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureLockUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockUpdateSettings AddIds(this AzureLockUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureLockUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockUpdateSettings AddIds(this AzureLockUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureLockUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockUpdateSettings ClearIds(this AzureLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureLockUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockUpdateSettings RemoveIds(this AzureLockUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureLockUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLockUpdateSettings RemoveIds(this AzureLockUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion

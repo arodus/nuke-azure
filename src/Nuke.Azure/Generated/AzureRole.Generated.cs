@@ -199,7 +199,8 @@ namespace Nuke.Azure
         /// <summary><p>Represent a user, group, or service principal. supported format: object id, user sign-in name, or service principal name.</p></summary>
         public virtual string Assignee { get; internal set; }
         /// <summary><p>Space-separated role assignment ids.</p></summary>
-        public virtual string Ids { get; internal set; }
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Include assignments applied on parent scopes.</p></summary>
         public virtual string IncludeInherited { get; internal set; }
         /// <summary><p>Use it only if the role or assignment was added at the level of a resource group.</p></summary>
@@ -223,7 +224,7 @@ namespace Nuke.Azure
             arguments
               .Add("role assignment delete")
               .Add("--assignee {value}", Assignee)
-              .Add("--ids {value}", Ids)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--include-inherited {value}", IncludeInherited)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--role {value}", Role)
@@ -800,20 +801,62 @@ namespace Nuke.Azure
         }
         #endregion
         #region Ids
-        /// <summary><p><em>Sets <see cref="AzureRoleAssignmentDeleteSettings.Ids"/>.</em></p><p>Space-separated role assignment ids.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRoleAssignmentDeleteSettings.Ids"/> to a new list.</em></p><p>Space-separated role assignment ids.</p></summary>
         [Pure]
-        public static AzureRoleAssignmentDeleteSettings SetIds(this AzureRoleAssignmentDeleteSettings toolSettings, string ids)
+        public static AzureRoleAssignmentDeleteSettings SetIds(this AzureRoleAssignmentDeleteSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = ids;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRoleAssignmentDeleteSettings.Ids"/>.</em></p><p>Space-separated role assignment ids.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRoleAssignmentDeleteSettings.Ids"/> to a new list.</em></p><p>Space-separated role assignment ids.</p></summary>
         [Pure]
-        public static AzureRoleAssignmentDeleteSettings ResetIds(this AzureRoleAssignmentDeleteSettings toolSettings)
+        public static AzureRoleAssignmentDeleteSettings SetIds(this AzureRoleAssignmentDeleteSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRoleAssignmentDeleteSettings.Ids"/>.</em></p><p>Space-separated role assignment ids.</p></summary>
+        [Pure]
+        public static AzureRoleAssignmentDeleteSettings AddIds(this AzureRoleAssignmentDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRoleAssignmentDeleteSettings.Ids"/>.</em></p><p>Space-separated role assignment ids.</p></summary>
+        [Pure]
+        public static AzureRoleAssignmentDeleteSettings AddIds(this AzureRoleAssignmentDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRoleAssignmentDeleteSettings.Ids"/>.</em></p><p>Space-separated role assignment ids.</p></summary>
+        [Pure]
+        public static AzureRoleAssignmentDeleteSettings ClearIds(this AzureRoleAssignmentDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRoleAssignmentDeleteSettings.Ids"/>.</em></p><p>Space-separated role assignment ids.</p></summary>
+        [Pure]
+        public static AzureRoleAssignmentDeleteSettings RemoveIds(this AzureRoleAssignmentDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRoleAssignmentDeleteSettings.Ids"/>.</em></p><p>Space-separated role assignment ids.</p></summary>
+        [Pure]
+        public static AzureRoleAssignmentDeleteSettings RemoveIds(this AzureRoleAssignmentDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion

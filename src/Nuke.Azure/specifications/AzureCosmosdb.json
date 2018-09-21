@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/cosmosdb.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/cosmosdb/collection.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/cosmosdb/database.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/cosmosdb.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/cosmosdb/collection.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/cosmosdb/database.yml"
   ],
   "name": "AzureCosmosdb",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest",
@@ -85,8 +85,9 @@
           },
           {
             "name": "Locations",
-            "type": "string",
+            "type": "List<string>",
             "format": "--locations {value}",
+            "separator": " ",
             "help": "Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group."
           },
           {
@@ -143,8 +144,9 @@
         "properties": [
           {
             "name": "FailoverPolicies",
-            "type": "string",
+            "type": "List<string>",
             "format": "--failover-policies {value}",
+            "separator": " ",
             "help": "Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1."
           },
           {
@@ -332,8 +334,9 @@
           },
           {
             "name": "Locations",
-            "type": "string",
+            "type": "List<string>",
             "format": "--locations {value}",
+            "separator": " ",
             "help": "Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group."
           },
           {

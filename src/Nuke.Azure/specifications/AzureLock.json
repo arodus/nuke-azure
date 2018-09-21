@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/lock.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/lock.yml"
   ],
   "name": "AzureLock",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/lock?view=azure-cli-latest",
@@ -76,8 +76,9 @@
         "properties": [
           {
             "name": "Ids",
-            "type": "string",
+            "type": "List<string>",
             "format": "--ids {value}",
+            "separator": " ",
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
@@ -170,8 +171,9 @@
         "properties": [
           {
             "name": "Ids",
-            "type": "string",
+            "type": "List<string>",
             "format": "--ids {value}",
+            "separator": " ",
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
@@ -220,8 +222,9 @@
         "properties": [
           {
             "name": "Ids",
-            "type": "string",
+            "type": "List<string>",
             "format": "--ids {value}",
+            "separator": " ",
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {

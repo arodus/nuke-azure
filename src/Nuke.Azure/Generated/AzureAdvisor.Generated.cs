@@ -44,30 +44,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAdvisorRecommendationDisable(Configure<AzureAdvisorRecommendationDisableSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAdvisorRecommendationDisableSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAdvisorRecommendationEnable(Configure<AzureAdvisorRecommendationEnableSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAdvisorRecommendationEnableSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAdvisorRecommendationList(Configure<AzureAdvisorRecommendationListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAdvisorRecommendationListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureAdvisorConfigurationList(Configure<AzureAdvisorConfigurationListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdvisorConfigurationListSettings());
@@ -87,6 +63,30 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureAdvisorConfigurationUpdate(Configure<AzureAdvisorConfigurationUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdvisorConfigurationUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdvisorRecommendationDisable(Configure<AzureAdvisorRecommendationDisableSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdvisorRecommendationDisableSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdvisorRecommendationEnable(Configure<AzureAdvisorRecommendationEnableSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdvisorRecommendationEnableSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdvisorRecommendationList(Configure<AzureAdvisorRecommendationListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdvisorRecommendationListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -115,135 +115,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("advisor")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAdvisorRecommendationDisableSettings
-    /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAdvisorRecommendationDisableSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAdvisor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAdvisorTasks.AzureAdvisorPath;
-        /// <summary><p>Number of days to disable. If not specified, the recommendation is disabled forever.</p></summary>
-        public virtual int? Days { get; internal set; }
-        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        public virtual string Ids { get; internal set; }
-        /// <summary><p>The name of the recommendation as output by the list command.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("advisor recommendation disable")
-              .Add("--days {value}", Days)
-              .Add("--ids {value}", Ids)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAdvisorRecommendationEnableSettings
-    /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAdvisorRecommendationEnableSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAdvisor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAdvisorTasks.AzureAdvisorPath;
-        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        public virtual string Ids { get; internal set; }
-        /// <summary><p>The name of the recommendation as output by the list command.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("advisor recommendation enable")
-              .Add("--ids {value}", Ids)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAdvisorRecommendationListSettings
-    /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAdvisorRecommendationListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAdvisor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAdvisorTasks.AzureAdvisorPath;
-        /// <summary><p>Name of recommendation category.</p></summary>
-        public virtual AdvisorRecommendationListCategory Category { get; internal set; }
-        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        public virtual string Ids { get; internal set; }
-        /// <summary><p>Generate new recommendations.</p></summary>
-        public virtual string Refresh { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("advisor recommendation list")
-              .Add("--category {value}", Category)
-              .Add("--ids {value}", Ids)
-              .Add("--refresh {value}", Refresh)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -376,6 +247,138 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureAdvisorRecommendationDisableSettings
+    /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdvisorRecommendationDisableSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAdvisor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdvisorTasks.AzureAdvisorPath;
+        /// <summary><p>Number of days to disable. If not specified, the recommendation is disabled forever.</p></summary>
+        public virtual int? Days { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>The name of the recommendation as output by the list command.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("advisor recommendation disable")
+              .Add("--days {value}", Days)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdvisorRecommendationEnableSettings
+    /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdvisorRecommendationEnableSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAdvisor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdvisorTasks.AzureAdvisorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>The name of the recommendation as output by the list command.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("advisor recommendation enable")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdvisorRecommendationListSettings
+    /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdvisorRecommendationListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAdvisor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdvisorTasks.AzureAdvisorPath;
+        /// <summary><p>Name of recommendation category.</p></summary>
+        public virtual AdvisorRecommendationListCategory Category { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Generate new recommendations.</p></summary>
+        public virtual string Refresh { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("advisor recommendation list")
+              .Add("--category {value}", Category)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--refresh {value}", Refresh)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureAdvisorSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
     [PublicAPI]
@@ -466,498 +469,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAdvisorSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAdvisorSettings ResetVerbose(this AzureAdvisorSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAdvisorRecommendationDisableSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAdvisorRecommendationDisableSettingsExtensions
-    {
-        #region Days
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Days"/>.</em></p><p>Number of days to disable. If not specified, the recommendation is disabled forever.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings SetDays(this AzureAdvisorRecommendationDisableSettings toolSettings, int? days)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Days = days;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Days"/>.</em></p><p>Number of days to disable. If not specified, the recommendation is disabled forever.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings ResetDays(this AzureAdvisorRecommendationDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Days = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings SetIds(this AzureAdvisorRecommendationDisableSettings toolSettings, string ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = ids;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings ResetIds(this AzureAdvisorRecommendationDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Name"/>.</em></p><p>The name of the recommendation as output by the list command.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings SetName(this AzureAdvisorRecommendationDisableSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Name"/>.</em></p><p>The name of the recommendation as output by the list command.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings ResetName(this AzureAdvisorRecommendationDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings SetResourceGroup(this AzureAdvisorRecommendationDisableSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings ResetResourceGroup(this AzureAdvisorRecommendationDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings SetDebug(this AzureAdvisorRecommendationDisableSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings ResetDebug(this AzureAdvisorRecommendationDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings SetHelp(this AzureAdvisorRecommendationDisableSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings ResetHelp(this AzureAdvisorRecommendationDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings SetOutput(this AzureAdvisorRecommendationDisableSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings ResetOutput(this AzureAdvisorRecommendationDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings SetQuery(this AzureAdvisorRecommendationDisableSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings ResetQuery(this AzureAdvisorRecommendationDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings SetVerbose(this AzureAdvisorRecommendationDisableSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationDisableSettings ResetVerbose(this AzureAdvisorRecommendationDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAdvisorRecommendationEnableSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAdvisorRecommendationEnableSettingsExtensions
-    {
-        #region Ids
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings SetIds(this AzureAdvisorRecommendationEnableSettings toolSettings, string ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = ids;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings ResetIds(this AzureAdvisorRecommendationEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Name"/>.</em></p><p>The name of the recommendation as output by the list command.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings SetName(this AzureAdvisorRecommendationEnableSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.Name"/>.</em></p><p>The name of the recommendation as output by the list command.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings ResetName(this AzureAdvisorRecommendationEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings SetResourceGroup(this AzureAdvisorRecommendationEnableSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings ResetResourceGroup(this AzureAdvisorRecommendationEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings SetDebug(this AzureAdvisorRecommendationEnableSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings ResetDebug(this AzureAdvisorRecommendationEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings SetHelp(this AzureAdvisorRecommendationEnableSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings ResetHelp(this AzureAdvisorRecommendationEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings SetOutput(this AzureAdvisorRecommendationEnableSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings ResetOutput(this AzureAdvisorRecommendationEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings SetQuery(this AzureAdvisorRecommendationEnableSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings ResetQuery(this AzureAdvisorRecommendationEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings SetVerbose(this AzureAdvisorRecommendationEnableSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationEnableSettings ResetVerbose(this AzureAdvisorRecommendationEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAdvisorRecommendationListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAdvisorRecommendationListSettingsExtensions
-    {
-        #region Category
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Category"/>.</em></p><p>Name of recommendation category.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings SetCategory(this AzureAdvisorRecommendationListSettings toolSettings, AdvisorRecommendationListCategory category)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Category = category;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Category"/>.</em></p><p>Name of recommendation category.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings ResetCategory(this AzureAdvisorRecommendationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Category = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings SetIds(this AzureAdvisorRecommendationListSettings toolSettings, string ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = ids;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings ResetIds(this AzureAdvisorRecommendationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Refresh
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Refresh"/>.</em></p><p>Generate new recommendations.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings SetRefresh(this AzureAdvisorRecommendationListSettings toolSettings, string refresh)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Refresh = refresh;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Refresh"/>.</em></p><p>Generate new recommendations.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings ResetRefresh(this AzureAdvisorRecommendationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Refresh = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings SetResourceGroup(this AzureAdvisorRecommendationListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings ResetResourceGroup(this AzureAdvisorRecommendationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings SetDebug(this AzureAdvisorRecommendationListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings ResetDebug(this AzureAdvisorRecommendationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings SetHelp(this AzureAdvisorRecommendationListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings ResetHelp(this AzureAdvisorRecommendationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings SetOutput(this AzureAdvisorRecommendationListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings ResetOutput(this AzureAdvisorRecommendationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings SetQuery(this AzureAdvisorRecommendationListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings ResetQuery(this AzureAdvisorRecommendationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings SetVerbose(this AzureAdvisorRecommendationListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdvisorRecommendationListSettings ResetVerbose(this AzureAdvisorRecommendationListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -1422,17 +933,622 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AdvisorRecommendationListCategory
+    #region AzureAdvisorRecommendationDisableSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
     [PublicAPI]
-    [Serializable]
     [ExcludeFromCodeCoverage]
-    public partial class AdvisorRecommendationListCategory : Enumeration
+    public static partial class AzureAdvisorRecommendationDisableSettingsExtensions
     {
-        public static AdvisorRecommendationListCategory cost = new AdvisorRecommendationListCategory { Value = "cost" };
-        public static AdvisorRecommendationListCategory highavailability = new AdvisorRecommendationListCategory { Value = "highavailability" };
-        public static AdvisorRecommendationListCategory performance = new AdvisorRecommendationListCategory { Value = "performance" };
-        public static AdvisorRecommendationListCategory security = new AdvisorRecommendationListCategory { Value = "security" };
+        #region Days
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Days"/>.</em></p><p>Number of days to disable. If not specified, the recommendation is disabled forever.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings SetDays(this AzureAdvisorRecommendationDisableSettings toolSettings, int? days)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Days = days;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Days"/>.</em></p><p>Number of days to disable. If not specified, the recommendation is disabled forever.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings ResetDays(this AzureAdvisorRecommendationDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Days = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings SetIds(this AzureAdvisorRecommendationDisableSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings SetIds(this AzureAdvisorRecommendationDisableSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAdvisorRecommendationDisableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings AddIds(this AzureAdvisorRecommendationDisableSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAdvisorRecommendationDisableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings AddIds(this AzureAdvisorRecommendationDisableSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureAdvisorRecommendationDisableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings ClearIds(this AzureAdvisorRecommendationDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAdvisorRecommendationDisableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings RemoveIds(this AzureAdvisorRecommendationDisableSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAdvisorRecommendationDisableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings RemoveIds(this AzureAdvisorRecommendationDisableSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Name"/>.</em></p><p>The name of the recommendation as output by the list command.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings SetName(this AzureAdvisorRecommendationDisableSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Name"/>.</em></p><p>The name of the recommendation as output by the list command.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings ResetName(this AzureAdvisorRecommendationDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings SetResourceGroup(this AzureAdvisorRecommendationDisableSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings ResetResourceGroup(this AzureAdvisorRecommendationDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings SetDebug(this AzureAdvisorRecommendationDisableSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings ResetDebug(this AzureAdvisorRecommendationDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings SetHelp(this AzureAdvisorRecommendationDisableSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings ResetHelp(this AzureAdvisorRecommendationDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings SetOutput(this AzureAdvisorRecommendationDisableSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings ResetOutput(this AzureAdvisorRecommendationDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings SetQuery(this AzureAdvisorRecommendationDisableSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings ResetQuery(this AzureAdvisorRecommendationDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings SetVerbose(this AzureAdvisorRecommendationDisableSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationDisableSettings ResetVerbose(this AzureAdvisorRecommendationDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdvisorRecommendationEnableSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdvisorRecommendationEnableSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings SetIds(this AzureAdvisorRecommendationEnableSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings SetIds(this AzureAdvisorRecommendationEnableSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAdvisorRecommendationEnableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings AddIds(this AzureAdvisorRecommendationEnableSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAdvisorRecommendationEnableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings AddIds(this AzureAdvisorRecommendationEnableSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureAdvisorRecommendationEnableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings ClearIds(this AzureAdvisorRecommendationEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAdvisorRecommendationEnableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings RemoveIds(this AzureAdvisorRecommendationEnableSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAdvisorRecommendationEnableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings RemoveIds(this AzureAdvisorRecommendationEnableSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Name"/>.</em></p><p>The name of the recommendation as output by the list command.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings SetName(this AzureAdvisorRecommendationEnableSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.Name"/>.</em></p><p>The name of the recommendation as output by the list command.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings ResetName(this AzureAdvisorRecommendationEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings SetResourceGroup(this AzureAdvisorRecommendationEnableSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings ResetResourceGroup(this AzureAdvisorRecommendationEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings SetDebug(this AzureAdvisorRecommendationEnableSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings ResetDebug(this AzureAdvisorRecommendationEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings SetHelp(this AzureAdvisorRecommendationEnableSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings ResetHelp(this AzureAdvisorRecommendationEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings SetOutput(this AzureAdvisorRecommendationEnableSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings ResetOutput(this AzureAdvisorRecommendationEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings SetQuery(this AzureAdvisorRecommendationEnableSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings ResetQuery(this AzureAdvisorRecommendationEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationEnableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings SetVerbose(this AzureAdvisorRecommendationEnableSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationEnableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationEnableSettings ResetVerbose(this AzureAdvisorRecommendationEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdvisorRecommendationListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdvisorRecommendationListSettingsExtensions
+    {
+        #region Category
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Category"/>.</em></p><p>Name of recommendation category.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings SetCategory(this AzureAdvisorRecommendationListSettings toolSettings, AdvisorRecommendationListCategory category)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Category = category;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Category"/>.</em></p><p>Name of recommendation category.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings ResetCategory(this AzureAdvisorRecommendationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Category = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings SetIds(this AzureAdvisorRecommendationListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings SetIds(this AzureAdvisorRecommendationListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAdvisorRecommendationListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings AddIds(this AzureAdvisorRecommendationListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAdvisorRecommendationListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings AddIds(this AzureAdvisorRecommendationListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureAdvisorRecommendationListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings ClearIds(this AzureAdvisorRecommendationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAdvisorRecommendationListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings RemoveIds(this AzureAdvisorRecommendationListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAdvisorRecommendationListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings RemoveIds(this AzureAdvisorRecommendationListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Refresh
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Refresh"/>.</em></p><p>Generate new recommendations.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings SetRefresh(this AzureAdvisorRecommendationListSettings toolSettings, string refresh)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Refresh = refresh;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Refresh"/>.</em></p><p>Generate new recommendations.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings ResetRefresh(this AzureAdvisorRecommendationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Refresh = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings SetResourceGroup(this AzureAdvisorRecommendationListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings ResetResourceGroup(this AzureAdvisorRecommendationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings SetDebug(this AzureAdvisorRecommendationListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings ResetDebug(this AzureAdvisorRecommendationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings SetHelp(this AzureAdvisorRecommendationListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings ResetHelp(this AzureAdvisorRecommendationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings SetOutput(this AzureAdvisorRecommendationListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings ResetOutput(this AzureAdvisorRecommendationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings SetQuery(this AzureAdvisorRecommendationListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings ResetQuery(this AzureAdvisorRecommendationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdvisorRecommendationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings SetVerbose(this AzureAdvisorRecommendationListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdvisorRecommendationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdvisorRecommendationListSettings ResetVerbose(this AzureAdvisorRecommendationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
     }
     #endregion
     #region AdvisorConfigurationUpdateLowCpuThreshold
@@ -1446,6 +1562,19 @@ namespace Nuke.Azure
         public static AdvisorConfigurationUpdateLowCpuThreshold _15 = new AdvisorConfigurationUpdateLowCpuThreshold { Value = "15" };
         public static AdvisorConfigurationUpdateLowCpuThreshold _20 = new AdvisorConfigurationUpdateLowCpuThreshold { Value = "20" };
         public static AdvisorConfigurationUpdateLowCpuThreshold _5 = new AdvisorConfigurationUpdateLowCpuThreshold { Value = "5" };
+    }
+    #endregion
+    #region AdvisorRecommendationListCategory
+    /// <summary><p>Used within <see cref="AzureAdvisorTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class AdvisorRecommendationListCategory : Enumeration
+    {
+        public static AdvisorRecommendationListCategory cost = new AdvisorRecommendationListCategory { Value = "cost" };
+        public static AdvisorRecommendationListCategory highavailability = new AdvisorRecommendationListCategory { Value = "highavailability" };
+        public static AdvisorRecommendationListCategory performance = new AdvisorRecommendationListCategory { Value = "performance" };
+        public static AdvisorRecommendationListCategory security = new AdvisorRecommendationListCategory { Value = "security" };
     }
     #endregion
 }

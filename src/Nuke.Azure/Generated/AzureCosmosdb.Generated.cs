@@ -274,7 +274,8 @@ namespace Nuke.Azure
         /// <summary><p>The type of Cosmos DB database account to create.</p></summary>
         public virtual CosmosdbCreateKind Kind { get; internal set; }
         /// <summary><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
-        public virtual string Locations { get; internal set; }
+        public virtual IReadOnlyList<string> Locations => LocationsInternal.AsReadOnly();
+        internal List<string> LocationsInternal { get; set; } = new List<string>();
         /// <summary><p>When used with Bounded Staleness consistency, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 1 - 100.</p></summary>
         public virtual string MaxInterval { get; internal set; }
         /// <summary><p>When used with Bounded Staleness consistency, this value represents the number of stale requests tolerated. Accepted range for this value is 1 - 2,147,483,647.</p></summary>
@@ -305,7 +306,7 @@ namespace Nuke.Azure
               .Add("--enable-virtual-network", EnableVirtualNetwork)
               .Add("--ip-range-filter {value}", IpRangeFilter, separator: ',')
               .Add("--kind {value}", Kind)
-              .Add("--locations {value}", Locations)
+              .Add("--locations {value}", Locations, separator: ' ')
               .Add("--max-interval {value}", MaxInterval)
               .Add("--max-staleness-prefix {value}", MaxStalenessPrefix)
               .Add("--tags {value}", Tags)
@@ -367,7 +368,8 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
         /// <summary><p>Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1.</p></summary>
-        public virtual string FailoverPolicies { get; internal set; }
+        public virtual IReadOnlyList<string> FailoverPolicies => FailoverPoliciesInternal.AsReadOnly();
+        internal List<string> FailoverPoliciesInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Cosmos DB database account.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
@@ -386,7 +388,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("cosmosdb failover-priority-change")
-              .Add("--failover-policies {value}", FailoverPolicies)
+              .Add("--failover-policies {value}", FailoverPolicies, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
@@ -651,7 +653,8 @@ namespace Nuke.Azure
         public virtual IReadOnlyList<string> IpRangeFilter => IpRangeFilterInternal.AsReadOnly();
         internal List<string> IpRangeFilterInternal { get; set; } = new List<string>();
         /// <summary><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
-        public virtual string Locations { get; internal set; }
+        public virtual IReadOnlyList<string> Locations => LocationsInternal.AsReadOnly();
+        internal List<string> LocationsInternal { get; set; } = new List<string>();
         /// <summary><p>When used with Bounded Staleness consistency, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 1 - 100.</p></summary>
         public virtual string MaxInterval { get; internal set; }
         /// <summary><p>When used with Bounded Staleness consistency, this value represents the number of stale requests tolerated. Accepted range for this value is 1 - 2,147,483,647.</p></summary>
@@ -681,7 +684,7 @@ namespace Nuke.Azure
               .Add("--enable-automatic-failover", EnableAutomaticFailover)
               .Add("--enable-virtual-network", EnableVirtualNetwork)
               .Add("--ip-range-filter {value}", IpRangeFilter, separator: ',')
-              .Add("--locations {value}", Locations)
+              .Add("--locations {value}", Locations, separator: ' ')
               .Add("--max-interval {value}", MaxInterval)
               .Add("--max-staleness-prefix {value}", MaxStalenessPrefix)
               .Add("--tags {value}", Tags)
@@ -1602,20 +1605,62 @@ namespace Nuke.Azure
         }
         #endregion
         #region Locations
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbCreateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCreateSettings.Locations"/> to a new list.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
         [Pure]
-        public static AzureCosmosdbCreateSettings SetLocations(this AzureCosmosdbCreateSettings toolSettings, string locations)
+        public static AzureCosmosdbCreateSettings SetLocations(this AzureCosmosdbCreateSettings toolSettings, params string[] locations)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Locations = locations;
+            toolSettings.LocationsInternal = locations.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbCreateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCreateSettings.Locations"/> to a new list.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
         [Pure]
-        public static AzureCosmosdbCreateSettings ResetLocations(this AzureCosmosdbCreateSettings toolSettings)
+        public static AzureCosmosdbCreateSettings SetLocations(this AzureCosmosdbCreateSettings toolSettings, IEnumerable<string> locations)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Locations = null;
+            toolSettings.LocationsInternal = locations.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbCreateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings AddLocations(this AzureCosmosdbCreateSettings toolSettings, params string[] locations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LocationsInternal.AddRange(locations);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbCreateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings AddLocations(this AzureCosmosdbCreateSettings toolSettings, IEnumerable<string> locations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LocationsInternal.AddRange(locations);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureCosmosdbCreateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings ClearLocations(this AzureCosmosdbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LocationsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbCreateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings RemoveLocations(this AzureCosmosdbCreateSettings toolSettings, params string[] locations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(locations);
+            toolSettings.LocationsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbCreateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings RemoveLocations(this AzureCosmosdbCreateSettings toolSettings, IEnumerable<string> locations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(locations);
+            toolSettings.LocationsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
@@ -1924,20 +1969,62 @@ namespace Nuke.Azure
     public static partial class AzureCosmosdbFailoverPriorityChangeSettingsExtensions
     {
         #region FailoverPolicies
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbFailoverPriorityChangeSettings.FailoverPolicies"/>.</em></p><p>Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbFailoverPriorityChangeSettings.FailoverPolicies"/> to a new list.</em></p><p>Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1.</p></summary>
         [Pure]
-        public static AzureCosmosdbFailoverPriorityChangeSettings SetFailoverPolicies(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, string failoverPolicies)
+        public static AzureCosmosdbFailoverPriorityChangeSettings SetFailoverPolicies(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, params string[] failoverPolicies)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.FailoverPolicies = failoverPolicies;
+            toolSettings.FailoverPoliciesInternal = failoverPolicies.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbFailoverPriorityChangeSettings.FailoverPolicies"/>.</em></p><p>Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbFailoverPriorityChangeSettings.FailoverPolicies"/> to a new list.</em></p><p>Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1.</p></summary>
         [Pure]
-        public static AzureCosmosdbFailoverPriorityChangeSettings ResetFailoverPolicies(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings)
+        public static AzureCosmosdbFailoverPriorityChangeSettings SetFailoverPolicies(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, IEnumerable<string> failoverPolicies)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.FailoverPolicies = null;
+            toolSettings.FailoverPoliciesInternal = failoverPolicies.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbFailoverPriorityChangeSettings.FailoverPolicies"/>.</em></p><p>Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings AddFailoverPolicies(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, params string[] failoverPolicies)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FailoverPoliciesInternal.AddRange(failoverPolicies);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbFailoverPriorityChangeSettings.FailoverPolicies"/>.</em></p><p>Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings AddFailoverPolicies(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, IEnumerable<string> failoverPolicies)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FailoverPoliciesInternal.AddRange(failoverPolicies);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureCosmosdbFailoverPriorityChangeSettings.FailoverPolicies"/>.</em></p><p>Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings ClearFailoverPolicies(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FailoverPoliciesInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbFailoverPriorityChangeSettings.FailoverPolicies"/>.</em></p><p>Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings RemoveFailoverPolicies(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, params string[] failoverPolicies)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(failoverPolicies);
+            toolSettings.FailoverPoliciesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbFailoverPriorityChangeSettings.FailoverPolicies"/>.</em></p><p>Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings RemoveFailoverPolicies(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, IEnumerable<string> failoverPolicies)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(failoverPolicies);
+            toolSettings.FailoverPoliciesInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
@@ -3096,20 +3183,62 @@ namespace Nuke.Azure
         }
         #endregion
         #region Locations
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.Locations"/> to a new list.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
         [Pure]
-        public static AzureCosmosdbUpdateSettings SetLocations(this AzureCosmosdbUpdateSettings toolSettings, string locations)
+        public static AzureCosmosdbUpdateSettings SetLocations(this AzureCosmosdbUpdateSettings toolSettings, params string[] locations)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Locations = locations;
+            toolSettings.LocationsInternal = locations.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbUpdateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.Locations"/> to a new list.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
         [Pure]
-        public static AzureCosmosdbUpdateSettings ResetLocations(this AzureCosmosdbUpdateSettings toolSettings)
+        public static AzureCosmosdbUpdateSettings SetLocations(this AzureCosmosdbUpdateSettings toolSettings, IEnumerable<string> locations)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Locations = null;
+            toolSettings.LocationsInternal = locations.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbUpdateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings AddLocations(this AzureCosmosdbUpdateSettings toolSettings, params string[] locations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LocationsInternal.AddRange(locations);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbUpdateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings AddLocations(this AzureCosmosdbUpdateSettings toolSettings, IEnumerable<string> locations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LocationsInternal.AddRange(locations);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureCosmosdbUpdateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings ClearLocations(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LocationsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbUpdateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings RemoveLocations(this AzureCosmosdbUpdateSettings toolSettings, params string[] locations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(locations);
+            toolSettings.LocationsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbUpdateSettings.Locations"/>.</em></p><p>Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings RemoveLocations(this AzureCosmosdbUpdateSettings toolSettings, IEnumerable<string> locations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(locations);
+            toolSettings.LocationsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion

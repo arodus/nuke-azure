@@ -6,12 +6,13 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/dls.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/dls/fs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/dls/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/dls/account/firewall.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/dls/account/trusted-provider.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/dls/fs/access.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/dls.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/dls/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/dls/fs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/dls/account/firewall.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/dls/account/network-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/dls/account/trusted-provider.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/dls/fs/access.yml"
   ],
   "name": "AzureDls",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest",
@@ -22,6 +23,216 @@
       "postfix": "",
       "definiteArgument": "dls",
       "settingsClass": {}
+    },
+    {
+      "postfix": "AccountCreate",
+      "definiteArgument": "dls account create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "DefaultGroup",
+            "type": "string",
+            "format": "--default-group {value}",
+            "help": "Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account."
+          },
+          {
+            "name": "DisableEncryption",
+            "type": "string",
+            "format": "--disable-encryption {value}",
+            "help": "Indicates that the account will not have any form of encryption applied to it."
+          },
+          {
+            "name": "EncryptionType",
+            "type": "DlsAccountCreateEncryptionType",
+            "format": "--encryption-type {value}",
+            "help": "Indicates what type of encryption to provision the account with. By default, encryption is ServiceManaged. If no encryption is desired, it must be explicitly set with the --disable-encryption flag."
+          },
+          {
+            "name": "KeyName",
+            "type": "string",
+            "format": "--key-name {value}",
+            "help": "Key name for the user-assigned encryption type."
+          },
+          {
+            "name": "KeyVaultId",
+            "type": "string",
+            "format": "--key-vault-id {value}",
+            "help": "Key vault for the user-assigned encryption type."
+          },
+          {
+            "name": "KeyVersion",
+            "type": "string",
+            "format": "--key-version {value}",
+            "help": "Key version for the user-assigned encryption type."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Tier",
+            "type": "DlsAccountTier",
+            "format": "--tier {value}",
+            "help": "The desired commitment tier for this account to use."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountDelete",
+      "definiteArgument": "dls account delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountEnableKeyVault",
+      "definiteArgument": "dls account enable-key-vault",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountList",
+      "definiteArgument": "dls account list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountShow",
+      "definiteArgument": "dls account show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountUpdate",
+      "definiteArgument": "dls account update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "AllowAzureIps",
+            "type": "DlsAccountUpdateAllowAzureIps",
+            "format": "--allow-azure-ips {value}",
+            "help": "Allow/block Azure originating IPs through the firewall."
+          },
+          {
+            "name": "DefaultGroup",
+            "type": "string",
+            "format": "--default-group {value}",
+            "help": ""
+          },
+          {
+            "name": "FirewallState",
+            "type": "DlsAccountUpdateAllowAzureIps",
+            "format": "--firewall-state {value}",
+            "help": "Enable/disable existing firewall rules."
+          },
+          {
+            "name": "KeyVersion",
+            "type": "string",
+            "format": "--key-version {value}",
+            "help": ""
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Tier",
+            "type": "DlsAccountTier",
+            "format": "--tier {value}",
+            "help": "The desired commitment tier for this account to use."
+          },
+          {
+            "name": "TrustedIdProviderState",
+            "type": "DlsAccountUpdateAllowAzureIps",
+            "format": "--trusted-id-provider-state {value}",
+            "help": "Enable/disable the existing trusted ID providers."
+          }
+        ]
+      }
     },
     {
       "postfix": "FsAppend",
@@ -446,216 +657,6 @@
       }
     },
     {
-      "postfix": "AccountCreate",
-      "definiteArgument": "dls account create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "DefaultGroup",
-            "type": "string",
-            "format": "--default-group {value}",
-            "help": "Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account."
-          },
-          {
-            "name": "DisableEncryption",
-            "type": "string",
-            "format": "--disable-encryption {value}",
-            "help": "Indicates that the account will not have any form of encryption applied to it."
-          },
-          {
-            "name": "EncryptionType",
-            "type": "DlsAccountCreateEncryptionType",
-            "format": "--encryption-type {value}",
-            "help": "Indicates what type of encryption to provision the account with. By default, encryption is ServiceManaged. If no encryption is desired, it must be explicitly set with the --disable-encryption flag."
-          },
-          {
-            "name": "KeyName",
-            "type": "string",
-            "format": "--key-name {value}",
-            "help": "Key name for the user-assigned encryption type."
-          },
-          {
-            "name": "KeyVaultId",
-            "type": "string",
-            "format": "--key-vault-id {value}",
-            "help": "Key vault for the user-assigned encryption type."
-          },
-          {
-            "name": "KeyVersion",
-            "type": "string",
-            "format": "--key-version {value}",
-            "help": "Key version for the user-assigned encryption type."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Tier",
-            "type": "DlsAccountTier",
-            "format": "--tier {value}",
-            "help": "The desired commitment tier for this account to use."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountDelete",
-      "definiteArgument": "dls account delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountEnableKeyVault",
-      "definiteArgument": "dls account enable-key-vault",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountList",
-      "definiteArgument": "dls account list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountShow",
-      "definiteArgument": "dls account show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountUpdate",
-      "definiteArgument": "dls account update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "AllowAzureIps",
-            "type": "DlsAccountUpdateAllowAzureIps",
-            "format": "--allow-azure-ips {value}",
-            "help": "Allow/block Azure originating IPs through the firewall."
-          },
-          {
-            "name": "DefaultGroup",
-            "type": "string",
-            "format": "--default-group {value}",
-            "help": ""
-          },
-          {
-            "name": "FirewallState",
-            "type": "DlsAccountUpdateAllowAzureIps",
-            "format": "--firewall-state {value}",
-            "help": "Enable/disable existing firewall rules."
-          },
-          {
-            "name": "KeyVersion",
-            "type": "string",
-            "format": "--key-version {value}",
-            "help": ""
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Tier",
-            "type": "DlsAccountTier",
-            "format": "--tier {value}",
-            "help": "The desired commitment tier for this account to use."
-          },
-          {
-            "name": "TrustedIdProviderState",
-            "type": "DlsAccountUpdateAllowAzureIps",
-            "format": "--trusted-id-provider-state {value}",
-            "help": "Enable/disable the existing trusted ID providers."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "AccountFirewallCreate",
       "definiteArgument": "dls account firewall create",
       "settingsClass": {
@@ -804,6 +805,178 @@
       }
     },
     {
+      "postfix": "AccountNetworkRuleCreate",
+      "definiteArgument": "dls account network-rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The virtual network rule name."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "The subnet name or id for the virtual network rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "The name of the virtual network rule."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountNetworkRuleDelete",
+      "definiteArgument": "dls account network-rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The virtual network rule name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountNetworkRuleList",
+      "definiteArgument": "dls account network-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountNetworkRuleShow",
+      "definiteArgument": "dls account network-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The virtual network rule name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountNetworkRuleUpdate",
+      "definiteArgument": "dls account network-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The virtual network rule name."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "Name or ID of the subnet that allows access to DLS. If subnet name is provided, --name must be provided."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "The virtual network rule name."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "AccountTrustedProviderCreate",
       "definiteArgument": "dls account trusted-provider create",
       "settingsClass": {
@@ -825,12 +998,6 @@
             "type": "string",
             "format": "--trusted-id-provider-name {value}",
             "help": "The name of the trusted identity provider. This is used for differentiation of providers in the account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Resource name."
           },
           {
             "name": "ResourceGroup",

@@ -289,7 +289,8 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureManagedapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureManagedappTasks.AzureManagedappPath;
         /// <summary><p>Space-separated authorization pairs in a format of &lt;principalId&gt;:&lt;roleDefinitionId&gt;.</p></summary>
-        public virtual string Authorizations { get; internal set; }
+        public virtual IReadOnlyList<string> Authorizations => AuthorizationsInternal.AsReadOnly();
+        internal List<string> AuthorizationsInternal { get; set; } = new List<string>();
         /// <summary><p>The managed application definition description.</p></summary>
         public virtual string Description { get; internal set; }
         /// <summary><p>The managed application definition display name.</p></summary>
@@ -324,7 +325,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("managedapp definition create")
-              .Add("--authorizations {value}", Authorizations)
+              .Add("--authorizations {value}", Authorizations, separator: ' ')
               .Add("--description {value}", Description)
               .Add("--display-name {value}", DisplayName)
               .Add("--lock-level {value}", LockLevel)
@@ -1160,20 +1161,62 @@ namespace Nuke.Azure
     public static partial class AzureManagedappDefinitionCreateSettingsExtensions
     {
         #region Authorizations
-        /// <summary><p><em>Sets <see cref="AzureManagedappDefinitionCreateSettings.Authorizations"/>.</em></p><p>Space-separated authorization pairs in a format of &lt;principalId&gt;:&lt;roleDefinitionId&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureManagedappDefinitionCreateSettings.Authorizations"/> to a new list.</em></p><p>Space-separated authorization pairs in a format of &lt;principalId&gt;:&lt;roleDefinitionId&gt;.</p></summary>
         [Pure]
-        public static AzureManagedappDefinitionCreateSettings SetAuthorizations(this AzureManagedappDefinitionCreateSettings toolSettings, string authorizations)
+        public static AzureManagedappDefinitionCreateSettings SetAuthorizations(this AzureManagedappDefinitionCreateSettings toolSettings, params string[] authorizations)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Authorizations = authorizations;
+            toolSettings.AuthorizationsInternal = authorizations.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureManagedappDefinitionCreateSettings.Authorizations"/>.</em></p><p>Space-separated authorization pairs in a format of &lt;principalId&gt;:&lt;roleDefinitionId&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureManagedappDefinitionCreateSettings.Authorizations"/> to a new list.</em></p><p>Space-separated authorization pairs in a format of &lt;principalId&gt;:&lt;roleDefinitionId&gt;.</p></summary>
         [Pure]
-        public static AzureManagedappDefinitionCreateSettings ResetAuthorizations(this AzureManagedappDefinitionCreateSettings toolSettings)
+        public static AzureManagedappDefinitionCreateSettings SetAuthorizations(this AzureManagedappDefinitionCreateSettings toolSettings, IEnumerable<string> authorizations)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Authorizations = null;
+            toolSettings.AuthorizationsInternal = authorizations.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureManagedappDefinitionCreateSettings.Authorizations"/>.</em></p><p>Space-separated authorization pairs in a format of &lt;principalId&gt;:&lt;roleDefinitionId&gt;.</p></summary>
+        [Pure]
+        public static AzureManagedappDefinitionCreateSettings AddAuthorizations(this AzureManagedappDefinitionCreateSettings toolSettings, params string[] authorizations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthorizationsInternal.AddRange(authorizations);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureManagedappDefinitionCreateSettings.Authorizations"/>.</em></p><p>Space-separated authorization pairs in a format of &lt;principalId&gt;:&lt;roleDefinitionId&gt;.</p></summary>
+        [Pure]
+        public static AzureManagedappDefinitionCreateSettings AddAuthorizations(this AzureManagedappDefinitionCreateSettings toolSettings, IEnumerable<string> authorizations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthorizationsInternal.AddRange(authorizations);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureManagedappDefinitionCreateSettings.Authorizations"/>.</em></p><p>Space-separated authorization pairs in a format of &lt;principalId&gt;:&lt;roleDefinitionId&gt;.</p></summary>
+        [Pure]
+        public static AzureManagedappDefinitionCreateSettings ClearAuthorizations(this AzureManagedappDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthorizationsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureManagedappDefinitionCreateSettings.Authorizations"/>.</em></p><p>Space-separated authorization pairs in a format of &lt;principalId&gt;:&lt;roleDefinitionId&gt;.</p></summary>
+        [Pure]
+        public static AzureManagedappDefinitionCreateSettings RemoveAuthorizations(this AzureManagedappDefinitionCreateSettings toolSettings, params string[] authorizations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(authorizations);
+            toolSettings.AuthorizationsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureManagedappDefinitionCreateSettings.Authorizations"/>.</em></p><p>Space-separated authorization pairs in a format of &lt;principalId&gt;:&lt;roleDefinitionId&gt;.</p></summary>
+        [Pure]
+        public static AzureManagedappDefinitionCreateSettings RemoveAuthorizations(this AzureManagedappDefinitionCreateSettings toolSettings, IEnumerable<string> authorizations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(authorizations);
+            toolSettings.AuthorizationsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion

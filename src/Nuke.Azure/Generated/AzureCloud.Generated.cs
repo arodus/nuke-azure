@@ -1892,6 +1892,7 @@ namespace Nuke.Azure
     public partial class CloudProfile : Enumeration
     {
         public static CloudProfile _2017_03_09_profile = new CloudProfile { Value = "2017-03-09-profile" };
+        public static CloudProfile _2018_03_01_hybrid = new CloudProfile { Value = "2018-03-01-hybrid" };
         public static CloudProfile latest = new CloudProfile { Value = "latest" };
     }
     #endregion

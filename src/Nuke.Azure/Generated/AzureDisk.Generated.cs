@@ -113,6 +113,10 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The number of IOPS allowed for this disk. Only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.</p></summary>
+        public virtual string DiskIopsReadWrite { get; internal set; }
+        /// <summary><p>The bandwidth allowed for this disk. Only settable for UltraSSD disks. MBps means millions of bytes per second with ISO notation of powers of 10.</p></summary>
+        public virtual string DiskMbpsReadWrite { get; internal set; }
         /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
@@ -145,6 +149,8 @@ namespace Nuke.Azure
               .Add("disk create")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--disk-iops-read-write {value}", DiskIopsReadWrite)
+              .Add("--disk-mbps-read-write {value}", DiskMbpsReadWrite)
               .Add("--location {value}", Location)
               .Add("--no-wait", NoWait)
               .Add("--size-gb {value}", SizeGb)
@@ -515,6 +521,42 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DiskIopsReadWrite
+        /// <summary><p><em>Sets <see cref="AzureDiskCreateSettings.DiskIopsReadWrite"/>.</em></p><p>The number of IOPS allowed for this disk. Only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.</p></summary>
+        [Pure]
+        public static AzureDiskCreateSettings SetDiskIopsReadWrite(this AzureDiskCreateSettings toolSettings, string diskIopsReadWrite)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskIopsReadWrite = diskIopsReadWrite;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDiskCreateSettings.DiskIopsReadWrite"/>.</em></p><p>The number of IOPS allowed for this disk. Only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.</p></summary>
+        [Pure]
+        public static AzureDiskCreateSettings ResetDiskIopsReadWrite(this AzureDiskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskIopsReadWrite = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DiskMbpsReadWrite
+        /// <summary><p><em>Sets <see cref="AzureDiskCreateSettings.DiskMbpsReadWrite"/>.</em></p><p>The bandwidth allowed for this disk. Only settable for UltraSSD disks. MBps means millions of bytes per second with ISO notation of powers of 10.</p></summary>
+        [Pure]
+        public static AzureDiskCreateSettings SetDiskMbpsReadWrite(this AzureDiskCreateSettings toolSettings, string diskMbpsReadWrite)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskMbpsReadWrite = diskMbpsReadWrite;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDiskCreateSettings.DiskMbpsReadWrite"/>.</em></p><p>The bandwidth allowed for this disk. Only settable for UltraSSD disks. MBps means millions of bytes per second with ISO notation of powers of 10.</p></summary>
+        [Pure]
+        public static AzureDiskCreateSettings ResetDiskMbpsReadWrite(this AzureDiskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskMbpsReadWrite = null;
             return toolSettings;
         }
         #endregion
@@ -2062,6 +2104,7 @@ namespace Nuke.Azure
         public static DiskSku premium_lrs = new DiskSku { Value = "premium_lrs" };
         public static DiskSku standardssd_lrs = new DiskSku { Value = "standardssd_lrs" };
         public static DiskSku standard_lrs = new DiskSku { Value = "standard_lrs" };
+        public static DiskSku ultrassd_lrs = new DiskSku { Value = "ultrassd_lrs" };
     }
     #endregion
     #region DiskCreateZone

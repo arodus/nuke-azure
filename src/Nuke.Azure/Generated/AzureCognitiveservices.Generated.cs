@@ -60,9 +60,33 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountList(Configure<AzureCognitiveservicesAccountListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountListKinds(Configure<AzureCognitiveservicesAccountListKindsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountListKindsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountListSkus(Configure<AzureCognitiveservicesAccountListSkusSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountListSkusSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountListUsage(Configure<AzureCognitiveservicesAccountListUsageSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountListUsageSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -154,6 +178,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The Sku of cognitive services account.</p></summary>
         public virtual string Sku { get; internal set; }
+        /// <summary><p>Api properties in JSON format or a=b c=d format. Some cognitive services (i.e. QnA Maker) require extra api properties to create the account.</p></summary>
+        public virtual string ApiProperties { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
         /// <summary><p>Do not prompt for terms confirmation.</p></summary>
@@ -177,6 +203,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--sku {value}", Sku)
+              .Add("--api-properties {value}", ApiProperties)
               .Add("--tags {value}", Tags)
               .Add("--yes {value}", Yes)
               .Add("--debug {value}", Debug)
@@ -226,12 +253,123 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureCognitiveservicesAccountListSettings
+    /// <summary><p>Used within <see cref="AzureCognitiveservicesTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCognitiveservicesAccountListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCognitiveservices executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCognitiveservicesTasks.AzureCognitiveservicesPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cognitiveservices account list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCognitiveservicesAccountListKindsSettings
+    /// <summary><p>Used within <see cref="AzureCognitiveservicesTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCognitiveservicesAccountListKindsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCognitiveservices executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCognitiveservicesTasks.AzureCognitiveservicesPath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cognitiveservices account list-kinds")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureCognitiveservicesAccountListSkusSettings
     /// <summary><p>Used within <see cref="AzureCognitiveservicesTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
     public partial class AzureCognitiveservicesAccountListSkusSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCognitiveservices executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCognitiveservicesTasks.AzureCognitiveservicesPath;
+        /// <summary><p>The API name of cognitive services account.</p></summary>
+        public virtual string Kind { get; internal set; }
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Cognitive service account name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cognitiveservices account list-skus")
+              .Add("--kind {value}", Kind)
+              .Add("--location {value}", Location)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCognitiveservicesAccountListUsageSettings
+    /// <summary><p>Used within <see cref="AzureCognitiveservicesTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCognitiveservicesAccountListUsageSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureCognitiveservices executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureCognitiveservicesTasks.AzureCognitiveservicesPath;
@@ -252,7 +390,7 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("cognitiveservices account list-skus")
+              .Add("cognitiveservices account list-usage")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
@@ -637,6 +775,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ApiProperties
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountCreateSettings.ApiProperties"/>.</em></p><p>Api properties in JSON format or a=b c=d format. Some cognitive services (i.e. QnA Maker) require extra api properties to create the account.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountCreateSettings SetApiProperties(this AzureCognitiveservicesAccountCreateSettings toolSettings, string apiProperties)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ApiProperties = apiProperties;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountCreateSettings.ApiProperties"/>.</em></p><p>Api properties in JSON format or a=b c=d format. Some cognitive services (i.e. QnA Maker) require extra api properties to create the account.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountCreateSettings ResetApiProperties(this AzureCognitiveservicesAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ApiProperties = null;
+            return toolSettings;
+        }
+        #endregion
         #region Tags
         /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
@@ -899,12 +1055,262 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureCognitiveservicesAccountListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCognitiveservicesTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCognitiveservicesAccountListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSettings SetResourceGroup(this AzureCognitiveservicesAccountListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSettings ResetResourceGroup(this AzureCognitiveservicesAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSettings SetDebug(this AzureCognitiveservicesAccountListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSettings ResetDebug(this AzureCognitiveservicesAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSettings SetHelp(this AzureCognitiveservicesAccountListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSettings ResetHelp(this AzureCognitiveservicesAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSettings SetOutput(this AzureCognitiveservicesAccountListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSettings ResetOutput(this AzureCognitiveservicesAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSettings SetQuery(this AzureCognitiveservicesAccountListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSettings ResetQuery(this AzureCognitiveservicesAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSettings SetVerbose(this AzureCognitiveservicesAccountListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSettings ResetVerbose(this AzureCognitiveservicesAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCognitiveservicesAccountListKindsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCognitiveservicesTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCognitiveservicesAccountListKindsSettingsExtensions
+    {
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListKindsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListKindsSettings SetDebug(this AzureCognitiveservicesAccountListKindsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListKindsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListKindsSettings ResetDebug(this AzureCognitiveservicesAccountListKindsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListKindsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListKindsSettings SetHelp(this AzureCognitiveservicesAccountListKindsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListKindsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListKindsSettings ResetHelp(this AzureCognitiveservicesAccountListKindsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListKindsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListKindsSettings SetOutput(this AzureCognitiveservicesAccountListKindsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListKindsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListKindsSettings ResetOutput(this AzureCognitiveservicesAccountListKindsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListKindsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListKindsSettings SetQuery(this AzureCognitiveservicesAccountListKindsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListKindsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListKindsSettings ResetQuery(this AzureCognitiveservicesAccountListKindsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListKindsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListKindsSettings SetVerbose(this AzureCognitiveservicesAccountListKindsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListKindsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListKindsSettings ResetVerbose(this AzureCognitiveservicesAccountListKindsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureCognitiveservicesAccountListSkusSettingsExtensions
     /// <summary><p>Used within <see cref="AzureCognitiveservicesTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureCognitiveservicesAccountListSkusSettingsExtensions
     {
+        #region Kind
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListSkusSettings.Kind"/>.</em></p><p>The API name of cognitive services account.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSkusSettings SetKind(this AzureCognitiveservicesAccountListSkusSettings toolSettings, string kind)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Kind = kind;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListSkusSettings.Kind"/>.</em></p><p>The API name of cognitive services account.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSkusSettings ResetKind(this AzureCognitiveservicesAccountListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Kind = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListSkusSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSkusSettings SetLocation(this AzureCognitiveservicesAccountListSkusSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListSkusSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListSkusSettings ResetLocation(this AzureCognitiveservicesAccountListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListSkusSettings.Name"/>.</em></p><p>Cognitive service account name.</p></summary>
         [Pure]
@@ -1025,6 +1431,140 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListSkusSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureCognitiveservicesAccountListSkusSettings ResetVerbose(this AzureCognitiveservicesAccountListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCognitiveservicesAccountListUsageSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCognitiveservicesTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCognitiveservicesAccountListUsageSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListUsageSettings.Name"/>.</em></p><p>Cognitive service account name.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings SetName(this AzureCognitiveservicesAccountListUsageSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListUsageSettings.Name"/>.</em></p><p>Cognitive service account name.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings ResetName(this AzureCognitiveservicesAccountListUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListUsageSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings SetResourceGroup(this AzureCognitiveservicesAccountListUsageSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListUsageSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings ResetResourceGroup(this AzureCognitiveservicesAccountListUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListUsageSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings SetDebug(this AzureCognitiveservicesAccountListUsageSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListUsageSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings ResetDebug(this AzureCognitiveservicesAccountListUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListUsageSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings SetHelp(this AzureCognitiveservicesAccountListUsageSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListUsageSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings ResetHelp(this AzureCognitiveservicesAccountListUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListUsageSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings SetOutput(this AzureCognitiveservicesAccountListUsageSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListUsageSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings ResetOutput(this AzureCognitiveservicesAccountListUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListUsageSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings SetQuery(this AzureCognitiveservicesAccountListUsageSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListUsageSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings ResetQuery(this AzureCognitiveservicesAccountListUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListUsageSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings SetVerbose(this AzureCognitiveservicesAccountListUsageSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCognitiveservicesAccountListUsageSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountListUsageSettings ResetVerbose(this AzureCognitiveservicesAccountListUsageSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

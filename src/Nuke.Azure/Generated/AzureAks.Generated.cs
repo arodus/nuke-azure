@@ -277,7 +277,7 @@ namespace Nuke.Azure
         /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>The maximum number of pods deployable to a node.</p></summary>
-        public virtual string MaxPods { get; internal set; }
+        public virtual int? MaxPods { get; internal set; }
         /// <summary><p>The Kubernetes network plugin to use.</p></summary>
         public virtual string NetworkPlugin { get; internal set; }
         /// <summary><p>Do not use or create a local SSH key.</p></summary>
@@ -1665,7 +1665,7 @@ namespace Nuke.Azure
         #region MaxPods
         /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.MaxPods"/>.</em></p><p>The maximum number of pods deployable to a node.</p></summary>
         [Pure]
-        public static AzureAksCreateSettings SetMaxPods(this AzureAksCreateSettings toolSettings, string maxPods)
+        public static AzureAksCreateSettings SetMaxPods(this AzureAksCreateSettings toolSettings, int? maxPods)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MaxPods = maxPods;

@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/disk.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/disk.yml"
   ],
   "name": "AzureDisk",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest",
@@ -29,6 +29,18 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "DiskIopsReadWrite",
+            "type": "string",
+            "format": "--disk-iops-read-write {value}",
+            "help": "The number of IOPS allowed for this disk. Only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes."
+          },
+          {
+            "name": "DiskMbpsReadWrite",
+            "type": "string",
+            "format": "--disk-mbps-read-write {value}",
+            "help": "The bandwidth allowed for this disk. Only settable for UltraSSD disks. MBps means millions of bytes per second with ISO notation of powers of 10."
           },
           {
             "name": "Location",
@@ -356,7 +368,8 @@
       "values": [
         "premium_lrs",
         "standardssd_lrs",
-        "standard_lrs"
+        "standard_lrs",
+        "ultrassd_lrs"
       ]
     },
     {

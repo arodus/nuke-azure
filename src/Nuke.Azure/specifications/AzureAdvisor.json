@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/advisor.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/advisor/recommendation.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/8f060bc/latest/docs-ref-autogen/advisor/configuration.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/advisor.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/advisor/configuration.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/advisor/recommendation.yml"
   ],
   "name": "AzureAdvisor",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest",
@@ -19,96 +19,6 @@
       "postfix": "",
       "definiteArgument": "advisor",
       "settingsClass": {}
-    },
-    {
-      "postfix": "RecommendationDisable",
-      "definiteArgument": "advisor recommendation disable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Days",
-            "type": "int",
-            "format": "--days {value}",
-            "help": "Number of days to disable. If not specified, the recommendation is disabled forever."
-          },
-          {
-            "name": "Ids",
-            "type": "string",
-            "format": "--ids {value}",
-            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the recommendation as output by the list command."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "RecommendationEnable",
-      "definiteArgument": "advisor recommendation enable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "string",
-            "format": "--ids {value}",
-            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the recommendation as output by the list command."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "RecommendationList",
-      "definiteArgument": "advisor recommendation list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Category",
-            "type": "AdvisorRecommendationListCategory",
-            "format": "--category {value}",
-            "help": "Name of recommendation category."
-          },
-          {
-            "name": "Ids",
-            "type": "string",
-            "format": "--ids {value}",
-            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
-          },
-          {
-            "name": "Refresh",
-            "type": "string",
-            "format": "--refresh {value}",
-            "help": "Generate new recommendations."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
     },
     {
       "postfix": "ConfigurationList",
@@ -184,6 +94,99 @@
           }
         ]
       }
+    },
+    {
+      "postfix": "RecommendationDisable",
+      "definiteArgument": "advisor recommendation disable",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Days",
+            "type": "int",
+            "format": "--days {value}",
+            "help": "Number of days to disable. If not specified, the recommendation is disabled forever."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the recommendation as output by the list command."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RecommendationEnable",
+      "definiteArgument": "advisor recommendation enable",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the recommendation as output by the list command."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RecommendationList",
+      "definiteArgument": "advisor recommendation list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Category",
+            "type": "AdvisorRecommendationListCategory",
+            "format": "--category {value}",
+            "help": "Name of recommendation category."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Refresh",
+            "type": "string",
+            "format": "--refresh {value}",
+            "help": "Generate new recommendations."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
     }
   ],
   "commonTaskProperties": [
@@ -220,21 +223,21 @@
   ],
   "enumerations": [
     {
-      "name": "AdvisorRecommendationListCategory",
-      "values": [
-        "cost",
-        "highavailability",
-        "performance",
-        "security"
-      ]
-    },
-    {
       "name": "AdvisorConfigurationUpdateLowCpuThreshold",
       "values": [
         "10",
         "15",
         "20",
         "5"
+      ]
+    },
+    {
+      "name": "AdvisorRecommendationListCategory",
+      "values": [
+        "cost",
+        "highavailability",
+        "performance",
+        "security"
       ]
     }
   ]
