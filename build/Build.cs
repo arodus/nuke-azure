@@ -62,9 +62,12 @@ class Build : NukeBuild
     [GitRepository] readonly GitRepository GitRepository;
     [Solution] readonly Solution Solution;
 
+    [Parameter] readonly string Configuration = IsLocalBuild ? "Debug" : "Release";
     [Parameter("Api key to push packages to nuget.org.")] readonly string NugetApiKey;
     [Parameter("Api key to access the github.")] readonly string GitHubApiKey;
 
+    AbsolutePath SourceDirectory => RootDirectory / "src";
+    AbsolutePath OutputDirectory => RootDirectory / "output";
     AbsolutePath SpecificationPath => AddonProject.Directory / "specifications";
     AbsolutePath GenerationBaseDirectory => AddonProject.Directory / "Generated";
     AbsolutePath DefinitionRepositoryPath => TemporaryDirectory / "definition-repository";
@@ -87,21 +90,26 @@ class Build : NukeBuild
             DeleteDirectory(SpecificationPath);
             DeleteDirectory(GenerationBaseDirectory);
     });
-  
-
 
     Target Restore => _ => _
         .DependsOn(Clean)
         .Executes(() =>
         {
-            DotNetRestore(s => DefaultDotNetRestore);
+            DotNetRestore(s => s
+                .SetProjectFile(Solution));
         });
 
     Target Compile => _ => _
         .DependsOn(Restore)
         .Executes(() =>
         {
-            DotNetBuild(x => DefaultDotNetBuild.EnableNoRestore());
+            DotNetBuild(x => x
+                .SetProjectFile(Solution)
+                .EnableNoRestore()
+                .SetConfiguration(Configuration)
+                .SetAssemblyVersion(GitVersion.GetNormalizedAssemblyVersion())
+                .SetFileVersion(GitVersion.GetNormalizedFileVersion())
+                .SetInformationalVersion(GitVersion.InformationalVersion));
         });
 
     Target Test => _ => _
@@ -110,12 +118,22 @@ class Build : NukeBuild
         {
             var xUnitSettings = new Xunit2Settings()
                 .SetFramework("net461")
-                .AddTargetAssemblies(GlobFiles(SolutionDirectory / "tests", $"*/bin/{Configuration}/net4*/Nuke.*.Tests.dll").NotEmpty())
+                .AddTargetAssemblies(GlobFiles(Solution.Directory / "tests", $"*/bin/{Configuration}/net4*/Nuke.*.Tests.dll").NotEmpty())
                 .AddResultReport(Xunit2ResultFormat.Xml, OutputDirectory / "tests.xml");
 
             if (IsWin)
             {
-                OpenCover(s => DefaultOpenCover
+                OpenCover(s => s
+                    .SetRegistration(RegistrationType.User)
+                    .SetTargetExitCodeOffset(targetExitCodeOffset: 0)
+                    .SetFilters(
+                        "+[*]*",
+                        "-[xunit.*]*",
+                        "-[FluentAssertions.*]*")
+                    .SetExcludeByAttributes(
+                        "*.Explicit*",
+                        "*.Ignore*",
+                        "System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute")
                     .SetOutput(OutputDirectory / "coverage.xml")
                     .SetTargetSettings(xUnitSettings));
             }
@@ -212,8 +230,17 @@ class Build : NukeBuild
         .DependsOn(GenerateAddon, Clean)
         .Executes(() =>
         {
-            DotNetRestore(s => DefaultDotNetRestore.SetProjectFile(AddonProject));
-            DotNetBuild(s => DefaultDotNetBuild.SetProjectFile(AddonProject).EnableNoRestore());
+            DotNetRestore(s => s
+                .SetProjectFile(AddonProject));
+            
+            DotNetBuild(s => s
+                .SetProjectFile(AddonProject)
+                .EnableNoRestore()
+                .SetConfiguration(Configuration)
+                .SetAssemblyVersion(GitVersion.GetNormalizedAssemblyVersion())
+                .SetFileVersion(GitVersion.GetNormalizedFileVersion())
+                .SetInformationalVersion(GitVersion.InformationalVersion)
+            );
         });
 
     Target Pack => _ => _
@@ -226,12 +253,15 @@ class Build : NukeBuild
                 .Concat($"Full changelog at {GitRepository.SetBranch("master").GetGitHubBrowseUrl(ChangelogFile)}")
                 .JoinNewLine();
 
-            DotNetPack(s => DefaultDotNetPack
+            DotNetPack(s => s
                 .SetProject(AddonProject)
+                .SetConfiguration(Configuration)
                 .EnableNoBuild()
                 .EnableNoRestore()
+                .EnableIncludeSymbols()
                 .SetVersion(GitVersion.NuGetVersionV2)
-                .SetPackageReleaseNotes(releaseNotes));
+                .SetPackageReleaseNotes(releaseNotes)
+                .SetOutputDirectory(OutputDirectory));
         });
 
     Target Changelog => _ => _

@@ -36,8 +36,8 @@ namespace Nuke.Azure.Generator
 
                 Directory.CreateDirectory(toolDirectory);
                 var toolPath = Path.Combine(toolDirectory, toolContext.Tool.Name + ".json");
-                toolContext.Tool.DefinitionFile = toolPath;
-                ToolSerializer.Save(toolContext.Tool);
+                toolContext.Tool.SpecificationFile = toolPath;
+                ToolSerializer.Save(toolContext.Tool, toolPath);
             }
         }
     }
