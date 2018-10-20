@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/container.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/container.yml"
   ],
   "name": "AzureContainer",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest",
@@ -60,7 +60,7 @@
             "name": "Cpu",
             "type": "string",
             "format": "--cpu {value}",
-            "help": "The required number of CPU cores of the containers."
+            "help": "The required number of CPU cores of the containers, accurate to one decimal place."
           },
           {
             "name": "DnsNameLabel",
@@ -104,7 +104,7 @@
             "name": "Memory",
             "type": "string",
             "format": "--memory {value}",
-            "help": "The required memory of the containers in GB."
+            "help": "The required memory of the containers in GB, accurate to one decimal place."
           },
           {
             "name": "Name",

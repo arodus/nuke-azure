@@ -6,17 +6,17 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/lab.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/lab/arm-template.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/lab/artifact-source.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/lab/artifact.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/lab/custom-image.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/lab/environment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/lab/formula.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/lab/gallery-image.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/lab/secret.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/lab/vm.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/lab/vnet.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/lab.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/lab/arm-template.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/lab/artifact.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/lab/gallery-image.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/lab/environment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/lab/formula.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/lab/vm.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/lab/secret.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/lab/custom-image.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/lab/vnet.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/lab/artifact-source.yml"
   ],
   "name": "AzureLab",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest",
@@ -158,82 +158,6 @@
       }
     },
     {
-      "postfix": "ArtifactSourceList",
-      "definiteArgument": "lab artifact-source list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LabName",
-            "type": "string",
-            "format": "--lab-name {value}",
-            "help": "The name of the lab."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Expand",
-            "type": "string",
-            "format": "--expand {value}",
-            "help": "Specify the $expand query. Example: 'properties($select=displayName)'."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "The filter to apply to the operation."
-          },
-          {
-            "name": "Orderby",
-            "type": "string",
-            "format": "--orderby {value}",
-            "help": "The ordering expression for the results, using OData notation."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "help": "The maximum number of resources to return from the operation."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ArtifactSourceShow",
-      "definiteArgument": "lab artifact-source show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LabName",
-            "type": "string",
-            "format": "--lab-name {value}",
-            "help": "The name of the lab."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the artifact source."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Expand",
-            "type": "string",
-            "format": "--expand {value}",
-            "help": "Specify the $expand query. Example: 'properties($select=displayName)'."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "ArtifactList",
       "definiteArgument": "lab artifact list",
       "settingsClass": {
@@ -284,90 +208,8 @@
       }
     },
     {
-      "postfix": "CustomImageCreate",
-      "definiteArgument": "lab custom-image create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LabName",
-            "type": "string",
-            "format": "--lab-name {value}",
-            "help": "Name of the Lab."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the image."
-          },
-          {
-            "name": "OsState",
-            "type": "string",
-            "format": "--os-state {value}",
-            "help": "The current state of the virtual machine."
-          },
-          {
-            "name": "OsType",
-            "type": "string",
-            "format": "--os-type {value}",
-            "help": "Type of the OS on which the custom image is based. Allowed values are: Windows, Linux."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "SourceVmId",
-            "type": "string",
-            "format": "--source-vm-id {value}",
-            "help": "The resource ID of a virtual machine in the provided lab."
-          },
-          {
-            "name": "Author",
-            "type": "string",
-            "format": "--author {value}",
-            "help": "The author of the custom image."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "help": "A detailed description for the custom image."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CustomImageDelete",
-      "definiteArgument": "lab custom-image delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LabName",
-            "type": "string",
-            "format": "--lab-name {value}",
-            "help": "The name of the lab."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the custom image."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CustomImageList",
-      "definiteArgument": "lab custom-image list",
+      "postfix": "GalleryImageList",
+      "definiteArgument": "lab gallery-image list",
       "settingsClass": {
         "properties": [
           {
@@ -386,7 +228,7 @@
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
-            "help": "Specify the $expand query. Example: 'properties($select=vm)'."
+            "help": "Specify the $expand query. Example: 'properties($select=author)'."
           },
           {
             "name": "Filter",
@@ -405,38 +247,6 @@
             "type": "int",
             "format": "--top {value}",
             "help": "The maximum number of resources to return from the operation."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CustomImageShow",
-      "definiteArgument": "lab custom-image show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LabName",
-            "type": "string",
-            "format": "--lab-name {value}",
-            "help": "The name of the lab."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the custom image."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Expand",
-            "type": "string",
-            "format": "--expand {value}",
-            "help": "Specify the $expand query. Example: 'properties($select=vm)'."
           }
         ]
       }
@@ -717,184 +527,6 @@
             "type": "string",
             "format": "--expand {value}",
             "help": "Specify the $expand query. Example: 'properties($select=description)'."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GalleryImageList",
-      "definiteArgument": "lab gallery-image list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LabName",
-            "type": "string",
-            "format": "--lab-name {value}",
-            "help": "The name of the lab."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Expand",
-            "type": "string",
-            "format": "--expand {value}",
-            "help": "Specify the $expand query. Example: 'properties($select=author)'."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "The filter to apply to the operation."
-          },
-          {
-            "name": "Orderby",
-            "type": "string",
-            "format": "--orderby {value}",
-            "help": "The ordering expression for the results, using OData notation."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "help": "The maximum number of resources to return from the operation."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretDelete",
-      "definiteArgument": "lab secret delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LabName",
-            "type": "string",
-            "format": "--lab-name {value}",
-            "help": "The name of the lab."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the secret."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretList",
-      "definiteArgument": "lab secret list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LabName",
-            "type": "string",
-            "format": "--lab-name {value}",
-            "help": "The name of the lab."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Expand",
-            "type": "string",
-            "format": "--expand {value}",
-            "help": "Specify the $expand query. Example: 'properties($select=value)'."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "The filter to apply to the operation."
-          },
-          {
-            "name": "Orderby",
-            "type": "string",
-            "format": "--orderby {value}",
-            "help": "The ordering expression for the results, using OData notation."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "help": "The maximum number of resources to return from the operation."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretSet",
-      "definiteArgument": "lab secret set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LabName",
-            "type": "string",
-            "format": "--lab-name {value}",
-            "help": "Name of the lab."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Value",
-            "type": "string",
-            "format": "--value {value}",
-            "help": "Value of the secret."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretShow",
-      "definiteArgument": "lab secret show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LabName",
-            "type": "string",
-            "format": "--lab-name {value}",
-            "help": "The name of the lab."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the secret."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Expand",
-            "type": "string",
-            "format": "--expand {value}",
-            "help": "Specify the $expand query. Example: 'properties($select=value)'."
           }
         ]
       }
@@ -1278,6 +910,298 @@
       }
     },
     {
+      "postfix": "SecretDelete",
+      "definiteArgument": "lab secret delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LabName",
+            "type": "string",
+            "format": "--lab-name {value}",
+            "help": "The name of the lab."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the secret."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretList",
+      "definiteArgument": "lab secret list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LabName",
+            "type": "string",
+            "format": "--lab-name {value}",
+            "help": "The name of the lab."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "Specify the $expand query. Example: 'properties($select=value)'."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "The filter to apply to the operation."
+          },
+          {
+            "name": "Orderby",
+            "type": "string",
+            "format": "--orderby {value}",
+            "help": "The ordering expression for the results, using OData notation."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "help": "The maximum number of resources to return from the operation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretSet",
+      "definiteArgument": "lab secret set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LabName",
+            "type": "string",
+            "format": "--lab-name {value}",
+            "help": "Name of the lab."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "help": "Value of the secret."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretShow",
+      "definiteArgument": "lab secret show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LabName",
+            "type": "string",
+            "format": "--lab-name {value}",
+            "help": "The name of the lab."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the secret."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "Specify the $expand query. Example: 'properties($select=value)'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CustomImageCreate",
+      "definiteArgument": "lab custom-image create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LabName",
+            "type": "string",
+            "format": "--lab-name {value}",
+            "help": "Name of the Lab."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the image."
+          },
+          {
+            "name": "OsState",
+            "type": "string",
+            "format": "--os-state {value}",
+            "help": "The current state of the virtual machine."
+          },
+          {
+            "name": "OsType",
+            "type": "string",
+            "format": "--os-type {value}",
+            "help": "Type of the OS on which the custom image is based. Allowed values are: Windows, Linux."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SourceVmId",
+            "type": "string",
+            "format": "--source-vm-id {value}",
+            "help": "The resource ID of a virtual machine in the provided lab."
+          },
+          {
+            "name": "Author",
+            "type": "string",
+            "format": "--author {value}",
+            "help": "The author of the custom image."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "A detailed description for the custom image."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CustomImageDelete",
+      "definiteArgument": "lab custom-image delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LabName",
+            "type": "string",
+            "format": "--lab-name {value}",
+            "help": "The name of the lab."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the custom image."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CustomImageList",
+      "definiteArgument": "lab custom-image list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LabName",
+            "type": "string",
+            "format": "--lab-name {value}",
+            "help": "The name of the lab."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "Specify the $expand query. Example: 'properties($select=vm)'."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "The filter to apply to the operation."
+          },
+          {
+            "name": "Orderby",
+            "type": "string",
+            "format": "--orderby {value}",
+            "help": "The ordering expression for the results, using OData notation."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "help": "The maximum number of resources to return from the operation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CustomImageShow",
+      "definiteArgument": "lab custom-image show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LabName",
+            "type": "string",
+            "format": "--lab-name {value}",
+            "help": "The name of the lab."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the custom image."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "Specify the $expand query. Example: 'properties($select=vm)'."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "VnetGet",
       "definiteArgument": "lab vnet get",
       "settingsClass": {
@@ -1349,6 +1273,82 @@
             "type": "int",
             "format": "--top {value}",
             "help": "The maximum number of resources to return from the operation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ArtifactSourceList",
+      "definiteArgument": "lab artifact-source list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LabName",
+            "type": "string",
+            "format": "--lab-name {value}",
+            "help": "The name of the lab."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "Specify the $expand query. Example: 'properties($select=displayName)'."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "The filter to apply to the operation."
+          },
+          {
+            "name": "Orderby",
+            "type": "string",
+            "format": "--orderby {value}",
+            "help": "The ordering expression for the results, using OData notation."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "help": "The maximum number of resources to return from the operation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ArtifactSourceShow",
+      "definiteArgument": "lab artifact-source show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LabName",
+            "type": "string",
+            "format": "--lab-name {value}",
+            "help": "The name of the lab."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the artifact source."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "Specify the $expand query. Example: 'properties($select=displayName)'."
           }
         ]
       }

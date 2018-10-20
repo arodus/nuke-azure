@@ -1,0 +1,409 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/hdinsight.yml"
+  ],
+  "name": "AzureHdinsight",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest",
+  "help": "Manage HDInsight clusters.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "Create",
+      "definiteArgument": "hdinsight create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "ClusterConfigurations",
+            "type": "string",
+            "format": "--cluster-configurations {value}",
+            "help": "Extra configurations of various components, in JSON."
+          },
+          {
+            "name": "ClusterTier",
+            "type": "HdinsightCreateClusterTier",
+            "format": "--cluster-tier {value}",
+            "help": "The tier of the cluster: standard or premium."
+          },
+          {
+            "name": "ComponentVersion",
+            "type": "string",
+            "format": "--component-version {value}",
+            "help": "The versions of various Hadoop components, in space-separated versions in 'component=version' format. Example: Spark=2.0 Hadoop=2.7.3 See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions</a>."
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "format": "--size {value}",
+            "help": "The number of worker nodes in the cluster."
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "format": "--type {value}",
+            "help": "Type of HDInsight cluster, like: hadoop, interactivehive, hbase, kafka, storm, spark, rserver, mlservices. See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types</a>."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The HDInsight cluster version. See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions</a>."
+          },
+          {
+            "name": "HttpPassword",
+            "type": "string",
+            "format": "--http-password {value}",
+            "secret": true,
+            "help": "HTTP password for the cluster."
+          },
+          {
+            "name": "HttpUser",
+            "type": "string",
+            "format": "--http-user {value}",
+            "help": "HTTP username for the cluster.  Default: admin."
+          },
+          {
+            "name": "SubnetName",
+            "type": "string",
+            "format": "--subnet-name {value}",
+            "help": "The name of the subnet in the specified virtual network."
+          },
+          {
+            "name": "VirtualNetwork",
+            "type": "string",
+            "format": "--virtual-network {value}",
+            "help": "The virtual network resource ID of an existing virtual network."
+          },
+          {
+            "name": "EdgenodeSize",
+            "type": "string",
+            "format": "--edgenode-size {value}",
+            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
+          },
+          {
+            "name": "HeadnodeSize",
+            "type": "string",
+            "format": "--headnode-size {value}",
+            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
+          },
+          {
+            "name": "WorkernodeDataDiskSize",
+            "type": "string",
+            "format": "--workernode-data-disk-size {value}",
+            "help": "The size of the data disk in GB, e.g. 1023."
+          },
+          {
+            "name": "WorkernodeDataDiskStorageAccountType",
+            "type": "HdinsightCreateWorkernodeDataDiskStorageAccountType",
+            "format": "--workernode-data-disk-storage-account-type {value}",
+            "help": "The type of storage account that will be used for the data disks: standard_lrs or premium_lrs."
+          },
+          {
+            "name": "WorkernodeDataDisksPerNode",
+            "type": "string",
+            "format": "--workernode-data-disks-per-node {value}",
+            "help": "The number of data disks to use per worker node."
+          },
+          {
+            "name": "WorkernodeSize",
+            "type": "string",
+            "format": "--workernode-size {value}",
+            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
+          },
+          {
+            "name": "ZookeepernodeSize",
+            "type": "string",
+            "format": "--zookeepernode-size {value}",
+            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
+          },
+          {
+            "name": "SshPassword",
+            "type": "string",
+            "format": "--ssh-password {value}",
+            "secret": true,
+            "help": "SSH password for the cluster nodes. If none specified, uses the HTTP password."
+          },
+          {
+            "name": "SshPublicKey",
+            "type": "string",
+            "format": "--ssh-public-key {value}",
+            "help": "SSH public key for the cluster nodes."
+          },
+          {
+            "name": "SshUser",
+            "type": "string",
+            "format": "--ssh-user {value}",
+            "help": "SSH username for the cluster nodes."
+          },
+          {
+            "name": "StorageAccount",
+            "type": "string",
+            "format": "--storage-account {value}",
+            "help": "The storage account, e.g. \"&lt;name&gt;.blob.core.windows.net\"."
+          },
+          {
+            "name": "StorageAccountKey",
+            "type": "string",
+            "format": "--storage-account-key {value}",
+            "help": "The storage account key. A key can be retrieved automatically if the user has access to the storage account."
+          },
+          {
+            "name": "StorageDefaultContainer",
+            "type": "string",
+            "format": "--storage-default-container {value}",
+            "help": "The storage container the cluster will use. Uses the cluster name if none was specified. (WASB only)."
+          },
+          {
+            "name": "StorageDefaultFilesystem",
+            "type": "string",
+            "format": "--storage-default-filesystem {value}",
+            "help": "The storage filesystem the cluster will use. (DFS only)."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Delete",
+      "definiteArgument": "hdinsight delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "hdinsight list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Resize",
+      "definiteArgument": "hdinsight resize",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "TargetInstanceCount",
+            "type": "string",
+            "format": "--target-instance-count {value}",
+            "help": "The target instance count for the operation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "hdinsight show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Wait",
+      "definiteArgument": "hdinsight wait",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Created",
+            "type": "string",
+            "format": "--created {value}",
+            "help": "Wait until created with 'provisioningState' at 'Succeeded'."
+          },
+          {
+            "name": "Custom",
+            "type": "string",
+            "format": "--custom {value}",
+            "help": "Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running']."
+          },
+          {
+            "name": "Deleted",
+            "type": "string",
+            "format": "--deleted {value}",
+            "help": "Wait until deleted."
+          },
+          {
+            "name": "Exists",
+            "type": "string",
+            "format": "--exists {value}",
+            "help": "Wait until the resource exists."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "help": "Polling interval in seconds."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Maximum wait in seconds."
+          },
+          {
+            "name": "Updated",
+            "type": "string",
+            "format": "--updated {value}",
+            "help": "Wait until updated with provisioningState at 'Succeeded'."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "AzureOutput",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "HdinsightCreateClusterTier",
+      "values": [
+        "premium",
+        "standard"
+      ]
+    },
+    {
+      "name": "HdinsightCreateWorkernodeDataDiskStorageAccountType",
+      "values": [
+        "premium_lrs",
+        "standard_lrs"
+      ]
+    }
+  ]
+}

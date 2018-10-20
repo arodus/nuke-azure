@@ -6,17 +6,17 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/keyvault.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/keyvault/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/keyvault/key.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/keyvault/network-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/keyvault/secret.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/keyvault/storage.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/keyvault/certificate/contact.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/keyvault/certificate/issuer.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/keyvault/certificate/pending.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/keyvault/storage/sas-definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/keyvault/certificate/issuer/admin.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/keyvault.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/keyvault/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/keyvault/secret.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/keyvault/network-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/keyvault/storage.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/keyvault/key.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/keyvault/certificate/pending.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/keyvault/certificate/contact.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/keyvault/certificate/issuer.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/keyvault/storage/sas-definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/keyvault/certificate/issuer/admin.yml"
   ],
   "name": "AzureKeyvault",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest",
@@ -822,6 +822,878 @@
       }
     },
     {
+      "postfix": "SecretBackup",
+      "definiteArgument": "keyvault secret backup",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilePath",
+            "type": "string",
+            "format": "--file-path {value}",
+            "help": ""
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretDelete",
+      "definiteArgument": "keyvault secret delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretDownload",
+      "definiteArgument": "keyvault secret download",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "File to receive the secret contents."
+          },
+          {
+            "name": "Encoding",
+            "type": "KeyvaultSecretEncoding",
+            "format": "--encoding {value}",
+            "help": "Encoding of the destination file. By default, will look for the 'file-encoding' tag on the secret. Otherwise will assume 'utf-8'."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The secret version. If omitted, uses the latest version."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretList",
+      "definiteArgument": "keyvault secret list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified, the service will return up to 25 results."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretListDeleted",
+      "definiteArgument": "keyvault secret list-deleted",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretListVersions",
+      "definiteArgument": "keyvault secret list-versions",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified, the service will return up to 25 results."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretPurge",
+      "definiteArgument": "keyvault secret purge",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "The recovery id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretRecover",
+      "definiteArgument": "keyvault secret recover",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "The recovery id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretRestore",
+      "definiteArgument": "keyvault secret restore",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilePath",
+            "type": "string",
+            "format": "--file-path {value}",
+            "help": ""
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretSet",
+      "definiteArgument": "keyvault secret set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "Description of the secret contents (e.g. password, connection string, etc)."
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "format": "--disabled",
+            "help": "Create secret in disabled state."
+          },
+          {
+            "name": "Expires",
+            "type": "string",
+            "format": "--expires {value}",
+            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "NotBefore",
+            "type": "string",
+            "format": "--not-before {value}",
+            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Encoding",
+            "type": "KeyvaultSecretEncoding",
+            "format": "--encoding {value}",
+            "help": "Source file encoding. The value is saved as a tag (`file-encoding=&amp;lt;val&amp;gt;`) and used during download to automatically encode the resulting file."
+          },
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "Source file for secret. Use in conjunction with '--encoding'."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "help": "Plain text secret value. Cannot be used with '--file' or '--encoding'."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretSetAttributes",
+      "definiteArgument": "keyvault secret set-attributes",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ContentType",
+            "type": "string",
+            "format": "--content-type {value}",
+            "help": "Type of the secret value such as a password."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "help": "Enable the secret."
+          },
+          {
+            "name": "Expires",
+            "type": "string",
+            "format": "--expires {value}",
+            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "NotBefore",
+            "type": "string",
+            "format": "--not-before {value}",
+            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The secret version. If omitted, uses the latest version."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretShow",
+      "definiteArgument": "keyvault secret show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The secret version. If omitted, uses the latest version."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretShowDeleted",
+      "definiteArgument": "keyvault secret show-deleted",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "The recovery id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NetworkRuleAdd",
+      "definiteArgument": "keyvault network-rule add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "IpAddress",
+            "type": "string",
+            "format": "--ip-address {value}",
+            "help": "IPv4 address or CIDR range."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Proceed only if Key Vault belongs to the specified resource group."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "Name of a virtual network."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NetworkRuleList",
+      "definiteArgument": "keyvault network-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Proceed only if Key Vault belongs to the specified resource group."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NetworkRuleRemove",
+      "definiteArgument": "keyvault network-rule remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "IpAddress",
+            "type": "string",
+            "format": "--ip-address {value}",
+            "help": "IPv4 address or CIDR range."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Proceed only if Key Vault belongs to the specified resource group."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "Name of a virtual network."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageAdd",
+      "definiteArgument": "keyvault storage add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ActiveKeyName",
+            "type": "string",
+            "format": "--active-key-name {value}",
+            "help": "Current active storage account key name."
+          },
+          {
+            "name": "ResourceId",
+            "type": "string",
+            "format": "--resource-id {value}",
+            "help": "Storage account resource id."
+          },
+          {
+            "name": "AutoRegenerateKey",
+            "type": "bool",
+            "format": "--auto-regenerate-key",
+            "help": "Whether keyvault should manage the storage account for the user."
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "format": "--disabled",
+            "help": "Add the storage account in a disabled state."
+          },
+          {
+            "name": "RegenerationPeriod",
+            "type": "string",
+            "format": "--regeneration-period {value}",
+            "help": "The key regeneration time duration specified in ISO-8601 format, such as \"P30D\" for rotation every 30 days."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageBackup",
+      "definiteArgument": "keyvault storage backup",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "Local file path in which to store storage account backup."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageList",
+      "definiteArgument": "keyvault storage list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageListDeleted",
+      "definiteArgument": "keyvault storage list-deleted",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StoragePurge",
+      "definiteArgument": "keyvault storage purge",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageRecover",
+      "definiteArgument": "keyvault storage recover",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageRegenerateKey",
+      "definiteArgument": "keyvault storage regenerate-key",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "KeyName",
+            "type": "string",
+            "format": "--key-name {value}",
+            "help": "The storage account key name."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageRemove",
+      "definiteArgument": "keyvault storage remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageRestore",
+      "definiteArgument": "keyvault storage restore",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilePath",
+            "type": "string",
+            "format": "--file-path {value}",
+            "help": ""
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageShow",
+      "definiteArgument": "keyvault storage show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageShowDeleted",
+      "definiteArgument": "keyvault storage show-deleted",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageUpdate",
+      "definiteArgument": "keyvault storage update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ActiveKeyName",
+            "type": "string",
+            "format": "--active-key-name {value}",
+            "help": "The current active storage account key name."
+          },
+          {
+            "name": "AutoRegenerateKey",
+            "type": "bool",
+            "format": "--auto-regenerate-key",
+            "help": "Whether keyvault should manage the storage account for the user."
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "format": "--disabled",
+            "help": "Add the storage account in a disabled state."
+          },
+          {
+            "name": "RegenerationPeriod",
+            "type": "string",
+            "format": "--regeneration-period {value}",
+            "help": "The key regeneration time duration specified in ISO-8601 format, such as \"P30D\" for rotation every 30 days."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "KeyBackup",
       "definiteArgument": "keyvault key backup",
       "settingsClass": {
@@ -1290,357 +2162,41 @@
       }
     },
     {
-      "postfix": "NetworkRuleAdd",
-      "definiteArgument": "keyvault network-rule add",
+      "postfix": "CertificatePendingDelete",
+      "definiteArgument": "keyvault certificate pending delete",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "IpAddress",
-            "type": "string",
-            "format": "--ip-address {value}",
-            "help": "IPv4 address or CIDR range."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Proceed only if Key Vault belongs to the specified resource group."
-          },
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
-          },
-          {
-            "name": "VnetName",
-            "type": "string",
-            "format": "--vnet-name {value}",
-            "help": "Name of a virtual network."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NetworkRuleList",
-      "definiteArgument": "keyvault network-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Proceed only if Key Vault belongs to the specified resource group."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NetworkRuleRemove",
-      "definiteArgument": "keyvault network-rule remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "IpAddress",
-            "type": "string",
-            "format": "--ip-address {value}",
-            "help": "IPv4 address or CIDR range."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Proceed only if Key Vault belongs to the specified resource group."
-          },
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
-          },
-          {
-            "name": "VnetName",
-            "type": "string",
-            "format": "--vnet-name {value}",
-            "help": "Name of a virtual network."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretBackup",
-      "definiteArgument": "keyvault secret backup",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FilePath",
-            "type": "string",
-            "format": "--file-path {value}",
-            "help": ""
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
+            "help": "Name of the pending certificate."
           },
           {
             "name": "VaultName",
             "type": "string",
             "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
+            "help": "Name of the key vault."
           }
         ]
       }
     },
     {
-      "postfix": "SecretDelete",
-      "definiteArgument": "keyvault secret delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretDownload",
-      "definiteArgument": "keyvault secret download",
+      "postfix": "CertificatePendingMerge",
+      "definiteArgument": "keyvault certificate pending merge",
       "settingsClass": {
         "properties": [
           {
             "name": "File",
             "type": "string",
             "format": "--file {value}",
-            "help": "File to receive the secret contents."
-          },
-          {
-            "name": "Encoding",
-            "type": "KeyvaultSecretEncoding",
-            "format": "--encoding {value}",
-            "help": "Encoding of the destination file. By default, will look for the 'file-encoding' tag on the secret. Otherwise will assume 'utf-8'."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "The secret version. If omitted, uses the latest version."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretList",
-      "definiteArgument": "keyvault secret list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Maxresults",
-            "type": "int",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified, the service will return up to 25 results."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretListDeleted",
-      "definiteArgument": "keyvault secret list-deleted",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Maxresults",
-            "type": "int",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretListVersions",
-      "definiteArgument": "keyvault secret list-versions",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Maxresults",
-            "type": "int",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified, the service will return up to 25 results."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretPurge",
-      "definiteArgument": "keyvault secret purge",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "The recovery id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretRecover",
-      "definiteArgument": "keyvault secret recover",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "The recovery id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretRestore",
-      "definiteArgument": "keyvault secret restore",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FilePath",
-            "type": "string",
-            "format": "--file-path {value}",
-            "help": ""
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretSet",
-      "definiteArgument": "keyvault secret set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "help": "Description of the secret contents (e.g. password, connection string, etc)."
+            "help": "File containing the certificate or certificate chain to merge."
           },
           {
             "name": "Disabled",
             "type": "bool",
             "format": "--disabled",
-            "help": "Create secret in disabled state."
+            "help": "Create certificate in disabled state."
           },
           {
             "name": "Expires",
@@ -1661,28 +2217,10 @@
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           },
           {
-            "name": "Encoding",
-            "type": "KeyvaultSecretEncoding",
-            "format": "--encoding {value}",
-            "help": "Source file encoding. The value is saved as a tag (`file-encoding=&amp;lt;val&amp;gt;`) and used during download to automatically encode the resulting file."
-          },
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "help": "Source file for secret. Use in conjunction with '--encoding'."
-          },
-          {
-            "name": "Value",
-            "type": "string",
-            "format": "--value {value}",
-            "help": "Plain text secret value. Cannot be used with '--file' or '--encoding'."
-          },
-          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the secret."
+            "help": "Name of the pending certificate."
           },
           {
             "name": "VaultName",
@@ -1694,469 +2232,21 @@
       }
     },
     {
-      "postfix": "SecretSetAttributes",
-      "definiteArgument": "keyvault secret set-attributes",
+      "postfix": "CertificatePendingShow",
+      "definiteArgument": "keyvault certificate pending show",
       "settingsClass": {
         "properties": [
-          {
-            "name": "ContentType",
-            "type": "string",
-            "format": "--content-type {value}",
-            "help": "Type of the secret value such as a password."
-          },
-          {
-            "name": "Enabled",
-            "type": "bool",
-            "format": "--enabled",
-            "help": "Enable the secret."
-          },
-          {
-            "name": "Expires",
-            "type": "string",
-            "format": "--expires {value}",
-            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "NotBefore",
-            "type": "string",
-            "format": "--not-before {value}",
-            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "The secret version. If omitted, uses the latest version."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretShow",
-      "definiteArgument": "keyvault secret show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "The secret version. If omitted, uses the latest version."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretShowDeleted",
-      "definiteArgument": "keyvault secret show-deleted",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "The recovery id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageAdd",
-      "definiteArgument": "keyvault storage add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ActiveKeyName",
-            "type": "string",
-            "format": "--active-key-name {value}",
-            "help": "Current active storage account key name."
-          },
-          {
-            "name": "ResourceId",
-            "type": "string",
-            "format": "--resource-id {value}",
-            "help": "Storage account resource id."
-          },
-          {
-            "name": "AutoRegenerateKey",
-            "type": "bool",
-            "format": "--auto-regenerate-key",
-            "help": "Whether keyvault should manage the storage account for the user."
-          },
-          {
-            "name": "Disabled",
-            "type": "bool",
-            "format": "--disabled",
-            "help": "Add the storage account in a disabled state."
-          },
-          {
-            "name": "RegenerationPeriod",
-            "type": "string",
-            "format": "--regeneration-period {value}",
-            "help": "The key regeneration time duration specified in ISO-8601 format, such as \"P30D\" for rotation every 30 days."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault."
+            "help": "Name of the pending certificate."
           },
           {
             "name": "VaultName",
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageBackup",
-      "definiteArgument": "keyvault storage backup",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "help": "Local file path in which to store storage account backup."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageList",
-      "definiteArgument": "keyvault storage list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Maxresults",
-            "type": "int",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageListDeleted",
-      "definiteArgument": "keyvault storage list-deleted",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Maxresults",
-            "type": "int",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StoragePurge",
-      "definiteArgument": "keyvault storage purge",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageRecover",
-      "definiteArgument": "keyvault storage recover",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageRegenerateKey",
-      "definiteArgument": "keyvault storage regenerate-key",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "KeyName",
-            "type": "string",
-            "format": "--key-name {value}",
-            "help": "The storage account key name."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageRemove",
-      "definiteArgument": "keyvault storage remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageRestore",
-      "definiteArgument": "keyvault storage restore",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FilePath",
-            "type": "string",
-            "format": "--file-path {value}",
-            "help": ""
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageShow",
-      "definiteArgument": "keyvault storage show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageShowDeleted",
-      "definiteArgument": "keyvault storage show-deleted",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageUpdate",
-      "definiteArgument": "keyvault storage update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ActiveKeyName",
-            "type": "string",
-            "format": "--active-key-name {value}",
-            "help": "The current active storage account key name."
-          },
-          {
-            "name": "AutoRegenerateKey",
-            "type": "bool",
-            "format": "--auto-regenerate-key",
-            "help": "Whether keyvault should manage the storage account for the user."
-          },
-          {
-            "name": "Disabled",
-            "type": "bool",
-            "format": "--disabled",
-            "help": "Add the storage account in a disabled state."
-          },
-          {
-            "name": "RegenerationPeriod",
-            "type": "string",
-            "format": "--regeneration-period {value}",
-            "help": "The key regeneration time duration specified in ISO-8601 format, such as \"P30D\" for rotation every 30 days."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
           }
         ]
       }
@@ -2385,96 +2475,6 @@
             "type": "string",
             "format": "--organization-id {value}",
             "help": "The organization id."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CertificatePendingDelete",
-      "definiteArgument": "keyvault certificate pending delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the pending certificate."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CertificatePendingMerge",
-      "definiteArgument": "keyvault certificate pending merge",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "help": "File containing the certificate or certificate chain to merge."
-          },
-          {
-            "name": "Disabled",
-            "type": "bool",
-            "format": "--disabled",
-            "help": "Create certificate in disabled state."
-          },
-          {
-            "name": "Expires",
-            "type": "string",
-            "format": "--expires {value}",
-            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "NotBefore",
-            "type": "string",
-            "format": "--not-before {value}",
-            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the pending certificate."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CertificatePendingShow",
-      "definiteArgument": "keyvault certificate pending show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the pending certificate."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
           }
         ]
       }

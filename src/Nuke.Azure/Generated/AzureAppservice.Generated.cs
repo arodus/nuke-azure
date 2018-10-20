@@ -93,7 +93,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureAppservice executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureAppserviceTasks.AzureAppservicePath;
-        /// <summary><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small) etc.</p></summary>
+        /// <summary><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small), PC2 (Premium Container Small), PC3 (Premium Container Medium), PC4 (Premium Container Large).</p></summary>
         public virtual AppserviceSku Sku { get; internal set; }
         /// <summary><p>Get regions which support hosting webapps on Linux workers.</p></summary>
         public virtual string LinuxWorkersEnabled { get; internal set; }
@@ -135,13 +135,15 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>(Preview) host webapp on Windows container.</p></summary>
+        public virtual string HyperV { get; internal set; }
         /// <summary><p>Host webapp on Linux worker.</p></summary>
         public virtual string IsLinux { get; internal set; }
         /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Number of workers to be allocated.</p></summary>
         public virtual int? NumberOfWorkers { get; internal set; }
-        /// <summary><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small) etc.</p></summary>
+        /// <summary><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small), PC2 (Premium Container Small), PC3 (Premium Container Medium), PC4 (Premium Container Large).</p></summary>
         public virtual AppserviceSku Sku { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
@@ -161,6 +163,7 @@ namespace Nuke.Azure
               .Add("appservice plan create")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--hyper-v {value}", HyperV)
               .Add("--is-linux {value}", IsLinux)
               .Add("--location {value}", Location)
               .Add("--number-of-workers {value}", NumberOfWorkers)
@@ -306,7 +309,7 @@ namespace Nuke.Azure
         public virtual string AdminSiteName { get; internal set; }
         /// <summary><p>Number of workers to be allocated.</p></summary>
         public virtual int? NumberOfWorkers { get; internal set; }
-        /// <summary><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small) etc.</p></summary>
+        /// <summary><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small), PC2 (Premium Container Small), PC3 (Premium Container Medium), PC4 (Premium Container Large).</p></summary>
         public virtual AppserviceSku Sku { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
@@ -355,7 +358,7 @@ namespace Nuke.Azure
     public static partial class AzureAppserviceListLocationsSettingsExtensions
     {
         #region Sku
-        /// <summary><p><em>Sets <see cref="AzureAppserviceListLocationsSettings.Sku"/>.</em></p><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small) etc.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAppserviceListLocationsSettings.Sku"/>.</em></p><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small), PC2 (Premium Container Small), PC3 (Premium Container Medium), PC4 (Premium Container Large).</p></summary>
         [Pure]
         public static AzureAppserviceListLocationsSettings SetSku(this AzureAppserviceListLocationsSettings toolSettings, AppserviceSku sku)
         {
@@ -363,7 +366,7 @@ namespace Nuke.Azure
             toolSettings.Sku = sku;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAppserviceListLocationsSettings.Sku"/>.</em></p><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small) etc.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAppserviceListLocationsSettings.Sku"/>.</em></p><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small), PC2 (Premium Container Small), PC3 (Premium Container Medium), PC4 (Premium Container Large).</p></summary>
         [Pure]
         public static AzureAppserviceListLocationsSettings ResetSku(this AzureAppserviceListLocationsSettings toolSettings)
         {
@@ -524,6 +527,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region HyperV
+        /// <summary><p><em>Sets <see cref="AzureAppservicePlanCreateSettings.HyperV"/>.</em></p><p>(Preview) host webapp on Windows container.</p></summary>
+        [Pure]
+        public static AzureAppservicePlanCreateSettings SetHyperV(this AzureAppservicePlanCreateSettings toolSettings, string hyperV)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HyperV = hyperV;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAppservicePlanCreateSettings.HyperV"/>.</em></p><p>(Preview) host webapp on Windows container.</p></summary>
+        [Pure]
+        public static AzureAppservicePlanCreateSettings ResetHyperV(this AzureAppservicePlanCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HyperV = null;
+            return toolSettings;
+        }
+        #endregion
         #region IsLinux
         /// <summary><p><em>Sets <see cref="AzureAppservicePlanCreateSettings.IsLinux"/>.</em></p><p>Host webapp on Linux worker.</p></summary>
         [Pure]
@@ -579,7 +600,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Sku
-        /// <summary><p><em>Sets <see cref="AzureAppservicePlanCreateSettings.Sku"/>.</em></p><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small) etc.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAppservicePlanCreateSettings.Sku"/>.</em></p><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small), PC2 (Premium Container Small), PC3 (Premium Container Medium), PC4 (Premium Container Large).</p></summary>
         [Pure]
         public static AzureAppservicePlanCreateSettings SetSku(this AzureAppservicePlanCreateSettings toolSettings, AppserviceSku sku)
         {
@@ -587,7 +608,7 @@ namespace Nuke.Azure
             toolSettings.Sku = sku;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAppservicePlanCreateSettings.Sku"/>.</em></p><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small) etc.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAppservicePlanCreateSettings.Sku"/>.</em></p><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small), PC2 (Premium Container Small), PC3 (Premium Container Medium), PC4 (Premium Container Large).</p></summary>
         [Pure]
         public static AzureAppservicePlanCreateSettings ResetSku(this AzureAppservicePlanCreateSettings toolSettings)
         {
@@ -1187,7 +1208,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Sku
-        /// <summary><p><em>Sets <see cref="AzureAppservicePlanUpdateSettings.Sku"/>.</em></p><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small) etc.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAppservicePlanUpdateSettings.Sku"/>.</em></p><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small), PC2 (Premium Container Small), PC3 (Premium Container Medium), PC4 (Premium Container Large).</p></summary>
         [Pure]
         public static AzureAppservicePlanUpdateSettings SetSku(this AzureAppservicePlanUpdateSettings toolSettings, AppserviceSku sku)
         {
@@ -1195,7 +1216,7 @@ namespace Nuke.Azure
             toolSettings.Sku = sku;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAppservicePlanUpdateSettings.Sku"/>.</em></p><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small) etc.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAppservicePlanUpdateSettings.Sku"/>.</em></p><p>The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small), PC2 (Premium Container Small), PC3 (Premium Container Medium), PC4 (Premium Container Large).</p></summary>
         [Pure]
         public static AzureAppservicePlanUpdateSettings ResetSku(this AzureAppservicePlanUpdateSettings toolSettings)
         {
@@ -1387,6 +1408,9 @@ namespace Nuke.Azure
         public static AppserviceSku p2v2 = new AppserviceSku { Value = "p2v2" };
         public static AppserviceSku p3 = new AppserviceSku { Value = "p3" };
         public static AppserviceSku p3v2 = new AppserviceSku { Value = "p3v2" };
+        public static AppserviceSku pc2 = new AppserviceSku { Value = "pc2" };
+        public static AppserviceSku pc3 = new AppserviceSku { Value = "pc3" };
+        public static AppserviceSku pc4 = new AppserviceSku { Value = "pc4" };
         public static AppserviceSku s1 = new AppserviceSku { Value = "s1" };
         public static AppserviceSku s2 = new AppserviceSku { Value = "s2" };
         public static AppserviceSku s3 = new AppserviceSku { Value = "s3" };

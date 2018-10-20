@@ -6,17 +6,17 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/eventhubs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/eventhubs/eventhub.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/eventhubs/georecovery-alias.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/eventhubs/namespace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/eventhubs/eventhub/consumer-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule/keys.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/eventhubs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/eventhubs/georecovery-alias.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/eventhubs/namespace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/eventhubs/eventhub.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/eventhubs/eventhub/consumer-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule/keys.yml"
   ],
   "name": "AzureEventhubs",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest",
@@ -27,286 +27,6 @@
       "postfix": "",
       "definiteArgument": "eventhubs",
       "settingsClass": {}
-    },
-    {
-      "postfix": "EventhubCreate",
-      "definiteArgument": "eventhubs eventhub create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Eventhub."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "EnableCapture",
-            "type": "bool",
-            "format": "--enable-capture",
-            "help": "A boolean value that indicates whether capture description is enabled."
-          },
-          {
-            "name": "MessageRetention",
-            "type": "int",
-            "format": "--message-retention {value}",
-            "help": "Number of days to retain events for this Event Hub, value should be 1 to 7 days."
-          },
-          {
-            "name": "PartitionCount",
-            "type": "int",
-            "format": "--partition-count {value}",
-            "help": "Number of partitions created for the Event Hub. By default, allowed values are 2-32. Lower value of 1 is supported with Kafka enabled namespaces. In presence of a custom quota, the upper limit will match the upper limit of the quota."
-          },
-          {
-            "name": "Status",
-            "type": "EventhubsEventhubStatus",
-            "format": "--status {value}",
-            "help": "Status of Eventhub."
-          },
-          {
-            "name": "CaptureInterval",
-            "type": "string",
-            "format": "--capture-interval {value}",
-            "help": "Allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds."
-          },
-          {
-            "name": "CaptureSizeLimit",
-            "type": "string",
-            "format": "--capture-size-limit {value}",
-            "help": "Defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes."
-          },
-          {
-            "name": "ArchiveNameFormat",
-            "type": "string",
-            "format": "--archive-name-format {value}",
-            "help": "Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order."
-          },
-          {
-            "name": "BlobContainer",
-            "type": "string",
-            "format": "--blob-container {value}",
-            "help": "Blob container Name."
-          },
-          {
-            "name": "DestinationName",
-            "type": "string",
-            "format": "--destination-name {value}",
-            "help": "Name for capture destination."
-          },
-          {
-            "name": "StorageAccount",
-            "type": "string",
-            "format": "--storage-account {value}",
-            "help": "Name (if within same resource group and not of type Classic Storage) or ARM id of the storage account to be used to create the blobs."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EventhubDelete",
-      "definiteArgument": "eventhubs eventhub delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Eventhub."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EventhubList",
-      "definiteArgument": "eventhubs eventhub list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "help": "May be used to limit the number of results to the most recent N usageDetails."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EventhubShow",
-      "definiteArgument": "eventhubs eventhub show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Eventhub."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EventhubUpdate",
-      "definiteArgument": "eventhubs eventhub update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Eventhub."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "EnableCapture",
-            "type": "bool",
-            "format": "--enable-capture",
-            "help": "A boolean value that indicates whether capture description is enabled."
-          },
-          {
-            "name": "MessageRetention",
-            "type": "int",
-            "format": "--message-retention {value}",
-            "help": "Number of days to retain events for this Event Hub, value should be 1 to 7 days."
-          },
-          {
-            "name": "PartitionCount",
-            "type": "int",
-            "format": "--partition-count {value}",
-            "help": "Number of partitions created for the Event Hub. By default, allowed values are 2-32. Lower value of 1 is supported with Kafka enabled namespaces. In presence of a custom quota, the upper limit will match the upper limit of the quota."
-          },
-          {
-            "name": "Status",
-            "type": "EventhubsEventhubStatus",
-            "format": "--status {value}",
-            "help": "Status of Eventhub."
-          },
-          {
-            "name": "CaptureInterval",
-            "type": "string",
-            "format": "--capture-interval {value}",
-            "help": "Allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds."
-          },
-          {
-            "name": "CaptureSizeLimit",
-            "type": "string",
-            "format": "--capture-size-limit {value}",
-            "help": "Defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes."
-          },
-          {
-            "name": "ArchiveNameFormat",
-            "type": "string",
-            "format": "--archive-name-format {value}",
-            "help": "Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order."
-          },
-          {
-            "name": "BlobContainer",
-            "type": "string",
-            "format": "--blob-container {value}",
-            "help": "Blob container Name."
-          },
-          {
-            "name": "DestinationName",
-            "type": "string",
-            "format": "--destination-name {value}",
-            "help": "Name for capture destination."
-          },
-          {
-            "name": "StorageAccount",
-            "type": "string",
-            "format": "--storage-account {value}",
-            "help": "Name (if within same resource group and not of type Classic Storage) or ARM id of the storage account to be used to create the blobs."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
     },
     {
       "postfix": "GeorecoveryAliasBreakPair",
@@ -695,21 +415,295 @@
       }
     },
     {
-      "postfix": "EventhubAuthorizationRuleCreate",
-      "definiteArgument": "eventhubs eventhub authorization-rule create",
+      "postfix": "EventhubCreate",
+      "definiteArgument": "eventhubs eventhub create",
       "settingsClass": {
         "properties": [
-          {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of EventHub AuthorizationRule."
+            "help": "Name of Eventhub."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "EnableCapture",
+            "type": "bool",
+            "format": "--enable-capture",
+            "help": "A boolean value that indicates whether capture description is enabled."
+          },
+          {
+            "name": "MessageRetention",
+            "type": "int",
+            "format": "--message-retention {value}",
+            "help": "Number of days to retain events for this Event Hub, value should be 1 to 7 days."
+          },
+          {
+            "name": "PartitionCount",
+            "type": "int",
+            "format": "--partition-count {value}",
+            "help": "Number of partitions created for the Event Hub. By default, allowed values are 2-32. Lower value of 1 is supported with Kafka enabled namespaces. In presence of a custom quota, the upper limit will match the upper limit of the quota."
+          },
+          {
+            "name": "Status",
+            "type": "EventhubsEventhubStatus",
+            "format": "--status {value}",
+            "help": "Status of Eventhub."
+          },
+          {
+            "name": "CaptureInterval",
+            "type": "string",
+            "format": "--capture-interval {value}",
+            "help": "Allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds."
+          },
+          {
+            "name": "CaptureSizeLimit",
+            "type": "string",
+            "format": "--capture-size-limit {value}",
+            "help": "Defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes."
+          },
+          {
+            "name": "ArchiveNameFormat",
+            "type": "string",
+            "format": "--archive-name-format {value}",
+            "help": "Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order."
+          },
+          {
+            "name": "BlobContainer",
+            "type": "string",
+            "format": "--blob-container {value}",
+            "help": "Blob container Name."
+          },
+          {
+            "name": "DestinationName",
+            "type": "string",
+            "format": "--destination-name {value}",
+            "help": "Name for capture destination."
+          },
+          {
+            "name": "StorageAccount",
+            "type": "string",
+            "format": "--storage-account {value}",
+            "help": "Name (if within same resource group and not of type Classic Storage) or ARM id of the storage account to be used to create the blobs."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EventhubDelete",
+      "definiteArgument": "eventhubs eventhub delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Eventhub."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EventhubList",
+      "definiteArgument": "eventhubs eventhub list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "May be used to limit the number of results to the most recent N usageDetails."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EventhubShow",
+      "definiteArgument": "eventhubs eventhub show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Eventhub."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EventhubUpdate",
+      "definiteArgument": "eventhubs eventhub update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Eventhub."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "EnableCapture",
+            "type": "bool",
+            "format": "--enable-capture",
+            "help": "A boolean value that indicates whether capture description is enabled."
+          },
+          {
+            "name": "MessageRetention",
+            "type": "int",
+            "format": "--message-retention {value}",
+            "help": "Number of days to retain events for this Event Hub, value should be 1 to 7 days."
+          },
+          {
+            "name": "PartitionCount",
+            "type": "int",
+            "format": "--partition-count {value}",
+            "help": "Number of partitions created for the Event Hub. By default, allowed values are 2-32. Lower value of 1 is supported with Kafka enabled namespaces. In presence of a custom quota, the upper limit will match the upper limit of the quota."
+          },
+          {
+            "name": "Status",
+            "type": "EventhubsEventhubStatus",
+            "format": "--status {value}",
+            "help": "Status of Eventhub."
+          },
+          {
+            "name": "CaptureInterval",
+            "type": "string",
+            "format": "--capture-interval {value}",
+            "help": "Allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds."
+          },
+          {
+            "name": "CaptureSizeLimit",
+            "type": "string",
+            "format": "--capture-size-limit {value}",
+            "help": "Defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes."
+          },
+          {
+            "name": "ArchiveNameFormat",
+            "type": "string",
+            "format": "--archive-name-format {value}",
+            "help": "Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order."
+          },
+          {
+            "name": "BlobContainer",
+            "type": "string",
+            "format": "--blob-container {value}",
+            "help": "Blob container Name."
+          },
+          {
+            "name": "DestinationName",
+            "type": "string",
+            "format": "--destination-name {value}",
+            "help": "Name for capture destination."
+          },
+          {
+            "name": "StorageAccount",
+            "type": "string",
+            "format": "--storage-account {value}",
+            "help": "Name (if within same resource group and not of type Classic Storage) or ARM id of the storage account to be used to create the blobs."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleCreate",
+      "definiteArgument": "eventhubs namespace authorization-rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
@@ -725,7 +719,7 @@
           },
           {
             "name": "Rights",
-            "type": "List<EventhubsEventhubAuthorizationRuleRights>",
+            "type": "List<EventhubsNamespaceAuthorizationRuleRights>",
             "format": "--rights {value}",
             "separator": " ",
             "help": "Space-separated list of Authorization rule rights."
@@ -734,21 +728,15 @@
       }
     },
     {
-      "postfix": "EventhubAuthorizationRuleDelete",
-      "definiteArgument": "eventhubs eventhub authorization-rule delete",
+      "postfix": "NamespaceAuthorizationRuleDelete",
+      "definiteArgument": "eventhubs namespace authorization-rule delete",
       "settingsClass": {
         "properties": [
-          {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of EventHub AuthorizationRule."
+            "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
@@ -766,15 +754,35 @@
       }
     },
     {
-      "postfix": "EventhubAuthorizationRuleList",
-      "definiteArgument": "eventhubs eventhub authorization-rule list",
+      "postfix": "NamespaceAuthorizationRuleList",
+      "definiteArgument": "eventhubs namespace authorization-rule list",
       "settingsClass": {
         "properties": [
           {
-            "name": "EventhubName",
+            "name": "NamespaceName",
             "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleShow",
+      "definiteArgument": "eventhubs namespace authorization-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
@@ -792,53 +800,15 @@
       }
     },
     {
-      "postfix": "EventhubAuthorizationRuleShow",
-      "definiteArgument": "eventhubs eventhub authorization-rule show",
+      "postfix": "NamespaceAuthorizationRuleUpdate",
+      "definiteArgument": "eventhubs namespace authorization-rule update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of EventHub AuthorizationRule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EventhubAuthorizationRuleUpdate",
-      "definiteArgument": "eventhubs eventhub authorization-rule update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of EventHub AuthorizationRule."
+            "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
@@ -854,7 +824,7 @@
           },
           {
             "name": "Rights",
-            "type": "List<EventhubsEventhubAuthorizationRuleRights>",
+            "type": "List<EventhubsNamespaceAuthorizationRuleRights>",
             "format": "--rights {value}",
             "separator": " ",
             "help": "Space-separated list of Authorization rule rights."
@@ -882,6 +852,64 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GeorecoveryAliasAuthorizationRuleList",
+      "definiteArgument": "eventhubs georecovery-alias authorization-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GeorecoveryAliasAuthorizationRuleShow",
+      "definiteArgument": "eventhubs georecovery-alias authorization-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace AuthorizationRule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           }
         ]
       }
@@ -1089,73 +1117,21 @@
       }
     },
     {
-      "postfix": "GeorecoveryAliasAuthorizationRuleList",
-      "definiteArgument": "eventhubs georecovery-alias authorization-rule list",
+      "postfix": "EventhubAuthorizationRuleCreate",
+      "definiteArgument": "eventhubs eventhub authorization-rule create",
       "settingsClass": {
         "properties": [
           {
-            "name": "Alias",
+            "name": "EventhubName",
             "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo-Disaster Recovery Configuration Alias."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GeorecoveryAliasAuthorizationRuleShow",
-      "definiteArgument": "eventhubs georecovery-alias authorization-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleCreate",
-      "definiteArgument": "eventhubs namespace authorization-rule create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
+            "help": "Name of EventHub AuthorizationRule."
           },
           {
             "name": "NamespaceName",
@@ -1171,7 +1147,7 @@
           },
           {
             "name": "Rights",
-            "type": "List<EventhubsEventhubAuthorizationRuleRights>",
+            "type": "List<EventhubsNamespaceAuthorizationRuleRights>",
             "format": "--rights {value}",
             "separator": " ",
             "help": "Space-separated list of Authorization rule rights."
@@ -1180,15 +1156,21 @@
       }
     },
     {
-      "postfix": "NamespaceAuthorizationRuleDelete",
-      "definiteArgument": "eventhubs namespace authorization-rule delete",
+      "postfix": "EventhubAuthorizationRuleDelete",
+      "definiteArgument": "eventhubs eventhub authorization-rule delete",
       "settingsClass": {
         "properties": [
+          {
+            "name": "EventhubName",
+            "type": "string",
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
+            "help": "Name of EventHub AuthorizationRule."
           },
           {
             "name": "NamespaceName",
@@ -1206,35 +1188,15 @@
       }
     },
     {
-      "postfix": "NamespaceAuthorizationRuleList",
-      "definiteArgument": "eventhubs namespace authorization-rule list",
+      "postfix": "EventhubAuthorizationRuleList",
+      "definiteArgument": "eventhubs eventhub authorization-rule list",
       "settingsClass": {
         "properties": [
           {
-            "name": "NamespaceName",
+            "name": "EventhubName",
             "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleShow",
-      "definiteArgument": "eventhubs namespace authorization-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
           },
           {
             "name": "NamespaceName",
@@ -1252,15 +1214,53 @@
       }
     },
     {
-      "postfix": "NamespaceAuthorizationRuleUpdate",
-      "definiteArgument": "eventhubs namespace authorization-rule update",
+      "postfix": "EventhubAuthorizationRuleShow",
+      "definiteArgument": "eventhubs eventhub authorization-rule show",
       "settingsClass": {
         "properties": [
+          {
+            "name": "EventhubName",
+            "type": "string",
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
+            "help": "Name of EventHub AuthorizationRule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EventhubAuthorizationRuleUpdate",
+      "definiteArgument": "eventhubs eventhub authorization-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EventhubName",
+            "type": "string",
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of EventHub AuthorizationRule."
           },
           {
             "name": "NamespaceName",
@@ -1276,7 +1276,7 @@
           },
           {
             "name": "Rights",
-            "type": "List<EventhubsEventhubAuthorizationRuleRights>",
+            "type": "List<EventhubsNamespaceAuthorizationRuleRights>",
             "format": "--rights {value}",
             "separator": " ",
             "help": "Space-separated list of Authorization rule rights."
@@ -1309,21 +1309,15 @@
       }
     },
     {
-      "postfix": "EventhubAuthorizationRuleKeysList",
-      "definiteArgument": "eventhubs eventhub authorization-rule keys list",
+      "postfix": "NamespaceAuthorizationRuleKeysList",
+      "definiteArgument": "eventhubs namespace authorization-rule keys list",
       "settingsClass": {
         "properties": [
-          {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of EventHub AuthorizationRule."
+            "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
@@ -1341,19 +1335,13 @@
       }
     },
     {
-      "postfix": "EventhubAuthorizationRuleKeysRenew",
-      "definiteArgument": "eventhubs eventhub authorization-rule keys renew",
+      "postfix": "NamespaceAuthorizationRuleKeysRenew",
+      "definiteArgument": "eventhubs namespace authorization-rule keys renew",
       "settingsClass": {
         "properties": [
           {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
-          {
             "name": "Key",
-            "type": "EventhubsEventhubAuthorizationRuleKeysKey",
+            "type": "EventhubsNamespaceAuthorizationRuleKeysKey",
             "format": "--key {value}",
             "help": "Specifies Primary or Secondary key needs to be reset."
           },
@@ -1361,7 +1349,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of EventHub AuthorizationRule."
+            "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
@@ -1417,15 +1405,21 @@
       }
     },
     {
-      "postfix": "NamespaceAuthorizationRuleKeysList",
-      "definiteArgument": "eventhubs namespace authorization-rule keys list",
+      "postfix": "EventhubAuthorizationRuleKeysList",
+      "definiteArgument": "eventhubs eventhub authorization-rule keys list",
       "settingsClass": {
         "properties": [
+          {
+            "name": "EventhubName",
+            "type": "string",
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
+            "help": "Name of EventHub AuthorizationRule."
           },
           {
             "name": "NamespaceName",
@@ -1443,13 +1437,19 @@
       }
     },
     {
-      "postfix": "NamespaceAuthorizationRuleKeysRenew",
-      "definiteArgument": "eventhubs namespace authorization-rule keys renew",
+      "postfix": "EventhubAuthorizationRuleKeysRenew",
+      "definiteArgument": "eventhubs eventhub authorization-rule keys renew",
       "settingsClass": {
         "properties": [
           {
+            "name": "EventhubName",
+            "type": "string",
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
+          },
+          {
             "name": "Key",
-            "type": "EventhubsEventhubAuthorizationRuleKeysKey",
+            "type": "EventhubsNamespaceAuthorizationRuleKeysKey",
             "format": "--key {value}",
             "help": "Specifies Primary or Secondary key needs to be reset."
           },
@@ -1457,7 +1457,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
+            "help": "Name of EventHub AuthorizationRule."
           },
           {
             "name": "NamespaceName",
@@ -1515,6 +1515,13 @@
   ],
   "enumerations": [
     {
+      "name": "EventhubsNamespaceSku",
+      "values": [
+        "basic",
+        "standard"
+      ]
+    },
+    {
       "name": "EventhubsEventhubStatus",
       "values": [
         "active",
@@ -1524,14 +1531,7 @@
       ]
     },
     {
-      "name": "EventhubsNamespaceSku",
-      "values": [
-        "basic",
-        "standard"
-      ]
-    },
-    {
-      "name": "EventhubsEventhubAuthorizationRuleRights",
+      "name": "EventhubsNamespaceAuthorizationRuleRights",
       "values": [
         "listen",
         "manage",
@@ -1539,7 +1539,7 @@
       ]
     },
     {
-      "name": "EventhubsEventhubAuthorizationRuleKeysKey",
+      "name": "EventhubsNamespaceAuthorizationRuleKeysKey",
       "values": [
         "primarykey",
         "secondarykey"

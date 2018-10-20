@@ -44,54 +44,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMariadbDbCreate(Configure<AzureMariadbDbCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMariadbDbCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMariadbDbDelete(Configure<AzureMariadbDbDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMariadbDbDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMariadbDbList(Configure<AzureMariadbDbListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMariadbDbListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMariadbDbShow(Configure<AzureMariadbDbShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMariadbDbShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMariadbServerLogsDownload(Configure<AzureMariadbServerLogsDownloadSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMariadbServerLogsDownloadSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMariadbServerLogsList(Configure<AzureMariadbServerLogsListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMariadbServerLogsListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureMariadbServerCreate(Configure<AzureMariadbServerCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMariadbServerCreateSettings());
@@ -156,25 +108,49 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMariadbServerConfigurationList(Configure<AzureMariadbServerConfigurationListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureMariadbDbCreate(Configure<AzureMariadbDbCreateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureMariadbServerConfigurationListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureMariadbDbCreateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMariadbServerConfigurationSet(Configure<AzureMariadbServerConfigurationSetSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureMariadbDbDelete(Configure<AzureMariadbDbDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureMariadbServerConfigurationSetSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureMariadbDbDeleteSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMariadbServerConfigurationShow(Configure<AzureMariadbServerConfigurationShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureMariadbDbList(Configure<AzureMariadbDbListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureMariadbServerConfigurationShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureMariadbDbListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMariadbDbShow(Configure<AzureMariadbDbShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMariadbDbShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerLogsDownload(Configure<AzureMariadbServerLogsDownloadSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMariadbServerLogsDownloadSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerLogsList(Configure<AzureMariadbServerLogsListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMariadbServerLogsListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -219,6 +195,30 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             return process.Output;
         }
+        /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerConfigurationList(Configure<AzureMariadbServerConfigurationListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMariadbServerConfigurationListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerConfigurationSet(Configure<AzureMariadbServerConfigurationSetSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMariadbServerConfigurationSetSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for MariaDB servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerConfigurationShow(Configure<AzureMariadbServerConfigurationShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMariadbServerConfigurationShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
     }
     #region AzureMariadbSettings
     /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
@@ -243,265 +243,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mariadb")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMariadbDbCreateSettings
-    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMariadbDbCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMariadb executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        /// <summary><p>The name of the database.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>The charset of the database.</p></summary>
-        public virtual string Charset { get; internal set; }
-        /// <summary><p>The collation of the database.</p></summary>
-        public virtual string Collation { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mariadb db create")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--charset {value}", Charset)
-              .Add("--collation {value}", Collation)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMariadbDbDeleteSettings
-    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMariadbDbDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMariadb executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        /// <summary><p>The name of the database.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Do not prompt for confirmation.</p></summary>
-        public virtual string Yes { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mariadb db delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--yes {value}", Yes)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMariadbDbListSettings
-    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMariadbDbListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMariadb executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mariadb db list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMariadbDbShowSettings
-    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMariadbDbShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMariadb executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        /// <summary><p>The name of the database.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mariadb db show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMariadbServerLogsDownloadSettings
-    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMariadbServerLogsDownloadSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMariadb executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        /// <summary><p>Space-separated list of log filenames on the server to download.</p></summary>
-        public virtual IReadOnlyList<string> Name => NameInternal.AsReadOnly();
-        internal List<string> NameInternal { get; set; } = new List<string>();
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mariadb server-logs download")
-              .Add("--name {value}", Name, separator: ' ')
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMariadbServerLogsListSettings
-    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMariadbServerLogsListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMariadb executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Integer in hours to indicate file last modify time, default value is 72.</p></summary>
-        public virtual string FileLastWritten { get; internal set; }
-        /// <summary><p>The pattern that file name should match.</p></summary>
-        public virtual string FilenameContains { get; internal set; }
-        /// <summary><p>The file size limitation to filter files.</p></summary>
-        public virtual string MaxFileSize { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mariadb server-logs list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--file-last-written {value}", FileLastWritten)
-              .Add("--filename-contains {value}", FilenameContains)
-              .Add("--max-file-size {value}", MaxFileSize)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -914,12 +655,103 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureMariadbServerConfigurationListSettings
+    #region AzureMariadbDbCreateSettings
     /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureMariadbServerConfigurationListSettings : ToolSettings
+    public partial class AzureMariadbDbCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMariadb executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        /// <summary><p>The name of the database.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>The charset of the database.</p></summary>
+        public virtual string Charset { get; internal set; }
+        /// <summary><p>The collation of the database.</p></summary>
+        public virtual string Collation { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb db create")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--charset {value}", Charset)
+              .Add("--collation {value}", Collation)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbDbDeleteSettings
+    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbDbDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMariadb executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        /// <summary><p>The name of the database.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb db delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--yes {value}", Yes)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbDbListSettings
+    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbDbListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureMariadb executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
@@ -940,7 +772,7 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("mariadb server configuration list")
+              .Add("mariadb db list")
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
               .Add("--debug {value}", Debug)
@@ -952,23 +784,21 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureMariadbServerConfigurationSetSettings
+    #region AzureMariadbDbShowSettings
     /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureMariadbServerConfigurationSetSettings : ToolSettings
+    public partial class AzureMariadbDbShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureMariadb executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        /// <summary><p>The name of the server configuration.</p></summary>
+        /// <summary><p>The name of the database.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the server.</p></summary>
         public virtual string ServerName { get; internal set; }
-        /// <summary><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
-        public virtual string Value { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -982,11 +812,10 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("mariadb server configuration set")
+              .Add("mariadb db show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
-              .Add("--value {value}", Value)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -996,17 +825,18 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureMariadbServerConfigurationShowSettings
+    #region AzureMariadbServerLogsDownloadSettings
     /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureMariadbServerConfigurationShowSettings : ToolSettings
+    public partial class AzureMariadbServerLogsDownloadSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureMariadb executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        /// <summary><p>The name of the server configuration.</p></summary>
-        public virtual string Name { get; internal set; }
+        /// <summary><p>Space-separated list of log filenames on the server to download.</p></summary>
+        public virtual IReadOnlyList<string> Name => NameInternal.AsReadOnly();
+        internal List<string> NameInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the server.</p></summary>
@@ -1024,10 +854,57 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("mariadb server configuration show")
-              .Add("--name {value}", Name)
+              .Add("mariadb server-logs download")
+              .Add("--name {value}", Name, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbServerLogsListSettings
+    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerLogsListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMariadb executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Integer in hours to indicate file last modify time, default value is 72.</p></summary>
+        public virtual string FileLastWritten { get; internal set; }
+        /// <summary><p>The pattern that file name should match.</p></summary>
+        public virtual string FilenameContains { get; internal set; }
+        /// <summary><p>The file size limitation to filter files.</p></summary>
+        public virtual string MaxFileSize { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server-logs list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--file-last-written {value}", FileLastWritten)
+              .Add("--filename-contains {value}", FilenameContains)
+              .Add("--max-file-size {value}", MaxFileSize)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1266,6 +1143,129 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureMariadbServerConfigurationListSettings
+    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerConfigurationListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMariadb executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server configuration list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbServerConfigurationSetSettings
+    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerConfigurationSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMariadb executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        /// <summary><p>The name of the server configuration.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        public virtual string Value { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server configuration set")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--value {value}", Value)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbServerConfigurationShowSettings
+    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerConfigurationShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMariadb executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        /// <summary><p>The name of the server configuration.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server configuration show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureMariadbSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
     [PublicAPI]
@@ -1356,1032 +1356,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureMariadbSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureMariadbSettings ResetVerbose(this AzureMariadbSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMariadbDbCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbDbCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings SetName(this AzureMariadbDbCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings ResetName(this AzureMariadbDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings SetResourceGroup(this AzureMariadbDbCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings ResetResourceGroup(this AzureMariadbDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings SetServerName(this AzureMariadbDbCreateSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings ResetServerName(this AzureMariadbDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Charset
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Charset"/>.</em></p><p>The charset of the database.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings SetCharset(this AzureMariadbDbCreateSettings toolSettings, string charset)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Charset = charset;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Charset"/>.</em></p><p>The charset of the database.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings ResetCharset(this AzureMariadbDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Charset = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Collation
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings SetCollation(this AzureMariadbDbCreateSettings toolSettings, string collation)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Collation = collation;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings ResetCollation(this AzureMariadbDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Collation = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings SetDebug(this AzureMariadbDbCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings ResetDebug(this AzureMariadbDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings SetHelp(this AzureMariadbDbCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings ResetHelp(this AzureMariadbDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings SetOutput(this AzureMariadbDbCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings ResetOutput(this AzureMariadbDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings SetQuery(this AzureMariadbDbCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings ResetQuery(this AzureMariadbDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings SetVerbose(this AzureMariadbDbCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbCreateSettings ResetVerbose(this AzureMariadbDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMariadbDbDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbDbDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings SetName(this AzureMariadbDbDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings ResetName(this AzureMariadbDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings SetResourceGroup(this AzureMariadbDbDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings ResetResourceGroup(this AzureMariadbDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings SetServerName(this AzureMariadbDbDeleteSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings ResetServerName(this AzureMariadbDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Yes
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings SetYes(this AzureMariadbDbDeleteSettings toolSettings, string yes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = yes;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings ResetYes(this AzureMariadbDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings SetDebug(this AzureMariadbDbDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings ResetDebug(this AzureMariadbDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings SetHelp(this AzureMariadbDbDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings ResetHelp(this AzureMariadbDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings SetOutput(this AzureMariadbDbDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings ResetOutput(this AzureMariadbDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings SetQuery(this AzureMariadbDbDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings ResetQuery(this AzureMariadbDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings SetVerbose(this AzureMariadbDbDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbDeleteSettings ResetVerbose(this AzureMariadbDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMariadbDbListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbDbListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings SetResourceGroup(this AzureMariadbDbListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings ResetResourceGroup(this AzureMariadbDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings SetServerName(this AzureMariadbDbListSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings ResetServerName(this AzureMariadbDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings SetDebug(this AzureMariadbDbListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings ResetDebug(this AzureMariadbDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings SetHelp(this AzureMariadbDbListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings ResetHelp(this AzureMariadbDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings SetOutput(this AzureMariadbDbListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings ResetOutput(this AzureMariadbDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings SetQuery(this AzureMariadbDbListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings ResetQuery(this AzureMariadbDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings SetVerbose(this AzureMariadbDbListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbListSettings ResetVerbose(this AzureMariadbDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMariadbDbShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbDbShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings SetName(this AzureMariadbDbShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings ResetName(this AzureMariadbDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings SetResourceGroup(this AzureMariadbDbShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings ResetResourceGroup(this AzureMariadbDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings SetServerName(this AzureMariadbDbShowSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings ResetServerName(this AzureMariadbDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings SetDebug(this AzureMariadbDbShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings ResetDebug(this AzureMariadbDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings SetHelp(this AzureMariadbDbShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings ResetHelp(this AzureMariadbDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings SetOutput(this AzureMariadbDbShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings ResetOutput(this AzureMariadbDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings SetQuery(this AzureMariadbDbShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings ResetQuery(this AzureMariadbDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings SetVerbose(this AzureMariadbDbShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbDbShowSettings ResetVerbose(this AzureMariadbDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMariadbServerLogsDownloadSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbServerLogsDownloadSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Name"/> to a new list.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetName(this AzureMariadbServerLogsDownloadSettings toolSettings, params string[] name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal = name.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Name"/> to a new list.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetName(this AzureMariadbServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal = name.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureMariadbServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings AddName(this AzureMariadbServerLogsDownloadSettings toolSettings, params string[] name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal.AddRange(name);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureMariadbServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings AddName(this AzureMariadbServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal.AddRange(name);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureMariadbServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ClearName(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureMariadbServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings RemoveName(this AzureMariadbServerLogsDownloadSettings toolSettings, params string[] name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(name);
-            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureMariadbServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings RemoveName(this AzureMariadbServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(name);
-            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetResourceGroup(this AzureMariadbServerLogsDownloadSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetResourceGroup(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetServerName(this AzureMariadbServerLogsDownloadSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetServerName(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetDebug(this AzureMariadbServerLogsDownloadSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetDebug(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetHelp(this AzureMariadbServerLogsDownloadSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetHelp(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetOutput(this AzureMariadbServerLogsDownloadSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetOutput(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetQuery(this AzureMariadbServerLogsDownloadSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetQuery(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetVerbose(this AzureMariadbServerLogsDownloadSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetVerbose(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMariadbServerLogsListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbServerLogsListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetResourceGroup(this AzureMariadbServerLogsListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetResourceGroup(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetServerName(this AzureMariadbServerLogsListSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetServerName(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FileLastWritten
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.FileLastWritten"/>.</em></p><p>Integer in hours to indicate file last modify time, default value is 72.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetFileLastWritten(this AzureMariadbServerLogsListSettings toolSettings, string fileLastWritten)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FileLastWritten = fileLastWritten;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.FileLastWritten"/>.</em></p><p>Integer in hours to indicate file last modify time, default value is 72.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetFileLastWritten(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FileLastWritten = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FilenameContains
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.FilenameContains"/>.</em></p><p>The pattern that file name should match.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetFilenameContains(this AzureMariadbServerLogsListSettings toolSettings, string filenameContains)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilenameContains = filenameContains;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.FilenameContains"/>.</em></p><p>The pattern that file name should match.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetFilenameContains(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilenameContains = null;
-            return toolSettings;
-        }
-        #endregion
-        #region MaxFileSize
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.MaxFileSize"/>.</em></p><p>The file size limitation to filter files.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetMaxFileSize(this AzureMariadbServerLogsListSettings toolSettings, string maxFileSize)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxFileSize = maxFileSize;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.MaxFileSize"/>.</em></p><p>The file size limitation to filter files.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetMaxFileSize(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxFileSize = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetDebug(this AzureMariadbServerLogsListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetDebug(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetHelp(this AzureMariadbServerLogsListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetHelp(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetOutput(this AzureMariadbServerLogsListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetOutput(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetQuery(this AzureMariadbServerLogsListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetQuery(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetVerbose(this AzureMariadbServerLogsListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetVerbose(this AzureMariadbServerLogsListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4104,24 +3078,42 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureMariadbServerConfigurationListSettingsExtensions
+    #region AzureMariadbDbCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbServerConfigurationListSettingsExtensions
+    public static partial class AzureMariadbDbCreateSettingsExtensions
     {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings SetResourceGroup(this AzureMariadbServerConfigurationListSettings toolSettings, string resourceGroup)
+        public static AzureMariadbDbCreateSettings SetName(this AzureMariadbDbCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureMariadbDbCreateSettings ResetName(this AzureMariadbDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMariadbDbCreateSettings SetResourceGroup(this AzureMariadbDbCreateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings ResetResourceGroup(this AzureMariadbServerConfigurationListSettings toolSettings)
+        public static AzureMariadbDbCreateSettings ResetResourceGroup(this AzureMariadbDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -4129,35 +3121,71 @@ namespace Nuke.Azure
         }
         #endregion
         #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings SetServerName(this AzureMariadbServerConfigurationListSettings toolSettings, string serverName)
+        public static AzureMariadbDbCreateSettings SetServerName(this AzureMariadbDbCreateSettings toolSettings, string serverName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = serverName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings ResetServerName(this AzureMariadbServerConfigurationListSettings toolSettings)
+        public static AzureMariadbDbCreateSettings ResetServerName(this AzureMariadbDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Charset
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Charset"/>.</em></p><p>The charset of the database.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings SetDebug(this AzureMariadbServerConfigurationListSettings toolSettings, string debug)
+        public static AzureMariadbDbCreateSettings SetCharset(this AzureMariadbDbCreateSettings toolSettings, string charset)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Charset = charset;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Charset"/>.</em></p><p>The charset of the database.</p></summary>
+        [Pure]
+        public static AzureMariadbDbCreateSettings ResetCharset(this AzureMariadbDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Charset = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Collation
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
+        [Pure]
+        public static AzureMariadbDbCreateSettings SetCollation(this AzureMariadbDbCreateSettings toolSettings, string collation)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Collation = collation;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
+        [Pure]
+        public static AzureMariadbDbCreateSettings ResetCollation(this AzureMariadbDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Collation = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbDbCreateSettings SetDebug(this AzureMariadbDbCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings ResetDebug(this AzureMariadbServerConfigurationListSettings toolSettings)
+        public static AzureMariadbDbCreateSettings ResetDebug(this AzureMariadbDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -4165,17 +3193,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings SetHelp(this AzureMariadbServerConfigurationListSettings toolSettings, string help)
+        public static AzureMariadbDbCreateSettings SetHelp(this AzureMariadbDbCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings ResetHelp(this AzureMariadbServerConfigurationListSettings toolSettings)
+        public static AzureMariadbDbCreateSettings ResetHelp(this AzureMariadbDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -4183,17 +3211,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings SetOutput(this AzureMariadbServerConfigurationListSettings toolSettings, AzureOutput output)
+        public static AzureMariadbDbCreateSettings SetOutput(this AzureMariadbDbCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings ResetOutput(this AzureMariadbServerConfigurationListSettings toolSettings)
+        public static AzureMariadbDbCreateSettings ResetOutput(this AzureMariadbDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -4201,17 +3229,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings SetQuery(this AzureMariadbServerConfigurationListSettings toolSettings, string query)
+        public static AzureMariadbDbCreateSettings SetQuery(this AzureMariadbDbCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings ResetQuery(this AzureMariadbServerConfigurationListSettings toolSettings)
+        public static AzureMariadbDbCreateSettings ResetQuery(this AzureMariadbDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -4219,17 +3247,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings SetVerbose(this AzureMariadbServerConfigurationListSettings toolSettings, string verbose)
+        public static AzureMariadbDbCreateSettings SetVerbose(this AzureMariadbDbCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationListSettings ResetVerbose(this AzureMariadbServerConfigurationListSettings toolSettings)
+        public static AzureMariadbDbCreateSettings ResetVerbose(this AzureMariadbDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4238,24 +3266,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureMariadbServerConfigurationSetSettingsExtensions
+    #region AzureMariadbDbDeleteSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbServerConfigurationSetSettingsExtensions
+    public static partial class AzureMariadbDbDeleteSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings SetName(this AzureMariadbServerConfigurationSetSettings toolSettings, string name)
+        public static AzureMariadbDbDeleteSettings SetName(this AzureMariadbDbDeleteSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings ResetName(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        public static AzureMariadbDbDeleteSettings ResetName(this AzureMariadbDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -4263,17 +3291,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings SetResourceGroup(this AzureMariadbServerConfigurationSetSettings toolSettings, string resourceGroup)
+        public static AzureMariadbDbDeleteSettings SetResourceGroup(this AzureMariadbDbDeleteSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings ResetResourceGroup(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        public static AzureMariadbDbDeleteSettings ResetResourceGroup(this AzureMariadbDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -4281,53 +3309,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings SetServerName(this AzureMariadbServerConfigurationSetSettings toolSettings, string serverName)
+        public static AzureMariadbDbDeleteSettings SetServerName(this AzureMariadbDbDeleteSettings toolSettings, string serverName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = serverName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings ResetServerName(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        public static AzureMariadbDbDeleteSettings ResetServerName(this AzureMariadbDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
             return toolSettings;
         }
         #endregion
-        #region Value
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings SetValue(this AzureMariadbServerConfigurationSetSettings toolSettings, string value)
+        public static AzureMariadbDbDeleteSettings SetYes(this AzureMariadbDbDeleteSettings toolSettings, string yes)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Value = value;
+            toolSettings.Yes = yes;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings ResetValue(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        public static AzureMariadbDbDeleteSettings ResetYes(this AzureMariadbDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Value = null;
+            toolSettings.Yes = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings SetDebug(this AzureMariadbServerConfigurationSetSettings toolSettings, string debug)
+        public static AzureMariadbDbDeleteSettings SetDebug(this AzureMariadbDbDeleteSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings ResetDebug(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        public static AzureMariadbDbDeleteSettings ResetDebug(this AzureMariadbDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -4335,17 +3363,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings SetHelp(this AzureMariadbServerConfigurationSetSettings toolSettings, string help)
+        public static AzureMariadbDbDeleteSettings SetHelp(this AzureMariadbDbDeleteSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings ResetHelp(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        public static AzureMariadbDbDeleteSettings ResetHelp(this AzureMariadbDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -4353,17 +3381,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings SetOutput(this AzureMariadbServerConfigurationSetSettings toolSettings, AzureOutput output)
+        public static AzureMariadbDbDeleteSettings SetOutput(this AzureMariadbDbDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings ResetOutput(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        public static AzureMariadbDbDeleteSettings ResetOutput(this AzureMariadbDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -4371,17 +3399,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings SetQuery(this AzureMariadbServerConfigurationSetSettings toolSettings, string query)
+        public static AzureMariadbDbDeleteSettings SetQuery(this AzureMariadbDbDeleteSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings ResetQuery(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        public static AzureMariadbDbDeleteSettings ResetQuery(this AzureMariadbDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -4389,17 +3417,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings SetVerbose(this AzureMariadbServerConfigurationSetSettings toolSettings, string verbose)
+        public static AzureMariadbDbDeleteSettings SetVerbose(this AzureMariadbDbDeleteSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationSetSettings ResetVerbose(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        public static AzureMariadbDbDeleteSettings ResetVerbose(this AzureMariadbDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4408,42 +3436,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureMariadbServerConfigurationShowSettingsExtensions
+    #region AzureMariadbDbListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbServerConfigurationShowSettingsExtensions
+    public static partial class AzureMariadbDbListSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
-        [Pure]
-        public static AzureMariadbServerConfigurationShowSettings SetName(this AzureMariadbServerConfigurationShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
-        [Pure]
-        public static AzureMariadbServerConfigurationShowSettings ResetName(this AzureMariadbServerConfigurationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings SetResourceGroup(this AzureMariadbServerConfigurationShowSettings toolSettings, string resourceGroup)
+        public static AzureMariadbDbListSettings SetResourceGroup(this AzureMariadbDbListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings ResetResourceGroup(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        public static AzureMariadbDbListSettings ResetResourceGroup(this AzureMariadbDbListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -4451,17 +3461,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings SetServerName(this AzureMariadbServerConfigurationShowSettings toolSettings, string serverName)
+        public static AzureMariadbDbListSettings SetServerName(this AzureMariadbDbListSettings toolSettings, string serverName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = serverName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings ResetServerName(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        public static AzureMariadbDbListSettings ResetServerName(this AzureMariadbDbListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
@@ -4469,17 +3479,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings SetDebug(this AzureMariadbServerConfigurationShowSettings toolSettings, string debug)
+        public static AzureMariadbDbListSettings SetDebug(this AzureMariadbDbListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings ResetDebug(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        public static AzureMariadbDbListSettings ResetDebug(this AzureMariadbDbListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -4487,17 +3497,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings SetHelp(this AzureMariadbServerConfigurationShowSettings toolSettings, string help)
+        public static AzureMariadbDbListSettings SetHelp(this AzureMariadbDbListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings ResetHelp(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        public static AzureMariadbDbListSettings ResetHelp(this AzureMariadbDbListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -4505,17 +3515,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings SetOutput(this AzureMariadbServerConfigurationShowSettings toolSettings, AzureOutput output)
+        public static AzureMariadbDbListSettings SetOutput(this AzureMariadbDbListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings ResetOutput(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        public static AzureMariadbDbListSettings ResetOutput(this AzureMariadbDbListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -4523,17 +3533,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings SetQuery(this AzureMariadbServerConfigurationShowSettings toolSettings, string query)
+        public static AzureMariadbDbListSettings SetQuery(this AzureMariadbDbListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings ResetQuery(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        public static AzureMariadbDbListSettings ResetQuery(this AzureMariadbDbListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -4541,17 +3551,551 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings SetVerbose(this AzureMariadbServerConfigurationShowSettings toolSettings, string verbose)
+        public static AzureMariadbDbListSettings SetVerbose(this AzureMariadbDbListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMariadbServerConfigurationShowSettings ResetVerbose(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        public static AzureMariadbDbListSettings ResetVerbose(this AzureMariadbDbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbDbShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbDbShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings SetName(this AzureMariadbDbShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings ResetName(this AzureMariadbDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings SetResourceGroup(this AzureMariadbDbShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings ResetResourceGroup(this AzureMariadbDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings SetServerName(this AzureMariadbDbShowSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings ResetServerName(this AzureMariadbDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings SetDebug(this AzureMariadbDbShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings ResetDebug(this AzureMariadbDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings SetHelp(this AzureMariadbDbShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings ResetHelp(this AzureMariadbDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings SetOutput(this AzureMariadbDbShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings ResetOutput(this AzureMariadbDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings SetQuery(this AzureMariadbDbShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings ResetQuery(this AzureMariadbDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMariadbDbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings SetVerbose(this AzureMariadbDbShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbDbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbDbShowSettings ResetVerbose(this AzureMariadbDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerLogsDownloadSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerLogsDownloadSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Name"/> to a new list.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetName(this AzureMariadbServerLogsDownloadSettings toolSettings, params string[] name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal = name.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Name"/> to a new list.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetName(this AzureMariadbServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal = name.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMariadbServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings AddName(this AzureMariadbServerLogsDownloadSettings toolSettings, params string[] name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal.AddRange(name);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMariadbServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings AddName(this AzureMariadbServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal.AddRange(name);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMariadbServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ClearName(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMariadbServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings RemoveName(this AzureMariadbServerLogsDownloadSettings toolSettings, params string[] name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(name);
+            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMariadbServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings RemoveName(this AzureMariadbServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(name);
+            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetResourceGroup(this AzureMariadbServerLogsDownloadSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetResourceGroup(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetServerName(this AzureMariadbServerLogsDownloadSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetServerName(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetDebug(this AzureMariadbServerLogsDownloadSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetDebug(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetHelp(this AzureMariadbServerLogsDownloadSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetHelp(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetOutput(this AzureMariadbServerLogsDownloadSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetOutput(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetQuery(this AzureMariadbServerLogsDownloadSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetQuery(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetVerbose(this AzureMariadbServerLogsDownloadSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetVerbose(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerLogsListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerLogsListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetResourceGroup(this AzureMariadbServerLogsListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetResourceGroup(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetServerName(this AzureMariadbServerLogsListSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetServerName(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FileLastWritten
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.FileLastWritten"/>.</em></p><p>Integer in hours to indicate file last modify time, default value is 72.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetFileLastWritten(this AzureMariadbServerLogsListSettings toolSettings, string fileLastWritten)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FileLastWritten = fileLastWritten;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.FileLastWritten"/>.</em></p><p>Integer in hours to indicate file last modify time, default value is 72.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetFileLastWritten(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FileLastWritten = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FilenameContains
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.FilenameContains"/>.</em></p><p>The pattern that file name should match.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetFilenameContains(this AzureMariadbServerLogsListSettings toolSettings, string filenameContains)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilenameContains = filenameContains;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.FilenameContains"/>.</em></p><p>The pattern that file name should match.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetFilenameContains(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilenameContains = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MaxFileSize
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.MaxFileSize"/>.</em></p><p>The file size limitation to filter files.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetMaxFileSize(this AzureMariadbServerLogsListSettings toolSettings, string maxFileSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxFileSize = maxFileSize;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.MaxFileSize"/>.</em></p><p>The file size limitation to filter files.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetMaxFileSize(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxFileSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetDebug(this AzureMariadbServerLogsListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetDebug(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetHelp(this AzureMariadbServerLogsListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetHelp(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetOutput(this AzureMariadbServerLogsListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetOutput(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetQuery(this AzureMariadbServerLogsListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetQuery(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetVerbose(this AzureMariadbServerLogsListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetVerbose(this AzureMariadbServerLogsListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5456,6 +5000,462 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureMariadbServerFirewallRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureMariadbServerFirewallRuleUpdateSettings ResetVerbose(this AzureMariadbServerFirewallRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerConfigurationListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerConfigurationListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings SetResourceGroup(this AzureMariadbServerConfigurationListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings ResetResourceGroup(this AzureMariadbServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings SetServerName(this AzureMariadbServerConfigurationListSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings ResetServerName(this AzureMariadbServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings SetDebug(this AzureMariadbServerConfigurationListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings ResetDebug(this AzureMariadbServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings SetHelp(this AzureMariadbServerConfigurationListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings ResetHelp(this AzureMariadbServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings SetOutput(this AzureMariadbServerConfigurationListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings ResetOutput(this AzureMariadbServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings SetQuery(this AzureMariadbServerConfigurationListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings ResetQuery(this AzureMariadbServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings SetVerbose(this AzureMariadbServerConfigurationListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationListSettings ResetVerbose(this AzureMariadbServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerConfigurationSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerConfigurationSetSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings SetName(this AzureMariadbServerConfigurationSetSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings ResetName(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings SetResourceGroup(this AzureMariadbServerConfigurationSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings ResetResourceGroup(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings SetServerName(this AzureMariadbServerConfigurationSetSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings ResetServerName(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Value
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings SetValue(this AzureMariadbServerConfigurationSetSettings toolSettings, string value)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Value = value;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings ResetValue(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Value = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings SetDebug(this AzureMariadbServerConfigurationSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings ResetDebug(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings SetHelp(this AzureMariadbServerConfigurationSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings ResetHelp(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings SetOutput(this AzureMariadbServerConfigurationSetSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings ResetOutput(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings SetQuery(this AzureMariadbServerConfigurationSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings ResetQuery(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings SetVerbose(this AzureMariadbServerConfigurationSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationSetSettings ResetVerbose(this AzureMariadbServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerConfigurationShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMariadbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerConfigurationShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings SetName(this AzureMariadbServerConfigurationShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings ResetName(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings SetResourceGroup(this AzureMariadbServerConfigurationShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings ResetResourceGroup(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings SetServerName(this AzureMariadbServerConfigurationShowSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings ResetServerName(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings SetDebug(this AzureMariadbServerConfigurationShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings ResetDebug(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings SetHelp(this AzureMariadbServerConfigurationShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings ResetHelp(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings SetOutput(this AzureMariadbServerConfigurationShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings ResetOutput(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings SetQuery(this AzureMariadbServerConfigurationShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings ResetQuery(this AzureMariadbServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMariadbServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings SetVerbose(this AzureMariadbServerConfigurationShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMariadbServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMariadbServerConfigurationShowSettings ResetVerbose(this AzureMariadbServerConfigurationShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

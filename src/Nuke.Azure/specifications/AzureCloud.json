@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/cloud.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/cloud.yml"
   ],
   "name": "AzureCloud",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/cloud?view=azure-cli-latest",

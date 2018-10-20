@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## [vNext]
-
+- Changed supported version to [Azure CLI v2.0.48](https://docs.microsoft.com/cli/azure/release-notes-azure-cli?view=azure-cli-latest#October-16-2018).
 ## [0.6.0] / 2018-09-21
 - Changed supported version to [Azure CLI v2.0.46](https://docs.microsoft.com/cli/azure/release-notes-azure-cli?view=azure-cli-latest#September-19-2018).
 - Changed the detection of types, therfore more arguments are generated with their respective type.
@@ -95,4 +95,3 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 [0.3.1]: https://github.com/nuke-build/azure/compare/0.2.1...0.3.1
 [0.2.1]: https://github.com/nuke-build/azure/compare/0.1.0...0.2.1
 [0.1.0]: https://github.com/nuke-build/azure/tree/0.1.0
-

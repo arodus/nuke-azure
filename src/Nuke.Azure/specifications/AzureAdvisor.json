@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/advisor.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/advisor/configuration.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/advisor/recommendation.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/advisor.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/advisor/recommendation.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/advisor/configuration.yml"
   ],
   "name": "AzureAdvisor",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest",
@@ -19,81 +19,6 @@
       "postfix": "",
       "definiteArgument": "advisor",
       "settingsClass": {}
-    },
-    {
-      "postfix": "ConfigurationList",
-      "definiteArgument": "advisor configuration list",
-      "settingsClass": {}
-    },
-    {
-      "postfix": "ConfigurationShow",
-      "definiteArgument": "advisor configuration show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigurationUpdate",
-      "definiteArgument": "advisor configuration update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Exclude",
-            "type": "string",
-            "format": "--exclude {value}",
-            "help": "Exclude from recommendation generation."
-          },
-          {
-            "name": "Include",
-            "type": "string",
-            "format": "--include {value}",
-            "help": "Include in recommendation generation."
-          },
-          {
-            "name": "LowCpuThreshold",
-            "type": "AdvisorConfigurationUpdateLowCpuThreshold",
-            "format": "--low-cpu-threshold {value}",
-            "help": "Value for low CPU threshold."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
     },
     {
       "postfix": "RecommendationDisable",
@@ -187,6 +112,81 @@
           }
         ]
       }
+    },
+    {
+      "postfix": "ConfigurationList",
+      "definiteArgument": "advisor configuration list",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "ConfigurationShow",
+      "definiteArgument": "advisor configuration show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigurationUpdate",
+      "definiteArgument": "advisor configuration update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Exclude",
+            "type": "string",
+            "format": "--exclude {value}",
+            "help": "Exclude from recommendation generation."
+          },
+          {
+            "name": "Include",
+            "type": "string",
+            "format": "--include {value}",
+            "help": "Include in recommendation generation."
+          },
+          {
+            "name": "LowCpuThreshold",
+            "type": "AdvisorConfigurationUpdateLowCpuThreshold",
+            "format": "--low-cpu-threshold {value}",
+            "help": "Value for low CPU threshold."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
     }
   ],
   "commonTaskProperties": [
@@ -223,21 +223,21 @@
   ],
   "enumerations": [
     {
-      "name": "AdvisorConfigurationUpdateLowCpuThreshold",
-      "values": [
-        "10",
-        "15",
-        "20",
-        "5"
-      ]
-    },
-    {
       "name": "AdvisorRecommendationListCategory",
       "values": [
         "cost",
         "highavailability",
         "performance",
         "security"
+      ]
+    },
+    {
+      "name": "AdvisorConfigurationUpdateLowCpuThreshold",
+      "values": [
+        "10",
+        "15",
+        "20",
+        "5"
       ]
     }
   ]

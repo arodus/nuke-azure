@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/snapshot.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/695ced3/latest/docs-ref-autogen/snapshot.yml"
   ],
   "name": "AzureSnapshot",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest",

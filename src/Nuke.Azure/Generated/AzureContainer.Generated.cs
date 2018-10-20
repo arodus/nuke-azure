@@ -170,7 +170,7 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The command line to run when the container is started, e.g. '/bin/bash -c myscript.sh'.</p></summary>
         public virtual string CommandLine { get; internal set; }
-        /// <summary><p>The required number of CPU cores of the containers.</p></summary>
+        /// <summary><p>The required number of CPU cores of the containers, accurate to one decimal place.</p></summary>
         public virtual string Cpu { get; internal set; }
         /// <summary><p>The dns name label for container group with public IP.</p></summary>
         public virtual string DnsNameLabel { get; internal set; }
@@ -185,7 +185,7 @@ namespace Nuke.Azure
         public virtual ContainerCreateIpAddress IpAddress { get; internal set; }
         /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
-        /// <summary><p>The required memory of the containers in GB.</p></summary>
+        /// <summary><p>The required memory of the containers in GB, accurate to one decimal place.</p></summary>
         public virtual string Memory { get; internal set; }
         /// <summary><p>The name of the container group.</p></summary>
         public virtual string Name { get; internal set; }
@@ -823,7 +823,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Cpu
-        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Cpu"/>.</em></p><p>The required number of CPU cores of the containers.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Cpu"/>.</em></p><p>The required number of CPU cores of the containers, accurate to one decimal place.</p></summary>
         [Pure]
         public static AzureContainerCreateSettings SetCpu(this AzureContainerCreateSettings toolSettings, string cpu)
         {
@@ -831,7 +831,7 @@ namespace Nuke.Azure
             toolSettings.Cpu = cpu;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Cpu"/>.</em></p><p>The required number of CPU cores of the containers.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Cpu"/>.</em></p><p>The required number of CPU cores of the containers, accurate to one decimal place.</p></summary>
         [Pure]
         public static AzureContainerCreateSettings ResetCpu(this AzureContainerCreateSettings toolSettings)
         {
@@ -973,7 +973,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Memory
-        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Memory"/>.</em></p><p>The required memory of the containers in GB.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Memory"/>.</em></p><p>The required memory of the containers in GB, accurate to one decimal place.</p></summary>
         [Pure]
         public static AzureContainerCreateSettings SetMemory(this AzureContainerCreateSettings toolSettings, string memory)
         {
@@ -981,7 +981,7 @@ namespace Nuke.Azure
             toolSettings.Memory = memory;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Memory"/>.</em></p><p>The required memory of the containers in GB.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Memory"/>.</em></p><p>The required memory of the containers in GB, accurate to one decimal place.</p></summary>
         [Pure]
         public static AzureContainerCreateSettings ResetMemory(this AzureContainerCreateSettings toolSettings)
         {
