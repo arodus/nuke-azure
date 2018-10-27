@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/aks.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/aks.yml"
   ],
   "name": "AzureAks",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest",
@@ -35,6 +35,12 @@
             "type": "string",
             "format": "--disable-browser {value}",
             "help": "Don't launch a web browser after establishing port-forwarding."
+          },
+          {
+            "name": "EnableCloudConsoleAksBrowse",
+            "type": "string",
+            "format": "--enable-cloud-console-aks-browse {value}",
+            "help": ""
           },
           {
             "name": "ListenPort",
@@ -122,7 +128,7 @@
             "name": "DockerBridgeAddress",
             "type": "string",
             "format": "--docker-bridge-address {value}",
-            "help": "An IP address and netmask assigned to the Docker bridge."
+            "help": "A specific IP address and netmask for the Docker bridge, using standard CIDR notation."
           },
           {
             "name": "EnableAddons",
@@ -196,6 +202,12 @@
             "type": "string",
             "format": "--node-vm-size {value}",
             "help": "Size of Virtual Machines to create as Kubernetes nodes."
+          },
+          {
+            "name": "NodepoolName",
+            "type": "string",
+            "format": "--nodepool-name {value}",
+            "help": "Node pool name, upto 12 alphanumeric characters."
           },
           {
             "name": "PodCidr",
@@ -380,6 +392,12 @@
             "type": "string",
             "format": "--file {value}",
             "help": "Kubernetes configuration file to update. Use \"-\" to print YAML to stdout instead."
+          },
+          {
+            "name": "OverwriteExisting",
+            "type": "string",
+            "format": "--overwrite-existing {value}",
+            "help": ""
           }
         ]
       }
@@ -619,6 +637,12 @@
             "type": "bool",
             "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "NodepoolName",
+            "type": "string",
+            "format": "--nodepool-name {value}",
+            "help": "Node pool name, upto 12 alphanumeric characters."
           }
         ]
       }

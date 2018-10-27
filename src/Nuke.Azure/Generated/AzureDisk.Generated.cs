@@ -377,6 +377,10 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The number of IOPS allowed for this disk. Only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.</p></summary>
+        public virtual string DiskIopsReadWrite { get; internal set; }
+        /// <summary><p>The bandwidth allowed for this disk. Only settable for UltraSSD disks. MBps means millions of bytes per second with ISO notation of powers of 10.</p></summary>
+        public virtual string DiskMbpsReadWrite { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Size in GB.</p></summary>
@@ -407,6 +411,8 @@ namespace Nuke.Azure
               .Add("disk update")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--disk-iops-read-write {value}", DiskIopsReadWrite)
+              .Add("--disk-mbps-read-write {value}", DiskMbpsReadWrite)
               .Add("--no-wait", NoWait)
               .Add("--size-gb {value}", SizeGb)
               .Add("--sku {value}", Sku)
@@ -1589,6 +1595,42 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DiskIopsReadWrite
+        /// <summary><p><em>Sets <see cref="AzureDiskUpdateSettings.DiskIopsReadWrite"/>.</em></p><p>The number of IOPS allowed for this disk. Only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.</p></summary>
+        [Pure]
+        public static AzureDiskUpdateSettings SetDiskIopsReadWrite(this AzureDiskUpdateSettings toolSettings, string diskIopsReadWrite)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskIopsReadWrite = diskIopsReadWrite;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDiskUpdateSettings.DiskIopsReadWrite"/>.</em></p><p>The number of IOPS allowed for this disk. Only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.</p></summary>
+        [Pure]
+        public static AzureDiskUpdateSettings ResetDiskIopsReadWrite(this AzureDiskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskIopsReadWrite = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DiskMbpsReadWrite
+        /// <summary><p><em>Sets <see cref="AzureDiskUpdateSettings.DiskMbpsReadWrite"/>.</em></p><p>The bandwidth allowed for this disk. Only settable for UltraSSD disks. MBps means millions of bytes per second with ISO notation of powers of 10.</p></summary>
+        [Pure]
+        public static AzureDiskUpdateSettings SetDiskMbpsReadWrite(this AzureDiskUpdateSettings toolSettings, string diskMbpsReadWrite)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskMbpsReadWrite = diskMbpsReadWrite;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDiskUpdateSettings.DiskMbpsReadWrite"/>.</em></p><p>The bandwidth allowed for this disk. Only settable for UltraSSD disks. MBps means millions of bytes per second with ISO notation of powers of 10.</p></summary>
+        [Pure]
+        public static AzureDiskUpdateSettings ResetDiskMbpsReadWrite(this AzureDiskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskMbpsReadWrite = null;
             return toolSettings;
         }
         #endregion

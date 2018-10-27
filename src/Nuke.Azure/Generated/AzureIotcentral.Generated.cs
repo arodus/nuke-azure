@@ -131,10 +131,14 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Subdomain for the IoT Central URL. Each application must have a unique subdomain.</p></summary>
         public virtual string Subdomain { get; internal set; }
+        /// <summary><p>Custom display name for the IoT Central application. Default is resource name.</p></summary>
+        public virtual string DisplayName { get; internal set; }
         /// <summary><p>Location of your IoT Central application. Default is the location of target resource group.</p></summary>
         public virtual string Location { get; internal set; }
-        /// <summary><p>Pricing tier for IoT Central applications. Default value is F1, which is free.</p></summary>
+        /// <summary><p>Pricing tier for IoT Central applications. Default value is S1.</p></summary>
         public virtual IotcentralAppCreateSku Sku { get; internal set; }
+        /// <summary><p>IoT Central application template name. Default is a custom application.</p></summary>
+        public virtual string Template { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -152,8 +156,10 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--subdomain {value}", Subdomain)
+              .Add("--display-name {value}", DisplayName)
               .Add("--location {value}", Location)
               .Add("--sku {value}", Sku)
+              .Add("--template {value}", Template)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -482,6 +488,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region DisplayName
+        /// <summary><p><em>Sets <see cref="AzureIotcentralAppCreateSettings.DisplayName"/>.</em></p><p>Custom display name for the IoT Central application. Default is resource name.</p></summary>
+        [Pure]
+        public static AzureIotcentralAppCreateSettings SetDisplayName(this AzureIotcentralAppCreateSettings toolSettings, string displayName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisplayName = displayName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotcentralAppCreateSettings.DisplayName"/>.</em></p><p>Custom display name for the IoT Central application. Default is resource name.</p></summary>
+        [Pure]
+        public static AzureIotcentralAppCreateSettings ResetDisplayName(this AzureIotcentralAppCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisplayName = null;
+            return toolSettings;
+        }
+        #endregion
         #region Location
         /// <summary><p><em>Sets <see cref="AzureIotcentralAppCreateSettings.Location"/>.</em></p><p>Location of your IoT Central application. Default is the location of target resource group.</p></summary>
         [Pure]
@@ -501,7 +525,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Sku
-        /// <summary><p><em>Sets <see cref="AzureIotcentralAppCreateSettings.Sku"/>.</em></p><p>Pricing tier for IoT Central applications. Default value is F1, which is free.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotcentralAppCreateSettings.Sku"/>.</em></p><p>Pricing tier for IoT Central applications. Default value is S1.</p></summary>
         [Pure]
         public static AzureIotcentralAppCreateSettings SetSku(this AzureIotcentralAppCreateSettings toolSettings, IotcentralAppCreateSku sku)
         {
@@ -509,12 +533,30 @@ namespace Nuke.Azure
             toolSettings.Sku = sku;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotcentralAppCreateSettings.Sku"/>.</em></p><p>Pricing tier for IoT Central applications. Default value is F1, which is free.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotcentralAppCreateSettings.Sku"/>.</em></p><p>Pricing tier for IoT Central applications. Default value is S1.</p></summary>
         [Pure]
         public static AzureIotcentralAppCreateSettings ResetSku(this AzureIotcentralAppCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Sku = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Template
+        /// <summary><p><em>Sets <see cref="AzureIotcentralAppCreateSettings.Template"/>.</em></p><p>IoT Central application template name. Default is a custom application.</p></summary>
+        [Pure]
+        public static AzureIotcentralAppCreateSettings SetTemplate(this AzureIotcentralAppCreateSettings toolSettings, string template)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Template = template;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotcentralAppCreateSettings.Template"/>.</em></p><p>IoT Central application template name. Default is a custom application.</p></summary>
+        [Pure]
+        public static AzureIotcentralAppCreateSettings ResetTemplate(this AzureIotcentralAppCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Template = null;
             return toolSettings;
         }
         #endregion

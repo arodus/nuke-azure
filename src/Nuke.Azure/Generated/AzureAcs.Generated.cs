@@ -100,22 +100,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcsDcosBrowse(Configure<AzureAcsDcosBrowseSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcsDcosBrowseSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcsDcosInstallCli(Configure<AzureAcsDcosInstallCliSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcsDcosInstallCliSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureAcsKubernetesBrowse(Configure<AzureAcsKubernetesBrowseSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsKubernetesBrowseSettings());
@@ -135,6 +119,22 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureAcsKubernetesInstallCli(Configure<AzureAcsKubernetesInstallCliSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsKubernetesInstallCliSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcsDcosBrowse(Configure<AzureAcsDcosBrowseSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcsDcosBrowseSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcsDcosInstallCli(Configure<AzureAcsDcosInstallCliSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcsDcosInstallCliSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -555,6 +555,135 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureAcsKubernetesBrowseSettings
+    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcsKubernetesBrowseSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcsTasks.AzureAcsPath;
+        /// <summary><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Do not open browser after opening a proxy to the cluster web user interface.</p></summary>
+        public virtual string DisableBrowser { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string SshKeyFile { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acs kubernetes browse")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--disable-browser {value}", DisableBrowser)
+              .Add("--ssh-key-file {value}", SshKeyFile)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcsKubernetesGetCredentialsSettings
+    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcsKubernetesGetCredentialsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcsTasks.AzureAcsPath;
+        /// <summary><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Where to install the kubectl config file.</p></summary>
+        public virtual string File { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string OverwriteExisting { get; internal set; }
+        /// <summary><p>Path to an SSH key file to use.</p></summary>
+        public virtual string SshKeyFile { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acs kubernetes get-credentials")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--file {value}", File)
+              .Add("--overwrite-existing {value}", OverwriteExisting)
+              .Add("--ssh-key-file {value}", SshKeyFile)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcsKubernetesInstallCliSettings
+    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcsKubernetesInstallCliSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcsTasks.AzureAcsPath;
+        /// <summary><p></p></summary>
+        public virtual string ClientVersion { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string InstallLocation { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acs kubernetes install-cli")
+              .Add("--client-version {value}", ClientVersion)
+              .Add("--install-location {value}", InstallLocation)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureAcsDcosBrowseSettings
     /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
     [PublicAPI]
@@ -626,132 +755,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("acs dcos install-cli")
-              .Add("--client-version {value}", ClientVersion)
-              .Add("--install-location {value}", InstallLocation)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcsKubernetesBrowseSettings
-    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcsKubernetesBrowseSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcsTasks.AzureAcsPath;
-        /// <summary><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Do not open browser after opening a proxy to the cluster web user interface.</p></summary>
-        public virtual string DisableBrowser { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string SshKeyFile { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acs kubernetes browse")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--disable-browser {value}", DisableBrowser)
-              .Add("--ssh-key-file {value}", SshKeyFile)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcsKubernetesGetCredentialsSettings
-    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcsKubernetesGetCredentialsSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcsTasks.AzureAcsPath;
-        /// <summary><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Where to install the kubectl config file.</p></summary>
-        public virtual string File { get; internal set; }
-        /// <summary><p>Path to an SSH key file to use.</p></summary>
-        public virtual string SshKeyFile { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acs kubernetes get-credentials")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--file {value}", File)
-              .Add("--ssh-key-file {value}", SshKeyFile)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcsKubernetesInstallCliSettings
-    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcsKubernetesInstallCliSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcsTasks.AzureAcsPath;
-        /// <summary><p></p></summary>
-        public virtual string ClientVersion { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string InstallLocation { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acs kubernetes install-cli")
               .Add("--client-version {value}", ClientVersion)
               .Add("--install-location {value}", InstallLocation)
               .Add("--debug {value}", Debug)
@@ -2573,6 +2576,498 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureAcsKubernetesBrowseSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcsKubernetesBrowseSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.Name"/>.</em></p><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings SetName(this AzureAcsKubernetesBrowseSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.Name"/>.</em></p><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings ResetName(this AzureAcsKubernetesBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.ResourceGroup"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings SetResourceGroup(this AzureAcsKubernetesBrowseSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.ResourceGroup"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings ResetResourceGroup(this AzureAcsKubernetesBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DisableBrowser
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.DisableBrowser"/>.</em></p><p>Do not open browser after opening a proxy to the cluster web user interface.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings SetDisableBrowser(this AzureAcsKubernetesBrowseSettings toolSettings, string disableBrowser)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableBrowser = disableBrowser;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.DisableBrowser"/>.</em></p><p>Do not open browser after opening a proxy to the cluster web user interface.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings ResetDisableBrowser(this AzureAcsKubernetesBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableBrowser = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SshKeyFile
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.SshKeyFile"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings SetSshKeyFile(this AzureAcsKubernetesBrowseSettings toolSettings, string sshKeyFile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SshKeyFile = sshKeyFile;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.SshKeyFile"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings ResetSshKeyFile(this AzureAcsKubernetesBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SshKeyFile = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings SetDebug(this AzureAcsKubernetesBrowseSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings ResetDebug(this AzureAcsKubernetesBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings SetHelp(this AzureAcsKubernetesBrowseSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings ResetHelp(this AzureAcsKubernetesBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings SetOutput(this AzureAcsKubernetesBrowseSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings ResetOutput(this AzureAcsKubernetesBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings SetQuery(this AzureAcsKubernetesBrowseSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings ResetQuery(this AzureAcsKubernetesBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings SetVerbose(this AzureAcsKubernetesBrowseSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesBrowseSettings ResetVerbose(this AzureAcsKubernetesBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcsKubernetesGetCredentialsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcsKubernetesGetCredentialsSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.Name"/>.</em></p><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings SetName(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.Name"/>.</em></p><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings ResetName(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings SetResourceGroup(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings ResetResourceGroup(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region File
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.File"/>.</em></p><p>Where to install the kubectl config file.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings SetFile(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string file)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = file;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.File"/>.</em></p><p>Where to install the kubectl config file.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings ResetFile(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = null;
+            return toolSettings;
+        }
+        #endregion
+        #region OverwriteExisting
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.OverwriteExisting"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings SetOverwriteExisting(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string overwriteExisting)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OverwriteExisting = overwriteExisting;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.OverwriteExisting"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings ResetOverwriteExisting(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OverwriteExisting = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SshKeyFile
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.SshKeyFile"/>.</em></p><p>Path to an SSH key file to use.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings SetSshKeyFile(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string sshKeyFile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SshKeyFile = sshKeyFile;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.SshKeyFile"/>.</em></p><p>Path to an SSH key file to use.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings ResetSshKeyFile(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SshKeyFile = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings SetDebug(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings ResetDebug(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings SetHelp(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings ResetHelp(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings SetOutput(this AzureAcsKubernetesGetCredentialsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings ResetOutput(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings SetQuery(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings ResetQuery(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings SetVerbose(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesGetCredentialsSettings ResetVerbose(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcsKubernetesInstallCliSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcsKubernetesInstallCliSettingsExtensions
+    {
+        #region ClientVersion
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.ClientVersion"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings SetClientVersion(this AzureAcsKubernetesInstallCliSettings toolSettings, string clientVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClientVersion = clientVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.ClientVersion"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings ResetClientVersion(this AzureAcsKubernetesInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClientVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region InstallLocation
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.InstallLocation"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings SetInstallLocation(this AzureAcsKubernetesInstallCliSettings toolSettings, string installLocation)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstallLocation = installLocation;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.InstallLocation"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings ResetInstallLocation(this AzureAcsKubernetesInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstallLocation = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings SetDebug(this AzureAcsKubernetesInstallCliSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings ResetDebug(this AzureAcsKubernetesInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings SetHelp(this AzureAcsKubernetesInstallCliSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings ResetHelp(this AzureAcsKubernetesInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings SetOutput(this AzureAcsKubernetesInstallCliSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings ResetOutput(this AzureAcsKubernetesInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings SetQuery(this AzureAcsKubernetesInstallCliSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings ResetQuery(this AzureAcsKubernetesInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings SetVerbose(this AzureAcsKubernetesInstallCliSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsKubernetesInstallCliSettings ResetVerbose(this AzureAcsKubernetesInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureAcsDcosBrowseSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
     [PublicAPI]
@@ -2869,480 +3364,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAcsDcosInstallCliSettings ResetVerbose(this AzureAcsDcosInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcsKubernetesBrowseSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcsKubernetesBrowseSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.Name"/>.</em></p><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings SetName(this AzureAcsKubernetesBrowseSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.Name"/>.</em></p><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings ResetName(this AzureAcsKubernetesBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.ResourceGroup"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings SetResourceGroup(this AzureAcsKubernetesBrowseSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.ResourceGroup"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings ResetResourceGroup(this AzureAcsKubernetesBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DisableBrowser
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.DisableBrowser"/>.</em></p><p>Do not open browser after opening a proxy to the cluster web user interface.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings SetDisableBrowser(this AzureAcsKubernetesBrowseSettings toolSettings, string disableBrowser)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DisableBrowser = disableBrowser;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.DisableBrowser"/>.</em></p><p>Do not open browser after opening a proxy to the cluster web user interface.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings ResetDisableBrowser(this AzureAcsKubernetesBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DisableBrowser = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SshKeyFile
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.SshKeyFile"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings SetSshKeyFile(this AzureAcsKubernetesBrowseSettings toolSettings, string sshKeyFile)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshKeyFile = sshKeyFile;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.SshKeyFile"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings ResetSshKeyFile(this AzureAcsKubernetesBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshKeyFile = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings SetDebug(this AzureAcsKubernetesBrowseSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings ResetDebug(this AzureAcsKubernetesBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings SetHelp(this AzureAcsKubernetesBrowseSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings ResetHelp(this AzureAcsKubernetesBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings SetOutput(this AzureAcsKubernetesBrowseSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings ResetOutput(this AzureAcsKubernetesBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings SetQuery(this AzureAcsKubernetesBrowseSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings ResetQuery(this AzureAcsKubernetesBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings SetVerbose(this AzureAcsKubernetesBrowseSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesBrowseSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesBrowseSettings ResetVerbose(this AzureAcsKubernetesBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcsKubernetesGetCredentialsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcsKubernetesGetCredentialsSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.Name"/>.</em></p><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings SetName(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.Name"/>.</em></p><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings ResetName(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings SetResourceGroup(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings ResetResourceGroup(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region File
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.File"/>.</em></p><p>Where to install the kubectl config file.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings SetFile(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string file)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.File = file;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.File"/>.</em></p><p>Where to install the kubectl config file.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings ResetFile(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.File = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SshKeyFile
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.SshKeyFile"/>.</em></p><p>Path to an SSH key file to use.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings SetSshKeyFile(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string sshKeyFile)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshKeyFile = sshKeyFile;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.SshKeyFile"/>.</em></p><p>Path to an SSH key file to use.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings ResetSshKeyFile(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshKeyFile = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings SetDebug(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings ResetDebug(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings SetHelp(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings ResetHelp(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings SetOutput(this AzureAcsKubernetesGetCredentialsSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings ResetOutput(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings SetQuery(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings ResetQuery(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings SetVerbose(this AzureAcsKubernetesGetCredentialsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesGetCredentialsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings ResetVerbose(this AzureAcsKubernetesGetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcsKubernetesInstallCliSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcsKubernetesInstallCliSettingsExtensions
-    {
-        #region ClientVersion
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.ClientVersion"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings SetClientVersion(this AzureAcsKubernetesInstallCliSettings toolSettings, string clientVersion)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClientVersion = clientVersion;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.ClientVersion"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings ResetClientVersion(this AzureAcsKubernetesInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClientVersion = null;
-            return toolSettings;
-        }
-        #endregion
-        #region InstallLocation
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.InstallLocation"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings SetInstallLocation(this AzureAcsKubernetesInstallCliSettings toolSettings, string installLocation)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.InstallLocation = installLocation;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.InstallLocation"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings ResetInstallLocation(this AzureAcsKubernetesInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.InstallLocation = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings SetDebug(this AzureAcsKubernetesInstallCliSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings ResetDebug(this AzureAcsKubernetesInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings SetHelp(this AzureAcsKubernetesInstallCliSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings ResetHelp(this AzureAcsKubernetesInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings SetOutput(this AzureAcsKubernetesInstallCliSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings ResetOutput(this AzureAcsKubernetesInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings SetQuery(this AzureAcsKubernetesInstallCliSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings ResetQuery(this AzureAcsKubernetesInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings SetVerbose(this AzureAcsKubernetesInstallCliSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsKubernetesInstallCliSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsKubernetesInstallCliSettings ResetVerbose(this AzureAcsKubernetesInstallCliSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/container.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/container.yml"
   ],
   "name": "AzureContainer",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest",
@@ -60,7 +60,7 @@
             "name": "Cpu",
             "type": "string",
             "format": "--cpu {value}",
-            "help": "The required number of CPU cores of the containers."
+            "help": "The required number of CPU cores of the containers, accurate to one decimal place."
           },
           {
             "name": "DnsNameLabel",
@@ -104,7 +104,7 @@
             "name": "Memory",
             "type": "string",
             "format": "--memory {value}",
-            "help": "The required memory of the containers in GB."
+            "help": "The required memory of the containers in GB, accurate to one decimal place."
           },
           {
             "name": "Name",
@@ -245,6 +245,25 @@
             "help": "The Log Analytics workspace key."
           },
           {
+            "name": "AssignIdentity",
+            "type": "List<string>",
+            "format": "--assign-identity {value}",
+            "separator": " ",
+            "help": "Space-separated list of assigned identities. Assigned identities are either user assigned identities (resource IDs) and / or the system assigned identity ('[system]'). See examples for more info."
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "help": "Role name or id the system assigned identity will have."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "Scope that the system assigned identity can access."
+          },
+          {
             "name": "NetworkProfile",
             "type": "string",
             "format": "--network-profile {value}",
@@ -261,6 +280,12 @@
             "type": "string",
             "format": "--subnet-address-prefix {value}",
             "help": "The subnet IP address prefix to use when creating a new VNET in CIDR format."
+          },
+          {
+            "name": "Vnet",
+            "type": "string",
+            "format": "--vnet {value}",
+            "help": "The name of the VNET when creating a new one or referencing an existing one. Can also reference an existing vnet by ID. This allows using vnets from other resource groups."
           },
           {
             "name": "VnetAddressPrefix",
@@ -516,6 +541,7 @@
     {
       "name": "ContainerCreateIpAddress",
       "values": [
+        "private",
         "public"
       ]
     },

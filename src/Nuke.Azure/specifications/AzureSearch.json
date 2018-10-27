@@ -6,10 +6,10 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/search.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/search/admin-key.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/search/query-key.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/search/service.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/search.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/search/service.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/search/admin-key.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/search/query-key.yml"
   ],
   "name": "AzureSearch",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/search?view=azure-cli-latest",
@@ -20,124 +20,6 @@
       "postfix": "",
       "definiteArgument": "search",
       "settingsClass": {}
-    },
-    {
-      "postfix": "AdminKeyRenew",
-      "definiteArgument": "search admin-key renew",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "KeyKind",
-            "type": "string",
-            "format": "--key-kind {value}",
-            "help": "The type (primary or secondary) of the admin key."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServiceName",
-            "type": "string",
-            "format": "--service-name {value}",
-            "help": "The name of the search service."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AdminKeyShow",
-      "definiteArgument": "search admin-key show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServiceName",
-            "type": "string",
-            "format": "--service-name {value}",
-            "help": "The name of the search service."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueryKeyCreate",
-      "definiteArgument": "search query-key create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the query key."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServiceName",
-            "type": "string",
-            "format": "--service-name {value}",
-            "help": "The name of the search service."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueryKeyDelete",
-      "definiteArgument": "search query-key delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "KeyValue",
-            "type": "string",
-            "format": "--key-value {value}",
-            "help": "The value of the query key."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServiceName",
-            "type": "string",
-            "format": "--service-name {value}",
-            "help": "The name of the search service."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueryKeyList",
-      "definiteArgument": "search query-key list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServiceName",
-            "type": "string",
-            "format": "--service-name {value}",
-            "help": "The name of the search service."
-          }
-        ]
-      }
     },
     {
       "postfix": "ServiceCreate",
@@ -295,6 +177,124 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AdminKeyRenew",
+      "definiteArgument": "search admin-key renew",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "KeyKind",
+            "type": "string",
+            "format": "--key-kind {value}",
+            "help": "The type (primary or secondary) of the admin key."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the search service."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AdminKeyShow",
+      "definiteArgument": "search admin-key show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the search service."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueryKeyCreate",
+      "definiteArgument": "search query-key create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the query key."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the search service."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueryKeyDelete",
+      "definiteArgument": "search query-key delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "KeyValue",
+            "type": "string",
+            "format": "--key-value {value}",
+            "help": "The value of the query key."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the search service."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueryKeyList",
+      "definiteArgument": "search query-key list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the search service."
           }
         ]
       }

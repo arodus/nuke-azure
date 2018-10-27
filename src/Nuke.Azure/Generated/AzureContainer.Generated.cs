@@ -170,7 +170,7 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The command line to run when the container is started, e.g. '/bin/bash -c myscript.sh'.</p></summary>
         public virtual string CommandLine { get; internal set; }
-        /// <summary><p>The required number of CPU cores of the containers.</p></summary>
+        /// <summary><p>The required number of CPU cores of the containers, accurate to one decimal place.</p></summary>
         public virtual string Cpu { get; internal set; }
         /// <summary><p>The dns name label for container group with public IP.</p></summary>
         public virtual string DnsNameLabel { get; internal set; }
@@ -185,7 +185,7 @@ namespace Nuke.Azure
         public virtual ContainerCreateIpAddress IpAddress { get; internal set; }
         /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
-        /// <summary><p>The required memory of the containers in GB.</p></summary>
+        /// <summary><p>The required memory of the containers in GB, accurate to one decimal place.</p></summary>
         public virtual string Memory { get; internal set; }
         /// <summary><p>The name of the container group.</p></summary>
         public virtual string Name { get; internal set; }
@@ -233,12 +233,21 @@ namespace Nuke.Azure
         public virtual string LogAnalyticsWorkspace { get; internal set; }
         /// <summary><p>The Log Analytics workspace key.</p></summary>
         public virtual string LogAnalyticsWorkspaceKey { get; internal set; }
+        /// <summary><p>Space-separated list of assigned identities. Assigned identities are either user assigned identities (resource IDs) and / or the system assigned identity ('[system]'). See examples for more info.</p></summary>
+        public virtual IReadOnlyList<string> AssignIdentity => AssignIdentityInternal.AsReadOnly();
+        internal List<string> AssignIdentityInternal { get; set; } = new List<string>();
+        /// <summary><p>Role name or id the system assigned identity will have.</p></summary>
+        public virtual string Role { get; internal set; }
+        /// <summary><p>Scope that the system assigned identity can access.</p></summary>
+        public virtual string Scope { get; internal set; }
         /// <summary><p>The network profile name or id.</p></summary>
         public virtual string NetworkProfile { get; internal set; }
         /// <summary><p>The name of the subnet when creating a new VNET or referencing an existing one. Can also reference an existing subnet by ID.</p></summary>
         public virtual string Subnet { get; internal set; }
         /// <summary><p>The subnet IP address prefix to use when creating a new VNET in CIDR format.</p></summary>
         public virtual string SubnetAddressPrefix { get; internal set; }
+        /// <summary><p>The name of the VNET when creating a new one or referencing an existing one. Can also reference an existing vnet by ID. This allows using vnets from other resource groups.</p></summary>
+        public virtual string Vnet { get; internal set; }
         /// <summary><p>The IP address prefix to use when creating a new VNET in CIDR format.</p></summary>
         public virtual string VnetAddressPrefix { get; internal set; }
         /// <summary><p>The name of the VNET when creating a new one or referencing an existing one.</p></summary>
@@ -289,9 +298,13 @@ namespace Nuke.Azure
               .Add("--registry-username {value}", RegistryUsername)
               .Add("--log-analytics-workspace {value}", LogAnalyticsWorkspace)
               .Add("--log-analytics-workspace-key {value}", LogAnalyticsWorkspaceKey)
+              .Add("--assign-identity {value}", AssignIdentity, separator: ' ')
+              .Add("--role {value}", Role)
+              .Add("--scope {value}", Scope)
               .Add("--network-profile {value}", NetworkProfile)
               .Add("--subnet {value}", Subnet)
               .Add("--subnet-address-prefix {value}", SubnetAddressPrefix)
+              .Add("--vnet {value}", Vnet)
               .Add("--vnet-address-prefix {value}", VnetAddressPrefix)
               .Add("--vnet-name {value}", VnetName)
               .Add("--debug {value}", Debug)
@@ -823,7 +836,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Cpu
-        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Cpu"/>.</em></p><p>The required number of CPU cores of the containers.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Cpu"/>.</em></p><p>The required number of CPU cores of the containers, accurate to one decimal place.</p></summary>
         [Pure]
         public static AzureContainerCreateSettings SetCpu(this AzureContainerCreateSettings toolSettings, string cpu)
         {
@@ -831,7 +844,7 @@ namespace Nuke.Azure
             toolSettings.Cpu = cpu;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Cpu"/>.</em></p><p>The required number of CPU cores of the containers.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Cpu"/>.</em></p><p>The required number of CPU cores of the containers, accurate to one decimal place.</p></summary>
         [Pure]
         public static AzureContainerCreateSettings ResetCpu(this AzureContainerCreateSettings toolSettings)
         {
@@ -973,7 +986,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Memory
-        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Memory"/>.</em></p><p>The required memory of the containers in GB.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Memory"/>.</em></p><p>The required memory of the containers in GB, accurate to one decimal place.</p></summary>
         [Pure]
         public static AzureContainerCreateSettings SetMemory(this AzureContainerCreateSettings toolSettings, string memory)
         {
@@ -981,7 +994,7 @@ namespace Nuke.Azure
             toolSettings.Memory = memory;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Memory"/>.</em></p><p>The required memory of the containers in GB.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Memory"/>.</em></p><p>The required memory of the containers in GB, accurate to one decimal place.</p></summary>
         [Pure]
         public static AzureContainerCreateSettings ResetMemory(this AzureContainerCreateSettings toolSettings)
         {
@@ -1458,6 +1471,102 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AssignIdentity
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.AssignIdentity"/> to a new list.</em></p><p>Space-separated list of assigned identities. Assigned identities are either user assigned identities (resource IDs) and / or the system assigned identity ('[system]'). See examples for more info.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetAssignIdentity(this AzureContainerCreateSettings toolSettings, params string[] assignIdentity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssignIdentityInternal = assignIdentity.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.AssignIdentity"/> to a new list.</em></p><p>Space-separated list of assigned identities. Assigned identities are either user assigned identities (resource IDs) and / or the system assigned identity ('[system]'). See examples for more info.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetAssignIdentity(this AzureContainerCreateSettings toolSettings, IEnumerable<string> assignIdentity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssignIdentityInternal = assignIdentity.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureContainerCreateSettings.AssignIdentity"/>.</em></p><p>Space-separated list of assigned identities. Assigned identities are either user assigned identities (resource IDs) and / or the system assigned identity ('[system]'). See examples for more info.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings AddAssignIdentity(this AzureContainerCreateSettings toolSettings, params string[] assignIdentity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssignIdentityInternal.AddRange(assignIdentity);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureContainerCreateSettings.AssignIdentity"/>.</em></p><p>Space-separated list of assigned identities. Assigned identities are either user assigned identities (resource IDs) and / or the system assigned identity ('[system]'). See examples for more info.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings AddAssignIdentity(this AzureContainerCreateSettings toolSettings, IEnumerable<string> assignIdentity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssignIdentityInternal.AddRange(assignIdentity);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureContainerCreateSettings.AssignIdentity"/>.</em></p><p>Space-separated list of assigned identities. Assigned identities are either user assigned identities (resource IDs) and / or the system assigned identity ('[system]'). See examples for more info.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ClearAssignIdentity(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssignIdentityInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureContainerCreateSettings.AssignIdentity"/>.</em></p><p>Space-separated list of assigned identities. Assigned identities are either user assigned identities (resource IDs) and / or the system assigned identity ('[system]'). See examples for more info.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings RemoveAssignIdentity(this AzureContainerCreateSettings toolSettings, params string[] assignIdentity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(assignIdentity);
+            toolSettings.AssignIdentityInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureContainerCreateSettings.AssignIdentity"/>.</em></p><p>Space-separated list of assigned identities. Assigned identities are either user assigned identities (resource IDs) and / or the system assigned identity ('[system]'). See examples for more info.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings RemoveAssignIdentity(this AzureContainerCreateSettings toolSettings, IEnumerable<string> assignIdentity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(assignIdentity);
+            toolSettings.AssignIdentityInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Role
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Role"/>.</em></p><p>Role name or id the system assigned identity will have.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetRole(this AzureContainerCreateSettings toolSettings, string role)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Role = role;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Role"/>.</em></p><p>Role name or id the system assigned identity will have.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetRole(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Role = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Scope
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Scope"/>.</em></p><p>Scope that the system assigned identity can access.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetScope(this AzureContainerCreateSettings toolSettings, string scope)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = scope;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Scope"/>.</em></p><p>Scope that the system assigned identity can access.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetScope(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
         #region NetworkProfile
         /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.NetworkProfile"/>.</em></p><p>The network profile name or id.</p></summary>
         [Pure]
@@ -1509,6 +1618,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SubnetAddressPrefix = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Vnet
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Vnet"/>.</em></p><p>The name of the VNET when creating a new one or referencing an existing one. Can also reference an existing vnet by ID. This allows using vnets from other resource groups.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetVnet(this AzureContainerCreateSettings toolSettings, string vnet)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Vnet = vnet;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Vnet"/>.</em></p><p>The name of the VNET when creating a new one or referencing an existing one. Can also reference an existing vnet by ID. This allows using vnets from other resource groups.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetVnet(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Vnet = null;
             return toolSettings;
         }
         #endregion
@@ -2845,6 +2972,7 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public partial class ContainerCreateIpAddress : Enumeration
     {
+        public static ContainerCreateIpAddress private_ = new ContainerCreateIpAddress { Value = "private" };
         public static ContainerCreateIpAddress public_ = new ContainerCreateIpAddress { Value = "public" };
     }
     #endregion
