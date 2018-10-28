@@ -6,13 +6,16 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/ad.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/ad/app.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/ad/group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/ad/sp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/ad/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/ad/group/member.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/ad/sp/credential.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/ad.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/ad/app.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/ad/group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/ad/sp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/ad/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/ad/sp/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/ad/sp/owner.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/ad/app/owner.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/ad/group/member.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/ad/group/owner.yml"
   ],
   "name": "AzureAd",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest",
@@ -552,7 +555,7 @@
             "name": "UserPrincipalName",
             "type": "string",
             "format": "--user-principal-name {value}",
-            "help": "The user principal name (someuser@contoso.com). It must contain one of the verified domains for the tenant."
+            "help": "Required. The user principal name (someuser@contoso.com). It must contain one of the verified domains for the tenant."
           },
           {
             "name": "ForceChangePasswordNextLogin",
@@ -651,86 +654,6 @@
       }
     },
     {
-      "postfix": "GroupMemberAdd",
-      "definiteArgument": "ad group member add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Group",
-            "type": "string",
-            "format": "--group {value}",
-            "help": "Group's object id or display name(prefix also works if there is a unique match)."
-          },
-          {
-            "name": "MemberId",
-            "type": "string",
-            "format": "--member-id {value}",
-            "help": "The object ID of the contact, group, user, or service principal."
-          },
-          {
-            "name": "AdditionalProperties",
-            "type": "string",
-            "format": "--additional-properties {value}",
-            "help": "Unmatched properties from the message are deserialized this collection."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GroupMemberCheck",
-      "definiteArgument": "ad group member check",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Group",
-            "type": "string",
-            "format": "--group {value}",
-            "help": "Group's object id or display name(prefix also works if there is a unique match)."
-          },
-          {
-            "name": "MemberId",
-            "type": "string",
-            "format": "--member-id {value}",
-            "help": "The object ID of the contact, group, user, or service principal."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GroupMemberList",
-      "definiteArgument": "ad group member list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Group",
-            "type": "string",
-            "format": "--group {value}",
-            "help": "Group's object id or display name(prefix also works if there is a unique match)."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GroupMemberRemove",
-      "definiteArgument": "ad group member remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Group",
-            "type": "string",
-            "format": "--group {value}",
-            "help": "Group's object id or display name(prefix also works if there is a unique match)."
-          },
-          {
-            "name": "MemberId",
-            "type": "string",
-            "format": "--member-id {value}",
-            "help": "The object ID of the contact, group, user, or service principal."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "SpCredentialDelete",
       "definiteArgument": "ad sp credential delete",
       "settingsClass": {
@@ -823,6 +746,208 @@
             "type": "int",
             "format": "--years {value}",
             "help": "Number of years for which the credentials will be valid. Default: 1 year."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SpOwnerList",
+      "definiteArgument": "ad sp owner list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Service principal name, or object id or the service principal."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppOwnerAdd",
+      "definiteArgument": "ad app owner add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Identifier uri, application id, or object id."
+          },
+          {
+            "name": "OwnerObjectId",
+            "type": "string",
+            "format": "--owner-object-id {value}",
+            "help": "Owner's object id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppOwnerList",
+      "definiteArgument": "ad app owner list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Identifier uri, application id, or object id of the application."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppOwnerRemove",
+      "definiteArgument": "ad app owner remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Identifier uri, application id, or object id."
+          },
+          {
+            "name": "OwnerObjectId",
+            "type": "string",
+            "format": "--owner-object-id {value}",
+            "help": "Owner's object id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupMemberAdd",
+      "definiteArgument": "ad group member add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          },
+          {
+            "name": "MemberId",
+            "type": "string",
+            "format": "--member-id {value}",
+            "help": "The object ID of the contact, group, user, or service principal."
+          },
+          {
+            "name": "AdditionalProperties",
+            "type": "string",
+            "format": "--additional-properties {value}",
+            "help": "Unmatched properties from the message are deserialized this collection."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupMemberCheck",
+      "definiteArgument": "ad group member check",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          },
+          {
+            "name": "MemberId",
+            "type": "string",
+            "format": "--member-id {value}",
+            "help": "The object ID of the contact, group, user, or service principal."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupMemberList",
+      "definiteArgument": "ad group member list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupMemberRemove",
+      "definiteArgument": "ad group member remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          },
+          {
+            "name": "MemberId",
+            "type": "string",
+            "format": "--member-id {value}",
+            "help": "The object ID of the contact, group, user, or service principal."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupOwnerAdd",
+      "definiteArgument": "ad group owner add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          },
+          {
+            "name": "OwnerObjectId",
+            "type": "string",
+            "format": "--owner-object-id {value}",
+            "help": "Owner's object id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupOwnerList",
+      "definiteArgument": "ad group owner list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupOwnerRemove",
+      "definiteArgument": "ad group owner remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          },
+          {
+            "name": "OwnerObjectId",
+            "type": "string",
+            "format": "--owner-object-id {value}",
+            "help": "Owner's object id."
           }
         ]
       }

@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/reference-index.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/reference-index.yml"
   ],
   "name": "Azure",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest",

@@ -6,8 +6,8 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/iotcentral.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9113bf87/latest/docs-ref-autogen/iotcentral/app.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/iotcentral.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/iotcentral/app.yml"
   ],
   "name": "AzureIotcentral",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/iotcentral?view=azure-cli-latest",
@@ -43,6 +43,12 @@
             "help": "Subdomain for the IoT Central URL. Each application must have a unique subdomain."
           },
           {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "help": "Custom display name for the IoT Central application. Default is resource name."
+          },
+          {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
@@ -52,7 +58,13 @@
             "name": "Sku",
             "type": "IotcentralAppCreateSku",
             "format": "--sku {value}",
-            "help": "Pricing tier for IoT Central applications. Default value is F1, which is free."
+            "help": "Pricing tier for IoT Central applications. Default value is S1."
+          },
+          {
+            "name": "Template",
+            "type": "string",
+            "format": "--template {value}",
+            "help": "IoT Central application template name. Default is a custom application."
           }
         ]
       }

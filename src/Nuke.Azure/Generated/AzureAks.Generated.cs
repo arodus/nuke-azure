@@ -203,6 +203,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Don't launch a web browser after establishing port-forwarding.</p></summary>
         public virtual string DisableBrowser { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string EnableCloudConsoleAksBrowse { get; internal set; }
         /// <summary><p>The listening port for the dashboard.</p></summary>
         public virtual string ListenPort { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -222,6 +224,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--disable-browser {value}", DisableBrowser)
+              .Add("--enable-cloud-console-aks-browse {value}", EnableCloudConsoleAksBrowse)
               .Add("--listen-port {value}", ListenPort)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -263,7 +266,7 @@ namespace Nuke.Azure
         public virtual string DnsNamePrefix { get; internal set; }
         /// <summary><p>An IP address assigned to the Kubernetes DNS service.</p></summary>
         public virtual string DnsServiceIp { get; internal set; }
-        /// <summary><p>An IP address and netmask assigned to the Docker bridge.</p></summary>
+        /// <summary><p>A specific IP address and netmask for the Docker bridge, using standard CIDR notation.</p></summary>
         public virtual string DockerBridgeAddress { get; internal set; }
         /// <summary><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
         public virtual IReadOnlyList<string> EnableAddons => EnableAddonsInternal.AsReadOnly();
@@ -290,6 +293,8 @@ namespace Nuke.Azure
         public virtual string NodeOsdiskSize { get; internal set; }
         /// <summary><p>Size of Virtual Machines to create as Kubernetes nodes.</p></summary>
         public virtual string NodeVmSize { get; internal set; }
+        /// <summary><p>Node pool name, upto 12 alphanumeric characters.</p></summary>
+        public virtual string NodepoolName { get; internal set; }
         /// <summary><p>A CIDR notation IP range from which to assign pod IPs when kubenet is used.</p></summary>
         public virtual string PodCidr { get; internal set; }
         /// <summary><p>A CIDR notation IP range from which to assign service cluster IPs.</p></summary>
@@ -344,6 +349,7 @@ namespace Nuke.Azure
               .Add("--node-count {value}", NodeCount)
               .Add("--node-osdisk-size {value}", NodeOsdiskSize)
               .Add("--node-vm-size {value}", NodeVmSize)
+              .Add("--nodepool-name {value}", NodepoolName)
               .Add("--pod-cidr {value}", PodCidr)
               .Add("--service-cidr {value}", ServiceCidr)
               .Add("--service-principal", ServicePrincipal)
@@ -515,6 +521,8 @@ namespace Nuke.Azure
         public virtual string Admin { get; internal set; }
         /// <summary><p>Kubernetes configuration file to update. Use "-" to print YAML to stdout instead.</p></summary>
         public virtual string File { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string OverwriteExisting { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -533,6 +541,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--admin {value}", Admin)
               .Add("--file {value}", File)
+              .Add("--overwrite-existing {value}", OverwriteExisting)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -858,6 +867,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Node pool name, upto 12 alphanumeric characters.</p></summary>
+        public virtual string NodepoolName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -876,6 +887,7 @@ namespace Nuke.Azure
               .Add("--node-count {value}", NodeCount)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
+              .Add("--nodepool-name {value}", NodepoolName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1198,6 +1210,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region EnableCloudConsoleAksBrowse
+        /// <summary><p><em>Sets <see cref="AzureAksBrowseSettings.EnableCloudConsoleAksBrowse"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAksBrowseSettings SetEnableCloudConsoleAksBrowse(this AzureAksBrowseSettings toolSettings, string enableCloudConsoleAksBrowse)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableCloudConsoleAksBrowse = enableCloudConsoleAksBrowse;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksBrowseSettings.EnableCloudConsoleAksBrowse"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAksBrowseSettings ResetEnableCloudConsoleAksBrowse(this AzureAksBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableCloudConsoleAksBrowse = null;
+            return toolSettings;
+        }
+        #endregion
         #region ListenPort
         /// <summary><p><em>Sets <see cref="AzureAksBrowseSettings.ListenPort"/>.</em></p><p>The listening port for the dashboard.</p></summary>
         [Pure]
@@ -1513,7 +1543,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region DockerBridgeAddress
-        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.DockerBridgeAddress"/>.</em></p><p>An IP address and netmask assigned to the Docker bridge.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.DockerBridgeAddress"/>.</em></p><p>A specific IP address and netmask for the Docker bridge, using standard CIDR notation.</p></summary>
         [Pure]
         public static AzureAksCreateSettings SetDockerBridgeAddress(this AzureAksCreateSettings toolSettings, string dockerBridgeAddress)
         {
@@ -1521,7 +1551,7 @@ namespace Nuke.Azure
             toolSettings.DockerBridgeAddress = dockerBridgeAddress;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.DockerBridgeAddress"/>.</em></p><p>An IP address and netmask assigned to the Docker bridge.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.DockerBridgeAddress"/>.</em></p><p>A specific IP address and netmask for the Docker bridge, using standard CIDR notation.</p></summary>
         [Pure]
         public static AzureAksCreateSettings ResetDockerBridgeAddress(this AzureAksCreateSettings toolSettings)
         {
@@ -1833,6 +1863,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NodeVmSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NodepoolName
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.NodepoolName"/>.</em></p><p>Node pool name, upto 12 alphanumeric characters.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetNodepoolName(this AzureAksCreateSettings toolSettings, string nodepoolName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodepoolName = nodepoolName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.NodepoolName"/>.</em></p><p>Node pool name, upto 12 alphanumeric characters.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetNodepoolName(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodepoolName = null;
             return toolSettings;
         }
         #endregion
@@ -2855,6 +2903,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.File = null;
+            return toolSettings;
+        }
+        #endregion
+        #region OverwriteExisting
+        /// <summary><p><em>Sets <see cref="AzureAksGetCredentialsSettings.OverwriteExisting"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAksGetCredentialsSettings SetOverwriteExisting(this AzureAksGetCredentialsSettings toolSettings, string overwriteExisting)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OverwriteExisting = overwriteExisting;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksGetCredentialsSettings.OverwriteExisting"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAksGetCredentialsSettings ResetOverwriteExisting(this AzureAksGetCredentialsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OverwriteExisting = null;
             return toolSettings;
         }
         #endregion
@@ -4209,6 +4275,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region NodepoolName
+        /// <summary><p><em>Sets <see cref="AzureAksScaleSettings.NodepoolName"/>.</em></p><p>Node pool name, upto 12 alphanumeric characters.</p></summary>
+        [Pure]
+        public static AzureAksScaleSettings SetNodepoolName(this AzureAksScaleSettings toolSettings, string nodepoolName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodepoolName = nodepoolName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksScaleSettings.NodepoolName"/>.</em></p><p>Node pool name, upto 12 alphanumeric characters.</p></summary>
+        [Pure]
+        public static AzureAksScaleSettings ResetNodepoolName(this AzureAksScaleSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodepoolName = null;
             return toolSettings;
         }
         #endregion

@@ -266,6 +266,8 @@ namespace Nuke.Azure
         public virtual CosmosdbDefaultConsistencyLevel DefaultConsistencyLevel { get; internal set; }
         /// <summary><p>Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.</p></summary>
         public virtual bool? EnableAutomaticFailover { get; internal set; }
+        /// <summary><p>Enable Multiple Write Locations.</p></summary>
+        public virtual bool? EnableMultipleWriteLocations { get; internal set; }
         /// <summary><p>Enables virtual network on the Cosmos DB database account.</p></summary>
         public virtual bool? EnableVirtualNetwork { get; internal set; }
         /// <summary><p>Firewall support. Specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma-separated and must not contain any spaces.</p></summary>
@@ -303,6 +305,7 @@ namespace Nuke.Azure
               .Add("--capabilities {value}", Capabilities)
               .Add("--default-consistency-level {value}", DefaultConsistencyLevel)
               .Add("--enable-automatic-failover", EnableAutomaticFailover)
+              .Add("--enable-multiple-write-locations", EnableMultipleWriteLocations)
               .Add("--enable-virtual-network", EnableVirtualNetwork)
               .Add("--ip-range-filter {value}", IpRangeFilter, separator: ',')
               .Add("--kind {value}", Kind)
@@ -1481,6 +1484,48 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EnableAutomaticFailover = !toolSettings.EnableAutomaticFailover;
+            return toolSettings;
+        }
+        #endregion
+        #region EnableMultipleWriteLocations
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCreateSettings.EnableMultipleWriteLocations"/>.</em></p><p>Enable Multiple Write Locations.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings SetEnableMultipleWriteLocations(this AzureCosmosdbCreateSettings toolSettings, bool? enableMultipleWriteLocations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableMultipleWriteLocations = enableMultipleWriteLocations;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbCreateSettings.EnableMultipleWriteLocations"/>.</em></p><p>Enable Multiple Write Locations.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings ResetEnableMultipleWriteLocations(this AzureCosmosdbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableMultipleWriteLocations = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureCosmosdbCreateSettings.EnableMultipleWriteLocations"/>.</em></p><p>Enable Multiple Write Locations.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings EnableEnableMultipleWriteLocations(this AzureCosmosdbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableMultipleWriteLocations = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureCosmosdbCreateSettings.EnableMultipleWriteLocations"/>.</em></p><p>Enable Multiple Write Locations.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings DisableEnableMultipleWriteLocations(this AzureCosmosdbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableMultipleWriteLocations = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureCosmosdbCreateSettings.EnableMultipleWriteLocations"/>.</em></p><p>Enable Multiple Write Locations.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings ToggleEnableMultipleWriteLocations(this AzureCosmosdbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableMultipleWriteLocations = !toolSettings.EnableMultipleWriteLocations;
             return toolSettings;
         }
         #endregion

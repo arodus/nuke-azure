@@ -92,46 +92,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotAuthsettingCreate(Configure<AzureBotAuthsettingCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBotAuthsettingCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotAuthsettingDelete(Configure<AzureBotAuthsettingDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBotAuthsettingDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotAuthsettingList(Configure<AzureBotAuthsettingListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBotAuthsettingListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotAuthsettingListProviders(Configure<AzureBotAuthsettingListProvidersSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBotAuthsettingListProvidersSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotAuthsettingShow(Configure<AzureBotAuthsettingShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBotAuthsettingShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureBotDirectlineCreate(Configure<AzureBotDirectlineCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBotDirectlineCreateSettings());
@@ -156,25 +116,25 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotEmailCreate(Configure<AzureBotEmailCreateSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBotSmsCreate(Configure<AzureBotSmsCreateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBotEmailCreateSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBotSmsCreateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotEmailDelete(Configure<AzureBotEmailDeleteSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBotSmsDelete(Configure<AzureBotSmsDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBotEmailDeleteSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBotSmsDeleteSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotEmailShow(Configure<AzureBotEmailShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBotSmsShow(Configure<AzureBotSmsShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBotEmailShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBotSmsShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -199,30 +159,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureBotFacebookShow(Configure<AzureBotFacebookShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBotFacebookShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotKikCreate(Configure<AzureBotKikCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBotKikCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotKikDelete(Configure<AzureBotKikDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBotKikDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotKikShow(Configure<AzureBotKikShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBotKikShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -276,6 +212,70 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBotEmailCreate(Configure<AzureBotEmailCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBotEmailCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBotEmailDelete(Configure<AzureBotEmailDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBotEmailDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBotEmailShow(Configure<AzureBotEmailShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBotEmailShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBotAuthsettingCreate(Configure<AzureBotAuthsettingCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBotAuthsettingCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBotAuthsettingDelete(Configure<AzureBotAuthsettingDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBotAuthsettingDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBotAuthsettingList(Configure<AzureBotAuthsettingListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBotAuthsettingListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBotAuthsettingListProviders(Configure<AzureBotAuthsettingListProvidersSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBotAuthsettingListProvidersSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBotAuthsettingShow(Configure<AzureBotAuthsettingShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBotAuthsettingShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureBotSlackCreate(Configure<AzureBotSlackCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBotSlackCreateSettings());
@@ -300,25 +300,25 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotSmsCreate(Configure<AzureBotSmsCreateSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBotKikCreate(Configure<AzureBotKikCreateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBotSmsCreateSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBotKikCreateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotSmsDelete(Configure<AzureBotSmsDeleteSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBotKikDelete(Configure<AzureBotKikDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBotSmsDeleteSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBotKikDeleteSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Microsoft Bot Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBotSmsShow(Configure<AzureBotSmsShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBotKikShow(Configure<AzureBotKikShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBotSmsShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBotKikShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -688,217 +688,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBotAuthsettingCreateSettings
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBotAuthsettingCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
-        /// <summary><p>Client ID associated with the service provider setting.</p></summary>
-        public virtual string ClientId { get; internal set; }
-        /// <summary><p>Client secret associated with the service provider setting.</p></summary>
-        public virtual string ClientSecret { get; internal set; }
-        /// <summary><p>The resource name of the bot.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The scope string associated with the service provider setting.The string should be delimited as needed for the service provider.</p></summary>
-        public virtual string ProviderScopeString { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the service provider. For a list of all service providers, use `az bot connection listserviceproviders`.</p></summary>
-        public virtual string Service { get; internal set; }
-        /// <summary><p>Name of the oauth connection setting.</p></summary>
-        public virtual string SettingName { get; internal set; }
-        /// <summary><p>Parameter values for service provider parameters. Usage: --parameters key=value key1=value1.</p></summary>
-        public virtual string Parameters { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("bot authsetting create")
-              .Add("--client-id {value}", ClientId)
-              .Add("--client-secret {value}", ClientSecret, secret: true)
-              .Add("--name {value}", Name)
-              .Add("--provider-scope-string {value}", ProviderScopeString)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--service {value}", Service)
-              .Add("--setting-name {value}", SettingName)
-              .Add("--parameters {value}", Parameters)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBotAuthsettingDeleteSettings
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBotAuthsettingDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
-        /// <summary><p>The resource name of the bot.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the oauth connection setting.</p></summary>
-        public virtual string SettingName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("bot authsetting delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--setting-name {value}", SettingName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBotAuthsettingListSettings
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBotAuthsettingListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
-        /// <summary><p>The resource name of the bot.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("bot authsetting list")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBotAuthsettingListProvidersSettings
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBotAuthsettingListProvidersSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
-        /// <summary><p>Service provider name for which to fetch details.</p></summary>
-        public virtual string ProviderName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("bot authsetting list-providers")
-              .Add("--provider-name {value}", ProviderName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBotAuthsettingShowSettings
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBotAuthsettingShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
-        /// <summary><p>The resource name of the bot.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the oauth connection setting.</p></summary>
-        public virtual string SettingName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("bot authsetting show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--setting-name {value}", SettingName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureBotDirectlineCreateSettings
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
@@ -1028,25 +817,29 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBotEmailCreateSettings
+    #region AzureBotSmsCreateSettings
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBotEmailCreateSettings : ToolSettings
+    public partial class AzureBotSmsCreateSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
-        /// <summary><p>The email address for the bot.</p></summary>
-        public virtual string EmailAddress { get; internal set; }
+        /// <summary><p>The account SID for the Twilio account.</p></summary>
+        public virtual string AccountSid { get; internal set; }
+        /// <summary><p>The token token for the Twilio account.</p></summary>
+        public virtual string AuthToken { get; internal set; }
         /// <summary><p>The resource name of the bot.</p></summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p>The email password for the bot.</p></summary>
-        public virtual string Password { get; internal set; }
+        /// <summary><p>The phone number for the Twilio account.</p></summary>
+        public virtual string Phone { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Add the channel in a disabled state.</p></summary>
         public virtual bool? AddDisabled { get; internal set; }
+        /// <summary><p>Whether or not the Twilio account has been validated for use with the bot.</p></summary>
+        public virtual bool? IsValidated { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1060,12 +853,14 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("bot email create")
-              .Add("--email-address {value}", EmailAddress)
+              .Add("bot sms create")
+              .Add("--account-sid {value}", AccountSid)
+              .Add("--auth-token {value}", AuthToken)
               .Add("--name {value}", Name)
-              .Add("--password {value}", Password, secret: true)
+              .Add("--phone {value}", Phone)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--add-disabled", AddDisabled)
+              .Add("--is-validated", IsValidated)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1075,12 +870,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBotEmailDeleteSettings
+    #region AzureBotSmsDeleteSettings
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBotEmailDeleteSettings : ToolSettings
+    public partial class AzureBotSmsDeleteSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
@@ -1101,7 +896,7 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("bot email delete")
+              .Add("bot sms delete")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
@@ -1113,12 +908,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBotEmailShowSettings
+    #region AzureBotSmsShowSettings
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBotEmailShowSettings : ToolSettings
+    public partial class AzureBotSmsShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
@@ -1141,7 +936,7 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("bot email show")
+              .Add("bot sms show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--with-secrets", WithSecrets, secret: true)
@@ -1274,135 +1069,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("bot facebook show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--with-secrets", WithSecrets, secret: true)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBotKikCreateSettings
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBotKikCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
-        /// <summary><p>The API key for the Kik account.</p></summary>
-        public virtual string Key { get; internal set; }
-        /// <summary><p>The resource name of the bot.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Kik user name.</p></summary>
-        public virtual string UserName { get; internal set; }
-        /// <summary><p>Add the channel in a disabled state.</p></summary>
-        public virtual bool? AddDisabled { get; internal set; }
-        /// <summary><p>Whether or not the Kik account has been validated for use with the bot.</p></summary>
-        public virtual bool? IsValidated { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("bot kik create")
-              .Add("--key {value}", Key)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--user-name {value}", UserName)
-              .Add("--add-disabled", AddDisabled)
-              .Add("--is-validated", IsValidated)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBotKikDeleteSettings
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBotKikDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
-        /// <summary><p>The resource name of the bot.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("bot kik delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBotKikShowSettings
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBotKikShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
-        /// <summary><p>The resource name of the bot.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Show secrets in response for the channel.</p></summary>
-        public virtual bool? WithSecrets { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("bot kik show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--with-secrets", WithSecrets, secret: true)
@@ -1685,6 +1351,343 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureBotEmailCreateSettings
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBotEmailCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
+        /// <summary><p>The email address for the bot.</p></summary>
+        public virtual string EmailAddress { get; internal set; }
+        /// <summary><p>The resource name of the bot.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The email password for the bot.</p></summary>
+        public virtual string Password { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Add the channel in a disabled state.</p></summary>
+        public virtual bool? AddDisabled { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("bot email create")
+              .Add("--email-address {value}", EmailAddress)
+              .Add("--name {value}", Name)
+              .Add("--password {value}", Password, secret: true)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--add-disabled", AddDisabled)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBotEmailDeleteSettings
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBotEmailDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
+        /// <summary><p>The resource name of the bot.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("bot email delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBotEmailShowSettings
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBotEmailShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
+        /// <summary><p>The resource name of the bot.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Show secrets in response for the channel.</p></summary>
+        public virtual bool? WithSecrets { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("bot email show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--with-secrets", WithSecrets, secret: true)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBotAuthsettingCreateSettings
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBotAuthsettingCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
+        /// <summary><p>Client ID associated with the service provider setting.</p></summary>
+        public virtual string ClientId { get; internal set; }
+        /// <summary><p>Client secret associated with the service provider setting.</p></summary>
+        public virtual string ClientSecret { get; internal set; }
+        /// <summary><p>The resource name of the bot.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The scope string associated with the service provider setting.The string should be delimited as needed for the service provider.</p></summary>
+        public virtual string ProviderScopeString { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the service provider. For a list of all service providers, use `az bot connection listserviceproviders`.</p></summary>
+        public virtual string Service { get; internal set; }
+        /// <summary><p>Name of the oauth connection setting.</p></summary>
+        public virtual string SettingName { get; internal set; }
+        /// <summary><p>Parameter values for service provider parameters. Usage: --parameters key=value key1=value1.</p></summary>
+        public virtual string Parameters { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("bot authsetting create")
+              .Add("--client-id {value}", ClientId)
+              .Add("--client-secret {value}", ClientSecret, secret: true)
+              .Add("--name {value}", Name)
+              .Add("--provider-scope-string {value}", ProviderScopeString)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--service {value}", Service)
+              .Add("--setting-name {value}", SettingName)
+              .Add("--parameters {value}", Parameters)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBotAuthsettingDeleteSettings
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBotAuthsettingDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
+        /// <summary><p>The resource name of the bot.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the oauth connection setting.</p></summary>
+        public virtual string SettingName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("bot authsetting delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--setting-name {value}", SettingName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBotAuthsettingListSettings
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBotAuthsettingListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
+        /// <summary><p>The resource name of the bot.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("bot authsetting list")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBotAuthsettingListProvidersSettings
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBotAuthsettingListProvidersSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
+        /// <summary><p>Service provider name for which to fetch details.</p></summary>
+        public virtual string ProviderName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("bot authsetting list-providers")
+              .Add("--provider-name {value}", ProviderName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBotAuthsettingShowSettings
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBotAuthsettingShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
+        /// <summary><p>The resource name of the bot.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the oauth connection setting.</p></summary>
+        public virtual string SettingName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("bot authsetting show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--setting-name {value}", SettingName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureBotSlackCreateSettings
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
@@ -1817,28 +1820,26 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBotSmsCreateSettings
+    #region AzureBotKikCreateSettings
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBotSmsCreateSettings : ToolSettings
+    public partial class AzureBotKikCreateSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
-        /// <summary><p>The account SID for the Twilio account.</p></summary>
-        public virtual string AccountSid { get; internal set; }
-        /// <summary><p>The token token for the Twilio account.</p></summary>
-        public virtual string AuthToken { get; internal set; }
+        /// <summary><p>The API key for the Kik account.</p></summary>
+        public virtual string Key { get; internal set; }
         /// <summary><p>The resource name of the bot.</p></summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p>The phone number for the Twilio account.</p></summary>
-        public virtual string Phone { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Kik user name.</p></summary>
+        public virtual string UserName { get; internal set; }
         /// <summary><p>Add the channel in a disabled state.</p></summary>
         public virtual bool? AddDisabled { get; internal set; }
-        /// <summary><p>Whether or not the Twilio account has been validated for use with the bot.</p></summary>
+        /// <summary><p>Whether or not the Kik account has been validated for use with the bot.</p></summary>
         public virtual bool? IsValidated { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -1853,12 +1854,11 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("bot sms create")
-              .Add("--account-sid {value}", AccountSid)
-              .Add("--auth-token {value}", AuthToken)
+              .Add("bot kik create")
+              .Add("--key {value}", Key)
               .Add("--name {value}", Name)
-              .Add("--phone {value}", Phone)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--user-name {value}", UserName)
               .Add("--add-disabled", AddDisabled)
               .Add("--is-validated", IsValidated)
               .Add("--debug {value}", Debug)
@@ -1870,12 +1870,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBotSmsDeleteSettings
+    #region AzureBotKikDeleteSettings
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBotSmsDeleteSettings : ToolSettings
+    public partial class AzureBotKikDeleteSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
@@ -1896,7 +1896,7 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("bot sms delete")
+              .Add("bot kik delete")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
@@ -1908,12 +1908,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBotSmsShowSettings
+    #region AzureBotKikShowSettings
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBotSmsShowSettings : ToolSettings
+    public partial class AzureBotKikShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBotTasks.AzureBotPath;
@@ -1936,7 +1936,7 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("bot sms show")
+              .Add("bot kik show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--with-secrets", WithSecrets, secret: true)
@@ -3450,802 +3450,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBotAuthsettingCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBotAuthsettingCreateSettingsExtensions
-    {
-        #region ClientId
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.ClientId"/>.</em></p><p>Client ID associated with the service provider setting.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings SetClientId(this AzureBotAuthsettingCreateSettings toolSettings, string clientId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClientId = clientId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.ClientId"/>.</em></p><p>Client ID associated with the service provider setting.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings ResetClientId(this AzureBotAuthsettingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClientId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ClientSecret
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.ClientSecret"/>.</em></p><p>Client secret associated with the service provider setting.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings SetClientSecret(this AzureBotAuthsettingCreateSettings toolSettings, string clientSecret)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClientSecret = clientSecret;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.ClientSecret"/>.</em></p><p>Client secret associated with the service provider setting.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings ResetClientSecret(this AzureBotAuthsettingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClientSecret = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings SetName(this AzureBotAuthsettingCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings ResetName(this AzureBotAuthsettingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ProviderScopeString
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.ProviderScopeString"/>.</em></p><p>The scope string associated with the service provider setting.The string should be delimited as needed for the service provider.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings SetProviderScopeString(this AzureBotAuthsettingCreateSettings toolSettings, string providerScopeString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProviderScopeString = providerScopeString;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.ProviderScopeString"/>.</em></p><p>The scope string associated with the service provider setting.The string should be delimited as needed for the service provider.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings ResetProviderScopeString(this AzureBotAuthsettingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProviderScopeString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings SetResourceGroup(this AzureBotAuthsettingCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings ResetResourceGroup(this AzureBotAuthsettingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Service
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Service"/>.</em></p><p>Name of the service provider. For a list of all service providers, use `az bot connection listserviceproviders`.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings SetService(this AzureBotAuthsettingCreateSettings toolSettings, string service)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Service = service;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Service"/>.</em></p><p>Name of the service provider. For a list of all service providers, use `az bot connection listserviceproviders`.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings ResetService(this AzureBotAuthsettingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Service = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SettingName
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.SettingName"/>.</em></p><p>Name of the oauth connection setting.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings SetSettingName(this AzureBotAuthsettingCreateSettings toolSettings, string settingName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingName = settingName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.SettingName"/>.</em></p><p>Name of the oauth connection setting.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings ResetSettingName(this AzureBotAuthsettingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Parameters
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Parameters"/>.</em></p><p>Parameter values for service provider parameters. Usage: --parameters key=value key1=value1.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings SetParameters(this AzureBotAuthsettingCreateSettings toolSettings, string parameters)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parameters = parameters;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Parameters"/>.</em></p><p>Parameter values for service provider parameters. Usage: --parameters key=value key1=value1.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings ResetParameters(this AzureBotAuthsettingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parameters = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings SetDebug(this AzureBotAuthsettingCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings ResetDebug(this AzureBotAuthsettingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings SetHelp(this AzureBotAuthsettingCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings ResetHelp(this AzureBotAuthsettingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings SetOutput(this AzureBotAuthsettingCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings ResetOutput(this AzureBotAuthsettingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings SetQuery(this AzureBotAuthsettingCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings ResetQuery(this AzureBotAuthsettingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings SetVerbose(this AzureBotAuthsettingCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingCreateSettings ResetVerbose(this AzureBotAuthsettingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBotAuthsettingDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBotAuthsettingDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings SetName(this AzureBotAuthsettingDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings ResetName(this AzureBotAuthsettingDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings SetResourceGroup(this AzureBotAuthsettingDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings ResetResourceGroup(this AzureBotAuthsettingDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SettingName
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.SettingName"/>.</em></p><p>Name of the oauth connection setting.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings SetSettingName(this AzureBotAuthsettingDeleteSettings toolSettings, string settingName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingName = settingName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.SettingName"/>.</em></p><p>Name of the oauth connection setting.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings ResetSettingName(this AzureBotAuthsettingDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings SetDebug(this AzureBotAuthsettingDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings ResetDebug(this AzureBotAuthsettingDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings SetHelp(this AzureBotAuthsettingDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings ResetHelp(this AzureBotAuthsettingDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings SetOutput(this AzureBotAuthsettingDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings ResetOutput(this AzureBotAuthsettingDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings SetQuery(this AzureBotAuthsettingDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings ResetQuery(this AzureBotAuthsettingDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings SetVerbose(this AzureBotAuthsettingDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingDeleteSettings ResetVerbose(this AzureBotAuthsettingDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBotAuthsettingListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBotAuthsettingListSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings SetName(this AzureBotAuthsettingListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings ResetName(this AzureBotAuthsettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings SetResourceGroup(this AzureBotAuthsettingListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings ResetResourceGroup(this AzureBotAuthsettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings SetDebug(this AzureBotAuthsettingListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings ResetDebug(this AzureBotAuthsettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings SetHelp(this AzureBotAuthsettingListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings ResetHelp(this AzureBotAuthsettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings SetOutput(this AzureBotAuthsettingListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings ResetOutput(this AzureBotAuthsettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings SetQuery(this AzureBotAuthsettingListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings ResetQuery(this AzureBotAuthsettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings SetVerbose(this AzureBotAuthsettingListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListSettings ResetVerbose(this AzureBotAuthsettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBotAuthsettingListProvidersSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBotAuthsettingListProvidersSettingsExtensions
-    {
-        #region ProviderName
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListProvidersSettings.ProviderName"/>.</em></p><p>Service provider name for which to fetch details.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListProvidersSettings SetProviderName(this AzureBotAuthsettingListProvidersSettings toolSettings, string providerName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProviderName = providerName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListProvidersSettings.ProviderName"/>.</em></p><p>Service provider name for which to fetch details.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListProvidersSettings ResetProviderName(this AzureBotAuthsettingListProvidersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProviderName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListProvidersSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListProvidersSettings SetDebug(this AzureBotAuthsettingListProvidersSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListProvidersSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListProvidersSettings ResetDebug(this AzureBotAuthsettingListProvidersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListProvidersSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListProvidersSettings SetHelp(this AzureBotAuthsettingListProvidersSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListProvidersSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListProvidersSettings ResetHelp(this AzureBotAuthsettingListProvidersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListProvidersSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListProvidersSettings SetOutput(this AzureBotAuthsettingListProvidersSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListProvidersSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListProvidersSettings ResetOutput(this AzureBotAuthsettingListProvidersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListProvidersSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListProvidersSettings SetQuery(this AzureBotAuthsettingListProvidersSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListProvidersSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListProvidersSettings ResetQuery(this AzureBotAuthsettingListProvidersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListProvidersSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListProvidersSettings SetVerbose(this AzureBotAuthsettingListProvidersSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListProvidersSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingListProvidersSettings ResetVerbose(this AzureBotAuthsettingListProvidersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBotAuthsettingShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBotAuthsettingShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings SetName(this AzureBotAuthsettingShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings ResetName(this AzureBotAuthsettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings SetResourceGroup(this AzureBotAuthsettingShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings ResetResourceGroup(this AzureBotAuthsettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SettingName
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.SettingName"/>.</em></p><p>Name of the oauth connection setting.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings SetSettingName(this AzureBotAuthsettingShowSettings toolSettings, string settingName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingName = settingName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.SettingName"/>.</em></p><p>Name of the oauth connection setting.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings ResetSettingName(this AzureBotAuthsettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings SetDebug(this AzureBotAuthsettingShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings ResetDebug(this AzureBotAuthsettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings SetHelp(this AzureBotAuthsettingShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings ResetHelp(this AzureBotAuthsettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings SetOutput(this AzureBotAuthsettingShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings ResetOutput(this AzureBotAuthsettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings SetQuery(this AzureBotAuthsettingShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings ResetQuery(this AzureBotAuthsettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings SetVerbose(this AzureBotAuthsettingShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotAuthsettingShowSettings ResetVerbose(this AzureBotAuthsettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureBotDirectlineCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
@@ -4834,78 +4038,96 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBotEmailCreateSettingsExtensions
+    #region AzureBotSmsCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBotEmailCreateSettingsExtensions
+    public static partial class AzureBotSmsCreateSettingsExtensions
     {
-        #region EmailAddress
-        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.EmailAddress"/>.</em></p><p>The email address for the bot.</p></summary>
+        #region AccountSid
+        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.AccountSid"/>.</em></p><p>The account SID for the Twilio account.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings SetEmailAddress(this AzureBotEmailCreateSettings toolSettings, string emailAddress)
+        public static AzureBotSmsCreateSettings SetAccountSid(this AzureBotSmsCreateSettings toolSettings, string accountSid)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EmailAddress = emailAddress;
+            toolSettings.AccountSid = accountSid;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.EmailAddress"/>.</em></p><p>The email address for the bot.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.AccountSid"/>.</em></p><p>The account SID for the Twilio account.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings ResetEmailAddress(this AzureBotEmailCreateSettings toolSettings)
+        public static AzureBotSmsCreateSettings ResetAccountSid(this AzureBotSmsCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EmailAddress = null;
+            toolSettings.AccountSid = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AuthToken
+        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.AuthToken"/>.</em></p><p>The token token for the Twilio account.</p></summary>
+        [Pure]
+        public static AzureBotSmsCreateSettings SetAuthToken(this AzureBotSmsCreateSettings toolSettings, string authToken)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthToken = authToken;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.AuthToken"/>.</em></p><p>The token token for the Twilio account.</p></summary>
+        [Pure]
+        public static AzureBotSmsCreateSettings ResetAuthToken(this AzureBotSmsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AuthToken = null;
             return toolSettings;
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings SetName(this AzureBotEmailCreateSettings toolSettings, string name)
+        public static AzureBotSmsCreateSettings SetName(this AzureBotSmsCreateSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings ResetName(this AzureBotEmailCreateSettings toolSettings)
+        public static AzureBotSmsCreateSettings ResetName(this AzureBotSmsCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
             return toolSettings;
         }
         #endregion
-        #region Password
-        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Password"/>.</em></p><p>The email password for the bot.</p></summary>
+        #region Phone
+        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Phone"/>.</em></p><p>The phone number for the Twilio account.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings SetPassword(this AzureBotEmailCreateSettings toolSettings, string password)
+        public static AzureBotSmsCreateSettings SetPhone(this AzureBotSmsCreateSettings toolSettings, string phone)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = password;
+            toolSettings.Phone = phone;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Password"/>.</em></p><p>The email password for the bot.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Phone"/>.</em></p><p>The phone number for the Twilio account.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings ResetPassword(this AzureBotEmailCreateSettings toolSettings)
+        public static AzureBotSmsCreateSettings ResetPhone(this AzureBotSmsCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = null;
+            toolSettings.Phone = null;
             return toolSettings;
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings SetResourceGroup(this AzureBotEmailCreateSettings toolSettings, string resourceGroup)
+        public static AzureBotSmsCreateSettings SetResourceGroup(this AzureBotSmsCreateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings ResetResourceGroup(this AzureBotEmailCreateSettings toolSettings)
+        public static AzureBotSmsCreateSettings ResetResourceGroup(this AzureBotSmsCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -4913,59 +4135,101 @@ namespace Nuke.Azure
         }
         #endregion
         #region AddDisabled
-        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings SetAddDisabled(this AzureBotEmailCreateSettings toolSettings, bool? addDisabled)
+        public static AzureBotSmsCreateSettings SetAddDisabled(this AzureBotSmsCreateSettings toolSettings, bool? addDisabled)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AddDisabled = addDisabled;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings ResetAddDisabled(this AzureBotEmailCreateSettings toolSettings)
+        public static AzureBotSmsCreateSettings ResetAddDisabled(this AzureBotSmsCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AddDisabled = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureBotEmailCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureBotSmsCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings EnableAddDisabled(this AzureBotEmailCreateSettings toolSettings)
+        public static AzureBotSmsCreateSettings EnableAddDisabled(this AzureBotSmsCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AddDisabled = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureBotEmailCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureBotSmsCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings DisableAddDisabled(this AzureBotEmailCreateSettings toolSettings)
+        public static AzureBotSmsCreateSettings DisableAddDisabled(this AzureBotSmsCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AddDisabled = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureBotEmailCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureBotSmsCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings ToggleAddDisabled(this AzureBotEmailCreateSettings toolSettings)
+        public static AzureBotSmsCreateSettings ToggleAddDisabled(this AzureBotSmsCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AddDisabled = !toolSettings.AddDisabled;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region IsValidated
+        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Twilio account has been validated for use with the bot.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings SetDebug(this AzureBotEmailCreateSettings toolSettings, string debug)
+        public static AzureBotSmsCreateSettings SetIsValidated(this AzureBotSmsCreateSettings toolSettings, bool? isValidated)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IsValidated = isValidated;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Twilio account has been validated for use with the bot.</p></summary>
+        [Pure]
+        public static AzureBotSmsCreateSettings ResetIsValidated(this AzureBotSmsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IsValidated = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureBotSmsCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Twilio account has been validated for use with the bot.</p></summary>
+        [Pure]
+        public static AzureBotSmsCreateSettings EnableIsValidated(this AzureBotSmsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IsValidated = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureBotSmsCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Twilio account has been validated for use with the bot.</p></summary>
+        [Pure]
+        public static AzureBotSmsCreateSettings DisableIsValidated(this AzureBotSmsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IsValidated = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureBotSmsCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Twilio account has been validated for use with the bot.</p></summary>
+        [Pure]
+        public static AzureBotSmsCreateSettings ToggleIsValidated(this AzureBotSmsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IsValidated = !toolSettings.IsValidated;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotSmsCreateSettings SetDebug(this AzureBotSmsCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings ResetDebug(this AzureBotEmailCreateSettings toolSettings)
+        public static AzureBotSmsCreateSettings ResetDebug(this AzureBotSmsCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -4973,17 +4237,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings SetHelp(this AzureBotEmailCreateSettings toolSettings, string help)
+        public static AzureBotSmsCreateSettings SetHelp(this AzureBotSmsCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings ResetHelp(this AzureBotEmailCreateSettings toolSettings)
+        public static AzureBotSmsCreateSettings ResetHelp(this AzureBotSmsCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -4991,17 +4255,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings SetOutput(this AzureBotEmailCreateSettings toolSettings, AzureOutput output)
+        public static AzureBotSmsCreateSettings SetOutput(this AzureBotSmsCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings ResetOutput(this AzureBotEmailCreateSettings toolSettings)
+        public static AzureBotSmsCreateSettings ResetOutput(this AzureBotSmsCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5009,17 +4273,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings SetQuery(this AzureBotEmailCreateSettings toolSettings, string query)
+        public static AzureBotSmsCreateSettings SetQuery(this AzureBotSmsCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings ResetQuery(this AzureBotEmailCreateSettings toolSettings)
+        public static AzureBotSmsCreateSettings ResetQuery(this AzureBotSmsCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5027,17 +4291,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings SetVerbose(this AzureBotEmailCreateSettings toolSettings, string verbose)
+        public static AzureBotSmsCreateSettings SetVerbose(this AzureBotSmsCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBotEmailCreateSettings ResetVerbose(this AzureBotEmailCreateSettings toolSettings)
+        public static AzureBotSmsCreateSettings ResetVerbose(this AzureBotSmsCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5046,24 +4310,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBotEmailDeleteSettingsExtensions
+    #region AzureBotSmsDeleteSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBotEmailDeleteSettingsExtensions
+    public static partial class AzureBotSmsDeleteSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings SetName(this AzureBotEmailDeleteSettings toolSettings, string name)
+        public static AzureBotSmsDeleteSettings SetName(this AzureBotSmsDeleteSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings ResetName(this AzureBotEmailDeleteSettings toolSettings)
+        public static AzureBotSmsDeleteSettings ResetName(this AzureBotSmsDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -5071,17 +4335,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings SetResourceGroup(this AzureBotEmailDeleteSettings toolSettings, string resourceGroup)
+        public static AzureBotSmsDeleteSettings SetResourceGroup(this AzureBotSmsDeleteSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings ResetResourceGroup(this AzureBotEmailDeleteSettings toolSettings)
+        public static AzureBotSmsDeleteSettings ResetResourceGroup(this AzureBotSmsDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -5089,17 +4353,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings SetDebug(this AzureBotEmailDeleteSettings toolSettings, string debug)
+        public static AzureBotSmsDeleteSettings SetDebug(this AzureBotSmsDeleteSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings ResetDebug(this AzureBotEmailDeleteSettings toolSettings)
+        public static AzureBotSmsDeleteSettings ResetDebug(this AzureBotSmsDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -5107,17 +4371,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings SetHelp(this AzureBotEmailDeleteSettings toolSettings, string help)
+        public static AzureBotSmsDeleteSettings SetHelp(this AzureBotSmsDeleteSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings ResetHelp(this AzureBotEmailDeleteSettings toolSettings)
+        public static AzureBotSmsDeleteSettings ResetHelp(this AzureBotSmsDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -5125,17 +4389,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings SetOutput(this AzureBotEmailDeleteSettings toolSettings, AzureOutput output)
+        public static AzureBotSmsDeleteSettings SetOutput(this AzureBotSmsDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings ResetOutput(this AzureBotEmailDeleteSettings toolSettings)
+        public static AzureBotSmsDeleteSettings ResetOutput(this AzureBotSmsDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5143,17 +4407,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings SetQuery(this AzureBotEmailDeleteSettings toolSettings, string query)
+        public static AzureBotSmsDeleteSettings SetQuery(this AzureBotSmsDeleteSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings ResetQuery(this AzureBotEmailDeleteSettings toolSettings)
+        public static AzureBotSmsDeleteSettings ResetQuery(this AzureBotSmsDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5161,17 +4425,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings SetVerbose(this AzureBotEmailDeleteSettings toolSettings, string verbose)
+        public static AzureBotSmsDeleteSettings SetVerbose(this AzureBotSmsDeleteSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBotEmailDeleteSettings ResetVerbose(this AzureBotEmailDeleteSettings toolSettings)
+        public static AzureBotSmsDeleteSettings ResetVerbose(this AzureBotSmsDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5180,24 +4444,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBotEmailShowSettingsExtensions
+    #region AzureBotSmsShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBotEmailShowSettingsExtensions
+    public static partial class AzureBotSmsShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings SetName(this AzureBotEmailShowSettings toolSettings, string name)
+        public static AzureBotSmsShowSettings SetName(this AzureBotSmsShowSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings ResetName(this AzureBotEmailShowSettings toolSettings)
+        public static AzureBotSmsShowSettings ResetName(this AzureBotSmsShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -5205,17 +4469,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings SetResourceGroup(this AzureBotEmailShowSettings toolSettings, string resourceGroup)
+        public static AzureBotSmsShowSettings SetResourceGroup(this AzureBotSmsShowSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings ResetResourceGroup(this AzureBotEmailShowSettings toolSettings)
+        public static AzureBotSmsShowSettings ResetResourceGroup(this AzureBotSmsShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -5223,41 +4487,41 @@ namespace Nuke.Azure
         }
         #endregion
         #region WithSecrets
-        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings SetWithSecrets(this AzureBotEmailShowSettings toolSettings, bool? withSecrets)
+        public static AzureBotSmsShowSettings SetWithSecrets(this AzureBotSmsShowSettings toolSettings, bool? withSecrets)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.WithSecrets = withSecrets;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings ResetWithSecrets(this AzureBotEmailShowSettings toolSettings)
+        public static AzureBotSmsShowSettings ResetWithSecrets(this AzureBotSmsShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.WithSecrets = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureBotEmailShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureBotSmsShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings EnableWithSecrets(this AzureBotEmailShowSettings toolSettings)
+        public static AzureBotSmsShowSettings EnableWithSecrets(this AzureBotSmsShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.WithSecrets = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureBotEmailShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureBotSmsShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings DisableWithSecrets(this AzureBotEmailShowSettings toolSettings)
+        public static AzureBotSmsShowSettings DisableWithSecrets(this AzureBotSmsShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.WithSecrets = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureBotEmailShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureBotSmsShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings ToggleWithSecrets(this AzureBotEmailShowSettings toolSettings)
+        public static AzureBotSmsShowSettings ToggleWithSecrets(this AzureBotSmsShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.WithSecrets = !toolSettings.WithSecrets;
@@ -5265,17 +4529,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings SetDebug(this AzureBotEmailShowSettings toolSettings, string debug)
+        public static AzureBotSmsShowSettings SetDebug(this AzureBotSmsShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings ResetDebug(this AzureBotEmailShowSettings toolSettings)
+        public static AzureBotSmsShowSettings ResetDebug(this AzureBotSmsShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -5283,17 +4547,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings SetHelp(this AzureBotEmailShowSettings toolSettings, string help)
+        public static AzureBotSmsShowSettings SetHelp(this AzureBotSmsShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings ResetHelp(this AzureBotEmailShowSettings toolSettings)
+        public static AzureBotSmsShowSettings ResetHelp(this AzureBotSmsShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -5301,17 +4565,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings SetOutput(this AzureBotEmailShowSettings toolSettings, AzureOutput output)
+        public static AzureBotSmsShowSettings SetOutput(this AzureBotSmsShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings ResetOutput(this AzureBotEmailShowSettings toolSettings)
+        public static AzureBotSmsShowSettings ResetOutput(this AzureBotSmsShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5319,17 +4583,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings SetQuery(this AzureBotEmailShowSettings toolSettings, string query)
+        public static AzureBotSmsShowSettings SetQuery(this AzureBotSmsShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings ResetQuery(this AzureBotEmailShowSettings toolSettings)
+        public static AzureBotSmsShowSettings ResetQuery(this AzureBotSmsShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5337,17 +4601,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings SetVerbose(this AzureBotEmailShowSettings toolSettings, string verbose)
+        public static AzureBotSmsShowSettings SetVerbose(this AzureBotSmsShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBotEmailShowSettings ResetVerbose(this AzureBotEmailShowSettings toolSettings)
+        public static AzureBotSmsShowSettings ResetVerbose(this AzureBotSmsShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5906,570 +5170,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureBotFacebookShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureBotFacebookShowSettings ResetVerbose(this AzureBotFacebookShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBotKikCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBotKikCreateSettingsExtensions
-    {
-        #region Key
-        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Key"/>.</em></p><p>The API key for the Kik account.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings SetKey(this AzureBotKikCreateSettings toolSettings, string key)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = key;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Key"/>.</em></p><p>The API key for the Kik account.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings ResetKey(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings SetName(this AzureBotKikCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings ResetName(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings SetResourceGroup(this AzureBotKikCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings ResetResourceGroup(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region UserName
-        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.UserName"/>.</em></p><p>Kik user name.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings SetUserName(this AzureBotKikCreateSettings toolSettings, string userName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UserName = userName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.UserName"/>.</em></p><p>Kik user name.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings ResetUserName(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UserName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AddDisabled
-        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings SetAddDisabled(this AzureBotKikCreateSettings toolSettings, bool? addDisabled)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AddDisabled = addDisabled;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings ResetAddDisabled(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AddDisabled = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureBotKikCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings EnableAddDisabled(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AddDisabled = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureBotKikCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings DisableAddDisabled(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AddDisabled = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureBotKikCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings ToggleAddDisabled(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AddDisabled = !toolSettings.AddDisabled;
-            return toolSettings;
-        }
-        #endregion
-        #region IsValidated
-        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Kik account has been validated for use with the bot.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings SetIsValidated(this AzureBotKikCreateSettings toolSettings, bool? isValidated)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IsValidated = isValidated;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Kik account has been validated for use with the bot.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings ResetIsValidated(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IsValidated = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureBotKikCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Kik account has been validated for use with the bot.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings EnableIsValidated(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IsValidated = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureBotKikCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Kik account has been validated for use with the bot.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings DisableIsValidated(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IsValidated = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureBotKikCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Kik account has been validated for use with the bot.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings ToggleIsValidated(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IsValidated = !toolSettings.IsValidated;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings SetDebug(this AzureBotKikCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings ResetDebug(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings SetHelp(this AzureBotKikCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings ResetHelp(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings SetOutput(this AzureBotKikCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings ResetOutput(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings SetQuery(this AzureBotKikCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings ResetQuery(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings SetVerbose(this AzureBotKikCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotKikCreateSettings ResetVerbose(this AzureBotKikCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBotKikDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBotKikDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings SetName(this AzureBotKikDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings ResetName(this AzureBotKikDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings SetResourceGroup(this AzureBotKikDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings ResetResourceGroup(this AzureBotKikDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings SetDebug(this AzureBotKikDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings ResetDebug(this AzureBotKikDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings SetHelp(this AzureBotKikDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings ResetHelp(this AzureBotKikDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings SetOutput(this AzureBotKikDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings ResetOutput(this AzureBotKikDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings SetQuery(this AzureBotKikDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings ResetQuery(this AzureBotKikDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings SetVerbose(this AzureBotKikDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotKikDeleteSettings ResetVerbose(this AzureBotKikDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBotKikShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBotKikShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings SetName(this AzureBotKikShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings ResetName(this AzureBotKikShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings SetResourceGroup(this AzureBotKikShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings ResetResourceGroup(this AzureBotKikShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region WithSecrets
-        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings SetWithSecrets(this AzureBotKikShowSettings toolSettings, bool? withSecrets)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WithSecrets = withSecrets;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings ResetWithSecrets(this AzureBotKikShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WithSecrets = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureBotKikShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings EnableWithSecrets(this AzureBotKikShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WithSecrets = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureBotKikShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings DisableWithSecrets(this AzureBotKikShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WithSecrets = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureBotKikShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings ToggleWithSecrets(this AzureBotKikShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WithSecrets = !toolSettings.WithSecrets;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings SetDebug(this AzureBotKikShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings ResetDebug(this AzureBotKikShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings SetHelp(this AzureBotKikShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings ResetHelp(this AzureBotKikShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings SetOutput(this AzureBotKikShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings ResetOutput(this AzureBotKikShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings SetQuery(this AzureBotKikShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings ResetQuery(this AzureBotKikShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings SetVerbose(this AzureBotKikShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBotKikShowSettings ResetVerbose(this AzureBotKikShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -7798,6 +6498,1324 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureBotEmailCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBotEmailCreateSettingsExtensions
+    {
+        #region EmailAddress
+        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.EmailAddress"/>.</em></p><p>The email address for the bot.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings SetEmailAddress(this AzureBotEmailCreateSettings toolSettings, string emailAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EmailAddress = emailAddress;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.EmailAddress"/>.</em></p><p>The email address for the bot.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings ResetEmailAddress(this AzureBotEmailCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EmailAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings SetName(this AzureBotEmailCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings ResetName(this AzureBotEmailCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Password
+        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Password"/>.</em></p><p>The email password for the bot.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings SetPassword(this AzureBotEmailCreateSettings toolSettings, string password)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = password;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Password"/>.</em></p><p>The email password for the bot.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings ResetPassword(this AzureBotEmailCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings SetResourceGroup(this AzureBotEmailCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings ResetResourceGroup(this AzureBotEmailCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AddDisabled
+        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings SetAddDisabled(this AzureBotEmailCreateSettings toolSettings, bool? addDisabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddDisabled = addDisabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings ResetAddDisabled(this AzureBotEmailCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddDisabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureBotEmailCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings EnableAddDisabled(this AzureBotEmailCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddDisabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureBotEmailCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings DisableAddDisabled(this AzureBotEmailCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddDisabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureBotEmailCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings ToggleAddDisabled(this AzureBotEmailCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddDisabled = !toolSettings.AddDisabled;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings SetDebug(this AzureBotEmailCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings ResetDebug(this AzureBotEmailCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings SetHelp(this AzureBotEmailCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings ResetHelp(this AzureBotEmailCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings SetOutput(this AzureBotEmailCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings ResetOutput(this AzureBotEmailCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings SetQuery(this AzureBotEmailCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings ResetQuery(this AzureBotEmailCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBotEmailCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings SetVerbose(this AzureBotEmailCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotEmailCreateSettings ResetVerbose(this AzureBotEmailCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBotEmailDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBotEmailDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings SetName(this AzureBotEmailDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings ResetName(this AzureBotEmailDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings SetResourceGroup(this AzureBotEmailDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings ResetResourceGroup(this AzureBotEmailDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings SetDebug(this AzureBotEmailDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings ResetDebug(this AzureBotEmailDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings SetHelp(this AzureBotEmailDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings ResetHelp(this AzureBotEmailDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings SetOutput(this AzureBotEmailDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings ResetOutput(this AzureBotEmailDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings SetQuery(this AzureBotEmailDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings ResetQuery(this AzureBotEmailDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBotEmailDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings SetVerbose(this AzureBotEmailDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotEmailDeleteSettings ResetVerbose(this AzureBotEmailDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBotEmailShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBotEmailShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings SetName(this AzureBotEmailShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings ResetName(this AzureBotEmailShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings SetResourceGroup(this AzureBotEmailShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings ResetResourceGroup(this AzureBotEmailShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WithSecrets
+        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings SetWithSecrets(this AzureBotEmailShowSettings toolSettings, bool? withSecrets)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WithSecrets = withSecrets;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings ResetWithSecrets(this AzureBotEmailShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WithSecrets = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureBotEmailShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings EnableWithSecrets(this AzureBotEmailShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WithSecrets = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureBotEmailShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings DisableWithSecrets(this AzureBotEmailShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WithSecrets = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureBotEmailShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings ToggleWithSecrets(this AzureBotEmailShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WithSecrets = !toolSettings.WithSecrets;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings SetDebug(this AzureBotEmailShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings ResetDebug(this AzureBotEmailShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings SetHelp(this AzureBotEmailShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings ResetHelp(this AzureBotEmailShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings SetOutput(this AzureBotEmailShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings ResetOutput(this AzureBotEmailShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings SetQuery(this AzureBotEmailShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings ResetQuery(this AzureBotEmailShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBotEmailShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings SetVerbose(this AzureBotEmailShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotEmailShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotEmailShowSettings ResetVerbose(this AzureBotEmailShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBotAuthsettingCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBotAuthsettingCreateSettingsExtensions
+    {
+        #region ClientId
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.ClientId"/>.</em></p><p>Client ID associated with the service provider setting.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings SetClientId(this AzureBotAuthsettingCreateSettings toolSettings, string clientId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClientId = clientId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.ClientId"/>.</em></p><p>Client ID associated with the service provider setting.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings ResetClientId(this AzureBotAuthsettingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClientId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ClientSecret
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.ClientSecret"/>.</em></p><p>Client secret associated with the service provider setting.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings SetClientSecret(this AzureBotAuthsettingCreateSettings toolSettings, string clientSecret)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClientSecret = clientSecret;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.ClientSecret"/>.</em></p><p>Client secret associated with the service provider setting.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings ResetClientSecret(this AzureBotAuthsettingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClientSecret = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings SetName(this AzureBotAuthsettingCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings ResetName(this AzureBotAuthsettingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ProviderScopeString
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.ProviderScopeString"/>.</em></p><p>The scope string associated with the service provider setting.The string should be delimited as needed for the service provider.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings SetProviderScopeString(this AzureBotAuthsettingCreateSettings toolSettings, string providerScopeString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProviderScopeString = providerScopeString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.ProviderScopeString"/>.</em></p><p>The scope string associated with the service provider setting.The string should be delimited as needed for the service provider.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings ResetProviderScopeString(this AzureBotAuthsettingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProviderScopeString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings SetResourceGroup(this AzureBotAuthsettingCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings ResetResourceGroup(this AzureBotAuthsettingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Service
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Service"/>.</em></p><p>Name of the service provider. For a list of all service providers, use `az bot connection listserviceproviders`.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings SetService(this AzureBotAuthsettingCreateSettings toolSettings, string service)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Service = service;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Service"/>.</em></p><p>Name of the service provider. For a list of all service providers, use `az bot connection listserviceproviders`.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings ResetService(this AzureBotAuthsettingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Service = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SettingName
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.SettingName"/>.</em></p><p>Name of the oauth connection setting.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings SetSettingName(this AzureBotAuthsettingCreateSettings toolSettings, string settingName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingName = settingName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.SettingName"/>.</em></p><p>Name of the oauth connection setting.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings ResetSettingName(this AzureBotAuthsettingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parameters
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Parameters"/>.</em></p><p>Parameter values for service provider parameters. Usage: --parameters key=value key1=value1.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings SetParameters(this AzureBotAuthsettingCreateSettings toolSettings, string parameters)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parameters = parameters;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Parameters"/>.</em></p><p>Parameter values for service provider parameters. Usage: --parameters key=value key1=value1.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings ResetParameters(this AzureBotAuthsettingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parameters = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings SetDebug(this AzureBotAuthsettingCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings ResetDebug(this AzureBotAuthsettingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings SetHelp(this AzureBotAuthsettingCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings ResetHelp(this AzureBotAuthsettingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings SetOutput(this AzureBotAuthsettingCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings ResetOutput(this AzureBotAuthsettingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings SetQuery(this AzureBotAuthsettingCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings ResetQuery(this AzureBotAuthsettingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings SetVerbose(this AzureBotAuthsettingCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingCreateSettings ResetVerbose(this AzureBotAuthsettingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBotAuthsettingDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBotAuthsettingDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings SetName(this AzureBotAuthsettingDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings ResetName(this AzureBotAuthsettingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings SetResourceGroup(this AzureBotAuthsettingDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings ResetResourceGroup(this AzureBotAuthsettingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SettingName
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.SettingName"/>.</em></p><p>Name of the oauth connection setting.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings SetSettingName(this AzureBotAuthsettingDeleteSettings toolSettings, string settingName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingName = settingName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.SettingName"/>.</em></p><p>Name of the oauth connection setting.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings ResetSettingName(this AzureBotAuthsettingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings SetDebug(this AzureBotAuthsettingDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings ResetDebug(this AzureBotAuthsettingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings SetHelp(this AzureBotAuthsettingDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings ResetHelp(this AzureBotAuthsettingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings SetOutput(this AzureBotAuthsettingDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings ResetOutput(this AzureBotAuthsettingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings SetQuery(this AzureBotAuthsettingDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings ResetQuery(this AzureBotAuthsettingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings SetVerbose(this AzureBotAuthsettingDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingDeleteSettings ResetVerbose(this AzureBotAuthsettingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBotAuthsettingListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBotAuthsettingListSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings SetName(this AzureBotAuthsettingListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings ResetName(this AzureBotAuthsettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings SetResourceGroup(this AzureBotAuthsettingListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings ResetResourceGroup(this AzureBotAuthsettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings SetDebug(this AzureBotAuthsettingListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings ResetDebug(this AzureBotAuthsettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings SetHelp(this AzureBotAuthsettingListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings ResetHelp(this AzureBotAuthsettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings SetOutput(this AzureBotAuthsettingListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings ResetOutput(this AzureBotAuthsettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings SetQuery(this AzureBotAuthsettingListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings ResetQuery(this AzureBotAuthsettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings SetVerbose(this AzureBotAuthsettingListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListSettings ResetVerbose(this AzureBotAuthsettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBotAuthsettingListProvidersSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBotAuthsettingListProvidersSettingsExtensions
+    {
+        #region ProviderName
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListProvidersSettings.ProviderName"/>.</em></p><p>Service provider name for which to fetch details.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListProvidersSettings SetProviderName(this AzureBotAuthsettingListProvidersSettings toolSettings, string providerName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProviderName = providerName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListProvidersSettings.ProviderName"/>.</em></p><p>Service provider name for which to fetch details.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListProvidersSettings ResetProviderName(this AzureBotAuthsettingListProvidersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProviderName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListProvidersSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListProvidersSettings SetDebug(this AzureBotAuthsettingListProvidersSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListProvidersSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListProvidersSettings ResetDebug(this AzureBotAuthsettingListProvidersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListProvidersSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListProvidersSettings SetHelp(this AzureBotAuthsettingListProvidersSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListProvidersSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListProvidersSettings ResetHelp(this AzureBotAuthsettingListProvidersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListProvidersSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListProvidersSettings SetOutput(this AzureBotAuthsettingListProvidersSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListProvidersSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListProvidersSettings ResetOutput(this AzureBotAuthsettingListProvidersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListProvidersSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListProvidersSettings SetQuery(this AzureBotAuthsettingListProvidersSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListProvidersSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListProvidersSettings ResetQuery(this AzureBotAuthsettingListProvidersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingListProvidersSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListProvidersSettings SetVerbose(this AzureBotAuthsettingListProvidersSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingListProvidersSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingListProvidersSettings ResetVerbose(this AzureBotAuthsettingListProvidersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBotAuthsettingShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBotAuthsettingShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings SetName(this AzureBotAuthsettingShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings ResetName(this AzureBotAuthsettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings SetResourceGroup(this AzureBotAuthsettingShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings ResetResourceGroup(this AzureBotAuthsettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SettingName
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.SettingName"/>.</em></p><p>Name of the oauth connection setting.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings SetSettingName(this AzureBotAuthsettingShowSettings toolSettings, string settingName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingName = settingName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.SettingName"/>.</em></p><p>Name of the oauth connection setting.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings ResetSettingName(this AzureBotAuthsettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings SetDebug(this AzureBotAuthsettingShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings ResetDebug(this AzureBotAuthsettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings SetHelp(this AzureBotAuthsettingShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings ResetHelp(this AzureBotAuthsettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings SetOutput(this AzureBotAuthsettingShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings ResetOutput(this AzureBotAuthsettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings SetQuery(this AzureBotAuthsettingShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings ResetQuery(this AzureBotAuthsettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBotAuthsettingShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings SetVerbose(this AzureBotAuthsettingShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotAuthsettingShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBotAuthsettingShowSettings ResetVerbose(this AzureBotAuthsettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureBotSlackCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
@@ -8356,138 +8374,120 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBotSmsCreateSettingsExtensions
+    #region AzureBotKikCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBotSmsCreateSettingsExtensions
+    public static partial class AzureBotKikCreateSettingsExtensions
     {
-        #region AccountSid
-        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.AccountSid"/>.</em></p><p>The account SID for the Twilio account.</p></summary>
+        #region Key
+        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Key"/>.</em></p><p>The API key for the Kik account.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings SetAccountSid(this AzureBotSmsCreateSettings toolSettings, string accountSid)
+        public static AzureBotKikCreateSettings SetKey(this AzureBotKikCreateSettings toolSettings, string key)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountSid = accountSid;
+            toolSettings.Key = key;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.AccountSid"/>.</em></p><p>The account SID for the Twilio account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Key"/>.</em></p><p>The API key for the Kik account.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings ResetAccountSid(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings ResetKey(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountSid = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AuthToken
-        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.AuthToken"/>.</em></p><p>The token token for the Twilio account.</p></summary>
-        [Pure]
-        public static AzureBotSmsCreateSettings SetAuthToken(this AzureBotSmsCreateSettings toolSettings, string authToken)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AuthToken = authToken;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.AuthToken"/>.</em></p><p>The token token for the Twilio account.</p></summary>
-        [Pure]
-        public static AzureBotSmsCreateSettings ResetAuthToken(this AzureBotSmsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AuthToken = null;
+            toolSettings.Key = null;
             return toolSettings;
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings SetName(this AzureBotSmsCreateSettings toolSettings, string name)
+        public static AzureBotKikCreateSettings SetName(this AzureBotKikCreateSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings ResetName(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings ResetName(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
             return toolSettings;
         }
         #endregion
-        #region Phone
-        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Phone"/>.</em></p><p>The phone number for the Twilio account.</p></summary>
-        [Pure]
-        public static AzureBotSmsCreateSettings SetPhone(this AzureBotSmsCreateSettings toolSettings, string phone)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Phone = phone;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Phone"/>.</em></p><p>The phone number for the Twilio account.</p></summary>
-        [Pure]
-        public static AzureBotSmsCreateSettings ResetPhone(this AzureBotSmsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Phone = null;
-            return toolSettings;
-        }
-        #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings SetResourceGroup(this AzureBotSmsCreateSettings toolSettings, string resourceGroup)
+        public static AzureBotKikCreateSettings SetResourceGroup(this AzureBotKikCreateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings ResetResourceGroup(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings ResetResourceGroup(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region AddDisabled
-        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        #region UserName
+        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.UserName"/>.</em></p><p>Kik user name.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings SetAddDisabled(this AzureBotSmsCreateSettings toolSettings, bool? addDisabled)
+        public static AzureBotKikCreateSettings SetUserName(this AzureBotKikCreateSettings toolSettings, string userName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UserName = userName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.UserName"/>.</em></p><p>Kik user name.</p></summary>
+        [Pure]
+        public static AzureBotKikCreateSettings ResetUserName(this AzureBotKikCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UserName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AddDisabled
+        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        [Pure]
+        public static AzureBotKikCreateSettings SetAddDisabled(this AzureBotKikCreateSettings toolSettings, bool? addDisabled)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AddDisabled = addDisabled;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings ResetAddDisabled(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings ResetAddDisabled(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AddDisabled = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureBotSmsCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureBotKikCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings EnableAddDisabled(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings EnableAddDisabled(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AddDisabled = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureBotSmsCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureBotKikCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings DisableAddDisabled(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings DisableAddDisabled(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AddDisabled = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureBotSmsCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureBotKikCreateSettings.AddDisabled"/>.</em></p><p>Add the channel in a disabled state.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings ToggleAddDisabled(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings ToggleAddDisabled(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AddDisabled = !toolSettings.AddDisabled;
@@ -8495,41 +8495,41 @@ namespace Nuke.Azure
         }
         #endregion
         #region IsValidated
-        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Twilio account has been validated for use with the bot.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Kik account has been validated for use with the bot.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings SetIsValidated(this AzureBotSmsCreateSettings toolSettings, bool? isValidated)
+        public static AzureBotKikCreateSettings SetIsValidated(this AzureBotKikCreateSettings toolSettings, bool? isValidated)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IsValidated = isValidated;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Twilio account has been validated for use with the bot.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Kik account has been validated for use with the bot.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings ResetIsValidated(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings ResetIsValidated(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IsValidated = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureBotSmsCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Twilio account has been validated for use with the bot.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureBotKikCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Kik account has been validated for use with the bot.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings EnableIsValidated(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings EnableIsValidated(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IsValidated = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureBotSmsCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Twilio account has been validated for use with the bot.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureBotKikCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Kik account has been validated for use with the bot.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings DisableIsValidated(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings DisableIsValidated(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IsValidated = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureBotSmsCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Twilio account has been validated for use with the bot.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureBotKikCreateSettings.IsValidated"/>.</em></p><p>Whether or not the Kik account has been validated for use with the bot.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings ToggleIsValidated(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings ToggleIsValidated(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IsValidated = !toolSettings.IsValidated;
@@ -8537,17 +8537,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings SetDebug(this AzureBotSmsCreateSettings toolSettings, string debug)
+        public static AzureBotKikCreateSettings SetDebug(this AzureBotKikCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings ResetDebug(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings ResetDebug(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -8555,17 +8555,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings SetHelp(this AzureBotSmsCreateSettings toolSettings, string help)
+        public static AzureBotKikCreateSettings SetHelp(this AzureBotKikCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings ResetHelp(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings ResetHelp(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -8573,17 +8573,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings SetOutput(this AzureBotSmsCreateSettings toolSettings, AzureOutput output)
+        public static AzureBotKikCreateSettings SetOutput(this AzureBotKikCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings ResetOutput(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings ResetOutput(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -8591,17 +8591,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings SetQuery(this AzureBotSmsCreateSettings toolSettings, string query)
+        public static AzureBotKikCreateSettings SetQuery(this AzureBotKikCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings ResetQuery(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings ResetQuery(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -8609,17 +8609,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotSmsCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings SetVerbose(this AzureBotSmsCreateSettings toolSettings, string verbose)
+        public static AzureBotKikCreateSettings SetVerbose(this AzureBotKikCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBotSmsCreateSettings ResetVerbose(this AzureBotSmsCreateSettings toolSettings)
+        public static AzureBotKikCreateSettings ResetVerbose(this AzureBotKikCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -8628,24 +8628,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBotSmsDeleteSettingsExtensions
+    #region AzureBotKikDeleteSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBotSmsDeleteSettingsExtensions
+    public static partial class AzureBotKikDeleteSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings SetName(this AzureBotSmsDeleteSettings toolSettings, string name)
+        public static AzureBotKikDeleteSettings SetName(this AzureBotKikDeleteSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings ResetName(this AzureBotSmsDeleteSettings toolSettings)
+        public static AzureBotKikDeleteSettings ResetName(this AzureBotKikDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -8653,17 +8653,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings SetResourceGroup(this AzureBotSmsDeleteSettings toolSettings, string resourceGroup)
+        public static AzureBotKikDeleteSettings SetResourceGroup(this AzureBotKikDeleteSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings ResetResourceGroup(this AzureBotSmsDeleteSettings toolSettings)
+        public static AzureBotKikDeleteSettings ResetResourceGroup(this AzureBotKikDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -8671,17 +8671,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings SetDebug(this AzureBotSmsDeleteSettings toolSettings, string debug)
+        public static AzureBotKikDeleteSettings SetDebug(this AzureBotKikDeleteSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings ResetDebug(this AzureBotSmsDeleteSettings toolSettings)
+        public static AzureBotKikDeleteSettings ResetDebug(this AzureBotKikDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -8689,17 +8689,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings SetHelp(this AzureBotSmsDeleteSettings toolSettings, string help)
+        public static AzureBotKikDeleteSettings SetHelp(this AzureBotKikDeleteSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings ResetHelp(this AzureBotSmsDeleteSettings toolSettings)
+        public static AzureBotKikDeleteSettings ResetHelp(this AzureBotKikDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -8707,17 +8707,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings SetOutput(this AzureBotSmsDeleteSettings toolSettings, AzureOutput output)
+        public static AzureBotKikDeleteSettings SetOutput(this AzureBotKikDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings ResetOutput(this AzureBotSmsDeleteSettings toolSettings)
+        public static AzureBotKikDeleteSettings ResetOutput(this AzureBotKikDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -8725,17 +8725,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings SetQuery(this AzureBotSmsDeleteSettings toolSettings, string query)
+        public static AzureBotKikDeleteSettings SetQuery(this AzureBotKikDeleteSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings ResetQuery(this AzureBotSmsDeleteSettings toolSettings)
+        public static AzureBotKikDeleteSettings ResetQuery(this AzureBotKikDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -8743,17 +8743,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotSmsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings SetVerbose(this AzureBotSmsDeleteSettings toolSettings, string verbose)
+        public static AzureBotKikDeleteSettings SetVerbose(this AzureBotKikDeleteSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBotSmsDeleteSettings ResetVerbose(this AzureBotSmsDeleteSettings toolSettings)
+        public static AzureBotKikDeleteSettings ResetVerbose(this AzureBotKikDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -8762,24 +8762,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBotSmsShowSettingsExtensions
+    #region AzureBotKikShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBotSmsShowSettingsExtensions
+    public static partial class AzureBotKikShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings SetName(this AzureBotSmsShowSettings toolSettings, string name)
+        public static AzureBotKikShowSettings SetName(this AzureBotKikShowSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.Name"/>.</em></p><p>The resource name of the bot.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings ResetName(this AzureBotSmsShowSettings toolSettings)
+        public static AzureBotKikShowSettings ResetName(this AzureBotKikShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -8787,17 +8787,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings SetResourceGroup(this AzureBotSmsShowSettings toolSettings, string resourceGroup)
+        public static AzureBotKikShowSettings SetResourceGroup(this AzureBotKikShowSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings ResetResourceGroup(this AzureBotSmsShowSettings toolSettings)
+        public static AzureBotKikShowSettings ResetResourceGroup(this AzureBotKikShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -8805,41 +8805,41 @@ namespace Nuke.Azure
         }
         #endregion
         #region WithSecrets
-        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings SetWithSecrets(this AzureBotSmsShowSettings toolSettings, bool? withSecrets)
+        public static AzureBotKikShowSettings SetWithSecrets(this AzureBotKikShowSettings toolSettings, bool? withSecrets)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.WithSecrets = withSecrets;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings ResetWithSecrets(this AzureBotSmsShowSettings toolSettings)
+        public static AzureBotKikShowSettings ResetWithSecrets(this AzureBotKikShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.WithSecrets = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureBotSmsShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureBotKikShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings EnableWithSecrets(this AzureBotSmsShowSettings toolSettings)
+        public static AzureBotKikShowSettings EnableWithSecrets(this AzureBotKikShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.WithSecrets = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureBotSmsShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureBotKikShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings DisableWithSecrets(this AzureBotSmsShowSettings toolSettings)
+        public static AzureBotKikShowSettings DisableWithSecrets(this AzureBotKikShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.WithSecrets = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureBotSmsShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureBotKikShowSettings.WithSecrets"/>.</em></p><p>Show secrets in response for the channel.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings ToggleWithSecrets(this AzureBotSmsShowSettings toolSettings)
+        public static AzureBotKikShowSettings ToggleWithSecrets(this AzureBotKikShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.WithSecrets = !toolSettings.WithSecrets;
@@ -8847,17 +8847,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings SetDebug(this AzureBotSmsShowSettings toolSettings, string debug)
+        public static AzureBotKikShowSettings SetDebug(this AzureBotKikShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings ResetDebug(this AzureBotSmsShowSettings toolSettings)
+        public static AzureBotKikShowSettings ResetDebug(this AzureBotKikShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -8865,17 +8865,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings SetHelp(this AzureBotSmsShowSettings toolSettings, string help)
+        public static AzureBotKikShowSettings SetHelp(this AzureBotKikShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings ResetHelp(this AzureBotSmsShowSettings toolSettings)
+        public static AzureBotKikShowSettings ResetHelp(this AzureBotKikShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -8883,17 +8883,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings SetOutput(this AzureBotSmsShowSettings toolSettings, AzureOutput output)
+        public static AzureBotKikShowSettings SetOutput(this AzureBotKikShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings ResetOutput(this AzureBotSmsShowSettings toolSettings)
+        public static AzureBotKikShowSettings ResetOutput(this AzureBotKikShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -8901,17 +8901,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings SetQuery(this AzureBotSmsShowSettings toolSettings, string query)
+        public static AzureBotKikShowSettings SetQuery(this AzureBotKikShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings ResetQuery(this AzureBotSmsShowSettings toolSettings)
+        public static AzureBotKikShowSettings ResetQuery(this AzureBotKikShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -8919,17 +8919,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBotSmsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBotKikShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings SetVerbose(this AzureBotSmsShowSettings toolSettings, string verbose)
+        public static AzureBotKikShowSettings SetVerbose(this AzureBotKikShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBotSmsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBotKikShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBotSmsShowSettings ResetVerbose(this AzureBotSmsShowSettings toolSettings)
+        public static AzureBotKikShowSettings ResetVerbose(this AzureBotKikShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
