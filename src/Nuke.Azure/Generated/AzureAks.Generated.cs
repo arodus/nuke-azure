@@ -203,8 +203,6 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Don't launch a web browser after establishing port-forwarding.</p></summary>
         public virtual string DisableBrowser { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string EnableCloudConsoleAksBrowse { get; internal set; }
         /// <summary><p>The listening port for the dashboard.</p></summary>
         public virtual string ListenPort { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -224,7 +222,6 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--disable-browser {value}", DisableBrowser)
-              .Add("--enable-cloud-console-aks-browse {value}", EnableCloudConsoleAksBrowse)
               .Add("--listen-port {value}", ListenPort)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1207,24 +1204,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DisableBrowser = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EnableCloudConsoleAksBrowse
-        /// <summary><p><em>Sets <see cref="AzureAksBrowseSettings.EnableCloudConsoleAksBrowse"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAksBrowseSettings SetEnableCloudConsoleAksBrowse(this AzureAksBrowseSettings toolSettings, string enableCloudConsoleAksBrowse)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EnableCloudConsoleAksBrowse = enableCloudConsoleAksBrowse;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAksBrowseSettings.EnableCloudConsoleAksBrowse"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAksBrowseSettings ResetEnableCloudConsoleAksBrowse(this AzureAksBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EnableCloudConsoleAksBrowse = null;
             return toolSettings;
         }
         #endregion

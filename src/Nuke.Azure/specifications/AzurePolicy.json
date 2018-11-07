@@ -6,12 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/policy/event.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/policy/assignment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/policy/definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/policy/set-definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/policy/state.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/policy/event.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/policy/assignment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/policy/definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/policy/set-definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/policy/state.yml"
   ],
   "name": "AzurePolicy",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest",
@@ -136,13 +136,13 @@
             "name": "DisplayName",
             "type": "string",
             "format": "--display-name {value}",
-            "help": "Display name of the assignment."
+            "help": "Display name of the policy assignment."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the new assignment."
+            "help": "Name of the new policy assignment."
           },
           {
             "name": "NotScopes",
@@ -179,7 +179,7 @@
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
-            "help": "Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+            "help": "Scope to which this policy assignment applies."
           },
           {
             "name": "Sku",
@@ -199,7 +199,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the assignment."
+            "help": "Name of the policy assignment."
           },
           {
             "name": "ResourceGroup",
@@ -211,7 +211,7 @@
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
-            "help": "Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+            "help": "Scope to which this policy assignment applies."
           }
         ]
       }
@@ -225,7 +225,7 @@
             "name": "DisableScopeStrictMatch",
             "type": "string",
             "format": "--disable-scope-strict-match {value}",
-            "help": "Include assignment either inherited from parent scope or at child scope."
+            "help": "Include policy assignments either inherited from parent scope or at child scope."
           },
           {
             "name": "ResourceGroup",
@@ -237,7 +237,7 @@
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
-            "help": "Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+            "help": "Scope to which this policy assignment applies."
           }
         ]
       }
@@ -251,7 +251,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the assignment."
+            "help": "Name of the policy assignment."
           },
           {
             "name": "ResourceGroup",
@@ -263,7 +263,7 @@
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
-            "help": "Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+            "help": "Scope to which this policy assignment applies."
           }
         ]
       }
@@ -292,6 +292,12 @@
             "help": "Display name of policy definition."
           },
           {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "Name of the management group the new policy definition can be assigned in."
+          },
+          {
             "name": "Metadata",
             "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
@@ -316,6 +322,12 @@
             "type": "string",
             "format": "--rules {value}",
             "help": "Policy rules in JSON format, or a path to a file containing JSON rules."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or id of the subscription the new policy definition can be assigned in."
           }
         ]
       }
@@ -330,6 +342,18 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The policy definition name."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "The subscription id of the policy [set] definition."
           }
         ]
       }
@@ -337,7 +361,22 @@
     {
       "postfix": "DefinitionList",
       "definiteArgument": "policy definition list",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "The subscription id of the policy [set] definition."
+          }
+        ]
+      }
     },
     {
       "postfix": "DefinitionShow",
@@ -349,6 +388,18 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The policy definition name."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "The subscription id of the policy [set] definition."
           }
         ]
       }
@@ -377,12 +428,24 @@
             "help": "Display name of policy definition."
           },
           {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
             "name": "Metadata",
             "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
             "help": "Metadata in space-separated key=value pairs."
+          },
+          {
+            "name": "Mode",
+            "type": "string",
+            "format": "--mode {value}",
+            "help": ""
           },
           {
             "name": "Params",
@@ -397,28 +460,10 @@
             "help": "JSON formatted string or a path to a file with such content."
           },
           {
-            "name": "Add",
+            "name": "Subscription",
             "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+            "format": "--subscription {value}",
+            "help": "The subscription id of the policy [set] definition."
           }
         ]
       }
@@ -453,10 +498,22 @@
             "help": "Display name of policy set definition."
           },
           {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "Name of management group the new policy set definition can be assigned in."
+          },
+          {
             "name": "Params",
             "type": "string",
             "format": "--params {value}",
             "help": "JSON formatted string or a path to a file or uri with parameter definitions."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or id of the subscription the new policy set definition can be assigned in."
           }
         ]
       }
@@ -471,6 +528,18 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The policy set definition name."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "The subscription id of the policy [set] definition."
           }
         ]
       }
@@ -478,7 +547,22 @@
     {
       "postfix": "SetDefinitionList",
       "definiteArgument": "policy set-definition list",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "The subscription id of the policy [set] definition."
+          }
+        ]
+      }
     },
     {
       "postfix": "SetDefinitionShow",
@@ -490,6 +574,18 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The policy set definition name."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "The subscription id of the policy [set] definition."
           }
         ]
       }
@@ -509,7 +605,7 @@
             "name": "Definitions",
             "type": "string",
             "format": "--definitions {value}",
-            "help": "JSON formatted string or a path to a file or uri with such content."
+            "help": "JSON formatted string or a path to a file or uri containing definitions."
           },
           {
             "name": "Description",
@@ -524,10 +620,22 @@
             "help": "Display name of policy set definition."
           },
           {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
             "name": "Params",
             "type": "string",
             "format": "--params {value}",
             "help": "JSON formatted string or a path to a file or uri with parameter definitions."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "The subscription id of the policy [set] definition."
           }
         ]
       }

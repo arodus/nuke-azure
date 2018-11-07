@@ -545,7 +545,7 @@ namespace Nuke.Azure
         public virtual string Registry { get; internal set; }
         /// <summary><p>Build argument in 'name[=value]' format.</p></summary>
         public virtual string BuildArg { get; internal set; }
-        /// <summary><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        /// <summary><p>The relative path of the the docker file to the source code root folder. Default to 'Dockerfile'.</p></summary>
         public virtual string File { get; internal set; }
         /// <summary><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
         public virtual string Image { get; internal set; }
@@ -1536,6 +1536,8 @@ namespace Nuke.Azure
         public virtual bool? NoPush { get; internal set; }
         /// <summary><p>The operating system type required for the build.</p></summary>
         public virtual AcrOs Os { get; internal set; }
+        /// <summary><p>Indicates whether the source control pull request trigger is enabled.</p></summary>
+        public virtual bool? PullRequestTriggerEnabled { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Secret build argument in 'name[=value]' format.</p></summary>
@@ -1582,6 +1584,7 @@ namespace Nuke.Azure
               .Add("--no-cache", NoCache)
               .Add("--no-push", NoPush)
               .Add("--os {value}", Os)
+              .Add("--pull-request-trigger-enabled", PullRequestTriggerEnabled)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--secret-arg {value}", SecretArg, secret: true)
               .Add("--set {value}", Set)
@@ -1952,6 +1955,8 @@ namespace Nuke.Azure
         public virtual bool? NoPush { get; internal set; }
         /// <summary><p>The operating system type required for the build.</p></summary>
         public virtual AcrOs Os { get; internal set; }
+        /// <summary><p>Indicates whether the source control pull request trigger is enabled.</p></summary>
+        public virtual bool? PullRequestTriggerEnabled { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Secret build argument in 'name[=value]' format.</p></summary>
@@ -1995,6 +2000,7 @@ namespace Nuke.Azure
               .Add("--no-cache", NoCache)
               .Add("--no-push", NoPush)
               .Add("--os {value}", Os)
+              .Add("--pull-request-trigger-enabled", PullRequestTriggerEnabled)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--secret-arg {value}", SecretArg, secret: true)
               .Add("--set {value}", Set)
@@ -2948,7 +2954,7 @@ namespace Nuke.Azure
         public virtual bool? CommitTriggerEnabled { get; internal set; }
         /// <summary><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
         public virtual string Cpu { get; internal set; }
-        /// <summary><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        /// <summary><p>The relative path of the the docker file to the source code root folder. Default to 'Dockerfile'.</p></summary>
         public virtual string File { get; internal set; }
         /// <summary><p>Indicates whether the image cache is enabled.</p></summary>
         public virtual bool? NoCache { get; internal set; }
@@ -3344,7 +3350,7 @@ namespace Nuke.Azure
         public virtual string Context { get; internal set; }
         /// <summary><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
         public virtual string Cpu { get; internal set; }
-        /// <summary><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        /// <summary><p>The relative path of the the docker file to the source code root folder. Default to 'Dockerfile'.</p></summary>
         public virtual string File { get; internal set; }
         /// <summary><p>The access token used to access the source control provider.</p></summary>
         public virtual string GitAccessToken { get; internal set; }
@@ -3613,7 +3619,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region File
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder. Default to 'Dockerfile'.</p></summary>
         [Pure]
         public static AzureAcrBuildSettings SetFile(this AzureAcrBuildSettings toolSettings, string file)
         {
@@ -3621,7 +3627,7 @@ namespace Nuke.Azure
             toolSettings.File = file;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder. Default to 'Dockerfile'.</p></summary>
         [Pure]
         public static AzureAcrBuildSettings ResetFile(this AzureAcrBuildSettings toolSettings)
         {
@@ -7956,6 +7962,48 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region PullRequestTriggerEnabled
+        /// <summary><p><em>Sets <see cref="AzureAcrTaskCreateSettings.PullRequestTriggerEnabled"/>.</em></p><p>Indicates whether the source control pull request trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrTaskCreateSettings SetPullRequestTriggerEnabled(this AzureAcrTaskCreateSettings toolSettings, bool? pullRequestTriggerEnabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PullRequestTriggerEnabled = pullRequestTriggerEnabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrTaskCreateSettings.PullRequestTriggerEnabled"/>.</em></p><p>Indicates whether the source control pull request trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrTaskCreateSettings ResetPullRequestTriggerEnabled(this AzureAcrTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PullRequestTriggerEnabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAcrTaskCreateSettings.PullRequestTriggerEnabled"/>.</em></p><p>Indicates whether the source control pull request trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrTaskCreateSettings EnablePullRequestTriggerEnabled(this AzureAcrTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PullRequestTriggerEnabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAcrTaskCreateSettings.PullRequestTriggerEnabled"/>.</em></p><p>Indicates whether the source control pull request trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrTaskCreateSettings DisablePullRequestTriggerEnabled(this AzureAcrTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PullRequestTriggerEnabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAcrTaskCreateSettings.PullRequestTriggerEnabled"/>.</em></p><p>Indicates whether the source control pull request trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrTaskCreateSettings TogglePullRequestTriggerEnabled(this AzureAcrTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PullRequestTriggerEnabled = !toolSettings.PullRequestTriggerEnabled;
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureAcrTaskCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -9835,6 +9883,48 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Os = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PullRequestTriggerEnabled
+        /// <summary><p><em>Sets <see cref="AzureAcrTaskUpdateSettings.PullRequestTriggerEnabled"/>.</em></p><p>Indicates whether the source control pull request trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrTaskUpdateSettings SetPullRequestTriggerEnabled(this AzureAcrTaskUpdateSettings toolSettings, bool? pullRequestTriggerEnabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PullRequestTriggerEnabled = pullRequestTriggerEnabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrTaskUpdateSettings.PullRequestTriggerEnabled"/>.</em></p><p>Indicates whether the source control pull request trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrTaskUpdateSettings ResetPullRequestTriggerEnabled(this AzureAcrTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PullRequestTriggerEnabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAcrTaskUpdateSettings.PullRequestTriggerEnabled"/>.</em></p><p>Indicates whether the source control pull request trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrTaskUpdateSettings EnablePullRequestTriggerEnabled(this AzureAcrTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PullRequestTriggerEnabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAcrTaskUpdateSettings.PullRequestTriggerEnabled"/>.</em></p><p>Indicates whether the source control pull request trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrTaskUpdateSettings DisablePullRequestTriggerEnabled(this AzureAcrTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PullRequestTriggerEnabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAcrTaskUpdateSettings.PullRequestTriggerEnabled"/>.</em></p><p>Indicates whether the source control pull request trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrTaskUpdateSettings TogglePullRequestTriggerEnabled(this AzureAcrTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PullRequestTriggerEnabled = !toolSettings.PullRequestTriggerEnabled;
             return toolSettings;
         }
         #endregion
@@ -14199,7 +14289,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region File
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder. Default to 'Dockerfile'.</p></summary>
         [Pure]
         public static AzureAcrBuildTaskCreateSettings SetFile(this AzureAcrBuildTaskCreateSettings toolSettings, string file)
         {
@@ -14207,7 +14297,7 @@ namespace Nuke.Azure
             toolSettings.File = file;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder. Default to 'Dockerfile'.</p></summary>
         [Pure]
         public static AzureAcrBuildTaskCreateSettings ResetFile(this AzureAcrBuildTaskCreateSettings toolSettings)
         {
@@ -15955,7 +16045,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region File
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder. Default to 'Dockerfile'.</p></summary>
         [Pure]
         public static AzureAcrBuildTaskUpdateSettings SetFile(this AzureAcrBuildTaskUpdateSettings toolSettings, string file)
         {
@@ -15963,7 +16053,7 @@ namespace Nuke.Azure
             toolSettings.File = file;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder. Default to 'Dockerfile'.</p></summary>
         [Pure]
         public static AzureAcrBuildTaskUpdateSettings ResetFile(this AzureAcrBuildTaskUpdateSettings toolSettings)
         {

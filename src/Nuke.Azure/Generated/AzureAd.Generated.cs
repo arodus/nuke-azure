@@ -124,6 +124,22 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdSignedInUserListOwnedObjects(Configure<AzureAdSignedInUserListOwnedObjectsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdSignedInUserListOwnedObjectsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdSignedInUserShow(Configure<AzureAdSignedInUserShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdSignedInUserShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureAdSpCreate(Configure<AzureAdSpCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpCreateSettings());
@@ -231,6 +247,62 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureAdSpOwnerList(Configure<AzureAdSpOwnerListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpOwnerListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdAppCredentialDelete(Configure<AzureAdAppCredentialDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdAppCredentialDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdAppCredentialList(Configure<AzureAdAppCredentialListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdAppCredentialListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdAppCredentialReset(Configure<AzureAdAppCredentialResetSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdAppCredentialResetSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdAppPermissionAdd(Configure<AzureAdAppPermissionAddSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdAppPermissionAddSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdAppPermissionDelete(Configure<AzureAdAppPermissionDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdAppPermissionDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdAppPermissionGrant(Configure<AzureAdAppPermissionGrantSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdAppPermissionGrantSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdAppPermissionList(Configure<AzureAdAppPermissionListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdAppPermissionListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -637,7 +709,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
         /// <summary><p>Object's display name or its prefix.</p></summary>
         public virtual string DisplayName { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Mail nickname.</p></summary>
         public virtual string MailNickname { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -813,6 +885,73 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureAdSignedInUserListOwnedObjectsSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdSignedInUserListOwnedObjectsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>Object type filter, e.g. "application", "servicePrincipal"  "group", etc.</p></summary>
+        public virtual string Type { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad signed-in-user list-owned-objects")
+              .Add("--type {value}", Type)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdSignedInUserShowSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdSignedInUserShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad signed-in-user show")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureAdSpCreateSettings
     /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
     [PublicAPI]
@@ -857,7 +996,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureAd executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
-        /// <summary><p>Name or app URI to associate the RBAC with. If not present, a name will be generated.</p></summary>
+        /// <summary><p>A URI to use as the logic name. It doesn't need to exist. If not present, CLI will generate one.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Role of the service principal.</p></summary>
         public virtual string Role { get; internal set; }
@@ -1378,6 +1517,296 @@ namespace Nuke.Azure
         {
             arguments
               .Add("ad sp owner list")
+              .Add("--id {value}", Id)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdAppCredentialDeleteSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdAppCredentialDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>Identifier uri, application id, or object id.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Credential key id.</p></summary>
+        public virtual string KeyId { get; internal set; }
+        /// <summary><p>A certificate based credential.</p></summary>
+        public virtual string Cert { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad app credential delete")
+              .Add("--id {value}", Id)
+              .Add("--key-id {value}", KeyId)
+              .Add("--cert {value}", Cert)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdAppCredentialListSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdAppCredentialListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>Identifier uri, application id, or object id.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>A certificate based credential.</p></summary>
+        public virtual string Cert { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad app credential list")
+              .Add("--id {value}", Id)
+              .Add("--cert {value}", Cert)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdAppCredentialResetSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdAppCredentialResetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>Identifier uri, application id, or object id.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Append the new credential instead of overwriting.</p></summary>
+        public virtual string Append { get; internal set; }
+        /// <summary><p>Certificate to use for credentials.</p></summary>
+        public virtual string Cert { get; internal set; }
+        /// <summary><p>Create a self-signed certificate to use for the credential.</p></summary>
+        public virtual string CreateCert { get; internal set; }
+        /// <summary><p>Name or ID of a KeyVault to use for creating or retrieving certificates.</p></summary>
+        public virtual string Keyvault { get; internal set; }
+        /// <summary><p>App password, aka 'client secret'.</p></summary>
+        public virtual string Password { get; internal set; }
+        /// <summary><p>Number of years for which the credentials will be valid.</p></summary>
+        public virtual int? Years { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad app credential reset")
+              .Add("--id {value}", Id)
+              .Add("--append {value}", Append)
+              .Add("--cert {value}", Cert)
+              .Add("--create-cert {value}", CreateCert)
+              .Add("--keyvault {value}", Keyvault)
+              .Add("--password {value}", Password, secret: true)
+              .Add("--years {value}", Years)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdAppPermissionAddSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdAppPermissionAddSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>The target API to access.</p></summary>
+        public virtual string Api { get; internal set; }
+        /// <summary><p>Space seperated list of &lt;resource-access-id&gt;=&lt;type&gt;.</p></summary>
+        public virtual string ApiPermissions { get; internal set; }
+        /// <summary><p>Identifier uri, application id, or object id.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad app permission add")
+              .Add("--api {value}", Api)
+              .Add("--api-permissions {value}", ApiPermissions)
+              .Add("--id {value}", Id)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdAppPermissionDeleteSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdAppPermissionDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>The target API to access.</p></summary>
+        public virtual string Api { get; internal set; }
+        /// <summary><p>Identifier uri, application id, or object id.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad app permission delete")
+              .Add("--api {value}", Api)
+              .Add("--id {value}", Id)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdAppPermissionGrantSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdAppPermissionGrantSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>The target API to access.</p></summary>
+        public virtual string Api { get; internal set; }
+        /// <summary><p>Identifier uri, application id, or object id.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Expiry date for the permissions in years. e.g. 1, 2 or "never".</p></summary>
+        public virtual string Expires { get; internal set; }
+        /// <summary><p>Oauth scope.</p></summary>
+        public virtual string Scope { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad app permission grant")
+              .Add("--api {value}", Api)
+              .Add("--id {value}", Id)
+              .Add("--expires {value}", Expires)
+              .Add("--scope {value}", Scope)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdAppPermissionListSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdAppPermissionListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>Identifier uri, application id, or object id of the associated application.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad app permission list")
               .Add("--id {value}", Id)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -3347,7 +3776,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region MailNickname
-        /// <summary><p><em>Sets <see cref="AzureAdGroupCreateSettings.MailNickname"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAdGroupCreateSettings.MailNickname"/>.</em></p><p>Mail nickname.</p></summary>
         [Pure]
         public static AzureAdGroupCreateSettings SetMailNickname(this AzureAdGroupCreateSettings toolSettings, string mailNickname)
         {
@@ -3355,7 +3784,7 @@ namespace Nuke.Azure
             toolSettings.MailNickname = mailNickname;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupCreateSettings.MailNickname"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAdGroupCreateSettings.MailNickname"/>.</em></p><p>Mail nickname.</p></summary>
         [Pure]
         public static AzureAdGroupCreateSettings ResetMailNickname(this AzureAdGroupCreateSettings toolSettings)
         {
@@ -3998,6 +4427,220 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureAdSignedInUserListOwnedObjectsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdSignedInUserListOwnedObjectsSettingsExtensions
+    {
+        #region Type
+        /// <summary><p><em>Sets <see cref="AzureAdSignedInUserListOwnedObjectsSettings.Type"/>.</em></p><p>Object type filter, e.g. "application", "servicePrincipal"  "group", etc.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserListOwnedObjectsSettings SetType(this AzureAdSignedInUserListOwnedObjectsSettings toolSettings, string type)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Type = type;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdSignedInUserListOwnedObjectsSettings.Type"/>.</em></p><p>Object type filter, e.g. "application", "servicePrincipal"  "group", etc.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserListOwnedObjectsSettings ResetType(this AzureAdSignedInUserListOwnedObjectsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Type = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdSignedInUserListOwnedObjectsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserListOwnedObjectsSettings SetDebug(this AzureAdSignedInUserListOwnedObjectsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdSignedInUserListOwnedObjectsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserListOwnedObjectsSettings ResetDebug(this AzureAdSignedInUserListOwnedObjectsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdSignedInUserListOwnedObjectsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserListOwnedObjectsSettings SetHelp(this AzureAdSignedInUserListOwnedObjectsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdSignedInUserListOwnedObjectsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserListOwnedObjectsSettings ResetHelp(this AzureAdSignedInUserListOwnedObjectsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdSignedInUserListOwnedObjectsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserListOwnedObjectsSettings SetOutput(this AzureAdSignedInUserListOwnedObjectsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdSignedInUserListOwnedObjectsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserListOwnedObjectsSettings ResetOutput(this AzureAdSignedInUserListOwnedObjectsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdSignedInUserListOwnedObjectsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserListOwnedObjectsSettings SetQuery(this AzureAdSignedInUserListOwnedObjectsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdSignedInUserListOwnedObjectsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserListOwnedObjectsSettings ResetQuery(this AzureAdSignedInUserListOwnedObjectsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdSignedInUserListOwnedObjectsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserListOwnedObjectsSettings SetVerbose(this AzureAdSignedInUserListOwnedObjectsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdSignedInUserListOwnedObjectsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserListOwnedObjectsSettings ResetVerbose(this AzureAdSignedInUserListOwnedObjectsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdSignedInUserShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdSignedInUserShowSettingsExtensions
+    {
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdSignedInUserShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserShowSettings SetDebug(this AzureAdSignedInUserShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdSignedInUserShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserShowSettings ResetDebug(this AzureAdSignedInUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdSignedInUserShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserShowSettings SetHelp(this AzureAdSignedInUserShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdSignedInUserShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserShowSettings ResetHelp(this AzureAdSignedInUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdSignedInUserShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserShowSettings SetOutput(this AzureAdSignedInUserShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdSignedInUserShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserShowSettings ResetOutput(this AzureAdSignedInUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdSignedInUserShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserShowSettings SetQuery(this AzureAdSignedInUserShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdSignedInUserShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserShowSettings ResetQuery(this AzureAdSignedInUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdSignedInUserShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserShowSettings SetVerbose(this AzureAdSignedInUserShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdSignedInUserShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdSignedInUserShowSettings ResetVerbose(this AzureAdSignedInUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureAdSpCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
     [PublicAPI]
@@ -4121,7 +4764,7 @@ namespace Nuke.Azure
     public static partial class AzureAdSpCreateForRbacSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureAdSpCreateForRbacSettings.Name"/>.</em></p><p>Name or app URI to associate the RBAC with. If not present, a name will be generated.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAdSpCreateForRbacSettings.Name"/>.</em></p><p>A URI to use as the logic name. It doesn't need to exist. If not present, CLI will generate one.</p></summary>
         [Pure]
         public static AzureAdSpCreateForRbacSettings SetName(this AzureAdSpCreateForRbacSettings toolSettings, string name)
         {
@@ -4129,7 +4772,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAdSpCreateForRbacSettings.Name"/>.</em></p><p>Name or app URI to associate the RBAC with. If not present, a name will be generated.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAdSpCreateForRbacSettings.Name"/>.</em></p><p>A URI to use as the logic name. It doesn't need to exist. If not present, CLI will generate one.</p></summary>
         [Pure]
         public static AzureAdSpCreateForRbacSettings ResetName(this AzureAdSpCreateForRbacSettings toolSettings)
         {
@@ -6256,6 +6899,1088 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAdSpOwnerListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAdSpOwnerListSettings ResetVerbose(this AzureAdSpOwnerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdAppCredentialDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdAppCredentialDeleteSettingsExtensions
+    {
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialDeleteSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings SetId(this AzureAdAppCredentialDeleteSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialDeleteSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings ResetId(this AzureAdAppCredentialDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyId
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialDeleteSettings.KeyId"/>.</em></p><p>Credential key id.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings SetKeyId(this AzureAdAppCredentialDeleteSettings toolSettings, string keyId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyId = keyId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialDeleteSettings.KeyId"/>.</em></p><p>Credential key id.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings ResetKeyId(this AzureAdAppCredentialDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Cert
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialDeleteSettings.Cert"/>.</em></p><p>A certificate based credential.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings SetCert(this AzureAdAppCredentialDeleteSettings toolSettings, string cert)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cert = cert;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialDeleteSettings.Cert"/>.</em></p><p>A certificate based credential.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings ResetCert(this AzureAdAppCredentialDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cert = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings SetDebug(this AzureAdAppCredentialDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings ResetDebug(this AzureAdAppCredentialDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings SetHelp(this AzureAdAppCredentialDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings ResetHelp(this AzureAdAppCredentialDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings SetOutput(this AzureAdAppCredentialDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings ResetOutput(this AzureAdAppCredentialDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings SetQuery(this AzureAdAppCredentialDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings ResetQuery(this AzureAdAppCredentialDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings SetVerbose(this AzureAdAppCredentialDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialDeleteSettings ResetVerbose(this AzureAdAppCredentialDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdAppCredentialListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdAppCredentialListSettingsExtensions
+    {
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialListSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings SetId(this AzureAdAppCredentialListSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialListSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings ResetId(this AzureAdAppCredentialListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Cert
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialListSettings.Cert"/>.</em></p><p>A certificate based credential.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings SetCert(this AzureAdAppCredentialListSettings toolSettings, string cert)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cert = cert;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialListSettings.Cert"/>.</em></p><p>A certificate based credential.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings ResetCert(this AzureAdAppCredentialListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cert = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings SetDebug(this AzureAdAppCredentialListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings ResetDebug(this AzureAdAppCredentialListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings SetHelp(this AzureAdAppCredentialListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings ResetHelp(this AzureAdAppCredentialListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings SetOutput(this AzureAdAppCredentialListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings ResetOutput(this AzureAdAppCredentialListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings SetQuery(this AzureAdAppCredentialListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings ResetQuery(this AzureAdAppCredentialListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings SetVerbose(this AzureAdAppCredentialListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialListSettings ResetVerbose(this AzureAdAppCredentialListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdAppCredentialResetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdAppCredentialResetSettingsExtensions
+    {
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialResetSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings SetId(this AzureAdAppCredentialResetSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialResetSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings ResetId(this AzureAdAppCredentialResetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Append
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialResetSettings.Append"/>.</em></p><p>Append the new credential instead of overwriting.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings SetAppend(this AzureAdAppCredentialResetSettings toolSettings, string append)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Append = append;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialResetSettings.Append"/>.</em></p><p>Append the new credential instead of overwriting.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings ResetAppend(this AzureAdAppCredentialResetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Append = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Cert
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialResetSettings.Cert"/>.</em></p><p>Certificate to use for credentials.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings SetCert(this AzureAdAppCredentialResetSettings toolSettings, string cert)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cert = cert;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialResetSettings.Cert"/>.</em></p><p>Certificate to use for credentials.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings ResetCert(this AzureAdAppCredentialResetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cert = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CreateCert
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialResetSettings.CreateCert"/>.</em></p><p>Create a self-signed certificate to use for the credential.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings SetCreateCert(this AzureAdAppCredentialResetSettings toolSettings, string createCert)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CreateCert = createCert;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialResetSettings.CreateCert"/>.</em></p><p>Create a self-signed certificate to use for the credential.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings ResetCreateCert(this AzureAdAppCredentialResetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CreateCert = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Keyvault
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialResetSettings.Keyvault"/>.</em></p><p>Name or ID of a KeyVault to use for creating or retrieving certificates.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings SetKeyvault(this AzureAdAppCredentialResetSettings toolSettings, string keyvault)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Keyvault = keyvault;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialResetSettings.Keyvault"/>.</em></p><p>Name or ID of a KeyVault to use for creating or retrieving certificates.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings ResetKeyvault(this AzureAdAppCredentialResetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Keyvault = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Password
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialResetSettings.Password"/>.</em></p><p>App password, aka 'client secret'.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings SetPassword(this AzureAdAppCredentialResetSettings toolSettings, string password)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = password;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialResetSettings.Password"/>.</em></p><p>App password, aka 'client secret'.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings ResetPassword(this AzureAdAppCredentialResetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Years
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialResetSettings.Years"/>.</em></p><p>Number of years for which the credentials will be valid.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings SetYears(this AzureAdAppCredentialResetSettings toolSettings, int? years)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Years = years;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialResetSettings.Years"/>.</em></p><p>Number of years for which the credentials will be valid.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings ResetYears(this AzureAdAppCredentialResetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Years = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialResetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings SetDebug(this AzureAdAppCredentialResetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialResetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings ResetDebug(this AzureAdAppCredentialResetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialResetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings SetHelp(this AzureAdAppCredentialResetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialResetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings ResetHelp(this AzureAdAppCredentialResetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialResetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings SetOutput(this AzureAdAppCredentialResetSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialResetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings ResetOutput(this AzureAdAppCredentialResetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialResetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings SetQuery(this AzureAdAppCredentialResetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialResetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings ResetQuery(this AzureAdAppCredentialResetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdAppCredentialResetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings SetVerbose(this AzureAdAppCredentialResetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppCredentialResetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppCredentialResetSettings ResetVerbose(this AzureAdAppCredentialResetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdAppPermissionAddSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdAppPermissionAddSettingsExtensions
+    {
+        #region Api
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionAddSettings.Api"/>.</em></p><p>The target API to access.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings SetApi(this AzureAdAppPermissionAddSettings toolSettings, string api)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Api = api;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionAddSettings.Api"/>.</em></p><p>The target API to access.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings ResetApi(this AzureAdAppPermissionAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Api = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ApiPermissions
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionAddSettings.ApiPermissions"/>.</em></p><p>Space seperated list of &lt;resource-access-id&gt;=&lt;type&gt;.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings SetApiPermissions(this AzureAdAppPermissionAddSettings toolSettings, string apiPermissions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ApiPermissions = apiPermissions;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionAddSettings.ApiPermissions"/>.</em></p><p>Space seperated list of &lt;resource-access-id&gt;=&lt;type&gt;.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings ResetApiPermissions(this AzureAdAppPermissionAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ApiPermissions = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionAddSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings SetId(this AzureAdAppPermissionAddSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionAddSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings ResetId(this AzureAdAppPermissionAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings SetDebug(this AzureAdAppPermissionAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings ResetDebug(this AzureAdAppPermissionAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings SetHelp(this AzureAdAppPermissionAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings ResetHelp(this AzureAdAppPermissionAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings SetOutput(this AzureAdAppPermissionAddSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings ResetOutput(this AzureAdAppPermissionAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings SetQuery(this AzureAdAppPermissionAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings ResetQuery(this AzureAdAppPermissionAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings SetVerbose(this AzureAdAppPermissionAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionAddSettings ResetVerbose(this AzureAdAppPermissionAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdAppPermissionDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdAppPermissionDeleteSettingsExtensions
+    {
+        #region Api
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionDeleteSettings.Api"/>.</em></p><p>The target API to access.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings SetApi(this AzureAdAppPermissionDeleteSettings toolSettings, string api)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Api = api;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionDeleteSettings.Api"/>.</em></p><p>The target API to access.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings ResetApi(this AzureAdAppPermissionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Api = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionDeleteSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings SetId(this AzureAdAppPermissionDeleteSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionDeleteSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings ResetId(this AzureAdAppPermissionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings SetDebug(this AzureAdAppPermissionDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings ResetDebug(this AzureAdAppPermissionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings SetHelp(this AzureAdAppPermissionDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings ResetHelp(this AzureAdAppPermissionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings SetOutput(this AzureAdAppPermissionDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings ResetOutput(this AzureAdAppPermissionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings SetQuery(this AzureAdAppPermissionDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings ResetQuery(this AzureAdAppPermissionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings SetVerbose(this AzureAdAppPermissionDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionDeleteSettings ResetVerbose(this AzureAdAppPermissionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdAppPermissionGrantSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdAppPermissionGrantSettingsExtensions
+    {
+        #region Api
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionGrantSettings.Api"/>.</em></p><p>The target API to access.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings SetApi(this AzureAdAppPermissionGrantSettings toolSettings, string api)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Api = api;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionGrantSettings.Api"/>.</em></p><p>The target API to access.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings ResetApi(this AzureAdAppPermissionGrantSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Api = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionGrantSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings SetId(this AzureAdAppPermissionGrantSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionGrantSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings ResetId(this AzureAdAppPermissionGrantSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Expires
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionGrantSettings.Expires"/>.</em></p><p>Expiry date for the permissions in years. e.g. 1, 2 or "never".</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings SetExpires(this AzureAdAppPermissionGrantSettings toolSettings, string expires)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expires = expires;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionGrantSettings.Expires"/>.</em></p><p>Expiry date for the permissions in years. e.g. 1, 2 or "never".</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings ResetExpires(this AzureAdAppPermissionGrantSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expires = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Scope
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionGrantSettings.Scope"/>.</em></p><p>Oauth scope.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings SetScope(this AzureAdAppPermissionGrantSettings toolSettings, string scope)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = scope;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionGrantSettings.Scope"/>.</em></p><p>Oauth scope.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings ResetScope(this AzureAdAppPermissionGrantSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionGrantSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings SetDebug(this AzureAdAppPermissionGrantSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionGrantSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings ResetDebug(this AzureAdAppPermissionGrantSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionGrantSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings SetHelp(this AzureAdAppPermissionGrantSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionGrantSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings ResetHelp(this AzureAdAppPermissionGrantSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionGrantSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings SetOutput(this AzureAdAppPermissionGrantSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionGrantSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings ResetOutput(this AzureAdAppPermissionGrantSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionGrantSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings SetQuery(this AzureAdAppPermissionGrantSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionGrantSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings ResetQuery(this AzureAdAppPermissionGrantSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionGrantSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings SetVerbose(this AzureAdAppPermissionGrantSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionGrantSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionGrantSettings ResetVerbose(this AzureAdAppPermissionGrantSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdAppPermissionListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdAppPermissionListSettingsExtensions
+    {
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionListSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id of the associated application.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionListSettings SetId(this AzureAdAppPermissionListSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionListSettings.Id"/>.</em></p><p>Identifier uri, application id, or object id of the associated application.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionListSettings ResetId(this AzureAdAppPermissionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionListSettings SetDebug(this AzureAdAppPermissionListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionListSettings ResetDebug(this AzureAdAppPermissionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionListSettings SetHelp(this AzureAdAppPermissionListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionListSettings ResetHelp(this AzureAdAppPermissionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionListSettings SetOutput(this AzureAdAppPermissionListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionListSettings ResetOutput(this AzureAdAppPermissionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionListSettings SetQuery(this AzureAdAppPermissionListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionListSettings ResetQuery(this AzureAdAppPermissionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdAppPermissionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionListSettings SetVerbose(this AzureAdAppPermissionListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppPermissionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdAppPermissionListSettings ResetVerbose(this AzureAdAppPermissionListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

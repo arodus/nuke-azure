@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/aks.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/aks.yml"
   ],
   "name": "AzureAks",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest",
@@ -35,12 +35,6 @@
             "type": "string",
             "format": "--disable-browser {value}",
             "help": "Don't launch a web browser after establishing port-forwarding."
-          },
-          {
-            "name": "EnableCloudConsoleAksBrowse",
-            "type": "string",
-            "format": "--enable-cloud-console-aks-browse {value}",
-            "help": ""
           },
           {
             "name": "ListenPort",

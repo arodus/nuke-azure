@@ -90,6 +90,8 @@ namespace Nuke.Azure
         public virtual string Location { get; internal set; }
         /// <summary><p></p></summary>
         public virtual ImageCreateOsType OsType { get; internal set; }
+        /// <summary><p>The SKU of the storage account with which to create the VM image. Unused if source VM is specified.</p></summary>
+        public virtual ImageCreateStorageSku StorageSku { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
         /// <summary><p>Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage.</p></summary>
@@ -114,6 +116,7 @@ namespace Nuke.Azure
               .Add("--data-disk-sources {value}", DataDiskSources, separator: ' ')
               .Add("--location {value}", Location)
               .Add("--os-type {value}", OsType)
+              .Add("--storage-sku {value}", StorageSku)
               .Add("--tags {value}", Tags)
               .Add("--zone-resilient", ZoneResilient)
               .Add("--debug {value}", Debug)
@@ -392,6 +395,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OsType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StorageSku
+        /// <summary><p><em>Sets <see cref="AzureImageCreateSettings.StorageSku"/>.</em></p><p>The SKU of the storage account with which to create the VM image. Unused if source VM is specified.</p></summary>
+        [Pure]
+        public static AzureImageCreateSettings SetStorageSku(this AzureImageCreateSettings toolSettings, ImageCreateStorageSku storageSku)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageSku = storageSku;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureImageCreateSettings.StorageSku"/>.</em></p><p>The SKU of the storage account with which to create the VM image. Unused if source VM is specified.</p></summary>
+        [Pure]
+        public static AzureImageCreateSettings ResetStorageSku(this AzureImageCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageSku = null;
             return toolSettings;
         }
         #endregion
@@ -958,6 +979,19 @@ namespace Nuke.Azure
     {
         public static ImageCreateOsType linux = new ImageCreateOsType { Value = "linux" };
         public static ImageCreateOsType windows = new ImageCreateOsType { Value = "windows" };
+    }
+    #endregion
+    #region ImageCreateStorageSku
+    /// <summary><p>Used within <see cref="AzureImageTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class ImageCreateStorageSku : Enumeration
+    {
+        public static ImageCreateStorageSku premium_lrs = new ImageCreateStorageSku { Value = "premium_lrs" };
+        public static ImageCreateStorageSku standardssd_lrs = new ImageCreateStorageSku { Value = "standardssd_lrs" };
+        public static ImageCreateStorageSku standard_lrs = new ImageCreateStorageSku { Value = "standard_lrs" };
+        public static ImageCreateStorageSku ultrassd_lrs = new ImageCreateStorageSku { Value = "ultrassd_lrs" };
     }
     #endregion
 }
