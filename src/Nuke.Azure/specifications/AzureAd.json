@@ -6,19 +6,19 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/ad.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/ad/app.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/ad/group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/ad/signed-in-user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/ad/sp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/ad/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/ad/sp/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/ad/sp/owner.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/ad/app/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/ad/app/permission.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/ad/app/owner.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/ad/group/member.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/ad/group/owner.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/app.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/signed-in-user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/sp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/app/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/app/owner.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/app/permission.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/group/member.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/group/owner.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/sp/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/sp/owner.yml"
   ],
   "name": "AzureAd",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest",
@@ -676,117 +676,6 @@
       }
     },
     {
-      "postfix": "SpCredentialDelete",
-      "definiteArgument": "ad sp credential delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Service principal name, or object id."
-          },
-          {
-            "name": "KeyId",
-            "type": "string",
-            "format": "--key-id {value}",
-            "help": "Credential key id."
-          },
-          {
-            "name": "Cert",
-            "type": "string",
-            "format": "--cert {value}",
-            "help": "A certificate based credential."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SpCredentialList",
-      "definiteArgument": "ad sp credential list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Service principal name, or object id."
-          },
-          {
-            "name": "Cert",
-            "type": "string",
-            "format": "--cert {value}",
-            "help": "A certificate based credential."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SpCredentialReset",
-      "definiteArgument": "ad sp credential reset",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name or app URI for the credential."
-          },
-          {
-            "name": "Append",
-            "type": "string",
-            "format": "--append {value}",
-            "help": "Append the new credential instead of overwriting."
-          },
-          {
-            "name": "Cert",
-            "type": "string",
-            "format": "--cert {value}",
-            "help": "Certificate to use for credentials."
-          },
-          {
-            "name": "CreateCert",
-            "type": "string",
-            "format": "--create-cert {value}",
-            "help": "Create a self-signed certificate to use for the credential."
-          },
-          {
-            "name": "Keyvault",
-            "type": "string",
-            "format": "--keyvault {value}",
-            "help": "Name or ID of a KeyVault to use for creating or retrieving certificates."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "The password used to log in."
-          },
-          {
-            "name": "Years",
-            "type": "int",
-            "format": "--years {value}",
-            "help": "Number of years for which the credentials will be valid. Default: 1 year."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SpOwnerList",
-      "definiteArgument": "ad sp owner list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Service principal name, or object id or the service principal."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "AppCredentialDelete",
       "definiteArgument": "ad app credential delete",
       "settingsClass": {
@@ -884,6 +773,60 @@
       }
     },
     {
+      "postfix": "AppOwnerAdd",
+      "definiteArgument": "ad app owner add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Identifier uri, application id, or object id."
+          },
+          {
+            "name": "OwnerObjectId",
+            "type": "string",
+            "format": "--owner-object-id {value}",
+            "help": "Owner's object id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppOwnerList",
+      "definiteArgument": "ad app owner list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Identifier uri, application id, or object id of the application."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppOwnerRemove",
+      "definiteArgument": "ad app owner remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Identifier uri, application id, or object id."
+          },
+          {
+            "name": "OwnerObjectId",
+            "type": "string",
+            "format": "--owner-object-id {value}",
+            "help": "Owner's object id."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "AppPermissionAdd",
       "definiteArgument": "ad app permission add",
       "settingsClass": {
@@ -971,60 +914,6 @@
             "type": "string",
             "format": "--id {value}",
             "help": "Identifier uri, application id, or object id of the associated application."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppOwnerAdd",
-      "definiteArgument": "ad app owner add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "OwnerObjectId",
-            "type": "string",
-            "format": "--owner-object-id {value}",
-            "help": "Owner's object id."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppOwnerList",
-      "definiteArgument": "ad app owner list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Identifier uri, application id, or object id of the application."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppOwnerRemove",
-      "definiteArgument": "ad app owner remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "OwnerObjectId",
-            "type": "string",
-            "format": "--owner-object-id {value}",
-            "help": "Owner's object id."
           }
         ]
       }
@@ -1159,6 +1048,117 @@
             "type": "string",
             "format": "--owner-object-id {value}",
             "help": "Owner's object id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SpCredentialDelete",
+      "definiteArgument": "ad sp credential delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Service principal name, or object id."
+          },
+          {
+            "name": "KeyId",
+            "type": "string",
+            "format": "--key-id {value}",
+            "help": "Credential key id."
+          },
+          {
+            "name": "Cert",
+            "type": "string",
+            "format": "--cert {value}",
+            "help": "A certificate based credential."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SpCredentialList",
+      "definiteArgument": "ad sp credential list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Service principal name, or object id."
+          },
+          {
+            "name": "Cert",
+            "type": "string",
+            "format": "--cert {value}",
+            "help": "A certificate based credential."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SpCredentialReset",
+      "definiteArgument": "ad sp credential reset",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name or app URI for the credential."
+          },
+          {
+            "name": "Append",
+            "type": "string",
+            "format": "--append {value}",
+            "help": "Append the new credential instead of overwriting."
+          },
+          {
+            "name": "Cert",
+            "type": "string",
+            "format": "--cert {value}",
+            "help": "Certificate to use for credentials."
+          },
+          {
+            "name": "CreateCert",
+            "type": "string",
+            "format": "--create-cert {value}",
+            "help": "Create a self-signed certificate to use for the credential."
+          },
+          {
+            "name": "Keyvault",
+            "type": "string",
+            "format": "--keyvault {value}",
+            "help": "Name or ID of a KeyVault to use for creating or retrieving certificates."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "The password used to log in."
+          },
+          {
+            "name": "Years",
+            "type": "int",
+            "format": "--years {value}",
+            "help": "Number of years for which the credentials will be valid. Default: 1 year."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SpOwnerList",
+      "definiteArgument": "ad sp owner list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Service principal name, or object id or the service principal."
           }
         ]
       }

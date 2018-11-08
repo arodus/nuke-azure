@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/sig.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/sig/image-version.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/sig/image-definition.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sig.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sig/image-definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sig/image-version.yml"
   ],
   "name": "AzureSig",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest",
@@ -112,6 +112,268 @@
       "definiteArgument": "sig update",
       "settingsClass": {
         "properties": [
+          {
+            "name": "GalleryName",
+            "type": "string",
+            "format": "--gallery-name {value}",
+            "help": "Gallery name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageDefinitionCreate",
+      "definiteArgument": "sig image-definition create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GalleryImageDefinition",
+            "type": "string",
+            "format": "--gallery-image-definition {value}",
+            "help": "Gallery image definition."
+          },
+          {
+            "name": "GalleryName",
+            "type": "string",
+            "format": "--gallery-name {value}",
+            "help": "Gallery name."
+          },
+          {
+            "name": "Offer",
+            "type": "string",
+            "format": "--offer {value}",
+            "help": "Image offer."
+          },
+          {
+            "name": "OsType",
+            "type": "SigImageDefinitionCreateOsType",
+            "format": "--os-type {value}",
+            "help": "The type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD."
+          },
+          {
+            "name": "Publisher",
+            "type": "string",
+            "format": "--publisher {value}",
+            "help": "Image publisher."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Sku",
+            "type": "string",
+            "format": "--sku {value}",
+            "help": "Image sku."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "The description of the gallery image definition."
+          },
+          {
+            "name": "DisallowedDiskTypes",
+            "type": "string",
+            "format": "--disallowed-disk-types {value}",
+            "help": "Disk types which would not work with the image, e.g., Standard_LRS."
+          },
+          {
+            "name": "EndOfLifeDate",
+            "type": "string",
+            "format": "--end-of-life-date {value}",
+            "help": "The end of life date, e.g. '2020-12-31'."
+          },
+          {
+            "name": "Eula",
+            "type": "string",
+            "format": "--eula {value}",
+            "help": "The Eula agreement for the gallery image."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "PrivacyStatementUri",
+            "type": "string",
+            "format": "--privacy-statement-uri {value}",
+            "help": "The privacy statement uri."
+          },
+          {
+            "name": "ReleaseNoteUri",
+            "type": "string",
+            "format": "--release-note-uri {value}",
+            "help": "The release note uri."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "PlanName",
+            "type": "string",
+            "format": "--plan-name {value}",
+            "help": "Plan name."
+          },
+          {
+            "name": "PlanProduct",
+            "type": "string",
+            "format": "--plan-product {value}",
+            "help": "Plan product."
+          },
+          {
+            "name": "PlanPublisher",
+            "type": "string",
+            "format": "--plan-publisher {value}",
+            "help": "Plan publisher."
+          },
+          {
+            "name": "MaximumCpuCore",
+            "type": "string",
+            "format": "--maximum-cpu-core {value}",
+            "help": "Maximum cpu cores."
+          },
+          {
+            "name": "MaximumMemory",
+            "type": "string",
+            "format": "--maximum-memory {value}",
+            "help": "Maximum memory in MB."
+          },
+          {
+            "name": "MinimumCpuCore",
+            "type": "string",
+            "format": "--minimum-cpu-core {value}",
+            "help": "Minimum cpu cores."
+          },
+          {
+            "name": "MinimumMemory",
+            "type": "string",
+            "format": "--minimum-memory {value}",
+            "help": "Minimum memory in MB."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageDefinitionDelete",
+      "definiteArgument": "sig image-definition delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GalleryImageDefinition",
+            "type": "string",
+            "format": "--gallery-image-definition {value}",
+            "help": "Gallery image definition."
+          },
+          {
+            "name": "GalleryName",
+            "type": "string",
+            "format": "--gallery-name {value}",
+            "help": "Gallery name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageDefinitionList",
+      "definiteArgument": "sig image-definition list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GalleryName",
+            "type": "string",
+            "format": "--gallery-name {value}",
+            "help": "Gallery name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageDefinitionShow",
+      "definiteArgument": "sig image-definition show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GalleryImageDefinition",
+            "type": "string",
+            "format": "--gallery-image-definition {value}",
+            "help": "Gallery image definition."
+          },
+          {
+            "name": "GalleryName",
+            "type": "string",
+            "format": "--gallery-name {value}",
+            "help": "Gallery name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageDefinitionUpdate",
+      "definiteArgument": "sig image-definition update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GalleryImageDefinition",
+            "type": "string",
+            "format": "--gallery-image-definition {value}",
+            "help": "Gallery image definition."
+          },
           {
             "name": "GalleryName",
             "type": "string",
@@ -473,268 +735,6 @@
             "type": "string",
             "format": "--updated {value}",
             "help": "Wait until updated with provisioningState at 'Succeeded'."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageDefinitionCreate",
-      "definiteArgument": "sig image-definition create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "GalleryImageDefinition",
-            "type": "string",
-            "format": "--gallery-image-definition {value}",
-            "help": "Gallery image definition."
-          },
-          {
-            "name": "GalleryName",
-            "type": "string",
-            "format": "--gallery-name {value}",
-            "help": "Gallery name."
-          },
-          {
-            "name": "Offer",
-            "type": "string",
-            "format": "--offer {value}",
-            "help": "Image offer."
-          },
-          {
-            "name": "OsType",
-            "type": "SigImageDefinitionCreateOsType",
-            "format": "--os-type {value}",
-            "help": "The type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD."
-          },
-          {
-            "name": "Publisher",
-            "type": "string",
-            "format": "--publisher {value}",
-            "help": "Image publisher."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Sku",
-            "type": "string",
-            "format": "--sku {value}",
-            "help": "Image sku."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "help": "The description of the gallery image definition."
-          },
-          {
-            "name": "DisallowedDiskTypes",
-            "type": "string",
-            "format": "--disallowed-disk-types {value}",
-            "help": "Disk types which would not work with the image, e.g., Standard_LRS."
-          },
-          {
-            "name": "EndOfLifeDate",
-            "type": "string",
-            "format": "--end-of-life-date {value}",
-            "help": "The end of life date, e.g. '2020-12-31'."
-          },
-          {
-            "name": "Eula",
-            "type": "string",
-            "format": "--eula {value}",
-            "help": "The Eula agreement for the gallery image."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "PrivacyStatementUri",
-            "type": "string",
-            "format": "--privacy-statement-uri {value}",
-            "help": "The privacy statement uri."
-          },
-          {
-            "name": "ReleaseNoteUri",
-            "type": "string",
-            "format": "--release-note-uri {value}",
-            "help": "The release note uri."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "PlanName",
-            "type": "string",
-            "format": "--plan-name {value}",
-            "help": "Plan name."
-          },
-          {
-            "name": "PlanProduct",
-            "type": "string",
-            "format": "--plan-product {value}",
-            "help": "Plan product."
-          },
-          {
-            "name": "PlanPublisher",
-            "type": "string",
-            "format": "--plan-publisher {value}",
-            "help": "Plan publisher."
-          },
-          {
-            "name": "MaximumCpuCore",
-            "type": "string",
-            "format": "--maximum-cpu-core {value}",
-            "help": "Maximum cpu cores."
-          },
-          {
-            "name": "MaximumMemory",
-            "type": "string",
-            "format": "--maximum-memory {value}",
-            "help": "Maximum memory in MB."
-          },
-          {
-            "name": "MinimumCpuCore",
-            "type": "string",
-            "format": "--minimum-cpu-core {value}",
-            "help": "Minimum cpu cores."
-          },
-          {
-            "name": "MinimumMemory",
-            "type": "string",
-            "format": "--minimum-memory {value}",
-            "help": "Minimum memory in MB."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageDefinitionDelete",
-      "definiteArgument": "sig image-definition delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "GalleryImageDefinition",
-            "type": "string",
-            "format": "--gallery-image-definition {value}",
-            "help": "Gallery image definition."
-          },
-          {
-            "name": "GalleryName",
-            "type": "string",
-            "format": "--gallery-name {value}",
-            "help": "Gallery name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageDefinitionList",
-      "definiteArgument": "sig image-definition list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "GalleryName",
-            "type": "string",
-            "format": "--gallery-name {value}",
-            "help": "Gallery name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageDefinitionShow",
-      "definiteArgument": "sig image-definition show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "GalleryImageDefinition",
-            "type": "string",
-            "format": "--gallery-image-definition {value}",
-            "help": "Gallery image definition."
-          },
-          {
-            "name": "GalleryName",
-            "type": "string",
-            "format": "--gallery-name {value}",
-            "help": "Gallery name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageDefinitionUpdate",
-      "definiteArgument": "sig image-definition update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "GalleryImageDefinition",
-            "type": "string",
-            "format": "--gallery-image-definition {value}",
-            "help": "Gallery image definition."
-          },
-          {
-            "name": "GalleryName",
-            "type": "string",
-            "format": "--gallery-name {value}",
-            "help": "Gallery name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
       }

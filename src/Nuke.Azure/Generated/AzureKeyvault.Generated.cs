@@ -1,8 +1,8 @@
-// Copyright Matthias Koch, Sebastian Karasek 2018.
+// Copyright 2018 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.2 [CommitSha: ff25463a].
+// Generated with Nuke.CodeGeneration, Version: 0.7.0 [CommitSha: 9d3d3d7e].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureKeyvault.json.
 
 using JetBrains.Annotations;
@@ -220,230 +220,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultSecretBackup(Configure<AzureKeyvaultSecretBackupSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretBackupSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultSecretDelete(Configure<AzureKeyvaultSecretDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultSecretDownload(Configure<AzureKeyvaultSecretDownloadSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretDownloadSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultSecretList(Configure<AzureKeyvaultSecretListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultSecretListDeleted(Configure<AzureKeyvaultSecretListDeletedSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretListDeletedSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultSecretListVersions(Configure<AzureKeyvaultSecretListVersionsSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretListVersionsSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultSecretPurge(Configure<AzureKeyvaultSecretPurgeSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretPurgeSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultSecretRecover(Configure<AzureKeyvaultSecretRecoverSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretRecoverSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultSecretRestore(Configure<AzureKeyvaultSecretRestoreSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretRestoreSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultSecretSet(Configure<AzureKeyvaultSecretSetSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretSetSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultSecretSetAttributes(Configure<AzureKeyvaultSecretSetAttributesSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretSetAttributesSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultSecretShow(Configure<AzureKeyvaultSecretShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultSecretShowDeleted(Configure<AzureKeyvaultSecretShowDeletedSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretShowDeletedSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultNetworkRuleAdd(Configure<AzureKeyvaultNetworkRuleAddSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultNetworkRuleAddSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultNetworkRuleList(Configure<AzureKeyvaultNetworkRuleListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultNetworkRuleListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultNetworkRuleRemove(Configure<AzureKeyvaultNetworkRuleRemoveSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultNetworkRuleRemoveSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultStorageAdd(Configure<AzureKeyvaultStorageAddSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageAddSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultStorageBackup(Configure<AzureKeyvaultStorageBackupSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageBackupSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultStorageList(Configure<AzureKeyvaultStorageListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultStorageListDeleted(Configure<AzureKeyvaultStorageListDeletedSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageListDeletedSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultStoragePurge(Configure<AzureKeyvaultStoragePurgeSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStoragePurgeSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultStorageRecover(Configure<AzureKeyvaultStorageRecoverSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageRecoverSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultStorageRegenerateKey(Configure<AzureKeyvaultStorageRegenerateKeySettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageRegenerateKeySettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultStorageRemove(Configure<AzureKeyvaultStorageRemoveSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageRemoveSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultStorageRestore(Configure<AzureKeyvaultStorageRestoreSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageRestoreSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultStorageShow(Configure<AzureKeyvaultStorageShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultStorageShowDeleted(Configure<AzureKeyvaultStorageShowDeletedSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageShowDeletedSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultStorageUpdate(Configure<AzureKeyvaultStorageUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureKeyvaultKeyBackup(Configure<AzureKeyvaultKeyBackupSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeyBackupSettings());
@@ -548,25 +324,225 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultCertificatePendingDelete(Configure<AzureKeyvaultCertificatePendingDeleteSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureKeyvaultNetworkRuleAdd(Configure<AzureKeyvaultNetworkRuleAddSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificatePendingDeleteSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultNetworkRuleAddSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultCertificatePendingMerge(Configure<AzureKeyvaultCertificatePendingMergeSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureKeyvaultNetworkRuleList(Configure<AzureKeyvaultNetworkRuleListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificatePendingMergeSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultNetworkRuleListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureKeyvaultCertificatePendingShow(Configure<AzureKeyvaultCertificatePendingShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureKeyvaultNetworkRuleRemove(Configure<AzureKeyvaultNetworkRuleRemoveSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificatePendingShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultNetworkRuleRemoveSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultSecretBackup(Configure<AzureKeyvaultSecretBackupSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretBackupSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultSecretDelete(Configure<AzureKeyvaultSecretDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultSecretDownload(Configure<AzureKeyvaultSecretDownloadSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretDownloadSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultSecretList(Configure<AzureKeyvaultSecretListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultSecretListDeleted(Configure<AzureKeyvaultSecretListDeletedSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretListDeletedSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultSecretListVersions(Configure<AzureKeyvaultSecretListVersionsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretListVersionsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultSecretPurge(Configure<AzureKeyvaultSecretPurgeSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretPurgeSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultSecretRecover(Configure<AzureKeyvaultSecretRecoverSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretRecoverSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultSecretRestore(Configure<AzureKeyvaultSecretRestoreSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretRestoreSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultSecretSet(Configure<AzureKeyvaultSecretSetSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretSetSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultSecretSetAttributes(Configure<AzureKeyvaultSecretSetAttributesSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretSetAttributesSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultSecretShow(Configure<AzureKeyvaultSecretShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultSecretShowDeleted(Configure<AzureKeyvaultSecretShowDeletedSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretShowDeletedSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultStorageAdd(Configure<AzureKeyvaultStorageAddSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageAddSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultStorageBackup(Configure<AzureKeyvaultStorageBackupSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageBackupSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultStorageList(Configure<AzureKeyvaultStorageListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultStorageListDeleted(Configure<AzureKeyvaultStorageListDeletedSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageListDeletedSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultStoragePurge(Configure<AzureKeyvaultStoragePurgeSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStoragePurgeSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultStorageRecover(Configure<AzureKeyvaultStorageRecoverSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageRecoverSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultStorageRegenerateKey(Configure<AzureKeyvaultStorageRegenerateKeySettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageRegenerateKeySettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultStorageRemove(Configure<AzureKeyvaultStorageRemoveSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageRemoveSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultStorageRestore(Configure<AzureKeyvaultStorageRestoreSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageRestoreSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultStorageShow(Configure<AzureKeyvaultStorageShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultStorageShowDeleted(Configure<AzureKeyvaultStorageShowDeletedSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageShowDeletedSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultStorageUpdate(Configure<AzureKeyvaultStorageUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultStorageUpdateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -631,6 +607,30 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureKeyvaultCertificateIssuerUpdate(Configure<AzureKeyvaultCertificateIssuerUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateIssuerUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultCertificatePendingDelete(Configure<AzureKeyvaultCertificatePendingDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificatePendingDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultCertificatePendingMerge(Configure<AzureKeyvaultCertificatePendingMergeSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificatePendingMergeSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage KeyVault keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureKeyvaultCertificatePendingShow(Configure<AzureKeyvaultCertificatePendingShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificatePendingShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -1770,1226 +1770,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureKeyvaultSecretBackupSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultSecretBackupSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p></p></summary>
-        public virtual string FilePath { get; internal set; }
-        /// <summary><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        public virtual string Id { get; internal set; }
-        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault secret backup")
-              .Add("--file-path {value}", FilePath)
-              .Add("--id {value}", Id)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultSecretDeleteSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultSecretDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        public virtual string Id { get; internal set; }
-        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault secret delete")
-              .Add("--id {value}", Id)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultSecretDownloadSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultSecretDownloadSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>File to receive the secret contents.</p></summary>
-        public virtual string File { get; internal set; }
-        /// <summary><p>Encoding of the destination file. By default, will look for the 'file-encoding' tag on the secret. Otherwise will assume 'utf-8'.</p></summary>
-        public virtual KeyvaultSecretEncoding Encoding { get; internal set; }
-        /// <summary><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        public virtual string Id { get; internal set; }
-        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>The secret version. If omitted, uses the latest version.</p></summary>
-        public virtual string Version { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault secret download")
-              .Add("--file {value}", File)
-              .Add("--encoding {value}", Encoding)
-              .Add("--id {value}", Id)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--version {value}", Version)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultSecretListSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultSecretListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Maximum number of results to return in a page. If not specified, the service will return up to 25 results.</p></summary>
-        public virtual int? Maxresults { get; internal set; }
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault secret list")
-              .Add("--maxresults {value}", Maxresults)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultSecretListDeletedSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultSecretListDeletedSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
-        public virtual int? Maxresults { get; internal set; }
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault secret list-deleted")
-              .Add("--maxresults {value}", Maxresults)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultSecretListVersionsSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultSecretListVersionsSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Maximum number of results to return in a page. If not specified, the service will return up to 25 results.</p></summary>
-        public virtual int? Maxresults { get; internal set; }
-        /// <summary><p>Name of the secret.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault secret list-versions")
-              .Add("--maxresults {value}", Maxresults)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultSecretPurgeSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultSecretPurgeSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        public virtual string Id { get; internal set; }
-        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault secret purge")
-              .Add("--id {value}", Id)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultSecretRecoverSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultSecretRecoverSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        public virtual string Id { get; internal set; }
-        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault secret recover")
-              .Add("--id {value}", Id)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultSecretRestoreSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultSecretRestoreSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p></p></summary>
-        public virtual string FilePath { get; internal set; }
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault secret restore")
-              .Add("--file-path {value}", FilePath)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultSecretSetSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultSecretSetSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Description of the secret contents (e.g. password, connection string, etc).</p></summary>
-        public virtual string Description { get; internal set; }
-        /// <summary><p>Create secret in disabled state.</p></summary>
-        public virtual bool? Disabled { get; internal set; }
-        /// <summary><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        public virtual string Expires { get; internal set; }
-        /// <summary><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        public virtual string NotBefore { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Source file encoding. The value is saved as a tag (`file-encoding=&amp;lt;val&amp;gt;`) and used during download to automatically encode the resulting file.</p></summary>
-        public virtual KeyvaultSecretEncoding Encoding { get; internal set; }
-        /// <summary><p>Source file for secret. Use in conjunction with '--encoding'.</p></summary>
-        public virtual string File { get; internal set; }
-        /// <summary><p>Plain text secret value. Cannot be used with '--file' or '--encoding'.</p></summary>
-        public virtual string Value { get; internal set; }
-        /// <summary><p>Name of the secret.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault secret set")
-              .Add("--description {value}", Description)
-              .Add("--disabled", Disabled)
-              .Add("--expires {value}", Expires)
-              .Add("--not-before {value}", NotBefore)
-              .Add("--tags {value}", Tags)
-              .Add("--encoding {value}", Encoding)
-              .Add("--file {value}", File)
-              .Add("--value {value}", Value)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultSecretSetAttributesSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultSecretSetAttributesSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Type of the secret value such as a password.</p></summary>
-        public virtual string ContentType { get; internal set; }
-        /// <summary><p>Enable the secret.</p></summary>
-        public virtual bool? Enabled { get; internal set; }
-        /// <summary><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        public virtual string Expires { get; internal set; }
-        /// <summary><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        public virtual string NotBefore { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        public virtual string Id { get; internal set; }
-        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>The secret version. If omitted, uses the latest version.</p></summary>
-        public virtual string Version { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault secret set-attributes")
-              .Add("--content-type {value}", ContentType)
-              .Add("--enabled", Enabled)
-              .Add("--expires {value}", Expires)
-              .Add("--not-before {value}", NotBefore)
-              .Add("--tags {value}", Tags)
-              .Add("--id {value}", Id)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--version {value}", Version)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultSecretShowSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultSecretShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        public virtual string Id { get; internal set; }
-        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>The secret version. If omitted, uses the latest version.</p></summary>
-        public virtual string Version { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault secret show")
-              .Add("--id {value}", Id)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--version {value}", Version)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultSecretShowDeletedSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultSecretShowDeletedSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        public virtual string Id { get; internal set; }
-        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault secret show-deleted")
-              .Add("--id {value}", Id)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultNetworkRuleAddSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultNetworkRuleAddSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>IPv4 address or CIDR range.</p></summary>
-        public virtual string IpAddress { get; internal set; }
-        /// <summary><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p></summary>
-        public virtual string Subnet { get; internal set; }
-        /// <summary><p>Name of a virtual network.</p></summary>
-        public virtual string VnetName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault network-rule add")
-              .Add("--name {value}", Name)
-              .Add("--ip-address {value}", IpAddress)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subnet {value}", Subnet)
-              .Add("--vnet-name {value}", VnetName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultNetworkRuleListSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultNetworkRuleListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault network-rule list")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultNetworkRuleRemoveSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultNetworkRuleRemoveSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>IPv4 address or CIDR range.</p></summary>
-        public virtual string IpAddress { get; internal set; }
-        /// <summary><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p></summary>
-        public virtual string Subnet { get; internal set; }
-        /// <summary><p>Name of a virtual network.</p></summary>
-        public virtual string VnetName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault network-rule remove")
-              .Add("--name {value}", Name)
-              .Add("--ip-address {value}", IpAddress)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subnet {value}", Subnet)
-              .Add("--vnet-name {value}", VnetName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultStorageAddSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultStorageAddSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Current active storage account key name.</p></summary>
-        public virtual string ActiveKeyName { get; internal set; }
-        /// <summary><p>Storage account resource id.</p></summary>
-        public virtual string ResourceId { get; internal set; }
-        /// <summary><p>Whether keyvault should manage the storage account for the user.</p></summary>
-        public virtual bool? AutoRegenerateKey { get; internal set; }
-        /// <summary><p>Add the storage account in a disabled state.</p></summary>
-        public virtual bool? Disabled { get; internal set; }
-        /// <summary><p>The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.</p></summary>
-        public virtual string RegenerationPeriod { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Name to identify the storage account in the vault.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault storage add")
-              .Add("--active-key-name {value}", ActiveKeyName)
-              .Add("--resource-id {value}", ResourceId)
-              .Add("--auto-regenerate-key", AutoRegenerateKey)
-              .Add("--disabled", Disabled)
-              .Add("--regeneration-period {value}", RegenerationPeriod)
-              .Add("--tags {value}", Tags)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultStorageBackupSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultStorageBackupSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Local file path in which to store storage account backup.</p></summary>
-        public virtual string File { get; internal set; }
-        /// <summary><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        public virtual string Id { get; internal set; }
-        /// <summary><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault storage backup")
-              .Add("--file {value}", File)
-              .Add("--id {value}", Id)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultStorageListSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultStorageListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
-        public virtual int? Maxresults { get; internal set; }
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault storage list")
-              .Add("--maxresults {value}", Maxresults)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultStorageListDeletedSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultStorageListDeletedSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
-        public virtual int? Maxresults { get; internal set; }
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault storage list-deleted")
-              .Add("--maxresults {value}", Maxresults)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultStoragePurgeSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultStoragePurgeSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Name to identify the storage account in the vault.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault storage purge")
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultStorageRecoverSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultStorageRecoverSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Name to identify the storage account in the vault.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault storage recover")
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultStorageRegenerateKeySettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultStorageRegenerateKeySettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>The storage account key name.</p></summary>
-        public virtual string KeyName { get; internal set; }
-        /// <summary><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        public virtual string Id { get; internal set; }
-        /// <summary><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault storage regenerate-key")
-              .Add("--key-name {value}", KeyName)
-              .Add("--id {value}", Id)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultStorageRemoveSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultStorageRemoveSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        public virtual string Id { get; internal set; }
-        /// <summary><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault storage remove")
-              .Add("--id {value}", Id)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultStorageRestoreSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultStorageRestoreSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p></p></summary>
-        public virtual string FilePath { get; internal set; }
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault storage restore")
-              .Add("--file-path {value}", FilePath)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultStorageShowSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultStorageShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        public virtual string Id { get; internal set; }
-        /// <summary><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault storage show")
-              .Add("--id {value}", Id)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultStorageShowDeletedSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultStorageShowDeletedSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Name to identify the storage account in the vault.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault storage show-deleted")
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKeyvaultStorageUpdateSettings
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKeyvaultStorageUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>The current active storage account key name.</p></summary>
-        public virtual string ActiveKeyName { get; internal set; }
-        /// <summary><p>Whether keyvault should manage the storage account for the user.</p></summary>
-        public virtual bool? AutoRegenerateKey { get; internal set; }
-        /// <summary><p>Add the storage account in a disabled state.</p></summary>
-        public virtual bool? Disabled { get; internal set; }
-        /// <summary><p>The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.</p></summary>
-        public virtual string RegenerationPeriod { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        public virtual string Id { get; internal set; }
-        /// <summary><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("keyvault storage update")
-              .Add("--active-key-name {value}", ActiveKeyName)
-              .Add("--auto-regenerate-key", AutoRegenerateKey)
-              .Add("--disabled", Disabled)
-              .Add("--regeneration-period {value}", RegenerationPeriod)
-              .Add("--tags {value}", Tags)
-              .Add("--id {value}", Id)
-              .Add("--name {value}", Name)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureKeyvaultKeyBackupSettings
     /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
     [PublicAPI]
@@ -3589,18 +2369,154 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureKeyvaultCertificatePendingDeleteSettings
+    #region AzureKeyvaultNetworkRuleAddSettings
     /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureKeyvaultCertificatePendingDeleteSettings : ToolSettings
+    public partial class AzureKeyvaultNetworkRuleAddSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Name of the pending certificate.</p></summary>
-        public virtual string Name { get; internal set; }
         /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>IPv4 address or CIDR range.</p></summary>
+        public virtual string IpAddress { get; internal set; }
+        /// <summary><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p></summary>
+        public virtual string Subnet { get; internal set; }
+        /// <summary><p>Name of a virtual network.</p></summary>
+        public virtual string VnetName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault network-rule add")
+              .Add("--name {value}", Name)
+              .Add("--ip-address {value}", IpAddress)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subnet {value}", Subnet)
+              .Add("--vnet-name {value}", VnetName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultNetworkRuleListSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultNetworkRuleListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault network-rule list")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultNetworkRuleRemoveSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultNetworkRuleRemoveSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>IPv4 address or CIDR range.</p></summary>
+        public virtual string IpAddress { get; internal set; }
+        /// <summary><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p></summary>
+        public virtual string Subnet { get; internal set; }
+        /// <summary><p>Name of a virtual network.</p></summary>
+        public virtual string VnetName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault network-rule remove")
+              .Add("--name {value}", Name)
+              .Add("--ip-address {value}", IpAddress)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subnet {value}", Subnet)
+              .Add("--vnet-name {value}", VnetName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultSecretBackupSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultSecretBackupSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p></p></summary>
+        public virtual string FilePath { get; internal set; }
+        /// <summary><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
         public virtual string VaultName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -3615,7 +2531,9 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("keyvault certificate pending delete")
+              .Add("keyvault secret backup")
+              .Add("--file-path {value}", FilePath)
+              .Add("--id {value}", Id)
               .Add("--name {value}", Name)
               .Add("--vault-name {value}", VaultName)
               .Add("--debug {value}", Debug)
@@ -3627,26 +2545,185 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureKeyvaultCertificatePendingMergeSettings
+    #region AzureKeyvaultSecretDeleteSettings
     /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureKeyvaultCertificatePendingMergeSettings : ToolSettings
+    public partial class AzureKeyvaultSecretDeleteSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>File containing the certificate or certificate chain to merge.</p></summary>
+        /// <summary><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault secret delete")
+              .Add("--id {value}", Id)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultSecretDownloadSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultSecretDownloadSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>File to receive the secret contents.</p></summary>
         public virtual string File { get; internal set; }
-        /// <summary><p>Create certificate in disabled state.</p></summary>
-        public virtual bool? Disabled { get; internal set; }
-        /// <summary><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        public virtual string Expires { get; internal set; }
-        /// <summary><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        public virtual string NotBefore { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Name of the pending certificate.</p></summary>
+        /// <summary><p>Encoding of the destination file. By default, will look for the 'file-encoding' tag on the secret. Otherwise will assume 'utf-8'.</p></summary>
+        public virtual KeyvaultSecretEncoding Encoding { get; internal set; }
+        /// <summary><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>The secret version. If omitted, uses the latest version.</p></summary>
+        public virtual string Version { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault secret download")
+              .Add("--file {value}", File)
+              .Add("--encoding {value}", Encoding)
+              .Add("--id {value}", Id)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--version {value}", Version)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultSecretListSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultSecretListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Maximum number of results to return in a page. If not specified, the service will return up to 25 results.</p></summary>
+        public virtual int? Maxresults { get; internal set; }
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault secret list")
+              .Add("--maxresults {value}", Maxresults)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultSecretListDeletedSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultSecretListDeletedSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
+        public virtual int? Maxresults { get; internal set; }
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault secret list-deleted")
+              .Add("--maxresults {value}", Maxresults)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultSecretListVersionsSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultSecretListVersionsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Maximum number of results to return in a page. If not specified, the service will return up to 25 results.</p></summary>
+        public virtual int? Maxresults { get; internal set; }
+        /// <summary><p>Name of the secret.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of the key vault.</p></summary>
         public virtual string VaultName { get; internal set; }
@@ -3663,11 +2740,389 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("keyvault certificate pending merge")
-              .Add("--file {value}", File)
+              .Add("keyvault secret list-versions")
+              .Add("--maxresults {value}", Maxresults)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultSecretPurgeSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultSecretPurgeSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault secret purge")
+              .Add("--id {value}", Id)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultSecretRecoverSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultSecretRecoverSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault secret recover")
+              .Add("--id {value}", Id)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultSecretRestoreSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultSecretRestoreSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p></p></summary>
+        public virtual string FilePath { get; internal set; }
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault secret restore")
+              .Add("--file-path {value}", FilePath)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultSecretSetSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultSecretSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Description of the secret contents (e.g. password, connection string, etc).</p></summary>
+        public virtual string Description { get; internal set; }
+        /// <summary><p>Create secret in disabled state.</p></summary>
+        public virtual bool? Disabled { get; internal set; }
+        /// <summary><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        public virtual string Expires { get; internal set; }
+        /// <summary><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        public virtual string NotBefore { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Source file encoding. The value is saved as a tag (`file-encoding=&amp;lt;val&amp;gt;`) and used during download to automatically encode the resulting file.</p></summary>
+        public virtual KeyvaultSecretEncoding Encoding { get; internal set; }
+        /// <summary><p>Source file for secret. Use in conjunction with '--encoding'.</p></summary>
+        public virtual string File { get; internal set; }
+        /// <summary><p>Plain text secret value. Cannot be used with '--file' or '--encoding'.</p></summary>
+        public virtual string Value { get; internal set; }
+        /// <summary><p>Name of the secret.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault secret set")
+              .Add("--description {value}", Description)
               .Add("--disabled", Disabled)
               .Add("--expires {value}", Expires)
               .Add("--not-before {value}", NotBefore)
+              .Add("--tags {value}", Tags)
+              .Add("--encoding {value}", Encoding)
+              .Add("--file {value}", File)
+              .Add("--value {value}", Value)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultSecretSetAttributesSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultSecretSetAttributesSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Type of the secret value such as a password.</p></summary>
+        public virtual string ContentType { get; internal set; }
+        /// <summary><p>Enable the secret.</p></summary>
+        public virtual bool? Enabled { get; internal set; }
+        /// <summary><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        public virtual string Expires { get; internal set; }
+        /// <summary><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        public virtual string NotBefore { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>The secret version. If omitted, uses the latest version.</p></summary>
+        public virtual string Version { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault secret set-attributes")
+              .Add("--content-type {value}", ContentType)
+              .Add("--enabled", Enabled)
+              .Add("--expires {value}", Expires)
+              .Add("--not-before {value}", NotBefore)
+              .Add("--tags {value}", Tags)
+              .Add("--id {value}", Id)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--version {value}", Version)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultSecretShowSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultSecretShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>The secret version. If omitted, uses the latest version.</p></summary>
+        public virtual string Version { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault secret show")
+              .Add("--id {value}", Id)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--version {value}", Version)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultSecretShowDeletedSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultSecretShowDeletedSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Name of the secret. Required if --id is not specified.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault secret show-deleted")
+              .Add("--id {value}", Id)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultStorageAddSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultStorageAddSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Current active storage account key name.</p></summary>
+        public virtual string ActiveKeyName { get; internal set; }
+        /// <summary><p>Storage account resource id.</p></summary>
+        public virtual string ResourceId { get; internal set; }
+        /// <summary><p>Whether keyvault should manage the storage account for the user.</p></summary>
+        public virtual bool? AutoRegenerateKey { get; internal set; }
+        /// <summary><p>Add the storage account in a disabled state.</p></summary>
+        public virtual bool? Disabled { get; internal set; }
+        /// <summary><p>The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.</p></summary>
+        public virtual string RegenerationPeriod { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Name to identify the storage account in the vault.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault storage add")
+              .Add("--active-key-name {value}", ActiveKeyName)
+              .Add("--resource-id {value}", ResourceId)
+              .Add("--auto-regenerate-key", AutoRegenerateKey)
+              .Add("--disabled", Disabled)
+              .Add("--regeneration-period {value}", RegenerationPeriod)
               .Add("--tags {value}", Tags)
               .Add("--name {value}", Name)
               .Add("--vault-name {value}", VaultName)
@@ -3680,16 +3135,136 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureKeyvaultCertificatePendingShowSettings
+    #region AzureKeyvaultStorageBackupSettings
     /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureKeyvaultCertificatePendingShowSettings : ToolSettings
+    public partial class AzureKeyvaultStorageBackupSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
-        /// <summary><p>Name of the pending certificate.</p></summary>
+        /// <summary><p>Local file path in which to store storage account backup.</p></summary>
+        public virtual string File { get; internal set; }
+        /// <summary><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault storage backup")
+              .Add("--file {value}", File)
+              .Add("--id {value}", Id)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultStorageListSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultStorageListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
+        public virtual int? Maxresults { get; internal set; }
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault storage list")
+              .Add("--maxresults {value}", Maxresults)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultStorageListDeletedSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultStorageListDeletedSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
+        public virtual int? Maxresults { get; internal set; }
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault storage list-deleted")
+              .Add("--maxresults {value}", Maxresults)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultStoragePurgeSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultStoragePurgeSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Name to identify the storage account in the vault.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of the key vault.</p></summary>
         public virtual string VaultName { get; internal set; }
@@ -3706,7 +3281,303 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("keyvault certificate pending show")
+              .Add("keyvault storage purge")
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultStorageRecoverSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultStorageRecoverSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Name to identify the storage account in the vault.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault storage recover")
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultStorageRegenerateKeySettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultStorageRegenerateKeySettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>The storage account key name.</p></summary>
+        public virtual string KeyName { get; internal set; }
+        /// <summary><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault storage regenerate-key")
+              .Add("--key-name {value}", KeyName)
+              .Add("--id {value}", Id)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultStorageRemoveSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultStorageRemoveSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault storage remove")
+              .Add("--id {value}", Id)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultStorageRestoreSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultStorageRestoreSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p></p></summary>
+        public virtual string FilePath { get; internal set; }
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault storage restore")
+              .Add("--file-path {value}", FilePath)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultStorageShowSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultStorageShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault storage show")
+              .Add("--id {value}", Id)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultStorageShowDeletedSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultStorageShowDeletedSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Name to identify the storage account in the vault.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault storage show-deleted")
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultStorageUpdateSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultStorageUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>The current active storage account key name.</p></summary>
+        public virtual string ActiveKeyName { get; internal set; }
+        /// <summary><p>Whether keyvault should manage the storage account for the user.</p></summary>
+        public virtual bool? AutoRegenerateKey { get; internal set; }
+        /// <summary><p>Add the storage account in a disabled state.</p></summary>
+        public virtual bool? Disabled { get; internal set; }
+        /// <summary><p>The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.</p></summary>
+        public virtual string RegenerationPeriod { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        public virtual string Id { get; internal set; }
+        /// <summary><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault storage update")
+              .Add("--active-key-name {value}", ActiveKeyName)
+              .Add("--auto-regenerate-key", AutoRegenerateKey)
+              .Add("--disabled", Disabled)
+              .Add("--regeneration-period {value}", RegenerationPeriod)
+              .Add("--tags {value}", Tags)
+              .Add("--id {value}", Id)
               .Add("--name {value}", Name)
               .Add("--vault-name {value}", VaultName)
               .Add("--debug {value}", Debug)
@@ -4046,6 +3917,135 @@ namespace Nuke.Azure
               .Add("--account-id {value}", AccountId)
               .Add("--password {value}", Password, secret: true)
               .Add("--organization-id {value}", OrganizationId)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultCertificatePendingDeleteSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultCertificatePendingDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Name of the pending certificate.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault certificate pending delete")
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultCertificatePendingMergeSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultCertificatePendingMergeSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>File containing the certificate or certificate chain to merge.</p></summary>
+        public virtual string File { get; internal set; }
+        /// <summary><p>Create certificate in disabled state.</p></summary>
+        public virtual bool? Disabled { get; internal set; }
+        /// <summary><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        public virtual string Expires { get; internal set; }
+        /// <summary><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        public virtual string NotBefore { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Name of the pending certificate.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault certificate pending merge")
+              .Add("--file {value}", File)
+              .Add("--disabled", Disabled)
+              .Add("--expires {value}", Expires)
+              .Add("--not-before {value}", NotBefore)
+              .Add("--tags {value}", Tags)
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKeyvaultCertificatePendingShowSettings
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKeyvaultCertificatePendingShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureKeyvaultTasks.AzureKeyvaultPath;
+        /// <summary><p>Name of the pending certificate.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the key vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("keyvault certificate pending show")
+              .Add("--name {value}", Name)
+              .Add("--vault-name {value}", VaultName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -9193,4838 +9193,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureKeyvaultSecretBackupSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultSecretBackupSettingsExtensions
-    {
-        #region FilePath
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.FilePath"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings SetFilePath(this AzureKeyvaultSecretBackupSettings toolSettings, string filePath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilePath = filePath;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.FilePath"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings ResetFilePath(this AzureKeyvaultSecretBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilePath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Id
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings SetId(this AzureKeyvaultSecretBackupSettings toolSettings, string id)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = id;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings ResetId(this AzureKeyvaultSecretBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings SetName(this AzureKeyvaultSecretBackupSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings ResetName(this AzureKeyvaultSecretBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings SetVaultName(this AzureKeyvaultSecretBackupSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings ResetVaultName(this AzureKeyvaultSecretBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings SetDebug(this AzureKeyvaultSecretBackupSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings ResetDebug(this AzureKeyvaultSecretBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings SetHelp(this AzureKeyvaultSecretBackupSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings ResetHelp(this AzureKeyvaultSecretBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings SetOutput(this AzureKeyvaultSecretBackupSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings ResetOutput(this AzureKeyvaultSecretBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings SetQuery(this AzureKeyvaultSecretBackupSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings ResetQuery(this AzureKeyvaultSecretBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings SetVerbose(this AzureKeyvaultSecretBackupSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretBackupSettings ResetVerbose(this AzureKeyvaultSecretBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultSecretDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultSecretDeleteSettingsExtensions
-    {
-        #region Id
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings SetId(this AzureKeyvaultSecretDeleteSettings toolSettings, string id)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = id;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings ResetId(this AzureKeyvaultSecretDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings SetName(this AzureKeyvaultSecretDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings ResetName(this AzureKeyvaultSecretDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings SetVaultName(this AzureKeyvaultSecretDeleteSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings ResetVaultName(this AzureKeyvaultSecretDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings SetDebug(this AzureKeyvaultSecretDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings ResetDebug(this AzureKeyvaultSecretDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings SetHelp(this AzureKeyvaultSecretDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings ResetHelp(this AzureKeyvaultSecretDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings SetOutput(this AzureKeyvaultSecretDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings ResetOutput(this AzureKeyvaultSecretDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings SetQuery(this AzureKeyvaultSecretDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings ResetQuery(this AzureKeyvaultSecretDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings SetVerbose(this AzureKeyvaultSecretDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDeleteSettings ResetVerbose(this AzureKeyvaultSecretDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultSecretDownloadSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultSecretDownloadSettingsExtensions
-    {
-        #region File
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.File"/>.</em></p><p>File to receive the secret contents.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings SetFile(this AzureKeyvaultSecretDownloadSettings toolSettings, string file)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.File = file;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.File"/>.</em></p><p>File to receive the secret contents.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings ResetFile(this AzureKeyvaultSecretDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.File = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Encoding
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Encoding"/>.</em></p><p>Encoding of the destination file. By default, will look for the 'file-encoding' tag on the secret. Otherwise will assume 'utf-8'.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings SetEncoding(this AzureKeyvaultSecretDownloadSettings toolSettings, KeyvaultSecretEncoding encoding)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Encoding = encoding;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Encoding"/>.</em></p><p>Encoding of the destination file. By default, will look for the 'file-encoding' tag on the secret. Otherwise will assume 'utf-8'.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings ResetEncoding(this AzureKeyvaultSecretDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Encoding = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Id
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings SetId(this AzureKeyvaultSecretDownloadSettings toolSettings, string id)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = id;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings ResetId(this AzureKeyvaultSecretDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings SetName(this AzureKeyvaultSecretDownloadSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings ResetName(this AzureKeyvaultSecretDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings SetVaultName(this AzureKeyvaultSecretDownloadSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings ResetVaultName(this AzureKeyvaultSecretDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Version
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Version"/>.</em></p><p>The secret version. If omitted, uses the latest version.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings SetVersion(this AzureKeyvaultSecretDownloadSettings toolSettings, string version)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = version;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Version"/>.</em></p><p>The secret version. If omitted, uses the latest version.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings ResetVersion(this AzureKeyvaultSecretDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings SetDebug(this AzureKeyvaultSecretDownloadSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings ResetDebug(this AzureKeyvaultSecretDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings SetHelp(this AzureKeyvaultSecretDownloadSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings ResetHelp(this AzureKeyvaultSecretDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings SetOutput(this AzureKeyvaultSecretDownloadSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings ResetOutput(this AzureKeyvaultSecretDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings SetQuery(this AzureKeyvaultSecretDownloadSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings ResetQuery(this AzureKeyvaultSecretDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings SetVerbose(this AzureKeyvaultSecretDownloadSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretDownloadSettings ResetVerbose(this AzureKeyvaultSecretDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultSecretListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultSecretListSettingsExtensions
-    {
-        #region Maxresults
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified, the service will return up to 25 results.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings SetMaxresults(this AzureKeyvaultSecretListSettings toolSettings, int? maxresults)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Maxresults = maxresults;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified, the service will return up to 25 results.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings ResetMaxresults(this AzureKeyvaultSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Maxresults = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings SetVaultName(this AzureKeyvaultSecretListSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings ResetVaultName(this AzureKeyvaultSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings SetDebug(this AzureKeyvaultSecretListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings ResetDebug(this AzureKeyvaultSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings SetHelp(this AzureKeyvaultSecretListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings ResetHelp(this AzureKeyvaultSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings SetOutput(this AzureKeyvaultSecretListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings ResetOutput(this AzureKeyvaultSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings SetQuery(this AzureKeyvaultSecretListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings ResetQuery(this AzureKeyvaultSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings SetVerbose(this AzureKeyvaultSecretListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListSettings ResetVerbose(this AzureKeyvaultSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultSecretListDeletedSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultSecretListDeletedSettingsExtensions
-    {
-        #region Maxresults
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings SetMaxresults(this AzureKeyvaultSecretListDeletedSettings toolSettings, int? maxresults)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Maxresults = maxresults;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings ResetMaxresults(this AzureKeyvaultSecretListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Maxresults = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings SetVaultName(this AzureKeyvaultSecretListDeletedSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings ResetVaultName(this AzureKeyvaultSecretListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings SetDebug(this AzureKeyvaultSecretListDeletedSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings ResetDebug(this AzureKeyvaultSecretListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings SetHelp(this AzureKeyvaultSecretListDeletedSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings ResetHelp(this AzureKeyvaultSecretListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings SetOutput(this AzureKeyvaultSecretListDeletedSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings ResetOutput(this AzureKeyvaultSecretListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings SetQuery(this AzureKeyvaultSecretListDeletedSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings ResetQuery(this AzureKeyvaultSecretListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings SetVerbose(this AzureKeyvaultSecretListDeletedSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListDeletedSettings ResetVerbose(this AzureKeyvaultSecretListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultSecretListVersionsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultSecretListVersionsSettingsExtensions
-    {
-        #region Maxresults
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified, the service will return up to 25 results.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings SetMaxresults(this AzureKeyvaultSecretListVersionsSettings toolSettings, int? maxresults)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Maxresults = maxresults;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified, the service will return up to 25 results.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings ResetMaxresults(this AzureKeyvaultSecretListVersionsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Maxresults = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Name"/>.</em></p><p>Name of the secret.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings SetName(this AzureKeyvaultSecretListVersionsSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Name"/>.</em></p><p>Name of the secret.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings ResetName(this AzureKeyvaultSecretListVersionsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings SetVaultName(this AzureKeyvaultSecretListVersionsSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings ResetVaultName(this AzureKeyvaultSecretListVersionsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings SetDebug(this AzureKeyvaultSecretListVersionsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings ResetDebug(this AzureKeyvaultSecretListVersionsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings SetHelp(this AzureKeyvaultSecretListVersionsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings ResetHelp(this AzureKeyvaultSecretListVersionsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings SetOutput(this AzureKeyvaultSecretListVersionsSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings ResetOutput(this AzureKeyvaultSecretListVersionsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings SetQuery(this AzureKeyvaultSecretListVersionsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings ResetQuery(this AzureKeyvaultSecretListVersionsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings SetVerbose(this AzureKeyvaultSecretListVersionsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretListVersionsSettings ResetVerbose(this AzureKeyvaultSecretListVersionsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultSecretPurgeSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultSecretPurgeSettingsExtensions
-    {
-        #region Id
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Id"/>.</em></p><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings SetId(this AzureKeyvaultSecretPurgeSettings toolSettings, string id)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = id;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Id"/>.</em></p><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings ResetId(this AzureKeyvaultSecretPurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings SetName(this AzureKeyvaultSecretPurgeSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings ResetName(this AzureKeyvaultSecretPurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings SetVaultName(this AzureKeyvaultSecretPurgeSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings ResetVaultName(this AzureKeyvaultSecretPurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings SetDebug(this AzureKeyvaultSecretPurgeSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings ResetDebug(this AzureKeyvaultSecretPurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings SetHelp(this AzureKeyvaultSecretPurgeSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings ResetHelp(this AzureKeyvaultSecretPurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings SetOutput(this AzureKeyvaultSecretPurgeSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings ResetOutput(this AzureKeyvaultSecretPurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings SetQuery(this AzureKeyvaultSecretPurgeSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings ResetQuery(this AzureKeyvaultSecretPurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings SetVerbose(this AzureKeyvaultSecretPurgeSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretPurgeSettings ResetVerbose(this AzureKeyvaultSecretPurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultSecretRecoverSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultSecretRecoverSettingsExtensions
-    {
-        #region Id
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Id"/>.</em></p><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings SetId(this AzureKeyvaultSecretRecoverSettings toolSettings, string id)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = id;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Id"/>.</em></p><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings ResetId(this AzureKeyvaultSecretRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings SetName(this AzureKeyvaultSecretRecoverSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings ResetName(this AzureKeyvaultSecretRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings SetVaultName(this AzureKeyvaultSecretRecoverSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings ResetVaultName(this AzureKeyvaultSecretRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings SetDebug(this AzureKeyvaultSecretRecoverSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings ResetDebug(this AzureKeyvaultSecretRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings SetHelp(this AzureKeyvaultSecretRecoverSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings ResetHelp(this AzureKeyvaultSecretRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings SetOutput(this AzureKeyvaultSecretRecoverSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings ResetOutput(this AzureKeyvaultSecretRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings SetQuery(this AzureKeyvaultSecretRecoverSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings ResetQuery(this AzureKeyvaultSecretRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings SetVerbose(this AzureKeyvaultSecretRecoverSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRecoverSettings ResetVerbose(this AzureKeyvaultSecretRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultSecretRestoreSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultSecretRestoreSettingsExtensions
-    {
-        #region FilePath
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.FilePath"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings SetFilePath(this AzureKeyvaultSecretRestoreSettings toolSettings, string filePath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilePath = filePath;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.FilePath"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings ResetFilePath(this AzureKeyvaultSecretRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilePath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings SetVaultName(this AzureKeyvaultSecretRestoreSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings ResetVaultName(this AzureKeyvaultSecretRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings SetDebug(this AzureKeyvaultSecretRestoreSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings ResetDebug(this AzureKeyvaultSecretRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings SetHelp(this AzureKeyvaultSecretRestoreSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings ResetHelp(this AzureKeyvaultSecretRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings SetOutput(this AzureKeyvaultSecretRestoreSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings ResetOutput(this AzureKeyvaultSecretRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings SetQuery(this AzureKeyvaultSecretRestoreSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings ResetQuery(this AzureKeyvaultSecretRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings SetVerbose(this AzureKeyvaultSecretRestoreSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretRestoreSettings ResetVerbose(this AzureKeyvaultSecretRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultSecretSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultSecretSetSettingsExtensions
-    {
-        #region Description
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Description"/>.</em></p><p>Description of the secret contents (e.g. password, connection string, etc).</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetDescription(this AzureKeyvaultSecretSetSettings toolSettings, string description)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Description = description;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Description"/>.</em></p><p>Description of the secret contents (e.g. password, connection string, etc).</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetDescription(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Description = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Disabled
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Disabled"/>.</em></p><p>Create secret in disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetDisabled(this AzureKeyvaultSecretSetSettings toolSettings, bool? disabled)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = disabled;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Disabled"/>.</em></p><p>Create secret in disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetDisabled(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureKeyvaultSecretSetSettings.Disabled"/>.</em></p><p>Create secret in disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings EnableDisabled(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureKeyvaultSecretSetSettings.Disabled"/>.</em></p><p>Create secret in disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings DisableDisabled(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureKeyvaultSecretSetSettings.Disabled"/>.</em></p><p>Create secret in disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ToggleDisabled(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = !toolSettings.Disabled;
-            return toolSettings;
-        }
-        #endregion
-        #region Expires
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Expires"/>.</em></p><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetExpires(this AzureKeyvaultSecretSetSettings toolSettings, string expires)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expires = expires;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Expires"/>.</em></p><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetExpires(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expires = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NotBefore
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.NotBefore"/>.</em></p><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetNotBefore(this AzureKeyvaultSecretSetSettings toolSettings, string notBefore)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NotBefore = notBefore;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.NotBefore"/>.</em></p><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetNotBefore(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NotBefore = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetTags(this AzureKeyvaultSecretSetSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetTags(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Encoding
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Encoding"/>.</em></p><p>Source file encoding. The value is saved as a tag (`file-encoding=&amp;lt;val&amp;gt;`) and used during download to automatically encode the resulting file.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetEncoding(this AzureKeyvaultSecretSetSettings toolSettings, KeyvaultSecretEncoding encoding)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Encoding = encoding;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Encoding"/>.</em></p><p>Source file encoding. The value is saved as a tag (`file-encoding=&amp;lt;val&amp;gt;`) and used during download to automatically encode the resulting file.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetEncoding(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Encoding = null;
-            return toolSettings;
-        }
-        #endregion
-        #region File
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.File"/>.</em></p><p>Source file for secret. Use in conjunction with '--encoding'.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetFile(this AzureKeyvaultSecretSetSettings toolSettings, string file)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.File = file;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.File"/>.</em></p><p>Source file for secret. Use in conjunction with '--encoding'.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetFile(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.File = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Value
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Value"/>.</em></p><p>Plain text secret value. Cannot be used with '--file' or '--encoding'.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetValue(this AzureKeyvaultSecretSetSettings toolSettings, string value)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Value = value;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Value"/>.</em></p><p>Plain text secret value. Cannot be used with '--file' or '--encoding'.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetValue(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Value = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Name"/>.</em></p><p>Name of the secret.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetName(this AzureKeyvaultSecretSetSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Name"/>.</em></p><p>Name of the secret.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetName(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetVaultName(this AzureKeyvaultSecretSetSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetVaultName(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetDebug(this AzureKeyvaultSecretSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetDebug(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetHelp(this AzureKeyvaultSecretSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetHelp(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetOutput(this AzureKeyvaultSecretSetSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetOutput(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetQuery(this AzureKeyvaultSecretSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetQuery(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings SetVerbose(this AzureKeyvaultSecretSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetSettings ResetVerbose(this AzureKeyvaultSecretSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultSecretSetAttributesSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultSecretSetAttributesSettingsExtensions
-    {
-        #region ContentType
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.ContentType"/>.</em></p><p>Type of the secret value such as a password.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetContentType(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string contentType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ContentType = contentType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.ContentType"/>.</em></p><p>Type of the secret value such as a password.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetContentType(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ContentType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Enabled
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Enabled"/>.</em></p><p>Enable the secret.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetEnabled(this AzureKeyvaultSecretSetAttributesSettings toolSettings, bool? enabled)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Enabled = enabled;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Enabled"/>.</em></p><p>Enable the secret.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetEnabled(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Enabled = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureKeyvaultSecretSetAttributesSettings.Enabled"/>.</em></p><p>Enable the secret.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings EnableEnabled(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Enabled = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureKeyvaultSecretSetAttributesSettings.Enabled"/>.</em></p><p>Enable the secret.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings DisableEnabled(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Enabled = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureKeyvaultSecretSetAttributesSettings.Enabled"/>.</em></p><p>Enable the secret.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ToggleEnabled(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Enabled = !toolSettings.Enabled;
-            return toolSettings;
-        }
-        #endregion
-        #region Expires
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Expires"/>.</em></p><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetExpires(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string expires)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expires = expires;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Expires"/>.</em></p><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetExpires(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expires = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NotBefore
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.NotBefore"/>.</em></p><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetNotBefore(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string notBefore)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NotBefore = notBefore;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.NotBefore"/>.</em></p><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetNotBefore(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NotBefore = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetTags(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetTags(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Id
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetId(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string id)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = id;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetId(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetName(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetName(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetVaultName(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetVaultName(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Version
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Version"/>.</em></p><p>The secret version. If omitted, uses the latest version.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetVersion(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string version)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = version;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Version"/>.</em></p><p>The secret version. If omitted, uses the latest version.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetVersion(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetDebug(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetDebug(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetHelp(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetHelp(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetOutput(this AzureKeyvaultSecretSetAttributesSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetOutput(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetQuery(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetQuery(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings SetVerbose(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretSetAttributesSettings ResetVerbose(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultSecretShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultSecretShowSettingsExtensions
-    {
-        #region Id
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings SetId(this AzureKeyvaultSecretShowSettings toolSettings, string id)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = id;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings ResetId(this AzureKeyvaultSecretShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings SetName(this AzureKeyvaultSecretShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings ResetName(this AzureKeyvaultSecretShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings SetVaultName(this AzureKeyvaultSecretShowSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings ResetVaultName(this AzureKeyvaultSecretShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Version
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Version"/>.</em></p><p>The secret version. If omitted, uses the latest version.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings SetVersion(this AzureKeyvaultSecretShowSettings toolSettings, string version)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = version;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Version"/>.</em></p><p>The secret version. If omitted, uses the latest version.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings ResetVersion(this AzureKeyvaultSecretShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings SetDebug(this AzureKeyvaultSecretShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings ResetDebug(this AzureKeyvaultSecretShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings SetHelp(this AzureKeyvaultSecretShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings ResetHelp(this AzureKeyvaultSecretShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings SetOutput(this AzureKeyvaultSecretShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings ResetOutput(this AzureKeyvaultSecretShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings SetQuery(this AzureKeyvaultSecretShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings ResetQuery(this AzureKeyvaultSecretShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings SetVerbose(this AzureKeyvaultSecretShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowSettings ResetVerbose(this AzureKeyvaultSecretShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultSecretShowDeletedSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultSecretShowDeletedSettingsExtensions
-    {
-        #region Id
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Id"/>.</em></p><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings SetId(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string id)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = id;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Id"/>.</em></p><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings ResetId(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings SetName(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings ResetName(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings SetVaultName(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings ResetVaultName(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings SetDebug(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings ResetDebug(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings SetHelp(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings ResetHelp(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings SetOutput(this AzureKeyvaultSecretShowDeletedSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings ResetOutput(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings SetQuery(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings ResetQuery(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings SetVerbose(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultSecretShowDeletedSettings ResetVerbose(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultNetworkRuleAddSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultNetworkRuleAddSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Name"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings SetName(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Name"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings ResetName(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region IpAddress
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.IpAddress"/>.</em></p><p>IPv4 address or CIDR range.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings SetIpAddress(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string ipAddress)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IpAddress = ipAddress;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.IpAddress"/>.</em></p><p>IPv4 address or CIDR range.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings ResetIpAddress(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IpAddress = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.ResourceGroup"/>.</em></p><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings SetResourceGroup(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.ResourceGroup"/>.</em></p><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings ResetResourceGroup(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subnet
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Subnet"/>.</em></p><p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings SetSubnet(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string subnet)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subnet = subnet;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Subnet"/>.</em></p><p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings ResetSubnet(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subnet = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VnetName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.VnetName"/>.</em></p><p>Name of a virtual network.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings SetVnetName(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string vnetName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = vnetName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.VnetName"/>.</em></p><p>Name of a virtual network.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings ResetVnetName(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings SetDebug(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings ResetDebug(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings SetHelp(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings ResetHelp(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings SetOutput(this AzureKeyvaultNetworkRuleAddSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings ResetOutput(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings SetQuery(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings ResetQuery(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings SetVerbose(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleAddSettings ResetVerbose(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultNetworkRuleListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultNetworkRuleListSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.Name"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings SetName(this AzureKeyvaultNetworkRuleListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.Name"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings ResetName(this AzureKeyvaultNetworkRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.ResourceGroup"/>.</em></p><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings SetResourceGroup(this AzureKeyvaultNetworkRuleListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.ResourceGroup"/>.</em></p><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings ResetResourceGroup(this AzureKeyvaultNetworkRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings SetDebug(this AzureKeyvaultNetworkRuleListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings ResetDebug(this AzureKeyvaultNetworkRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings SetHelp(this AzureKeyvaultNetworkRuleListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings ResetHelp(this AzureKeyvaultNetworkRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings SetOutput(this AzureKeyvaultNetworkRuleListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings ResetOutput(this AzureKeyvaultNetworkRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings SetQuery(this AzureKeyvaultNetworkRuleListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings ResetQuery(this AzureKeyvaultNetworkRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings SetVerbose(this AzureKeyvaultNetworkRuleListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleListSettings ResetVerbose(this AzureKeyvaultNetworkRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultNetworkRuleRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultNetworkRuleRemoveSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Name"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings SetName(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Name"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings ResetName(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region IpAddress
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.IpAddress"/>.</em></p><p>IPv4 address or CIDR range.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings SetIpAddress(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string ipAddress)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IpAddress = ipAddress;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.IpAddress"/>.</em></p><p>IPv4 address or CIDR range.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings ResetIpAddress(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IpAddress = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.ResourceGroup"/>.</em></p><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings SetResourceGroup(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.ResourceGroup"/>.</em></p><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings ResetResourceGroup(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subnet
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Subnet"/>.</em></p><p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings SetSubnet(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string subnet)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subnet = subnet;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Subnet"/>.</em></p><p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings ResetSubnet(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subnet = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VnetName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.VnetName"/>.</em></p><p>Name of a virtual network.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings SetVnetName(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string vnetName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = vnetName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.VnetName"/>.</em></p><p>Name of a virtual network.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings ResetVnetName(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings SetDebug(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings ResetDebug(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings SetHelp(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings ResetHelp(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings SetOutput(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings ResetOutput(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings SetQuery(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings ResetQuery(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings SetVerbose(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultNetworkRuleRemoveSettings ResetVerbose(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultStorageAddSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultStorageAddSettingsExtensions
-    {
-        #region ActiveKeyName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.ActiveKeyName"/>.</em></p><p>Current active storage account key name.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings SetActiveKeyName(this AzureKeyvaultStorageAddSettings toolSettings, string activeKeyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActiveKeyName = activeKeyName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.ActiveKeyName"/>.</em></p><p>Current active storage account key name.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ResetActiveKeyName(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActiveKeyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceId
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.ResourceId"/>.</em></p><p>Storage account resource id.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings SetResourceId(this AzureKeyvaultStorageAddSettings toolSettings, string resourceId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceId = resourceId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.ResourceId"/>.</em></p><p>Storage account resource id.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ResetResourceId(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AutoRegenerateKey
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings SetAutoRegenerateKey(this AzureKeyvaultStorageAddSettings toolSettings, bool? autoRegenerateKey)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoRegenerateKey = autoRegenerateKey;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ResetAutoRegenerateKey(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoRegenerateKey = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureKeyvaultStorageAddSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings EnableAutoRegenerateKey(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoRegenerateKey = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureKeyvaultStorageAddSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings DisableAutoRegenerateKey(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoRegenerateKey = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureKeyvaultStorageAddSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ToggleAutoRegenerateKey(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoRegenerateKey = !toolSettings.AutoRegenerateKey;
-            return toolSettings;
-        }
-        #endregion
-        #region Disabled
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings SetDisabled(this AzureKeyvaultStorageAddSettings toolSettings, bool? disabled)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = disabled;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ResetDisabled(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureKeyvaultStorageAddSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings EnableDisabled(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureKeyvaultStorageAddSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings DisableDisabled(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureKeyvaultStorageAddSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ToggleDisabled(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = !toolSettings.Disabled;
-            return toolSettings;
-        }
-        #endregion
-        #region RegenerationPeriod
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.RegenerationPeriod"/>.</em></p><p>The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings SetRegenerationPeriod(this AzureKeyvaultStorageAddSettings toolSettings, string regenerationPeriod)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RegenerationPeriod = regenerationPeriod;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.RegenerationPeriod"/>.</em></p><p>The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ResetRegenerationPeriod(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RegenerationPeriod = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings SetTags(this AzureKeyvaultStorageAddSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ResetTags(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings SetName(this AzureKeyvaultStorageAddSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ResetName(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings SetVaultName(this AzureKeyvaultStorageAddSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ResetVaultName(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings SetDebug(this AzureKeyvaultStorageAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ResetDebug(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings SetHelp(this AzureKeyvaultStorageAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ResetHelp(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings SetOutput(this AzureKeyvaultStorageAddSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ResetOutput(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings SetQuery(this AzureKeyvaultStorageAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ResetQuery(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings SetVerbose(this AzureKeyvaultStorageAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageAddSettings ResetVerbose(this AzureKeyvaultStorageAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultStorageBackupSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultStorageBackupSettingsExtensions
-    {
-        #region File
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.File"/>.</em></p><p>Local file path in which to store storage account backup.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings SetFile(this AzureKeyvaultStorageBackupSettings toolSettings, string file)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.File = file;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.File"/>.</em></p><p>Local file path in which to store storage account backup.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings ResetFile(this AzureKeyvaultStorageBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.File = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Id
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings SetId(this AzureKeyvaultStorageBackupSettings toolSettings, string id)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = id;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings ResetId(this AzureKeyvaultStorageBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings SetName(this AzureKeyvaultStorageBackupSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings ResetName(this AzureKeyvaultStorageBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings SetVaultName(this AzureKeyvaultStorageBackupSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings ResetVaultName(this AzureKeyvaultStorageBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings SetDebug(this AzureKeyvaultStorageBackupSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings ResetDebug(this AzureKeyvaultStorageBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings SetHelp(this AzureKeyvaultStorageBackupSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings ResetHelp(this AzureKeyvaultStorageBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings SetOutput(this AzureKeyvaultStorageBackupSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings ResetOutput(this AzureKeyvaultStorageBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings SetQuery(this AzureKeyvaultStorageBackupSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings ResetQuery(this AzureKeyvaultStorageBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings SetVerbose(this AzureKeyvaultStorageBackupSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageBackupSettings ResetVerbose(this AzureKeyvaultStorageBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultStorageListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultStorageListSettingsExtensions
-    {
-        #region Maxresults
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings SetMaxresults(this AzureKeyvaultStorageListSettings toolSettings, int? maxresults)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Maxresults = maxresults;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings ResetMaxresults(this AzureKeyvaultStorageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Maxresults = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings SetVaultName(this AzureKeyvaultStorageListSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings ResetVaultName(this AzureKeyvaultStorageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings SetDebug(this AzureKeyvaultStorageListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings ResetDebug(this AzureKeyvaultStorageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings SetHelp(this AzureKeyvaultStorageListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings ResetHelp(this AzureKeyvaultStorageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings SetOutput(this AzureKeyvaultStorageListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings ResetOutput(this AzureKeyvaultStorageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings SetQuery(this AzureKeyvaultStorageListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings ResetQuery(this AzureKeyvaultStorageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings SetVerbose(this AzureKeyvaultStorageListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListSettings ResetVerbose(this AzureKeyvaultStorageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultStorageListDeletedSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultStorageListDeletedSettingsExtensions
-    {
-        #region Maxresults
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings SetMaxresults(this AzureKeyvaultStorageListDeletedSettings toolSettings, int? maxresults)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Maxresults = maxresults;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings ResetMaxresults(this AzureKeyvaultStorageListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Maxresults = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings SetVaultName(this AzureKeyvaultStorageListDeletedSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings ResetVaultName(this AzureKeyvaultStorageListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings SetDebug(this AzureKeyvaultStorageListDeletedSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings ResetDebug(this AzureKeyvaultStorageListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings SetHelp(this AzureKeyvaultStorageListDeletedSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings ResetHelp(this AzureKeyvaultStorageListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings SetOutput(this AzureKeyvaultStorageListDeletedSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings ResetOutput(this AzureKeyvaultStorageListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings SetQuery(this AzureKeyvaultStorageListDeletedSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings ResetQuery(this AzureKeyvaultStorageListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings SetVerbose(this AzureKeyvaultStorageListDeletedSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageListDeletedSettings ResetVerbose(this AzureKeyvaultStorageListDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultStoragePurgeSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultStoragePurgeSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings SetName(this AzureKeyvaultStoragePurgeSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings ResetName(this AzureKeyvaultStoragePurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings SetVaultName(this AzureKeyvaultStoragePurgeSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings ResetVaultName(this AzureKeyvaultStoragePurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings SetDebug(this AzureKeyvaultStoragePurgeSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings ResetDebug(this AzureKeyvaultStoragePurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings SetHelp(this AzureKeyvaultStoragePurgeSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings ResetHelp(this AzureKeyvaultStoragePurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings SetOutput(this AzureKeyvaultStoragePurgeSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings ResetOutput(this AzureKeyvaultStoragePurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings SetQuery(this AzureKeyvaultStoragePurgeSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings ResetQuery(this AzureKeyvaultStoragePurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings SetVerbose(this AzureKeyvaultStoragePurgeSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStoragePurgeSettings ResetVerbose(this AzureKeyvaultStoragePurgeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultStorageRecoverSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultStorageRecoverSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings SetName(this AzureKeyvaultStorageRecoverSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings ResetName(this AzureKeyvaultStorageRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings SetVaultName(this AzureKeyvaultStorageRecoverSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings ResetVaultName(this AzureKeyvaultStorageRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings SetDebug(this AzureKeyvaultStorageRecoverSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings ResetDebug(this AzureKeyvaultStorageRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings SetHelp(this AzureKeyvaultStorageRecoverSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings ResetHelp(this AzureKeyvaultStorageRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings SetOutput(this AzureKeyvaultStorageRecoverSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings ResetOutput(this AzureKeyvaultStorageRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings SetQuery(this AzureKeyvaultStorageRecoverSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings ResetQuery(this AzureKeyvaultStorageRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings SetVerbose(this AzureKeyvaultStorageRecoverSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRecoverSettings ResetVerbose(this AzureKeyvaultStorageRecoverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultStorageRegenerateKeySettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultStorageRegenerateKeySettingsExtensions
-    {
-        #region KeyName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.KeyName"/>.</em></p><p>The storage account key name.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings SetKeyName(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string keyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyName = keyName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.KeyName"/>.</em></p><p>The storage account key name.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings ResetKeyName(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Id
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings SetId(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string id)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = id;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings ResetId(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings SetName(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings ResetName(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings SetVaultName(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings ResetVaultName(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings SetDebug(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings ResetDebug(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings SetHelp(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings ResetHelp(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings SetOutput(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings ResetOutput(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings SetQuery(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings ResetQuery(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings SetVerbose(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRegenerateKeySettings ResetVerbose(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultStorageRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultStorageRemoveSettingsExtensions
-    {
-        #region Id
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings SetId(this AzureKeyvaultStorageRemoveSettings toolSettings, string id)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = id;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings ResetId(this AzureKeyvaultStorageRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings SetName(this AzureKeyvaultStorageRemoveSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings ResetName(this AzureKeyvaultStorageRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings SetVaultName(this AzureKeyvaultStorageRemoveSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings ResetVaultName(this AzureKeyvaultStorageRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings SetDebug(this AzureKeyvaultStorageRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings ResetDebug(this AzureKeyvaultStorageRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings SetHelp(this AzureKeyvaultStorageRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings ResetHelp(this AzureKeyvaultStorageRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings SetOutput(this AzureKeyvaultStorageRemoveSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings ResetOutput(this AzureKeyvaultStorageRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings SetQuery(this AzureKeyvaultStorageRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings ResetQuery(this AzureKeyvaultStorageRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings SetVerbose(this AzureKeyvaultStorageRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRemoveSettings ResetVerbose(this AzureKeyvaultStorageRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultStorageRestoreSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultStorageRestoreSettingsExtensions
-    {
-        #region FilePath
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.FilePath"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings SetFilePath(this AzureKeyvaultStorageRestoreSettings toolSettings, string filePath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilePath = filePath;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.FilePath"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings ResetFilePath(this AzureKeyvaultStorageRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilePath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings SetVaultName(this AzureKeyvaultStorageRestoreSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings ResetVaultName(this AzureKeyvaultStorageRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings SetDebug(this AzureKeyvaultStorageRestoreSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings ResetDebug(this AzureKeyvaultStorageRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings SetHelp(this AzureKeyvaultStorageRestoreSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings ResetHelp(this AzureKeyvaultStorageRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings SetOutput(this AzureKeyvaultStorageRestoreSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings ResetOutput(this AzureKeyvaultStorageRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings SetQuery(this AzureKeyvaultStorageRestoreSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings ResetQuery(this AzureKeyvaultStorageRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings SetVerbose(this AzureKeyvaultStorageRestoreSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageRestoreSettings ResetVerbose(this AzureKeyvaultStorageRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultStorageShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultStorageShowSettingsExtensions
-    {
-        #region Id
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings SetId(this AzureKeyvaultStorageShowSettings toolSettings, string id)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = id;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings ResetId(this AzureKeyvaultStorageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings SetName(this AzureKeyvaultStorageShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings ResetName(this AzureKeyvaultStorageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings SetVaultName(this AzureKeyvaultStorageShowSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings ResetVaultName(this AzureKeyvaultStorageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings SetDebug(this AzureKeyvaultStorageShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings ResetDebug(this AzureKeyvaultStorageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings SetHelp(this AzureKeyvaultStorageShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings ResetHelp(this AzureKeyvaultStorageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings SetOutput(this AzureKeyvaultStorageShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings ResetOutput(this AzureKeyvaultStorageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings SetQuery(this AzureKeyvaultStorageShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings ResetQuery(this AzureKeyvaultStorageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings SetVerbose(this AzureKeyvaultStorageShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowSettings ResetVerbose(this AzureKeyvaultStorageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultStorageShowDeletedSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultStorageShowDeletedSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings SetName(this AzureKeyvaultStorageShowDeletedSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings ResetName(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings SetVaultName(this AzureKeyvaultStorageShowDeletedSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings ResetVaultName(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings SetDebug(this AzureKeyvaultStorageShowDeletedSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings ResetDebug(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings SetHelp(this AzureKeyvaultStorageShowDeletedSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings ResetHelp(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings SetOutput(this AzureKeyvaultStorageShowDeletedSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings ResetOutput(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings SetQuery(this AzureKeyvaultStorageShowDeletedSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings ResetQuery(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings SetVerbose(this AzureKeyvaultStorageShowDeletedSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageShowDeletedSettings ResetVerbose(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKeyvaultStorageUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultStorageUpdateSettingsExtensions
-    {
-        #region ActiveKeyName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.ActiveKeyName"/>.</em></p><p>The current active storage account key name.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings SetActiveKeyName(this AzureKeyvaultStorageUpdateSettings toolSettings, string activeKeyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActiveKeyName = activeKeyName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.ActiveKeyName"/>.</em></p><p>The current active storage account key name.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ResetActiveKeyName(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActiveKeyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AutoRegenerateKey
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings SetAutoRegenerateKey(this AzureKeyvaultStorageUpdateSettings toolSettings, bool? autoRegenerateKey)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoRegenerateKey = autoRegenerateKey;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ResetAutoRegenerateKey(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoRegenerateKey = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureKeyvaultStorageUpdateSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings EnableAutoRegenerateKey(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoRegenerateKey = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureKeyvaultStorageUpdateSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings DisableAutoRegenerateKey(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoRegenerateKey = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureKeyvaultStorageUpdateSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ToggleAutoRegenerateKey(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoRegenerateKey = !toolSettings.AutoRegenerateKey;
-            return toolSettings;
-        }
-        #endregion
-        #region Disabled
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings SetDisabled(this AzureKeyvaultStorageUpdateSettings toolSettings, bool? disabled)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = disabled;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ResetDisabled(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureKeyvaultStorageUpdateSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings EnableDisabled(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureKeyvaultStorageUpdateSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings DisableDisabled(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureKeyvaultStorageUpdateSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ToggleDisabled(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = !toolSettings.Disabled;
-            return toolSettings;
-        }
-        #endregion
-        #region RegenerationPeriod
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.RegenerationPeriod"/>.</em></p><p>The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings SetRegenerationPeriod(this AzureKeyvaultStorageUpdateSettings toolSettings, string regenerationPeriod)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RegenerationPeriod = regenerationPeriod;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.RegenerationPeriod"/>.</em></p><p>The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ResetRegenerationPeriod(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RegenerationPeriod = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings SetTags(this AzureKeyvaultStorageUpdateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ResetTags(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Id
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings SetId(this AzureKeyvaultStorageUpdateSettings toolSettings, string id)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = id;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ResetId(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Id = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings SetName(this AzureKeyvaultStorageUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ResetName(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings SetVaultName(this AzureKeyvaultStorageUpdateSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ResetVaultName(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings SetDebug(this AzureKeyvaultStorageUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ResetDebug(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings SetHelp(this AzureKeyvaultStorageUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ResetHelp(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings SetOutput(this AzureKeyvaultStorageUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ResetOutput(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings SetQuery(this AzureKeyvaultStorageUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ResetQuery(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings SetVerbose(this AzureKeyvaultStorageUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureKeyvaultStorageUpdateSettings ResetVerbose(this AzureKeyvaultStorageUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureKeyvaultKeyBackupSettingsExtensions
     /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
     [PublicAPI]
@@ -16577,60 +11745,114 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureKeyvaultCertificatePendingDeleteSettingsExtensions
+    #region AzureKeyvaultNetworkRuleAddSettingsExtensions
     /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultCertificatePendingDeleteSettingsExtensions
+    public static partial class AzureKeyvaultNetworkRuleAddSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Name"/>.</em></p><p>Name of the pending certificate.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Name"/>.</em></p><p>Name of the key vault.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings SetName(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, string name)
+        public static AzureKeyvaultNetworkRuleAddSettings SetName(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Name"/>.</em></p><p>Name of the pending certificate.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Name"/>.</em></p><p>Name of the key vault.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings ResetName(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        public static AzureKeyvaultNetworkRuleAddSettings ResetName(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
             return toolSettings;
         }
         #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        #region IpAddress
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.IpAddress"/>.</em></p><p>IPv4 address or CIDR range.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings SetVaultName(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, string vaultName)
+        public static AzureKeyvaultNetworkRuleAddSettings SetIpAddress(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string ipAddress)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
+            toolSettings.IpAddress = ipAddress;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.IpAddress"/>.</em></p><p>IPv4 address or CIDR range.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings ResetVaultName(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        public static AzureKeyvaultNetworkRuleAddSettings ResetIpAddress(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
+            toolSettings.IpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.ResourceGroup"/>.</em></p><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleAddSettings SetResourceGroup(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.ResourceGroup"/>.</em></p><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleAddSettings ResetResourceGroup(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subnet
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Subnet"/>.</em></p><p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleAddSettings SetSubnet(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string subnet)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = subnet;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Subnet"/>.</em></p><p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleAddSettings ResetSubnet(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.VnetName"/>.</em></p><p>Name of a virtual network.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleAddSettings SetVnetName(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string vnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = vnetName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.VnetName"/>.</em></p><p>Name of a virtual network.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleAddSettings ResetVnetName(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings SetDebug(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, string debug)
+        public static AzureKeyvaultNetworkRuleAddSettings SetDebug(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings ResetDebug(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        public static AzureKeyvaultNetworkRuleAddSettings ResetDebug(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -16638,17 +11860,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings SetHelp(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, string help)
+        public static AzureKeyvaultNetworkRuleAddSettings SetHelp(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings ResetHelp(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        public static AzureKeyvaultNetworkRuleAddSettings ResetHelp(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -16656,17 +11878,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings SetOutput(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, AzureOutput output)
+        public static AzureKeyvaultNetworkRuleAddSettings SetOutput(this AzureKeyvaultNetworkRuleAddSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings ResetOutput(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        public static AzureKeyvaultNetworkRuleAddSettings ResetOutput(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -16674,17 +11896,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings SetQuery(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, string query)
+        public static AzureKeyvaultNetworkRuleAddSettings SetQuery(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings ResetQuery(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        public static AzureKeyvaultNetworkRuleAddSettings ResetQuery(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -16692,17 +11914,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings SetVerbose(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, string verbose)
+        public static AzureKeyvaultNetworkRuleAddSettings SetVerbose(this AzureKeyvaultNetworkRuleAddSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingDeleteSettings ResetVerbose(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        public static AzureKeyvaultNetworkRuleAddSettings ResetVerbose(this AzureKeyvaultNetworkRuleAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -16711,66 +11933,1774 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureKeyvaultCertificatePendingMergeSettingsExtensions
+    #region AzureKeyvaultNetworkRuleListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultCertificatePendingMergeSettingsExtensions
+    public static partial class AzureKeyvaultNetworkRuleListSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.Name"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings SetName(this AzureKeyvaultNetworkRuleListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.Name"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings ResetName(this AzureKeyvaultNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.ResourceGroup"/>.</em></p><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings SetResourceGroup(this AzureKeyvaultNetworkRuleListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.ResourceGroup"/>.</em></p><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings ResetResourceGroup(this AzureKeyvaultNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings SetDebug(this AzureKeyvaultNetworkRuleListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings ResetDebug(this AzureKeyvaultNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings SetHelp(this AzureKeyvaultNetworkRuleListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings ResetHelp(this AzureKeyvaultNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings SetOutput(this AzureKeyvaultNetworkRuleListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings ResetOutput(this AzureKeyvaultNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings SetQuery(this AzureKeyvaultNetworkRuleListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings ResetQuery(this AzureKeyvaultNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings SetVerbose(this AzureKeyvaultNetworkRuleListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleListSettings ResetVerbose(this AzureKeyvaultNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultNetworkRuleRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultNetworkRuleRemoveSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Name"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings SetName(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Name"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings ResetName(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IpAddress
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.IpAddress"/>.</em></p><p>IPv4 address or CIDR range.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings SetIpAddress(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string ipAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IpAddress = ipAddress;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.IpAddress"/>.</em></p><p>IPv4 address or CIDR range.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings ResetIpAddress(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.ResourceGroup"/>.</em></p><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings SetResourceGroup(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.ResourceGroup"/>.</em></p><p>Proceed only if Key Vault belongs to the specified resource group.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings ResetResourceGroup(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subnet
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Subnet"/>.</em></p><p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings SetSubnet(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string subnet)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = subnet;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Subnet"/>.</em></p><p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings ResetSubnet(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.VnetName"/>.</em></p><p>Name of a virtual network.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings SetVnetName(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string vnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = vnetName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.VnetName"/>.</em></p><p>Name of a virtual network.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings ResetVnetName(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings SetDebug(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings ResetDebug(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings SetHelp(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings ResetHelp(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings SetOutput(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings ResetOutput(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings SetQuery(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings ResetQuery(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings SetVerbose(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultNetworkRuleRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultNetworkRuleRemoveSettings ResetVerbose(this AzureKeyvaultNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultSecretBackupSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultSecretBackupSettingsExtensions
+    {
+        #region FilePath
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.FilePath"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings SetFilePath(this AzureKeyvaultSecretBackupSettings toolSettings, string filePath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilePath = filePath;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.FilePath"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings ResetFilePath(this AzureKeyvaultSecretBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilePath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings SetId(this AzureKeyvaultSecretBackupSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings ResetId(this AzureKeyvaultSecretBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings SetName(this AzureKeyvaultSecretBackupSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings ResetName(this AzureKeyvaultSecretBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings SetVaultName(this AzureKeyvaultSecretBackupSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings ResetVaultName(this AzureKeyvaultSecretBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings SetDebug(this AzureKeyvaultSecretBackupSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings ResetDebug(this AzureKeyvaultSecretBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings SetHelp(this AzureKeyvaultSecretBackupSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings ResetHelp(this AzureKeyvaultSecretBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings SetOutput(this AzureKeyvaultSecretBackupSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings ResetOutput(this AzureKeyvaultSecretBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings SetQuery(this AzureKeyvaultSecretBackupSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings ResetQuery(this AzureKeyvaultSecretBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretBackupSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings SetVerbose(this AzureKeyvaultSecretBackupSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretBackupSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretBackupSettings ResetVerbose(this AzureKeyvaultSecretBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultSecretDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultSecretDeleteSettingsExtensions
+    {
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings SetId(this AzureKeyvaultSecretDeleteSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings ResetId(this AzureKeyvaultSecretDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings SetName(this AzureKeyvaultSecretDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings ResetName(this AzureKeyvaultSecretDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings SetVaultName(this AzureKeyvaultSecretDeleteSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings ResetVaultName(this AzureKeyvaultSecretDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings SetDebug(this AzureKeyvaultSecretDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings ResetDebug(this AzureKeyvaultSecretDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings SetHelp(this AzureKeyvaultSecretDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings ResetHelp(this AzureKeyvaultSecretDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings SetOutput(this AzureKeyvaultSecretDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings ResetOutput(this AzureKeyvaultSecretDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings SetQuery(this AzureKeyvaultSecretDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings ResetQuery(this AzureKeyvaultSecretDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings SetVerbose(this AzureKeyvaultSecretDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDeleteSettings ResetVerbose(this AzureKeyvaultSecretDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultSecretDownloadSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultSecretDownloadSettingsExtensions
     {
         #region File
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.File"/>.</em></p><p>File containing the certificate or certificate chain to merge.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.File"/>.</em></p><p>File to receive the secret contents.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings SetFile(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string file)
+        public static AzureKeyvaultSecretDownloadSettings SetFile(this AzureKeyvaultSecretDownloadSettings toolSettings, string file)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.File = file;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.File"/>.</em></p><p>File containing the certificate or certificate chain to merge.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.File"/>.</em></p><p>File to receive the secret contents.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings ResetFile(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretDownloadSettings ResetFile(this AzureKeyvaultSecretDownloadSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.File = null;
             return toolSettings;
         }
         #endregion
-        #region Disabled
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Disabled"/>.</em></p><p>Create certificate in disabled state.</p></summary>
+        #region Encoding
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Encoding"/>.</em></p><p>Encoding of the destination file. By default, will look for the 'file-encoding' tag on the secret. Otherwise will assume 'utf-8'.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings SetDisabled(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, bool? disabled)
+        public static AzureKeyvaultSecretDownloadSettings SetEncoding(this AzureKeyvaultSecretDownloadSettings toolSettings, KeyvaultSecretEncoding encoding)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Encoding = encoding;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Encoding"/>.</em></p><p>Encoding of the destination file. By default, will look for the 'file-encoding' tag on the secret. Otherwise will assume 'utf-8'.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings ResetEncoding(this AzureKeyvaultSecretDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Encoding = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings SetId(this AzureKeyvaultSecretDownloadSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings ResetId(this AzureKeyvaultSecretDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings SetName(this AzureKeyvaultSecretDownloadSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings ResetName(this AzureKeyvaultSecretDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings SetVaultName(this AzureKeyvaultSecretDownloadSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings ResetVaultName(this AzureKeyvaultSecretDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Version
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Version"/>.</em></p><p>The secret version. If omitted, uses the latest version.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings SetVersion(this AzureKeyvaultSecretDownloadSettings toolSettings, string version)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = version;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Version"/>.</em></p><p>The secret version. If omitted, uses the latest version.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings ResetVersion(this AzureKeyvaultSecretDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings SetDebug(this AzureKeyvaultSecretDownloadSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings ResetDebug(this AzureKeyvaultSecretDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings SetHelp(this AzureKeyvaultSecretDownloadSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings ResetHelp(this AzureKeyvaultSecretDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings SetOutput(this AzureKeyvaultSecretDownloadSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings ResetOutput(this AzureKeyvaultSecretDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings SetQuery(this AzureKeyvaultSecretDownloadSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings ResetQuery(this AzureKeyvaultSecretDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings SetVerbose(this AzureKeyvaultSecretDownloadSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretDownloadSettings ResetVerbose(this AzureKeyvaultSecretDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultSecretListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultSecretListSettingsExtensions
+    {
+        #region Maxresults
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified, the service will return up to 25 results.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings SetMaxresults(this AzureKeyvaultSecretListSettings toolSettings, int? maxresults)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Maxresults = maxresults;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified, the service will return up to 25 results.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings ResetMaxresults(this AzureKeyvaultSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Maxresults = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings SetVaultName(this AzureKeyvaultSecretListSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings ResetVaultName(this AzureKeyvaultSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings SetDebug(this AzureKeyvaultSecretListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings ResetDebug(this AzureKeyvaultSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings SetHelp(this AzureKeyvaultSecretListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings ResetHelp(this AzureKeyvaultSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings SetOutput(this AzureKeyvaultSecretListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings ResetOutput(this AzureKeyvaultSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings SetQuery(this AzureKeyvaultSecretListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings ResetQuery(this AzureKeyvaultSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings SetVerbose(this AzureKeyvaultSecretListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListSettings ResetVerbose(this AzureKeyvaultSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultSecretListDeletedSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultSecretListDeletedSettingsExtensions
+    {
+        #region Maxresults
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings SetMaxresults(this AzureKeyvaultSecretListDeletedSettings toolSettings, int? maxresults)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Maxresults = maxresults;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings ResetMaxresults(this AzureKeyvaultSecretListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Maxresults = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings SetVaultName(this AzureKeyvaultSecretListDeletedSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings ResetVaultName(this AzureKeyvaultSecretListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings SetDebug(this AzureKeyvaultSecretListDeletedSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings ResetDebug(this AzureKeyvaultSecretListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings SetHelp(this AzureKeyvaultSecretListDeletedSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings ResetHelp(this AzureKeyvaultSecretListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings SetOutput(this AzureKeyvaultSecretListDeletedSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings ResetOutput(this AzureKeyvaultSecretListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings SetQuery(this AzureKeyvaultSecretListDeletedSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings ResetQuery(this AzureKeyvaultSecretListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings SetVerbose(this AzureKeyvaultSecretListDeletedSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListDeletedSettings ResetVerbose(this AzureKeyvaultSecretListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultSecretListVersionsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultSecretListVersionsSettingsExtensions
+    {
+        #region Maxresults
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified, the service will return up to 25 results.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings SetMaxresults(this AzureKeyvaultSecretListVersionsSettings toolSettings, int? maxresults)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Maxresults = maxresults;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified, the service will return up to 25 results.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings ResetMaxresults(this AzureKeyvaultSecretListVersionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Maxresults = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Name"/>.</em></p><p>Name of the secret.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings SetName(this AzureKeyvaultSecretListVersionsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Name"/>.</em></p><p>Name of the secret.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings ResetName(this AzureKeyvaultSecretListVersionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings SetVaultName(this AzureKeyvaultSecretListVersionsSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings ResetVaultName(this AzureKeyvaultSecretListVersionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings SetDebug(this AzureKeyvaultSecretListVersionsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings ResetDebug(this AzureKeyvaultSecretListVersionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings SetHelp(this AzureKeyvaultSecretListVersionsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings ResetHelp(this AzureKeyvaultSecretListVersionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings SetOutput(this AzureKeyvaultSecretListVersionsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings ResetOutput(this AzureKeyvaultSecretListVersionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings SetQuery(this AzureKeyvaultSecretListVersionsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings ResetQuery(this AzureKeyvaultSecretListVersionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretListVersionsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings SetVerbose(this AzureKeyvaultSecretListVersionsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretListVersionsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretListVersionsSettings ResetVerbose(this AzureKeyvaultSecretListVersionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultSecretPurgeSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultSecretPurgeSettingsExtensions
+    {
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Id"/>.</em></p><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings SetId(this AzureKeyvaultSecretPurgeSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Id"/>.</em></p><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings ResetId(this AzureKeyvaultSecretPurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings SetName(this AzureKeyvaultSecretPurgeSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings ResetName(this AzureKeyvaultSecretPurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings SetVaultName(this AzureKeyvaultSecretPurgeSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings ResetVaultName(this AzureKeyvaultSecretPurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings SetDebug(this AzureKeyvaultSecretPurgeSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings ResetDebug(this AzureKeyvaultSecretPurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings SetHelp(this AzureKeyvaultSecretPurgeSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings ResetHelp(this AzureKeyvaultSecretPurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings SetOutput(this AzureKeyvaultSecretPurgeSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings ResetOutput(this AzureKeyvaultSecretPurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings SetQuery(this AzureKeyvaultSecretPurgeSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings ResetQuery(this AzureKeyvaultSecretPurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretPurgeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings SetVerbose(this AzureKeyvaultSecretPurgeSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretPurgeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretPurgeSettings ResetVerbose(this AzureKeyvaultSecretPurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultSecretRecoverSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultSecretRecoverSettingsExtensions
+    {
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Id"/>.</em></p><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings SetId(this AzureKeyvaultSecretRecoverSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Id"/>.</em></p><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings ResetId(this AzureKeyvaultSecretRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings SetName(this AzureKeyvaultSecretRecoverSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings ResetName(this AzureKeyvaultSecretRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings SetVaultName(this AzureKeyvaultSecretRecoverSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings ResetVaultName(this AzureKeyvaultSecretRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings SetDebug(this AzureKeyvaultSecretRecoverSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings ResetDebug(this AzureKeyvaultSecretRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings SetHelp(this AzureKeyvaultSecretRecoverSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings ResetHelp(this AzureKeyvaultSecretRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings SetOutput(this AzureKeyvaultSecretRecoverSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings ResetOutput(this AzureKeyvaultSecretRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings SetQuery(this AzureKeyvaultSecretRecoverSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings ResetQuery(this AzureKeyvaultSecretRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRecoverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings SetVerbose(this AzureKeyvaultSecretRecoverSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRecoverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRecoverSettings ResetVerbose(this AzureKeyvaultSecretRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultSecretRestoreSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultSecretRestoreSettingsExtensions
+    {
+        #region FilePath
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.FilePath"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings SetFilePath(this AzureKeyvaultSecretRestoreSettings toolSettings, string filePath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilePath = filePath;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.FilePath"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings ResetFilePath(this AzureKeyvaultSecretRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilePath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings SetVaultName(this AzureKeyvaultSecretRestoreSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings ResetVaultName(this AzureKeyvaultSecretRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings SetDebug(this AzureKeyvaultSecretRestoreSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings ResetDebug(this AzureKeyvaultSecretRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings SetHelp(this AzureKeyvaultSecretRestoreSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings ResetHelp(this AzureKeyvaultSecretRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings SetOutput(this AzureKeyvaultSecretRestoreSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings ResetOutput(this AzureKeyvaultSecretRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings SetQuery(this AzureKeyvaultSecretRestoreSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings ResetQuery(this AzureKeyvaultSecretRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings SetVerbose(this AzureKeyvaultSecretRestoreSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretRestoreSettings ResetVerbose(this AzureKeyvaultSecretRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultSecretSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultSecretSetSettingsExtensions
+    {
+        #region Description
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Description"/>.</em></p><p>Description of the secret contents (e.g. password, connection string, etc).</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetSettings SetDescription(this AzureKeyvaultSecretSetSettings toolSettings, string description)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Description = description;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Description"/>.</em></p><p>Description of the secret contents (e.g. password, connection string, etc).</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetSettings ResetDescription(this AzureKeyvaultSecretSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Description = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Disabled
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Disabled"/>.</em></p><p>Create secret in disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetSettings SetDisabled(this AzureKeyvaultSecretSetSettings toolSettings, bool? disabled)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Disabled = disabled;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Disabled"/>.</em></p><p>Create certificate in disabled state.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Disabled"/>.</em></p><p>Create secret in disabled state.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings ResetDisabled(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings ResetDisabled(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Disabled = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureKeyvaultCertificatePendingMergeSettings.Disabled"/>.</em></p><p>Create certificate in disabled state.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureKeyvaultSecretSetSettings.Disabled"/>.</em></p><p>Create secret in disabled state.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings EnableDisabled(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings EnableDisabled(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Disabled = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureKeyvaultCertificatePendingMergeSettings.Disabled"/>.</em></p><p>Create certificate in disabled state.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureKeyvaultSecretSetSettings.Disabled"/>.</em></p><p>Create secret in disabled state.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings DisableDisabled(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings DisableDisabled(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Disabled = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureKeyvaultCertificatePendingMergeSettings.Disabled"/>.</em></p><p>Create certificate in disabled state.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureKeyvaultSecretSetSettings.Disabled"/>.</em></p><p>Create secret in disabled state.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings ToggleDisabled(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings ToggleDisabled(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Disabled = !toolSettings.Disabled;
@@ -16778,17 +13708,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Expires
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Expires"/>.</em></p><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Expires"/>.</em></p><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings SetExpires(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string expires)
+        public static AzureKeyvaultSecretSetSettings SetExpires(this AzureKeyvaultSecretSetSettings toolSettings, string expires)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Expires = expires;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Expires"/>.</em></p><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Expires"/>.</em></p><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings ResetExpires(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings ResetExpires(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Expires = null;
@@ -16796,17 +13726,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region NotBefore
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.NotBefore"/>.</em></p><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.NotBefore"/>.</em></p><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings SetNotBefore(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string notBefore)
+        public static AzureKeyvaultSecretSetSettings SetNotBefore(this AzureKeyvaultSecretSetSettings toolSettings, string notBefore)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NotBefore = notBefore;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.NotBefore"/>.</em></p><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.NotBefore"/>.</em></p><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings ResetNotBefore(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings ResetNotBefore(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NotBefore = null;
@@ -16814,35 +13744,89 @@ namespace Nuke.Azure
         }
         #endregion
         #region Tags
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings SetTags(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string tags)
+        public static AzureKeyvaultSecretSetSettings SetTags(this AzureKeyvaultSecretSetSettings toolSettings, string tags)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = tags;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings ResetTags(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings ResetTags(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
             return toolSettings;
         }
         #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Name"/>.</em></p><p>Name of the pending certificate.</p></summary>
+        #region Encoding
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Encoding"/>.</em></p><p>Source file encoding. The value is saved as a tag (`file-encoding=&amp;lt;val&amp;gt;`) and used during download to automatically encode the resulting file.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings SetName(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string name)
+        public static AzureKeyvaultSecretSetSettings SetEncoding(this AzureKeyvaultSecretSetSettings toolSettings, KeyvaultSecretEncoding encoding)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Encoding = encoding;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Encoding"/>.</em></p><p>Source file encoding. The value is saved as a tag (`file-encoding=&amp;lt;val&amp;gt;`) and used during download to automatically encode the resulting file.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetSettings ResetEncoding(this AzureKeyvaultSecretSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Encoding = null;
+            return toolSettings;
+        }
+        #endregion
+        #region File
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.File"/>.</em></p><p>Source file for secret. Use in conjunction with '--encoding'.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetSettings SetFile(this AzureKeyvaultSecretSetSettings toolSettings, string file)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = file;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.File"/>.</em></p><p>Source file for secret. Use in conjunction with '--encoding'.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetSettings ResetFile(this AzureKeyvaultSecretSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Value
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Value"/>.</em></p><p>Plain text secret value. Cannot be used with '--file' or '--encoding'.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetSettings SetValue(this AzureKeyvaultSecretSetSettings toolSettings, string value)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Value = value;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Value"/>.</em></p><p>Plain text secret value. Cannot be used with '--file' or '--encoding'.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetSettings ResetValue(this AzureKeyvaultSecretSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Value = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Name"/>.</em></p><p>Name of the secret.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetSettings SetName(this AzureKeyvaultSecretSetSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Name"/>.</em></p><p>Name of the pending certificate.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Name"/>.</em></p><p>Name of the secret.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings ResetName(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings ResetName(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -16850,17 +13834,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings SetVaultName(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string vaultName)
+        public static AzureKeyvaultSecretSetSettings SetVaultName(this AzureKeyvaultSecretSetSettings toolSettings, string vaultName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.VaultName = vaultName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings ResetVaultName(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings ResetVaultName(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.VaultName = null;
@@ -16868,17 +13852,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings SetDebug(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string debug)
+        public static AzureKeyvaultSecretSetSettings SetDebug(this AzureKeyvaultSecretSetSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings ResetDebug(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings ResetDebug(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -16886,17 +13870,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings SetHelp(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string help)
+        public static AzureKeyvaultSecretSetSettings SetHelp(this AzureKeyvaultSecretSetSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings ResetHelp(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings ResetHelp(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -16904,17 +13888,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings SetOutput(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, AzureOutput output)
+        public static AzureKeyvaultSecretSetSettings SetOutput(this AzureKeyvaultSecretSetSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings ResetOutput(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings ResetOutput(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -16922,17 +13906,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings SetQuery(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string query)
+        public static AzureKeyvaultSecretSetSettings SetQuery(this AzureKeyvaultSecretSetSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings ResetQuery(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings ResetQuery(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -16940,17 +13924,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings SetVerbose(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string verbose)
+        public static AzureKeyvaultSecretSetSettings SetVerbose(this AzureKeyvaultSecretSetSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingMergeSettings ResetVerbose(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        public static AzureKeyvaultSecretSetSettings ResetVerbose(this AzureKeyvaultSecretSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -16959,24 +13943,156 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureKeyvaultCertificatePendingShowSettingsExtensions
+    #region AzureKeyvaultSecretSetAttributesSettingsExtensions
     /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureKeyvaultCertificatePendingShowSettingsExtensions
+    public static partial class AzureKeyvaultSecretSetAttributesSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.Name"/>.</em></p><p>Name of the pending certificate.</p></summary>
+        #region ContentType
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.ContentType"/>.</em></p><p>Type of the secret value such as a password.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings SetName(this AzureKeyvaultCertificatePendingShowSettings toolSettings, string name)
+        public static AzureKeyvaultSecretSetAttributesSettings SetContentType(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string contentType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContentType = contentType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.ContentType"/>.</em></p><p>Type of the secret value such as a password.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings ResetContentType(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContentType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Enabled
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Enabled"/>.</em></p><p>Enable the secret.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings SetEnabled(this AzureKeyvaultSecretSetAttributesSettings toolSettings, bool? enabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = enabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Enabled"/>.</em></p><p>Enable the secret.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings ResetEnabled(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureKeyvaultSecretSetAttributesSettings.Enabled"/>.</em></p><p>Enable the secret.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings EnableEnabled(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureKeyvaultSecretSetAttributesSettings.Enabled"/>.</em></p><p>Enable the secret.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings DisableEnabled(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureKeyvaultSecretSetAttributesSettings.Enabled"/>.</em></p><p>Enable the secret.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings ToggleEnabled(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = !toolSettings.Enabled;
+            return toolSettings;
+        }
+        #endregion
+        #region Expires
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Expires"/>.</em></p><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings SetExpires(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string expires)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expires = expires;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Expires"/>.</em></p><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings ResetExpires(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expires = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NotBefore
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.NotBefore"/>.</em></p><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings SetNotBefore(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string notBefore)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NotBefore = notBefore;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.NotBefore"/>.</em></p><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings ResetNotBefore(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NotBefore = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings SetTags(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings ResetTags(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings SetId(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings ResetId(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings SetName(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.Name"/>.</em></p><p>Name of the pending certificate.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings ResetName(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
+        public static AzureKeyvaultSecretSetAttributesSettings ResetName(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -16984,35 +14100,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings SetVaultName(this AzureKeyvaultCertificatePendingShowSettings toolSettings, string vaultName)
+        public static AzureKeyvaultSecretSetAttributesSettings SetVaultName(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string vaultName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.VaultName = vaultName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings ResetVaultName(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
+        public static AzureKeyvaultSecretSetAttributesSettings ResetVaultName(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.VaultName = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Version
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Version"/>.</em></p><p>The secret version. If omitted, uses the latest version.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings SetDebug(this AzureKeyvaultCertificatePendingShowSettings toolSettings, string debug)
+        public static AzureKeyvaultSecretSetAttributesSettings SetVersion(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string version)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = version;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Version"/>.</em></p><p>The secret version. If omitted, uses the latest version.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings ResetVersion(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretSetAttributesSettings SetDebug(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings ResetDebug(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
+        public static AzureKeyvaultSecretSetAttributesSettings ResetDebug(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -17020,17 +14154,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings SetHelp(this AzureKeyvaultCertificatePendingShowSettings toolSettings, string help)
+        public static AzureKeyvaultSecretSetAttributesSettings SetHelp(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings ResetHelp(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
+        public static AzureKeyvaultSecretSetAttributesSettings ResetHelp(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -17038,17 +14172,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings SetOutput(this AzureKeyvaultCertificatePendingShowSettings toolSettings, AzureOutput output)
+        public static AzureKeyvaultSecretSetAttributesSettings SetOutput(this AzureKeyvaultSecretSetAttributesSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings ResetOutput(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
+        public static AzureKeyvaultSecretSetAttributesSettings ResetOutput(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -17056,17 +14190,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings SetQuery(this AzureKeyvaultCertificatePendingShowSettings toolSettings, string query)
+        public static AzureKeyvaultSecretSetAttributesSettings SetQuery(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings ResetQuery(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
+        public static AzureKeyvaultSecretSetAttributesSettings ResetQuery(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -17074,17 +14208,2367 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretSetAttributesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings SetVerbose(this AzureKeyvaultCertificatePendingShowSettings toolSettings, string verbose)
+        public static AzureKeyvaultSecretSetAttributesSettings SetVerbose(this AzureKeyvaultSecretSetAttributesSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretSetAttributesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureKeyvaultCertificatePendingShowSettings ResetVerbose(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
+        public static AzureKeyvaultSecretSetAttributesSettings ResetVerbose(this AzureKeyvaultSecretSetAttributesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultSecretShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultSecretShowSettingsExtensions
+    {
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings SetId(this AzureKeyvaultSecretShowSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Id"/>.</em></p><p>Id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings ResetId(this AzureKeyvaultSecretShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings SetName(this AzureKeyvaultSecretShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings ResetName(this AzureKeyvaultSecretShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings SetVaultName(this AzureKeyvaultSecretShowSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings ResetVaultName(this AzureKeyvaultSecretShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Version
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Version"/>.</em></p><p>The secret version. If omitted, uses the latest version.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings SetVersion(this AzureKeyvaultSecretShowSettings toolSettings, string version)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = version;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Version"/>.</em></p><p>The secret version. If omitted, uses the latest version.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings ResetVersion(this AzureKeyvaultSecretShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings SetDebug(this AzureKeyvaultSecretShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings ResetDebug(this AzureKeyvaultSecretShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings SetHelp(this AzureKeyvaultSecretShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings ResetHelp(this AzureKeyvaultSecretShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings SetOutput(this AzureKeyvaultSecretShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings ResetOutput(this AzureKeyvaultSecretShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings SetQuery(this AzureKeyvaultSecretShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings ResetQuery(this AzureKeyvaultSecretShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings SetVerbose(this AzureKeyvaultSecretShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowSettings ResetVerbose(this AzureKeyvaultSecretShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultSecretShowDeletedSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultSecretShowDeletedSettingsExtensions
+    {
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Id"/>.</em></p><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings SetId(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Id"/>.</em></p><p>The recovery id of the secret.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings ResetId(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings SetName(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Name"/>.</em></p><p>Name of the secret. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings ResetName(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings SetVaultName(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings ResetVaultName(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings SetDebug(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings ResetDebug(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings SetHelp(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings ResetHelp(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings SetOutput(this AzureKeyvaultSecretShowDeletedSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings ResetOutput(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings SetQuery(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings ResetQuery(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultSecretShowDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings SetVerbose(this AzureKeyvaultSecretShowDeletedSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultSecretShowDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultSecretShowDeletedSettings ResetVerbose(this AzureKeyvaultSecretShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultStorageAddSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultStorageAddSettingsExtensions
+    {
+        #region ActiveKeyName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.ActiveKeyName"/>.</em></p><p>Current active storage account key name.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings SetActiveKeyName(this AzureKeyvaultStorageAddSettings toolSettings, string activeKeyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActiveKeyName = activeKeyName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.ActiveKeyName"/>.</em></p><p>Current active storage account key name.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ResetActiveKeyName(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActiveKeyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceId
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.ResourceId"/>.</em></p><p>Storage account resource id.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings SetResourceId(this AzureKeyvaultStorageAddSettings toolSettings, string resourceId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceId = resourceId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.ResourceId"/>.</em></p><p>Storage account resource id.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ResetResourceId(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AutoRegenerateKey
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings SetAutoRegenerateKey(this AzureKeyvaultStorageAddSettings toolSettings, bool? autoRegenerateKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoRegenerateKey = autoRegenerateKey;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ResetAutoRegenerateKey(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoRegenerateKey = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureKeyvaultStorageAddSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings EnableAutoRegenerateKey(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoRegenerateKey = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureKeyvaultStorageAddSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings DisableAutoRegenerateKey(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoRegenerateKey = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureKeyvaultStorageAddSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ToggleAutoRegenerateKey(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoRegenerateKey = !toolSettings.AutoRegenerateKey;
+            return toolSettings;
+        }
+        #endregion
+        #region Disabled
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings SetDisabled(this AzureKeyvaultStorageAddSettings toolSettings, bool? disabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = disabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ResetDisabled(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureKeyvaultStorageAddSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings EnableDisabled(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureKeyvaultStorageAddSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings DisableDisabled(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureKeyvaultStorageAddSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ToggleDisabled(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = !toolSettings.Disabled;
+            return toolSettings;
+        }
+        #endregion
+        #region RegenerationPeriod
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.RegenerationPeriod"/>.</em></p><p>The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings SetRegenerationPeriod(this AzureKeyvaultStorageAddSettings toolSettings, string regenerationPeriod)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RegenerationPeriod = regenerationPeriod;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.RegenerationPeriod"/>.</em></p><p>The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ResetRegenerationPeriod(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RegenerationPeriod = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings SetTags(this AzureKeyvaultStorageAddSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ResetTags(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings SetName(this AzureKeyvaultStorageAddSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ResetName(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings SetVaultName(this AzureKeyvaultStorageAddSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ResetVaultName(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings SetDebug(this AzureKeyvaultStorageAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ResetDebug(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings SetHelp(this AzureKeyvaultStorageAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ResetHelp(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings SetOutput(this AzureKeyvaultStorageAddSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ResetOutput(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings SetQuery(this AzureKeyvaultStorageAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ResetQuery(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings SetVerbose(this AzureKeyvaultStorageAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageAddSettings ResetVerbose(this AzureKeyvaultStorageAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultStorageBackupSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultStorageBackupSettingsExtensions
+    {
+        #region File
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.File"/>.</em></p><p>Local file path in which to store storage account backup.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings SetFile(this AzureKeyvaultStorageBackupSettings toolSettings, string file)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = file;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.File"/>.</em></p><p>Local file path in which to store storage account backup.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings ResetFile(this AzureKeyvaultStorageBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings SetId(this AzureKeyvaultStorageBackupSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings ResetId(this AzureKeyvaultStorageBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings SetName(this AzureKeyvaultStorageBackupSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings ResetName(this AzureKeyvaultStorageBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings SetVaultName(this AzureKeyvaultStorageBackupSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings ResetVaultName(this AzureKeyvaultStorageBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings SetDebug(this AzureKeyvaultStorageBackupSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings ResetDebug(this AzureKeyvaultStorageBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings SetHelp(this AzureKeyvaultStorageBackupSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings ResetHelp(this AzureKeyvaultStorageBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings SetOutput(this AzureKeyvaultStorageBackupSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings ResetOutput(this AzureKeyvaultStorageBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings SetQuery(this AzureKeyvaultStorageBackupSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings ResetQuery(this AzureKeyvaultStorageBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageBackupSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings SetVerbose(this AzureKeyvaultStorageBackupSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageBackupSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageBackupSettings ResetVerbose(this AzureKeyvaultStorageBackupSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultStorageListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultStorageListSettingsExtensions
+    {
+        #region Maxresults
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings SetMaxresults(this AzureKeyvaultStorageListSettings toolSettings, int? maxresults)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Maxresults = maxresults;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings ResetMaxresults(this AzureKeyvaultStorageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Maxresults = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings SetVaultName(this AzureKeyvaultStorageListSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings ResetVaultName(this AzureKeyvaultStorageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings SetDebug(this AzureKeyvaultStorageListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings ResetDebug(this AzureKeyvaultStorageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings SetHelp(this AzureKeyvaultStorageListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings ResetHelp(this AzureKeyvaultStorageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings SetOutput(this AzureKeyvaultStorageListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings ResetOutput(this AzureKeyvaultStorageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings SetQuery(this AzureKeyvaultStorageListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings ResetQuery(this AzureKeyvaultStorageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings SetVerbose(this AzureKeyvaultStorageListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListSettings ResetVerbose(this AzureKeyvaultStorageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultStorageListDeletedSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultStorageListDeletedSettingsExtensions
+    {
+        #region Maxresults
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings SetMaxresults(this AzureKeyvaultStorageListDeletedSettings toolSettings, int? maxresults)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Maxresults = maxresults;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.Maxresults"/>.</em></p><p>Maximum number of results to return in a page. If not specified the service will return up to 25 results.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings ResetMaxresults(this AzureKeyvaultStorageListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Maxresults = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings SetVaultName(this AzureKeyvaultStorageListDeletedSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings ResetVaultName(this AzureKeyvaultStorageListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings SetDebug(this AzureKeyvaultStorageListDeletedSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings ResetDebug(this AzureKeyvaultStorageListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings SetHelp(this AzureKeyvaultStorageListDeletedSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings ResetHelp(this AzureKeyvaultStorageListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings SetOutput(this AzureKeyvaultStorageListDeletedSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings ResetOutput(this AzureKeyvaultStorageListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings SetQuery(this AzureKeyvaultStorageListDeletedSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings ResetQuery(this AzureKeyvaultStorageListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageListDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings SetVerbose(this AzureKeyvaultStorageListDeletedSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageListDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageListDeletedSettings ResetVerbose(this AzureKeyvaultStorageListDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultStoragePurgeSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultStoragePurgeSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings SetName(this AzureKeyvaultStoragePurgeSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings ResetName(this AzureKeyvaultStoragePurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings SetVaultName(this AzureKeyvaultStoragePurgeSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings ResetVaultName(this AzureKeyvaultStoragePurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings SetDebug(this AzureKeyvaultStoragePurgeSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings ResetDebug(this AzureKeyvaultStoragePurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings SetHelp(this AzureKeyvaultStoragePurgeSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings ResetHelp(this AzureKeyvaultStoragePurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings SetOutput(this AzureKeyvaultStoragePurgeSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings ResetOutput(this AzureKeyvaultStoragePurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings SetQuery(this AzureKeyvaultStoragePurgeSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings ResetQuery(this AzureKeyvaultStoragePurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStoragePurgeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings SetVerbose(this AzureKeyvaultStoragePurgeSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStoragePurgeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStoragePurgeSettings ResetVerbose(this AzureKeyvaultStoragePurgeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultStorageRecoverSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultStorageRecoverSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings SetName(this AzureKeyvaultStorageRecoverSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings ResetName(this AzureKeyvaultStorageRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings SetVaultName(this AzureKeyvaultStorageRecoverSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings ResetVaultName(this AzureKeyvaultStorageRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings SetDebug(this AzureKeyvaultStorageRecoverSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings ResetDebug(this AzureKeyvaultStorageRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings SetHelp(this AzureKeyvaultStorageRecoverSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings ResetHelp(this AzureKeyvaultStorageRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings SetOutput(this AzureKeyvaultStorageRecoverSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings ResetOutput(this AzureKeyvaultStorageRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings SetQuery(this AzureKeyvaultStorageRecoverSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings ResetQuery(this AzureKeyvaultStorageRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRecoverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings SetVerbose(this AzureKeyvaultStorageRecoverSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRecoverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRecoverSettings ResetVerbose(this AzureKeyvaultStorageRecoverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultStorageRegenerateKeySettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultStorageRegenerateKeySettingsExtensions
+    {
+        #region KeyName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.KeyName"/>.</em></p><p>The storage account key name.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings SetKeyName(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string keyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyName = keyName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.KeyName"/>.</em></p><p>The storage account key name.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings ResetKeyName(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings SetId(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings ResetId(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings SetName(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings ResetName(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings SetVaultName(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings ResetVaultName(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings SetDebug(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings ResetDebug(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings SetHelp(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings ResetHelp(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings SetOutput(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings ResetOutput(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings SetQuery(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings ResetQuery(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings SetVerbose(this AzureKeyvaultStorageRegenerateKeySettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRegenerateKeySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRegenerateKeySettings ResetVerbose(this AzureKeyvaultStorageRegenerateKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultStorageRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultStorageRemoveSettingsExtensions
+    {
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings SetId(this AzureKeyvaultStorageRemoveSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings ResetId(this AzureKeyvaultStorageRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings SetName(this AzureKeyvaultStorageRemoveSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings ResetName(this AzureKeyvaultStorageRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings SetVaultName(this AzureKeyvaultStorageRemoveSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings ResetVaultName(this AzureKeyvaultStorageRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings SetDebug(this AzureKeyvaultStorageRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings ResetDebug(this AzureKeyvaultStorageRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings SetHelp(this AzureKeyvaultStorageRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings ResetHelp(this AzureKeyvaultStorageRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings SetOutput(this AzureKeyvaultStorageRemoveSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings ResetOutput(this AzureKeyvaultStorageRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings SetQuery(this AzureKeyvaultStorageRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings ResetQuery(this AzureKeyvaultStorageRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings SetVerbose(this AzureKeyvaultStorageRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRemoveSettings ResetVerbose(this AzureKeyvaultStorageRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultStorageRestoreSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultStorageRestoreSettingsExtensions
+    {
+        #region FilePath
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.FilePath"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings SetFilePath(this AzureKeyvaultStorageRestoreSettings toolSettings, string filePath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilePath = filePath;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.FilePath"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings ResetFilePath(this AzureKeyvaultStorageRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilePath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings SetVaultName(this AzureKeyvaultStorageRestoreSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings ResetVaultName(this AzureKeyvaultStorageRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings SetDebug(this AzureKeyvaultStorageRestoreSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings ResetDebug(this AzureKeyvaultStorageRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings SetHelp(this AzureKeyvaultStorageRestoreSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings ResetHelp(this AzureKeyvaultStorageRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings SetOutput(this AzureKeyvaultStorageRestoreSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings ResetOutput(this AzureKeyvaultStorageRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings SetQuery(this AzureKeyvaultStorageRestoreSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings ResetQuery(this AzureKeyvaultStorageRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings SetVerbose(this AzureKeyvaultStorageRestoreSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageRestoreSettings ResetVerbose(this AzureKeyvaultStorageRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultStorageShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultStorageShowSettingsExtensions
+    {
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings SetId(this AzureKeyvaultStorageShowSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings ResetId(this AzureKeyvaultStorageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings SetName(this AzureKeyvaultStorageShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings ResetName(this AzureKeyvaultStorageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings SetVaultName(this AzureKeyvaultStorageShowSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings ResetVaultName(this AzureKeyvaultStorageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings SetDebug(this AzureKeyvaultStorageShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings ResetDebug(this AzureKeyvaultStorageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings SetHelp(this AzureKeyvaultStorageShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings ResetHelp(this AzureKeyvaultStorageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings SetOutput(this AzureKeyvaultStorageShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings ResetOutput(this AzureKeyvaultStorageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings SetQuery(this AzureKeyvaultStorageShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings ResetQuery(this AzureKeyvaultStorageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings SetVerbose(this AzureKeyvaultStorageShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowSettings ResetVerbose(this AzureKeyvaultStorageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultStorageShowDeletedSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultStorageShowDeletedSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings SetName(this AzureKeyvaultStorageShowDeletedSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings ResetName(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings SetVaultName(this AzureKeyvaultStorageShowDeletedSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings ResetVaultName(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings SetDebug(this AzureKeyvaultStorageShowDeletedSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings ResetDebug(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings SetHelp(this AzureKeyvaultStorageShowDeletedSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings ResetHelp(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings SetOutput(this AzureKeyvaultStorageShowDeletedSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings ResetOutput(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings SetQuery(this AzureKeyvaultStorageShowDeletedSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings ResetQuery(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageShowDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings SetVerbose(this AzureKeyvaultStorageShowDeletedSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageShowDeletedSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageShowDeletedSettings ResetVerbose(this AzureKeyvaultStorageShowDeletedSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultStorageUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultStorageUpdateSettingsExtensions
+    {
+        #region ActiveKeyName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.ActiveKeyName"/>.</em></p><p>The current active storage account key name.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings SetActiveKeyName(this AzureKeyvaultStorageUpdateSettings toolSettings, string activeKeyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActiveKeyName = activeKeyName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.ActiveKeyName"/>.</em></p><p>The current active storage account key name.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ResetActiveKeyName(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActiveKeyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AutoRegenerateKey
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings SetAutoRegenerateKey(this AzureKeyvaultStorageUpdateSettings toolSettings, bool? autoRegenerateKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoRegenerateKey = autoRegenerateKey;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ResetAutoRegenerateKey(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoRegenerateKey = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureKeyvaultStorageUpdateSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings EnableAutoRegenerateKey(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoRegenerateKey = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureKeyvaultStorageUpdateSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings DisableAutoRegenerateKey(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoRegenerateKey = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureKeyvaultStorageUpdateSettings.AutoRegenerateKey"/>.</em></p><p>Whether keyvault should manage the storage account for the user.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ToggleAutoRegenerateKey(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoRegenerateKey = !toolSettings.AutoRegenerateKey;
+            return toolSettings;
+        }
+        #endregion
+        #region Disabled
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings SetDisabled(this AzureKeyvaultStorageUpdateSettings toolSettings, bool? disabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = disabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ResetDisabled(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureKeyvaultStorageUpdateSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings EnableDisabled(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureKeyvaultStorageUpdateSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings DisableDisabled(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureKeyvaultStorageUpdateSettings.Disabled"/>.</em></p><p>Add the storage account in a disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ToggleDisabled(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = !toolSettings.Disabled;
+            return toolSettings;
+        }
+        #endregion
+        #region RegenerationPeriod
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.RegenerationPeriod"/>.</em></p><p>The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings SetRegenerationPeriod(this AzureKeyvaultStorageUpdateSettings toolSettings, string regenerationPeriod)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RegenerationPeriod = regenerationPeriod;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.RegenerationPeriod"/>.</em></p><p>The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ResetRegenerationPeriod(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RegenerationPeriod = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings SetTags(this AzureKeyvaultStorageUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ResetTags(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Id
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings SetId(this AzureKeyvaultStorageUpdateSettings toolSettings, string id)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = id;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Id"/>.</em></p><p>Id of the storage account.  If specified all other 'Id' arguments should be omitted.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ResetId(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Id = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings SetName(this AzureKeyvaultStorageUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Name"/>.</em></p><p>Name to identify the storage account in the vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ResetName(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings SetVaultName(this AzureKeyvaultStorageUpdateSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.VaultName"/>.</em></p><p>Name of the key vault. Required if --id is not specified.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ResetVaultName(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings SetDebug(this AzureKeyvaultStorageUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ResetDebug(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings SetHelp(this AzureKeyvaultStorageUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ResetHelp(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings SetOutput(this AzureKeyvaultStorageUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ResetOutput(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings SetQuery(this AzureKeyvaultStorageUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ResetQuery(this AzureKeyvaultStorageUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultStorageUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings SetVerbose(this AzureKeyvaultStorageUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultStorageUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultStorageUpdateSettings ResetVerbose(this AzureKeyvaultStorageUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -18403,6 +17887,522 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificateIssuerUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureKeyvaultCertificateIssuerUpdateSettings ResetVerbose(this AzureKeyvaultCertificateIssuerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultCertificatePendingDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultCertificatePendingDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Name"/>.</em></p><p>Name of the pending certificate.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings SetName(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Name"/>.</em></p><p>Name of the pending certificate.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings ResetName(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings SetVaultName(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings ResetVaultName(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings SetDebug(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings ResetDebug(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings SetHelp(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings ResetHelp(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings SetOutput(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings ResetOutput(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings SetQuery(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings ResetQuery(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings SetVerbose(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingDeleteSettings ResetVerbose(this AzureKeyvaultCertificatePendingDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultCertificatePendingMergeSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultCertificatePendingMergeSettingsExtensions
+    {
+        #region File
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.File"/>.</em></p><p>File containing the certificate or certificate chain to merge.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings SetFile(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string file)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = file;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.File"/>.</em></p><p>File containing the certificate or certificate chain to merge.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings ResetFile(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Disabled
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Disabled"/>.</em></p><p>Create certificate in disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings SetDisabled(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, bool? disabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = disabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Disabled"/>.</em></p><p>Create certificate in disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings ResetDisabled(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureKeyvaultCertificatePendingMergeSettings.Disabled"/>.</em></p><p>Create certificate in disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings EnableDisabled(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureKeyvaultCertificatePendingMergeSettings.Disabled"/>.</em></p><p>Create certificate in disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings DisableDisabled(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureKeyvaultCertificatePendingMergeSettings.Disabled"/>.</em></p><p>Create certificate in disabled state.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings ToggleDisabled(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = !toolSettings.Disabled;
+            return toolSettings;
+        }
+        #endregion
+        #region Expires
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Expires"/>.</em></p><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings SetExpires(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string expires)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expires = expires;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Expires"/>.</em></p><p>Expiration UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings ResetExpires(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expires = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NotBefore
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.NotBefore"/>.</em></p><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings SetNotBefore(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string notBefore)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NotBefore = notBefore;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.NotBefore"/>.</em></p><p>Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z').</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings ResetNotBefore(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NotBefore = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings SetTags(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings ResetTags(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Name"/>.</em></p><p>Name of the pending certificate.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings SetName(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Name"/>.</em></p><p>Name of the pending certificate.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings ResetName(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings SetVaultName(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings ResetVaultName(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings SetDebug(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings ResetDebug(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings SetHelp(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings ResetHelp(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings SetOutput(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings ResetOutput(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings SetQuery(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings ResetQuery(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings SetVerbose(this AzureKeyvaultCertificatePendingMergeSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingMergeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingMergeSettings ResetVerbose(this AzureKeyvaultCertificatePendingMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKeyvaultCertificatePendingShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureKeyvaultTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKeyvaultCertificatePendingShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.Name"/>.</em></p><p>Name of the pending certificate.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings SetName(this AzureKeyvaultCertificatePendingShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.Name"/>.</em></p><p>Name of the pending certificate.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings ResetName(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings SetVaultName(this AzureKeyvaultCertificatePendingShowSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.VaultName"/>.</em></p><p>Name of the key vault.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings ResetVaultName(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings SetDebug(this AzureKeyvaultCertificatePendingShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings ResetDebug(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings SetHelp(this AzureKeyvaultCertificatePendingShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings ResetHelp(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings SetOutput(this AzureKeyvaultCertificatePendingShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings ResetOutput(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings SetQuery(this AzureKeyvaultCertificatePendingShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings ResetQuery(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureKeyvaultCertificatePendingShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings SetVerbose(this AzureKeyvaultCertificatePendingShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureKeyvaultCertificatePendingShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureKeyvaultCertificatePendingShowSettings ResetVerbose(this AzureKeyvaultCertificatePendingShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

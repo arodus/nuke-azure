@@ -6,11 +6,11 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventgrid.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventgrid/event-subscription.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventgrid/topic-type.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventgrid/topic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventgrid/topic/key.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventgrid.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventgrid/event-subscription.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventgrid/topic-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventgrid/topic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventgrid/topic/key.yml"
   ],
   "name": "AzureEventgrid",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest",

@@ -6,13 +6,13 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/postgres.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/postgres/server.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/postgres/db.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/postgres/server-logs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/postgres/server/firewall-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/postgres/server/configuration.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/postgres/server/vnet-rule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/postgres.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/postgres/db.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/postgres/server-logs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/postgres/server.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/postgres/server/configuration.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/postgres/server/firewall-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/postgres/server/vnet-rule.yml"
   ],
   "name": "AzurePostgres",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest",
@@ -23,6 +23,187 @@
       "postfix": "",
       "definiteArgument": "postgres",
       "settingsClass": {}
+    },
+    {
+      "postfix": "DbCreate",
+      "definiteArgument": "postgres db create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the database."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "Charset",
+            "type": "string",
+            "format": "--charset {value}",
+            "help": "The charset of the database."
+          },
+          {
+            "name": "Collation",
+            "type": "string",
+            "format": "--collation {value}",
+            "help": "The collation of the database."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DbDelete",
+      "definiteArgument": "postgres db delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the database."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DbList",
+      "definiteArgument": "postgres db list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DbShow",
+      "definiteArgument": "postgres db show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the database."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerLogsDownload",
+      "definiteArgument": "postgres server-logs download",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "List<string>",
+            "format": "--name {value}",
+            "separator": " ",
+            "help": "Space-separated list of log filenames on the server to download."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerLogsList",
+      "definiteArgument": "postgres server-logs list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "FileLastWritten",
+            "type": "string",
+            "format": "--file-last-written {value}",
+            "help": "Integer in hours to indicate file last modify time, default value is 72."
+          },
+          {
+            "name": "FilenameContains",
+            "type": "string",
+            "format": "--filename-contains {value}",
+            "help": "The pattern that file name should match."
+          },
+          {
+            "name": "MaxFileSize",
+            "type": "string",
+            "format": "--max-file-size {value}",
+            "help": "The file size limitation to filter files."
+          }
+        ]
+      }
     },
     {
       "postfix": "ServerCreate",
@@ -385,15 +566,35 @@
       }
     },
     {
-      "postfix": "DbCreate",
-      "definiteArgument": "postgres db create",
+      "postfix": "ServerConfigurationList",
+      "definiteArgument": "postgres server configuration list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerConfigurationSet",
+      "definiteArgument": "postgres server configuration set",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The name of the database."
+            "help": "The name of the server configuration."
           },
           {
             "name": "ResourceGroup",
@@ -408,30 +609,24 @@
             "help": "Name of the server."
           },
           {
-            "name": "Charset",
+            "name": "Value",
             "type": "string",
-            "format": "--charset {value}",
-            "help": "The charset of the database."
-          },
-          {
-            "name": "Collation",
-            "type": "string",
-            "format": "--collation {value}",
-            "help": "The collation of the database."
+            "format": "--value {value}",
+            "help": "Value of the configuration. If not provided, configuration value will be set to default."
           }
         ]
       }
     },
     {
-      "postfix": "DbDelete",
-      "definiteArgument": "postgres db delete",
+      "postfix": "ServerConfigurationShow",
+      "definiteArgument": "postgres server configuration show",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The name of the database."
+            "help": "The name of the server configuration."
           },
           {
             "name": "ResourceGroup",
@@ -444,123 +639,6 @@
             "type": "string",
             "format": "--server-name {value}",
             "help": "Name of the server."
-          },
-          {
-            "name": "Yes",
-            "type": "string",
-            "format": "--yes {value}",
-            "help": "Do not prompt for confirmation."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DbList",
-      "definiteArgument": "postgres db list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DbShow",
-      "definiteArgument": "postgres db show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the database."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerLogsDownload",
-      "definiteArgument": "postgres server-logs download",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "List<string>",
-            "format": "--name {value}",
-            "separator": " ",
-            "help": "Space-separated list of log filenames on the server to download."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerLogsList",
-      "definiteArgument": "postgres server-logs list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          },
-          {
-            "name": "FileLastWritten",
-            "type": "string",
-            "format": "--file-last-written {value}",
-            "help": "Integer in hours to indicate file last modify time, default value is 72."
-          },
-          {
-            "name": "FilenameContains",
-            "type": "string",
-            "format": "--filename-contains {value}",
-            "help": "The pattern that file name should match."
-          },
-          {
-            "name": "MaxFileSize",
-            "type": "string",
-            "format": "--max-file-size {value}",
-            "help": "The file size limitation to filter files."
           }
         ]
       }
@@ -739,84 +817,6 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerConfigurationList",
-      "definiteArgument": "postgres server configuration list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerConfigurationSet",
-      "definiteArgument": "postgres server configuration set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the server configuration."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          },
-          {
-            "name": "Value",
-            "type": "string",
-            "format": "--value {value}",
-            "help": "Value of the configuration. If not provided, configuration value will be set to default."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerConfigurationShow",
-      "definiteArgument": "postgres server configuration show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the server configuration."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
           }
         ]
       }

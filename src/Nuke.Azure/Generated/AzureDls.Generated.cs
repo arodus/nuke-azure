@@ -1,8 +1,8 @@
-// Copyright Matthias Koch, Sebastian Karasek 2018.
+// Copyright 2018 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.2 [CommitSha: ff25463a].
+// Generated with Nuke.CodeGeneration, Version: 0.7.0 [CommitSha: 9d3d3d7e].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureDls.json.
 
 using JetBrains.Annotations;
@@ -39,6 +39,54 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureDls(Configure<AzureDlsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountCreate(Configure<AzureDlsAccountCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountDelete(Configure<AzureDlsAccountDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountEnableKeyVault(Configure<AzureDlsAccountEnableKeyVaultSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountEnableKeyVaultSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountList(Configure<AzureDlsAccountListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountShow(Configure<AzureDlsAccountShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountUpdate(Configure<AzureDlsAccountUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountUpdateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -148,54 +196,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountCreate(Configure<AzureDlsAccountCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountDelete(Configure<AzureDlsAccountDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountEnableKeyVault(Configure<AzureDlsAccountEnableKeyVaultSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountEnableKeyVaultSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountList(Configure<AzureDlsAccountListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountShow(Configure<AzureDlsAccountShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountUpdate(Configure<AzureDlsAccountUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureDlsAccountFirewallCreate(Configure<AzureDlsAccountFirewallCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountFirewallCreateSettings());
@@ -236,46 +236,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountTrustedProviderCreate(Configure<AzureDlsAccountTrustedProviderCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountTrustedProviderDelete(Configure<AzureDlsAccountTrustedProviderDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountTrustedProviderList(Configure<AzureDlsAccountTrustedProviderListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountTrustedProviderShow(Configure<AzureDlsAccountTrustedProviderShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountTrustedProviderUpdate(Configure<AzureDlsAccountTrustedProviderUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleCreate(Configure<AzureDlsAccountNetworkRuleCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleCreateSettings());
@@ -311,6 +271,46 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleUpdate(Configure<AzureDlsAccountNetworkRuleUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountTrustedProviderCreate(Configure<AzureDlsAccountTrustedProviderCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountTrustedProviderDelete(Configure<AzureDlsAccountTrustedProviderDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountTrustedProviderList(Configure<AzureDlsAccountTrustedProviderListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountTrustedProviderShow(Configure<AzureDlsAccountTrustedProviderShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountTrustedProviderUpdate(Configure<AzureDlsAccountTrustedProviderUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderUpdateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -395,6 +395,279 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountCreateSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account.</p></summary>
+        public virtual string DefaultGroup { get; internal set; }
+        /// <summary><p>Indicates that the account will not have any form of encryption applied to it.</p></summary>
+        public virtual string DisableEncryption { get; internal set; }
+        /// <summary><p>Indicates what type of encryption to provision the account with. By default, encryption is ServiceManaged. If no encryption is desired, it must be explicitly set with the --disable-encryption flag.</p></summary>
+        public virtual DlsAccountCreateEncryptionType EncryptionType { get; internal set; }
+        /// <summary><p>Key name for the user-assigned encryption type.</p></summary>
+        public virtual string KeyName { get; internal set; }
+        /// <summary><p>Key vault for the user-assigned encryption type.</p></summary>
+        public virtual string KeyVaultId { get; internal set; }
+        /// <summary><p>Key version for the user-assigned encryption type.</p></summary>
+        public virtual string KeyVersion { get; internal set; }
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>The desired commitment tier for this account to use.</p></summary>
+        public virtual DlsAccountTier Tier { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account create")
+              .Add("--account {value}", Account)
+              .Add("--default-group {value}", DefaultGroup)
+              .Add("--disable-encryption {value}", DisableEncryption)
+              .Add("--encryption-type {value}", EncryptionType)
+              .Add("--key-name {value}", KeyName)
+              .Add("--key-vault-id {value}", KeyVaultId)
+              .Add("--key-version {value}", KeyVersion)
+              .Add("--location {value}", Location)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--tags {value}", Tags)
+              .Add("--tier {value}", Tier)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountDeleteSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account delete")
+              .Add("--account {value}", Account)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountEnableKeyVaultSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountEnableKeyVaultSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account enable-key-vault")
+              .Add("--account {value}", Account)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountListSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountShowSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account show")
+              .Add("--account {value}", Account)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountUpdateSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>Allow/block Azure originating IPs through the firewall.</p></summary>
+        public virtual DlsAccountUpdateAllowAzureIps AllowAzureIps { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string DefaultGroup { get; internal set; }
+        /// <summary><p>Enable/disable existing firewall rules.</p></summary>
+        public virtual DlsAccountUpdateAllowAzureIps FirewallState { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string KeyVersion { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>The desired commitment tier for this account to use.</p></summary>
+        public virtual DlsAccountTier Tier { get; internal set; }
+        /// <summary><p>Enable/disable the existing trusted ID providers.</p></summary>
+        public virtual DlsAccountUpdateAllowAzureIps TrustedIdProviderState { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account update")
+              .Add("--account {value}", Account)
+              .Add("--allow-azure-ips {value}", AllowAzureIps)
+              .Add("--default-group {value}", DefaultGroup)
+              .Add("--firewall-state {value}", FirewallState)
+              .Add("--key-version {value}", KeyVersion)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--tags {value}", Tags)
+              .Add("--tier {value}", Tier)
+              .Add("--trusted-id-provider-state {value}", TrustedIdProviderState)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -979,279 +1252,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlsAccountCreateSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account.</p></summary>
-        public virtual string DefaultGroup { get; internal set; }
-        /// <summary><p>Indicates that the account will not have any form of encryption applied to it.</p></summary>
-        public virtual string DisableEncryption { get; internal set; }
-        /// <summary><p>Indicates what type of encryption to provision the account with. By default, encryption is ServiceManaged. If no encryption is desired, it must be explicitly set with the --disable-encryption flag.</p></summary>
-        public virtual DlsAccountCreateEncryptionType EncryptionType { get; internal set; }
-        /// <summary><p>Key name for the user-assigned encryption type.</p></summary>
-        public virtual string KeyName { get; internal set; }
-        /// <summary><p>Key vault for the user-assigned encryption type.</p></summary>
-        public virtual string KeyVaultId { get; internal set; }
-        /// <summary><p>Key version for the user-assigned encryption type.</p></summary>
-        public virtual string KeyVersion { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>The desired commitment tier for this account to use.</p></summary>
-        public virtual DlsAccountTier Tier { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account create")
-              .Add("--account {value}", Account)
-              .Add("--default-group {value}", DefaultGroup)
-              .Add("--disable-encryption {value}", DisableEncryption)
-              .Add("--encryption-type {value}", EncryptionType)
-              .Add("--key-name {value}", KeyName)
-              .Add("--key-vault-id {value}", KeyVaultId)
-              .Add("--key-version {value}", KeyVersion)
-              .Add("--location {value}", Location)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--tags {value}", Tags)
-              .Add("--tier {value}", Tier)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountDeleteSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account delete")
-              .Add("--account {value}", Account)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountEnableKeyVaultSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountEnableKeyVaultSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account enable-key-vault")
-              .Add("--account {value}", Account)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountListSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountShowSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account show")
-              .Add("--account {value}", Account)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountUpdateSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>Allow/block Azure originating IPs through the firewall.</p></summary>
-        public virtual DlsAccountUpdateAllowAzureIps AllowAzureIps { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string DefaultGroup { get; internal set; }
-        /// <summary><p>Enable/disable existing firewall rules.</p></summary>
-        public virtual DlsAccountUpdateAllowAzureIps FirewallState { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string KeyVersion { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>The desired commitment tier for this account to use.</p></summary>
-        public virtual DlsAccountTier Tier { get; internal set; }
-        /// <summary><p>Enable/disable the existing trusted ID providers.</p></summary>
-        public virtual DlsAccountUpdateAllowAzureIps TrustedIdProviderState { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account update")
-              .Add("--account {value}", Account)
-              .Add("--allow-azure-ips {value}", AllowAzureIps)
-              .Add("--default-group {value}", DefaultGroup)
-              .Add("--firewall-state {value}", FirewallState)
-              .Add("--key-version {value}", KeyVersion)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--tags {value}", Tags)
-              .Add("--tier {value}", Tier)
-              .Add("--trusted-id-provider-state {value}", TrustedIdProviderState)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureDlsAccountFirewallCreateSettings
     /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
     [PublicAPI]
@@ -1457,214 +1457,6 @@ namespace Nuke.Azure
               .Add("--end-ip-address {value}", EndIpAddress)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--start-ip-address {value}", StartIpAddress)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderCreateSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountTrustedProviderCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The URL of this trusted identity provider.</p></summary>
-        public virtual string IdProvider { get; internal set; }
-        /// <summary><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
-        public virtual string TrustedIdProviderName { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account trusted-provider create")
-              .Add("--account {value}", Account)
-              .Add("--id-provider {value}", IdProvider)
-              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderDeleteSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountTrustedProviderDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the trusted identity provider to delete.</p></summary>
-        public virtual string TrustedIdProviderName { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account trusted-provider delete")
-              .Add("--account {value}", Account)
-              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderListSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountTrustedProviderListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account trusted-provider list")
-              .Add("--account {value}", Account)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderShowSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountTrustedProviderShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the trusted identity provider to retrieve.</p></summary>
-        public virtual string TrustedIdProviderName { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account trusted-provider show")
-              .Add("--account {value}", Account)
-              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderUpdateSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountTrustedProviderUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
-        public virtual string TrustedIdProviderName { get; internal set; }
-        /// <summary><p>The URL of this trusted identity provider.</p></summary>
-        public virtual string IdProvider { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account trusted-provider update")
-              .Add("--account {value}", Account)
-              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
-              .Add("--id-provider {value}", IdProvider)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1891,6 +1683,214 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderCreateSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountTrustedProviderCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The URL of this trusted identity provider.</p></summary>
+        public virtual string IdProvider { get; internal set; }
+        /// <summary><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
+        public virtual string TrustedIdProviderName { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account trusted-provider create")
+              .Add("--account {value}", Account)
+              .Add("--id-provider {value}", IdProvider)
+              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderDeleteSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountTrustedProviderDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the trusted identity provider to delete.</p></summary>
+        public virtual string TrustedIdProviderName { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account trusted-provider delete")
+              .Add("--account {value}", Account)
+              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderListSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountTrustedProviderListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account trusted-provider list")
+              .Add("--account {value}", Account)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderShowSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountTrustedProviderShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the trusted identity provider to retrieve.</p></summary>
+        public virtual string TrustedIdProviderName { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account trusted-provider show")
+              .Add("--account {value}", Account)
+              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderUpdateSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountTrustedProviderUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
+        public virtual string TrustedIdProviderName { get; internal set; }
+        /// <summary><p>The URL of this trusted identity provider.</p></summary>
+        public virtual string IdProvider { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account trusted-provider update")
+              .Add("--account {value}", Account)
+              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
+              .Add("--id-provider {value}", IdProvider)
+              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2277,6 +2277,1080 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureDlsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureDlsSettings ResetVerbose(this AzureDlsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountCreateSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetAccount(this AzureDlsAccountCreateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetAccount(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DefaultGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.DefaultGroup"/>.</em></p><p>Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetDefaultGroup(this AzureDlsAccountCreateSettings toolSettings, string defaultGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DefaultGroup = defaultGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.DefaultGroup"/>.</em></p><p>Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetDefaultGroup(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DefaultGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DisableEncryption
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.DisableEncryption"/>.</em></p><p>Indicates that the account will not have any form of encryption applied to it.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetDisableEncryption(this AzureDlsAccountCreateSettings toolSettings, string disableEncryption)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableEncryption = disableEncryption;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.DisableEncryption"/>.</em></p><p>Indicates that the account will not have any form of encryption applied to it.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetDisableEncryption(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableEncryption = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EncryptionType
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.EncryptionType"/>.</em></p><p>Indicates what type of encryption to provision the account with. By default, encryption is ServiceManaged. If no encryption is desired, it must be explicitly set with the --disable-encryption flag.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetEncryptionType(this AzureDlsAccountCreateSettings toolSettings, DlsAccountCreateEncryptionType encryptionType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EncryptionType = encryptionType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.EncryptionType"/>.</em></p><p>Indicates what type of encryption to provision the account with. By default, encryption is ServiceManaged. If no encryption is desired, it must be explicitly set with the --disable-encryption flag.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetEncryptionType(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EncryptionType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.KeyName"/>.</em></p><p>Key name for the user-assigned encryption type.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetKeyName(this AzureDlsAccountCreateSettings toolSettings, string keyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyName = keyName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.KeyName"/>.</em></p><p>Key name for the user-assigned encryption type.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetKeyName(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyVaultId
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.KeyVaultId"/>.</em></p><p>Key vault for the user-assigned encryption type.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetKeyVaultId(this AzureDlsAccountCreateSettings toolSettings, string keyVaultId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyVaultId = keyVaultId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.KeyVaultId"/>.</em></p><p>Key vault for the user-assigned encryption type.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetKeyVaultId(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyVaultId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyVersion
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.KeyVersion"/>.</em></p><p>Key version for the user-assigned encryption type.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetKeyVersion(this AzureDlsAccountCreateSettings toolSettings, string keyVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyVersion = keyVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.KeyVersion"/>.</em></p><p>Key version for the user-assigned encryption type.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetKeyVersion(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetLocation(this AzureDlsAccountCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetLocation(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetResourceGroup(this AzureDlsAccountCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetResourceGroup(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetTags(this AzureDlsAccountCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetTags(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tier
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Tier"/>.</em></p><p>The desired commitment tier for this account to use.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetTier(this AzureDlsAccountCreateSettings toolSettings, DlsAccountTier tier)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tier = tier;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Tier"/>.</em></p><p>The desired commitment tier for this account to use.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetTier(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tier = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetDebug(this AzureDlsAccountCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetDebug(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetHelp(this AzureDlsAccountCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetHelp(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetOutput(this AzureDlsAccountCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetOutput(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetQuery(this AzureDlsAccountCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetQuery(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetVerbose(this AzureDlsAccountCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetVerbose(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountDeleteSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings SetAccount(this AzureDlsAccountDeleteSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings ResetAccount(this AzureDlsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings SetResourceGroup(this AzureDlsAccountDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings ResetResourceGroup(this AzureDlsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings SetDebug(this AzureDlsAccountDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings ResetDebug(this AzureDlsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings SetHelp(this AzureDlsAccountDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings ResetHelp(this AzureDlsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings SetOutput(this AzureDlsAccountDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings ResetOutput(this AzureDlsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings SetQuery(this AzureDlsAccountDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings ResetQuery(this AzureDlsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings SetVerbose(this AzureDlsAccountDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings ResetVerbose(this AzureDlsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountEnableKeyVaultSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountEnableKeyVaultSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings SetAccount(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings ResetAccount(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings SetResourceGroup(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings ResetResourceGroup(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings SetDebug(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings ResetDebug(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings SetHelp(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings ResetHelp(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings SetOutput(this AzureDlsAccountEnableKeyVaultSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings ResetOutput(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings SetQuery(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings ResetQuery(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings SetVerbose(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings ResetVerbose(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings SetResourceGroup(this AzureDlsAccountListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings ResetResourceGroup(this AzureDlsAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings SetDebug(this AzureDlsAccountListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings ResetDebug(this AzureDlsAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings SetHelp(this AzureDlsAccountListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings ResetHelp(this AzureDlsAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings SetOutput(this AzureDlsAccountListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings ResetOutput(this AzureDlsAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings SetQuery(this AzureDlsAccountListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings ResetQuery(this AzureDlsAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings SetVerbose(this AzureDlsAccountListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings ResetVerbose(this AzureDlsAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountShowSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings SetAccount(this AzureDlsAccountShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings ResetAccount(this AzureDlsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings SetResourceGroup(this AzureDlsAccountShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings ResetResourceGroup(this AzureDlsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings SetDebug(this AzureDlsAccountShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings ResetDebug(this AzureDlsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings SetHelp(this AzureDlsAccountShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings ResetHelp(this AzureDlsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings SetOutput(this AzureDlsAccountShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings ResetOutput(this AzureDlsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings SetQuery(this AzureDlsAccountShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings ResetQuery(this AzureDlsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings SetVerbose(this AzureDlsAccountShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings ResetVerbose(this AzureDlsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountUpdateSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetAccount(this AzureDlsAccountUpdateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetAccount(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AllowAzureIps
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.AllowAzureIps"/>.</em></p><p>Allow/block Azure originating IPs through the firewall.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetAllowAzureIps(this AzureDlsAccountUpdateSettings toolSettings, DlsAccountUpdateAllowAzureIps allowAzureIps)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AllowAzureIps = allowAzureIps;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.AllowAzureIps"/>.</em></p><p>Allow/block Azure originating IPs through the firewall.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetAllowAzureIps(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AllowAzureIps = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DefaultGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.DefaultGroup"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetDefaultGroup(this AzureDlsAccountUpdateSettings toolSettings, string defaultGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DefaultGroup = defaultGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.DefaultGroup"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetDefaultGroup(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DefaultGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FirewallState
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.FirewallState"/>.</em></p><p>Enable/disable existing firewall rules.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetFirewallState(this AzureDlsAccountUpdateSettings toolSettings, DlsAccountUpdateAllowAzureIps firewallState)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallState = firewallState;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.FirewallState"/>.</em></p><p>Enable/disable existing firewall rules.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetFirewallState(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallState = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyVersion
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.KeyVersion"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetKeyVersion(this AzureDlsAccountUpdateSettings toolSettings, string keyVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyVersion = keyVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.KeyVersion"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetKeyVersion(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetResourceGroup(this AzureDlsAccountUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetResourceGroup(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetTags(this AzureDlsAccountUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetTags(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tier
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Tier"/>.</em></p><p>The desired commitment tier for this account to use.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetTier(this AzureDlsAccountUpdateSettings toolSettings, DlsAccountTier tier)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tier = tier;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Tier"/>.</em></p><p>The desired commitment tier for this account to use.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetTier(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tier = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TrustedIdProviderState
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.TrustedIdProviderState"/>.</em></p><p>Enable/disable the existing trusted ID providers.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetTrustedIdProviderState(this AzureDlsAccountUpdateSettings toolSettings, DlsAccountUpdateAllowAzureIps trustedIdProviderState)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderState = trustedIdProviderState;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.TrustedIdProviderState"/>.</em></p><p>Enable/disable the existing trusted ID providers.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetTrustedIdProviderState(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderState = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetDebug(this AzureDlsAccountUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetDebug(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetHelp(this AzureDlsAccountUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetHelp(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetOutput(this AzureDlsAccountUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetOutput(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetQuery(this AzureDlsAccountUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetQuery(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetVerbose(this AzureDlsAccountUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetVerbose(this AzureDlsAccountUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4513,1080 +5587,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureDlsAccountCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountCreateSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetAccount(this AzureDlsAccountCreateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetAccount(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DefaultGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.DefaultGroup"/>.</em></p><p>Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetDefaultGroup(this AzureDlsAccountCreateSettings toolSettings, string defaultGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DefaultGroup = defaultGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.DefaultGroup"/>.</em></p><p>Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetDefaultGroup(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DefaultGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DisableEncryption
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.DisableEncryption"/>.</em></p><p>Indicates that the account will not have any form of encryption applied to it.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetDisableEncryption(this AzureDlsAccountCreateSettings toolSettings, string disableEncryption)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DisableEncryption = disableEncryption;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.DisableEncryption"/>.</em></p><p>Indicates that the account will not have any form of encryption applied to it.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetDisableEncryption(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DisableEncryption = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EncryptionType
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.EncryptionType"/>.</em></p><p>Indicates what type of encryption to provision the account with. By default, encryption is ServiceManaged. If no encryption is desired, it must be explicitly set with the --disable-encryption flag.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetEncryptionType(this AzureDlsAccountCreateSettings toolSettings, DlsAccountCreateEncryptionType encryptionType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EncryptionType = encryptionType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.EncryptionType"/>.</em></p><p>Indicates what type of encryption to provision the account with. By default, encryption is ServiceManaged. If no encryption is desired, it must be explicitly set with the --disable-encryption flag.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetEncryptionType(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EncryptionType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region KeyName
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.KeyName"/>.</em></p><p>Key name for the user-assigned encryption type.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetKeyName(this AzureDlsAccountCreateSettings toolSettings, string keyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyName = keyName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.KeyName"/>.</em></p><p>Key name for the user-assigned encryption type.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetKeyName(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region KeyVaultId
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.KeyVaultId"/>.</em></p><p>Key vault for the user-assigned encryption type.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetKeyVaultId(this AzureDlsAccountCreateSettings toolSettings, string keyVaultId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyVaultId = keyVaultId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.KeyVaultId"/>.</em></p><p>Key vault for the user-assigned encryption type.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetKeyVaultId(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyVaultId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region KeyVersion
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.KeyVersion"/>.</em></p><p>Key version for the user-assigned encryption type.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetKeyVersion(this AzureDlsAccountCreateSettings toolSettings, string keyVersion)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyVersion = keyVersion;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.KeyVersion"/>.</em></p><p>Key version for the user-assigned encryption type.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetKeyVersion(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyVersion = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetLocation(this AzureDlsAccountCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetLocation(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetResourceGroup(this AzureDlsAccountCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetResourceGroup(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetTags(this AzureDlsAccountCreateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetTags(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tier
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Tier"/>.</em></p><p>The desired commitment tier for this account to use.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetTier(this AzureDlsAccountCreateSettings toolSettings, DlsAccountTier tier)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tier = tier;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Tier"/>.</em></p><p>The desired commitment tier for this account to use.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetTier(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tier = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetDebug(this AzureDlsAccountCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetDebug(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetHelp(this AzureDlsAccountCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetHelp(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetOutput(this AzureDlsAccountCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetOutput(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetQuery(this AzureDlsAccountCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetQuery(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings SetVerbose(this AzureDlsAccountCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountCreateSettings ResetVerbose(this AzureDlsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountDeleteSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings SetAccount(this AzureDlsAccountDeleteSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings ResetAccount(this AzureDlsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings SetResourceGroup(this AzureDlsAccountDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings ResetResourceGroup(this AzureDlsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings SetDebug(this AzureDlsAccountDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings ResetDebug(this AzureDlsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings SetHelp(this AzureDlsAccountDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings ResetHelp(this AzureDlsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings SetOutput(this AzureDlsAccountDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings ResetOutput(this AzureDlsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings SetQuery(this AzureDlsAccountDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings ResetQuery(this AzureDlsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings SetVerbose(this AzureDlsAccountDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountDeleteSettings ResetVerbose(this AzureDlsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountEnableKeyVaultSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountEnableKeyVaultSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings SetAccount(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings ResetAccount(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings SetResourceGroup(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings ResetResourceGroup(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings SetDebug(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings ResetDebug(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings SetHelp(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings ResetHelp(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings SetOutput(this AzureDlsAccountEnableKeyVaultSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings ResetOutput(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings SetQuery(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings ResetQuery(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings SetVerbose(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings ResetVerbose(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureDlsAccountListSettings SetResourceGroup(this AzureDlsAccountListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureDlsAccountListSettings ResetResourceGroup(this AzureDlsAccountListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountListSettings SetDebug(this AzureDlsAccountListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountListSettings ResetDebug(this AzureDlsAccountListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountListSettings SetHelp(this AzureDlsAccountListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountListSettings ResetHelp(this AzureDlsAccountListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountListSettings SetOutput(this AzureDlsAccountListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountListSettings ResetOutput(this AzureDlsAccountListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountListSettings SetQuery(this AzureDlsAccountListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountListSettings ResetQuery(this AzureDlsAccountListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountListSettings SetVerbose(this AzureDlsAccountListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountListSettings ResetVerbose(this AzureDlsAccountListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountShowSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings SetAccount(this AzureDlsAccountShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings ResetAccount(this AzureDlsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings SetResourceGroup(this AzureDlsAccountShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings ResetResourceGroup(this AzureDlsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings SetDebug(this AzureDlsAccountShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings ResetDebug(this AzureDlsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings SetHelp(this AzureDlsAccountShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings ResetHelp(this AzureDlsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings SetOutput(this AzureDlsAccountShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings ResetOutput(this AzureDlsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings SetQuery(this AzureDlsAccountShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings ResetQuery(this AzureDlsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings SetVerbose(this AzureDlsAccountShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountShowSettings ResetVerbose(this AzureDlsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountUpdateSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetAccount(this AzureDlsAccountUpdateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetAccount(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AllowAzureIps
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.AllowAzureIps"/>.</em></p><p>Allow/block Azure originating IPs through the firewall.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetAllowAzureIps(this AzureDlsAccountUpdateSettings toolSettings, DlsAccountUpdateAllowAzureIps allowAzureIps)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AllowAzureIps = allowAzureIps;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.AllowAzureIps"/>.</em></p><p>Allow/block Azure originating IPs through the firewall.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetAllowAzureIps(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AllowAzureIps = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DefaultGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.DefaultGroup"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetDefaultGroup(this AzureDlsAccountUpdateSettings toolSettings, string defaultGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DefaultGroup = defaultGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.DefaultGroup"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetDefaultGroup(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DefaultGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FirewallState
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.FirewallState"/>.</em></p><p>Enable/disable existing firewall rules.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetFirewallState(this AzureDlsAccountUpdateSettings toolSettings, DlsAccountUpdateAllowAzureIps firewallState)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallState = firewallState;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.FirewallState"/>.</em></p><p>Enable/disable existing firewall rules.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetFirewallState(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallState = null;
-            return toolSettings;
-        }
-        #endregion
-        #region KeyVersion
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.KeyVersion"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetKeyVersion(this AzureDlsAccountUpdateSettings toolSettings, string keyVersion)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyVersion = keyVersion;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.KeyVersion"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetKeyVersion(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyVersion = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetResourceGroup(this AzureDlsAccountUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetResourceGroup(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetTags(this AzureDlsAccountUpdateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetTags(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tier
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Tier"/>.</em></p><p>The desired commitment tier for this account to use.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetTier(this AzureDlsAccountUpdateSettings toolSettings, DlsAccountTier tier)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tier = tier;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Tier"/>.</em></p><p>The desired commitment tier for this account to use.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetTier(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tier = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TrustedIdProviderState
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.TrustedIdProviderState"/>.</em></p><p>Enable/disable the existing trusted ID providers.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetTrustedIdProviderState(this AzureDlsAccountUpdateSettings toolSettings, DlsAccountUpdateAllowAzureIps trustedIdProviderState)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderState = trustedIdProviderState;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.TrustedIdProviderState"/>.</em></p><p>Enable/disable the existing trusted ID providers.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetTrustedIdProviderState(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderState = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetDebug(this AzureDlsAccountUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetDebug(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetHelp(this AzureDlsAccountUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetHelp(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetOutput(this AzureDlsAccountUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetOutput(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetQuery(this AzureDlsAccountUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetQuery(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetVerbose(this AzureDlsAccountUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetVerbose(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureDlsAccountFirewallCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
     [PublicAPI]
@@ -6393,784 +6393,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureDlsAccountFirewallUpdateSettings ResetVerbose(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountTrustedProviderCreateSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetAccount(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetAccount(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region IdProvider
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetIdProvider(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string idProvider)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdProvider = idProvider;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetIdProvider(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdProvider = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TrustedIdProviderName
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string trustedIdProviderName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = trustedIdProviderName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetResourceGroup(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetDebug(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetDebug(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetHelp(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetHelp(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetOutput(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetOutput(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetQuery(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetQuery(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetVerbose(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetVerbose(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountTrustedProviderDeleteSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetAccount(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetAccount(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TrustedIdProviderName
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to delete.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string trustedIdProviderName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = trustedIdProviderName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to delete.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetResourceGroup(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetDebug(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetDebug(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetHelp(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetHelp(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetOutput(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetOutput(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetQuery(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetQuery(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetVerbose(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetVerbose(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountTrustedProviderListSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetAccount(this AzureDlsAccountTrustedProviderListSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetAccount(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetResourceGroup(this AzureDlsAccountTrustedProviderListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetDebug(this AzureDlsAccountTrustedProviderListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetDebug(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetHelp(this AzureDlsAccountTrustedProviderListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetHelp(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetOutput(this AzureDlsAccountTrustedProviderListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetOutput(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetQuery(this AzureDlsAccountTrustedProviderListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetQuery(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetVerbose(this AzureDlsAccountTrustedProviderListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetVerbose(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountTrustedProviderShowSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetAccount(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetAccount(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TrustedIdProviderName
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to retrieve.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string trustedIdProviderName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = trustedIdProviderName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to retrieve.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetResourceGroup(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetDebug(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetDebug(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetHelp(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetHelp(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetOutput(this AzureDlsAccountTrustedProviderShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetOutput(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetQuery(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetQuery(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetVerbose(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetVerbose(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountTrustedProviderUpdateSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetAccount(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetAccount(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TrustedIdProviderName
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string trustedIdProviderName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = trustedIdProviderName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region IdProvider
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetIdProvider(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string idProvider)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdProvider = idProvider;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetIdProvider(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdProvider = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetResourceGroup(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetDebug(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetDebug(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetHelp(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetHelp(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetOutput(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetOutput(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetQuery(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetQuery(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetVerbose(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetVerbose(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -8057,6 +7279,784 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureDlsAccountNetworkRuleUpdateSettings ResetVerbose(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountTrustedProviderCreateSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetAccount(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetAccount(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IdProvider
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetIdProvider(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string idProvider)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdProvider = idProvider;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetIdProvider(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdProvider = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TrustedIdProviderName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string trustedIdProviderName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = trustedIdProviderName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetResourceGroup(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetDebug(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetDebug(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetHelp(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetHelp(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetOutput(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetOutput(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetQuery(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetQuery(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetVerbose(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetVerbose(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountTrustedProviderDeleteSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetAccount(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetAccount(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TrustedIdProviderName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to delete.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string trustedIdProviderName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = trustedIdProviderName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to delete.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetResourceGroup(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetDebug(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetDebug(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetHelp(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetHelp(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetOutput(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetOutput(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetQuery(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetQuery(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetVerbose(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetVerbose(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountTrustedProviderListSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetAccount(this AzureDlsAccountTrustedProviderListSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetAccount(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetResourceGroup(this AzureDlsAccountTrustedProviderListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetDebug(this AzureDlsAccountTrustedProviderListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetDebug(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetHelp(this AzureDlsAccountTrustedProviderListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetHelp(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetOutput(this AzureDlsAccountTrustedProviderListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetOutput(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetQuery(this AzureDlsAccountTrustedProviderListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetQuery(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetVerbose(this AzureDlsAccountTrustedProviderListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetVerbose(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountTrustedProviderShowSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetAccount(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetAccount(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TrustedIdProviderName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to retrieve.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string trustedIdProviderName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = trustedIdProviderName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to retrieve.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetResourceGroup(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetDebug(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetDebug(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetHelp(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetHelp(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetOutput(this AzureDlsAccountTrustedProviderShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetOutput(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetQuery(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetQuery(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetVerbose(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetVerbose(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountTrustedProviderUpdateSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetAccount(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetAccount(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TrustedIdProviderName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string trustedIdProviderName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = trustedIdProviderName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IdProvider
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetIdProvider(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string idProvider)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdProvider = idProvider;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetIdProvider(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdProvider = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetResourceGroup(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetDebug(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetDebug(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetHelp(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetHelp(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetOutput(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetOutput(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetQuery(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetQuery(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetVerbose(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetVerbose(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

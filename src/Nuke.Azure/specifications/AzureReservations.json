@@ -6,11 +6,11 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/reservations.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/reservations/reservation-order-id.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/reservations/reservation.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/reservations/catalog.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/reservations/reservation-order.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/catalog.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/reservation-order-id.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/reservation-order.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/reservation.yml"
   ],
   "name": "AzureReservations",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest",
@@ -23,6 +23,32 @@
       "settingsClass": {}
     },
     {
+      "postfix": "CatalogShow",
+      "definiteArgument": "reservations catalog show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ReservedResourceType",
+            "type": "ReservationsCatalogShowReservedResourceType",
+            "format": "--reserved-resource-type {value}",
+            "help": "Type of the resource for which the skus should be provided."
+          },
+          {
+            "name": "SubscriptionId",
+            "type": "string",
+            "format": "--subscription-id {value}",
+            "help": "Id of the subscription to get the catalog for."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "ReservationOrderIdList",
       "definiteArgument": "reservations reservation-order-id list",
       "settingsClass": {
@@ -32,6 +58,25 @@
             "type": "string",
             "format": "--subscription-id {value}",
             "help": "Id of the subscription to look up applied reservations."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReservationOrderList",
+      "definiteArgument": "reservations reservation-order list",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "ReservationOrderShow",
+      "definiteArgument": "reservations reservation-order show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ReservationOrderId",
+            "type": "string",
+            "format": "--reservation-order-id {value}",
+            "help": "Id of reservation order to look up."
           }
         ]
       }
@@ -185,51 +230,6 @@
           }
         ]
       }
-    },
-    {
-      "postfix": "CatalogShow",
-      "definiteArgument": "reservations catalog show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ReservedResourceType",
-            "type": "ReservationsCatalogShowReservedResourceType",
-            "format": "--reserved-resource-type {value}",
-            "help": "Type of the resource for which the skus should be provided."
-          },
-          {
-            "name": "SubscriptionId",
-            "type": "string",
-            "format": "--subscription-id {value}",
-            "help": "Id of the subscription to get the catalog for."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ReservationOrderList",
-      "definiteArgument": "reservations reservation-order list",
-      "settingsClass": {}
-    },
-    {
-      "postfix": "ReservationOrderShow",
-      "definiteArgument": "reservations reservation-order show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ReservationOrderId",
-            "type": "string",
-            "format": "--reservation-order-id {value}",
-            "help": "Id of reservation order to look up."
-          }
-        ]
-      }
     }
   ],
   "commonTaskProperties": [
@@ -266,6 +266,15 @@
   ],
   "enumerations": [
     {
+      "name": "ReservationsCatalogShowReservedResourceType",
+      "values": [
+        "cosmosdb",
+        "sqldatabases",
+        "suselinux",
+        "virtualmachines"
+      ]
+    },
+    {
       "name": "ReservationsReservationUpdateAppliedScopeType",
       "values": [
         "shared",
@@ -278,15 +287,6 @@
         "notsupported",
         "off",
         "on"
-      ]
-    },
-    {
-      "name": "ReservationsCatalogShowReservedResourceType",
-      "values": [
-        "cosmosdb",
-        "sqldatabases",
-        "suselinux",
-        "virtualmachines"
       ]
     }
   ]

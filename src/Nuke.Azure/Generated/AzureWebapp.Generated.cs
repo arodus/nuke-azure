@@ -1,8 +1,8 @@
-// Copyright Matthias Koch, Sebastian Karasek 2018.
+// Copyright 2018 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.2 [CommitSha: ff25463a].
+// Generated with Nuke.CodeGeneration, Version: 0.7.0 [CommitSha: 9d3d3d7e].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureWebapp.json.
 
 using JetBrains.Annotations;
@@ -116,6 +116,38 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappAuthShow(Configure<AzureWebappAuthShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappAuthShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappAuthUpdate(Configure<AzureWebappAuthUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappAuthUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappConfigSet(Configure<AzureWebappConfigSetSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigSetSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappConfigShow(Configure<AzureWebappConfigShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureWebappCorsAdd(Configure<AzureWebappCorsAddSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappCorsAddSettings());
@@ -140,25 +172,49 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappTrafficRoutingClear(Configure<AzureWebappTrafficRoutingClearSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureWebappDeletedList(Configure<AzureWebappDeletedListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappTrafficRoutingClearSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureWebappDeletedListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappTrafficRoutingSet(Configure<AzureWebappTrafficRoutingSetSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureWebappDeletedRestore(Configure<AzureWebappDeletedRestoreSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappTrafficRoutingSetSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureWebappDeletedRestoreSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappTrafficRoutingShow(Configure<AzureWebappTrafficRoutingShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureWebappDeploymentListPublishingProfiles(Configure<AzureWebappDeploymentListPublishingProfilesSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappTrafficRoutingShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentListPublishingProfilesSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappIdentityAssign(Configure<AzureWebappIdentityAssignSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappIdentityAssignSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappIdentityRemove(Configure<AzureWebappIdentityRemoveSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappIdentityRemoveSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappIdentityShow(Configure<AzureWebappIdentityShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappIdentityShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -196,25 +252,25 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappIdentityAssign(Configure<AzureWebappIdentityAssignSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureWebappTrafficRoutingClear(Configure<AzureWebappTrafficRoutingClearSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappIdentityAssignSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureWebappTrafficRoutingClearSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappIdentityRemove(Configure<AzureWebappIdentityRemoveSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureWebappTrafficRoutingSet(Configure<AzureWebappTrafficRoutingSetSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappIdentityRemoveSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureWebappTrafficRoutingSetSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappIdentityShow(Configure<AzureWebappIdentityShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureWebappTrafficRoutingShow(Configure<AzureWebappTrafficRoutingShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappIdentityShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureWebappTrafficRoutingShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -223,118 +279,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureWebappWebjob(Configure<AzureWebappWebjobSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappAuthShow(Configure<AzureWebappAuthShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappAuthShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappAuthUpdate(Configure<AzureWebappAuthUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappAuthUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappConfigSet(Configure<AzureWebappConfigSetSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigSetSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappConfigShow(Configure<AzureWebappConfigShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappDeletedList(Configure<AzureWebappDeletedListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappDeletedListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappDeletedRestore(Configure<AzureWebappDeletedRestoreSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappDeletedRestoreSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappDeploymentListPublishingProfiles(Configure<AzureWebappDeploymentListPublishingProfilesSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentListPublishingProfilesSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappConfigStorageAccountAdd(Configure<AzureWebappConfigStorageAccountAddSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigStorageAccountAddSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappConfigStorageAccountDelete(Configure<AzureWebappConfigStorageAccountDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigStorageAccountDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappConfigStorageAccountList(Configure<AzureWebappConfigStorageAccountListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigStorageAccountListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappConfigStorageAccountUpdate(Configure<AzureWebappConfigStorageAccountUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigStorageAccountUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappConfigConnectionStringDelete(Configure<AzureWebappConfigConnectionStringDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigConnectionStringDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappConfigConnectionStringList(Configure<AzureWebappConfigConnectionStringListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigConnectionStringListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappConfigConnectionStringSet(Configure<AzureWebappConfigConnectionStringSetSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigConnectionStringSetSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -359,30 +303,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureWebappConfigAppsettingsSet(Configure<AzureWebappConfigAppsettingsSetSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigAppsettingsSetSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappConfigContainerDelete(Configure<AzureWebappConfigContainerDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigContainerDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappConfigContainerSet(Configure<AzureWebappConfigContainerSetSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigContainerSetSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappConfigContainerShow(Configure<AzureWebappConfigContainerShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigContainerShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -423,6 +343,54 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureWebappConfigBackupUpdate(Configure<AzureWebappConfigBackupUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigBackupUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappConfigConnectionStringDelete(Configure<AzureWebappConfigConnectionStringDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigConnectionStringDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappConfigConnectionStringList(Configure<AzureWebappConfigConnectionStringListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigConnectionStringListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappConfigConnectionStringSet(Configure<AzureWebappConfigConnectionStringSetSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigConnectionStringSetSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappConfigContainerDelete(Configure<AzureWebappConfigContainerDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigContainerDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappConfigContainerSet(Configure<AzureWebappConfigContainerSetSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigContainerSetSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappConfigContainerShow(Configure<AzureWebappConfigContainerShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigContainerShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -500,65 +468,33 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappWebjobTriggeredList(Configure<AzureWebappWebjobTriggeredListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureWebappConfigStorageAccountAdd(Configure<AzureWebappConfigStorageAccountAddSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobTriggeredListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigStorageAccountAddSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappWebjobTriggeredLog(Configure<AzureWebappWebjobTriggeredLogSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureWebappConfigStorageAccountDelete(Configure<AzureWebappConfigStorageAccountDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobTriggeredLogSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigStorageAccountDeleteSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappWebjobTriggeredRemove(Configure<AzureWebappWebjobTriggeredRemoveSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureWebappConfigStorageAccountList(Configure<AzureWebappConfigStorageAccountListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobTriggeredRemoveSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigStorageAccountListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappWebjobTriggeredRun(Configure<AzureWebappWebjobTriggeredRunSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureWebappConfigStorageAccountUpdate(Configure<AzureWebappConfigStorageAccountUpdateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobTriggeredRunSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappWebjobContinuousList(Configure<AzureWebappWebjobContinuousListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobContinuousListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappWebjobContinuousRemove(Configure<AzureWebappWebjobContinuousRemoveSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobContinuousRemoveSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappWebjobContinuousStart(Configure<AzureWebappWebjobContinuousStartSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobContinuousStartSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappWebjobContinuousStop(Configure<AzureWebappWebjobContinuousStopSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobContinuousStopSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureWebappConfigStorageAccountUpdateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -575,22 +511,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureWebappDeploymentContainerShowCdUrl(Configure<AzureWebappDeploymentContainerShowCdUrlSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentContainerShowCdUrlSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappDeploymentUserSet(Configure<AzureWebappDeploymentUserSetSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentUserSetSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureWebappDeploymentUserShow(Configure<AzureWebappDeploymentUserShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentUserShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -687,6 +607,86 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureWebappDeploymentSourceUpdateToken(Configure<AzureWebappDeploymentSourceUpdateTokenSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentSourceUpdateTokenSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappDeploymentUserSet(Configure<AzureWebappDeploymentUserSetSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentUserSetSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappDeploymentUserShow(Configure<AzureWebappDeploymentUserShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentUserShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappWebjobContinuousList(Configure<AzureWebappWebjobContinuousListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobContinuousListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappWebjobContinuousRemove(Configure<AzureWebappWebjobContinuousRemoveSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobContinuousRemoveSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappWebjobContinuousStart(Configure<AzureWebappWebjobContinuousStartSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobContinuousStartSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappWebjobContinuousStop(Configure<AzureWebappWebjobContinuousStopSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobContinuousStopSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappWebjobTriggeredList(Configure<AzureWebappWebjobTriggeredListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobTriggeredListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappWebjobTriggeredLog(Configure<AzureWebappWebjobTriggeredLogSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobTriggeredLogSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappWebjobTriggeredRemove(Configure<AzureWebappWebjobTriggeredRemoveSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobTriggeredRemoveSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureWebappWebjobTriggeredRun(Configure<AzureWebappWebjobTriggeredRunSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureWebappWebjobTriggeredRunSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -1159,604 +1159,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureWebappCorsAddSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappCorsAddSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        public virtual IReadOnlyList<string> AllowedOrigins => AllowedOriginsInternal.AsReadOnly();
-        internal List<string> AllowedOriginsInternal { get; set; } = new List<string>();
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp cors add")
-              .Add("--allowed-origins {value}", AllowedOrigins, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappCorsRemoveSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappCorsRemoveSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        public virtual IReadOnlyList<string> AllowedOrigins => AllowedOriginsInternal.AsReadOnly();
-        internal List<string> AllowedOriginsInternal { get; set; } = new List<string>();
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp cors remove")
-              .Add("--allowed-origins {value}", AllowedOrigins, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappCorsShowSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappCorsShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp cors show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappTrafficRoutingClearSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappTrafficRoutingClearSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp traffic-routing clear")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappTrafficRoutingSetSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappTrafficRoutingSetSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
-        public virtual IReadOnlyList<string> Distribution => DistributionInternal.AsReadOnly();
-        internal List<string> DistributionInternal { get; set; } = new List<string>();
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp traffic-routing set")
-              .Add("--distribution {value}", Distribution, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappTrafficRoutingShowSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappTrafficRoutingShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp traffic-routing show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappLogConfigSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappLogConfigSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Configure application logging to file system.</p></summary>
-        public virtual bool? ApplicationLogging { get; internal set; }
-        /// <summary><p>Configure detailed error messages.</p></summary>
-        public virtual bool? DetailedErrorMessages { get; internal set; }
-        /// <summary><p>Configure gathering STDOUT and STDERR output from container.</p></summary>
-        public virtual WebappLogConfigDockerContainerLogging DockerContainerLogging { get; internal set; }
-        /// <summary><p>Configure failed request tracing.</p></summary>
-        public virtual bool? FailedRequestTracing { get; internal set; }
-        /// <summary><p>Logging level.</p></summary>
-        public virtual WebappLogConfigLevel Level { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Configure Web server logging.</p></summary>
-        public virtual WebappLogConfigDockerContainerLogging WebServerLogging { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp log config")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--application-logging", ApplicationLogging)
-              .Add("--detailed-error-messages", DetailedErrorMessages)
-              .Add("--docker-container-logging {value}", DockerContainerLogging)
-              .Add("--failed-request-tracing", FailedRequestTracing)
-              .Add("--level {value}", Level)
-              .Add("--slot {value}", Slot)
-              .Add("--web-server-logging {value}", WebServerLogging)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappLogDownloadSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappLogDownloadSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The downloaded zipped log file path.</p></summary>
-        public virtual string LogFile { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp log download")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--log-file {value}", LogFile)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappLogShowSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappLogShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp log show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappLogTailSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappLogTailSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>By default all live traces configured by 'az webapp log config' will be shown, but you can scope to certain providers/folders, e.g. 'application', 'http', etc. For details, check out <a href="https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream">https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream</a>.</p></summary>
-        public virtual string Provider { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp log tail")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--provider {value}", Provider)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappIdentityAssignSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappIdentityAssignSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Role name or id the managed identity will be assigned.</p></summary>
-        public virtual string Role { get; internal set; }
-        /// <summary><p>The scope the managed identity has access to.</p></summary>
-        public virtual string Scope { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp identity assign")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--role {value}", Role)
-              .Add("--scope {value}", Scope)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappIdentityRemoveSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappIdentityRemoveSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp identity remove")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappIdentityShowSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappIdentityShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp identity show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappWebjobSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappWebjobSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp webjob")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureWebappAuthShowSettings
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
@@ -2037,6 +1439,137 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureWebappCorsAddSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappCorsAddSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        public virtual IReadOnlyList<string> AllowedOrigins => AllowedOriginsInternal.AsReadOnly();
+        internal List<string> AllowedOriginsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp cors add")
+              .Add("--allowed-origins {value}", AllowedOrigins, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappCorsRemoveSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappCorsRemoveSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        public virtual IReadOnlyList<string> AllowedOrigins => AllowedOriginsInternal.AsReadOnly();
+        internal List<string> AllowedOriginsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp cors remove")
+              .Add("--allowed-origins {value}", AllowedOrigins, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappCorsShowSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappCorsShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp cors show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureWebappDeletedListSettings
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
@@ -2166,35 +1699,25 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureWebappConfigStorageAccountAddSettings
+    #region AzureWebappIdentityAssignSettings
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureWebappConfigStorageAccountAddSettings : ToolSettings
+    public partial class AzureWebappIdentityAssignSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureWebapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Storage account access key.</p></summary>
-        public virtual string AccessKey { get; internal set; }
-        /// <summary><p>Storage account name.</p></summary>
-        public virtual string AccountName { get; internal set; }
-        /// <summary><p>Custom identifier.</p></summary>
-        public virtual string CustomId { get; internal set; }
         /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Share name (Azure Files) or container name (Azure Blob Storage).</p></summary>
-        public virtual string ShareName { get; internal set; }
-        /// <summary><p>Storage type.</p></summary>
-        public virtual WebappConfigStorageAccountStorageType StorageType { get; internal set; }
-        /// <summary><p>Path to mount storage volume within web app.</p></summary>
-        public virtual string MountPath { get; internal set; }
+        /// <summary><p>Role name or id the managed identity will be assigned.</p></summary>
+        public virtual string Role { get; internal set; }
+        /// <summary><p>The scope the managed identity has access to.</p></summary>
+        public virtual string Scope { get; internal set; }
         /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         public virtual string Slot { get; internal set; }
-        /// <summary><p>Slot setting.</p></summary>
-        public virtual string SlotSetting { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2208,17 +1731,12 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("webapp config storage-account add")
-              .Add("--access-key {value}", AccessKey)
-              .Add("--account-name {value}", AccountName)
-              .Add("--custom-id {value}", CustomId)
+              .Add("webapp identity assign")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--share-name {value}", ShareName)
-              .Add("--storage-type {value}", StorageType)
-              .Add("--mount-path {value}", MountPath)
+              .Add("--role {value}", Role)
+              .Add("--scope {value}", Scope)
               .Add("--slot {value}", Slot)
-              .Add("--slot-setting {value}", SlotSetting)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2228,17 +1746,15 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureWebappConfigStorageAccountDeleteSettings
+    #region AzureWebappIdentityRemoveSettings
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureWebappConfigStorageAccountDeleteSettings : ToolSettings
+    public partial class AzureWebappIdentityRemoveSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureWebapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Custom identifier.</p></summary>
-        public virtual string CustomId { get; internal set; }
         /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
@@ -2258,8 +1774,7 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("webapp config storage-account delete")
-              .Add("--custom-id {value}", CustomId)
+              .Add("webapp identity remove")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--slot {value}", Slot)
@@ -2272,12 +1787,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureWebappConfigStorageAccountListSettings
+    #region AzureWebappIdentityShowSettings
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureWebappConfigStorageAccountListSettings : ToolSettings
+    public partial class AzureWebappIdentityShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureWebapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
@@ -2300,7 +1815,7 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("webapp config storage-account list")
+              .Add("webapp identity show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--slot {value}", Slot)
@@ -2313,35 +1828,33 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureWebappConfigStorageAccountUpdateSettings
+    #region AzureWebappLogConfigSettings
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureWebappConfigStorageAccountUpdateSettings : ToolSettings
+    public partial class AzureWebappLogConfigSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureWebapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Custom identifier.</p></summary>
-        public virtual string CustomId { get; internal set; }
         /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Storage account access key.</p></summary>
-        public virtual string AccessKey { get; internal set; }
-        /// <summary><p>Storage account name.</p></summary>
-        public virtual string AccountName { get; internal set; }
-        /// <summary><p>Path to mount storage volume within web app.</p></summary>
-        public virtual string MountPath { get; internal set; }
-        /// <summary><p>Share name (Azure Files) or container name (Azure Blob Storage).</p></summary>
-        public virtual string ShareName { get; internal set; }
+        /// <summary><p>Configure application logging to file system.</p></summary>
+        public virtual bool? ApplicationLogging { get; internal set; }
+        /// <summary><p>Configure detailed error messages.</p></summary>
+        public virtual bool? DetailedErrorMessages { get; internal set; }
+        /// <summary><p>Configure gathering STDOUT and STDERR output from container.</p></summary>
+        public virtual WebappLogConfigDockerContainerLogging DockerContainerLogging { get; internal set; }
+        /// <summary><p>Configure failed request tracing.</p></summary>
+        public virtual bool? FailedRequestTracing { get; internal set; }
+        /// <summary><p>Logging level.</p></summary>
+        public virtual WebappLogConfigLevel Level { get; internal set; }
         /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         public virtual string Slot { get; internal set; }
-        /// <summary><p>Slot setting.</p></summary>
-        public virtual string SlotSetting { get; internal set; }
-        /// <summary><p>Storage type.</p></summary>
-        public virtual WebappConfigStorageAccountStorageType StorageType { get; internal set; }
+        /// <summary><p>Configure Web server logging.</p></summary>
+        public virtual WebappLogConfigDockerContainerLogging WebServerLogging { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2355,17 +1868,16 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("webapp config storage-account update")
-              .Add("--custom-id {value}", CustomId)
+              .Add("webapp log config")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--access-key {value}", AccessKey)
-              .Add("--account-name {value}", AccountName)
-              .Add("--mount-path {value}", MountPath)
-              .Add("--share-name {value}", ShareName)
+              .Add("--application-logging", ApplicationLogging)
+              .Add("--detailed-error-messages", DetailedErrorMessages)
+              .Add("--docker-container-logging {value}", DockerContainerLogging)
+              .Add("--failed-request-tracing", FailedRequestTracing)
+              .Add("--level {value}", Level)
               .Add("--slot {value}", Slot)
-              .Add("--slot-setting {value}", SlotSetting)
-              .Add("--storage-type {value}", StorageType)
+              .Add("--web-server-logging {value}", WebServerLogging)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2375,12 +1887,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureWebappConfigConnectionStringDeleteSettings
+    #region AzureWebappLogDownloadSettings
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureWebappConfigConnectionStringDeleteSettings : ToolSettings
+    public partial class AzureWebappLogDownloadSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureWebapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
@@ -2388,9 +1900,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated connection-string names.</p></summary>
-        public virtual IReadOnlyList<string> SettingNames => SettingNamesInternal.AsReadOnly();
-        internal List<string> SettingNamesInternal { get; set; } = new List<string>();
+        /// <summary><p>The downloaded zipped log file path.</p></summary>
+        public virtual string LogFile { get; internal set; }
         /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         public virtual string Slot { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -2406,51 +1917,10 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("webapp config connection-string delete")
+              .Add("webapp log download")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--setting-names {value}", SettingNames, separator: ' ')
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappConfigConnectionStringListSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappConfigConnectionStringListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp config connection-string list")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--log-file {value}", LogFile)
               .Add("--slot {value}", Slot)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -2461,29 +1931,21 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureWebappConfigConnectionStringSetSettings
+    #region AzureWebappLogShowSettings
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureWebappConfigConnectionStringSetSettings : ToolSettings
+    public partial class AzureWebappLogShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureWebapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Connection string type.</p></summary>
-        public virtual WebappConfigConnectionStringSetConnectionStringType ConnectionStringType { get; internal set; }
         /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        public virtual IReadOnlyDictionary<string, object> Settings => SettingsInternal.AsReadOnly();
-        internal Dictionary<string, object> SettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         public virtual string Slot { get; internal set; }
-        /// <summary><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        public virtual IReadOnlyDictionary<string, object> SlotSettings => SlotSettingsInternal.AsReadOnly();
-        internal Dictionary<string, object> SlotSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2497,13 +1959,204 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("webapp config connection-string set")
-              .Add("--connection-string-type {value}", ConnectionStringType)
+              .Add("webapp log show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--settings {value}", Settings, "{key}={value}", separator: ' ')
               .Add("--slot {value}", Slot)
-              .Add("--slot-settings {value}", SlotSettings, "{key}={value}", separator: ' ')
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappLogTailSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappLogTailSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>By default all live traces configured by 'az webapp log config' will be shown, but you can scope to certain providers/folders, e.g. 'application', 'http', etc. For details, check out <a href="https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream">https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream</a>.</p></summary>
+        public virtual string Provider { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp log tail")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--provider {value}", Provider)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappTrafficRoutingClearSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappTrafficRoutingClearSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp traffic-routing clear")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappTrafficRoutingSetSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappTrafficRoutingSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
+        public virtual IReadOnlyList<string> Distribution => DistributionInternal.AsReadOnly();
+        internal List<string> DistributionInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp traffic-routing set")
+              .Add("--distribution {value}", Distribution, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappTrafficRoutingShowSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappTrafficRoutingShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp traffic-routing show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappWebjobSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappWebjobSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp webjob")
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2639,153 +2292,6 @@ namespace Nuke.Azure
               .Add("--settings {value}", Settings, "{key}={value}", separator: ' ')
               .Add("--slot {value}", Slot)
               .Add("--slot-settings {value}", SlotSettings, "{key}={value}", separator: ' ')
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappConfigContainerDeleteSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappConfigContainerDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp config container delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappConfigContainerSetSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappConfigContainerSetSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The container custom image name and optionally the tag name.</p></summary>
-        public virtual string DockerCustomImageName { get; internal set; }
-        /// <summary><p>The container registry server password.</p></summary>
-        public virtual string DockerRegistryServerPassword { get; internal set; }
-        /// <summary><p>The container registry server url.</p></summary>
-        public virtual string DockerRegistryServerUrl { get; internal set; }
-        /// <summary><p>The container registry server username.</p></summary>
-        public virtual string DockerRegistryServerUser { get; internal set; }
-        /// <summary><p>Enables platform storage (custom container only).</p></summary>
-        public virtual bool? EnableAppServiceStorage { get; internal set; }
-        /// <summary><p>Config file for multicontainer apps.</p></summary>
-        public virtual string MulticontainerConfigFile { get; internal set; }
-        /// <summary><p>Config type.</p></summary>
-        public virtual WebappMulticontainerConfigType MulticontainerConfigType { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp config container set")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--docker-custom-image-name {value}", DockerCustomImageName)
-              .Add("--docker-registry-server-password {value}", DockerRegistryServerPassword, secret: true)
-              .Add("--docker-registry-server-url {value}", DockerRegistryServerUrl)
-              .Add("--docker-registry-server-user {value}", DockerRegistryServerUser)
-              .Add("--enable-app-service-storage", EnableAppServiceStorage)
-              .Add("--multicontainer-config-file {value}", MulticontainerConfigFile)
-              .Add("--multicontainer-config-type {value}", MulticontainerConfigType)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappConfigContainerShowSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappConfigContainerShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Shows decoded config if a multicontainer config is set.</p></summary>
-        public virtual string ShowMulticontainerConfig { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp config container show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--show-multicontainer-config {value}", ShowMulticontainerConfig)
-              .Add("--slot {value}", Slot)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3054,6 +2560,291 @@ namespace Nuke.Azure
               .Add("--db-connection-string {value}", DbConnectionString)
               .Add("--db-name {value}", DbName)
               .Add("--db-type {value}", DbType)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappConfigConnectionStringDeleteSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappConfigConnectionStringDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated connection-string names.</p></summary>
+        public virtual IReadOnlyList<string> SettingNames => SettingNamesInternal.AsReadOnly();
+        internal List<string> SettingNamesInternal { get; set; } = new List<string>();
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp config connection-string delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--setting-names {value}", SettingNames, separator: ' ')
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappConfigConnectionStringListSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappConfigConnectionStringListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp config connection-string list")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappConfigConnectionStringSetSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappConfigConnectionStringSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Connection string type.</p></summary>
+        public virtual WebappConfigConnectionStringSetConnectionStringType ConnectionStringType { get; internal set; }
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        public virtual IReadOnlyDictionary<string, object> Settings => SettingsInternal.AsReadOnly();
+        internal Dictionary<string, object> SettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        public virtual IReadOnlyDictionary<string, object> SlotSettings => SlotSettingsInternal.AsReadOnly();
+        internal Dictionary<string, object> SlotSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp config connection-string set")
+              .Add("--connection-string-type {value}", ConnectionStringType)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--settings {value}", Settings, "{key}={value}", separator: ' ')
+              .Add("--slot {value}", Slot)
+              .Add("--slot-settings {value}", SlotSettings, "{key}={value}", separator: ' ')
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappConfigContainerDeleteSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappConfigContainerDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp config container delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappConfigContainerSetSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappConfigContainerSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The container custom image name and optionally the tag name.</p></summary>
+        public virtual string DockerCustomImageName { get; internal set; }
+        /// <summary><p>The container registry server password.</p></summary>
+        public virtual string DockerRegistryServerPassword { get; internal set; }
+        /// <summary><p>The container registry server url.</p></summary>
+        public virtual string DockerRegistryServerUrl { get; internal set; }
+        /// <summary><p>The container registry server username.</p></summary>
+        public virtual string DockerRegistryServerUser { get; internal set; }
+        /// <summary><p>Enables platform storage (custom container only).</p></summary>
+        public virtual bool? EnableAppServiceStorage { get; internal set; }
+        /// <summary><p>Config file for multicontainer apps.</p></summary>
+        public virtual string MulticontainerConfigFile { get; internal set; }
+        /// <summary><p>Config type.</p></summary>
+        public virtual WebappMulticontainerConfigType MulticontainerConfigType { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp config container set")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--docker-custom-image-name {value}", DockerCustomImageName)
+              .Add("--docker-registry-server-password {value}", DockerRegistryServerPassword, secret: true)
+              .Add("--docker-registry-server-url {value}", DockerRegistryServerUrl)
+              .Add("--docker-registry-server-user {value}", DockerRegistryServerUser)
+              .Add("--enable-app-service-storage", EnableAppServiceStorage)
+              .Add("--multicontainer-config-file {value}", MulticontainerConfigFile)
+              .Add("--multicontainer-config-type {value}", MulticontainerConfigType)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappConfigContainerShowSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappConfigContainerShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Shows decoded config if a multicontainer config is set.</p></summary>
+        public virtual string ShowMulticontainerConfig { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp config container show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--show-multicontainer-config {value}", ShowMulticontainerConfig)
+              .Add("--slot {value}", Slot)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3438,15 +3229,79 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureWebappWebjobTriggeredListSettings
+    #region AzureWebappConfigStorageAccountAddSettings
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureWebappWebjobTriggeredListSettings : ToolSettings
+    public partial class AzureWebappConfigStorageAccountAddSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureWebapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Storage account access key.</p></summary>
+        public virtual string AccessKey { get; internal set; }
+        /// <summary><p>Storage account name.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>Custom identifier.</p></summary>
+        public virtual string CustomId { get; internal set; }
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Share name (Azure Files) or container name (Azure Blob Storage).</p></summary>
+        public virtual string ShareName { get; internal set; }
+        /// <summary><p>Storage type.</p></summary>
+        public virtual WebappConfigStorageAccountStorageType StorageType { get; internal set; }
+        /// <summary><p>Path to mount storage volume within web app.</p></summary>
+        public virtual string MountPath { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Slot setting.</p></summary>
+        public virtual string SlotSetting { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp config storage-account add")
+              .Add("--access-key {value}", AccessKey)
+              .Add("--account-name {value}", AccountName)
+              .Add("--custom-id {value}", CustomId)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--share-name {value}", ShareName)
+              .Add("--storage-type {value}", StorageType)
+              .Add("--mount-path {value}", MountPath)
+              .Add("--slot {value}", Slot)
+              .Add("--slot-setting {value}", SlotSetting)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappConfigStorageAccountDeleteSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappConfigStorageAccountDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Custom identifier.</p></summary>
+        public virtual string CustomId { get; internal set; }
         /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
@@ -3466,7 +3321,8 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("webapp webjob triggered list")
+              .Add("webapp config storage-account delete")
+              .Add("--custom-id {value}", CustomId)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--slot {value}", Slot)
@@ -3479,144 +3335,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureWebappWebjobTriggeredLogSettings
+    #region AzureWebappConfigStorageAccountListSettings
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureWebappWebjobTriggeredLogSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the webjob.</p></summary>
-        public virtual string WebjobName { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp webjob triggered log")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--webjob-name {value}", WebjobName)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappWebjobTriggeredRemoveSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappWebjobTriggeredRemoveSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the webjob.</p></summary>
-        public virtual string WebjobName { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp webjob triggered remove")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--webjob-name {value}", WebjobName)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappWebjobTriggeredRunSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappWebjobTriggeredRunSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the webjob.</p></summary>
-        public virtual string WebjobName { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp webjob triggered run")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--webjob-name {value}", WebjobName)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappWebjobContinuousListSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappWebjobContinuousListSettings : ToolSettings
+    public partial class AzureWebappConfigStorageAccountListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureWebapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
@@ -3639,7 +3363,7 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("webapp webjob continuous list")
+              .Add("webapp config storage-account list")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--slot {value}", Slot)
@@ -3652,23 +3376,35 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureWebappWebjobContinuousRemoveSettings
+    #region AzureWebappConfigStorageAccountUpdateSettings
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureWebappWebjobContinuousRemoveSettings : ToolSettings
+    public partial class AzureWebappConfigStorageAccountUpdateSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureWebapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Custom identifier.</p></summary>
+        public virtual string CustomId { get; internal set; }
         /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the webjob.</p></summary>
-        public virtual string WebjobName { get; internal set; }
+        /// <summary><p>Storage account access key.</p></summary>
+        public virtual string AccessKey { get; internal set; }
+        /// <summary><p>Storage account name.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>Path to mount storage volume within web app.</p></summary>
+        public virtual string MountPath { get; internal set; }
+        /// <summary><p>Share name (Azure Files) or container name (Azure Blob Storage).</p></summary>
+        public virtual string ShareName { get; internal set; }
         /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         public virtual string Slot { get; internal set; }
+        /// <summary><p>Slot setting.</p></summary>
+        public virtual string SlotSetting { get; internal set; }
+        /// <summary><p>Storage type.</p></summary>
+        public virtual WebappConfigStorageAccountStorageType StorageType { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3682,99 +3418,17 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("webapp webjob continuous remove")
+              .Add("webapp config storage-account update")
+              .Add("--custom-id {value}", CustomId)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--webjob-name {value}", WebjobName)
+              .Add("--access-key {value}", AccessKey)
+              .Add("--account-name {value}", AccountName)
+              .Add("--mount-path {value}", MountPath)
+              .Add("--share-name {value}", ShareName)
               .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappWebjobContinuousStartSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappWebjobContinuousStartSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the webjob.</p></summary>
-        public virtual string WebjobName { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp webjob continuous start")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--webjob-name {value}", WebjobName)
-              .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappWebjobContinuousStopSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappWebjobContinuousStopSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the webjob.</p></summary>
-        public virtual string WebjobName { get; internal set; }
-        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        public virtual string Slot { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp webjob continuous stop")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--webjob-name {value}", WebjobName)
-              .Add("--slot {value}", Slot)
+              .Add("--slot-setting {value}", SlotSetting)
+              .Add("--storage-type {value}", StorageType)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3860,76 +3514,6 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--slot {value}", Slot)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappDeploymentUserSetSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappDeploymentUserSetSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>User name.</p></summary>
-        public virtual string UserName { get; internal set; }
-        /// <summary><p>Password, will prompt if not specified.</p></summary>
-        public virtual string Password { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp deployment user set")
-              .Add("--user-name {value}", UserName)
-              .Add("--password {value}", Password, secret: true)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureWebappDeploymentUserShowSettings
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureWebappDeploymentUserShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("webapp deployment user show")
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -4479,6 +4063,422 @@ namespace Nuke.Azure
             arguments
               .Add("webapp deployment source update-token")
               .Add("--git-token {value}", GitToken)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappDeploymentUserSetSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappDeploymentUserSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>User name.</p></summary>
+        public virtual string UserName { get; internal set; }
+        /// <summary><p>Password, will prompt if not specified.</p></summary>
+        public virtual string Password { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp deployment user set")
+              .Add("--user-name {value}", UserName)
+              .Add("--password {value}", Password, secret: true)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappDeploymentUserShowSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappDeploymentUserShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp deployment user show")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappWebjobContinuousListSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappWebjobContinuousListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp webjob continuous list")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappWebjobContinuousRemoveSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappWebjobContinuousRemoveSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the webjob.</p></summary>
+        public virtual string WebjobName { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp webjob continuous remove")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--webjob-name {value}", WebjobName)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappWebjobContinuousStartSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappWebjobContinuousStartSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the webjob.</p></summary>
+        public virtual string WebjobName { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp webjob continuous start")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--webjob-name {value}", WebjobName)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappWebjobContinuousStopSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappWebjobContinuousStopSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the webjob.</p></summary>
+        public virtual string WebjobName { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp webjob continuous stop")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--webjob-name {value}", WebjobName)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappWebjobTriggeredListSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappWebjobTriggeredListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp webjob triggered list")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappWebjobTriggeredLogSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappWebjobTriggeredLogSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the webjob.</p></summary>
+        public virtual string WebjobName { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp webjob triggered log")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--webjob-name {value}", WebjobName)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappWebjobTriggeredRemoveSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappWebjobTriggeredRemoveSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the webjob.</p></summary>
+        public virtual string WebjobName { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp webjob triggered remove")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--webjob-name {value}", WebjobName)
+              .Add("--slot {value}", Slot)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureWebappWebjobTriggeredRunSettings
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureWebappWebjobTriggeredRunSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureWebapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the webjob.</p></summary>
+        public virtual string WebjobName { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("webapp webjob triggered run")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--webjob-name {value}", WebjobName)
+              .Add("--slot {value}", Slot)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -6494,2458 +6494,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureWebappCorsAddSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappCorsAddSettingsExtensions
-    {
-        #region AllowedOrigins
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/> to a new list.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings SetAllowedOrigins(this AzureWebappCorsAddSettings toolSettings, params string[] allowedOrigins)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AllowedOriginsInternal = allowedOrigins.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/> to a new list.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings SetAllowedOrigins(this AzureWebappCorsAddSettings toolSettings, IEnumerable<string> allowedOrigins)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AllowedOriginsInternal = allowedOrigins.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings AddAllowedOrigins(this AzureWebappCorsAddSettings toolSettings, params string[] allowedOrigins)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AllowedOriginsInternal.AddRange(allowedOrigins);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings AddAllowedOrigins(this AzureWebappCorsAddSettings toolSettings, IEnumerable<string> allowedOrigins)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AllowedOriginsInternal.AddRange(allowedOrigins);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings ClearAllowedOrigins(this AzureWebappCorsAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AllowedOriginsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings RemoveAllowedOrigins(this AzureWebappCorsAddSettings toolSettings, params string[] allowedOrigins)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(allowedOrigins);
-            toolSettings.AllowedOriginsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings RemoveAllowedOrigins(this AzureWebappCorsAddSettings toolSettings, IEnumerable<string> allowedOrigins)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(allowedOrigins);
-            toolSettings.AllowedOriginsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings SetName(this AzureWebappCorsAddSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings ResetName(this AzureWebappCorsAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings SetResourceGroup(this AzureWebappCorsAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings ResetResourceGroup(this AzureWebappCorsAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings SetSlot(this AzureWebappCorsAddSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings ResetSlot(this AzureWebappCorsAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings SetDebug(this AzureWebappCorsAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings ResetDebug(this AzureWebappCorsAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings SetHelp(this AzureWebappCorsAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings ResetHelp(this AzureWebappCorsAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings SetOutput(this AzureWebappCorsAddSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings ResetOutput(this AzureWebappCorsAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings SetQuery(this AzureWebappCorsAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings ResetQuery(this AzureWebappCorsAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings SetVerbose(this AzureWebappCorsAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappCorsAddSettings ResetVerbose(this AzureWebappCorsAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappCorsRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappCorsRemoveSettingsExtensions
-    {
-        #region AllowedOrigins
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/> to a new list.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings SetAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings, params string[] allowedOrigins)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AllowedOriginsInternal = allowedOrigins.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/> to a new list.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings SetAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings, IEnumerable<string> allowedOrigins)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AllowedOriginsInternal = allowedOrigins.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings AddAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings, params string[] allowedOrigins)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AllowedOriginsInternal.AddRange(allowedOrigins);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings AddAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings, IEnumerable<string> allowedOrigins)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AllowedOriginsInternal.AddRange(allowedOrigins);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings ClearAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AllowedOriginsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings RemoveAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings, params string[] allowedOrigins)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(allowedOrigins);
-            toolSettings.AllowedOriginsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings RemoveAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings, IEnumerable<string> allowedOrigins)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(allowedOrigins);
-            toolSettings.AllowedOriginsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings SetName(this AzureWebappCorsRemoveSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings ResetName(this AzureWebappCorsRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings SetResourceGroup(this AzureWebappCorsRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings ResetResourceGroup(this AzureWebappCorsRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings SetSlot(this AzureWebappCorsRemoveSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings ResetSlot(this AzureWebappCorsRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings SetDebug(this AzureWebappCorsRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings ResetDebug(this AzureWebappCorsRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings SetHelp(this AzureWebappCorsRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings ResetHelp(this AzureWebappCorsRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings SetOutput(this AzureWebappCorsRemoveSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings ResetOutput(this AzureWebappCorsRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings SetQuery(this AzureWebappCorsRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings ResetQuery(this AzureWebappCorsRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings SetVerbose(this AzureWebappCorsRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappCorsRemoveSettings ResetVerbose(this AzureWebappCorsRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappCorsShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappCorsShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings SetName(this AzureWebappCorsShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings ResetName(this AzureWebappCorsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings SetResourceGroup(this AzureWebappCorsShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings ResetResourceGroup(this AzureWebappCorsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings SetSlot(this AzureWebappCorsShowSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings ResetSlot(this AzureWebappCorsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings SetDebug(this AzureWebappCorsShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings ResetDebug(this AzureWebappCorsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings SetHelp(this AzureWebappCorsShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings ResetHelp(this AzureWebappCorsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings SetOutput(this AzureWebappCorsShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings ResetOutput(this AzureWebappCorsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings SetQuery(this AzureWebappCorsShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings ResetQuery(this AzureWebappCorsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings SetVerbose(this AzureWebappCorsShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappCorsShowSettings ResetVerbose(this AzureWebappCorsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappTrafficRoutingClearSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappTrafficRoutingClearSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings SetName(this AzureWebappTrafficRoutingClearSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings ResetName(this AzureWebappTrafficRoutingClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings SetResourceGroup(this AzureWebappTrafficRoutingClearSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings ResetResourceGroup(this AzureWebappTrafficRoutingClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings SetDebug(this AzureWebappTrafficRoutingClearSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings ResetDebug(this AzureWebappTrafficRoutingClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings SetHelp(this AzureWebappTrafficRoutingClearSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings ResetHelp(this AzureWebappTrafficRoutingClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings SetOutput(this AzureWebappTrafficRoutingClearSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings ResetOutput(this AzureWebappTrafficRoutingClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings SetQuery(this AzureWebappTrafficRoutingClearSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings ResetQuery(this AzureWebappTrafficRoutingClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings SetVerbose(this AzureWebappTrafficRoutingClearSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingClearSettings ResetVerbose(this AzureWebappTrafficRoutingClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappTrafficRoutingSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappTrafficRoutingSetSettingsExtensions
-    {
-        #region Distribution
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/> to a new list.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings SetDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings, params string[] distribution)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DistributionInternal = distribution.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/> to a new list.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings SetDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings, IEnumerable<string> distribution)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DistributionInternal = distribution.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/>.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings AddDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings, params string[] distribution)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DistributionInternal.AddRange(distribution);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/>.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings AddDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings, IEnumerable<string> distribution)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DistributionInternal.AddRange(distribution);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/>.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings ClearDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DistributionInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/>.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings RemoveDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings, params string[] distribution)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(distribution);
-            toolSettings.DistributionInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/>.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings RemoveDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings, IEnumerable<string> distribution)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(distribution);
-            toolSettings.DistributionInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings SetName(this AzureWebappTrafficRoutingSetSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings ResetName(this AzureWebappTrafficRoutingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings SetResourceGroup(this AzureWebappTrafficRoutingSetSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings ResetResourceGroup(this AzureWebappTrafficRoutingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings SetDebug(this AzureWebappTrafficRoutingSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings ResetDebug(this AzureWebappTrafficRoutingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings SetHelp(this AzureWebappTrafficRoutingSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings ResetHelp(this AzureWebappTrafficRoutingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings SetOutput(this AzureWebappTrafficRoutingSetSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings ResetOutput(this AzureWebappTrafficRoutingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings SetQuery(this AzureWebappTrafficRoutingSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings ResetQuery(this AzureWebappTrafficRoutingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings SetVerbose(this AzureWebappTrafficRoutingSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingSetSettings ResetVerbose(this AzureWebappTrafficRoutingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappTrafficRoutingShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappTrafficRoutingShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings SetName(this AzureWebappTrafficRoutingShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings ResetName(this AzureWebappTrafficRoutingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings SetResourceGroup(this AzureWebappTrafficRoutingShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings ResetResourceGroup(this AzureWebappTrafficRoutingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings SetDebug(this AzureWebappTrafficRoutingShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings ResetDebug(this AzureWebappTrafficRoutingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings SetHelp(this AzureWebappTrafficRoutingShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings ResetHelp(this AzureWebappTrafficRoutingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings SetOutput(this AzureWebappTrafficRoutingShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings ResetOutput(this AzureWebappTrafficRoutingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings SetQuery(this AzureWebappTrafficRoutingShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings ResetQuery(this AzureWebappTrafficRoutingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings SetVerbose(this AzureWebappTrafficRoutingShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappTrafficRoutingShowSettings ResetVerbose(this AzureWebappTrafficRoutingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappLogConfigSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappLogConfigSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetName(this AzureWebappLogConfigSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetName(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetResourceGroup(this AzureWebappLogConfigSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetResourceGroup(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ApplicationLogging
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.ApplicationLogging"/>.</em></p><p>Configure application logging to file system.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetApplicationLogging(this AzureWebappLogConfigSettings toolSettings, bool? applicationLogging)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationLogging = applicationLogging;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.ApplicationLogging"/>.</em></p><p>Configure application logging to file system.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetApplicationLogging(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationLogging = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureWebappLogConfigSettings.ApplicationLogging"/>.</em></p><p>Configure application logging to file system.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings EnableApplicationLogging(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationLogging = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureWebappLogConfigSettings.ApplicationLogging"/>.</em></p><p>Configure application logging to file system.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings DisableApplicationLogging(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationLogging = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureWebappLogConfigSettings.ApplicationLogging"/>.</em></p><p>Configure application logging to file system.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ToggleApplicationLogging(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationLogging = !toolSettings.ApplicationLogging;
-            return toolSettings;
-        }
-        #endregion
-        #region DetailedErrorMessages
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.DetailedErrorMessages"/>.</em></p><p>Configure detailed error messages.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetDetailedErrorMessages(this AzureWebappLogConfigSettings toolSettings, bool? detailedErrorMessages)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DetailedErrorMessages = detailedErrorMessages;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.DetailedErrorMessages"/>.</em></p><p>Configure detailed error messages.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetDetailedErrorMessages(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DetailedErrorMessages = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureWebappLogConfigSettings.DetailedErrorMessages"/>.</em></p><p>Configure detailed error messages.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings EnableDetailedErrorMessages(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DetailedErrorMessages = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureWebappLogConfigSettings.DetailedErrorMessages"/>.</em></p><p>Configure detailed error messages.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings DisableDetailedErrorMessages(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DetailedErrorMessages = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureWebappLogConfigSettings.DetailedErrorMessages"/>.</em></p><p>Configure detailed error messages.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ToggleDetailedErrorMessages(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DetailedErrorMessages = !toolSettings.DetailedErrorMessages;
-            return toolSettings;
-        }
-        #endregion
-        #region DockerContainerLogging
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.DockerContainerLogging"/>.</em></p><p>Configure gathering STDOUT and STDERR output from container.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetDockerContainerLogging(this AzureWebappLogConfigSettings toolSettings, WebappLogConfigDockerContainerLogging dockerContainerLogging)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DockerContainerLogging = dockerContainerLogging;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.DockerContainerLogging"/>.</em></p><p>Configure gathering STDOUT and STDERR output from container.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetDockerContainerLogging(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DockerContainerLogging = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FailedRequestTracing
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.FailedRequestTracing"/>.</em></p><p>Configure failed request tracing.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetFailedRequestTracing(this AzureWebappLogConfigSettings toolSettings, bool? failedRequestTracing)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FailedRequestTracing = failedRequestTracing;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.FailedRequestTracing"/>.</em></p><p>Configure failed request tracing.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetFailedRequestTracing(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FailedRequestTracing = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureWebappLogConfigSettings.FailedRequestTracing"/>.</em></p><p>Configure failed request tracing.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings EnableFailedRequestTracing(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FailedRequestTracing = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureWebappLogConfigSettings.FailedRequestTracing"/>.</em></p><p>Configure failed request tracing.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings DisableFailedRequestTracing(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FailedRequestTracing = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureWebappLogConfigSettings.FailedRequestTracing"/>.</em></p><p>Configure failed request tracing.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ToggleFailedRequestTracing(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FailedRequestTracing = !toolSettings.FailedRequestTracing;
-            return toolSettings;
-        }
-        #endregion
-        #region Level
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Level"/>.</em></p><p>Logging level.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetLevel(this AzureWebappLogConfigSettings toolSettings, WebappLogConfigLevel level)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Level = level;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Level"/>.</em></p><p>Logging level.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetLevel(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Level = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetSlot(this AzureWebappLogConfigSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetSlot(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region WebServerLogging
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.WebServerLogging"/>.</em></p><p>Configure Web server logging.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetWebServerLogging(this AzureWebappLogConfigSettings toolSettings, WebappLogConfigDockerContainerLogging webServerLogging)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebServerLogging = webServerLogging;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.WebServerLogging"/>.</em></p><p>Configure Web server logging.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetWebServerLogging(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebServerLogging = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetDebug(this AzureWebappLogConfigSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetDebug(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetHelp(this AzureWebappLogConfigSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetHelp(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetOutput(this AzureWebappLogConfigSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetOutput(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetQuery(this AzureWebappLogConfigSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetQuery(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings SetVerbose(this AzureWebappLogConfigSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogConfigSettings ResetVerbose(this AzureWebappLogConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappLogDownloadSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappLogDownloadSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings SetName(this AzureWebappLogDownloadSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings ResetName(this AzureWebappLogDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings SetResourceGroup(this AzureWebappLogDownloadSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings ResetResourceGroup(this AzureWebappLogDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region LogFile
-        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.LogFile"/>.</em></p><p>The downloaded zipped log file path.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings SetLogFile(this AzureWebappLogDownloadSettings toolSettings, string logFile)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LogFile = logFile;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.LogFile"/>.</em></p><p>The downloaded zipped log file path.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings ResetLogFile(this AzureWebappLogDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LogFile = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings SetSlot(this AzureWebappLogDownloadSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings ResetSlot(this AzureWebappLogDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings SetDebug(this AzureWebappLogDownloadSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings ResetDebug(this AzureWebappLogDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings SetHelp(this AzureWebappLogDownloadSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings ResetHelp(this AzureWebappLogDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings SetOutput(this AzureWebappLogDownloadSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings ResetOutput(this AzureWebappLogDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings SetQuery(this AzureWebappLogDownloadSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings ResetQuery(this AzureWebappLogDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings SetVerbose(this AzureWebappLogDownloadSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogDownloadSettings ResetVerbose(this AzureWebappLogDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappLogShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappLogShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings SetName(this AzureWebappLogShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings ResetName(this AzureWebappLogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings SetResourceGroup(this AzureWebappLogShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings ResetResourceGroup(this AzureWebappLogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings SetSlot(this AzureWebappLogShowSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings ResetSlot(this AzureWebappLogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings SetDebug(this AzureWebappLogShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings ResetDebug(this AzureWebappLogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings SetHelp(this AzureWebappLogShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings ResetHelp(this AzureWebappLogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings SetOutput(this AzureWebappLogShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings ResetOutput(this AzureWebappLogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings SetQuery(this AzureWebappLogShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings ResetQuery(this AzureWebappLogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings SetVerbose(this AzureWebappLogShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogShowSettings ResetVerbose(this AzureWebappLogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappLogTailSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappLogTailSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings SetName(this AzureWebappLogTailSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings ResetName(this AzureWebappLogTailSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings SetResourceGroup(this AzureWebappLogTailSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings ResetResourceGroup(this AzureWebappLogTailSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Provider
-        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Provider"/>.</em></p><p>By default all live traces configured by 'az webapp log config' will be shown, but you can scope to certain providers/folders, e.g. 'application', 'http', etc. For details, check out <a href="https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream">https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream</a>.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings SetProvider(this AzureWebappLogTailSettings toolSettings, string provider)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Provider = provider;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Provider"/>.</em></p><p>By default all live traces configured by 'az webapp log config' will be shown, but you can scope to certain providers/folders, e.g. 'application', 'http', etc. For details, check out <a href="https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream">https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream</a>.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings ResetProvider(this AzureWebappLogTailSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Provider = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings SetSlot(this AzureWebappLogTailSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings ResetSlot(this AzureWebappLogTailSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings SetDebug(this AzureWebappLogTailSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings ResetDebug(this AzureWebappLogTailSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings SetHelp(this AzureWebappLogTailSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings ResetHelp(this AzureWebappLogTailSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings SetOutput(this AzureWebappLogTailSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings ResetOutput(this AzureWebappLogTailSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings SetQuery(this AzureWebappLogTailSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings ResetQuery(this AzureWebappLogTailSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings SetVerbose(this AzureWebappLogTailSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappLogTailSettings ResetVerbose(this AzureWebappLogTailSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappIdentityAssignSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappIdentityAssignSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings SetName(this AzureWebappIdentityAssignSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings ResetName(this AzureWebappIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings SetResourceGroup(this AzureWebappIdentityAssignSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings ResetResourceGroup(this AzureWebappIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Role
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Role"/>.</em></p><p>Role name or id the managed identity will be assigned.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings SetRole(this AzureWebappIdentityAssignSettings toolSettings, string role)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Role = role;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Role"/>.</em></p><p>Role name or id the managed identity will be assigned.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings ResetRole(this AzureWebappIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Role = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Scope
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Scope"/>.</em></p><p>The scope the managed identity has access to.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings SetScope(this AzureWebappIdentityAssignSettings toolSettings, string scope)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = scope;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Scope"/>.</em></p><p>The scope the managed identity has access to.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings ResetScope(this AzureWebappIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings SetSlot(this AzureWebappIdentityAssignSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings ResetSlot(this AzureWebappIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings SetDebug(this AzureWebappIdentityAssignSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings ResetDebug(this AzureWebappIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings SetHelp(this AzureWebappIdentityAssignSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings ResetHelp(this AzureWebappIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings SetOutput(this AzureWebappIdentityAssignSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings ResetOutput(this AzureWebappIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings SetQuery(this AzureWebappIdentityAssignSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings ResetQuery(this AzureWebappIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings SetVerbose(this AzureWebappIdentityAssignSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityAssignSettings ResetVerbose(this AzureWebappIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappIdentityRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappIdentityRemoveSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings SetName(this AzureWebappIdentityRemoveSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings ResetName(this AzureWebappIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings SetResourceGroup(this AzureWebappIdentityRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings ResetResourceGroup(this AzureWebappIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings SetSlot(this AzureWebappIdentityRemoveSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings ResetSlot(this AzureWebappIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings SetDebug(this AzureWebappIdentityRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings ResetDebug(this AzureWebappIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings SetHelp(this AzureWebappIdentityRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings ResetHelp(this AzureWebappIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings SetOutput(this AzureWebappIdentityRemoveSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings ResetOutput(this AzureWebappIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings SetQuery(this AzureWebappIdentityRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings ResetQuery(this AzureWebappIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings SetVerbose(this AzureWebappIdentityRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityRemoveSettings ResetVerbose(this AzureWebappIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappIdentityShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappIdentityShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings SetName(this AzureWebappIdentityShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings ResetName(this AzureWebappIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings SetResourceGroup(this AzureWebappIdentityShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings ResetResourceGroup(this AzureWebappIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings SetSlot(this AzureWebappIdentityShowSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings ResetSlot(this AzureWebappIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings SetDebug(this AzureWebappIdentityShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings ResetDebug(this AzureWebappIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings SetHelp(this AzureWebappIdentityShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings ResetHelp(this AzureWebappIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings SetOutput(this AzureWebappIdentityShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings ResetOutput(this AzureWebappIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings SetQuery(this AzureWebappIdentityShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings ResetQuery(this AzureWebappIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings SetVerbose(this AzureWebappIdentityShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappIdentityShowSettings ResetVerbose(this AzureWebappIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappWebjobSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappWebjobSettingsExtensions
-    {
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobSettings SetDebug(this AzureWebappWebjobSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobSettings ResetDebug(this AzureWebappWebjobSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobSettings SetHelp(this AzureWebappWebjobSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobSettings ResetHelp(this AzureWebappWebjobSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobSettings SetOutput(this AzureWebappWebjobSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobSettings ResetOutput(this AzureWebappWebjobSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobSettings SetQuery(this AzureWebappWebjobSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobSettings ResetQuery(this AzureWebappWebjobSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobSettings SetVerbose(this AzureWebappWebjobSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobSettings ResetVerbose(this AzureWebappWebjobSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureWebappAuthShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
@@ -10622,6 +8170,582 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureWebappCorsAddSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappCorsAddSettingsExtensions
+    {
+        #region AllowedOrigins
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/> to a new list.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings SetAllowedOrigins(this AzureWebappCorsAddSettings toolSettings, params string[] allowedOrigins)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AllowedOriginsInternal = allowedOrigins.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/> to a new list.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings SetAllowedOrigins(this AzureWebappCorsAddSettings toolSettings, IEnumerable<string> allowedOrigins)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AllowedOriginsInternal = allowedOrigins.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings AddAllowedOrigins(this AzureWebappCorsAddSettings toolSettings, params string[] allowedOrigins)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AllowedOriginsInternal.AddRange(allowedOrigins);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings AddAllowedOrigins(this AzureWebappCorsAddSettings toolSettings, IEnumerable<string> allowedOrigins)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AllowedOriginsInternal.AddRange(allowedOrigins);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings ClearAllowedOrigins(this AzureWebappCorsAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AllowedOriginsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings RemoveAllowedOrigins(this AzureWebappCorsAddSettings toolSettings, params string[] allowedOrigins)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(allowedOrigins);
+            toolSettings.AllowedOriginsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureWebappCorsAddSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings RemoveAllowedOrigins(this AzureWebappCorsAddSettings toolSettings, IEnumerable<string> allowedOrigins)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(allowedOrigins);
+            toolSettings.AllowedOriginsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings SetName(this AzureWebappCorsAddSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings ResetName(this AzureWebappCorsAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings SetResourceGroup(this AzureWebappCorsAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings ResetResourceGroup(this AzureWebappCorsAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings SetSlot(this AzureWebappCorsAddSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings ResetSlot(this AzureWebappCorsAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings SetDebug(this AzureWebappCorsAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings ResetDebug(this AzureWebappCorsAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings SetHelp(this AzureWebappCorsAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings ResetHelp(this AzureWebappCorsAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings SetOutput(this AzureWebappCorsAddSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings ResetOutput(this AzureWebappCorsAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings SetQuery(this AzureWebappCorsAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings ResetQuery(this AzureWebappCorsAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings SetVerbose(this AzureWebappCorsAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappCorsAddSettings ResetVerbose(this AzureWebappCorsAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappCorsRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappCorsRemoveSettingsExtensions
+    {
+        #region AllowedOrigins
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/> to a new list.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings SetAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings, params string[] allowedOrigins)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AllowedOriginsInternal = allowedOrigins.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/> to a new list.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings SetAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings, IEnumerable<string> allowedOrigins)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AllowedOriginsInternal = allowedOrigins.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings AddAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings, params string[] allowedOrigins)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AllowedOriginsInternal.AddRange(allowedOrigins);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings AddAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings, IEnumerable<string> allowedOrigins)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AllowedOriginsInternal.AddRange(allowedOrigins);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings ClearAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AllowedOriginsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings RemoveAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings, params string[] allowedOrigins)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(allowedOrigins);
+            toolSettings.AllowedOriginsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureWebappCorsRemoveSettings.AllowedOrigins"/>.</em></p><p>Space separated origins that should be allowed to make cross-origin calls (for example: <a href="http://example.com:12345">http://example.com:12345</a>). To allow all, use "*" and remove all other origins from the list.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings RemoveAllowedOrigins(this AzureWebappCorsRemoveSettings toolSettings, IEnumerable<string> allowedOrigins)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(allowedOrigins);
+            toolSettings.AllowedOriginsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings SetName(this AzureWebappCorsRemoveSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings ResetName(this AzureWebappCorsRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings SetResourceGroup(this AzureWebappCorsRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings ResetResourceGroup(this AzureWebappCorsRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings SetSlot(this AzureWebappCorsRemoveSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings ResetSlot(this AzureWebappCorsRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings SetDebug(this AzureWebappCorsRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings ResetDebug(this AzureWebappCorsRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings SetHelp(this AzureWebappCorsRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings ResetHelp(this AzureWebappCorsRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings SetOutput(this AzureWebappCorsRemoveSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings ResetOutput(this AzureWebappCorsRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings SetQuery(this AzureWebappCorsRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings ResetQuery(this AzureWebappCorsRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings SetVerbose(this AzureWebappCorsRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappCorsRemoveSettings ResetVerbose(this AzureWebappCorsRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappCorsShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappCorsShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings SetName(this AzureWebappCorsShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings ResetName(this AzureWebappCorsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings SetResourceGroup(this AzureWebappCorsShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings ResetResourceGroup(this AzureWebappCorsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings SetSlot(this AzureWebappCorsShowSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings ResetSlot(this AzureWebappCorsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings SetDebug(this AzureWebappCorsShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings ResetDebug(this AzureWebappCorsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings SetHelp(this AzureWebappCorsShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings ResetHelp(this AzureWebappCorsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings SetOutput(this AzureWebappCorsShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings ResetOutput(this AzureWebappCorsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings SetQuery(this AzureWebappCorsShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings ResetQuery(this AzureWebappCorsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappCorsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings SetVerbose(this AzureWebappCorsShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCorsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappCorsShowSettings ResetVerbose(this AzureWebappCorsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureWebappDeletedListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
@@ -11114,78 +9238,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureWebappConfigStorageAccountAddSettingsExtensions
+    #region AzureWebappIdentityAssignSettingsExtensions
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappConfigStorageAccountAddSettingsExtensions
+    public static partial class AzureWebappIdentityAssignSettingsExtensions
     {
-        #region AccessKey
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.AccessKey"/>.</em></p><p>Storage account access key.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetAccessKey(this AzureWebappConfigStorageAccountAddSettings toolSettings, string accessKey)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccessKey = accessKey;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.AccessKey"/>.</em></p><p>Storage account access key.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetAccessKey(this AzureWebappConfigStorageAccountAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccessKey = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.AccountName"/>.</em></p><p>Storage account name.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetAccountName(this AzureWebappConfigStorageAccountAddSettings toolSettings, string accountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = accountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.AccountName"/>.</em></p><p>Storage account name.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetAccountName(this AzureWebappConfigStorageAccountAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CustomId
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.CustomId"/>.</em></p><p>Custom identifier.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetCustomId(this AzureWebappConfigStorageAccountAddSettings toolSettings, string customId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomId = customId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.CustomId"/>.</em></p><p>Custom identifier.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetCustomId(this AzureWebappConfigStorageAccountAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomId = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetName(this AzureWebappConfigStorageAccountAddSettings toolSettings, string name)
+        public static AzureWebappIdentityAssignSettings SetName(this AzureWebappIdentityAssignSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetName(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        public static AzureWebappIdentityAssignSettings ResetName(this AzureWebappIdentityAssignSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -11193,125 +9263,89 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetResourceGroup(this AzureWebappConfigStorageAccountAddSettings toolSettings, string resourceGroup)
+        public static AzureWebappIdentityAssignSettings SetResourceGroup(this AzureWebappIdentityAssignSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetResourceGroup(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        public static AzureWebappIdentityAssignSettings ResetResourceGroup(this AzureWebappIdentityAssignSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region ShareName
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.ShareName"/>.</em></p><p>Share name (Azure Files) or container name (Azure Blob Storage).</p></summary>
+        #region Role
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Role"/>.</em></p><p>Role name or id the managed identity will be assigned.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetShareName(this AzureWebappConfigStorageAccountAddSettings toolSettings, string shareName)
+        public static AzureWebappIdentityAssignSettings SetRole(this AzureWebappIdentityAssignSettings toolSettings, string role)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ShareName = shareName;
+            toolSettings.Role = role;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.ShareName"/>.</em></p><p>Share name (Azure Files) or container name (Azure Blob Storage).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Role"/>.</em></p><p>Role name or id the managed identity will be assigned.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetShareName(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        public static AzureWebappIdentityAssignSettings ResetRole(this AzureWebappIdentityAssignSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ShareName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StorageType
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.StorageType"/>.</em></p><p>Storage type.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetStorageType(this AzureWebappConfigStorageAccountAddSettings toolSettings, WebappConfigStorageAccountStorageType storageType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageType = storageType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.StorageType"/>.</em></p><p>Storage type.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetStorageType(this AzureWebappConfigStorageAccountAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageType = null;
+            toolSettings.Role = null;
             return toolSettings;
         }
         #endregion
-        #region MountPath
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.MountPath"/>.</em></p><p>Path to mount storage volume within web app.</p></summary>
+        #region Scope
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Scope"/>.</em></p><p>The scope the managed identity has access to.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetMountPath(this AzureWebappConfigStorageAccountAddSettings toolSettings, string mountPath)
+        public static AzureWebappIdentityAssignSettings SetScope(this AzureWebappIdentityAssignSettings toolSettings, string scope)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.MountPath = mountPath;
+            toolSettings.Scope = scope;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.MountPath"/>.</em></p><p>Path to mount storage volume within web app.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Scope"/>.</em></p><p>The scope the managed identity has access to.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetMountPath(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        public static AzureWebappIdentityAssignSettings ResetScope(this AzureWebappIdentityAssignSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.MountPath = null;
+            toolSettings.Scope = null;
             return toolSettings;
         }
         #endregion
         #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetSlot(this AzureWebappConfigStorageAccountAddSettings toolSettings, string slot)
+        public static AzureWebappIdentityAssignSettings SetSlot(this AzureWebappIdentityAssignSettings toolSettings, string slot)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = slot;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetSlot(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        public static AzureWebappIdentityAssignSettings ResetSlot(this AzureWebappIdentityAssignSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = null;
             return toolSettings;
         }
         #endregion
-        #region SlotSetting
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.SlotSetting"/>.</em></p><p>Slot setting.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetSlotSetting(this AzureWebappConfigStorageAccountAddSettings toolSettings, string slotSetting)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSetting = slotSetting;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.SlotSetting"/>.</em></p><p>Slot setting.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetSlotSetting(this AzureWebappConfigStorageAccountAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSetting = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetDebug(this AzureWebappConfigStorageAccountAddSettings toolSettings, string debug)
+        public static AzureWebappIdentityAssignSettings SetDebug(this AzureWebappIdentityAssignSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetDebug(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        public static AzureWebappIdentityAssignSettings ResetDebug(this AzureWebappIdentityAssignSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -11319,17 +9353,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetHelp(this AzureWebappConfigStorageAccountAddSettings toolSettings, string help)
+        public static AzureWebappIdentityAssignSettings SetHelp(this AzureWebappIdentityAssignSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetHelp(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        public static AzureWebappIdentityAssignSettings ResetHelp(this AzureWebappIdentityAssignSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -11337,17 +9371,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetOutput(this AzureWebappConfigStorageAccountAddSettings toolSettings, AzureOutput output)
+        public static AzureWebappIdentityAssignSettings SetOutput(this AzureWebappIdentityAssignSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetOutput(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        public static AzureWebappIdentityAssignSettings ResetOutput(this AzureWebappIdentityAssignSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -11355,17 +9389,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetQuery(this AzureWebappConfigStorageAccountAddSettings toolSettings, string query)
+        public static AzureWebappIdentityAssignSettings SetQuery(this AzureWebappIdentityAssignSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetQuery(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        public static AzureWebappIdentityAssignSettings ResetQuery(this AzureWebappIdentityAssignSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -11373,17 +9407,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityAssignSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings SetVerbose(this AzureWebappConfigStorageAccountAddSettings toolSettings, string verbose)
+        public static AzureWebappIdentityAssignSettings SetVerbose(this AzureWebappIdentityAssignSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityAssignSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountAddSettings ResetVerbose(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        public static AzureWebappIdentityAssignSettings ResetVerbose(this AzureWebappIdentityAssignSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -11392,42 +9426,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureWebappConfigStorageAccountDeleteSettingsExtensions
+    #region AzureWebappIdentityRemoveSettingsExtensions
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappConfigStorageAccountDeleteSettingsExtensions
+    public static partial class AzureWebappIdentityRemoveSettingsExtensions
     {
-        #region CustomId
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.CustomId"/>.</em></p><p>Custom identifier.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings SetCustomId(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string customId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomId = customId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.CustomId"/>.</em></p><p>Custom identifier.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings ResetCustomId(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomId = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings SetName(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string name)
+        public static AzureWebappIdentityRemoveSettings SetName(this AzureWebappIdentityRemoveSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings ResetName(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
+        public static AzureWebappIdentityRemoveSettings ResetName(this AzureWebappIdentityRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -11435,17 +9451,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings SetResourceGroup(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string resourceGroup)
+        public static AzureWebappIdentityRemoveSettings SetResourceGroup(this AzureWebappIdentityRemoveSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings ResetResourceGroup(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
+        public static AzureWebappIdentityRemoveSettings ResetResourceGroup(this AzureWebappIdentityRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -11453,17 +9469,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings SetSlot(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string slot)
+        public static AzureWebappIdentityRemoveSettings SetSlot(this AzureWebappIdentityRemoveSettings toolSettings, string slot)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = slot;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings ResetSlot(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
+        public static AzureWebappIdentityRemoveSettings ResetSlot(this AzureWebappIdentityRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = null;
@@ -11471,17 +9487,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings SetDebug(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string debug)
+        public static AzureWebappIdentityRemoveSettings SetDebug(this AzureWebappIdentityRemoveSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings ResetDebug(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
+        public static AzureWebappIdentityRemoveSettings ResetDebug(this AzureWebappIdentityRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -11489,17 +9505,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings SetHelp(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string help)
+        public static AzureWebappIdentityRemoveSettings SetHelp(this AzureWebappIdentityRemoveSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings ResetHelp(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
+        public static AzureWebappIdentityRemoveSettings ResetHelp(this AzureWebappIdentityRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -11507,17 +9523,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings SetOutput(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, AzureOutput output)
+        public static AzureWebappIdentityRemoveSettings SetOutput(this AzureWebappIdentityRemoveSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings ResetOutput(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
+        public static AzureWebappIdentityRemoveSettings ResetOutput(this AzureWebappIdentityRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -11525,17 +9541,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings SetQuery(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string query)
+        public static AzureWebappIdentityRemoveSettings SetQuery(this AzureWebappIdentityRemoveSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings ResetQuery(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
+        public static AzureWebappIdentityRemoveSettings ResetQuery(this AzureWebappIdentityRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -11543,17 +9559,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings SetVerbose(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string verbose)
+        public static AzureWebappIdentityRemoveSettings SetVerbose(this AzureWebappIdentityRemoveSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountDeleteSettings ResetVerbose(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
+        public static AzureWebappIdentityRemoveSettings ResetVerbose(this AzureWebappIdentityRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -11562,24 +9578,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureWebappConfigStorageAccountListSettingsExtensions
+    #region AzureWebappIdentityShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappConfigStorageAccountListSettingsExtensions
+    public static partial class AzureWebappIdentityShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings SetName(this AzureWebappConfigStorageAccountListSettings toolSettings, string name)
+        public static AzureWebappIdentityShowSettings SetName(this AzureWebappIdentityShowSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings ResetName(this AzureWebappConfigStorageAccountListSettings toolSettings)
+        public static AzureWebappIdentityShowSettings ResetName(this AzureWebappIdentityShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -11587,17 +9603,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings SetResourceGroup(this AzureWebappConfigStorageAccountListSettings toolSettings, string resourceGroup)
+        public static AzureWebappIdentityShowSettings SetResourceGroup(this AzureWebappIdentityShowSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings ResetResourceGroup(this AzureWebappConfigStorageAccountListSettings toolSettings)
+        public static AzureWebappIdentityShowSettings ResetResourceGroup(this AzureWebappIdentityShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -11605,17 +9621,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings SetSlot(this AzureWebappConfigStorageAccountListSettings toolSettings, string slot)
+        public static AzureWebappIdentityShowSettings SetSlot(this AzureWebappIdentityShowSettings toolSettings, string slot)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = slot;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings ResetSlot(this AzureWebappConfigStorageAccountListSettings toolSettings)
+        public static AzureWebappIdentityShowSettings ResetSlot(this AzureWebappIdentityShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = null;
@@ -11623,17 +9639,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings SetDebug(this AzureWebappConfigStorageAccountListSettings toolSettings, string debug)
+        public static AzureWebappIdentityShowSettings SetDebug(this AzureWebappIdentityShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings ResetDebug(this AzureWebappConfigStorageAccountListSettings toolSettings)
+        public static AzureWebappIdentityShowSettings ResetDebug(this AzureWebappIdentityShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -11641,17 +9657,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings SetHelp(this AzureWebappConfigStorageAccountListSettings toolSettings, string help)
+        public static AzureWebappIdentityShowSettings SetHelp(this AzureWebappIdentityShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings ResetHelp(this AzureWebappConfigStorageAccountListSettings toolSettings)
+        public static AzureWebappIdentityShowSettings ResetHelp(this AzureWebappIdentityShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -11659,17 +9675,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings SetOutput(this AzureWebappConfigStorageAccountListSettings toolSettings, AzureOutput output)
+        public static AzureWebappIdentityShowSettings SetOutput(this AzureWebappIdentityShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings ResetOutput(this AzureWebappConfigStorageAccountListSettings toolSettings)
+        public static AzureWebappIdentityShowSettings ResetOutput(this AzureWebappIdentityShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -11677,17 +9693,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings SetQuery(this AzureWebappConfigStorageAccountListSettings toolSettings, string query)
+        public static AzureWebappIdentityShowSettings SetQuery(this AzureWebappIdentityShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings ResetQuery(this AzureWebappConfigStorageAccountListSettings toolSettings)
+        public static AzureWebappIdentityShowSettings ResetQuery(this AzureWebappIdentityShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -11695,17 +9711,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappIdentityShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings SetVerbose(this AzureWebappConfigStorageAccountListSettings toolSettings, string verbose)
+        public static AzureWebappIdentityShowSettings SetVerbose(this AzureWebappIdentityShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappIdentityShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountListSettings ResetVerbose(this AzureWebappConfigStorageAccountListSettings toolSettings)
+        public static AzureWebappIdentityShowSettings ResetVerbose(this AzureWebappIdentityShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -11714,42 +9730,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureWebappConfigStorageAccountUpdateSettingsExtensions
+    #region AzureWebappLogConfigSettingsExtensions
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappConfigStorageAccountUpdateSettingsExtensions
+    public static partial class AzureWebappLogConfigSettingsExtensions
     {
-        #region CustomId
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.CustomId"/>.</em></p><p>Custom identifier.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetCustomId(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string customId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomId = customId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.CustomId"/>.</em></p><p>Custom identifier.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetCustomId(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomId = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetName(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string name)
+        public static AzureWebappLogConfigSettings SetName(this AzureWebappLogConfigSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetName(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        public static AzureWebappLogConfigSettings ResetName(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -11757,161 +9755,233 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetResourceGroup(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string resourceGroup)
+        public static AzureWebappLogConfigSettings SetResourceGroup(this AzureWebappLogConfigSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetResourceGroup(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        public static AzureWebappLogConfigSettings ResetResourceGroup(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region AccessKey
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.AccessKey"/>.</em></p><p>Storage account access key.</p></summary>
+        #region ApplicationLogging
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.ApplicationLogging"/>.</em></p><p>Configure application logging to file system.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetAccessKey(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string accessKey)
+        public static AzureWebappLogConfigSettings SetApplicationLogging(this AzureWebappLogConfigSettings toolSettings, bool? applicationLogging)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.AccessKey = accessKey;
+            toolSettings.ApplicationLogging = applicationLogging;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.AccessKey"/>.</em></p><p>Storage account access key.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.ApplicationLogging"/>.</em></p><p>Configure application logging to file system.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetAccessKey(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        public static AzureWebappLogConfigSettings ResetApplicationLogging(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.AccessKey = null;
+            toolSettings.ApplicationLogging = null;
             return toolSettings;
         }
-        #endregion
-        #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.AccountName"/>.</em></p><p>Storage account name.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureWebappLogConfigSettings.ApplicationLogging"/>.</em></p><p>Configure application logging to file system.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetAccountName(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string accountName)
+        public static AzureWebappLogConfigSettings EnableApplicationLogging(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = accountName;
+            toolSettings.ApplicationLogging = true;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.AccountName"/>.</em></p><p>Storage account name.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureWebappLogConfigSettings.ApplicationLogging"/>.</em></p><p>Configure application logging to file system.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetAccountName(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        public static AzureWebappLogConfigSettings DisableApplicationLogging(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = null;
+            toolSettings.ApplicationLogging = false;
             return toolSettings;
         }
-        #endregion
-        #region MountPath
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.MountPath"/>.</em></p><p>Path to mount storage volume within web app.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureWebappLogConfigSettings.ApplicationLogging"/>.</em></p><p>Configure application logging to file system.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetMountPath(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string mountPath)
+        public static AzureWebappLogConfigSettings ToggleApplicationLogging(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.MountPath = mountPath;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.MountPath"/>.</em></p><p>Path to mount storage volume within web app.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetMountPath(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MountPath = null;
+            toolSettings.ApplicationLogging = !toolSettings.ApplicationLogging;
             return toolSettings;
         }
         #endregion
-        #region ShareName
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.ShareName"/>.</em></p><p>Share name (Azure Files) or container name (Azure Blob Storage).</p></summary>
+        #region DetailedErrorMessages
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.DetailedErrorMessages"/>.</em></p><p>Configure detailed error messages.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetShareName(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string shareName)
+        public static AzureWebappLogConfigSettings SetDetailedErrorMessages(this AzureWebappLogConfigSettings toolSettings, bool? detailedErrorMessages)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ShareName = shareName;
+            toolSettings.DetailedErrorMessages = detailedErrorMessages;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.ShareName"/>.</em></p><p>Share name (Azure Files) or container name (Azure Blob Storage).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.DetailedErrorMessages"/>.</em></p><p>Configure detailed error messages.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetShareName(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        public static AzureWebappLogConfigSettings ResetDetailedErrorMessages(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ShareName = null;
+            toolSettings.DetailedErrorMessages = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureWebappLogConfigSettings.DetailedErrorMessages"/>.</em></p><p>Configure detailed error messages.</p></summary>
+        [Pure]
+        public static AzureWebappLogConfigSettings EnableDetailedErrorMessages(this AzureWebappLogConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DetailedErrorMessages = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureWebappLogConfigSettings.DetailedErrorMessages"/>.</em></p><p>Configure detailed error messages.</p></summary>
+        [Pure]
+        public static AzureWebappLogConfigSettings DisableDetailedErrorMessages(this AzureWebappLogConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DetailedErrorMessages = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureWebappLogConfigSettings.DetailedErrorMessages"/>.</em></p><p>Configure detailed error messages.</p></summary>
+        [Pure]
+        public static AzureWebappLogConfigSettings ToggleDetailedErrorMessages(this AzureWebappLogConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DetailedErrorMessages = !toolSettings.DetailedErrorMessages;
+            return toolSettings;
+        }
+        #endregion
+        #region DockerContainerLogging
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.DockerContainerLogging"/>.</em></p><p>Configure gathering STDOUT and STDERR output from container.</p></summary>
+        [Pure]
+        public static AzureWebappLogConfigSettings SetDockerContainerLogging(this AzureWebappLogConfigSettings toolSettings, WebappLogConfigDockerContainerLogging dockerContainerLogging)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DockerContainerLogging = dockerContainerLogging;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.DockerContainerLogging"/>.</em></p><p>Configure gathering STDOUT and STDERR output from container.</p></summary>
+        [Pure]
+        public static AzureWebappLogConfigSettings ResetDockerContainerLogging(this AzureWebappLogConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DockerContainerLogging = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FailedRequestTracing
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.FailedRequestTracing"/>.</em></p><p>Configure failed request tracing.</p></summary>
+        [Pure]
+        public static AzureWebappLogConfigSettings SetFailedRequestTracing(this AzureWebappLogConfigSettings toolSettings, bool? failedRequestTracing)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FailedRequestTracing = failedRequestTracing;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.FailedRequestTracing"/>.</em></p><p>Configure failed request tracing.</p></summary>
+        [Pure]
+        public static AzureWebappLogConfigSettings ResetFailedRequestTracing(this AzureWebappLogConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FailedRequestTracing = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureWebappLogConfigSettings.FailedRequestTracing"/>.</em></p><p>Configure failed request tracing.</p></summary>
+        [Pure]
+        public static AzureWebappLogConfigSettings EnableFailedRequestTracing(this AzureWebappLogConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FailedRequestTracing = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureWebappLogConfigSettings.FailedRequestTracing"/>.</em></p><p>Configure failed request tracing.</p></summary>
+        [Pure]
+        public static AzureWebappLogConfigSettings DisableFailedRequestTracing(this AzureWebappLogConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FailedRequestTracing = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureWebappLogConfigSettings.FailedRequestTracing"/>.</em></p><p>Configure failed request tracing.</p></summary>
+        [Pure]
+        public static AzureWebappLogConfigSettings ToggleFailedRequestTracing(this AzureWebappLogConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FailedRequestTracing = !toolSettings.FailedRequestTracing;
+            return toolSettings;
+        }
+        #endregion
+        #region Level
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Level"/>.</em></p><p>Logging level.</p></summary>
+        [Pure]
+        public static AzureWebappLogConfigSettings SetLevel(this AzureWebappLogConfigSettings toolSettings, WebappLogConfigLevel level)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Level = level;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Level"/>.</em></p><p>Logging level.</p></summary>
+        [Pure]
+        public static AzureWebappLogConfigSettings ResetLevel(this AzureWebappLogConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Level = null;
             return toolSettings;
         }
         #endregion
         #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetSlot(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string slot)
+        public static AzureWebappLogConfigSettings SetSlot(this AzureWebappLogConfigSettings toolSettings, string slot)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = slot;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetSlot(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        public static AzureWebappLogConfigSettings ResetSlot(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = null;
             return toolSettings;
         }
         #endregion
-        #region SlotSetting
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.SlotSetting"/>.</em></p><p>Slot setting.</p></summary>
+        #region WebServerLogging
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.WebServerLogging"/>.</em></p><p>Configure Web server logging.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetSlotSetting(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string slotSetting)
+        public static AzureWebappLogConfigSettings SetWebServerLogging(this AzureWebappLogConfigSettings toolSettings, WebappLogConfigDockerContainerLogging webServerLogging)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSetting = slotSetting;
+            toolSettings.WebServerLogging = webServerLogging;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.SlotSetting"/>.</em></p><p>Slot setting.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.WebServerLogging"/>.</em></p><p>Configure Web server logging.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetSlotSetting(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        public static AzureWebappLogConfigSettings ResetWebServerLogging(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSetting = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StorageType
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.StorageType"/>.</em></p><p>Storage type.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetStorageType(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, WebappConfigStorageAccountStorageType storageType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageType = storageType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.StorageType"/>.</em></p><p>Storage type.</p></summary>
-        [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetStorageType(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageType = null;
+            toolSettings.WebServerLogging = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetDebug(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string debug)
+        public static AzureWebappLogConfigSettings SetDebug(this AzureWebappLogConfigSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetDebug(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        public static AzureWebappLogConfigSettings ResetDebug(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -11919,17 +9989,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetHelp(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string help)
+        public static AzureWebappLogConfigSettings SetHelp(this AzureWebappLogConfigSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetHelp(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        public static AzureWebappLogConfigSettings ResetHelp(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -11937,17 +10007,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetOutput(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, AzureOutput output)
+        public static AzureWebappLogConfigSettings SetOutput(this AzureWebappLogConfigSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetOutput(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        public static AzureWebappLogConfigSettings ResetOutput(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -11955,17 +10025,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetQuery(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string query)
+        public static AzureWebappLogConfigSettings SetQuery(this AzureWebappLogConfigSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetQuery(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        public static AzureWebappLogConfigSettings ResetQuery(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -11973,17 +10043,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings SetVerbose(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string verbose)
+        public static AzureWebappLogConfigSettings SetVerbose(this AzureWebappLogConfigSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigStorageAccountUpdateSettings ResetVerbose(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        public static AzureWebappLogConfigSettings ResetVerbose(this AzureWebappLogConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -11992,24 +10062,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureWebappConfigConnectionStringDeleteSettingsExtensions
+    #region AzureWebappLogDownloadSettingsExtensions
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappConfigConnectionStringDeleteSettingsExtensions
+    public static partial class AzureWebappLogDownloadSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings SetName(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string name)
+        public static AzureWebappLogDownloadSettings SetName(this AzureWebappLogDownloadSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings ResetName(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        public static AzureWebappLogDownloadSettings ResetName(this AzureWebappLogDownloadSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -12017,95 +10087,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings SetResourceGroup(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string resourceGroup)
+        public static AzureWebappLogDownloadSettings SetResourceGroup(this AzureWebappLogDownloadSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings ResetResourceGroup(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        public static AzureWebappLogDownloadSettings ResetResourceGroup(this AzureWebappLogDownloadSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region SettingNames
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/> to a new list.</em></p><p>Space-separated connection-string names.</p></summary>
+        #region LogFile
+        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.LogFile"/>.</em></p><p>The downloaded zipped log file path.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings SetSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, params string[] settingNames)
+        public static AzureWebappLogDownloadSettings SetLogFile(this AzureWebappLogDownloadSettings toolSettings, string logFile)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingNamesInternal = settingNames.ToList();
+            toolSettings.LogFile = logFile;
             return toolSettings;
         }
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/> to a new list.</em></p><p>Space-separated connection-string names.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.LogFile"/>.</em></p><p>The downloaded zipped log file path.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings SetSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, IEnumerable<string> settingNames)
+        public static AzureWebappLogDownloadSettings ResetLogFile(this AzureWebappLogDownloadSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingNamesInternal = settingNames.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/>.</em></p><p>Space-separated connection-string names.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings AddSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, params string[] settingNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingNamesInternal.AddRange(settingNames);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/>.</em></p><p>Space-separated connection-string names.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings AddSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, IEnumerable<string> settingNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingNamesInternal.AddRange(settingNames);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/>.</em></p><p>Space-separated connection-string names.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings ClearSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingNamesInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/>.</em></p><p>Space-separated connection-string names.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings RemoveSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, params string[] settingNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(settingNames);
-            toolSettings.SettingNamesInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/>.</em></p><p>Space-separated connection-string names.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings RemoveSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, IEnumerable<string> settingNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(settingNames);
-            toolSettings.SettingNamesInternal.RemoveAll(x => hashSet.Contains(x));
+            toolSettings.LogFile = null;
             return toolSettings;
         }
         #endregion
         #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings SetSlot(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string slot)
+        public static AzureWebappLogDownloadSettings SetSlot(this AzureWebappLogDownloadSettings toolSettings, string slot)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = slot;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings ResetSlot(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        public static AzureWebappLogDownloadSettings ResetSlot(this AzureWebappLogDownloadSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = null;
@@ -12113,17 +10141,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings SetDebug(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string debug)
+        public static AzureWebappLogDownloadSettings SetDebug(this AzureWebappLogDownloadSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings ResetDebug(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        public static AzureWebappLogDownloadSettings ResetDebug(this AzureWebappLogDownloadSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -12131,17 +10159,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings SetHelp(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string help)
+        public static AzureWebappLogDownloadSettings SetHelp(this AzureWebappLogDownloadSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings ResetHelp(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        public static AzureWebappLogDownloadSettings ResetHelp(this AzureWebappLogDownloadSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -12149,17 +10177,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings SetOutput(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, AzureOutput output)
+        public static AzureWebappLogDownloadSettings SetOutput(this AzureWebappLogDownloadSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings ResetOutput(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        public static AzureWebappLogDownloadSettings ResetOutput(this AzureWebappLogDownloadSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -12167,17 +10195,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings SetQuery(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string query)
+        public static AzureWebappLogDownloadSettings SetQuery(this AzureWebappLogDownloadSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings ResetQuery(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        public static AzureWebappLogDownloadSettings ResetQuery(this AzureWebappLogDownloadSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -12185,17 +10213,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings SetVerbose(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string verbose)
+        public static AzureWebappLogDownloadSettings SetVerbose(this AzureWebappLogDownloadSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringDeleteSettings ResetVerbose(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        public static AzureWebappLogDownloadSettings ResetVerbose(this AzureWebappLogDownloadSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -12204,24 +10232,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureWebappConfigConnectionStringListSettingsExtensions
+    #region AzureWebappLogShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappConfigConnectionStringListSettingsExtensions
+    public static partial class AzureWebappLogShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings SetName(this AzureWebappConfigConnectionStringListSettings toolSettings, string name)
+        public static AzureWebappLogShowSettings SetName(this AzureWebappLogShowSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings ResetName(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        public static AzureWebappLogShowSettings ResetName(this AzureWebappLogShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -12229,17 +10257,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings SetResourceGroup(this AzureWebappConfigConnectionStringListSettings toolSettings, string resourceGroup)
+        public static AzureWebappLogShowSettings SetResourceGroup(this AzureWebappLogShowSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings ResetResourceGroup(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        public static AzureWebappLogShowSettings ResetResourceGroup(this AzureWebappLogShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -12247,17 +10275,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings SetSlot(this AzureWebappConfigConnectionStringListSettings toolSettings, string slot)
+        public static AzureWebappLogShowSettings SetSlot(this AzureWebappLogShowSettings toolSettings, string slot)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = slot;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings ResetSlot(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        public static AzureWebappLogShowSettings ResetSlot(this AzureWebappLogShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = null;
@@ -12265,17 +10293,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings SetDebug(this AzureWebappConfigConnectionStringListSettings toolSettings, string debug)
+        public static AzureWebappLogShowSettings SetDebug(this AzureWebappLogShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings ResetDebug(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        public static AzureWebappLogShowSettings ResetDebug(this AzureWebappLogShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -12283,17 +10311,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings SetHelp(this AzureWebappConfigConnectionStringListSettings toolSettings, string help)
+        public static AzureWebappLogShowSettings SetHelp(this AzureWebappLogShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings ResetHelp(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        public static AzureWebappLogShowSettings ResetHelp(this AzureWebappLogShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -12301,17 +10329,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings SetOutput(this AzureWebappConfigConnectionStringListSettings toolSettings, AzureOutput output)
+        public static AzureWebappLogShowSettings SetOutput(this AzureWebappLogShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings ResetOutput(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        public static AzureWebappLogShowSettings ResetOutput(this AzureWebappLogShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -12319,17 +10347,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings SetQuery(this AzureWebappConfigConnectionStringListSettings toolSettings, string query)
+        public static AzureWebappLogShowSettings SetQuery(this AzureWebappLogShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings ResetQuery(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        public static AzureWebappLogShowSettings ResetQuery(this AzureWebappLogShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -12337,17 +10365,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings SetVerbose(this AzureWebappConfigConnectionStringListSettings toolSettings, string verbose)
+        public static AzureWebappLogShowSettings SetVerbose(this AzureWebappLogShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringListSettings ResetVerbose(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        public static AzureWebappLogShowSettings ResetVerbose(this AzureWebappLogShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -12356,42 +10384,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureWebappConfigConnectionStringSetSettingsExtensions
+    #region AzureWebappLogTailSettingsExtensions
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappConfigConnectionStringSetSettingsExtensions
+    public static partial class AzureWebappLogTailSettingsExtensions
     {
-        #region ConnectionStringType
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.ConnectionStringType"/>.</em></p><p>Connection string type.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetConnectionStringType(this AzureWebappConfigConnectionStringSetSettings toolSettings, WebappConfigConnectionStringSetConnectionStringType connectionStringType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectionStringType = connectionStringType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.ConnectionStringType"/>.</em></p><p>Connection string type.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings ResetConnectionStringType(this AzureWebappConfigConnectionStringSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectionStringType = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetName(this AzureWebappConfigConnectionStringSetSettings toolSettings, string name)
+        public static AzureWebappLogTailSettings SetName(this AzureWebappLogTailSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings ResetName(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        public static AzureWebappLogTailSettings ResetName(this AzureWebappLogTailSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -12399,137 +10409,71 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetResourceGroup(this AzureWebappConfigConnectionStringSetSettings toolSettings, string resourceGroup)
+        public static AzureWebappLogTailSettings SetResourceGroup(this AzureWebappLogTailSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings ResetResourceGroup(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        public static AzureWebappLogTailSettings ResetResourceGroup(this AzureWebappLogTailSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Settings
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/> to a new dictionary.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        #region Provider
+        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Provider"/>.</em></p><p>By default all live traces configured by 'az webapp log config' will be shown, but you can scope to certain providers/folders, e.g. 'application', 'http', etc. For details, check out <a href="https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream">https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream</a>.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings, IDictionary<string, object> settings)
+        public static AzureWebappLogTailSettings SetProvider(this AzureWebappLogTailSettings toolSettings, string provider)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsInternal = settings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
+            toolSettings.Provider = provider;
             return toolSettings;
         }
-        /// <summary><p><em>Clears <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Provider"/>.</em></p><p>By default all live traces configured by 'az webapp log config' will be shown, but you can scope to certain providers/folders, e.g. 'application', 'http', etc. For details, check out <a href="https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream">https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream</a>.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings ClearSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        public static AzureWebappLogTailSettings ResetProvider(this AzureWebappLogTailSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings AddSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string settingKey, object settingValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsInternal.Add(settingKey, settingValue);
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings RemoveSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string settingKey)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsInternal.Remove(settingKey);
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string settingKey, object settingValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsInternal[settingKey] = settingValue;
+            toolSettings.Provider = null;
             return toolSettings;
         }
         #endregion
         #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetSlot(this AzureWebappConfigConnectionStringSetSettings toolSettings, string slot)
+        public static AzureWebappLogTailSettings SetSlot(this AzureWebappLogTailSettings toolSettings, string slot)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = slot;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings ResetSlot(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        public static AzureWebappLogTailSettings ResetSlot(this AzureWebappLogTailSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = null;
             return toolSettings;
         }
         #endregion
-        #region SlotSettings
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/> to a new dictionary.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetSlotSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings, IDictionary<string, object> slotSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettingsInternal = slotSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings ClearSlotSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettingsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings AddSlotSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string slotSettingKey, object slotSettingValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettingsInternal.Add(slotSettingKey, slotSettingValue);
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings RemoveSlotSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string slotSettingKey)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettingsInternal.Remove(slotSettingKey);
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetSlotSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string slotSettingKey, object slotSettingValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettingsInternal[slotSettingKey] = slotSettingValue;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetDebug(this AzureWebappConfigConnectionStringSetSettings toolSettings, string debug)
+        public static AzureWebappLogTailSettings SetDebug(this AzureWebappLogTailSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings ResetDebug(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        public static AzureWebappLogTailSettings ResetDebug(this AzureWebappLogTailSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -12537,17 +10481,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetHelp(this AzureWebappConfigConnectionStringSetSettings toolSettings, string help)
+        public static AzureWebappLogTailSettings SetHelp(this AzureWebappLogTailSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings ResetHelp(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        public static AzureWebappLogTailSettings ResetHelp(this AzureWebappLogTailSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -12555,17 +10499,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetOutput(this AzureWebappConfigConnectionStringSetSettings toolSettings, AzureOutput output)
+        public static AzureWebappLogTailSettings SetOutput(this AzureWebappLogTailSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings ResetOutput(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        public static AzureWebappLogTailSettings ResetOutput(this AzureWebappLogTailSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -12573,17 +10517,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetQuery(this AzureWebappConfigConnectionStringSetSettings toolSettings, string query)
+        public static AzureWebappLogTailSettings SetQuery(this AzureWebappLogTailSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings ResetQuery(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        public static AzureWebappLogTailSettings ResetQuery(this AzureWebappLogTailSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -12591,17 +10535,577 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappLogTailSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetVerbose(this AzureWebappConfigConnectionStringSetSettings toolSettings, string verbose)
+        public static AzureWebappLogTailSettings SetVerbose(this AzureWebappLogTailSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappLogTailSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings ResetVerbose(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        public static AzureWebappLogTailSettings ResetVerbose(this AzureWebappLogTailSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappTrafficRoutingClearSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappTrafficRoutingClearSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings SetName(this AzureWebappTrafficRoutingClearSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings ResetName(this AzureWebappTrafficRoutingClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings SetResourceGroup(this AzureWebappTrafficRoutingClearSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings ResetResourceGroup(this AzureWebappTrafficRoutingClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings SetDebug(this AzureWebappTrafficRoutingClearSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings ResetDebug(this AzureWebappTrafficRoutingClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings SetHelp(this AzureWebappTrafficRoutingClearSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings ResetHelp(this AzureWebappTrafficRoutingClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings SetOutput(this AzureWebappTrafficRoutingClearSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings ResetOutput(this AzureWebappTrafficRoutingClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings SetQuery(this AzureWebappTrafficRoutingClearSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings ResetQuery(this AzureWebappTrafficRoutingClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingClearSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings SetVerbose(this AzureWebappTrafficRoutingClearSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingClearSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingClearSettings ResetVerbose(this AzureWebappTrafficRoutingClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappTrafficRoutingSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappTrafficRoutingSetSettingsExtensions
+    {
+        #region Distribution
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/> to a new list.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings SetDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings, params string[] distribution)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DistributionInternal = distribution.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/> to a new list.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings SetDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings, IEnumerable<string> distribution)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DistributionInternal = distribution.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/>.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings AddDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings, params string[] distribution)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DistributionInternal.AddRange(distribution);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/>.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings AddDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings, IEnumerable<string> distribution)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DistributionInternal.AddRange(distribution);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/>.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings ClearDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DistributionInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/>.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings RemoveDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings, params string[] distribution)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(distribution);
+            toolSettings.DistributionInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureWebappTrafficRoutingSetSettings.Distribution"/>.</em></p><p>Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings RemoveDistribution(this AzureWebappTrafficRoutingSetSettings toolSettings, IEnumerable<string> distribution)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(distribution);
+            toolSettings.DistributionInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings SetName(this AzureWebappTrafficRoutingSetSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings ResetName(this AzureWebappTrafficRoutingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings SetResourceGroup(this AzureWebappTrafficRoutingSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings ResetResourceGroup(this AzureWebappTrafficRoutingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings SetDebug(this AzureWebappTrafficRoutingSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings ResetDebug(this AzureWebappTrafficRoutingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings SetHelp(this AzureWebappTrafficRoutingSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings ResetHelp(this AzureWebappTrafficRoutingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings SetOutput(this AzureWebappTrafficRoutingSetSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings ResetOutput(this AzureWebappTrafficRoutingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings SetQuery(this AzureWebappTrafficRoutingSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings ResetQuery(this AzureWebappTrafficRoutingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings SetVerbose(this AzureWebappTrafficRoutingSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingSetSettings ResetVerbose(this AzureWebappTrafficRoutingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappTrafficRoutingShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappTrafficRoutingShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings SetName(this AzureWebappTrafficRoutingShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings ResetName(this AzureWebappTrafficRoutingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings SetResourceGroup(this AzureWebappTrafficRoutingShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings ResetResourceGroup(this AzureWebappTrafficRoutingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings SetDebug(this AzureWebappTrafficRoutingShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings ResetDebug(this AzureWebappTrafficRoutingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings SetHelp(this AzureWebappTrafficRoutingShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings ResetHelp(this AzureWebappTrafficRoutingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings SetOutput(this AzureWebappTrafficRoutingShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings ResetOutput(this AzureWebappTrafficRoutingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings SetQuery(this AzureWebappTrafficRoutingShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings ResetQuery(this AzureWebappTrafficRoutingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappTrafficRoutingShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings SetVerbose(this AzureWebappTrafficRoutingShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappTrafficRoutingShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappTrafficRoutingShowSettings ResetVerbose(this AzureWebappTrafficRoutingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappWebjobSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappWebjobSettingsExtensions
+    {
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobSettings SetDebug(this AzureWebappWebjobSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobSettings ResetDebug(this AzureWebappWebjobSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobSettings SetHelp(this AzureWebappWebjobSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobSettings ResetHelp(this AzureWebappWebjobSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobSettings SetOutput(this AzureWebappWebjobSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobSettings ResetOutput(this AzureWebappWebjobSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobSettings SetQuery(this AzureWebappWebjobSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobSettings ResetQuery(this AzureWebappWebjobSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobSettings SetVerbose(this AzureWebappWebjobSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobSettings ResetVerbose(this AzureWebappWebjobSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -13202,630 +11706,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureWebappConfigAppsettingsSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureWebappConfigAppsettingsSetSettings ResetVerbose(this AzureWebappConfigAppsettingsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappConfigContainerDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappConfigContainerDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings SetName(this AzureWebappConfigContainerDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings ResetName(this AzureWebappConfigContainerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings SetResourceGroup(this AzureWebappConfigContainerDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings ResetResourceGroup(this AzureWebappConfigContainerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings SetSlot(this AzureWebappConfigContainerDeleteSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings ResetSlot(this AzureWebappConfigContainerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings SetDebug(this AzureWebappConfigContainerDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings ResetDebug(this AzureWebappConfigContainerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings SetHelp(this AzureWebappConfigContainerDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings ResetHelp(this AzureWebappConfigContainerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings SetOutput(this AzureWebappConfigContainerDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings ResetOutput(this AzureWebappConfigContainerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings SetQuery(this AzureWebappConfigContainerDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings ResetQuery(this AzureWebappConfigContainerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings SetVerbose(this AzureWebappConfigContainerDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerDeleteSettings ResetVerbose(this AzureWebappConfigContainerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappConfigContainerSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappConfigContainerSetSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetName(this AzureWebappConfigContainerSetSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetName(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetResourceGroup(this AzureWebappConfigContainerSetSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetResourceGroup(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DockerCustomImageName
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.DockerCustomImageName"/>.</em></p><p>The container custom image name and optionally the tag name.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetDockerCustomImageName(this AzureWebappConfigContainerSetSettings toolSettings, string dockerCustomImageName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DockerCustomImageName = dockerCustomImageName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.DockerCustomImageName"/>.</em></p><p>The container custom image name and optionally the tag name.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetDockerCustomImageName(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DockerCustomImageName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DockerRegistryServerPassword
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.DockerRegistryServerPassword"/>.</em></p><p>The container registry server password.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetDockerRegistryServerPassword(this AzureWebappConfigContainerSetSettings toolSettings, string dockerRegistryServerPassword)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DockerRegistryServerPassword = dockerRegistryServerPassword;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.DockerRegistryServerPassword"/>.</em></p><p>The container registry server password.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetDockerRegistryServerPassword(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DockerRegistryServerPassword = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DockerRegistryServerUrl
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.DockerRegistryServerUrl"/>.</em></p><p>The container registry server url.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetDockerRegistryServerUrl(this AzureWebappConfigContainerSetSettings toolSettings, string dockerRegistryServerUrl)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DockerRegistryServerUrl = dockerRegistryServerUrl;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.DockerRegistryServerUrl"/>.</em></p><p>The container registry server url.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetDockerRegistryServerUrl(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DockerRegistryServerUrl = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DockerRegistryServerUser
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.DockerRegistryServerUser"/>.</em></p><p>The container registry server username.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetDockerRegistryServerUser(this AzureWebappConfigContainerSetSettings toolSettings, string dockerRegistryServerUser)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DockerRegistryServerUser = dockerRegistryServerUser;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.DockerRegistryServerUser"/>.</em></p><p>The container registry server username.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetDockerRegistryServerUser(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DockerRegistryServerUser = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EnableAppServiceStorage
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.EnableAppServiceStorage"/>.</em></p><p>Enables platform storage (custom container only).</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetEnableAppServiceStorage(this AzureWebappConfigContainerSetSettings toolSettings, bool? enableAppServiceStorage)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EnableAppServiceStorage = enableAppServiceStorage;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.EnableAppServiceStorage"/>.</em></p><p>Enables platform storage (custom container only).</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetEnableAppServiceStorage(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EnableAppServiceStorage = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureWebappConfigContainerSetSettings.EnableAppServiceStorage"/>.</em></p><p>Enables platform storage (custom container only).</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings EnableEnableAppServiceStorage(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EnableAppServiceStorage = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureWebappConfigContainerSetSettings.EnableAppServiceStorage"/>.</em></p><p>Enables platform storage (custom container only).</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings DisableEnableAppServiceStorage(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EnableAppServiceStorage = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureWebappConfigContainerSetSettings.EnableAppServiceStorage"/>.</em></p><p>Enables platform storage (custom container only).</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ToggleEnableAppServiceStorage(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EnableAppServiceStorage = !toolSettings.EnableAppServiceStorage;
-            return toolSettings;
-        }
-        #endregion
-        #region MulticontainerConfigFile
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.MulticontainerConfigFile"/>.</em></p><p>Config file for multicontainer apps.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetMulticontainerConfigFile(this AzureWebappConfigContainerSetSettings toolSettings, string multicontainerConfigFile)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MulticontainerConfigFile = multicontainerConfigFile;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.MulticontainerConfigFile"/>.</em></p><p>Config file for multicontainer apps.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetMulticontainerConfigFile(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MulticontainerConfigFile = null;
-            return toolSettings;
-        }
-        #endregion
-        #region MulticontainerConfigType
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.MulticontainerConfigType"/>.</em></p><p>Config type.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetMulticontainerConfigType(this AzureWebappConfigContainerSetSettings toolSettings, WebappMulticontainerConfigType multicontainerConfigType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MulticontainerConfigType = multicontainerConfigType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.MulticontainerConfigType"/>.</em></p><p>Config type.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetMulticontainerConfigType(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MulticontainerConfigType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetSlot(this AzureWebappConfigContainerSetSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetSlot(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetDebug(this AzureWebappConfigContainerSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetDebug(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetHelp(this AzureWebappConfigContainerSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetHelp(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetOutput(this AzureWebappConfigContainerSetSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetOutput(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetQuery(this AzureWebappConfigContainerSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetQuery(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings SetVerbose(this AzureWebappConfigContainerSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerSetSettings ResetVerbose(this AzureWebappConfigContainerSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappConfigContainerShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappConfigContainerShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings SetName(this AzureWebappConfigContainerShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings ResetName(this AzureWebappConfigContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings SetResourceGroup(this AzureWebappConfigContainerShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings ResetResourceGroup(this AzureWebappConfigContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ShowMulticontainerConfig
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.ShowMulticontainerConfig"/>.</em></p><p>Shows decoded config if a multicontainer config is set.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings SetShowMulticontainerConfig(this AzureWebappConfigContainerShowSettings toolSettings, string showMulticontainerConfig)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ShowMulticontainerConfig = showMulticontainerConfig;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.ShowMulticontainerConfig"/>.</em></p><p>Shows decoded config if a multicontainer config is set.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings ResetShowMulticontainerConfig(this AzureWebappConfigContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ShowMulticontainerConfig = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings SetSlot(this AzureWebappConfigContainerShowSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings ResetSlot(this AzureWebappConfigContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings SetDebug(this AzureWebappConfigContainerShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings ResetDebug(this AzureWebappConfigContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings SetHelp(this AzureWebappConfigContainerShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings ResetHelp(this AzureWebappConfigContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings SetOutput(this AzureWebappConfigContainerShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings ResetOutput(this AzureWebappConfigContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings SetQuery(this AzureWebappConfigContainerShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings ResetQuery(this AzureWebappConfigContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings SetVerbose(this AzureWebappConfigContainerShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappConfigContainerShowSettings ResetVerbose(this AzureWebappConfigContainerShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -14988,6 +12868,1248 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureWebappConfigBackupUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureWebappConfigBackupUpdateSettings ResetVerbose(this AzureWebappConfigBackupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappConfigConnectionStringDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappConfigConnectionStringDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings SetName(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings ResetName(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings SetResourceGroup(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings ResetResourceGroup(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SettingNames
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/> to a new list.</em></p><p>Space-separated connection-string names.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings SetSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, params string[] settingNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingNamesInternal = settingNames.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/> to a new list.</em></p><p>Space-separated connection-string names.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings SetSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, IEnumerable<string> settingNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingNamesInternal = settingNames.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/>.</em></p><p>Space-separated connection-string names.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings AddSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, params string[] settingNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingNamesInternal.AddRange(settingNames);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/>.</em></p><p>Space-separated connection-string names.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings AddSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, IEnumerable<string> settingNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingNamesInternal.AddRange(settingNames);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/>.</em></p><p>Space-separated connection-string names.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings ClearSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingNamesInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/>.</em></p><p>Space-separated connection-string names.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings RemoveSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, params string[] settingNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(settingNames);
+            toolSettings.SettingNamesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureWebappConfigConnectionStringDeleteSettings.SettingNames"/>.</em></p><p>Space-separated connection-string names.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings RemoveSettingNames(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, IEnumerable<string> settingNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(settingNames);
+            toolSettings.SettingNamesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings SetSlot(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings ResetSlot(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings SetDebug(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings ResetDebug(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings SetHelp(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings ResetHelp(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings SetOutput(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings ResetOutput(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings SetQuery(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings ResetQuery(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings SetVerbose(this AzureWebappConfigConnectionStringDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringDeleteSettings ResetVerbose(this AzureWebappConfigConnectionStringDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappConfigConnectionStringListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappConfigConnectionStringListSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings SetName(this AzureWebappConfigConnectionStringListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings ResetName(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings SetResourceGroup(this AzureWebappConfigConnectionStringListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings ResetResourceGroup(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings SetSlot(this AzureWebappConfigConnectionStringListSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings ResetSlot(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings SetDebug(this AzureWebappConfigConnectionStringListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings ResetDebug(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings SetHelp(this AzureWebappConfigConnectionStringListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings ResetHelp(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings SetOutput(this AzureWebappConfigConnectionStringListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings ResetOutput(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings SetQuery(this AzureWebappConfigConnectionStringListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings ResetQuery(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings SetVerbose(this AzureWebappConfigConnectionStringListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringListSettings ResetVerbose(this AzureWebappConfigConnectionStringListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappConfigConnectionStringSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappConfigConnectionStringSetSettingsExtensions
+    {
+        #region ConnectionStringType
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.ConnectionStringType"/>.</em></p><p>Connection string type.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetConnectionStringType(this AzureWebappConfigConnectionStringSetSettings toolSettings, WebappConfigConnectionStringSetConnectionStringType connectionStringType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectionStringType = connectionStringType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.ConnectionStringType"/>.</em></p><p>Connection string type.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings ResetConnectionStringType(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectionStringType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetName(this AzureWebappConfigConnectionStringSetSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings ResetName(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetResourceGroup(this AzureWebappConfigConnectionStringSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings ResetResourceGroup(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Settings
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/> to a new dictionary.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings, IDictionary<string, object> settings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal = settings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings ClearSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings AddSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string settingKey, object settingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Add(settingKey, settingValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings RemoveSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string settingKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Remove(settingKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string settingKey, object settingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal[settingKey] = settingValue;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetSlot(this AzureWebappConfigConnectionStringSetSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings ResetSlot(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SlotSettings
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/> to a new dictionary.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetSlotSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings, IDictionary<string, object> slotSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal = slotSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings ClearSlotSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings AddSlotSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string slotSettingKey, object slotSettingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Add(slotSettingKey, slotSettingValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings RemoveSlotSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string slotSettingKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Remove(slotSettingKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetSlotSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string slotSettingKey, object slotSettingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal[slotSettingKey] = slotSettingValue;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetDebug(this AzureWebappConfigConnectionStringSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings ResetDebug(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetHelp(this AzureWebappConfigConnectionStringSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings ResetHelp(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetOutput(this AzureWebappConfigConnectionStringSetSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings ResetOutput(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetQuery(this AzureWebappConfigConnectionStringSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings ResetQuery(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetVerbose(this AzureWebappConfigConnectionStringSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings ResetVerbose(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappConfigContainerDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappConfigContainerDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings SetName(this AzureWebappConfigContainerDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings ResetName(this AzureWebappConfigContainerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings SetResourceGroup(this AzureWebappConfigContainerDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings ResetResourceGroup(this AzureWebappConfigContainerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings SetSlot(this AzureWebappConfigContainerDeleteSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings ResetSlot(this AzureWebappConfigContainerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings SetDebug(this AzureWebappConfigContainerDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings ResetDebug(this AzureWebappConfigContainerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings SetHelp(this AzureWebappConfigContainerDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings ResetHelp(this AzureWebappConfigContainerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings SetOutput(this AzureWebappConfigContainerDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings ResetOutput(this AzureWebappConfigContainerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings SetQuery(this AzureWebappConfigContainerDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings ResetQuery(this AzureWebappConfigContainerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings SetVerbose(this AzureWebappConfigContainerDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerDeleteSettings ResetVerbose(this AzureWebappConfigContainerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappConfigContainerSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappConfigContainerSetSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetName(this AzureWebappConfigContainerSetSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetName(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetResourceGroup(this AzureWebappConfigContainerSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetResourceGroup(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DockerCustomImageName
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.DockerCustomImageName"/>.</em></p><p>The container custom image name and optionally the tag name.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetDockerCustomImageName(this AzureWebappConfigContainerSetSettings toolSettings, string dockerCustomImageName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DockerCustomImageName = dockerCustomImageName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.DockerCustomImageName"/>.</em></p><p>The container custom image name and optionally the tag name.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetDockerCustomImageName(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DockerCustomImageName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DockerRegistryServerPassword
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.DockerRegistryServerPassword"/>.</em></p><p>The container registry server password.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetDockerRegistryServerPassword(this AzureWebappConfigContainerSetSettings toolSettings, string dockerRegistryServerPassword)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DockerRegistryServerPassword = dockerRegistryServerPassword;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.DockerRegistryServerPassword"/>.</em></p><p>The container registry server password.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetDockerRegistryServerPassword(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DockerRegistryServerPassword = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DockerRegistryServerUrl
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.DockerRegistryServerUrl"/>.</em></p><p>The container registry server url.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetDockerRegistryServerUrl(this AzureWebappConfigContainerSetSettings toolSettings, string dockerRegistryServerUrl)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DockerRegistryServerUrl = dockerRegistryServerUrl;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.DockerRegistryServerUrl"/>.</em></p><p>The container registry server url.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetDockerRegistryServerUrl(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DockerRegistryServerUrl = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DockerRegistryServerUser
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.DockerRegistryServerUser"/>.</em></p><p>The container registry server username.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetDockerRegistryServerUser(this AzureWebappConfigContainerSetSettings toolSettings, string dockerRegistryServerUser)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DockerRegistryServerUser = dockerRegistryServerUser;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.DockerRegistryServerUser"/>.</em></p><p>The container registry server username.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetDockerRegistryServerUser(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DockerRegistryServerUser = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EnableAppServiceStorage
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.EnableAppServiceStorage"/>.</em></p><p>Enables platform storage (custom container only).</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetEnableAppServiceStorage(this AzureWebappConfigContainerSetSettings toolSettings, bool? enableAppServiceStorage)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableAppServiceStorage = enableAppServiceStorage;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.EnableAppServiceStorage"/>.</em></p><p>Enables platform storage (custom container only).</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetEnableAppServiceStorage(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableAppServiceStorage = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureWebappConfigContainerSetSettings.EnableAppServiceStorage"/>.</em></p><p>Enables platform storage (custom container only).</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings EnableEnableAppServiceStorage(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableAppServiceStorage = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureWebappConfigContainerSetSettings.EnableAppServiceStorage"/>.</em></p><p>Enables platform storage (custom container only).</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings DisableEnableAppServiceStorage(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableAppServiceStorage = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureWebappConfigContainerSetSettings.EnableAppServiceStorage"/>.</em></p><p>Enables platform storage (custom container only).</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ToggleEnableAppServiceStorage(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableAppServiceStorage = !toolSettings.EnableAppServiceStorage;
+            return toolSettings;
+        }
+        #endregion
+        #region MulticontainerConfigFile
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.MulticontainerConfigFile"/>.</em></p><p>Config file for multicontainer apps.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetMulticontainerConfigFile(this AzureWebappConfigContainerSetSettings toolSettings, string multicontainerConfigFile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MulticontainerConfigFile = multicontainerConfigFile;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.MulticontainerConfigFile"/>.</em></p><p>Config file for multicontainer apps.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetMulticontainerConfigFile(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MulticontainerConfigFile = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MulticontainerConfigType
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.MulticontainerConfigType"/>.</em></p><p>Config type.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetMulticontainerConfigType(this AzureWebappConfigContainerSetSettings toolSettings, WebappMulticontainerConfigType multicontainerConfigType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MulticontainerConfigType = multicontainerConfigType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.MulticontainerConfigType"/>.</em></p><p>Config type.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetMulticontainerConfigType(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MulticontainerConfigType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetSlot(this AzureWebappConfigContainerSetSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetSlot(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetDebug(this AzureWebappConfigContainerSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetDebug(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetHelp(this AzureWebappConfigContainerSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetHelp(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetOutput(this AzureWebappConfigContainerSetSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetOutput(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetQuery(this AzureWebappConfigContainerSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetQuery(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetVerbose(this AzureWebappConfigContainerSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetVerbose(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappConfigContainerShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappConfigContainerShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings SetName(this AzureWebappConfigContainerShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings ResetName(this AzureWebappConfigContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings SetResourceGroup(this AzureWebappConfigContainerShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings ResetResourceGroup(this AzureWebappConfigContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ShowMulticontainerConfig
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.ShowMulticontainerConfig"/>.</em></p><p>Shows decoded config if a multicontainer config is set.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings SetShowMulticontainerConfig(this AzureWebappConfigContainerShowSettings toolSettings, string showMulticontainerConfig)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowMulticontainerConfig = showMulticontainerConfig;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.ShowMulticontainerConfig"/>.</em></p><p>Shows decoded config if a multicontainer config is set.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings ResetShowMulticontainerConfig(this AzureWebappConfigContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowMulticontainerConfig = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings SetSlot(this AzureWebappConfigContainerShowSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings ResetSlot(this AzureWebappConfigContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings SetDebug(this AzureWebappConfigContainerShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings ResetDebug(this AzureWebappConfigContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings SetHelp(this AzureWebappConfigContainerShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings ResetHelp(this AzureWebappConfigContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings SetOutput(this AzureWebappConfigContainerShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings ResetOutput(this AzureWebappConfigContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings SetQuery(this AzureWebappConfigContainerShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings ResetQuery(this AzureWebappConfigContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings SetVerbose(this AzureWebappConfigContainerShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings ResetVerbose(this AzureWebappConfigContainerShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -16400,24 +15522,78 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureWebappWebjobTriggeredListSettingsExtensions
+    #region AzureWebappConfigStorageAccountAddSettingsExtensions
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappWebjobTriggeredListSettingsExtensions
+    public static partial class AzureWebappConfigStorageAccountAddSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        #region AccessKey
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.AccessKey"/>.</em></p><p>Storage account access key.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings SetName(this AzureWebappWebjobTriggeredListSettings toolSettings, string name)
+        public static AzureWebappConfigStorageAccountAddSettings SetAccessKey(this AzureWebappConfigStorageAccountAddSettings toolSettings, string accessKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccessKey = accessKey;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.AccessKey"/>.</em></p><p>Storage account access key.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings ResetAccessKey(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccessKey = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.AccountName"/>.</em></p><p>Storage account name.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings SetAccountName(this AzureWebappConfigStorageAccountAddSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.AccountName"/>.</em></p><p>Storage account name.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings ResetAccountName(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CustomId
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.CustomId"/>.</em></p><p>Custom identifier.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings SetCustomId(this AzureWebappConfigStorageAccountAddSettings toolSettings, string customId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomId = customId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.CustomId"/>.</em></p><p>Custom identifier.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings ResetCustomId(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings SetName(this AzureWebappConfigStorageAccountAddSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings ResetName(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        public static AzureWebappConfigStorageAccountAddSettings ResetName(this AzureWebappConfigStorageAccountAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -16425,53 +15601,125 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings SetResourceGroup(this AzureWebappWebjobTriggeredListSettings toolSettings, string resourceGroup)
+        public static AzureWebappConfigStorageAccountAddSettings SetResourceGroup(this AzureWebappConfigStorageAccountAddSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings ResetResourceGroup(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        public static AzureWebappConfigStorageAccountAddSettings ResetResourceGroup(this AzureWebappConfigStorageAccountAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        #region ShareName
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.ShareName"/>.</em></p><p>Share name (Azure Files) or container name (Azure Blob Storage).</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings SetSlot(this AzureWebappWebjobTriggeredListSettings toolSettings, string slot)
+        public static AzureWebappConfigStorageAccountAddSettings SetShareName(this AzureWebappConfigStorageAccountAddSettings toolSettings, string shareName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShareName = shareName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.ShareName"/>.</em></p><p>Share name (Azure Files) or container name (Azure Blob Storage).</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings ResetShareName(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShareName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StorageType
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.StorageType"/>.</em></p><p>Storage type.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings SetStorageType(this AzureWebappConfigStorageAccountAddSettings toolSettings, WebappConfigStorageAccountStorageType storageType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageType = storageType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.StorageType"/>.</em></p><p>Storage type.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings ResetStorageType(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MountPath
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.MountPath"/>.</em></p><p>Path to mount storage volume within web app.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings SetMountPath(this AzureWebappConfigStorageAccountAddSettings toolSettings, string mountPath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MountPath = mountPath;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.MountPath"/>.</em></p><p>Path to mount storage volume within web app.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings ResetMountPath(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MountPath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings SetSlot(this AzureWebappConfigStorageAccountAddSettings toolSettings, string slot)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = slot;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings ResetSlot(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        public static AzureWebappConfigStorageAccountAddSettings ResetSlot(this AzureWebappConfigStorageAccountAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region SlotSetting
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.SlotSetting"/>.</em></p><p>Slot setting.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings SetDebug(this AzureWebappWebjobTriggeredListSettings toolSettings, string debug)
+        public static AzureWebappConfigStorageAccountAddSettings SetSlotSetting(this AzureWebappConfigStorageAccountAddSettings toolSettings, string slotSetting)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSetting = slotSetting;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.SlotSetting"/>.</em></p><p>Slot setting.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings ResetSlotSetting(this AzureWebappConfigStorageAccountAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSetting = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountAddSettings SetDebug(this AzureWebappConfigStorageAccountAddSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings ResetDebug(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        public static AzureWebappConfigStorageAccountAddSettings ResetDebug(this AzureWebappConfigStorageAccountAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -16479,17 +15727,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings SetHelp(this AzureWebappWebjobTriggeredListSettings toolSettings, string help)
+        public static AzureWebappConfigStorageAccountAddSettings SetHelp(this AzureWebappConfigStorageAccountAddSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings ResetHelp(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        public static AzureWebappConfigStorageAccountAddSettings ResetHelp(this AzureWebappConfigStorageAccountAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -16497,17 +15745,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings SetOutput(this AzureWebappWebjobTriggeredListSettings toolSettings, AzureOutput output)
+        public static AzureWebappConfigStorageAccountAddSettings SetOutput(this AzureWebappConfigStorageAccountAddSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings ResetOutput(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        public static AzureWebappConfigStorageAccountAddSettings ResetOutput(this AzureWebappConfigStorageAccountAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -16515,17 +15763,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings SetQuery(this AzureWebappWebjobTriggeredListSettings toolSettings, string query)
+        public static AzureWebappConfigStorageAccountAddSettings SetQuery(this AzureWebappConfigStorageAccountAddSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings ResetQuery(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        public static AzureWebappConfigStorageAccountAddSettings ResetQuery(this AzureWebappConfigStorageAccountAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -16533,17 +15781,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings SetVerbose(this AzureWebappWebjobTriggeredListSettings toolSettings, string verbose)
+        public static AzureWebappConfigStorageAccountAddSettings SetVerbose(this AzureWebappConfigStorageAccountAddSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredListSettings ResetVerbose(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        public static AzureWebappConfigStorageAccountAddSettings ResetVerbose(this AzureWebappConfigStorageAccountAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -16552,24 +15800,42 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureWebappWebjobTriggeredLogSettingsExtensions
+    #region AzureWebappConfigStorageAccountDeleteSettingsExtensions
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappWebjobTriggeredLogSettingsExtensions
+    public static partial class AzureWebappConfigStorageAccountDeleteSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        #region CustomId
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.CustomId"/>.</em></p><p>Custom identifier.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings SetName(this AzureWebappWebjobTriggeredLogSettings toolSettings, string name)
+        public static AzureWebappConfigStorageAccountDeleteSettings SetCustomId(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string customId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomId = customId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.CustomId"/>.</em></p><p>Custom identifier.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountDeleteSettings ResetCustomId(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountDeleteSettings SetName(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings ResetName(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        public static AzureWebappConfigStorageAccountDeleteSettings ResetName(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -16577,53 +15843,35 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings SetResourceGroup(this AzureWebappWebjobTriggeredLogSettings toolSettings, string resourceGroup)
+        public static AzureWebappConfigStorageAccountDeleteSettings SetResourceGroup(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings ResetResourceGroup(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        public static AzureWebappConfigStorageAccountDeleteSettings ResetResourceGroup(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region WebjobName
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings SetWebjobName(this AzureWebappWebjobTriggeredLogSettings toolSettings, string webjobName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebjobName = webjobName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings ResetWebjobName(this AzureWebappWebjobTriggeredLogSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebjobName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings SetSlot(this AzureWebappWebjobTriggeredLogSettings toolSettings, string slot)
+        public static AzureWebappConfigStorageAccountDeleteSettings SetSlot(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string slot)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = slot;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings ResetSlot(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        public static AzureWebappConfigStorageAccountDeleteSettings ResetSlot(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = null;
@@ -16631,17 +15879,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings SetDebug(this AzureWebappWebjobTriggeredLogSettings toolSettings, string debug)
+        public static AzureWebappConfigStorageAccountDeleteSettings SetDebug(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings ResetDebug(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        public static AzureWebappConfigStorageAccountDeleteSettings ResetDebug(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -16649,17 +15897,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings SetHelp(this AzureWebappWebjobTriggeredLogSettings toolSettings, string help)
+        public static AzureWebappConfigStorageAccountDeleteSettings SetHelp(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings ResetHelp(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        public static AzureWebappConfigStorageAccountDeleteSettings ResetHelp(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -16667,17 +15915,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings SetOutput(this AzureWebappWebjobTriggeredLogSettings toolSettings, AzureOutput output)
+        public static AzureWebappConfigStorageAccountDeleteSettings SetOutput(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings ResetOutput(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        public static AzureWebappConfigStorageAccountDeleteSettings ResetOutput(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -16685,17 +15933,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings SetQuery(this AzureWebappWebjobTriggeredLogSettings toolSettings, string query)
+        public static AzureWebappConfigStorageAccountDeleteSettings SetQuery(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings ResetQuery(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        public static AzureWebappConfigStorageAccountDeleteSettings ResetQuery(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -16703,17 +15951,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings SetVerbose(this AzureWebappWebjobTriggeredLogSettings toolSettings, string verbose)
+        public static AzureWebappConfigStorageAccountDeleteSettings SetVerbose(this AzureWebappConfigStorageAccountDeleteSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredLogSettings ResetVerbose(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        public static AzureWebappConfigStorageAccountDeleteSettings ResetVerbose(this AzureWebappConfigStorageAccountDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -16722,24 +15970,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureWebappWebjobTriggeredRemoveSettingsExtensions
+    #region AzureWebappConfigStorageAccountListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappWebjobTriggeredRemoveSettingsExtensions
+    public static partial class AzureWebappConfigStorageAccountListSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings SetName(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string name)
+        public static AzureWebappConfigStorageAccountListSettings SetName(this AzureWebappConfigStorageAccountListSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings ResetName(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        public static AzureWebappConfigStorageAccountListSettings ResetName(this AzureWebappConfigStorageAccountListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -16747,53 +15995,35 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings SetResourceGroup(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string resourceGroup)
+        public static AzureWebappConfigStorageAccountListSettings SetResourceGroup(this AzureWebappConfigStorageAccountListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings ResetResourceGroup(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        public static AzureWebappConfigStorageAccountListSettings ResetResourceGroup(this AzureWebappConfigStorageAccountListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region WebjobName
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings SetWebjobName(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string webjobName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebjobName = webjobName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings ResetWebjobName(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebjobName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings SetSlot(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string slot)
+        public static AzureWebappConfigStorageAccountListSettings SetSlot(this AzureWebappConfigStorageAccountListSettings toolSettings, string slot)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = slot;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings ResetSlot(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        public static AzureWebappConfigStorageAccountListSettings ResetSlot(this AzureWebappConfigStorageAccountListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = null;
@@ -16801,17 +16031,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings SetDebug(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string debug)
+        public static AzureWebappConfigStorageAccountListSettings SetDebug(this AzureWebappConfigStorageAccountListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings ResetDebug(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        public static AzureWebappConfigStorageAccountListSettings ResetDebug(this AzureWebappConfigStorageAccountListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -16819,17 +16049,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings SetHelp(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string help)
+        public static AzureWebappConfigStorageAccountListSettings SetHelp(this AzureWebappConfigStorageAccountListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings ResetHelp(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        public static AzureWebappConfigStorageAccountListSettings ResetHelp(this AzureWebappConfigStorageAccountListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -16837,17 +16067,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings SetOutput(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, AzureOutput output)
+        public static AzureWebappConfigStorageAccountListSettings SetOutput(this AzureWebappConfigStorageAccountListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings ResetOutput(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        public static AzureWebappConfigStorageAccountListSettings ResetOutput(this AzureWebappConfigStorageAccountListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -16855,17 +16085,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings SetQuery(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string query)
+        public static AzureWebappConfigStorageAccountListSettings SetQuery(this AzureWebappConfigStorageAccountListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings ResetQuery(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        public static AzureWebappConfigStorageAccountListSettings ResetQuery(this AzureWebappConfigStorageAccountListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -16873,17 +16103,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings SetVerbose(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string verbose)
+        public static AzureWebappConfigStorageAccountListSettings SetVerbose(this AzureWebappConfigStorageAccountListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRemoveSettings ResetVerbose(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        public static AzureWebappConfigStorageAccountListSettings ResetVerbose(this AzureWebappConfigStorageAccountListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -16892,24 +16122,42 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureWebappWebjobTriggeredRunSettingsExtensions
+    #region AzureWebappConfigStorageAccountUpdateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappWebjobTriggeredRunSettingsExtensions
+    public static partial class AzureWebappConfigStorageAccountUpdateSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        #region CustomId
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.CustomId"/>.</em></p><p>Custom identifier.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings SetName(this AzureWebappWebjobTriggeredRunSettings toolSettings, string name)
+        public static AzureWebappConfigStorageAccountUpdateSettings SetCustomId(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string customId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomId = customId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.CustomId"/>.</em></p><p>Custom identifier.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetCustomId(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountUpdateSettings SetName(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings ResetName(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetName(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -16917,71 +16165,161 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings SetResourceGroup(this AzureWebappWebjobTriggeredRunSettings toolSettings, string resourceGroup)
+        public static AzureWebappConfigStorageAccountUpdateSettings SetResourceGroup(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings ResetResourceGroup(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetResourceGroup(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region WebjobName
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        #region AccessKey
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.AccessKey"/>.</em></p><p>Storage account access key.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings SetWebjobName(this AzureWebappWebjobTriggeredRunSettings toolSettings, string webjobName)
+        public static AzureWebappConfigStorageAccountUpdateSettings SetAccessKey(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string accessKey)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WebjobName = webjobName;
+            toolSettings.AccessKey = accessKey;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.AccessKey"/>.</em></p><p>Storage account access key.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings ResetWebjobName(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetAccessKey(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.WebjobName = null;
+            toolSettings.AccessKey = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.AccountName"/>.</em></p><p>Storage account name.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountUpdateSettings SetAccountName(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.AccountName"/>.</em></p><p>Storage account name.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetAccountName(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MountPath
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.MountPath"/>.</em></p><p>Path to mount storage volume within web app.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountUpdateSettings SetMountPath(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string mountPath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MountPath = mountPath;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.MountPath"/>.</em></p><p>Path to mount storage volume within web app.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetMountPath(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MountPath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ShareName
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.ShareName"/>.</em></p><p>Share name (Azure Files) or container name (Azure Blob Storage).</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountUpdateSettings SetShareName(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string shareName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShareName = shareName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.ShareName"/>.</em></p><p>Share name (Azure Files) or container name (Azure Blob Storage).</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetShareName(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShareName = null;
             return toolSettings;
         }
         #endregion
         #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings SetSlot(this AzureWebappWebjobTriggeredRunSettings toolSettings, string slot)
+        public static AzureWebappConfigStorageAccountUpdateSettings SetSlot(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string slot)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = slot;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings ResetSlot(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetSlot(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Slot = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region SlotSetting
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.SlotSetting"/>.</em></p><p>Slot setting.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings SetDebug(this AzureWebappWebjobTriggeredRunSettings toolSettings, string debug)
+        public static AzureWebappConfigStorageAccountUpdateSettings SetSlotSetting(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string slotSetting)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSetting = slotSetting;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.SlotSetting"/>.</em></p><p>Slot setting.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetSlotSetting(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSetting = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StorageType
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.StorageType"/>.</em></p><p>Storage type.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountUpdateSettings SetStorageType(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, WebappConfigStorageAccountStorageType storageType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageType = storageType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.StorageType"/>.</em></p><p>Storage type.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetStorageType(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappConfigStorageAccountUpdateSettings SetDebug(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings ResetDebug(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetDebug(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -16989,17 +16327,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings SetHelp(this AzureWebappWebjobTriggeredRunSettings toolSettings, string help)
+        public static AzureWebappConfigStorageAccountUpdateSettings SetHelp(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings ResetHelp(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetHelp(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -17007,17 +16345,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings SetOutput(this AzureWebappWebjobTriggeredRunSettings toolSettings, AzureOutput output)
+        public static AzureWebappConfigStorageAccountUpdateSettings SetOutput(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings ResetOutput(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetOutput(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -17025,17 +16363,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings SetQuery(this AzureWebappWebjobTriggeredRunSettings toolSettings, string query)
+        public static AzureWebappConfigStorageAccountUpdateSettings SetQuery(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings ResetQuery(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetQuery(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -17043,679 +16381,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings SetVerbose(this AzureWebappWebjobTriggeredRunSettings toolSettings, string verbose)
+        public static AzureWebappConfigStorageAccountUpdateSettings SetVerbose(this AzureWebappConfigStorageAccountUpdateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigStorageAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureWebappWebjobTriggeredRunSettings ResetVerbose(this AzureWebappWebjobTriggeredRunSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappWebjobContinuousListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappWebjobContinuousListSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings SetName(this AzureWebappWebjobContinuousListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings ResetName(this AzureWebappWebjobContinuousListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings SetResourceGroup(this AzureWebappWebjobContinuousListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings ResetResourceGroup(this AzureWebappWebjobContinuousListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings SetSlot(this AzureWebappWebjobContinuousListSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings ResetSlot(this AzureWebappWebjobContinuousListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings SetDebug(this AzureWebappWebjobContinuousListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings ResetDebug(this AzureWebappWebjobContinuousListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings SetHelp(this AzureWebappWebjobContinuousListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings ResetHelp(this AzureWebappWebjobContinuousListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings SetOutput(this AzureWebappWebjobContinuousListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings ResetOutput(this AzureWebappWebjobContinuousListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings SetQuery(this AzureWebappWebjobContinuousListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings ResetQuery(this AzureWebappWebjobContinuousListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings SetVerbose(this AzureWebappWebjobContinuousListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousListSettings ResetVerbose(this AzureWebappWebjobContinuousListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappWebjobContinuousRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappWebjobContinuousRemoveSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings SetName(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings ResetName(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings SetResourceGroup(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings ResetResourceGroup(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region WebjobName
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings SetWebjobName(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string webjobName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebjobName = webjobName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings ResetWebjobName(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebjobName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings SetSlot(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings ResetSlot(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings SetDebug(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings ResetDebug(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings SetHelp(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings ResetHelp(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings SetOutput(this AzureWebappWebjobContinuousRemoveSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings ResetOutput(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings SetQuery(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings ResetQuery(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings SetVerbose(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousRemoveSettings ResetVerbose(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappWebjobContinuousStartSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappWebjobContinuousStartSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings SetName(this AzureWebappWebjobContinuousStartSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings ResetName(this AzureWebappWebjobContinuousStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings SetResourceGroup(this AzureWebappWebjobContinuousStartSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings ResetResourceGroup(this AzureWebappWebjobContinuousStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region WebjobName
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings SetWebjobName(this AzureWebappWebjobContinuousStartSettings toolSettings, string webjobName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebjobName = webjobName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings ResetWebjobName(this AzureWebappWebjobContinuousStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebjobName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings SetSlot(this AzureWebappWebjobContinuousStartSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings ResetSlot(this AzureWebappWebjobContinuousStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings SetDebug(this AzureWebappWebjobContinuousStartSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings ResetDebug(this AzureWebappWebjobContinuousStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings SetHelp(this AzureWebappWebjobContinuousStartSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings ResetHelp(this AzureWebappWebjobContinuousStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings SetOutput(this AzureWebappWebjobContinuousStartSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings ResetOutput(this AzureWebappWebjobContinuousStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings SetQuery(this AzureWebappWebjobContinuousStartSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings ResetQuery(this AzureWebappWebjobContinuousStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings SetVerbose(this AzureWebappWebjobContinuousStartSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStartSettings ResetVerbose(this AzureWebappWebjobContinuousStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappWebjobContinuousStopSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappWebjobContinuousStopSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings SetName(this AzureWebappWebjobContinuousStopSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings ResetName(this AzureWebappWebjobContinuousStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings SetResourceGroup(this AzureWebappWebjobContinuousStopSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings ResetResourceGroup(this AzureWebappWebjobContinuousStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region WebjobName
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings SetWebjobName(this AzureWebappWebjobContinuousStopSettings toolSettings, string webjobName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebjobName = webjobName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings ResetWebjobName(this AzureWebappWebjobContinuousStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebjobName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Slot
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings SetSlot(this AzureWebappWebjobContinuousStopSettings toolSettings, string slot)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = slot;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings ResetSlot(this AzureWebappWebjobContinuousStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Slot = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings SetDebug(this AzureWebappWebjobContinuousStopSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings ResetDebug(this AzureWebappWebjobContinuousStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings SetHelp(this AzureWebappWebjobContinuousStopSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings ResetHelp(this AzureWebappWebjobContinuousStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings SetOutput(this AzureWebappWebjobContinuousStopSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings ResetOutput(this AzureWebappWebjobContinuousStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings SetQuery(this AzureWebappWebjobContinuousStopSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings ResetQuery(this AzureWebappWebjobContinuousStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings SetVerbose(this AzureWebappWebjobContinuousStopSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappWebjobContinuousStopSettings ResetVerbose(this AzureWebappWebjobContinuousStopSettings toolSettings)
+        public static AzureWebappConfigStorageAccountUpdateSettings ResetVerbose(this AzureWebappConfigStorageAccountUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -18062,238 +16738,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureWebappDeploymentContainerShowCdUrlSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureWebappDeploymentContainerShowCdUrlSettings ResetVerbose(this AzureWebappDeploymentContainerShowCdUrlSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappDeploymentUserSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappDeploymentUserSetSettingsExtensions
-    {
-        #region UserName
-        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.UserName"/>.</em></p><p>User name.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings SetUserName(this AzureWebappDeploymentUserSetSettings toolSettings, string userName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UserName = userName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.UserName"/>.</em></p><p>User name.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings ResetUserName(this AzureWebappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UserName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Password
-        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.Password"/>.</em></p><p>Password, will prompt if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings SetPassword(this AzureWebappDeploymentUserSetSettings toolSettings, string password)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = password;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.Password"/>.</em></p><p>Password, will prompt if not specified.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings ResetPassword(this AzureWebappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings SetDebug(this AzureWebappDeploymentUserSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings ResetDebug(this AzureWebappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings SetHelp(this AzureWebappDeploymentUserSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings ResetHelp(this AzureWebappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings SetOutput(this AzureWebappDeploymentUserSetSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings ResetOutput(this AzureWebappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings SetQuery(this AzureWebappDeploymentUserSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings ResetQuery(this AzureWebappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings SetVerbose(this AzureWebappDeploymentUserSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserSetSettings ResetVerbose(this AzureWebappDeploymentUserSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureWebappDeploymentUserShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureWebappDeploymentUserShowSettingsExtensions
-    {
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserShowSettings SetDebug(this AzureWebappDeploymentUserShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserShowSettings ResetDebug(this AzureWebappDeploymentUserShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserShowSettings SetHelp(this AzureWebappDeploymentUserShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserShowSettings ResetHelp(this AzureWebappDeploymentUserShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserShowSettings SetOutput(this AzureWebappDeploymentUserShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserShowSettings ResetOutput(this AzureWebappDeploymentUserShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserShowSettings SetQuery(this AzureWebappDeploymentUserShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserShowSettings ResetQuery(this AzureWebappDeploymentUserShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserShowSettings SetVerbose(this AzureWebappDeploymentUserShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureWebappDeploymentUserShowSettings ResetVerbose(this AzureWebappDeploymentUserShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -20468,6 +18912,1562 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureWebappDeploymentUserSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappDeploymentUserSetSettingsExtensions
+    {
+        #region UserName
+        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.UserName"/>.</em></p><p>User name.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings SetUserName(this AzureWebappDeploymentUserSetSettings toolSettings, string userName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UserName = userName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.UserName"/>.</em></p><p>User name.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings ResetUserName(this AzureWebappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UserName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Password
+        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.Password"/>.</em></p><p>Password, will prompt if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings SetPassword(this AzureWebappDeploymentUserSetSettings toolSettings, string password)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = password;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.Password"/>.</em></p><p>Password, will prompt if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings ResetPassword(this AzureWebappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings SetDebug(this AzureWebappDeploymentUserSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings ResetDebug(this AzureWebappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings SetHelp(this AzureWebappDeploymentUserSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings ResetHelp(this AzureWebappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings SetOutput(this AzureWebappDeploymentUserSetSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings ResetOutput(this AzureWebappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings SetQuery(this AzureWebappDeploymentUserSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings ResetQuery(this AzureWebappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings SetVerbose(this AzureWebappDeploymentUserSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserSetSettings ResetVerbose(this AzureWebappDeploymentUserSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappDeploymentUserShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappDeploymentUserShowSettingsExtensions
+    {
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserShowSettings SetDebug(this AzureWebappDeploymentUserShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserShowSettings ResetDebug(this AzureWebappDeploymentUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserShowSettings SetHelp(this AzureWebappDeploymentUserShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserShowSettings ResetHelp(this AzureWebappDeploymentUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserShowSettings SetOutput(this AzureWebappDeploymentUserShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserShowSettings ResetOutput(this AzureWebappDeploymentUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserShowSettings SetQuery(this AzureWebappDeploymentUserShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserShowSettings ResetQuery(this AzureWebappDeploymentUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentUserShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserShowSettings SetVerbose(this AzureWebappDeploymentUserShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentUserShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappDeploymentUserShowSettings ResetVerbose(this AzureWebappDeploymentUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappWebjobContinuousListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappWebjobContinuousListSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings SetName(this AzureWebappWebjobContinuousListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings ResetName(this AzureWebappWebjobContinuousListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings SetResourceGroup(this AzureWebappWebjobContinuousListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings ResetResourceGroup(this AzureWebappWebjobContinuousListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings SetSlot(this AzureWebappWebjobContinuousListSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings ResetSlot(this AzureWebappWebjobContinuousListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings SetDebug(this AzureWebappWebjobContinuousListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings ResetDebug(this AzureWebappWebjobContinuousListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings SetHelp(this AzureWebappWebjobContinuousListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings ResetHelp(this AzureWebappWebjobContinuousListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings SetOutput(this AzureWebappWebjobContinuousListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings ResetOutput(this AzureWebappWebjobContinuousListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings SetQuery(this AzureWebappWebjobContinuousListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings ResetQuery(this AzureWebappWebjobContinuousListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings SetVerbose(this AzureWebappWebjobContinuousListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousListSettings ResetVerbose(this AzureWebappWebjobContinuousListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappWebjobContinuousRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappWebjobContinuousRemoveSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings SetName(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings ResetName(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings SetResourceGroup(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings ResetResourceGroup(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WebjobName
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings SetWebjobName(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string webjobName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebjobName = webjobName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings ResetWebjobName(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebjobName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings SetSlot(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings ResetSlot(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings SetDebug(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings ResetDebug(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings SetHelp(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings ResetHelp(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings SetOutput(this AzureWebappWebjobContinuousRemoveSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings ResetOutput(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings SetQuery(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings ResetQuery(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings SetVerbose(this AzureWebappWebjobContinuousRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousRemoveSettings ResetVerbose(this AzureWebappWebjobContinuousRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappWebjobContinuousStartSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappWebjobContinuousStartSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings SetName(this AzureWebappWebjobContinuousStartSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings ResetName(this AzureWebappWebjobContinuousStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings SetResourceGroup(this AzureWebappWebjobContinuousStartSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings ResetResourceGroup(this AzureWebappWebjobContinuousStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WebjobName
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings SetWebjobName(this AzureWebappWebjobContinuousStartSettings toolSettings, string webjobName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebjobName = webjobName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings ResetWebjobName(this AzureWebappWebjobContinuousStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebjobName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings SetSlot(this AzureWebappWebjobContinuousStartSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings ResetSlot(this AzureWebappWebjobContinuousStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings SetDebug(this AzureWebappWebjobContinuousStartSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings ResetDebug(this AzureWebappWebjobContinuousStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings SetHelp(this AzureWebappWebjobContinuousStartSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings ResetHelp(this AzureWebappWebjobContinuousStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings SetOutput(this AzureWebappWebjobContinuousStartSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings ResetOutput(this AzureWebappWebjobContinuousStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings SetQuery(this AzureWebappWebjobContinuousStartSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings ResetQuery(this AzureWebappWebjobContinuousStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings SetVerbose(this AzureWebappWebjobContinuousStartSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStartSettings ResetVerbose(this AzureWebappWebjobContinuousStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappWebjobContinuousStopSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappWebjobContinuousStopSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings SetName(this AzureWebappWebjobContinuousStopSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings ResetName(this AzureWebappWebjobContinuousStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings SetResourceGroup(this AzureWebappWebjobContinuousStopSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings ResetResourceGroup(this AzureWebappWebjobContinuousStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WebjobName
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings SetWebjobName(this AzureWebappWebjobContinuousStopSettings toolSettings, string webjobName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebjobName = webjobName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings ResetWebjobName(this AzureWebappWebjobContinuousStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebjobName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings SetSlot(this AzureWebappWebjobContinuousStopSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings ResetSlot(this AzureWebappWebjobContinuousStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings SetDebug(this AzureWebappWebjobContinuousStopSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings ResetDebug(this AzureWebappWebjobContinuousStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings SetHelp(this AzureWebappWebjobContinuousStopSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings ResetHelp(this AzureWebappWebjobContinuousStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings SetOutput(this AzureWebappWebjobContinuousStopSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings ResetOutput(this AzureWebappWebjobContinuousStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings SetQuery(this AzureWebappWebjobContinuousStopSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings ResetQuery(this AzureWebappWebjobContinuousStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobContinuousStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings SetVerbose(this AzureWebappWebjobContinuousStopSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobContinuousStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobContinuousStopSettings ResetVerbose(this AzureWebappWebjobContinuousStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappWebjobTriggeredListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappWebjobTriggeredListSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings SetName(this AzureWebappWebjobTriggeredListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings ResetName(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings SetResourceGroup(this AzureWebappWebjobTriggeredListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings ResetResourceGroup(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings SetSlot(this AzureWebappWebjobTriggeredListSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings ResetSlot(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings SetDebug(this AzureWebappWebjobTriggeredListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings ResetDebug(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings SetHelp(this AzureWebappWebjobTriggeredListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings ResetHelp(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings SetOutput(this AzureWebappWebjobTriggeredListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings ResetOutput(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings SetQuery(this AzureWebappWebjobTriggeredListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings ResetQuery(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings SetVerbose(this AzureWebappWebjobTriggeredListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredListSettings ResetVerbose(this AzureWebappWebjobTriggeredListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappWebjobTriggeredLogSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappWebjobTriggeredLogSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings SetName(this AzureWebappWebjobTriggeredLogSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings ResetName(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings SetResourceGroup(this AzureWebappWebjobTriggeredLogSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings ResetResourceGroup(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WebjobName
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings SetWebjobName(this AzureWebappWebjobTriggeredLogSettings toolSettings, string webjobName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebjobName = webjobName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings ResetWebjobName(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebjobName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings SetSlot(this AzureWebappWebjobTriggeredLogSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings ResetSlot(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings SetDebug(this AzureWebappWebjobTriggeredLogSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings ResetDebug(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings SetHelp(this AzureWebappWebjobTriggeredLogSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings ResetHelp(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings SetOutput(this AzureWebappWebjobTriggeredLogSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings ResetOutput(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings SetQuery(this AzureWebappWebjobTriggeredLogSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings ResetQuery(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredLogSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings SetVerbose(this AzureWebappWebjobTriggeredLogSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredLogSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredLogSettings ResetVerbose(this AzureWebappWebjobTriggeredLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappWebjobTriggeredRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappWebjobTriggeredRemoveSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings SetName(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings ResetName(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings SetResourceGroup(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings ResetResourceGroup(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WebjobName
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings SetWebjobName(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string webjobName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebjobName = webjobName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings ResetWebjobName(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebjobName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings SetSlot(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings ResetSlot(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings SetDebug(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings ResetDebug(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings SetHelp(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings ResetHelp(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings SetOutput(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings ResetOutput(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings SetQuery(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings ResetQuery(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings SetVerbose(this AzureWebappWebjobTriggeredRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRemoveSettings ResetVerbose(this AzureWebappWebjobTriggeredRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureWebappWebjobTriggeredRunSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureWebappWebjobTriggeredRunSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings SetName(this AzureWebappWebjobTriggeredRunSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings ResetName(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings SetResourceGroup(this AzureWebappWebjobTriggeredRunSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings ResetResourceGroup(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WebjobName
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings SetWebjobName(this AzureWebappWebjobTriggeredRunSettings toolSettings, string webjobName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebjobName = webjobName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.WebjobName"/>.</em></p><p>The name of the webjob.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings ResetWebjobName(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebjobName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings SetSlot(this AzureWebappWebjobTriggeredRunSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings ResetSlot(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings SetDebug(this AzureWebappWebjobTriggeredRunSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings ResetDebug(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings SetHelp(this AzureWebappWebjobTriggeredRunSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings ResetHelp(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings SetOutput(this AzureWebappWebjobTriggeredRunSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings ResetOutput(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings SetQuery(this AzureWebappWebjobTriggeredRunSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings ResetQuery(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureWebappWebjobTriggeredRunSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings SetVerbose(this AzureWebappWebjobTriggeredRunSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappWebjobTriggeredRunSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureWebappWebjobTriggeredRunSettings ResetVerbose(this AzureWebappWebjobTriggeredRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region WebappMulticontainerConfigType
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
@@ -20477,30 +20477,6 @@ namespace Nuke.Azure
     {
         public static WebappMulticontainerConfigType compose = new WebappMulticontainerConfigType { Value = "compose" };
         public static WebappMulticontainerConfigType kube = new WebappMulticontainerConfigType { Value = "kube" };
-    }
-    #endregion
-    #region WebappLogConfigDockerContainerLogging
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    public partial class WebappLogConfigDockerContainerLogging : Enumeration
-    {
-        public static WebappLogConfigDockerContainerLogging filesystem = new WebappLogConfigDockerContainerLogging { Value = "filesystem" };
-        public static WebappLogConfigDockerContainerLogging off = new WebappLogConfigDockerContainerLogging { Value = "off" };
-    }
-    #endregion
-    #region WebappLogConfigLevel
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    public partial class WebappLogConfigLevel : Enumeration
-    {
-        public static WebappLogConfigLevel error = new WebappLogConfigLevel { Value = "error" };
-        public static WebappLogConfigLevel information = new WebappLogConfigLevel { Value = "information" };
-        public static WebappLogConfigLevel verbose = new WebappLogConfigLevel { Value = "verbose" };
-        public static WebappLogConfigLevel warning = new WebappLogConfigLevel { Value = "warning" };
     }
     #endregion
     #region WebappAuthUpdateAction
@@ -20542,15 +20518,41 @@ namespace Nuke.Azure
         public static WebappConfigSetFtpsState ftpsonly = new WebappConfigSetFtpsState { Value = "ftpsonly" };
     }
     #endregion
-    #region WebappConfigStorageAccountStorageType
+    #region WebappLogConfigDockerContainerLogging
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
     [ExcludeFromCodeCoverage]
-    public partial class WebappConfigStorageAccountStorageType : Enumeration
+    public partial class WebappLogConfigDockerContainerLogging : Enumeration
     {
-        public static WebappConfigStorageAccountStorageType azureblob = new WebappConfigStorageAccountStorageType { Value = "azureblob" };
-        public static WebappConfigStorageAccountStorageType azurefiles = new WebappConfigStorageAccountStorageType { Value = "azurefiles" };
+        public static WebappLogConfigDockerContainerLogging filesystem = new WebappLogConfigDockerContainerLogging { Value = "filesystem" };
+        public static WebappLogConfigDockerContainerLogging off = new WebappLogConfigDockerContainerLogging { Value = "off" };
+    }
+    #endregion
+    #region WebappLogConfigLevel
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class WebappLogConfigLevel : Enumeration
+    {
+        public static WebappLogConfigLevel error = new WebappLogConfigLevel { Value = "error" };
+        public static WebappLogConfigLevel information = new WebappLogConfigLevel { Value = "information" };
+        public static WebappLogConfigLevel verbose = new WebappLogConfigLevel { Value = "verbose" };
+        public static WebappLogConfigLevel warning = new WebappLogConfigLevel { Value = "warning" };
+    }
+    #endregion
+    #region WebappConfigBackupDbType
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class WebappConfigBackupDbType : Enumeration
+    {
+        public static WebappConfigBackupDbType localmysql = new WebappConfigBackupDbType { Value = "localmysql" };
+        public static WebappConfigBackupDbType mysql = new WebappConfigBackupDbType { Value = "mysql" };
+        public static WebappConfigBackupDbType postgresql = new WebappConfigBackupDbType { Value = "postgresql" };
+        public static WebappConfigBackupDbType sqlazure = new WebappConfigBackupDbType { Value = "sqlazure" };
     }
     #endregion
     #region WebappConfigConnectionStringSetConnectionStringType
@@ -20573,19 +20575,6 @@ namespace Nuke.Azure
         public static WebappConfigConnectionStringSetConnectionStringType servicebus = new WebappConfigConnectionStringSetConnectionStringType { Value = "servicebus" };
     }
     #endregion
-    #region WebappConfigBackupDbType
-    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    public partial class WebappConfigBackupDbType : Enumeration
-    {
-        public static WebappConfigBackupDbType localmysql = new WebappConfigBackupDbType { Value = "localmysql" };
-        public static WebappConfigBackupDbType mysql = new WebappConfigBackupDbType { Value = "mysql" };
-        public static WebappConfigBackupDbType postgresql = new WebappConfigBackupDbType { Value = "postgresql" };
-        public static WebappConfigBackupDbType sqlazure = new WebappConfigBackupDbType { Value = "sqlazure" };
-    }
-    #endregion
     #region WebappConfigSslBindSslType
     /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
     [PublicAPI]
@@ -20595,6 +20584,17 @@ namespace Nuke.Azure
     {
         public static WebappConfigSslBindSslType ip = new WebappConfigSslBindSslType { Value = "ip" };
         public static WebappConfigSslBindSslType sni = new WebappConfigSslBindSslType { Value = "sni" };
+    }
+    #endregion
+    #region WebappConfigStorageAccountStorageType
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class WebappConfigStorageAccountStorageType : Enumeration
+    {
+        public static WebappConfigStorageAccountStorageType azureblob = new WebappConfigStorageAccountStorageType { Value = "azureblob" };
+        public static WebappConfigStorageAccountStorageType azurefiles = new WebappConfigStorageAccountStorageType { Value = "azurefiles" };
     }
     #endregion
     #region WebappDeploymentSourceConfigRepositoryType
