@@ -752,7 +752,7 @@ namespace Nuke.Azure
         public virtual string BootDiagnosticsStorage { get; internal set; }
         /// <summary><p>Custom init script file or text (cloud-init, cloud-config, etc..).</p></summary>
         public virtual string CustomData { get; internal set; }
-        /// <summary><p>The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. This parameter is required unless using `--attach-os-disk.`.</p></summary>
+        /// <summary><p>The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. This parameter is required unless using `--attach-os-disk.` Valid URN format: "Publisher:Offer:Sku:Version".</p></summary>
         public virtual string Image { get; internal set; }
         /// <summary><p>License type if the Windows image or disk used was licensed on-premises.</p></summary>
         public virtual VmLicenseType LicenseType { get; internal set; }
@@ -4573,7 +4573,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Image
-        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.Image"/>.</em></p><p>The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. This parameter is required unless using `--attach-os-disk.`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.Image"/>.</em></p><p>The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. This parameter is required unless using `--attach-os-disk.` Valid URN format: "Publisher:Offer:Sku:Version".</p></summary>
         [Pure]
         public static AzureVmCreateSettings SetImage(this AzureVmCreateSettings toolSettings, string image)
         {
@@ -4581,7 +4581,7 @@ namespace Nuke.Azure
             toolSettings.Image = image;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmCreateSettings.Image"/>.</em></p><p>The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. This parameter is required unless using `--attach-os-disk.`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmCreateSettings.Image"/>.</em></p><p>The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. This parameter is required unless using `--attach-os-disk.` Valid URN format: "Publisher:Offer:Sku:Version".</p></summary>
         [Pure]
         public static AzureVmCreateSettings ResetImage(this AzureVmCreateSettings toolSettings)
         {

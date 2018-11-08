@@ -703,6 +703,8 @@ namespace Nuke.Azure
         public virtual string Capacity { get; internal set; }
         /// <summary><p>A boolean value that indicates whether AutoInflate is enabled for eventhub namespace.</p></summary>
         public virtual bool? EnableAutoInflate { get; internal set; }
+        /// <summary><p>A boolean value that indicates whether Kafka is enabled for eventhub namespace.</p></summary>
+        public virtual bool? EnableKafka { get; internal set; }
         /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Upper limit of throughput units when AutoInflate is enabled, vaule should be within 0 to 20 throughput units. ( 0 if AutoInflateEnabled = true).</p></summary>
@@ -729,6 +731,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--capacity {value}", Capacity)
               .Add("--enable-auto-inflate", EnableAutoInflate)
+              .Add("--enable-kafka", EnableKafka)
               .Add("--location {value}", Location)
               .Add("--maximum-throughput-units {value}", MaximumThroughputUnits)
               .Add("--sku {value}", Sku)
@@ -905,6 +908,8 @@ namespace Nuke.Azure
         public virtual string Capacity { get; internal set; }
         /// <summary><p>A boolean value that indicates whether AutoInflate is enabled for eventhub namespace.</p></summary>
         public virtual bool? EnableAutoInflate { get; internal set; }
+        /// <summary><p>A boolean value that indicates whether Kafka is enabled for eventhub namespace.</p></summary>
+        public virtual bool? EnableKafka { get; internal set; }
         /// <summary><p>Upper limit of throughput units when AutoInflate is enabled, vaule should be within 0 to 20 throughput units. ( 0 if AutoInflateEnabled = true).</p></summary>
         public virtual string MaximumThroughputUnits { get; internal set; }
         /// <summary><p></p></summary>
@@ -937,6 +942,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--capacity {value}", Capacity)
               .Add("--enable-auto-inflate", EnableAutoInflate)
+              .Add("--enable-kafka", EnableKafka)
               .Add("--maximum-throughput-units {value}", MaximumThroughputUnits)
               .Add("--sku {value}", Sku)
               .Add("--tags {value}", Tags)
@@ -3526,6 +3532,48 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region EnableKafka
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceCreateSettings.EnableKafka"/>.</em></p><p>A boolean value that indicates whether Kafka is enabled for eventhub namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceCreateSettings SetEnableKafka(this AzureEventhubsNamespaceCreateSettings toolSettings, bool? enableKafka)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableKafka = enableKafka;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceCreateSettings.EnableKafka"/>.</em></p><p>A boolean value that indicates whether Kafka is enabled for eventhub namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceCreateSettings ResetEnableKafka(this AzureEventhubsNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableKafka = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureEventhubsNamespaceCreateSettings.EnableKafka"/>.</em></p><p>A boolean value that indicates whether Kafka is enabled for eventhub namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceCreateSettings EnableEnableKafka(this AzureEventhubsNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableKafka = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureEventhubsNamespaceCreateSettings.EnableKafka"/>.</em></p><p>A boolean value that indicates whether Kafka is enabled for eventhub namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceCreateSettings DisableEnableKafka(this AzureEventhubsNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableKafka = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureEventhubsNamespaceCreateSettings.EnableKafka"/>.</em></p><p>A boolean value that indicates whether Kafka is enabled for eventhub namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceCreateSettings ToggleEnableKafka(this AzureEventhubsNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableKafka = !toolSettings.EnableKafka;
+            return toolSettings;
+        }
+        #endregion
         #region Location
         /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
@@ -4289,6 +4337,48 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EnableAutoInflate = !toolSettings.EnableAutoInflate;
+            return toolSettings;
+        }
+        #endregion
+        #region EnableKafka
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceUpdateSettings.EnableKafka"/>.</em></p><p>A boolean value that indicates whether Kafka is enabled for eventhub namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings SetEnableKafka(this AzureEventhubsNamespaceUpdateSettings toolSettings, bool? enableKafka)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableKafka = enableKafka;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceUpdateSettings.EnableKafka"/>.</em></p><p>A boolean value that indicates whether Kafka is enabled for eventhub namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings ResetEnableKafka(this AzureEventhubsNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableKafka = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureEventhubsNamespaceUpdateSettings.EnableKafka"/>.</em></p><p>A boolean value that indicates whether Kafka is enabled for eventhub namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings EnableEnableKafka(this AzureEventhubsNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableKafka = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureEventhubsNamespaceUpdateSettings.EnableKafka"/>.</em></p><p>A boolean value that indicates whether Kafka is enabled for eventhub namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings DisableEnableKafka(this AzureEventhubsNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableKafka = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureEventhubsNamespaceUpdateSettings.EnableKafka"/>.</em></p><p>A boolean value that indicates whether Kafka is enabled for eventhub namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings ToggleEnableKafka(this AzureEventhubsNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableKafka = !toolSettings.EnableKafka;
             return toolSettings;
         }
         #endregion

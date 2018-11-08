@@ -301,9 +301,9 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzurePolicy executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
-        /// <summary><p>Display name of the assignment.</p></summary>
+        /// <summary><p>Display name of the policy assignment.</p></summary>
         public virtual string DisplayName { get; internal set; }
-        /// <summary><p>Name of the new assignment.</p></summary>
+        /// <summary><p>Name of the new policy assignment.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Space-separated scopes where the policy assignment does not apply.</p></summary>
         public virtual IReadOnlyList<string> NotScopes => NotScopesInternal.AsReadOnly();
@@ -316,7 +316,7 @@ namespace Nuke.Azure
         public virtual string PolicySetDefinition { get; internal set; }
         /// <summary><p>The resource group where the policy will be applied.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        /// <summary><p>Scope to which this policy assignment applies.</p></summary>
         public virtual string Scope { get; internal set; }
         /// <summary><p>Policy sku.</p></summary>
         public virtual PolicyAssignmentCreateSku Sku { get; internal set; }
@@ -361,11 +361,11 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzurePolicy executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
-        /// <summary><p>Name of the assignment.</p></summary>
+        /// <summary><p>Name of the policy assignment.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>The resource group where the policy will be applied.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        /// <summary><p>Scope to which this policy assignment applies.</p></summary>
         public virtual string Scope { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -402,11 +402,11 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzurePolicy executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
-        /// <summary><p>Include assignment either inherited from parent scope or at child scope.</p></summary>
+        /// <summary><p>Include policy assignments either inherited from parent scope or at child scope.</p></summary>
         public virtual string DisableScopeStrictMatch { get; internal set; }
         /// <summary><p>The resource group where the policy will be applied.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        /// <summary><p>Scope to which this policy assignment applies.</p></summary>
         public virtual string Scope { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -443,11 +443,11 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzurePolicy executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
-        /// <summary><p>Name of the assignment.</p></summary>
+        /// <summary><p>Name of the policy assignment.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>The resource group where the policy will be applied.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        /// <summary><p>Scope to which this policy assignment applies.</p></summary>
         public virtual string Scope { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -490,6 +490,8 @@ namespace Nuke.Azure
         public virtual string Description { get; internal set; }
         /// <summary><p>Display name of policy definition.</p></summary>
         public virtual string DisplayName { get; internal set; }
+        /// <summary><p>Name of the management group the new policy definition can be assigned in.</p></summary>
+        public virtual string ManagementGroup { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs.</p></summary>
         public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
         internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
@@ -499,6 +501,8 @@ namespace Nuke.Azure
         public virtual string Params { get; internal set; }
         /// <summary><p>Policy rules in JSON format, or a path to a file containing JSON rules.</p></summary>
         public virtual string Rules { get; internal set; }
+        /// <summary><p>Name or id of the subscription the new policy definition can be assigned in.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -516,10 +520,12 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--description {value}", Description)
               .Add("--display-name {value}", DisplayName)
+              .Add("--management-group {value}", ManagementGroup)
               .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
               .Add("--mode {value}", Mode)
               .Add("--params {value}", Params)
               .Add("--rules {value}", Rules)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -540,6 +546,10 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
         /// <summary><p>The policy definition name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the management group of the policy [set] definition.</p></summary>
+        public virtual string ManagementGroup { get; internal set; }
+        /// <summary><p>The subscription id of the policy [set] definition.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -555,6 +565,8 @@ namespace Nuke.Azure
             arguments
               .Add("policy definition delete")
               .Add("--name {value}", Name)
+              .Add("--management-group {value}", ManagementGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -573,6 +585,10 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzurePolicy executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
+        /// <summary><p>The name of the management group of the policy [set] definition.</p></summary>
+        public virtual string ManagementGroup { get; internal set; }
+        /// <summary><p>The subscription id of the policy [set] definition.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -587,6 +603,8 @@ namespace Nuke.Azure
         {
             arguments
               .Add("policy definition list")
+              .Add("--management-group {value}", ManagementGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -607,6 +625,10 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
         /// <summary><p>The policy definition name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the management group of the policy [set] definition.</p></summary>
+        public virtual string ManagementGroup { get; internal set; }
+        /// <summary><p>The subscription id of the policy [set] definition.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -622,6 +644,8 @@ namespace Nuke.Azure
             arguments
               .Add("policy definition show")
               .Add("--name {value}", Name)
+              .Add("--management-group {value}", ManagementGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -646,21 +670,19 @@ namespace Nuke.Azure
         public virtual string Description { get; internal set; }
         /// <summary><p>Display name of policy definition.</p></summary>
         public virtual string DisplayName { get; internal set; }
+        /// <summary><p>The name of the management group of the policy [set] definition.</p></summary>
+        public virtual string ManagementGroup { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs.</p></summary>
         public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
         internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+        /// <summary><p></p></summary>
+        public virtual string Mode { get; internal set; }
         /// <summary><p>JSON formatted string or a path to a file or uri with parameter definitions.</p></summary>
         public virtual string Params { get; internal set; }
         /// <summary><p>JSON formatted string or a path to a file with such content.</p></summary>
         public virtual string Rules { get; internal set; }
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
+        /// <summary><p>The subscription id of the policy [set] definition.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -678,13 +700,12 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--description {value}", Description)
               .Add("--display-name {value}", DisplayName)
+              .Add("--management-group {value}", ManagementGroup)
               .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
+              .Add("--mode {value}", Mode)
               .Add("--params {value}", Params)
               .Add("--rules {value}", Rules)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -711,8 +732,12 @@ namespace Nuke.Azure
         public virtual string Description { get; internal set; }
         /// <summary><p>Display name of policy set definition.</p></summary>
         public virtual string DisplayName { get; internal set; }
+        /// <summary><p>Name of management group the new policy set definition can be assigned in.</p></summary>
+        public virtual string ManagementGroup { get; internal set; }
         /// <summary><p>JSON formatted string or a path to a file or uri with parameter definitions.</p></summary>
         public virtual string Params { get; internal set; }
+        /// <summary><p>Name or id of the subscription the new policy set definition can be assigned in.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -731,7 +756,9 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--description {value}", Description)
               .Add("--display-name {value}", DisplayName)
+              .Add("--management-group {value}", ManagementGroup)
               .Add("--params {value}", Params)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -752,6 +779,10 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
         /// <summary><p>The policy set definition name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the management group of the policy [set] definition.</p></summary>
+        public virtual string ManagementGroup { get; internal set; }
+        /// <summary><p>The subscription id of the policy [set] definition.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -767,6 +798,8 @@ namespace Nuke.Azure
             arguments
               .Add("policy set-definition delete")
               .Add("--name {value}", Name)
+              .Add("--management-group {value}", ManagementGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -785,6 +818,10 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzurePolicy executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
+        /// <summary><p>The name of the management group of the policy [set] definition.</p></summary>
+        public virtual string ManagementGroup { get; internal set; }
+        /// <summary><p>The subscription id of the policy [set] definition.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -799,6 +836,8 @@ namespace Nuke.Azure
         {
             arguments
               .Add("policy set-definition list")
+              .Add("--management-group {value}", ManagementGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -819,6 +858,10 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
         /// <summary><p>The policy set definition name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the management group of the policy [set] definition.</p></summary>
+        public virtual string ManagementGroup { get; internal set; }
+        /// <summary><p>The subscription id of the policy [set] definition.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -834,6 +877,8 @@ namespace Nuke.Azure
             arguments
               .Add("policy set-definition show")
               .Add("--name {value}", Name)
+              .Add("--management-group {value}", ManagementGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -854,14 +899,18 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
         /// <summary><p>The policy set definition name.</p></summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p>JSON formatted string or a path to a file or uri with such content.</p></summary>
+        /// <summary><p>JSON formatted string or a path to a file or uri containing definitions.</p></summary>
         public virtual string Definitions { get; internal set; }
         /// <summary><p>Description of policy set definition.</p></summary>
         public virtual string Description { get; internal set; }
         /// <summary><p>Display name of policy set definition.</p></summary>
         public virtual string DisplayName { get; internal set; }
+        /// <summary><p>The name of the management group of the policy [set] definition.</p></summary>
+        public virtual string ManagementGroup { get; internal set; }
         /// <summary><p>JSON formatted string or a path to a file or uri with parameter definitions.</p></summary>
         public virtual string Params { get; internal set; }
+        /// <summary><p>The subscription id of the policy [set] definition.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -880,7 +929,9 @@ namespace Nuke.Azure
               .Add("--definitions {value}", Definitions)
               .Add("--description {value}", Description)
               .Add("--display-name {value}", DisplayName)
+              .Add("--management-group {value}", ManagementGroup)
               .Add("--params {value}", Params)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1535,7 +1586,7 @@ namespace Nuke.Azure
     public static partial class AzurePolicyAssignmentCreateSettingsExtensions
     {
         #region DisplayName
-        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentCreateSettings.DisplayName"/>.</em></p><p>Display name of the assignment.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentCreateSettings.DisplayName"/>.</em></p><p>Display name of the policy assignment.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentCreateSettings SetDisplayName(this AzurePolicyAssignmentCreateSettings toolSettings, string displayName)
         {
@@ -1543,7 +1594,7 @@ namespace Nuke.Azure
             toolSettings.DisplayName = displayName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentCreateSettings.DisplayName"/>.</em></p><p>Display name of the assignment.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentCreateSettings.DisplayName"/>.</em></p><p>Display name of the policy assignment.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentCreateSettings ResetDisplayName(this AzurePolicyAssignmentCreateSettings toolSettings)
         {
@@ -1553,7 +1604,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentCreateSettings.Name"/>.</em></p><p>Name of the new assignment.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentCreateSettings.Name"/>.</em></p><p>Name of the new policy assignment.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentCreateSettings SetName(this AzurePolicyAssignmentCreateSettings toolSettings, string name)
         {
@@ -1561,7 +1612,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentCreateSettings.Name"/>.</em></p><p>Name of the new assignment.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentCreateSettings.Name"/>.</em></p><p>Name of the new policy assignment.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentCreateSettings ResetName(this AzurePolicyAssignmentCreateSettings toolSettings)
         {
@@ -1703,7 +1754,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Scope
-        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentCreateSettings.Scope"/>.</em></p><p>Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentCreateSettings.Scope"/>.</em></p><p>Scope to which this policy assignment applies.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentCreateSettings SetScope(this AzurePolicyAssignmentCreateSettings toolSettings, string scope)
         {
@@ -1711,7 +1762,7 @@ namespace Nuke.Azure
             toolSettings.Scope = scope;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentCreateSettings.Scope"/>.</em></p><p>Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentCreateSettings.Scope"/>.</em></p><p>Scope to which this policy assignment applies.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentCreateSettings ResetScope(this AzurePolicyAssignmentCreateSettings toolSettings)
         {
@@ -1837,7 +1888,7 @@ namespace Nuke.Azure
     public static partial class AzurePolicyAssignmentDeleteSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentDeleteSettings.Name"/>.</em></p><p>Name of the assignment.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentDeleteSettings.Name"/>.</em></p><p>Name of the policy assignment.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentDeleteSettings SetName(this AzurePolicyAssignmentDeleteSettings toolSettings, string name)
         {
@@ -1845,7 +1896,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentDeleteSettings.Name"/>.</em></p><p>Name of the assignment.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentDeleteSettings.Name"/>.</em></p><p>Name of the policy assignment.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentDeleteSettings ResetName(this AzurePolicyAssignmentDeleteSettings toolSettings)
         {
@@ -1873,7 +1924,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Scope
-        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentDeleteSettings.Scope"/>.</em></p><p>Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentDeleteSettings.Scope"/>.</em></p><p>Scope to which this policy assignment applies.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentDeleteSettings SetScope(this AzurePolicyAssignmentDeleteSettings toolSettings, string scope)
         {
@@ -1881,7 +1932,7 @@ namespace Nuke.Azure
             toolSettings.Scope = scope;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentDeleteSettings.Scope"/>.</em></p><p>Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentDeleteSettings.Scope"/>.</em></p><p>Scope to which this policy assignment applies.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentDeleteSettings ResetScope(this AzurePolicyAssignmentDeleteSettings toolSettings)
         {
@@ -1989,7 +2040,7 @@ namespace Nuke.Azure
     public static partial class AzurePolicyAssignmentListSettingsExtensions
     {
         #region DisableScopeStrictMatch
-        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentListSettings.DisableScopeStrictMatch"/>.</em></p><p>Include assignment either inherited from parent scope or at child scope.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentListSettings.DisableScopeStrictMatch"/>.</em></p><p>Include policy assignments either inherited from parent scope or at child scope.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentListSettings SetDisableScopeStrictMatch(this AzurePolicyAssignmentListSettings toolSettings, string disableScopeStrictMatch)
         {
@@ -1997,7 +2048,7 @@ namespace Nuke.Azure
             toolSettings.DisableScopeStrictMatch = disableScopeStrictMatch;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentListSettings.DisableScopeStrictMatch"/>.</em></p><p>Include assignment either inherited from parent scope or at child scope.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentListSettings.DisableScopeStrictMatch"/>.</em></p><p>Include policy assignments either inherited from parent scope or at child scope.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentListSettings ResetDisableScopeStrictMatch(this AzurePolicyAssignmentListSettings toolSettings)
         {
@@ -2025,7 +2076,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Scope
-        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentListSettings.Scope"/>.</em></p><p>Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentListSettings.Scope"/>.</em></p><p>Scope to which this policy assignment applies.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentListSettings SetScope(this AzurePolicyAssignmentListSettings toolSettings, string scope)
         {
@@ -2033,7 +2084,7 @@ namespace Nuke.Azure
             toolSettings.Scope = scope;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentListSettings.Scope"/>.</em></p><p>Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentListSettings.Scope"/>.</em></p><p>Scope to which this policy assignment applies.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentListSettings ResetScope(this AzurePolicyAssignmentListSettings toolSettings)
         {
@@ -2141,7 +2192,7 @@ namespace Nuke.Azure
     public static partial class AzurePolicyAssignmentShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentShowSettings.Name"/>.</em></p><p>Name of the assignment.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentShowSettings.Name"/>.</em></p><p>Name of the policy assignment.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentShowSettings SetName(this AzurePolicyAssignmentShowSettings toolSettings, string name)
         {
@@ -2149,7 +2200,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentShowSettings.Name"/>.</em></p><p>Name of the assignment.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentShowSettings.Name"/>.</em></p><p>Name of the policy assignment.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentShowSettings ResetName(this AzurePolicyAssignmentShowSettings toolSettings)
         {
@@ -2177,7 +2228,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Scope
-        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentShowSettings.Scope"/>.</em></p><p>Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePolicyAssignmentShowSettings.Scope"/>.</em></p><p>Scope to which this policy assignment applies.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentShowSettings SetScope(this AzurePolicyAssignmentShowSettings toolSettings, string scope)
         {
@@ -2185,7 +2236,7 @@ namespace Nuke.Azure
             toolSettings.Scope = scope;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentShowSettings.Scope"/>.</em></p><p>Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePolicyAssignmentShowSettings.Scope"/>.</em></p><p>Scope to which this policy assignment applies.</p></summary>
         [Pure]
         public static AzurePolicyAssignmentShowSettings ResetScope(this AzurePolicyAssignmentShowSettings toolSettings)
         {
@@ -2346,6 +2397,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ManagementGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionCreateSettings.ManagementGroup"/>.</em></p><p>Name of the management group the new policy definition can be assigned in.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionCreateSettings SetManagementGroup(this AzurePolicyDefinitionCreateSettings toolSettings, string managementGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = managementGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionCreateSettings.ManagementGroup"/>.</em></p><p>Name of the management group the new policy definition can be assigned in.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionCreateSettings ResetManagementGroup(this AzurePolicyDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = null;
+            return toolSettings;
+        }
+        #endregion
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionCreateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs.</p></summary>
         [Pure]
@@ -2439,6 +2508,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Rules = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionCreateSettings.Subscription"/>.</em></p><p>Name or id of the subscription the new policy definition can be assigned in.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionCreateSettings SetSubscription(this AzurePolicyDefinitionCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionCreateSettings.Subscription"/>.</em></p><p>Name or id of the subscription the new policy definition can be assigned in.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionCreateSettings ResetSubscription(this AzurePolicyDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2558,6 +2645,42 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ManagementGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionDeleteSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionDeleteSettings SetManagementGroup(this AzurePolicyDefinitionDeleteSettings toolSettings, string managementGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = managementGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionDeleteSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionDeleteSettings ResetManagementGroup(this AzurePolicyDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionDeleteSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionDeleteSettings SetSubscription(this AzurePolicyDefinitionDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionDeleteSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionDeleteSettings ResetSubscription(this AzurePolicyDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2656,6 +2779,42 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzurePolicyDefinitionListSettingsExtensions
     {
+        #region ManagementGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionListSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionListSettings SetManagementGroup(this AzurePolicyDefinitionListSettings toolSettings, string managementGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = managementGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionListSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionListSettings ResetManagementGroup(this AzurePolicyDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionListSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionListSettings SetSubscription(this AzurePolicyDefinitionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionListSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionListSettings ResetSubscription(this AzurePolicyDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2769,6 +2928,42 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ManagementGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionShowSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionShowSettings SetManagementGroup(this AzurePolicyDefinitionShowSettings toolSettings, string managementGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = managementGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionShowSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionShowSettings ResetManagementGroup(this AzurePolicyDefinitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionShowSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionShowSettings SetSubscription(this AzurePolicyDefinitionShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionShowSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionShowSettings ResetSubscription(this AzurePolicyDefinitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2924,6 +3119,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ManagementGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionUpdateSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionUpdateSettings SetManagementGroup(this AzurePolicyDefinitionUpdateSettings toolSettings, string managementGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = managementGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionUpdateSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionUpdateSettings ResetManagementGroup(this AzurePolicyDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = null;
+            return toolSettings;
+        }
+        #endregion
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionUpdateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs.</p></summary>
         [Pure]
@@ -2966,6 +3179,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Mode
+        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionUpdateSettings.Mode"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionUpdateSettings SetMode(this AzurePolicyDefinitionUpdateSettings toolSettings, string mode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Mode = mode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionUpdateSettings.Mode"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzurePolicyDefinitionUpdateSettings ResetMode(this AzurePolicyDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Mode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Params
         /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionUpdateSettings.Params"/>.</em></p><p>JSON formatted string or a path to a file or uri with parameter definitions.</p></summary>
         [Pure]
@@ -3002,75 +3233,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Add
-        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionUpdateSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
         [Pure]
-        public static AzurePolicyDefinitionUpdateSettings SetAdd(this AzurePolicyDefinitionUpdateSettings toolSettings, string add)
+        public static AzurePolicyDefinitionUpdateSettings SetSubscription(this AzurePolicyDefinitionUpdateSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionUpdateSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
         [Pure]
-        public static AzurePolicyDefinitionUpdateSettings ResetAdd(this AzurePolicyDefinitionUpdateSettings toolSettings)
+        public static AzurePolicyDefinitionUpdateSettings ResetSubscription(this AzurePolicyDefinitionUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzurePolicyDefinitionUpdateSettings SetForceString(this AzurePolicyDefinitionUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzurePolicyDefinitionUpdateSettings ResetForceString(this AzurePolicyDefinitionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzurePolicyDefinitionUpdateSettings SetRemove(this AzurePolicyDefinitionUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzurePolicyDefinitionUpdateSettings ResetRemove(this AzurePolicyDefinitionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzurePolicyDefinitionUpdateSettings SetSet(this AzurePolicyDefinitionUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePolicyDefinitionUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzurePolicyDefinitionUpdateSettings ResetSet(this AzurePolicyDefinitionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3244,6 +3421,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ManagementGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionCreateSettings.ManagementGroup"/>.</em></p><p>Name of management group the new policy set definition can be assigned in.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionCreateSettings SetManagementGroup(this AzurePolicySetDefinitionCreateSettings toolSettings, string managementGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = managementGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicySetDefinitionCreateSettings.ManagementGroup"/>.</em></p><p>Name of management group the new policy set definition can be assigned in.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionCreateSettings ResetManagementGroup(this AzurePolicySetDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = null;
+            return toolSettings;
+        }
+        #endregion
         #region Params
         /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionCreateSettings.Params"/>.</em></p><p>JSON formatted string or a path to a file or uri with parameter definitions.</p></summary>
         [Pure]
@@ -3259,6 +3454,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Params = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionCreateSettings.Subscription"/>.</em></p><p>Name or id of the subscription the new policy set definition can be assigned in.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionCreateSettings SetSubscription(this AzurePolicySetDefinitionCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicySetDefinitionCreateSettings.Subscription"/>.</em></p><p>Name or id of the subscription the new policy set definition can be assigned in.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionCreateSettings ResetSubscription(this AzurePolicySetDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3378,6 +3591,42 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ManagementGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionDeleteSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionDeleteSettings SetManagementGroup(this AzurePolicySetDefinitionDeleteSettings toolSettings, string managementGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = managementGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicySetDefinitionDeleteSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionDeleteSettings ResetManagementGroup(this AzurePolicySetDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionDeleteSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionDeleteSettings SetSubscription(this AzurePolicySetDefinitionDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicySetDefinitionDeleteSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionDeleteSettings ResetSubscription(this AzurePolicySetDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3476,6 +3725,42 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzurePolicySetDefinitionListSettingsExtensions
     {
+        #region ManagementGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionListSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionListSettings SetManagementGroup(this AzurePolicySetDefinitionListSettings toolSettings, string managementGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = managementGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicySetDefinitionListSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionListSettings ResetManagementGroup(this AzurePolicySetDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionListSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionListSettings SetSubscription(this AzurePolicySetDefinitionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicySetDefinitionListSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionListSettings ResetSubscription(this AzurePolicySetDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3589,6 +3874,42 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ManagementGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionShowSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionShowSettings SetManagementGroup(this AzurePolicySetDefinitionShowSettings toolSettings, string managementGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = managementGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicySetDefinitionShowSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionShowSettings ResetManagementGroup(this AzurePolicySetDefinitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionShowSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionShowSettings SetSubscription(this AzurePolicySetDefinitionShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicySetDefinitionShowSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionShowSettings ResetSubscription(this AzurePolicySetDefinitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3709,7 +4030,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Definitions
-        /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionUpdateSettings.Definitions"/>.</em></p><p>JSON formatted string or a path to a file or uri with such content.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionUpdateSettings.Definitions"/>.</em></p><p>JSON formatted string or a path to a file or uri containing definitions.</p></summary>
         [Pure]
         public static AzurePolicySetDefinitionUpdateSettings SetDefinitions(this AzurePolicySetDefinitionUpdateSettings toolSettings, string definitions)
         {
@@ -3717,7 +4038,7 @@ namespace Nuke.Azure
             toolSettings.Definitions = definitions;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePolicySetDefinitionUpdateSettings.Definitions"/>.</em></p><p>JSON formatted string or a path to a file or uri with such content.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePolicySetDefinitionUpdateSettings.Definitions"/>.</em></p><p>JSON formatted string or a path to a file or uri containing definitions.</p></summary>
         [Pure]
         public static AzurePolicySetDefinitionUpdateSettings ResetDefinitions(this AzurePolicySetDefinitionUpdateSettings toolSettings)
         {
@@ -3762,6 +4083,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ManagementGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionUpdateSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionUpdateSettings SetManagementGroup(this AzurePolicySetDefinitionUpdateSettings toolSettings, string managementGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = managementGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicySetDefinitionUpdateSettings.ManagementGroup"/>.</em></p><p>The name of the management group of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionUpdateSettings ResetManagementGroup(this AzurePolicySetDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = null;
+            return toolSettings;
+        }
+        #endregion
         #region Params
         /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionUpdateSettings.Params"/>.</em></p><p>JSON formatted string or a path to a file or uri with parameter definitions.</p></summary>
         [Pure]
@@ -3777,6 +4116,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Params = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzurePolicySetDefinitionUpdateSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionUpdateSettings SetSubscription(this AzurePolicySetDefinitionUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicySetDefinitionUpdateSettings.Subscription"/>.</em></p><p>The subscription id of the policy [set] definition.</p></summary>
+        [Pure]
+        public static AzurePolicySetDefinitionUpdateSettings ResetSubscription(this AzurePolicySetDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion

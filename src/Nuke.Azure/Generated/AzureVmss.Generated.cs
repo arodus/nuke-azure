@@ -405,7 +405,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
-        /// <summary><p>The name of the operating system image as a URN alias, URN, or URI.</p></summary>
+        /// <summary><p>The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. Valid URN format: "Publisher:Offer:Sku:Version".</p></summary>
         public virtual string Image { get; internal set; }
         /// <summary><p>Name of the virtual machine scale set.</p></summary>
         public virtual string Name { get; internal set; }
@@ -2557,7 +2557,7 @@ namespace Nuke.Azure
     public static partial class AzureVmssCreateSettingsExtensions
     {
         #region Image
-        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.Image"/>.</em></p><p>The name of the operating system image as a URN alias, URN, or URI.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.Image"/>.</em></p><p>The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. Valid URN format: "Publisher:Offer:Sku:Version".</p></summary>
         [Pure]
         public static AzureVmssCreateSettings SetImage(this AzureVmssCreateSettings toolSettings, string image)
         {
@@ -2565,7 +2565,7 @@ namespace Nuke.Azure
             toolSettings.Image = image;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.Image"/>.</em></p><p>The name of the operating system image as a URN alias, URN, or URI.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.Image"/>.</em></p><p>The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. Valid URN format: "Publisher:Offer:Sku:Version".</p></summary>
         [Pure]
         public static AzureVmssCreateSettings ResetImage(this AzureVmssCreateSettings toolSettings)
         {

@@ -6,17 +6,17 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/eventhubs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/eventhubs/georecovery-alias.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/eventhubs/namespace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/eventhubs/eventhub.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/eventhubs/eventhub/consumer-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule/keys.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventhubs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventhubs/georecovery-alias.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventhubs/namespace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventhubs/eventhub.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventhubs/eventhub/consumer-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule/keys.yml"
   ],
   "name": "AzureEventhubs",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest",
@@ -246,6 +246,12 @@
             "help": "A boolean value that indicates whether AutoInflate is enabled for eventhub namespace."
           },
           {
+            "name": "EnableKafka",
+            "type": "bool",
+            "format": "--enable-kafka",
+            "help": "A boolean value that indicates whether Kafka is enabled for eventhub namespace."
+          },
+          {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
@@ -368,6 +374,12 @@
             "type": "bool",
             "format": "--enable-auto-inflate",
             "help": "A boolean value that indicates whether AutoInflate is enabled for eventhub namespace."
+          },
+          {
+            "name": "EnableKafka",
+            "type": "bool",
+            "format": "--enable-kafka",
+            "help": "A boolean value that indicates whether Kafka is enabled for eventhub namespace."
           },
           {
             "name": "MaximumThroughputUnits",

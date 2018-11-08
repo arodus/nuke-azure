@@ -6,17 +6,17 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/acr.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/acr/replication.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/acr/helm.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/acr/task.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/acr/repository.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/acr/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/acr/config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/acr/webhook.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/acr/build-task.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/acr/helm/repo.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/acr/config/content-trust.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/acr.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/acr/replication.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/acr/helm.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/acr/task.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/acr/repository.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/acr/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/acr/config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/acr/webhook.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/acr/build-task.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/acr/helm/repo.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/0d6b080/latest/docs-ref-autogen/acr/config/content-trust.yml"
   ],
   "name": "AzureAcr",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest",
@@ -44,7 +44,7 @@
             "name": "File",
             "type": "string",
             "format": "--file {value}",
-            "help": "The relative path of the the docker file to the source code root folder."
+            "help": "The relative path of the the docker file to the source code root folder. Default to 'Dockerfile'."
           },
           {
             "name": "Image",
@@ -881,6 +881,12 @@
             "help": "The operating system type required for the build."
           },
           {
+            "name": "PullRequestTriggerEnabled",
+            "type": "bool",
+            "format": "--pull-request-trigger-enabled",
+            "help": "Indicates whether the source control pull request trigger is enabled."
+          },
+          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
@@ -1264,6 +1270,12 @@
             "type": "AcrOs",
             "format": "--os {value}",
             "help": "The operating system type required for the build."
+          },
+          {
+            "name": "PullRequestTriggerEnabled",
+            "type": "bool",
+            "format": "--pull-request-trigger-enabled",
+            "help": "Indicates whether the source control pull request trigger is enabled."
           },
           {
             "name": "ResourceGroup",
@@ -2136,7 +2148,7 @@
             "name": "File",
             "type": "string",
             "format": "--file {value}",
-            "help": "The relative path of the the docker file to the source code root folder."
+            "help": "The relative path of the the docker file to the source code root folder. Default to 'Dockerfile'."
           },
           {
             "name": "NoCache",
@@ -2477,7 +2489,7 @@
             "name": "File",
             "type": "string",
             "format": "--file {value}",
-            "help": "The relative path of the the docker file to the source code root folder."
+            "help": "The relative path of the the docker file to the source code root folder. Default to 'Dockerfile'."
           },
           {
             "name": "GitAccessToken",
