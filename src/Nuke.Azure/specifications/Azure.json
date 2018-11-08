@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/reference-index.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reference-index.yml"
   ],
   "name": "Azure",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest",
@@ -64,6 +64,12 @@
             "type": "InteractiveStyle",
             "format": "--style {value}",
             "help": "The colors of the shell."
+          },
+          {
+            "name": "Update",
+            "type": "string",
+            "format": "--update {value}",
+            "help": "Update the Interactive extension to the latest available."
           }
         ]
       }
@@ -99,6 +105,12 @@
             "help": "The AAD tenant, must provide when using service principals."
           },
           {
+            "name": "UseCertSnIssuer",
+            "type": "string",
+            "format": "--use-cert-sn-issuer {value}",
+            "help": "Used with a service principal configured with Subject Name and Issuer Authentication in order to support automatic certificate rolls."
+          },
+          {
             "name": "UseDeviceCode",
             "type": "string",
             "format": "--use-device-code {value}",
@@ -132,6 +144,11 @@
           }
         ]
       }
+    },
+    {
+      "postfix": "SelfTest",
+      "definiteArgument": "self-test",
+      "settingsClass": {}
     }
   ],
   "commonTaskProperties": [

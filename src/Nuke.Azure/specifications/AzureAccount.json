@@ -6,10 +6,10 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/account/management-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/account/lock.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/account/management-group/subscription.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/account/lock.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/account/management-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/account/management-group/subscription.yml"
   ],
   "name": "AzureAccount",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest",
@@ -96,6 +96,121 @@
             "type": "string",
             "format": "--subscription {value}",
             "help": "Name or ID of subscription."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockCreate",
+      "definiteArgument": "account lock create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LockType",
+            "type": "AccountLockLockType",
+            "format": "--lock-type {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes about this lock."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockDelete",
+      "definiteArgument": "account lock delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockList",
+      "definiteArgument": "account lock list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilterString",
+            "type": "string",
+            "format": "--filter-string {value}",
+            "help": "A query filter to use to restrict the results."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockShow",
+      "definiteArgument": "account lock show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockUpdate",
+      "definiteArgument": "account lock update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "LockType",
+            "type": "AccountLockLockType",
+            "format": "--lock-type {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes about this lock."
           }
         ]
       }
@@ -217,121 +332,6 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LockCreate",
-      "definiteArgument": "account lock create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LockType",
-            "type": "AccountLockLockType",
-            "format": "--lock-type {value}",
-            "help": ""
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the lock."
-          },
-          {
-            "name": "Notes",
-            "type": "string",
-            "format": "--notes {value}",
-            "help": "Notes about this lock."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LockDelete",
-      "definiteArgument": "account lock delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the lock."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LockList",
-      "definiteArgument": "account lock list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FilterString",
-            "type": "string",
-            "format": "--filter-string {value}",
-            "help": "A query filter to use to restrict the results."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LockShow",
-      "definiteArgument": "account lock show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the lock."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LockUpdate",
-      "definiteArgument": "account lock update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
-          },
-          {
-            "name": "LockType",
-            "type": "AccountLockLockType",
-            "format": "--lock-type {value}",
-            "help": ""
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the lock."
-          },
-          {
-            "name": "Notes",
-            "type": "string",
-            "format": "--notes {value}",
-            "help": "Notes about this lock."
           }
         ]
       }

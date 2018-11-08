@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/abd636d/latest/docs-ref-autogen/image.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/image.yml"
   ],
   "name": "AzureImage",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest",
@@ -54,6 +54,12 @@
             "type": "ImageCreateOsType",
             "format": "--os-type {value}",
             "help": ""
+          },
+          {
+            "name": "StorageSku",
+            "type": "ImageCreateStorageSku",
+            "format": "--storage-sku {value}",
+            "help": "The SKU of the storage account with which to create the VM image. Unused if source VM is specified."
           },
           {
             "name": "Tags",
@@ -169,6 +175,15 @@
       "values": [
         "linux",
         "windows"
+      ]
+    },
+    {
+      "name": "ImageCreateStorageSku",
+      "values": [
+        "premium_lrs",
+        "standardssd_lrs",
+        "standard_lrs",
+        "ultrassd_lrs"
       ]
     }
   ]

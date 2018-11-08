@@ -1,8 +1,8 @@
-// Copyright Matthias Koch, Sebastian Karasek 2018.
+// Copyright 2018 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.2 [CommitSha: ff25463a].
+// Generated with Nuke.CodeGeneration, Version: 0.7.0 [CommitSha: 9d3d3d7e].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/Azure.json.
 
 using JetBrains.Annotations;
@@ -79,6 +79,14 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureLogout(Configure<AzureLogoutSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLogoutSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>General Tasks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureSelfTest(Configure<AzureSelfTestSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSelfTestSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -201,6 +209,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureTasks.AzurePath;
         /// <summary><p>The colors of the shell.</p></summary>
         public virtual InteractiveStyle Style { get; internal set; }
+        /// <summary><p>Update the Interactive extension to the latest available.</p></summary>
+        public virtual string Update { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -216,6 +226,7 @@ namespace Nuke.Azure
             arguments
               .Add("interactive")
               .Add("--style {value}", Style)
+              .Add("--update {value}", Update)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -242,6 +253,8 @@ namespace Nuke.Azure
         public virtual bool? ServicePrincipal { get; internal set; }
         /// <summary><p>The AAD tenant, must provide when using service principals.</p></summary>
         public virtual string Tenant { get; internal set; }
+        /// <summary><p>Used with a service principal configured with Subject Name and Issuer Authentication in order to support automatic certificate rolls.</p></summary>
+        public virtual string UseCertSnIssuer { get; internal set; }
         /// <summary><p>Use CLI's old authentication flow based on device code. CLI will also use this if it can't launch a browser in your behalf, e.g. in remote SSH or Cloud Shell.</p></summary>
         public virtual string UseDeviceCode { get; internal set; }
         /// <summary><p>User name, service principal, or managed service identity ID.</p></summary>
@@ -266,6 +279,7 @@ namespace Nuke.Azure
               .Add("--password {value}", Password, secret: true)
               .Add("--service-principal", ServicePrincipal)
               .Add("--tenant {value}", Tenant)
+              .Add("--use-cert-sn-issuer {value}", UseCertSnIssuer)
               .Add("--use-device-code {value}", UseDeviceCode)
               .Add("--username {value}", Username)
               .Add("--identity", Identity)
@@ -304,6 +318,38 @@ namespace Nuke.Azure
             arguments
               .Add("logout")
               .Add("--username {value}", Username)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSelfTestSettings
+    /// <summary><p>Used within <see cref="AzureTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSelfTestSettings : ToolSettings
+    {
+        /// <summary><p>Path to the Azure executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureTasks.AzurePath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("self-test")
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -709,6 +755,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Update
+        /// <summary><p><em>Sets <see cref="AzureInteractiveSettings.Update"/>.</em></p><p>Update the Interactive extension to the latest available.</p></summary>
+        [Pure]
+        public static AzureInteractiveSettings SetUpdate(this AzureInteractiveSettings toolSettings, string update)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Update = update;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureInteractiveSettings.Update"/>.</em></p><p>Update the Interactive extension to the latest available.</p></summary>
+        [Pure]
+        public static AzureInteractiveSettings ResetUpdate(this AzureInteractiveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Update = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureInteractiveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -924,6 +988,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tenant = null;
+            return toolSettings;
+        }
+        #endregion
+        #region UseCertSnIssuer
+        /// <summary><p><em>Sets <see cref="AzureLoginSettings.UseCertSnIssuer"/>.</em></p><p>Used with a service principal configured with Subject Name and Issuer Authentication in order to support automatic certificate rolls.</p></summary>
+        [Pure]
+        public static AzureLoginSettings SetUseCertSnIssuer(this AzureLoginSettings toolSettings, string useCertSnIssuer)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UseCertSnIssuer = useCertSnIssuer;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLoginSettings.UseCertSnIssuer"/>.</em></p><p>Used with a service principal configured with Subject Name and Issuer Authentication in order to support automatic certificate rolls.</p></summary>
+        [Pure]
+        public static AzureLoginSettings ResetUseCertSnIssuer(this AzureLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UseCertSnIssuer = null;
             return toolSettings;
         }
         #endregion
@@ -1205,6 +1287,104 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureLogoutSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureLogoutSettings ResetVerbose(this AzureLogoutSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSelfTestSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSelfTestSettingsExtensions
+    {
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSelfTestSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSelfTestSettings SetDebug(this AzureSelfTestSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSelfTestSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSelfTestSettings ResetDebug(this AzureSelfTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSelfTestSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSelfTestSettings SetHelp(this AzureSelfTestSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSelfTestSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSelfTestSettings ResetHelp(this AzureSelfTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSelfTestSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSelfTestSettings SetOutput(this AzureSelfTestSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSelfTestSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSelfTestSettings ResetOutput(this AzureSelfTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSelfTestSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSelfTestSettings SetQuery(this AzureSelfTestSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSelfTestSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSelfTestSettings ResetQuery(this AzureSelfTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSelfTestSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSelfTestSettings SetVerbose(this AzureSelfTestSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSelfTestSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSelfTestSettings ResetVerbose(this AzureSelfTestSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
