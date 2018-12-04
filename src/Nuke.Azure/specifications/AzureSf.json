@@ -6,18 +6,18 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/application.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/application/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/client-certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/durability.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/node-type.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/reliability.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/setting.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/upgrade-type.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sf.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sf/application.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sf/cluster.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sf/application/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sf/cluster/upgrade-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sf/cluster/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sf/cluster/node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sf/cluster/node-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sf/cluster/durability.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sf/cluster/setting.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sf/cluster/reliability.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sf/cluster/client-certificate.yml"
   ],
   "name": "AzureSf",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest",
@@ -246,6 +246,38 @@
       }
     },
     {
+      "postfix": "ClusterUpgradeTypeSet",
+      "definiteArgument": "sf cluster upgrade-type set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "UpgradeMode",
+            "type": "SfClusterUpgradeTypeSetUpgradeMode",
+            "format": "--upgrade-mode {value}",
+            "help": "Cluster upgrade mode."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "Cluster code version."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "ClusterCertificateAdd",
       "definiteArgument": "sf cluster certificate add",
       "settingsClass": {
@@ -331,6 +363,279 @@
             "type": "string",
             "format": "--thumbprint {value}",
             "help": "The cluster certificate thumbprint to be removed."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterNodeAdd",
+      "definiteArgument": "sf cluster node add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "NodeType",
+            "type": "string",
+            "format": "--node-type {value}",
+            "help": "The Node type name."
+          },
+          {
+            "name": "NumberOfNodesToAdd",
+            "type": "int",
+            "format": "--number-of-nodes-to-add {value}",
+            "help": "Number of nodes to add."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterNodeRemove",
+      "definiteArgument": "sf cluster node remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "NodeType",
+            "type": "string",
+            "format": "--node-type {value}",
+            "help": "The Node type name."
+          },
+          {
+            "name": "NumberOfNodesToRemove",
+            "type": "int",
+            "format": "--number-of-nodes-to-remove {value}",
+            "help": "Number of nodes to remove."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterNodeTypeAdd",
+      "definiteArgument": "sf cluster node-type add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Capacity",
+            "type": "string",
+            "format": "--capacity {value}",
+            "help": ""
+          },
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "NodeType",
+            "type": "string",
+            "format": "--node-type {value}",
+            "help": "The Node type name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "VmPassword",
+            "type": "string",
+            "format": "--vm-password {value}",
+            "secret": true,
+            "help": "The password of the Vm."
+          },
+          {
+            "name": "VmUserName",
+            "type": "string",
+            "format": "--vm-user-name {value}",
+            "help": "The user name for logging to Vm. Default will be adminuser."
+          },
+          {
+            "name": "DurabilityLevel",
+            "type": "string",
+            "format": "--durability-level {value}",
+            "help": ""
+          },
+          {
+            "name": "VmSku",
+            "type": "string",
+            "format": "--vm-sku {value}",
+            "help": "The Vm Sku."
+          },
+          {
+            "name": "VmTier",
+            "type": "string",
+            "format": "--vm-tier {value}",
+            "help": ""
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterDurabilityUpdate",
+      "definiteArgument": "sf cluster durability update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "DurabilityLevel",
+            "type": "SfClusterDurabilityUpdateDurabilityLevel",
+            "format": "--durability-level {value}",
+            "help": "Durability level."
+          },
+          {
+            "name": "NodeType",
+            "type": "string",
+            "format": "--node-type {value}",
+            "help": "The Node type name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterSettingRemove",
+      "definiteArgument": "sf cluster setting remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "Parameter",
+            "type": "string",
+            "format": "--parameter {value}",
+            "help": "Parameter name."
+          },
+          {
+            "name": "Section",
+            "type": "string",
+            "format": "--section {value}",
+            "help": "Section name."
+          },
+          {
+            "name": "SettingsSectionDescription",
+            "type": "string",
+            "format": "--settings-section-description {value}",
+            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\"}]."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterSettingSet",
+      "definiteArgument": "sf cluster setting set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "Parameter",
+            "type": "string",
+            "format": "--parameter {value}",
+            "help": "Parameter name."
+          },
+          {
+            "name": "Section",
+            "type": "string",
+            "format": "--section {value}",
+            "help": "Section name."
+          },
+          {
+            "name": "SettingsSectionDescription",
+            "type": "string",
+            "format": "--settings-section-description {value}",
+            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\",\"value\": 1000},{\"section\": \"MaxFileOperationTimeout\",\"parameter\": \"Max2\",\"value\": 1000]."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "help": "Specify the value."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterReliabilityUpdate",
+      "definiteArgument": "sf cluster reliability update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "ReliabilityLevel",
+            "type": "SfClusterDurabilityUpdateDurabilityLevel",
+            "format": "--reliability-level {value}",
+            "help": "Durability level."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "AutoAddNode",
+            "type": "string",
+            "format": "--auto-add-node {value}",
+            "help": "Add node count automatically when changing reliability."
           }
         ]
       }
@@ -441,311 +746,6 @@
           }
         ]
       }
-    },
-    {
-      "postfix": "ClusterDurabilityUpdate",
-      "definiteArgument": "sf cluster durability update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "DurabilityLevel",
-            "type": "SfClusterDurabilityUpdateDurabilityLevel",
-            "format": "--durability-level {value}",
-            "help": "Durability level."
-          },
-          {
-            "name": "NodeType",
-            "type": "string",
-            "format": "--node-type {value}",
-            "help": "The Node type name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterNodeTypeAdd",
-      "definiteArgument": "sf cluster node-type add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Capacity",
-            "type": "string",
-            "format": "--capacity {value}",
-            "help": ""
-          },
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "NodeType",
-            "type": "string",
-            "format": "--node-type {value}",
-            "help": "The Node type name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          },
-          {
-            "name": "VmPassword",
-            "type": "string",
-            "format": "--vm-password {value}",
-            "secret": true,
-            "help": "The password of the Vm."
-          },
-          {
-            "name": "VmUserName",
-            "type": "string",
-            "format": "--vm-user-name {value}",
-            "help": "The user name for logging to Vm. Default will be adminuser."
-          },
-          {
-            "name": "DurabilityLevel",
-            "type": "string",
-            "format": "--durability-level {value}",
-            "help": ""
-          },
-          {
-            "name": "VmSku",
-            "type": "string",
-            "format": "--vm-sku {value}",
-            "help": "The Vm Sku."
-          },
-          {
-            "name": "VmTier",
-            "type": "string",
-            "format": "--vm-tier {value}",
-            "help": ""
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterNodeAdd",
-      "definiteArgument": "sf cluster node add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "NodeType",
-            "type": "string",
-            "format": "--node-type {value}",
-            "help": "The Node type name."
-          },
-          {
-            "name": "NumberOfNodesToAdd",
-            "type": "int",
-            "format": "--number-of-nodes-to-add {value}",
-            "help": "Number of nodes to add."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterNodeRemove",
-      "definiteArgument": "sf cluster node remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "NodeType",
-            "type": "string",
-            "format": "--node-type {value}",
-            "help": "The Node type name."
-          },
-          {
-            "name": "NumberOfNodesToRemove",
-            "type": "int",
-            "format": "--number-of-nodes-to-remove {value}",
-            "help": "Number of nodes to remove."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterReliabilityUpdate",
-      "definiteArgument": "sf cluster reliability update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "ReliabilityLevel",
-            "type": "SfClusterDurabilityUpdateDurabilityLevel",
-            "format": "--reliability-level {value}",
-            "help": "Durability level."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          },
-          {
-            "name": "AutoAddNode",
-            "type": "string",
-            "format": "--auto-add-node {value}",
-            "help": "Add node count automatically when changing reliability."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterSettingRemove",
-      "definiteArgument": "sf cluster setting remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          },
-          {
-            "name": "Parameter",
-            "type": "string",
-            "format": "--parameter {value}",
-            "help": "Parameter name."
-          },
-          {
-            "name": "Section",
-            "type": "string",
-            "format": "--section {value}",
-            "help": "Section name."
-          },
-          {
-            "name": "SettingsSectionDescription",
-            "type": "string",
-            "format": "--settings-section-description {value}",
-            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\"}]."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterSettingSet",
-      "definiteArgument": "sf cluster setting set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          },
-          {
-            "name": "Parameter",
-            "type": "string",
-            "format": "--parameter {value}",
-            "help": "Parameter name."
-          },
-          {
-            "name": "Section",
-            "type": "string",
-            "format": "--section {value}",
-            "help": "Section name."
-          },
-          {
-            "name": "SettingsSectionDescription",
-            "type": "string",
-            "format": "--settings-section-description {value}",
-            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\",\"value\": 1000},{\"section\": \"MaxFileOperationTimeout\",\"parameter\": \"Max2\",\"value\": 1000]."
-          },
-          {
-            "name": "Value",
-            "type": "string",
-            "format": "--value {value}",
-            "help": "Specify the value."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterUpgradeTypeSet",
-      "definiteArgument": "sf cluster upgrade-type set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          },
-          {
-            "name": "UpgradeMode",
-            "type": "SfClusterUpgradeTypeSetUpgradeMode",
-            "format": "--upgrade-mode {value}",
-            "help": "Cluster upgrade mode."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "Cluster code version."
-          }
-        ]
-      }
     }
   ],
   "commonTaskProperties": [
@@ -791,18 +791,18 @@
       ]
     },
     {
+      "name": "SfClusterUpgradeTypeSetUpgradeMode",
+      "values": [
+        "automatic",
+        "manual"
+      ]
+    },
+    {
       "name": "SfClusterDurabilityUpdateDurabilityLevel",
       "values": [
         "bronze",
         "gold",
         "silver"
-      ]
-    },
-    {
-      "name": "SfClusterUpgradeTypeSetUpgradeMode",
-      "values": [
-        "automatic",
-        "manual"
       ]
     }
   ]

@@ -724,7 +724,7 @@ namespace Nuke.Azure
         /// <summary><p>Gallery image definition.</p></summary>
         public virtual string GalleryImageDefinition { get; internal set; }
         /// <summary><p>The name of the gallery Image Version to be deleted.</p></summary>
-        public virtual string GalleryImageVersionName { get; internal set; }
+        public virtual string GalleryImageVersion { get; internal set; }
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
@@ -744,7 +744,7 @@ namespace Nuke.Azure
             arguments
               .Add("sig image-version delete")
               .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-image-version-name {value}", GalleryImageVersionName)
+              .Add("--gallery-image-version {value}", GalleryImageVersion)
               .Add("--gallery-name {value}", GalleryName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
@@ -809,7 +809,7 @@ namespace Nuke.Azure
         /// <summary><p>Gallery image definition.</p></summary>
         public virtual string GalleryImageDefinition { get; internal set; }
         /// <summary><p>The name of the gallery Image Version to be retrieved.</p></summary>
-        public virtual string GalleryImageVersionName { get; internal set; }
+        public virtual string GalleryImageVersion { get; internal set; }
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
@@ -831,7 +831,7 @@ namespace Nuke.Azure
             arguments
               .Add("sig image-version show")
               .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-image-version-name {value}", GalleryImageVersionName)
+              .Add("--gallery-image-version {value}", GalleryImageVersion)
               .Add("--gallery-name {value}", GalleryName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
@@ -856,7 +856,7 @@ namespace Nuke.Azure
         /// <summary><p>Gallery image definition.</p></summary>
         public virtual string GalleryImageDefinition { get; internal set; }
         /// <summary><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
-        public virtual string GalleryImageVersionName { get; internal set; }
+        public virtual string GalleryImageVersion { get; internal set; }
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
@@ -889,7 +889,7 @@ namespace Nuke.Azure
             arguments
               .Add("sig image-version update")
               .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-image-version-name {value}", GalleryImageVersionName)
+              .Add("--gallery-image-version {value}", GalleryImageVersion)
               .Add("--gallery-name {value}", GalleryName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
@@ -919,7 +919,7 @@ namespace Nuke.Azure
         /// <summary><p>Gallery image definition.</p></summary>
         public virtual string GalleryImageDefinition { get; internal set; }
         /// <summary><p>The name of the gallery Image Version to be retrieved.</p></summary>
-        public virtual string GalleryImageVersionName { get; internal set; }
+        public virtual string GalleryImageVersion { get; internal set; }
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
@@ -955,7 +955,7 @@ namespace Nuke.Azure
             arguments
               .Add("sig image-version wait")
               .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-image-version-name {value}", GalleryImageVersionName)
+              .Add("--gallery-image-version {value}", GalleryImageVersion)
               .Add("--gallery-name {value}", GalleryName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
@@ -3337,21 +3337,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region GalleryImageVersionName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be deleted.</p></summary>
+        #region GalleryImageVersion
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be deleted.</p></summary>
         [Pure]
-        public static AzureSigImageVersionDeleteSettings SetGalleryImageVersionName(this AzureSigImageVersionDeleteSettings toolSettings, string galleryImageVersionName)
+        public static AzureSigImageVersionDeleteSettings SetGalleryImageVersion(this AzureSigImageVersionDeleteSettings toolSettings, string galleryImageVersion)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = galleryImageVersionName;
+            toolSettings.GalleryImageVersion = galleryImageVersion;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be deleted.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be deleted.</p></summary>
         [Pure]
-        public static AzureSigImageVersionDeleteSettings ResetGalleryImageVersionName(this AzureSigImageVersionDeleteSettings toolSettings)
+        public static AzureSigImageVersionDeleteSettings ResetGalleryImageVersion(this AzureSigImageVersionDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = null;
+            toolSettings.GalleryImageVersion = null;
             return toolSettings;
         }
         #endregion
@@ -3659,21 +3659,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region GalleryImageVersionName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        #region GalleryImageVersion
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
         [Pure]
-        public static AzureSigImageVersionShowSettings SetGalleryImageVersionName(this AzureSigImageVersionShowSettings toolSettings, string galleryImageVersionName)
+        public static AzureSigImageVersionShowSettings SetGalleryImageVersion(this AzureSigImageVersionShowSettings toolSettings, string galleryImageVersion)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = galleryImageVersionName;
+            toolSettings.GalleryImageVersion = galleryImageVersion;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
         [Pure]
-        public static AzureSigImageVersionShowSettings ResetGalleryImageVersionName(this AzureSigImageVersionShowSettings toolSettings)
+        public static AzureSigImageVersionShowSettings ResetGalleryImageVersion(this AzureSigImageVersionShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = null;
+            toolSettings.GalleryImageVersion = null;
             return toolSettings;
         }
         #endregion
@@ -3847,21 +3847,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region GalleryImageVersionName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
+        #region GalleryImageVersion
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
         [Pure]
-        public static AzureSigImageVersionUpdateSettings SetGalleryImageVersionName(this AzureSigImageVersionUpdateSettings toolSettings, string galleryImageVersionName)
+        public static AzureSigImageVersionUpdateSettings SetGalleryImageVersion(this AzureSigImageVersionUpdateSettings toolSettings, string galleryImageVersion)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = galleryImageVersionName;
+            toolSettings.GalleryImageVersion = galleryImageVersion;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
         [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetGalleryImageVersionName(this AzureSigImageVersionUpdateSettings toolSettings)
+        public static AzureSigImageVersionUpdateSettings ResetGalleryImageVersion(this AzureSigImageVersionUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = null;
+            toolSettings.GalleryImageVersion = null;
             return toolSettings;
         }
         #endregion
@@ -4191,21 +4191,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region GalleryImageVersionName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        #region GalleryImageVersion
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
         [Pure]
-        public static AzureSigImageVersionWaitSettings SetGalleryImageVersionName(this AzureSigImageVersionWaitSettings toolSettings, string galleryImageVersionName)
+        public static AzureSigImageVersionWaitSettings SetGalleryImageVersion(this AzureSigImageVersionWaitSettings toolSettings, string galleryImageVersion)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = galleryImageVersionName;
+            toolSettings.GalleryImageVersion = galleryImageVersion;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
         [Pure]
-        public static AzureSigImageVersionWaitSettings ResetGalleryImageVersionName(this AzureSigImageVersionWaitSettings toolSettings)
+        public static AzureSigImageVersionWaitSettings ResetGalleryImageVersion(this AzureSigImageVersionWaitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = null;
+            toolSettings.GalleryImageVersion = null;
             return toolSettings;
         }
         #endregion

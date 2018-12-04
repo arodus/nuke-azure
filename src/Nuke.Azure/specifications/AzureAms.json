@@ -6,25 +6,25 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/account-filter.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/asset-filter.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/asset.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/content-key-policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/job.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/live-event.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/live-output.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/streaming-endpoint.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/streaming-locator.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/streaming-policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/transform.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/account/mru.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/account/sp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/account/storage.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/content-key-policy/option.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/streaming-endpoint/akamai.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ams/transform/output.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/account-filter.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/asset.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/live-output.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/streaming-endpoint.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/streaming-locator.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/asset-filter.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/streaming-policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/content-key-policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/transform.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/live-event.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/account/mru.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/account/storage.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/account/sp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/streaming-endpoint/akamai.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/transform/output.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ams/content-key-policy/option.yml"
   ],
   "name": "AzureAms",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest",
@@ -216,442 +216,6 @@
             "type": "string",
             "format": "--tracks {value}",
             "help": "The JSON representing the track selections. Use @{file} to load from a file. For further information about the JSON structure please refer to swagger documentation on <a href=\"https://docs.microsoft.com/en-us/rest/api/media/accountfilters/accountfilters_createorupdate#filtertrackselection\">https://docs.microsoft.com/en-us/rest/api/media/accountfilters/accountfilters_createorupdate#filtertrackselection</a>."
-          },
-          {
-            "name": "EndTimestamp",
-            "type": "string",
-            "format": "--end-timestamp {value}",
-            "help": "The absolute end time boundary."
-          },
-          {
-            "name": "ForceEndTimestamp",
-            "type": "bool",
-            "format": "--force-end-timestamp",
-            "help": "Indicates whether to force the existance of an end timestamp."
-          },
-          {
-            "name": "LiveBackoffDuration",
-            "type": "string",
-            "format": "--live-backoff-duration {value}",
-            "help": "The relative to end right edge."
-          },
-          {
-            "name": "PresentationWindowDuration",
-            "type": "string",
-            "format": "--presentation-window-duration {value}",
-            "help": "The relative to end sliding window."
-          },
-          {
-            "name": "StartTimestamp",
-            "type": "string",
-            "format": "--start-timestamp {value}",
-            "help": "The absolute start time boundary."
-          },
-          {
-            "name": "Timescale",
-            "type": "string",
-            "format": "--timescale {value}",
-            "help": "The time scale of time stamps."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountCheckName",
-      "definiteArgument": "ams account check-name",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Azure Media Services account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountCreate",
-      "definiteArgument": "ams account create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "StorageAccount",
-            "type": "string",
-            "format": "--storage-account {value}",
-            "help": "The name or resource ID of the primary storage account to attach to the Azure Media Services account. Blob only accounts are not allowed as primary."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountDelete",
-      "definiteArgument": "ams account delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountList",
-      "definiteArgument": "ams account list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountShow",
-      "definiteArgument": "ams account show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountUpdate",
-      "definiteArgument": "ams account update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AssetFilterCreate",
-      "definiteArgument": "ams asset-filter create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "AssetName",
-            "type": "string",
-            "format": "--asset-name {value}",
-            "help": "The name of the asset."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the asset filter."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Bitrate",
-            "type": "string",
-            "format": "--bitrate {value}",
-            "help": "The first quality bitrate."
-          },
-          {
-            "name": "Tracks",
-            "type": "string",
-            "format": "--tracks {value}",
-            "help": "The JSON representing the track selections. Use @{file} to load from a file. For further information about the JSON structure please refer to swagger documentation on <a href=\"https://docs.microsoft.com/en-us/rest/api/media/assetfilters/assetfilters_createorupdate#filtertrackselection\">https://docs.microsoft.com/en-us/rest/api/media/assetfilters/assetfilters_createorupdate#filtertrackselection</a>."
-          },
-          {
-            "name": "EndTimestamp",
-            "type": "string",
-            "format": "--end-timestamp {value}",
-            "help": "The absolute end time boundary."
-          },
-          {
-            "name": "ForceEndTimestamp",
-            "type": "bool",
-            "format": "--force-end-timestamp",
-            "help": "Indicates whether to force the existance of an end timestamp."
-          },
-          {
-            "name": "LiveBackoffDuration",
-            "type": "string",
-            "format": "--live-backoff-duration {value}",
-            "help": "The relative to end right edge."
-          },
-          {
-            "name": "PresentationWindowDuration",
-            "type": "string",
-            "format": "--presentation-window-duration {value}",
-            "help": "The relative to end sliding window."
-          },
-          {
-            "name": "StartTimestamp",
-            "type": "string",
-            "format": "--start-timestamp {value}",
-            "help": "The absolute start time boundary."
-          },
-          {
-            "name": "Timescale",
-            "type": "string",
-            "format": "--timescale {value}",
-            "help": "The time scale of time stamps."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AssetFilterDelete",
-      "definiteArgument": "ams asset-filter delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "AssetName",
-            "type": "string",
-            "format": "--asset-name {value}",
-            "help": "The name of the asset."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the asset filter."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AssetFilterList",
-      "definiteArgument": "ams asset-filter list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "AssetName",
-            "type": "string",
-            "format": "--asset-name {value}",
-            "help": "The name of the asset."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AssetFilterShow",
-      "definiteArgument": "ams asset-filter show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "AssetName",
-            "type": "string",
-            "format": "--asset-name {value}",
-            "help": "The name of the asset."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the asset filter."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AssetFilterUpdate",
-      "definiteArgument": "ams asset-filter update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "AssetName",
-            "type": "string",
-            "format": "--asset-name {value}",
-            "help": "The name of the asset."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the asset filter."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Bitrate",
-            "type": "string",
-            "format": "--bitrate {value}",
-            "help": "The first quality bitrate."
-          },
-          {
-            "name": "Tracks",
-            "type": "string",
-            "format": "--tracks {value}",
-            "help": "The JSON representing the track selections. Use @{file} to load from a file. For further information about the JSON structure please refer to swagger documentation on <a href=\"https://docs.microsoft.com/en-us/rest/api/media/assetfilters/assetfilters_createorupdate#filtertrackselection\">https://docs.microsoft.com/en-us/rest/api/media/assetfilters/assetfilters_createorupdate#filtertrackselection</a>."
           },
           {
             "name": "EndTimestamp",
@@ -1009,1017 +573,6 @@
       }
     },
     {
-      "postfix": "ContentKeyPolicyCreate",
-      "definiteArgument": "ams content-key-policy create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The content key policy name."
-          },
-          {
-            "name": "PolicyOptionName",
-            "type": "string",
-            "format": "--policy-option-name {value}",
-            "help": "The content key policy option name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "help": "The content key policy description."
-          },
-          {
-            "name": "ClearKeyConfiguration",
-            "type": "string",
-            "format": "--clear-key-configuration {value}",
-            "help": "Use Clear Key configuration, a.k.a AES encryption. It's intended for non-DRM keys."
-          },
-          {
-            "name": "Ask",
-            "type": "string",
-            "format": "--ask {value}",
-            "help": "The key that must be used as FairPlay Application Secret key."
-          },
-          {
-            "name": "FairPlayPfx",
-            "type": "string",
-            "format": "--fair-play-pfx {value}",
-            "help": "The filepath to a FairPlay certificate file in PKCS 12 (pfx) format (including private key)."
-          },
-          {
-            "name": "FairPlayPfxPassword",
-            "type": "string",
-            "format": "--fair-play-pfx-password {value}",
-            "secret": true,
-            "help": "The password encrypting FairPlay certificate in PKCS 12 (pfx) format."
-          },
-          {
-            "name": "RentalAndLeaseKeyType",
-            "type": "string",
-            "format": "--rental-and-lease-key-type {value}",
-            "help": "The rental and lease key type. Available values: Undefined, PersistentUnlimited, PersistentLimited."
-          },
-          {
-            "name": "RentalDuration",
-            "type": "string",
-            "format": "--rental-duration {value}",
-            "help": "The rental duration. Must be greater than or equal to 0."
-          },
-          {
-            "name": "OpenRestriction",
-            "type": "string",
-            "format": "--open-restriction {value}",
-            "help": "Use open restriction. License or key will be delivered on every request. Not recommended for production environments."
-          },
-          {
-            "name": "PlayReadyTemplate",
-            "type": "string",
-            "format": "--play-ready-template {value}",
-            "help": "JSON PlayReady license template. Use @{file} to load from a file."
-          },
-          {
-            "name": "AltRsaTokenKeys",
-            "type": "List<string>",
-            "format": "--alt-rsa-token-keys {value}",
-            "separator": " ",
-            "help": "Space-separated list of alternate rsa token keys."
-          },
-          {
-            "name": "AltSymmetricTokenKeys",
-            "type": "List<string>",
-            "format": "--alt-symmetric-token-keys {value}",
-            "separator": " ",
-            "help": "Space-separated list of alternate symmetric token keys."
-          },
-          {
-            "name": "AltX509TokenKeys",
-            "type": "List<string>",
-            "format": "--alt-x509-token-keys {value}",
-            "separator": " ",
-            "help": "Space-separated list of alternate x509 certificate token keys."
-          },
-          {
-            "name": "Audience",
-            "type": "string",
-            "format": "--audience {value}",
-            "help": "The audience for the token."
-          },
-          {
-            "name": "Issuer",
-            "type": "string",
-            "format": "--issuer {value}",
-            "help": "The token issuer."
-          },
-          {
-            "name": "OpenIdConnectDiscoveryDocument",
-            "type": "string",
-            "format": "--open-id-connect-discovery-document {value}",
-            "help": "The OpenID connect discovery document."
-          },
-          {
-            "name": "TokenClaims",
-            "type": "List<string>",
-            "format": "--token-claims {value}",
-            "separator": " ",
-            "help": "Space-separated required token claims in '[key=value]' format."
-          },
-          {
-            "name": "TokenKey",
-            "type": "string",
-            "format": "--token-key {value}",
-            "help": "Either a string (for symmetric key) or a filepath to a certificate (x509) or public key (rsa). Must be used in conjunction with --token-key-type."
-          },
-          {
-            "name": "TokenKeyType",
-            "type": "string",
-            "format": "--token-key-type {value}",
-            "help": "The type of the token key to be used for the primary verification key. Allowed values: Symmetric, RSA, X509."
-          },
-          {
-            "name": "TokenType",
-            "type": "string",
-            "format": "--token-type {value}",
-            "help": "The type of token. Allowed values: Jwt, Swt."
-          },
-          {
-            "name": "WidevineTemplate",
-            "type": "string",
-            "format": "--widevine-template {value}",
-            "help": "JSON Widevine license template. Use @{file} to load from a file."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ContentKeyPolicyDelete",
-      "definiteArgument": "ams content-key-policy delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The content key policy name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ContentKeyPolicyList",
-      "definiteArgument": "ams content-key-policy list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "Restricts the set of items returned."
-          },
-          {
-            "name": "Orderby",
-            "type": "string",
-            "format": "--orderby {value}",
-            "help": "Specifies the the key by which the result collection should be ordered."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "help": "Specifies a non-negative integer n that limits the number of items returned from a collection. The service returns the number of available items up to but not greater than the specified value n."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ContentKeyPolicyShow",
-      "definiteArgument": "ams content-key-policy show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The content key policy name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WithSecrets",
-            "type": "string",
-            "format": "--with-secrets {value}",
-            "secret": true,
-            "help": "Include secret values of the content key policy."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ContentKeyPolicyUpdate",
-      "definiteArgument": "ams content-key-policy update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The content key policy name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "help": "The content key policy description."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "JobCancel",
-      "definiteArgument": "ams job cancel",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the job."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TransformName",
-            "type": "string",
-            "format": "--transform-name {value}",
-            "help": "The name of the transform."
-          },
-          {
-            "name": "Delete",
-            "type": "string",
-            "format": "--delete {value}",
-            "help": "Delete the job being cancelled."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "JobDelete",
-      "definiteArgument": "ams job delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the job."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TransformName",
-            "type": "string",
-            "format": "--transform-name {value}",
-            "help": "The name of the transform."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "JobList",
-      "definiteArgument": "ams job list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TransformName",
-            "type": "string",
-            "format": "--transform-name {value}",
-            "help": "The name of the transform."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "Restricts the set of items returned."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "Specifies a non-negative integer n that excludes the first n items of the queried collection from the result. The service returns items starting at position n+1."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "help": "Specifies a non-negative integer n that limits the number of items returned from a collection. The service returns the number of available items up to but not greater than the specified value n."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "JobShow",
-      "definiteArgument": "ams job show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the job."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TransformName",
-            "type": "string",
-            "format": "--transform-name {value}",
-            "help": "The name of the transform."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "JobStart",
-      "definiteArgument": "ams job start",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the job."
-          },
-          {
-            "name": "OutputAssets",
-            "type": "List<string>",
-            "format": "--output-assets {value}",
-            "separator": " ",
-            "help": "Space-separated assets in 'assetName=label' format. An asset without label can be sent like this: 'assetName='."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TransformName",
-            "type": "string",
-            "format": "--transform-name {value}",
-            "help": "The name of the transform."
-          },
-          {
-            "name": "CorrelationData",
-            "type": "List<string>",
-            "format": "--correlation-data {value}",
-            "separator": " ",
-            "help": "Space-separated correlation data in 'key[=value]' format. This customer provided data will be returned in Job and JobOutput state events."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "help": "The job description."
-          },
-          {
-            "name": "Files",
-            "type": "List<string>",
-            "format": "--files {value}",
-            "separator": " ",
-            "help": "Space-separated list of files. It can be used to tell the service to only use the files specified from the input asset."
-          },
-          {
-            "name": "Label",
-            "type": "string",
-            "format": "--label {value}",
-            "help": "A label that is assigned to a Job Input, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'."
-          },
-          {
-            "name": "Priority",
-            "type": "AmsJobPriority",
-            "format": "--priority {value}",
-            "help": "The priority with which the job should be processed."
-          },
-          {
-            "name": "InputAssetName",
-            "type": "string",
-            "format": "--input-asset-name {value}",
-            "help": "The name of the input asset."
-          },
-          {
-            "name": "BaseUri",
-            "type": "string",
-            "format": "--base-uri {value}",
-            "help": "Base uri for http job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "JobUpdate",
-      "definiteArgument": "ams job update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the job."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TransformName",
-            "type": "string",
-            "format": "--transform-name {value}",
-            "help": "The name of the transform."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "help": "The job description."
-          },
-          {
-            "name": "Priority",
-            "type": "AmsJobPriority",
-            "format": "--priority {value}",
-            "help": "The priority with which the job should be processed."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LiveEventCreate",
-      "definiteArgument": "ams live-event create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the live event."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AutoStart",
-            "type": "string",
-            "format": "--auto-start {value}",
-            "help": "The flag indicates if the resource should be automatically started on creation."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "help": "The live event description."
-          },
-          {
-            "name": "NoWait",
-            "type": "bool",
-            "format": "--no-wait",
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "StreamOptions",
-            "type": "AmsLiveEventCreateStreamOptions",
-            "format": "--stream-options {value}",
-            "help": "The options to use for the LiveEvent. This value is specified at creation time and cannot be updated."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "VanityUrl",
-            "type": "bool",
-            "format": "--vanity-url",
-            "help": "Specifies whether to use a vanity url with the Live Event. This value is specified at creation time and cannot be updated."
-          },
-          {
-            "name": "ClientAccessPolicy",
-            "type": "string",
-            "format": "--client-access-policy {value}",
-            "help": "Filepath to the clientaccesspolicy.xml used by Silverlight. Use @{file} to load from a file."
-          },
-          {
-            "name": "CrossDomainPolicy",
-            "type": "string",
-            "format": "--cross-domain-policy {value}",
-            "help": "Filepath to the crossdomain.xml used by Silverlight. Use @{file} to load from a file."
-          },
-          {
-            "name": "EncodingType",
-            "type": "string",
-            "format": "--encoding-type {value}",
-            "help": "The encoding type for live event. This value is specified at creation time and cannot be updated. Allowed values: Basic, None, Standard."
-          },
-          {
-            "name": "PresetName",
-            "type": "string",
-            "format": "--preset-name {value}",
-            "help": "The encoding preset name. This value is specified at creation time and cannot be updated."
-          },
-          {
-            "name": "Ips",
-            "type": "List<string>",
-            "format": "--ips {value}",
-            "separator": " ",
-            "help": "Space-separated IP addresses for access control. Allowed IP addresses can be specified as either a single IP address (e.g. \"10.0.0.1\") or as an IP range using an IP address and a CIDR subnet mask (e.g. \"10.0.0.1/22\"). Use \"\" to clear existing list. Use \"AllowAll\" to allow all IP addresses. Allowing all IPs is not recommended for production environments."
-          },
-          {
-            "name": "StreamingProtocol",
-            "type": "AmsLiveEventCreateStreamingProtocol",
-            "format": "--streaming-protocol {value}",
-            "help": "The streaming protocol for the live event. This value is specified at creation time and cannot be updated."
-          },
-          {
-            "name": "AccessToken",
-            "type": "string",
-            "format": "--access-token {value}",
-            "help": "A unique identifier for a stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value."
-          },
-          {
-            "name": "KeyFrameIntervalDuration",
-            "type": "string",
-            "format": "--key-frame-interval-duration {value}",
-            "help": "ISO 8601 timespan duration of the key frame interval duration."
-          },
-          {
-            "name": "AlternativeMediaId",
-            "type": "string",
-            "format": "--alternative-media-id {value}",
-            "help": "An Alternative Media Identifier associated with the StreamingLocator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field."
-          },
-          {
-            "name": "PreviewIps",
-            "type": "List<string>",
-            "format": "--preview-ips {value}",
-            "separator": " ",
-            "help": "Space-separated IP addresses for access control. Allowed IP addresses can be specified as either a single IP address (e.g. \"10.0.0.1\") or as an IP range using an IP address and a CIDR subnet mask (e.g. \"10.0.0.1/22\"). Use \"\" to clear existing list. Use \"AllowAll\" to allow all IP addresses. Allowing all IPs is not recommended for production environments."
-          },
-          {
-            "name": "PreviewLocator",
-            "type": "string",
-            "format": "--preview-locator {value}",
-            "help": "The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created."
-          },
-          {
-            "name": "StreamingPolicyName",
-            "type": "string",
-            "format": "--streaming-policy-name {value}",
-            "help": "The name of streaming policy used for the live event preview. This can be specified at creation time but cannot be updated."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LiveEventDelete",
-      "definiteArgument": "ams live-event delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the live event."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LiveEventList",
-      "definiteArgument": "ams live-event list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LiveEventReset",
-      "definiteArgument": "ams live-event reset",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the live event."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "NoWait",
-            "type": "bool",
-            "format": "--no-wait",
-            "help": "Do not wait for the long-running operation to finish."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LiveEventShow",
-      "definiteArgument": "ams live-event show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the live event."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LiveEventStart",
-      "definiteArgument": "ams live-event start",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the live event."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "NoWait",
-            "type": "bool",
-            "format": "--no-wait",
-            "help": "Do not wait for the long-running operation to finish."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LiveEventStop",
-      "definiteArgument": "ams live-event stop",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the live event."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "NoWait",
-            "type": "bool",
-            "format": "--no-wait",
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "RemoveOutputsOnStop",
-            "type": "string",
-            "format": "--remove-outputs-on-stop {value}",
-            "help": "Remove live outputs on stop."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LiveEventUpdate",
-      "definiteArgument": "ams live-event update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the live event."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "help": "The live event description."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "ClientAccessPolicy",
-            "type": "string",
-            "format": "--client-access-policy {value}",
-            "help": "Filepath to the clientaccesspolicy.xml used by Silverlight. Use @{file} to load from a file."
-          },
-          {
-            "name": "CrossDomainPolicy",
-            "type": "string",
-            "format": "--cross-domain-policy {value}",
-            "help": "Filepath to the crossdomain.xml used by Silverlight. Use @{file} to load from a file."
-          },
-          {
-            "name": "Ips",
-            "type": "List<string>",
-            "format": "--ips {value}",
-            "separator": " ",
-            "help": "Space-separated IP addresses for access control. Allowed IP addresses can be specified as either a single IP address (e.g. \"10.0.0.1\") or as an IP range using an IP address and a CIDR subnet mask (e.g. \"10.0.0.1/22\"). Use \"\" to clear existing list. Use \"AllowAll\" to allow all IP addresses. Allowing all IPs is not recommended for production environments."
-          },
-          {
-            "name": "KeyFrameIntervalDuration",
-            "type": "string",
-            "format": "--key-frame-interval-duration {value}",
-            "help": "ISO 8601 timespan duration of the key frame interval duration."
-          },
-          {
-            "name": "PreviewIps",
-            "type": "List<string>",
-            "format": "--preview-ips {value}",
-            "separator": " ",
-            "help": "Space-separated IP addresses for access control. Allowed IP addresses can be specified as either a single IP address (e.g. \"10.0.0.1\") or as an IP range using an IP address and a CIDR subnet mask (e.g. \"10.0.0.1/22\"). Use \"\" to clear existing list. Use \"AllowAll\" to allow all IP addresses. Allowing all IPs is not recommended for production environments."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "LiveOutputCreate",
       "definiteArgument": "ams live-output create",
       "settingsClass": {
@@ -2173,6 +726,168 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountCheckName",
+      "definiteArgument": "ams account check-name",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Azure Media Services account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountCreate",
+      "definiteArgument": "ams account create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "StorageAccount",
+            "type": "string",
+            "format": "--storage-account {value}",
+            "help": "The name or resource ID of the primary storage account to attach to the Azure Media Services account. Blob only accounts are not allowed as primary."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountDelete",
+      "definiteArgument": "ams account delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountList",
+      "definiteArgument": "ams account list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountShow",
+      "definiteArgument": "ams account show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountUpdate",
+      "definiteArgument": "ams account update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
       }
@@ -2786,6 +1501,280 @@
       }
     },
     {
+      "postfix": "AssetFilterCreate",
+      "definiteArgument": "ams asset-filter create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "AssetName",
+            "type": "string",
+            "format": "--asset-name {value}",
+            "help": "The name of the asset."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the asset filter."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Bitrate",
+            "type": "string",
+            "format": "--bitrate {value}",
+            "help": "The first quality bitrate."
+          },
+          {
+            "name": "Tracks",
+            "type": "string",
+            "format": "--tracks {value}",
+            "help": "The JSON representing the track selections. Use @{file} to load from a file. For further information about the JSON structure please refer to swagger documentation on <a href=\"https://docs.microsoft.com/en-us/rest/api/media/assetfilters/assetfilters_createorupdate#filtertrackselection\">https://docs.microsoft.com/en-us/rest/api/media/assetfilters/assetfilters_createorupdate#filtertrackselection</a>."
+          },
+          {
+            "name": "EndTimestamp",
+            "type": "string",
+            "format": "--end-timestamp {value}",
+            "help": "The absolute end time boundary."
+          },
+          {
+            "name": "ForceEndTimestamp",
+            "type": "bool",
+            "format": "--force-end-timestamp",
+            "help": "Indicates whether to force the existance of an end timestamp."
+          },
+          {
+            "name": "LiveBackoffDuration",
+            "type": "string",
+            "format": "--live-backoff-duration {value}",
+            "help": "The relative to end right edge."
+          },
+          {
+            "name": "PresentationWindowDuration",
+            "type": "string",
+            "format": "--presentation-window-duration {value}",
+            "help": "The relative to end sliding window."
+          },
+          {
+            "name": "StartTimestamp",
+            "type": "string",
+            "format": "--start-timestamp {value}",
+            "help": "The absolute start time boundary."
+          },
+          {
+            "name": "Timescale",
+            "type": "string",
+            "format": "--timescale {value}",
+            "help": "The time scale of time stamps."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssetFilterDelete",
+      "definiteArgument": "ams asset-filter delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "AssetName",
+            "type": "string",
+            "format": "--asset-name {value}",
+            "help": "The name of the asset."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the asset filter."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssetFilterList",
+      "definiteArgument": "ams asset-filter list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "AssetName",
+            "type": "string",
+            "format": "--asset-name {value}",
+            "help": "The name of the asset."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssetFilterShow",
+      "definiteArgument": "ams asset-filter show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "AssetName",
+            "type": "string",
+            "format": "--asset-name {value}",
+            "help": "The name of the asset."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the asset filter."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssetFilterUpdate",
+      "definiteArgument": "ams asset-filter update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "AssetName",
+            "type": "string",
+            "format": "--asset-name {value}",
+            "help": "The name of the asset."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the asset filter."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Bitrate",
+            "type": "string",
+            "format": "--bitrate {value}",
+            "help": "The first quality bitrate."
+          },
+          {
+            "name": "Tracks",
+            "type": "string",
+            "format": "--tracks {value}",
+            "help": "The JSON representing the track selections. Use @{file} to load from a file. For further information about the JSON structure please refer to swagger documentation on <a href=\"https://docs.microsoft.com/en-us/rest/api/media/assetfilters/assetfilters_createorupdate#filtertrackselection\">https://docs.microsoft.com/en-us/rest/api/media/assetfilters/assetfilters_createorupdate#filtertrackselection</a>."
+          },
+          {
+            "name": "EndTimestamp",
+            "type": "string",
+            "format": "--end-timestamp {value}",
+            "help": "The absolute end time boundary."
+          },
+          {
+            "name": "ForceEndTimestamp",
+            "type": "bool",
+            "format": "--force-end-timestamp",
+            "help": "Indicates whether to force the existance of an end timestamp."
+          },
+          {
+            "name": "LiveBackoffDuration",
+            "type": "string",
+            "format": "--live-backoff-duration {value}",
+            "help": "The relative to end right edge."
+          },
+          {
+            "name": "PresentationWindowDuration",
+            "type": "string",
+            "format": "--presentation-window-duration {value}",
+            "help": "The relative to end sliding window."
+          },
+          {
+            "name": "StartTimestamp",
+            "type": "string",
+            "format": "--start-timestamp {value}",
+            "help": "The absolute start time boundary."
+          },
+          {
+            "name": "Timescale",
+            "type": "string",
+            "format": "--timescale {value}",
+            "help": "The time scale of time stamps."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "StreamingPolicyCreate",
       "definiteArgument": "ams streaming-policy create",
       "settingsClass": {
@@ -3062,6 +2051,316 @@
       }
     },
     {
+      "postfix": "ContentKeyPolicyCreate",
+      "definiteArgument": "ams content-key-policy create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The content key policy name."
+          },
+          {
+            "name": "PolicyOptionName",
+            "type": "string",
+            "format": "--policy-option-name {value}",
+            "help": "The content key policy option name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "The content key policy description."
+          },
+          {
+            "name": "ClearKeyConfiguration",
+            "type": "string",
+            "format": "--clear-key-configuration {value}",
+            "help": "Use Clear Key configuration, a.k.a AES encryption. It's intended for non-DRM keys."
+          },
+          {
+            "name": "Ask",
+            "type": "string",
+            "format": "--ask {value}",
+            "help": "The key that must be used as FairPlay Application Secret key."
+          },
+          {
+            "name": "FairPlayPfx",
+            "type": "string",
+            "format": "--fair-play-pfx {value}",
+            "help": "The filepath to a FairPlay certificate file in PKCS 12 (pfx) format (including private key)."
+          },
+          {
+            "name": "FairPlayPfxPassword",
+            "type": "string",
+            "format": "--fair-play-pfx-password {value}",
+            "secret": true,
+            "help": "The password encrypting FairPlay certificate in PKCS 12 (pfx) format."
+          },
+          {
+            "name": "RentalAndLeaseKeyType",
+            "type": "string",
+            "format": "--rental-and-lease-key-type {value}",
+            "help": "The rental and lease key type. Available values: Undefined, PersistentUnlimited, PersistentLimited."
+          },
+          {
+            "name": "RentalDuration",
+            "type": "string",
+            "format": "--rental-duration {value}",
+            "help": "The rental duration. Must be greater than or equal to 0."
+          },
+          {
+            "name": "OpenRestriction",
+            "type": "string",
+            "format": "--open-restriction {value}",
+            "help": "Use open restriction. License or key will be delivered on every request. Not recommended for production environments."
+          },
+          {
+            "name": "PlayReadyTemplate",
+            "type": "string",
+            "format": "--play-ready-template {value}",
+            "help": "JSON PlayReady license template. Use @{file} to load from a file."
+          },
+          {
+            "name": "AltRsaTokenKeys",
+            "type": "List<string>",
+            "format": "--alt-rsa-token-keys {value}",
+            "separator": " ",
+            "help": "Space-separated list of alternate rsa token keys."
+          },
+          {
+            "name": "AltSymmetricTokenKeys",
+            "type": "List<string>",
+            "format": "--alt-symmetric-token-keys {value}",
+            "separator": " ",
+            "help": "Space-separated list of alternate symmetric token keys."
+          },
+          {
+            "name": "AltX509TokenKeys",
+            "type": "List<string>",
+            "format": "--alt-x509-token-keys {value}",
+            "separator": " ",
+            "help": "Space-separated list of alternate x509 certificate token keys."
+          },
+          {
+            "name": "Audience",
+            "type": "string",
+            "format": "--audience {value}",
+            "help": "The audience for the token."
+          },
+          {
+            "name": "Issuer",
+            "type": "string",
+            "format": "--issuer {value}",
+            "help": "The token issuer."
+          },
+          {
+            "name": "OpenIdConnectDiscoveryDocument",
+            "type": "string",
+            "format": "--open-id-connect-discovery-document {value}",
+            "help": "The OpenID connect discovery document."
+          },
+          {
+            "name": "TokenClaims",
+            "type": "List<string>",
+            "format": "--token-claims {value}",
+            "separator": " ",
+            "help": "Space-separated required token claims in '[key=value]' format."
+          },
+          {
+            "name": "TokenKey",
+            "type": "string",
+            "format": "--token-key {value}",
+            "help": "Either a string (for symmetric key) or a filepath to a certificate (x509) or public key (rsa). Must be used in conjunction with --token-key-type."
+          },
+          {
+            "name": "TokenKeyType",
+            "type": "string",
+            "format": "--token-key-type {value}",
+            "help": "The type of the token key to be used for the primary verification key. Allowed values: Symmetric, RSA, X509."
+          },
+          {
+            "name": "TokenType",
+            "type": "string",
+            "format": "--token-type {value}",
+            "help": "The type of token. Allowed values: Jwt, Swt."
+          },
+          {
+            "name": "WidevineTemplate",
+            "type": "string",
+            "format": "--widevine-template {value}",
+            "help": "JSON Widevine license template. Use @{file} to load from a file."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContentKeyPolicyDelete",
+      "definiteArgument": "ams content-key-policy delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The content key policy name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContentKeyPolicyList",
+      "definiteArgument": "ams content-key-policy list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "Restricts the set of items returned."
+          },
+          {
+            "name": "Orderby",
+            "type": "string",
+            "format": "--orderby {value}",
+            "help": "Specifies the the key by which the result collection should be ordered."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "Specifies a non-negative integer n that limits the number of items returned from a collection. The service returns the number of available items up to but not greater than the specified value n."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContentKeyPolicyShow",
+      "definiteArgument": "ams content-key-policy show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The content key policy name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WithSecrets",
+            "type": "string",
+            "format": "--with-secrets {value}",
+            "secret": true,
+            "help": "Include secret values of the content key policy."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContentKeyPolicyUpdate",
+      "definiteArgument": "ams content-key-policy update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The content key policy name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "The content key policy description."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "TransformCreate",
       "definiteArgument": "ams transform create",
       "settingsClass": {
@@ -3104,7 +2403,7 @@
           },
           {
             "name": "RelativePriority",
-            "type": "AmsJobPriority",
+            "type": "AmsTransformRelativePriority",
             "format": "--relative-priority {value}",
             "help": "Sets the relative priority of the transform outputs within a transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal."
           },
@@ -3270,6 +2569,707 @@
       }
     },
     {
+      "postfix": "JobCancel",
+      "definiteArgument": "ams job cancel",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the job."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "TransformName",
+            "type": "string",
+            "format": "--transform-name {value}",
+            "help": "The name of the transform."
+          },
+          {
+            "name": "Delete",
+            "type": "string",
+            "format": "--delete {value}",
+            "help": "Delete the job being cancelled."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobDelete",
+      "definiteArgument": "ams job delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the job."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "TransformName",
+            "type": "string",
+            "format": "--transform-name {value}",
+            "help": "The name of the transform."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobList",
+      "definiteArgument": "ams job list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "TransformName",
+            "type": "string",
+            "format": "--transform-name {value}",
+            "help": "The name of the transform."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "Restricts the set of items returned."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "Specifies a non-negative integer n that excludes the first n items of the queried collection from the result. The service returns items starting at position n+1."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "Specifies a non-negative integer n that limits the number of items returned from a collection. The service returns the number of available items up to but not greater than the specified value n."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobShow",
+      "definiteArgument": "ams job show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the job."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "TransformName",
+            "type": "string",
+            "format": "--transform-name {value}",
+            "help": "The name of the transform."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobStart",
+      "definiteArgument": "ams job start",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the job."
+          },
+          {
+            "name": "OutputAssets",
+            "type": "List<string>",
+            "format": "--output-assets {value}",
+            "separator": " ",
+            "help": "Space-separated assets in 'assetName=label' format. An asset without label can be sent like this: 'assetName='."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "TransformName",
+            "type": "string",
+            "format": "--transform-name {value}",
+            "help": "The name of the transform."
+          },
+          {
+            "name": "CorrelationData",
+            "type": "List<string>",
+            "format": "--correlation-data {value}",
+            "separator": " ",
+            "help": "Space-separated correlation data in 'key[=value]' format. This customer provided data will be returned in Job and JobOutput state events."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "The job description."
+          },
+          {
+            "name": "Files",
+            "type": "List<string>",
+            "format": "--files {value}",
+            "separator": " ",
+            "help": "Space-separated list of files. It can be used to tell the service to only use the files specified from the input asset."
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "format": "--label {value}",
+            "help": "A label that is assigned to a Job Input, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'."
+          },
+          {
+            "name": "Priority",
+            "type": "AmsTransformRelativePriority",
+            "format": "--priority {value}",
+            "help": "The priority with which the job should be processed."
+          },
+          {
+            "name": "InputAssetName",
+            "type": "string",
+            "format": "--input-asset-name {value}",
+            "help": "The name of the input asset."
+          },
+          {
+            "name": "BaseUri",
+            "type": "string",
+            "format": "--base-uri {value}",
+            "help": "Base uri for http job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobUpdate",
+      "definiteArgument": "ams job update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the job."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "TransformName",
+            "type": "string",
+            "format": "--transform-name {value}",
+            "help": "The name of the transform."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "The job description."
+          },
+          {
+            "name": "Priority",
+            "type": "AmsTransformRelativePriority",
+            "format": "--priority {value}",
+            "help": "The priority with which the job should be processed."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LiveEventCreate",
+      "definiteArgument": "ams live-event create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the live event."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AutoStart",
+            "type": "string",
+            "format": "--auto-start {value}",
+            "help": "The flag indicates if the resource should be automatically started on creation."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "The live event description."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "StreamOptions",
+            "type": "AmsLiveEventCreateStreamOptions",
+            "format": "--stream-options {value}",
+            "help": "The options to use for the LiveEvent. This value is specified at creation time and cannot be updated."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "VanityUrl",
+            "type": "bool",
+            "format": "--vanity-url",
+            "help": "Specifies whether to use a vanity url with the Live Event. This value is specified at creation time and cannot be updated."
+          },
+          {
+            "name": "ClientAccessPolicy",
+            "type": "string",
+            "format": "--client-access-policy {value}",
+            "help": "Filepath to the clientaccesspolicy.xml used by Silverlight. Use @{file} to load from a file."
+          },
+          {
+            "name": "CrossDomainPolicy",
+            "type": "string",
+            "format": "--cross-domain-policy {value}",
+            "help": "Filepath to the crossdomain.xml used by Silverlight. Use @{file} to load from a file."
+          },
+          {
+            "name": "EncodingType",
+            "type": "string",
+            "format": "--encoding-type {value}",
+            "help": "The encoding type for live event. This value is specified at creation time and cannot be updated. Allowed values: Basic, None, Standard."
+          },
+          {
+            "name": "PresetName",
+            "type": "string",
+            "format": "--preset-name {value}",
+            "help": "The encoding preset name. This value is specified at creation time and cannot be updated."
+          },
+          {
+            "name": "Ips",
+            "type": "List<string>",
+            "format": "--ips {value}",
+            "separator": " ",
+            "help": "Space-separated IP addresses for access control. Allowed IP addresses can be specified as either a single IP address (e.g. \"10.0.0.1\") or as an IP range using an IP address and a CIDR subnet mask (e.g. \"10.0.0.1/22\"). Use \"\" to clear existing list. Use \"AllowAll\" to allow all IP addresses. Allowing all IPs is not recommended for production environments."
+          },
+          {
+            "name": "StreamingProtocol",
+            "type": "AmsLiveEventCreateStreamingProtocol",
+            "format": "--streaming-protocol {value}",
+            "help": "The streaming protocol for the live event. This value is specified at creation time and cannot be updated."
+          },
+          {
+            "name": "AccessToken",
+            "type": "string",
+            "format": "--access-token {value}",
+            "help": "A unique identifier for a stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value."
+          },
+          {
+            "name": "KeyFrameIntervalDuration",
+            "type": "string",
+            "format": "--key-frame-interval-duration {value}",
+            "help": "ISO 8601 timespan duration of the key frame interval duration."
+          },
+          {
+            "name": "AlternativeMediaId",
+            "type": "string",
+            "format": "--alternative-media-id {value}",
+            "help": "An Alternative Media Identifier associated with the StreamingLocator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field."
+          },
+          {
+            "name": "PreviewIps",
+            "type": "List<string>",
+            "format": "--preview-ips {value}",
+            "separator": " ",
+            "help": "Space-separated IP addresses for access control. Allowed IP addresses can be specified as either a single IP address (e.g. \"10.0.0.1\") or as an IP range using an IP address and a CIDR subnet mask (e.g. \"10.0.0.1/22\"). Use \"\" to clear existing list. Use \"AllowAll\" to allow all IP addresses. Allowing all IPs is not recommended for production environments."
+          },
+          {
+            "name": "PreviewLocator",
+            "type": "string",
+            "format": "--preview-locator {value}",
+            "help": "The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created."
+          },
+          {
+            "name": "StreamingPolicyName",
+            "type": "string",
+            "format": "--streaming-policy-name {value}",
+            "help": "The name of streaming policy used for the live event preview. This can be specified at creation time but cannot be updated."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LiveEventDelete",
+      "definiteArgument": "ams live-event delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the live event."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LiveEventList",
+      "definiteArgument": "ams live-event list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LiveEventReset",
+      "definiteArgument": "ams live-event reset",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the live event."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LiveEventShow",
+      "definiteArgument": "ams live-event show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the live event."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LiveEventStart",
+      "definiteArgument": "ams live-event start",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the live event."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LiveEventStop",
+      "definiteArgument": "ams live-event stop",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the live event."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "RemoveOutputsOnStop",
+            "type": "string",
+            "format": "--remove-outputs-on-stop {value}",
+            "help": "Remove live outputs on stop."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LiveEventUpdate",
+      "definiteArgument": "ams live-event update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the live event."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "The live event description."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "ClientAccessPolicy",
+            "type": "string",
+            "format": "--client-access-policy {value}",
+            "help": "Filepath to the clientaccesspolicy.xml used by Silverlight. Use @{file} to load from a file."
+          },
+          {
+            "name": "CrossDomainPolicy",
+            "type": "string",
+            "format": "--cross-domain-policy {value}",
+            "help": "Filepath to the crossdomain.xml used by Silverlight. Use @{file} to load from a file."
+          },
+          {
+            "name": "Ips",
+            "type": "List<string>",
+            "format": "--ips {value}",
+            "separator": " ",
+            "help": "Space-separated IP addresses for access control. Allowed IP addresses can be specified as either a single IP address (e.g. \"10.0.0.1\") or as an IP range using an IP address and a CIDR subnet mask (e.g. \"10.0.0.1/22\"). Use \"\" to clear existing list. Use \"AllowAll\" to allow all IP addresses. Allowing all IPs is not recommended for production environments."
+          },
+          {
+            "name": "KeyFrameIntervalDuration",
+            "type": "string",
+            "format": "--key-frame-interval-duration {value}",
+            "help": "ISO 8601 timespan duration of the key frame interval duration."
+          },
+          {
+            "name": "PreviewIps",
+            "type": "List<string>",
+            "format": "--preview-ips {value}",
+            "separator": " ",
+            "help": "Space-separated IP addresses for access control. Allowed IP addresses can be specified as either a single IP address (e.g. \"10.0.0.1\") or as an IP range using an IP address and a CIDR subnet mask (e.g. \"10.0.0.1/22\"). Use \"\" to clear existing list. Use \"AllowAll\" to allow all IP addresses. Allowing all IPs is not recommended for production environments."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "AccountMruSet",
       "definiteArgument": "ams account mru set",
       "settingsClass": {
@@ -3311,6 +3311,84 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountStorageAdd",
+      "definiteArgument": "ams account storage add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name or resource ID of the secondary storage account to detach from the Azure Media Services account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountStorageRemove",
+      "definiteArgument": "ams account storage remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name or resource ID of the secondary storage account to detach from the Azure Media Services account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountStorageSyncStorageKeys",
+      "definiteArgument": "ams account storage sync-storage-keys",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "The ID of the storage account resource."
           },
           {
             "name": "ResourceGroup",
@@ -3424,8 +3502,8 @@
       }
     },
     {
-      "postfix": "AccountStorageAdd",
-      "definiteArgument": "ams account storage add",
+      "postfix": "StreamingEndpointAkamaiAdd",
+      "definiteArgument": "ams streaming-endpoint akamai add",
       "settingsClass": {
         "properties": [
           {
@@ -3438,7 +3516,57 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The name or resource ID of the secondary storage account to detach from the Azure Media Services account."
+            "help": "The name of the streaming endpoint."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Base64Key",
+            "type": "string",
+            "format": "--base64-key {value}",
+            "help": "Authentication key."
+          },
+          {
+            "name": "Expiration",
+            "type": "string",
+            "format": "--expiration {value}",
+            "help": "The expiration time of the authentication key."
+          },
+          {
+            "name": "Identifier",
+            "type": "string",
+            "format": "--identifier {value}",
+            "help": "Identifier of the key."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StreamingEndpointAkamaiRemove",
+      "definiteArgument": "ams streaming-endpoint akamai remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The name of the Azure Media Services account."
+          },
+          {
+            "name": "Identifier",
+            "type": "string",
+            "format": "--identifier {value}",
+            "help": "Identifier of the key."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the streaming endpoint."
           },
           {
             "name": "ResourceGroup",
@@ -3450,8 +3578,8 @@
       }
     },
     {
-      "postfix": "AccountStorageRemove",
-      "definiteArgument": "ams account storage remove",
+      "postfix": "TransformOutputAdd",
+      "definiteArgument": "ams transform output add",
       "settingsClass": {
         "properties": [
           {
@@ -3464,20 +3592,50 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The name or resource ID of the secondary storage account to detach from the Azure Media Services account."
+            "help": "The name of the transform."
+          },
+          {
+            "name": "Preset",
+            "type": "string",
+            "format": "--preset {value}",
+            "help": "Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the transform output. Allowed values: H264SingleBitrateSD, H264SingleBitrate720p, H264SingleBitrate1080p, AdaptiveStreaming, AACGoodQualityAudio, H264MultipleBitrate1080p, H264MultipleBitrate720p, H264MultipleBitrateSD, AudioAnalyzer, VideoAnalyzer. In addition to the allowed values, you can also pass a path to a custom Standard Encoder preset JSON file. See <a href=\"https://docs.microsoft.com/rest/api/media/transforms/createorupdate#standardencoderpreset\">https://docs.microsoft.com/rest/api/media/transforms/createorupdate#standardencoderpreset</a> for further details on the settings to use to build a custom preset."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "OnError",
+            "type": "AmsTransformOnError",
+            "format": "--on-error {value}",
+            "help": "A Transform can define more than one output. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'."
+          },
+          {
+            "name": "RelativePriority",
+            "type": "AmsTransformRelativePriority",
+            "format": "--relative-priority {value}",
+            "help": "Sets the relative priority of the transform outputs within a transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal."
+          },
+          {
+            "name": "AudioLanguage",
+            "type": "string",
+            "format": "--audio-language {value}",
+            "help": "The language for the audio payload in the input using the BCP-47 format of \"language tag-region\" (e.g: en-US). If not specified, automatic language detection would be employed. This feature currently supports English, Chinese, French, German, Italian, Japanese, Spanish, Russian, and Portuguese. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to English. Allowed values: en-US, en-GB, es-ES, es-MX, fr-FR, it-IT, ja-JP, pt-BR, zh-CN, de-DE, ar-EG, ru-RU, hi-IN."
+          },
+          {
+            "name": "InsightsToExtract",
+            "type": "AmsTransformInsightsToExtract",
+            "format": "--insights-to-extract {value}",
+            "help": "The type of insights to be extracted. If not set then the type will be selected based on the content type. If the content is audio only then only audio insights will be extracted and if it is video only video insights will be extracted."
           }
         ]
       }
     },
     {
-      "postfix": "AccountStorageSyncStorageKeys",
-      "definiteArgument": "ams account storage sync-storage-keys",
+      "postfix": "TransformOutputRemove",
+      "definiteArgument": "ams transform output remove",
       "settingsClass": {
         "properties": [
           {
@@ -3487,10 +3645,16 @@
             "help": "The name of the Azure Media Services account."
           },
           {
-            "name": "Id",
+            "name": "Name",
             "type": "string",
-            "format": "--id {value}",
-            "help": "The ID of the storage account resource."
+            "format": "--name {value}",
+            "help": "The name of the transform."
+          },
+          {
+            "name": "OutputIndex",
+            "type": "string",
+            "format": "--output-index {value}",
+            "help": "The element index of the output to remove."
           },
           {
             "name": "ResourceGroup",
@@ -3819,170 +3983,6 @@
           }
         ]
       }
-    },
-    {
-      "postfix": "StreamingEndpointAkamaiAdd",
-      "definiteArgument": "ams streaming-endpoint akamai add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the streaming endpoint."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Base64Key",
-            "type": "string",
-            "format": "--base64-key {value}",
-            "help": "Authentication key."
-          },
-          {
-            "name": "Expiration",
-            "type": "string",
-            "format": "--expiration {value}",
-            "help": "The expiration time of the authentication key."
-          },
-          {
-            "name": "Identifier",
-            "type": "string",
-            "format": "--identifier {value}",
-            "help": "Identifier of the key."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StreamingEndpointAkamaiRemove",
-      "definiteArgument": "ams streaming-endpoint akamai remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Identifier",
-            "type": "string",
-            "format": "--identifier {value}",
-            "help": "Identifier of the key."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the streaming endpoint."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TransformOutputAdd",
-      "definiteArgument": "ams transform output add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the transform."
-          },
-          {
-            "name": "Preset",
-            "type": "string",
-            "format": "--preset {value}",
-            "help": "Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the transform output. Allowed values: H264SingleBitrateSD, H264SingleBitrate720p, H264SingleBitrate1080p, AdaptiveStreaming, AACGoodQualityAudio, H264MultipleBitrate1080p, H264MultipleBitrate720p, H264MultipleBitrateSD, AudioAnalyzer, VideoAnalyzer. In addition to the allowed values, you can also pass a path to a custom Standard Encoder preset JSON file. See <a href=\"https://docs.microsoft.com/rest/api/media/transforms/createorupdate#standardencoderpreset\">https://docs.microsoft.com/rest/api/media/transforms/createorupdate#standardencoderpreset</a> for further details on the settings to use to build a custom preset."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "OnError",
-            "type": "AmsTransformOnError",
-            "format": "--on-error {value}",
-            "help": "A Transform can define more than one output. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'."
-          },
-          {
-            "name": "RelativePriority",
-            "type": "AmsJobPriority",
-            "format": "--relative-priority {value}",
-            "help": "Sets the relative priority of the transform outputs within a transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal."
-          },
-          {
-            "name": "AudioLanguage",
-            "type": "string",
-            "format": "--audio-language {value}",
-            "help": "The language for the audio payload in the input using the BCP-47 format of \"language tag-region\" (e.g: en-US). If not specified, automatic language detection would be employed. This feature currently supports English, Chinese, French, German, Italian, Japanese, Spanish, Russian, and Portuguese. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to English. Allowed values: en-US, en-GB, es-ES, es-MX, fr-FR, it-IT, ja-JP, pt-BR, zh-CN, de-DE, ar-EG, ru-RU, hi-IN."
-          },
-          {
-            "name": "InsightsToExtract",
-            "type": "AmsTransformInsightsToExtract",
-            "format": "--insights-to-extract {value}",
-            "help": "The type of insights to be extracted. If not set then the type will be selected based on the content type. If the content is audio only then only audio insights will be extracted and if it is video only video insights will be extracted."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TransformOutputRemove",
-      "definiteArgument": "ams transform output remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The name of the Azure Media Services account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the transform."
-          },
-          {
-            "name": "OutputIndex",
-            "type": "string",
-            "format": "--output-index {value}",
-            "help": "The element index of the output to remove."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
     }
   ],
   "commonTaskProperties": [
@@ -4027,11 +4027,26 @@
       ]
     },
     {
-      "name": "AmsJobPriority",
+      "name": "AmsTransformOnError",
+      "values": [
+        "continuejob",
+        "stopprocessingjob"
+      ]
+    },
+    {
+      "name": "AmsTransformRelativePriority",
       "values": [
         "high",
         "low",
         "normal"
+      ]
+    },
+    {
+      "name": "AmsTransformInsightsToExtract",
+      "values": [
+        "allinsights",
+        "audioinsightsonly",
+        "videoinsightsonly"
       ]
     },
     {
@@ -4046,21 +4061,6 @@
       "values": [
         "fragmentedmp4",
         "rtmp"
-      ]
-    },
-    {
-      "name": "AmsTransformOnError",
-      "values": [
-        "continuejob",
-        "stopprocessingjob"
-      ]
-    },
-    {
-      "name": "AmsTransformInsightsToExtract",
-      "values": [
-        "allinsights",
-        "audioinsightsonly",
-        "videoinsightsonly"
       ]
     }
   ]

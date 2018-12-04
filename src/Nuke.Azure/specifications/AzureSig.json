@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sig.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sig/image-definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sig/image-version.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sig.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sig/image-definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/sig/image-version.yml"
   ],
   "name": "AzureSig",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest",
@@ -506,9 +506,9 @@
             "help": "Gallery image definition."
           },
           {
-            "name": "GalleryImageVersionName",
+            "name": "GalleryImageVersion",
             "type": "string",
-            "format": "--gallery-image-version-name {value}",
+            "format": "--gallery-image-version {value}",
             "help": "The name of the gallery Image Version to be deleted."
           },
           {
@@ -564,9 +564,9 @@
             "help": "Gallery image definition."
           },
           {
-            "name": "GalleryImageVersionName",
+            "name": "GalleryImageVersion",
             "type": "string",
-            "format": "--gallery-image-version-name {value}",
+            "format": "--gallery-image-version {value}",
             "help": "The name of the gallery Image Version to be retrieved."
           },
           {
@@ -602,9 +602,9 @@
             "help": "Gallery image definition."
           },
           {
-            "name": "GalleryImageVersionName",
+            "name": "GalleryImageVersion",
             "type": "string",
-            "format": "--gallery-image-version-name {value}",
+            "format": "--gallery-image-version {value}",
             "help": "The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;."
           },
           {
@@ -671,9 +671,9 @@
             "help": "Gallery image definition."
           },
           {
-            "name": "GalleryImageVersionName",
+            "name": "GalleryImageVersion",
             "type": "string",
-            "format": "--gallery-image-version-name {value}",
+            "format": "--gallery-image-version {value}",
             "help": "The name of the gallery Image Version to be retrieved."
           },
           {

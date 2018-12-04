@@ -6,12 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cdn.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cdn/custom-domain.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cdn/edge-node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cdn/endpoint.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cdn/origin.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cdn/profile.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/cdn.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/cdn/profile.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/cdn/origin.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/cdn/endpoint.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/cdn/custom-domain.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/cdn/edge-node.yml"
   ],
   "name": "AzureCdn",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest",
@@ -38,32 +38,14 @@
       "settingsClass": {}
     },
     {
-      "postfix": "CustomDomainCreate",
-      "definiteArgument": "cdn custom-domain create",
+      "postfix": "ProfileCreate",
+      "definiteArgument": "cdn profile create",
       "settingsClass": {
         "properties": [
-          {
-            "name": "EndpointName",
-            "type": "string",
-            "format": "--endpoint-name {value}",
-            "help": "Name of the endpoint under the profile which is unique globally."
-          },
-          {
-            "name": "Hostname",
-            "type": "string",
-            "format": "--hostname {value}",
-            "help": "The host name of the custom domain. Must be a domain name."
-          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the custom domain."
-          },
-          {
-            "name": "ProfileName",
-            "type": "string",
-            "format": "--profile-name {value}",
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
@@ -79,6 +61,12 @@
             "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
+            "name": "Sku",
+            "type": "CdnProfileCreateSku",
+            "format": "--sku {value}",
+            "help": "The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile. Defaults to Standard_Akamai."
+          },
+          {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
@@ -88,8 +76,158 @@
       }
     },
     {
-      "postfix": "CustomDomainDelete",
-      "definiteArgument": "cdn custom-domain delete",
+      "postfix": "ProfileDelete",
+      "definiteArgument": "cdn profile delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the CDN profile which is unique within the resource group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProfileList",
+      "definiteArgument": "cdn profile list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProfileShow",
+      "definiteArgument": "cdn profile show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the CDN profile which is unique within the resource group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProfileUpdate",
+      "definiteArgument": "cdn profile update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the CDN profile which is unique within the resource group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProfileUsage",
+      "definiteArgument": "cdn profile usage",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the CDN profile which is unique within the resource group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "OriginList",
+      "definiteArgument": "cdn origin list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EndpointName",
+            "type": "string",
+            "format": "--endpoint-name {value}",
+            "help": "Name of the endpoint under the profile which is unique globally."
+          },
+          {
+            "name": "ProfileName",
+            "type": "string",
+            "format": "--profile-name {value}",
+            "help": "Name of the CDN profile which is unique within the resource group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "OriginShow",
+      "definiteArgument": "cdn origin show",
       "settingsClass": {
         "properties": [
           {
@@ -102,7 +240,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the custom domain."
+            "help": "Name of the origin which is unique within the endpoint."
           },
           {
             "name": "ProfileName",
@@ -118,133 +256,6 @@
           }
         ]
       }
-    },
-    {
-      "postfix": "CustomDomainDisableHttps",
-      "definiteArgument": "cdn custom-domain disable-https",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EndpointName",
-            "type": "string",
-            "format": "--endpoint-name {value}",
-            "help": "Name of the endpoint under the profile which is unique globally."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the custom domain."
-          },
-          {
-            "name": "ProfileName",
-            "type": "string",
-            "format": "--profile-name {value}",
-            "help": "Name of the CDN profile which is unique within the resource group."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CustomDomainEnableHttps",
-      "definiteArgument": "cdn custom-domain enable-https",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EndpointName",
-            "type": "string",
-            "format": "--endpoint-name {value}",
-            "help": "Name of the endpoint under the profile which is unique globally."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the custom domain."
-          },
-          {
-            "name": "ProfileName",
-            "type": "string",
-            "format": "--profile-name {value}",
-            "help": "Name of the CDN profile which is unique within the resource group."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CustomDomainList",
-      "definiteArgument": "cdn custom-domain list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EndpointName",
-            "type": "string",
-            "format": "--endpoint-name {value}",
-            "help": "Name of the endpoint under the profile which is unique globally."
-          },
-          {
-            "name": "ProfileName",
-            "type": "string",
-            "format": "--profile-name {value}",
-            "help": "Name of the CDN profile which is unique within the resource group."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CustomDomainShow",
-      "definiteArgument": "cdn custom-domain show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EndpointName",
-            "type": "string",
-            "format": "--endpoint-name {value}",
-            "help": "Name of the endpoint under the profile which is unique globally."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the custom domain."
-          },
-          {
-            "name": "ProfileName",
-            "type": "string",
-            "format": "--profile-name {value}",
-            "help": "Name of the CDN profile which is unique within the resource group."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EdgeNodeList",
-      "definiteArgument": "cdn edge-node list",
-      "settingsClass": {}
     },
     {
       "postfix": "EndpointCreate",
@@ -651,8 +662,8 @@
       }
     },
     {
-      "postfix": "OriginList",
-      "definiteArgument": "cdn origin list",
+      "postfix": "CustomDomainCreate",
+      "definiteArgument": "cdn custom-domain create",
       "settingsClass": {
         "properties": [
           {
@@ -662,61 +673,21 @@
             "help": "Name of the endpoint under the profile which is unique globally."
           },
           {
-            "name": "ProfileName",
+            "name": "Hostname",
             "type": "string",
-            "format": "--profile-name {value}",
-            "help": "Name of the CDN profile which is unique within the resource group."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "OriginShow",
-      "definiteArgument": "cdn origin show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EndpointName",
-            "type": "string",
-            "format": "--endpoint-name {value}",
-            "help": "Name of the endpoint under the profile which is unique globally."
+            "format": "--hostname {value}",
+            "help": "The host name of the custom domain. Must be a domain name."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the origin which is unique within the endpoint."
+            "help": "Name of the custom domain."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
-            "help": "Name of the CDN profile which is unique within the resource group."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ProfileCreate",
-      "definiteArgument": "cdn profile create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
@@ -732,12 +703,6 @@
             "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
-            "name": "Sku",
-            "type": "CdnProfileCreateSku",
-            "format": "--sku {value}",
-            "help": "The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile. Defaults to Standard_Akamai."
-          },
-          {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
@@ -747,14 +712,26 @@
       }
     },
     {
-      "postfix": "ProfileDelete",
-      "definiteArgument": "cdn profile delete",
+      "postfix": "CustomDomainDelete",
+      "definiteArgument": "cdn custom-domain delete",
       "settingsClass": {
         "properties": [
+          {
+            "name": "EndpointName",
+            "type": "string",
+            "format": "--endpoint-name {value}",
+            "help": "Name of the endpoint under the profile which is unique globally."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "help": "Name of the custom domain."
+          },
+          {
+            "name": "ProfileName",
+            "type": "string",
+            "format": "--profile-name {value}",
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
@@ -767,28 +744,26 @@
       }
     },
     {
-      "postfix": "ProfileList",
-      "definiteArgument": "cdn profile list",
+      "postfix": "CustomDomainDisableHttps",
+      "definiteArgument": "cdn custom-domain disable-https",
       "settingsClass": {
         "properties": [
           {
-            "name": "ResourceGroup",
+            "name": "EndpointName",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ProfileShow",
-      "definiteArgument": "cdn profile show",
-      "settingsClass": {
-        "properties": [
+            "format": "--endpoint-name {value}",
+            "help": "Name of the endpoint under the profile which is unique globally."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "help": "Name of the custom domain."
+          },
+          {
+            "name": "ProfileName",
+            "type": "string",
+            "format": "--profile-name {value}",
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
@@ -801,14 +776,26 @@
       }
     },
     {
-      "postfix": "ProfileUpdate",
-      "definiteArgument": "cdn profile update",
+      "postfix": "CustomDomainEnableHttps",
+      "definiteArgument": "cdn custom-domain enable-https",
       "settingsClass": {
         "properties": [
+          {
+            "name": "EndpointName",
+            "type": "string",
+            "format": "--endpoint-name {value}",
+            "help": "Name of the endpoint under the profile which is unique globally."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "help": "Name of the custom domain."
+          },
+          {
+            "name": "ProfileName",
+            "type": "string",
+            "format": "--profile-name {value}",
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
@@ -816,49 +803,25 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
       }
     },
     {
-      "postfix": "ProfileUsage",
-      "definiteArgument": "cdn profile usage",
+      "postfix": "CustomDomainList",
+      "definiteArgument": "cdn custom-domain list",
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
+            "name": "EndpointName",
             "type": "string",
-            "format": "--name {value}",
+            "format": "--endpoint-name {value}",
+            "help": "Name of the endpoint under the profile which is unique globally."
+          },
+          {
+            "name": "ProfileName",
+            "type": "string",
+            "format": "--profile-name {value}",
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
@@ -869,6 +832,43 @@
           }
         ]
       }
+    },
+    {
+      "postfix": "CustomDomainShow",
+      "definiteArgument": "cdn custom-domain show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EndpointName",
+            "type": "string",
+            "format": "--endpoint-name {value}",
+            "help": "Name of the endpoint under the profile which is unique globally."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the custom domain."
+          },
+          {
+            "name": "ProfileName",
+            "type": "string",
+            "format": "--profile-name {value}",
+            "help": "Name of the CDN profile which is unique within the resource group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EdgeNodeList",
+      "definiteArgument": "cdn edge-node list",
+      "settingsClass": {}
     }
   ],
   "commonTaskProperties": [
@@ -905,15 +905,6 @@
   ],
   "enumerations": [
     {
-      "name": "CdnEndpointQueryStringCaching",
-      "values": [
-        "bypasscaching",
-        "ignorequerystring",
-        "notset",
-        "usequerystring"
-      ]
-    },
-    {
       "name": "CdnProfileCreateSku",
       "values": [
         "custom_verizon",
@@ -921,6 +912,15 @@
         "standard_akamai",
         "standard_chinacdn",
         "standard_verizon"
+      ]
+    },
+    {
+      "name": "CdnEndpointQueryStringCaching",
+      "values": [
+        "bypasscaching",
+        "ignorequerystring",
+        "notset",
+        "usequerystring"
       ]
     }
   ]

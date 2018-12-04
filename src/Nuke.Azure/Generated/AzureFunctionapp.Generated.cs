@@ -108,22 +108,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureFunctionappConfigSet(Configure<AzureFunctionappConfigSetSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigSetSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureFunctionappConfigShow(Configure<AzureFunctionappConfigShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureFunctionappCorsAdd(Configure<AzureFunctionappCorsAddSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappCorsAddSettings());
@@ -180,57 +164,17 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureFunctionappConfigAppsettingsDelete(Configure<AzureFunctionappConfigAppsettingsDeleteSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureFunctionappConfigSet(Configure<AzureFunctionappConfigSetSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigAppsettingsDeleteSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigSetSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureFunctionappConfigAppsettingsList(Configure<AzureFunctionappConfigAppsettingsListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureFunctionappConfigShow(Configure<AzureFunctionappConfigShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigAppsettingsListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureFunctionappConfigAppsettingsSet(Configure<AzureFunctionappConfigAppsettingsSetSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigAppsettingsSetSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureFunctionappConfigHostnameAdd(Configure<AzureFunctionappConfigHostnameAddSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigHostnameAddSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureFunctionappConfigHostnameDelete(Configure<AzureFunctionappConfigHostnameDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigHostnameDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureFunctionappConfigHostnameGetExternalIp(Configure<AzureFunctionappConfigHostnameGetExternalIpSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigHostnameGetExternalIpSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureFunctionappConfigHostnameList(Configure<AzureFunctionappConfigHostnameListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigHostnameListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -271,6 +215,62 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureFunctionappConfigSslUpload(Configure<AzureFunctionappConfigSslUploadSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigSslUploadSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureFunctionappConfigHostnameAdd(Configure<AzureFunctionappConfigHostnameAddSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigHostnameAddSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureFunctionappConfigHostnameDelete(Configure<AzureFunctionappConfigHostnameDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigHostnameDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureFunctionappConfigHostnameGetExternalIp(Configure<AzureFunctionappConfigHostnameGetExternalIpSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigHostnameGetExternalIpSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureFunctionappConfigHostnameList(Configure<AzureFunctionappConfigHostnameListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigHostnameListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureFunctionappConfigAppsettingsDelete(Configure<AzureFunctionappConfigAppsettingsDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigAppsettingsDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureFunctionappConfigAppsettingsList(Configure<AzureFunctionappConfigAppsettingsListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigAppsettingsListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureFunctionappConfigAppsettingsSet(Configure<AzureFunctionappConfigAppsettingsSetSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigAppsettingsSetSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -723,130 +723,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureFunctionappConfigSetSettings
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureFunctionappConfigSetSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>Name of the function app.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running.</p></summary>
-        public virtual bool? AlwaysOn { get; internal set; }
-        /// <summary><p>Enable or disable auto heal.</p></summary>
-        public virtual bool? AutoHealEnabled { get; internal set; }
-        /// <summary><p>Set the Ftps state value for an app. Default value is 'AllAllowed'.</p></summary>
-        public virtual FunctionappConfigSetFtpsState FtpsState { get; internal set; }
-        /// <summary><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
-        public virtual bool? Http20Enabled { get; internal set; }
-        /// <summary><p>The java container, e.g., Tomcat, Jetty.</p></summary>
-        public virtual string JavaContainer { get; internal set; }
-        /// <summary><p>The version of the java container, e.g., '8.0.23' for Tomcat.</p></summary>
-        public virtual string JavaContainerVersion { get; internal set; }
-        /// <summary><p>The version used to run your web app if using Java, e.g., '1.7' for Java 7, '1.8' for Java 8.</p></summary>
-        public virtual string JavaVersion { get; internal set; }
-        /// <summary><p>The runtime stack used for your linux-based webapp, e.g., "RUBY|2.3", "NODE|6.6", "PHP|5.6", "DOTNETCORE|1.1.0". See <a href="https://aka.ms/linux-stacks">https://aka.ms/linux-stacks</a> for more info.</p></summary>
-        public virtual string LinuxFxVersion { get; internal set; }
-        /// <summary><p>The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'.</p></summary>
-        public virtual string MinTlsVersion { get; internal set; }
-        /// <summary><p>The version used to run your web app if using .NET Framework, e.g., 'v4.0' for .NET 4.6 and 'v3.0' for .NET 3.5.</p></summary>
-        public virtual string NetFrameworkVersion { get; internal set; }
-        /// <summary><p>The version used to run your web app if using PHP, e.g., 5.5, 5.6, 7.0.</p></summary>
-        public virtual string PhpVersion { get; internal set; }
-        /// <summary><p>The version used to run your web app if using Python, e.g., 2.7, 3.4.</p></summary>
-        public virtual string PythonVersion { get; internal set; }
-        /// <summary><p>Enable or disable remote debugging.</p></summary>
-        public virtual bool? RemoteDebuggingEnabled { get; internal set; }
-        /// <summary><p>The startup file for linux hosted web apps, e.g. 'process.json' for Node.js web.</p></summary>
-        public virtual string StartupFile { get; internal set; }
-        /// <summary><p>Use 32 bits worker process or not.</p></summary>
-        public virtual bool? Use32bitWorkerProcess { get; internal set; }
-        /// <summary><p>Enable or disable web sockets.</p></summary>
-        public virtual bool? WebSocketsEnabled { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("functionapp config set")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--always-on", AlwaysOn)
-              .Add("--auto-heal-enabled", AutoHealEnabled)
-              .Add("--ftps-state {value}", FtpsState)
-              .Add("--http20-enabled", Http20Enabled)
-              .Add("--java-container {value}", JavaContainer)
-              .Add("--java-container-version {value}", JavaContainerVersion)
-              .Add("--java-version {value}", JavaVersion)
-              .Add("--linux-fx-version {value}", LinuxFxVersion)
-              .Add("--min-tls-version {value}", MinTlsVersion)
-              .Add("--net-framework-version {value}", NetFrameworkVersion)
-              .Add("--php-version {value}", PhpVersion)
-              .Add("--python-version {value}", PythonVersion)
-              .Add("--remote-debugging-enabled", RemoteDebuggingEnabled)
-              .Add("--startup-file {value}", StartupFile)
-              .Add("--use-32bit-worker-process", Use32bitWorkerProcess)
-              .Add("--web-sockets-enabled", WebSocketsEnabled)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureFunctionappConfigShowSettings
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureFunctionappConfigShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>Name of the function app.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("functionapp config show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureFunctionappCorsAddSettings
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
@@ -1127,12 +1003,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureFunctionappConfigAppsettingsDeleteSettings
+    #region AzureFunctionappConfigSetSettings
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureFunctionappConfigAppsettingsDeleteSettings : ToolSettings
+    public partial class AzureFunctionappConfigSetSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
@@ -1140,9 +1016,38 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated app setting names.</p></summary>
-        public virtual IReadOnlyList<string> SettingNames => SettingNamesInternal.AsReadOnly();
-        internal List<string> SettingNamesInternal { get; set; } = new List<string>();
+        /// <summary><p>Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running.</p></summary>
+        public virtual bool? AlwaysOn { get; internal set; }
+        /// <summary><p>Enable or disable auto heal.</p></summary>
+        public virtual bool? AutoHealEnabled { get; internal set; }
+        /// <summary><p>Set the Ftps state value for an app. Default value is 'AllAllowed'.</p></summary>
+        public virtual FunctionappConfigSetFtpsState FtpsState { get; internal set; }
+        /// <summary><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
+        public virtual bool? Http20Enabled { get; internal set; }
+        /// <summary><p>The java container, e.g., Tomcat, Jetty.</p></summary>
+        public virtual string JavaContainer { get; internal set; }
+        /// <summary><p>The version of the java container, e.g., '8.0.23' for Tomcat.</p></summary>
+        public virtual string JavaContainerVersion { get; internal set; }
+        /// <summary><p>The version used to run your web app if using Java, e.g., '1.7' for Java 7, '1.8' for Java 8.</p></summary>
+        public virtual string JavaVersion { get; internal set; }
+        /// <summary><p>The runtime stack used for your linux-based webapp, e.g., "RUBY|2.3", "NODE|6.6", "PHP|5.6", "DOTNETCORE|1.1.0". See <a href="https://aka.ms/linux-stacks">https://aka.ms/linux-stacks</a> for more info.</p></summary>
+        public virtual string LinuxFxVersion { get; internal set; }
+        /// <summary><p>The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'.</p></summary>
+        public virtual string MinTlsVersion { get; internal set; }
+        /// <summary><p>The version used to run your web app if using .NET Framework, e.g., 'v4.0' for .NET 4.6 and 'v3.0' for .NET 3.5.</p></summary>
+        public virtual string NetFrameworkVersion { get; internal set; }
+        /// <summary><p>The version used to run your web app if using PHP, e.g., 5.5, 5.6, 7.0.</p></summary>
+        public virtual string PhpVersion { get; internal set; }
+        /// <summary><p>The version used to run your web app if using Python, e.g., 2.7, 3.4.</p></summary>
+        public virtual string PythonVersion { get; internal set; }
+        /// <summary><p>Enable or disable remote debugging.</p></summary>
+        public virtual bool? RemoteDebuggingEnabled { get; internal set; }
+        /// <summary><p>The startup file for linux hosted web apps, e.g. 'process.json' for Node.js web.</p></summary>
+        public virtual string StartupFile { get; internal set; }
+        /// <summary><p>Use 32 bits worker process or not.</p></summary>
+        public virtual bool? Use32bitWorkerProcess { get; internal set; }
+        /// <summary><p>Enable or disable web sockets.</p></summary>
+        public virtual bool? WebSocketsEnabled { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1156,10 +1061,25 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("functionapp config appsettings delete")
+              .Add("functionapp config set")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--setting-names {value}", SettingNames, separator: ' ')
+              .Add("--always-on", AlwaysOn)
+              .Add("--auto-heal-enabled", AutoHealEnabled)
+              .Add("--ftps-state {value}", FtpsState)
+              .Add("--http20-enabled", Http20Enabled)
+              .Add("--java-container {value}", JavaContainer)
+              .Add("--java-container-version {value}", JavaContainerVersion)
+              .Add("--java-version {value}", JavaVersion)
+              .Add("--linux-fx-version {value}", LinuxFxVersion)
+              .Add("--min-tls-version {value}", MinTlsVersion)
+              .Add("--net-framework-version {value}", NetFrameworkVersion)
+              .Add("--php-version {value}", PhpVersion)
+              .Add("--python-version {value}", PythonVersion)
+              .Add("--remote-debugging-enabled", RemoteDebuggingEnabled)
+              .Add("--startup-file {value}", StartupFile)
+              .Add("--use-32bit-worker-process", Use32bitWorkerProcess)
+              .Add("--web-sockets-enabled", WebSocketsEnabled)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1169,178 +1089,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureFunctionappConfigAppsettingsListSettings
+    #region AzureFunctionappConfigShowSettings
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureFunctionappConfigAppsettingsListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("functionapp config appsettings list")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureFunctionappConfigAppsettingsSetSettings
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureFunctionappConfigAppsettingsSetSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>Name of the function app.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        public virtual IReadOnlyDictionary<string, object> Settings => SettingsInternal.AsReadOnly();
-        internal Dictionary<string, object> SettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-        /// <summary><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        public virtual IReadOnlyDictionary<string, object> SlotSettings => SlotSettingsInternal.AsReadOnly();
-        internal Dictionary<string, object> SlotSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("functionapp config appsettings set")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--settings {value}", Settings, "{key}={value}", separator: ' ')
-              .Add("--slot-settings {value}", SlotSettings, "{key}={value}", separator: ' ')
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureFunctionappConfigHostnameAddSettings
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureFunctionappConfigHostnameAddSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>Hostname assigned to the site, such as custom domains.</p></summary>
-        public virtual string Hostname { get; internal set; }
-        /// <summary><p>Name of the function app.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("functionapp config hostname add")
-              .Add("--hostname {value}", Hostname)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureFunctionappConfigHostnameDeleteSettings
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureFunctionappConfigHostnameDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>Hostname assigned to the site, such as custom domains.</p></summary>
-        public virtual string Hostname { get; internal set; }
-        /// <summary><p>Name of the function app.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("functionapp config hostname delete")
-              .Add("--hostname {value}", Hostname)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureFunctionappConfigHostnameGetExternalIpSettings
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureFunctionappConfigHostnameGetExternalIpSettings : ToolSettings
+    public partial class AzureFunctionappConfigShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
@@ -1361,47 +1115,9 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("functionapp config hostname get-external-ip")
+              .Add("functionapp config show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureFunctionappConfigHostnameListSettings
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureFunctionappConfigHostnameListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        public virtual string WebappName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("functionapp config hostname list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--webapp-name {value}", WebappName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1613,6 +1329,290 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureFunctionappConfigHostnameAddSettings
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureFunctionappConfigHostnameAddSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
+        /// <summary><p>Hostname assigned to the site, such as custom domains.</p></summary>
+        public virtual string Hostname { get; internal set; }
+        /// <summary><p>Name of the function app.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("functionapp config hostname add")
+              .Add("--hostname {value}", Hostname)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureFunctionappConfigHostnameDeleteSettings
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureFunctionappConfigHostnameDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
+        /// <summary><p>Hostname assigned to the site, such as custom domains.</p></summary>
+        public virtual string Hostname { get; internal set; }
+        /// <summary><p>Name of the function app.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("functionapp config hostname delete")
+              .Add("--hostname {value}", Hostname)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureFunctionappConfigHostnameGetExternalIpSettings
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureFunctionappConfigHostnameGetExternalIpSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
+        /// <summary><p>Name of the function app.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("functionapp config hostname get-external-ip")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureFunctionappConfigHostnameListSettings
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureFunctionappConfigHostnameListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string WebappName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("functionapp config hostname list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--webapp-name {value}", WebappName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureFunctionappConfigAppsettingsDeleteSettings
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureFunctionappConfigAppsettingsDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
+        /// <summary><p>Name of the function app.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated app setting names.</p></summary>
+        public virtual IReadOnlyList<string> SettingNames => SettingNamesInternal.AsReadOnly();
+        internal List<string> SettingNamesInternal { get; set; } = new List<string>();
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("functionapp config appsettings delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--setting-names {value}", SettingNames, separator: ' ')
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureFunctionappConfigAppsettingsListSettings
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureFunctionappConfigAppsettingsListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
+        /// <summary><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("functionapp config appsettings list")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureFunctionappConfigAppsettingsSetSettings
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureFunctionappConfigAppsettingsSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
+        /// <summary><p>Name of the function app.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        public virtual IReadOnlyDictionary<string, object> Settings => SettingsInternal.AsReadOnly();
+        internal Dictionary<string, object> SettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+        /// <summary><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        public virtual IReadOnlyDictionary<string, object> SlotSettings => SlotSettingsInternal.AsReadOnly();
+        internal Dictionary<string, object> SlotSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("functionapp config appsettings set")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--settings {value}", Settings, "{key}={value}", separator: ' ')
+              .Add("--slot-settings {value}", SlotSettings, "{key}={value}", separator: ' ')
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureFunctionappDeploymentSourceConfigSettings
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
@@ -1752,6 +1752,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>A zip file path for deployment.</p></summary>
         public virtual string Src { get; internal set; }
+        /// <summary><p>Configurable timeout in seconds for checking the status of deployment.</p></summary>
+        public virtual string Timeout { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1769,6 +1771,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--src {value}", Src)
+              .Add("--timeout {value}", Timeout)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3401,706 +3404,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureFunctionappConfigSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappConfigSetSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetName(this AzureFunctionappConfigSetSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetName(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetResourceGroup(this AzureFunctionappConfigSetSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetResourceGroup(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AlwaysOn
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.AlwaysOn"/>.</em></p><p>Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetAlwaysOn(this AzureFunctionappConfigSetSettings toolSettings, bool? alwaysOn)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AlwaysOn = alwaysOn;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.AlwaysOn"/>.</em></p><p>Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetAlwaysOn(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AlwaysOn = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureFunctionappConfigSetSettings.AlwaysOn"/>.</em></p><p>Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings EnableAlwaysOn(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AlwaysOn = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureFunctionappConfigSetSettings.AlwaysOn"/>.</em></p><p>Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings DisableAlwaysOn(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AlwaysOn = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureFunctionappConfigSetSettings.AlwaysOn"/>.</em></p><p>Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ToggleAlwaysOn(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AlwaysOn = !toolSettings.AlwaysOn;
-            return toolSettings;
-        }
-        #endregion
-        #region AutoHealEnabled
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.AutoHealEnabled"/>.</em></p><p>Enable or disable auto heal.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetAutoHealEnabled(this AzureFunctionappConfigSetSettings toolSettings, bool? autoHealEnabled)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoHealEnabled = autoHealEnabled;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.AutoHealEnabled"/>.</em></p><p>Enable or disable auto heal.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetAutoHealEnabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoHealEnabled = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureFunctionappConfigSetSettings.AutoHealEnabled"/>.</em></p><p>Enable or disable auto heal.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings EnableAutoHealEnabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoHealEnabled = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureFunctionappConfigSetSettings.AutoHealEnabled"/>.</em></p><p>Enable or disable auto heal.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings DisableAutoHealEnabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoHealEnabled = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureFunctionappConfigSetSettings.AutoHealEnabled"/>.</em></p><p>Enable or disable auto heal.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ToggleAutoHealEnabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoHealEnabled = !toolSettings.AutoHealEnabled;
-            return toolSettings;
-        }
-        #endregion
-        #region FtpsState
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.FtpsState"/>.</em></p><p>Set the Ftps state value for an app. Default value is 'AllAllowed'.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetFtpsState(this AzureFunctionappConfigSetSettings toolSettings, FunctionappConfigSetFtpsState ftpsState)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FtpsState = ftpsState;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.FtpsState"/>.</em></p><p>Set the Ftps state value for an app. Default value is 'AllAllowed'.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetFtpsState(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FtpsState = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Http20Enabled
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetHttp20Enabled(this AzureFunctionappConfigSetSettings toolSettings, bool? http20Enabled)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Http20Enabled = http20Enabled;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetHttp20Enabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Http20Enabled = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureFunctionappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings EnableHttp20Enabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Http20Enabled = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureFunctionappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings DisableHttp20Enabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Http20Enabled = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureFunctionappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ToggleHttp20Enabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Http20Enabled = !toolSettings.Http20Enabled;
-            return toolSettings;
-        }
-        #endregion
-        #region JavaContainer
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.JavaContainer"/>.</em></p><p>The java container, e.g., Tomcat, Jetty.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetJavaContainer(this AzureFunctionappConfigSetSettings toolSettings, string javaContainer)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.JavaContainer = javaContainer;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.JavaContainer"/>.</em></p><p>The java container, e.g., Tomcat, Jetty.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetJavaContainer(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.JavaContainer = null;
-            return toolSettings;
-        }
-        #endregion
-        #region JavaContainerVersion
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.JavaContainerVersion"/>.</em></p><p>The version of the java container, e.g., '8.0.23' for Tomcat.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetJavaContainerVersion(this AzureFunctionappConfigSetSettings toolSettings, string javaContainerVersion)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.JavaContainerVersion = javaContainerVersion;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.JavaContainerVersion"/>.</em></p><p>The version of the java container, e.g., '8.0.23' for Tomcat.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetJavaContainerVersion(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.JavaContainerVersion = null;
-            return toolSettings;
-        }
-        #endregion
-        #region JavaVersion
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.JavaVersion"/>.</em></p><p>The version used to run your web app if using Java, e.g., '1.7' for Java 7, '1.8' for Java 8.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetJavaVersion(this AzureFunctionappConfigSetSettings toolSettings, string javaVersion)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.JavaVersion = javaVersion;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.JavaVersion"/>.</em></p><p>The version used to run your web app if using Java, e.g., '1.7' for Java 7, '1.8' for Java 8.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetJavaVersion(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.JavaVersion = null;
-            return toolSettings;
-        }
-        #endregion
-        #region LinuxFxVersion
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.LinuxFxVersion"/>.</em></p><p>The runtime stack used for your linux-based webapp, e.g., "RUBY|2.3", "NODE|6.6", "PHP|5.6", "DOTNETCORE|1.1.0". See <a href="https://aka.ms/linux-stacks">https://aka.ms/linux-stacks</a> for more info.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetLinuxFxVersion(this AzureFunctionappConfigSetSettings toolSettings, string linuxFxVersion)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LinuxFxVersion = linuxFxVersion;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.LinuxFxVersion"/>.</em></p><p>The runtime stack used for your linux-based webapp, e.g., "RUBY|2.3", "NODE|6.6", "PHP|5.6", "DOTNETCORE|1.1.0". See <a href="https://aka.ms/linux-stacks">https://aka.ms/linux-stacks</a> for more info.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetLinuxFxVersion(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LinuxFxVersion = null;
-            return toolSettings;
-        }
-        #endregion
-        #region MinTlsVersion
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.MinTlsVersion"/>.</em></p><p>The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetMinTlsVersion(this AzureFunctionappConfigSetSettings toolSettings, string minTlsVersion)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MinTlsVersion = minTlsVersion;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.MinTlsVersion"/>.</em></p><p>The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetMinTlsVersion(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MinTlsVersion = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NetFrameworkVersion
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.NetFrameworkVersion"/>.</em></p><p>The version used to run your web app if using .NET Framework, e.g., 'v4.0' for .NET 4.6 and 'v3.0' for .NET 3.5.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetNetFrameworkVersion(this AzureFunctionappConfigSetSettings toolSettings, string netFrameworkVersion)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NetFrameworkVersion = netFrameworkVersion;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.NetFrameworkVersion"/>.</em></p><p>The version used to run your web app if using .NET Framework, e.g., 'v4.0' for .NET 4.6 and 'v3.0' for .NET 3.5.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetNetFrameworkVersion(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NetFrameworkVersion = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PhpVersion
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.PhpVersion"/>.</em></p><p>The version used to run your web app if using PHP, e.g., 5.5, 5.6, 7.0.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetPhpVersion(this AzureFunctionappConfigSetSettings toolSettings, string phpVersion)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PhpVersion = phpVersion;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.PhpVersion"/>.</em></p><p>The version used to run your web app if using PHP, e.g., 5.5, 5.6, 7.0.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetPhpVersion(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PhpVersion = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PythonVersion
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.PythonVersion"/>.</em></p><p>The version used to run your web app if using Python, e.g., 2.7, 3.4.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetPythonVersion(this AzureFunctionappConfigSetSettings toolSettings, string pythonVersion)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PythonVersion = pythonVersion;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.PythonVersion"/>.</em></p><p>The version used to run your web app if using Python, e.g., 2.7, 3.4.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetPythonVersion(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PythonVersion = null;
-            return toolSettings;
-        }
-        #endregion
-        #region RemoteDebuggingEnabled
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.RemoteDebuggingEnabled"/>.</em></p><p>Enable or disable remote debugging.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetRemoteDebuggingEnabled(this AzureFunctionappConfigSetSettings toolSettings, bool? remoteDebuggingEnabled)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RemoteDebuggingEnabled = remoteDebuggingEnabled;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.RemoteDebuggingEnabled"/>.</em></p><p>Enable or disable remote debugging.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetRemoteDebuggingEnabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RemoteDebuggingEnabled = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureFunctionappConfigSetSettings.RemoteDebuggingEnabled"/>.</em></p><p>Enable or disable remote debugging.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings EnableRemoteDebuggingEnabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RemoteDebuggingEnabled = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureFunctionappConfigSetSettings.RemoteDebuggingEnabled"/>.</em></p><p>Enable or disable remote debugging.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings DisableRemoteDebuggingEnabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RemoteDebuggingEnabled = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureFunctionappConfigSetSettings.RemoteDebuggingEnabled"/>.</em></p><p>Enable or disable remote debugging.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ToggleRemoteDebuggingEnabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RemoteDebuggingEnabled = !toolSettings.RemoteDebuggingEnabled;
-            return toolSettings;
-        }
-        #endregion
-        #region StartupFile
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.StartupFile"/>.</em></p><p>The startup file for linux hosted web apps, e.g. 'process.json' for Node.js web.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetStartupFile(this AzureFunctionappConfigSetSettings toolSettings, string startupFile)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartupFile = startupFile;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.StartupFile"/>.</em></p><p>The startup file for linux hosted web apps, e.g. 'process.json' for Node.js web.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetStartupFile(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartupFile = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Use32bitWorkerProcess
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Use32bitWorkerProcess"/>.</em></p><p>Use 32 bits worker process or not.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetUse32bitWorkerProcess(this AzureFunctionappConfigSetSettings toolSettings, bool? use32bitWorkerProcess)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Use32bitWorkerProcess = use32bitWorkerProcess;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Use32bitWorkerProcess"/>.</em></p><p>Use 32 bits worker process or not.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetUse32bitWorkerProcess(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Use32bitWorkerProcess = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureFunctionappConfigSetSettings.Use32bitWorkerProcess"/>.</em></p><p>Use 32 bits worker process or not.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings EnableUse32bitWorkerProcess(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Use32bitWorkerProcess = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureFunctionappConfigSetSettings.Use32bitWorkerProcess"/>.</em></p><p>Use 32 bits worker process or not.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings DisableUse32bitWorkerProcess(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Use32bitWorkerProcess = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureFunctionappConfigSetSettings.Use32bitWorkerProcess"/>.</em></p><p>Use 32 bits worker process or not.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ToggleUse32bitWorkerProcess(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Use32bitWorkerProcess = !toolSettings.Use32bitWorkerProcess;
-            return toolSettings;
-        }
-        #endregion
-        #region WebSocketsEnabled
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.WebSocketsEnabled"/>.</em></p><p>Enable or disable web sockets.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetWebSocketsEnabled(this AzureFunctionappConfigSetSettings toolSettings, bool? webSocketsEnabled)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebSocketsEnabled = webSocketsEnabled;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.WebSocketsEnabled"/>.</em></p><p>Enable or disable web sockets.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetWebSocketsEnabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebSocketsEnabled = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureFunctionappConfigSetSettings.WebSocketsEnabled"/>.</em></p><p>Enable or disable web sockets.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings EnableWebSocketsEnabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebSocketsEnabled = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureFunctionappConfigSetSettings.WebSocketsEnabled"/>.</em></p><p>Enable or disable web sockets.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings DisableWebSocketsEnabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebSocketsEnabled = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureFunctionappConfigSetSettings.WebSocketsEnabled"/>.</em></p><p>Enable or disable web sockets.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ToggleWebSocketsEnabled(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebSocketsEnabled = !toolSettings.WebSocketsEnabled;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetDebug(this AzureFunctionappConfigSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetDebug(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetHelp(this AzureFunctionappConfigSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetHelp(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetOutput(this AzureFunctionappConfigSetSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetOutput(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetQuery(this AzureFunctionappConfigSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetQuery(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings SetVerbose(this AzureFunctionappConfigSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigSetSettings ResetVerbose(this AzureFunctionappConfigSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureFunctionappConfigShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappConfigShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings SetName(this AzureFunctionappConfigShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings ResetName(this AzureFunctionappConfigShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings SetResourceGroup(this AzureFunctionappConfigShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings ResetResourceGroup(this AzureFunctionappConfigShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings SetDebug(this AzureFunctionappConfigShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings ResetDebug(this AzureFunctionappConfigShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings SetHelp(this AzureFunctionappConfigShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings ResetHelp(this AzureFunctionappConfigShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings SetOutput(this AzureFunctionappConfigShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings ResetOutput(this AzureFunctionappConfigShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings SetQuery(this AzureFunctionappConfigShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings ResetQuery(this AzureFunctionappConfigShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings SetVerbose(this AzureFunctionappConfigShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigShowSettings ResetVerbose(this AzureFunctionappConfigShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureFunctionappCorsAddSettingsExtensions
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
@@ -5195,24 +4498,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureFunctionappConfigAppsettingsDeleteSettingsExtensions
+    #region AzureFunctionappConfigSetSettingsExtensions
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappConfigAppsettingsDeleteSettingsExtensions
+    public static partial class AzureFunctionappConfigSetSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings SetName(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, string name)
+        public static AzureFunctionappConfigSetSettings SetName(this AzureFunctionappConfigSetSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetName(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        public static AzureFunctionappConfigSetSettings ResetName(this AzureFunctionappConfigSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -5220,95 +4523,467 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings SetResourceGroup(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, string resourceGroup)
+        public static AzureFunctionappConfigSetSettings SetResourceGroup(this AzureFunctionappConfigSetSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetResourceGroup(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        public static AzureFunctionappConfigSetSettings ResetResourceGroup(this AzureFunctionappConfigSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region SettingNames
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/> to a new list.</em></p><p>Space-separated app setting names.</p></summary>
+        #region AlwaysOn
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.AlwaysOn"/>.</em></p><p>Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings SetSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, params string[] settingNames)
+        public static AzureFunctionappConfigSetSettings SetAlwaysOn(this AzureFunctionappConfigSetSettings toolSettings, bool? alwaysOn)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingNamesInternal = settingNames.ToList();
+            toolSettings.AlwaysOn = alwaysOn;
             return toolSettings;
         }
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/> to a new list.</em></p><p>Space-separated app setting names.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.AlwaysOn"/>.</em></p><p>Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings SetSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, IEnumerable<string> settingNames)
+        public static AzureFunctionappConfigSetSettings ResetAlwaysOn(this AzureFunctionappConfigSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingNamesInternal = settingNames.ToList();
+            toolSettings.AlwaysOn = null;
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/>.</em></p><p>Space-separated app setting names.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureFunctionappConfigSetSettings.AlwaysOn"/>.</em></p><p>Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings AddSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, params string[] settingNames)
+        public static AzureFunctionappConfigSetSettings EnableAlwaysOn(this AzureFunctionappConfigSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingNamesInternal.AddRange(settingNames);
+            toolSettings.AlwaysOn = true;
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/>.</em></p><p>Space-separated app setting names.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureFunctionappConfigSetSettings.AlwaysOn"/>.</em></p><p>Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings AddSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, IEnumerable<string> settingNames)
+        public static AzureFunctionappConfigSetSettings DisableAlwaysOn(this AzureFunctionappConfigSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingNamesInternal.AddRange(settingNames);
+            toolSettings.AlwaysOn = false;
             return toolSettings;
         }
-        /// <summary><p><em>Clears <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/>.</em></p><p>Space-separated app setting names.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureFunctionappConfigSetSettings.AlwaysOn"/>.</em></p><p>Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings ClearSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        public static AzureFunctionappConfigSetSettings ToggleAlwaysOn(this AzureFunctionappConfigSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingNamesInternal.Clear();
+            toolSettings.AlwaysOn = !toolSettings.AlwaysOn;
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/>.</em></p><p>Space-separated app setting names.</p></summary>
+        #endregion
+        #region AutoHealEnabled
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.AutoHealEnabled"/>.</em></p><p>Enable or disable auto heal.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings RemoveSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, params string[] settingNames)
+        public static AzureFunctionappConfigSetSettings SetAutoHealEnabled(this AzureFunctionappConfigSetSettings toolSettings, bool? autoHealEnabled)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(settingNames);
-            toolSettings.SettingNamesInternal.RemoveAll(x => hashSet.Contains(x));
+            toolSettings.AutoHealEnabled = autoHealEnabled;
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/>.</em></p><p>Space-separated app setting names.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.AutoHealEnabled"/>.</em></p><p>Enable or disable auto heal.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings RemoveSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, IEnumerable<string> settingNames)
+        public static AzureFunctionappConfigSetSettings ResetAutoHealEnabled(this AzureFunctionappConfigSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(settingNames);
-            toolSettings.SettingNamesInternal.RemoveAll(x => hashSet.Contains(x));
+            toolSettings.AutoHealEnabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureFunctionappConfigSetSettings.AutoHealEnabled"/>.</em></p><p>Enable or disable auto heal.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings EnableAutoHealEnabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoHealEnabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureFunctionappConfigSetSettings.AutoHealEnabled"/>.</em></p><p>Enable or disable auto heal.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings DisableAutoHealEnabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoHealEnabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureFunctionappConfigSetSettings.AutoHealEnabled"/>.</em></p><p>Enable or disable auto heal.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ToggleAutoHealEnabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoHealEnabled = !toolSettings.AutoHealEnabled;
+            return toolSettings;
+        }
+        #endregion
+        #region FtpsState
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.FtpsState"/>.</em></p><p>Set the Ftps state value for an app. Default value is 'AllAllowed'.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetFtpsState(this AzureFunctionappConfigSetSettings toolSettings, FunctionappConfigSetFtpsState ftpsState)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FtpsState = ftpsState;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.FtpsState"/>.</em></p><p>Set the Ftps state value for an app. Default value is 'AllAllowed'.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetFtpsState(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FtpsState = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Http20Enabled
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetHttp20Enabled(this AzureFunctionappConfigSetSettings toolSettings, bool? http20Enabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Http20Enabled = http20Enabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetHttp20Enabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Http20Enabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureFunctionappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings EnableHttp20Enabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Http20Enabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureFunctionappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings DisableHttp20Enabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Http20Enabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureFunctionappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ToggleHttp20Enabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Http20Enabled = !toolSettings.Http20Enabled;
+            return toolSettings;
+        }
+        #endregion
+        #region JavaContainer
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.JavaContainer"/>.</em></p><p>The java container, e.g., Tomcat, Jetty.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetJavaContainer(this AzureFunctionappConfigSetSettings toolSettings, string javaContainer)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.JavaContainer = javaContainer;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.JavaContainer"/>.</em></p><p>The java container, e.g., Tomcat, Jetty.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetJavaContainer(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.JavaContainer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region JavaContainerVersion
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.JavaContainerVersion"/>.</em></p><p>The version of the java container, e.g., '8.0.23' for Tomcat.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetJavaContainerVersion(this AzureFunctionappConfigSetSettings toolSettings, string javaContainerVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.JavaContainerVersion = javaContainerVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.JavaContainerVersion"/>.</em></p><p>The version of the java container, e.g., '8.0.23' for Tomcat.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetJavaContainerVersion(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.JavaContainerVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region JavaVersion
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.JavaVersion"/>.</em></p><p>The version used to run your web app if using Java, e.g., '1.7' for Java 7, '1.8' for Java 8.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetJavaVersion(this AzureFunctionappConfigSetSettings toolSettings, string javaVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.JavaVersion = javaVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.JavaVersion"/>.</em></p><p>The version used to run your web app if using Java, e.g., '1.7' for Java 7, '1.8' for Java 8.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetJavaVersion(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.JavaVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LinuxFxVersion
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.LinuxFxVersion"/>.</em></p><p>The runtime stack used for your linux-based webapp, e.g., "RUBY|2.3", "NODE|6.6", "PHP|5.6", "DOTNETCORE|1.1.0". See <a href="https://aka.ms/linux-stacks">https://aka.ms/linux-stacks</a> for more info.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetLinuxFxVersion(this AzureFunctionappConfigSetSettings toolSettings, string linuxFxVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LinuxFxVersion = linuxFxVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.LinuxFxVersion"/>.</em></p><p>The runtime stack used for your linux-based webapp, e.g., "RUBY|2.3", "NODE|6.6", "PHP|5.6", "DOTNETCORE|1.1.0". See <a href="https://aka.ms/linux-stacks">https://aka.ms/linux-stacks</a> for more info.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetLinuxFxVersion(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LinuxFxVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MinTlsVersion
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.MinTlsVersion"/>.</em></p><p>The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetMinTlsVersion(this AzureFunctionappConfigSetSettings toolSettings, string minTlsVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MinTlsVersion = minTlsVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.MinTlsVersion"/>.</em></p><p>The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetMinTlsVersion(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MinTlsVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NetFrameworkVersion
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.NetFrameworkVersion"/>.</em></p><p>The version used to run your web app if using .NET Framework, e.g., 'v4.0' for .NET 4.6 and 'v3.0' for .NET 3.5.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetNetFrameworkVersion(this AzureFunctionappConfigSetSettings toolSettings, string netFrameworkVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NetFrameworkVersion = netFrameworkVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.NetFrameworkVersion"/>.</em></p><p>The version used to run your web app if using .NET Framework, e.g., 'v4.0' for .NET 4.6 and 'v3.0' for .NET 3.5.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetNetFrameworkVersion(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NetFrameworkVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PhpVersion
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.PhpVersion"/>.</em></p><p>The version used to run your web app if using PHP, e.g., 5.5, 5.6, 7.0.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetPhpVersion(this AzureFunctionappConfigSetSettings toolSettings, string phpVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PhpVersion = phpVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.PhpVersion"/>.</em></p><p>The version used to run your web app if using PHP, e.g., 5.5, 5.6, 7.0.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetPhpVersion(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PhpVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PythonVersion
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.PythonVersion"/>.</em></p><p>The version used to run your web app if using Python, e.g., 2.7, 3.4.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetPythonVersion(this AzureFunctionappConfigSetSettings toolSettings, string pythonVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PythonVersion = pythonVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.PythonVersion"/>.</em></p><p>The version used to run your web app if using Python, e.g., 2.7, 3.4.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetPythonVersion(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PythonVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region RemoteDebuggingEnabled
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.RemoteDebuggingEnabled"/>.</em></p><p>Enable or disable remote debugging.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetRemoteDebuggingEnabled(this AzureFunctionappConfigSetSettings toolSettings, bool? remoteDebuggingEnabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoteDebuggingEnabled = remoteDebuggingEnabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.RemoteDebuggingEnabled"/>.</em></p><p>Enable or disable remote debugging.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetRemoteDebuggingEnabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoteDebuggingEnabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureFunctionappConfigSetSettings.RemoteDebuggingEnabled"/>.</em></p><p>Enable or disable remote debugging.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings EnableRemoteDebuggingEnabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoteDebuggingEnabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureFunctionappConfigSetSettings.RemoteDebuggingEnabled"/>.</em></p><p>Enable or disable remote debugging.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings DisableRemoteDebuggingEnabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoteDebuggingEnabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureFunctionappConfigSetSettings.RemoteDebuggingEnabled"/>.</em></p><p>Enable or disable remote debugging.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ToggleRemoteDebuggingEnabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoteDebuggingEnabled = !toolSettings.RemoteDebuggingEnabled;
+            return toolSettings;
+        }
+        #endregion
+        #region StartupFile
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.StartupFile"/>.</em></p><p>The startup file for linux hosted web apps, e.g. 'process.json' for Node.js web.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetStartupFile(this AzureFunctionappConfigSetSettings toolSettings, string startupFile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartupFile = startupFile;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.StartupFile"/>.</em></p><p>The startup file for linux hosted web apps, e.g. 'process.json' for Node.js web.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetStartupFile(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartupFile = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Use32bitWorkerProcess
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Use32bitWorkerProcess"/>.</em></p><p>Use 32 bits worker process or not.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetUse32bitWorkerProcess(this AzureFunctionappConfigSetSettings toolSettings, bool? use32bitWorkerProcess)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Use32bitWorkerProcess = use32bitWorkerProcess;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Use32bitWorkerProcess"/>.</em></p><p>Use 32 bits worker process or not.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetUse32bitWorkerProcess(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Use32bitWorkerProcess = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureFunctionappConfigSetSettings.Use32bitWorkerProcess"/>.</em></p><p>Use 32 bits worker process or not.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings EnableUse32bitWorkerProcess(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Use32bitWorkerProcess = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureFunctionappConfigSetSettings.Use32bitWorkerProcess"/>.</em></p><p>Use 32 bits worker process or not.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings DisableUse32bitWorkerProcess(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Use32bitWorkerProcess = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureFunctionappConfigSetSettings.Use32bitWorkerProcess"/>.</em></p><p>Use 32 bits worker process or not.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ToggleUse32bitWorkerProcess(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Use32bitWorkerProcess = !toolSettings.Use32bitWorkerProcess;
+            return toolSettings;
+        }
+        #endregion
+        #region WebSocketsEnabled
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.WebSocketsEnabled"/>.</em></p><p>Enable or disable web sockets.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings SetWebSocketsEnabled(this AzureFunctionappConfigSetSettings toolSettings, bool? webSocketsEnabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebSocketsEnabled = webSocketsEnabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.WebSocketsEnabled"/>.</em></p><p>Enable or disable web sockets.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ResetWebSocketsEnabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebSocketsEnabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureFunctionappConfigSetSettings.WebSocketsEnabled"/>.</em></p><p>Enable or disable web sockets.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings EnableWebSocketsEnabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebSocketsEnabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureFunctionappConfigSetSettings.WebSocketsEnabled"/>.</em></p><p>Enable or disable web sockets.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings DisableWebSocketsEnabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebSocketsEnabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureFunctionappConfigSetSettings.WebSocketsEnabled"/>.</em></p><p>Enable or disable web sockets.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigSetSettings ToggleWebSocketsEnabled(this AzureFunctionappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebSocketsEnabled = !toolSettings.WebSocketsEnabled;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings SetDebug(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, string debug)
+        public static AzureFunctionappConfigSetSettings SetDebug(this AzureFunctionappConfigSetSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetDebug(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        public static AzureFunctionappConfigSetSettings ResetDebug(this AzureFunctionappConfigSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -5316,17 +4991,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings SetHelp(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, string help)
+        public static AzureFunctionappConfigSetSettings SetHelp(this AzureFunctionappConfigSetSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetHelp(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        public static AzureFunctionappConfigSetSettings ResetHelp(this AzureFunctionappConfigSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -5334,17 +5009,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings SetOutput(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, AzureOutput output)
+        public static AzureFunctionappConfigSetSettings SetOutput(this AzureFunctionappConfigSetSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetOutput(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        public static AzureFunctionappConfigSetSettings ResetOutput(this AzureFunctionappConfigSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5352,17 +5027,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings SetQuery(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, string query)
+        public static AzureFunctionappConfigSetSettings SetQuery(this AzureFunctionappConfigSetSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetQuery(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        public static AzureFunctionappConfigSetSettings ResetQuery(this AzureFunctionappConfigSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5370,17 +5045,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings SetVerbose(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, string verbose)
+        public static AzureFunctionappConfigSetSettings SetVerbose(this AzureFunctionappConfigSetSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetVerbose(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        public static AzureFunctionappConfigSetSettings ResetVerbose(this AzureFunctionappConfigSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5389,24 +5064,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureFunctionappConfigAppsettingsListSettingsExtensions
+    #region AzureFunctionappConfigShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappConfigAppsettingsListSettingsExtensions
+    public static partial class AzureFunctionappConfigShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings SetName(this AzureFunctionappConfigAppsettingsListSettings toolSettings, string name)
+        public static AzureFunctionappConfigShowSettings SetName(this AzureFunctionappConfigShowSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings ResetName(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
+        public static AzureFunctionappConfigShowSettings ResetName(this AzureFunctionappConfigShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -5414,17 +5089,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings SetResourceGroup(this AzureFunctionappConfigAppsettingsListSettings toolSettings, string resourceGroup)
+        public static AzureFunctionappConfigShowSettings SetResourceGroup(this AzureFunctionappConfigShowSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings ResetResourceGroup(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
+        public static AzureFunctionappConfigShowSettings ResetResourceGroup(this AzureFunctionappConfigShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -5432,17 +5107,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings SetDebug(this AzureFunctionappConfigAppsettingsListSettings toolSettings, string debug)
+        public static AzureFunctionappConfigShowSettings SetDebug(this AzureFunctionappConfigShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings ResetDebug(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
+        public static AzureFunctionappConfigShowSettings ResetDebug(this AzureFunctionappConfigShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -5450,17 +5125,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings SetHelp(this AzureFunctionappConfigAppsettingsListSettings toolSettings, string help)
+        public static AzureFunctionappConfigShowSettings SetHelp(this AzureFunctionappConfigShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings ResetHelp(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
+        public static AzureFunctionappConfigShowSettings ResetHelp(this AzureFunctionappConfigShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -5468,17 +5143,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings SetOutput(this AzureFunctionappConfigAppsettingsListSettings toolSettings, AzureOutput output)
+        public static AzureFunctionappConfigShowSettings SetOutput(this AzureFunctionappConfigShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings ResetOutput(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
+        public static AzureFunctionappConfigShowSettings ResetOutput(this AzureFunctionappConfigShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5486,17 +5161,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings SetQuery(this AzureFunctionappConfigAppsettingsListSettings toolSettings, string query)
+        public static AzureFunctionappConfigShowSettings SetQuery(this AzureFunctionappConfigShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings ResetQuery(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
+        public static AzureFunctionappConfigShowSettings ResetQuery(this AzureFunctionappConfigShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5504,807 +5179,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings SetVerbose(this AzureFunctionappConfigAppsettingsListSettings toolSettings, string verbose)
+        public static AzureFunctionappConfigShowSettings SetVerbose(this AzureFunctionappConfigShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsListSettings ResetVerbose(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureFunctionappConfigAppsettingsSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappConfigAppsettingsSetSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetName(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings ResetName(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetResourceGroup(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings ResetResourceGroup(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Settings
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/> to a new dictionary.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, IDictionary<string, object> settings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsInternal = settings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings ClearSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings AddSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settingKey, object settingValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsInternal.Add(settingKey, settingValue);
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings RemoveSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settingKey)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsInternal.Remove(settingKey);
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settingKey, object settingValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsInternal[settingKey] = settingValue;
-            return toolSettings;
-        }
-        #endregion
-        #region SlotSettings
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/> to a new dictionary.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, IDictionary<string, object> slotSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettingsInternal = slotSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings ClearSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettingsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings AddSlotSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettingKey, object slotSettingValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettingsInternal.Add(slotSettingKey, slotSettingValue);
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings RemoveSlotSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettingKey)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettingsInternal.Remove(slotSettingKey);
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetSlotSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettingKey, object slotSettingValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettingsInternal[slotSettingKey] = slotSettingValue;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetDebug(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings ResetDebug(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetHelp(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings ResetHelp(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetOutput(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings ResetOutput(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetQuery(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings ResetQuery(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetVerbose(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings ResetVerbose(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureFunctionappConfigHostnameAddSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappConfigHostnameAddSettingsExtensions
-    {
-        #region Hostname
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Hostname"/>.</em></p><p>Hostname assigned to the site, such as custom domains.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings SetHostname(this AzureFunctionappConfigHostnameAddSettings toolSettings, string hostname)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Hostname = hostname;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Hostname"/>.</em></p><p>Hostname assigned to the site, such as custom domains.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings ResetHostname(this AzureFunctionappConfigHostnameAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Hostname = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings SetName(this AzureFunctionappConfigHostnameAddSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings ResetName(this AzureFunctionappConfigHostnameAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings SetResourceGroup(this AzureFunctionappConfigHostnameAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings ResetResourceGroup(this AzureFunctionappConfigHostnameAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings SetDebug(this AzureFunctionappConfigHostnameAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings ResetDebug(this AzureFunctionappConfigHostnameAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings SetHelp(this AzureFunctionappConfigHostnameAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings ResetHelp(this AzureFunctionappConfigHostnameAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings SetOutput(this AzureFunctionappConfigHostnameAddSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings ResetOutput(this AzureFunctionappConfigHostnameAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings SetQuery(this AzureFunctionappConfigHostnameAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings ResetQuery(this AzureFunctionappConfigHostnameAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings SetVerbose(this AzureFunctionappConfigHostnameAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameAddSettings ResetVerbose(this AzureFunctionappConfigHostnameAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureFunctionappConfigHostnameDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappConfigHostnameDeleteSettingsExtensions
-    {
-        #region Hostname
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Hostname"/>.</em></p><p>Hostname assigned to the site, such as custom domains.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings SetHostname(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string hostname)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Hostname = hostname;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Hostname"/>.</em></p><p>Hostname assigned to the site, such as custom domains.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings ResetHostname(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Hostname = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings SetName(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings ResetName(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings SetResourceGroup(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings ResetResourceGroup(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings SetDebug(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings ResetDebug(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings SetHelp(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings ResetHelp(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings SetOutput(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings ResetOutput(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings SetQuery(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings ResetQuery(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings SetVerbose(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameDeleteSettings ResetVerbose(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureFunctionappConfigHostnameGetExternalIpSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappConfigHostnameGetExternalIpSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetName(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetName(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetResourceGroup(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetResourceGroup(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetDebug(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetDebug(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetHelp(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetHelp(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetOutput(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetOutput(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetQuery(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetQuery(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetVerbose(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetVerbose(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureFunctionappConfigHostnameListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappConfigHostnameListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings SetResourceGroup(this AzureFunctionappConfigHostnameListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings ResetResourceGroup(this AzureFunctionappConfigHostnameListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region WebappName
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.WebappName"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings SetWebappName(this AzureFunctionappConfigHostnameListSettings toolSettings, string webappName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebappName = webappName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.WebappName"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings ResetWebappName(this AzureFunctionappConfigHostnameListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebappName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings SetDebug(this AzureFunctionappConfigHostnameListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings ResetDebug(this AzureFunctionappConfigHostnameListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings SetHelp(this AzureFunctionappConfigHostnameListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings ResetHelp(this AzureFunctionappConfigHostnameListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings SetOutput(this AzureFunctionappConfigHostnameListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings ResetOutput(this AzureFunctionappConfigHostnameListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings SetQuery(this AzureFunctionappConfigHostnameListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings ResetQuery(this AzureFunctionappConfigHostnameListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings SetVerbose(this AzureFunctionappConfigHostnameListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings ResetVerbose(this AzureFunctionappConfigHostnameListSettings toolSettings)
+        public static AzureFunctionappConfigShowSettings ResetVerbose(this AzureFunctionappConfigShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -7055,6 +5940,1124 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureFunctionappConfigHostnameAddSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureFunctionappConfigHostnameAddSettingsExtensions
+    {
+        #region Hostname
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Hostname"/>.</em></p><p>Hostname assigned to the site, such as custom domains.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings SetHostname(this AzureFunctionappConfigHostnameAddSettings toolSettings, string hostname)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Hostname = hostname;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Hostname"/>.</em></p><p>Hostname assigned to the site, such as custom domains.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings ResetHostname(this AzureFunctionappConfigHostnameAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Hostname = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings SetName(this AzureFunctionappConfigHostnameAddSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings ResetName(this AzureFunctionappConfigHostnameAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings SetResourceGroup(this AzureFunctionappConfigHostnameAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings ResetResourceGroup(this AzureFunctionappConfigHostnameAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings SetDebug(this AzureFunctionappConfigHostnameAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings ResetDebug(this AzureFunctionappConfigHostnameAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings SetHelp(this AzureFunctionappConfigHostnameAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings ResetHelp(this AzureFunctionappConfigHostnameAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings SetOutput(this AzureFunctionappConfigHostnameAddSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings ResetOutput(this AzureFunctionappConfigHostnameAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings SetQuery(this AzureFunctionappConfigHostnameAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings ResetQuery(this AzureFunctionappConfigHostnameAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings SetVerbose(this AzureFunctionappConfigHostnameAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameAddSettings ResetVerbose(this AzureFunctionappConfigHostnameAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureFunctionappConfigHostnameDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureFunctionappConfigHostnameDeleteSettingsExtensions
+    {
+        #region Hostname
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Hostname"/>.</em></p><p>Hostname assigned to the site, such as custom domains.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings SetHostname(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string hostname)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Hostname = hostname;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Hostname"/>.</em></p><p>Hostname assigned to the site, such as custom domains.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings ResetHostname(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Hostname = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings SetName(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings ResetName(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings SetResourceGroup(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings ResetResourceGroup(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings SetDebug(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings ResetDebug(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings SetHelp(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings ResetHelp(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings SetOutput(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings ResetOutput(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings SetQuery(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings ResetQuery(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings SetVerbose(this AzureFunctionappConfigHostnameDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameDeleteSettings ResetVerbose(this AzureFunctionappConfigHostnameDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureFunctionappConfigHostnameGetExternalIpSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureFunctionappConfigHostnameGetExternalIpSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetName(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetName(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetResourceGroup(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetResourceGroup(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetDebug(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetDebug(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetHelp(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetHelp(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetOutput(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetOutput(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetQuery(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetQuery(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings SetVerbose(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameGetExternalIpSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameGetExternalIpSettings ResetVerbose(this AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureFunctionappConfigHostnameListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureFunctionappConfigHostnameListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings SetResourceGroup(this AzureFunctionappConfigHostnameListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings ResetResourceGroup(this AzureFunctionappConfigHostnameListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WebappName
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.WebappName"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings SetWebappName(this AzureFunctionappConfigHostnameListSettings toolSettings, string webappName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebappName = webappName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.WebappName"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings ResetWebappName(this AzureFunctionappConfigHostnameListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebappName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings SetDebug(this AzureFunctionappConfigHostnameListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings ResetDebug(this AzureFunctionappConfigHostnameListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings SetHelp(this AzureFunctionappConfigHostnameListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings ResetHelp(this AzureFunctionappConfigHostnameListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings SetOutput(this AzureFunctionappConfigHostnameListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings ResetOutput(this AzureFunctionappConfigHostnameListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings SetQuery(this AzureFunctionappConfigHostnameListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings ResetQuery(this AzureFunctionappConfigHostnameListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings SetVerbose(this AzureFunctionappConfigHostnameListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings ResetVerbose(this AzureFunctionappConfigHostnameListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureFunctionappConfigAppsettingsDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureFunctionappConfigAppsettingsDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings SetName(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetName(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings SetResourceGroup(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetResourceGroup(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SettingNames
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/> to a new list.</em></p><p>Space-separated app setting names.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings SetSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, params string[] settingNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingNamesInternal = settingNames.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/> to a new list.</em></p><p>Space-separated app setting names.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings SetSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, IEnumerable<string> settingNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingNamesInternal = settingNames.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/>.</em></p><p>Space-separated app setting names.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings AddSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, params string[] settingNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingNamesInternal.AddRange(settingNames);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/>.</em></p><p>Space-separated app setting names.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings AddSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, IEnumerable<string> settingNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingNamesInternal.AddRange(settingNames);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/>.</em></p><p>Space-separated app setting names.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings ClearSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingNamesInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/>.</em></p><p>Space-separated app setting names.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings RemoveSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, params string[] settingNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(settingNames);
+            toolSettings.SettingNamesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.SettingNames"/>.</em></p><p>Space-separated app setting names.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings RemoveSettingNames(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, IEnumerable<string> settingNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(settingNames);
+            toolSettings.SettingNamesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings SetDebug(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetDebug(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings SetHelp(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetHelp(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings SetOutput(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetOutput(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings SetQuery(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetQuery(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings SetVerbose(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsDeleteSettings ResetVerbose(this AzureFunctionappConfigAppsettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureFunctionappConfigAppsettingsListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureFunctionappConfigAppsettingsListSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings SetName(this AzureFunctionappConfigAppsettingsListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Name"/>.</em></p><p>Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings ResetName(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings SetResourceGroup(this AzureFunctionappConfigAppsettingsListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings ResetResourceGroup(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings SetDebug(this AzureFunctionappConfigAppsettingsListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings ResetDebug(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings SetHelp(this AzureFunctionappConfigAppsettingsListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings ResetHelp(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings SetOutput(this AzureFunctionappConfigAppsettingsListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings ResetOutput(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings SetQuery(this AzureFunctionappConfigAppsettingsListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings ResetQuery(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings SetVerbose(this AzureFunctionappConfigAppsettingsListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsListSettings ResetVerbose(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureFunctionappConfigAppsettingsSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureFunctionappConfigAppsettingsSetSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetName(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings ResetName(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetResourceGroup(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings ResetResourceGroup(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Settings
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/> to a new dictionary.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, IDictionary<string, object> settings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal = settings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings ClearSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings AddSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settingKey, object settingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Add(settingKey, settingValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings RemoveSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settingKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Remove(settingKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settingKey, object settingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal[settingKey] = settingValue;
+            return toolSettings;
+        }
+        #endregion
+        #region SlotSettings
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/> to a new dictionary.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, IDictionary<string, object> slotSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal = slotSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings ClearSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings AddSlotSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettingKey, object slotSettingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Add(slotSettingKey, slotSettingValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings RemoveSlotSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettingKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Remove(slotSettingKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetSlotSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettingKey, object slotSettingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal[slotSettingKey] = slotSettingValue;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetDebug(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings ResetDebug(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetHelp(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings ResetHelp(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetOutput(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings ResetOutput(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetQuery(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings ResetQuery(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetVerbose(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings ResetVerbose(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureFunctionappDeploymentSourceConfigSettingsExtensions
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
@@ -7668,6 +7671,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Src = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Timeout
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentSourceConfigZipSettings.Timeout"/>.</em></p><p>Configurable timeout in seconds for checking the status of deployment.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentSourceConfigZipSettings SetTimeout(this AzureFunctionappDeploymentSourceConfigZipSettings toolSettings, string timeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = timeout;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentSourceConfigZipSettings.Timeout"/>.</em></p><p>Configurable timeout in seconds for checking the status of deployment.</p></summary>
+        [Pure]
+        public static AzureFunctionappDeploymentSourceConfigZipSettings ResetTimeout(this AzureFunctionappDeploymentSourceConfigZipSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = null;
             return toolSettings;
         }
         #endregion

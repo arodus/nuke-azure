@@ -44,22 +44,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupContainerList(Configure<AzureBackupContainerListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupContainerListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupContainerShow(Configure<AzureBackupContainerShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupContainerShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureBackupItemList(Configure<AzureBackupItemListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupItemListSettings());
@@ -84,33 +68,73 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupJobList(Configure<AzureBackupJobListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBackupVaultCreate(Configure<AzureBackupVaultCreateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupJobListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBackupVaultCreateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupJobShow(Configure<AzureBackupJobShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBackupVaultDelete(Configure<AzureBackupVaultDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupJobShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBackupVaultDeleteSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupJobStop(Configure<AzureBackupJobStopSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBackupVaultList(Configure<AzureBackupVaultListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupJobStopSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBackupVaultListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupJobWait(Configure<AzureBackupJobWaitSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBackupVaultShow(Configure<AzureBackupVaultShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupJobWaitSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBackupVaultShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBackupProtectionBackupNow(Configure<AzureBackupProtectionBackupNowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBackupProtectionBackupNowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBackupProtectionCheckVm(Configure<AzureBackupProtectionCheckVmSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBackupProtectionCheckVmSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBackupProtectionDisable(Configure<AzureBackupProtectionDisableSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBackupProtectionDisableSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBackupProtectionEnableForVm(Configure<AzureBackupProtectionEnableForVmSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBackupProtectionEnableForVmSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBackupRestoreRestoreDisks(Configure<AzureBackupRestoreRestoreDisksSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBackupRestoreRestoreDisksSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -164,38 +188,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupProtectionBackupNow(Configure<AzureBackupProtectionBackupNowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupProtectionBackupNowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupProtectionCheckVm(Configure<AzureBackupProtectionCheckVmSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupProtectionCheckVmSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupProtectionDisable(Configure<AzureBackupProtectionDisableSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupProtectionDisableSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupProtectionEnableForVm(Configure<AzureBackupProtectionEnableForVmSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupProtectionEnableForVmSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureBackupRecoverypointList(Configure<AzureBackupRecoverypointListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupRecoverypointListSettings());
@@ -212,41 +204,49 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupRestoreRestoreDisks(Configure<AzureBackupRestoreRestoreDisksSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBackupJobList(Configure<AzureBackupJobListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupRestoreRestoreDisksSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBackupJobListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupVaultCreate(Configure<AzureBackupVaultCreateSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBackupJobShow(Configure<AzureBackupJobShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupVaultCreateSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBackupJobShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupVaultDelete(Configure<AzureBackupVaultDeleteSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBackupJobStop(Configure<AzureBackupJobStopSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupVaultDeleteSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBackupJobStopSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupVaultList(Configure<AzureBackupVaultListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBackupJobWait(Configure<AzureBackupJobWaitSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupVaultListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBackupJobWaitSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBackupVaultShow(Configure<AzureBackupVaultShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureBackupContainerList(Configure<AzureBackupContainerListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureBackupVaultShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureBackupContainerListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBackupContainerShow(Configure<AzureBackupContainerShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBackupContainerShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -307,85 +307,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("backup")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBackupContainerListSettings
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBackupContainerListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBackup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the Recovery services vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("backup container list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBackupContainerShowSettings
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBackupContainerShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBackup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>Name of the container. You can use the backup container list command to get the name of a container.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the Recovery services vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("backup container show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vault-name {value}", VaultName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -527,27 +448,21 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBackupJobListSettings
+    #region AzureBackupVaultCreateSettings
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBackupJobListSettings : ToolSettings
+    public partial class AzureBackupVaultCreateSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBackup executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Name of the Recovery services vault.</p></summary>
+        public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the Recovery services vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>The end date of the range in UTC (d-m-Y).</p></summary>
-        public virtual string EndDate { get; internal set; }
-        /// <summary><p>User initiated operation.</p></summary>
-        public virtual BackupJobListOperation Operation { get; internal set; }
-        /// <summary><p>The start date of the range in UTC (d-m-Y).</p></summary>
-        public virtual string StartDate { get; internal set; }
-        /// <summary><p>Status of the Job.</p></summary>
-        public virtual BackupJobListStatus Status { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -561,13 +476,10 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("backup job list")
+              .Add("backup vault create")
+              .Add("--location {value}", Location)
+              .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--end-date {value}", EndDate)
-              .Add("--operation {value}", Operation)
-              .Add("--start-date {value}", StartDate)
-              .Add("--status {value}", Status)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -577,19 +489,140 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBackupJobShowSettings
+    #region AzureBackupVaultDeleteSettings
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBackupJobShowSettings : ToolSettings
+    public partial class AzureBackupVaultDeleteSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBackup executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
+        /// <summary><p>Name of the Recovery services vault.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Force completion of the requested action.</p></summary>
+        public virtual string Force { get; internal set; }
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("backup vault delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--force {value}", Force)
+              .Add("--yes {value}", Yes)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBackupVaultListSettings
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBackupVaultListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBackup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("backup vault list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBackupVaultShowSettings
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBackupVaultShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBackup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
+        /// <summary><p>Name of the Recovery services vault.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("backup vault show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBackupProtectionBackupNowSettings
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBackupProtectionBackupNowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBackup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
+        /// <summary><p>Name of the container.</p></summary>
+        public virtual string ContainerName { get; internal set; }
+        /// <summary><p>Name of the backed up item.</p></summary>
+        public virtual string ItemName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The date until which this backed up copy will be available for retrieval, in UTC (d-m-Y).</p></summary>
+        public virtual string RetainUntil { get; internal set; }
         /// <summary><p>Name of the Recovery services vault.</p></summary>
         public virtual string VaultName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -605,9 +638,11 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("backup job show")
-              .Add("--name {value}", Name)
+              .Add("backup protection backup-now")
+              .Add("--container-name {value}", ContainerName)
+              .Add("--item-name {value}", ItemName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--retain-until {value}", RetainUntil)
               .Add("--vault-name {value}", VaultName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -618,21 +653,17 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBackupJobStopSettings
+    #region AzureBackupProtectionCheckVmSettings
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBackupJobStopSettings : ToolSettings
+    public partial class AzureBackupProtectionCheckVmSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBackup executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the Recovery services vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
+        /// <summary><p>ID of the virtual machine to be checked for protection.</p></summary>
+        public virtual string VmId { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -646,10 +677,8 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("backup job stop")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vault-name {value}", VaultName)
+              .Add("backup protection check-vm")
+              .Add("--vm-id {value}", VmId)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -659,23 +688,27 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBackupJobWaitSettings
+    #region AzureBackupProtectionDisableSettings
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBackupJobWaitSettings : ToolSettings
+    public partial class AzureBackupProtectionDisableSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBackup executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
-        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the container.</p></summary>
+        public virtual string ContainerName { get; internal set; }
+        /// <summary><p>Name of the backed up item.</p></summary>
+        public virtual string ItemName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Recovery services vault.</p></summary>
         public virtual string VaultName { get; internal set; }
-        /// <summary><p>Maximum time, in seconds, to wait before aborting.</p></summary>
-        public virtual string Timeout { get; internal set; }
+        /// <summary><p>Option to delete existing backed up data in the Recovery services vault.</p></summary>
+        public virtual bool? DeleteBackupData { get; internal set; }
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -689,11 +722,110 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("backup job wait")
-              .Add("--name {value}", Name)
+              .Add("backup protection disable")
+              .Add("--container-name {value}", ContainerName)
+              .Add("--item-name {value}", ItemName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--vault-name {value}", VaultName)
-              .Add("--timeout {value}", Timeout)
+              .Add("--delete-backup-data", DeleteBackupData)
+              .Add("--yes {value}", Yes)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBackupProtectionEnableForVmSettings
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBackupProtectionEnableForVmSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBackup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
+        /// <summary><p>Name of the backup policy.</p></summary>
+        public virtual string PolicyName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Recovery services vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Name or ID of the Virtual Machine to be protected.</p></summary>
+        public virtual string Vm { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("backup protection enable-for-vm")
+              .Add("--policy-name {value}", PolicyName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--vm {value}", Vm)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBackupRestoreRestoreDisksSettings
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBackupRestoreRestoreDisksSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBackup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
+        /// <summary><p>Name of the container.</p></summary>
+        public virtual string ContainerName { get; internal set; }
+        /// <summary><p>Name of the backed up item.</p></summary>
+        public virtual string ItemName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the recovery point.</p></summary>
+        public virtual string RpName { get; internal set; }
+        /// <summary><p>Name or ID of the staging storage account. The VM configuration will be restored to this storage account. See the help for --restore-to-staging-storage-account parameter for more info.</p></summary>
+        public virtual string StorageAccount { get; internal set; }
+        /// <summary><p>Name of the Recovery services vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false.</p></summary>
+        public virtual bool? RestoreToStagingStorageAccount { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("backup restore restore-disks")
+              .Add("--container-name {value}", ContainerName)
+              .Add("--item-name {value}", ItemName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--rp-name {value}", RpName)
+              .Add("--storage-account {value}", StorageAccount)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--restore-to-staging-storage-account", RestoreToStagingStorageAccount)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -943,182 +1075,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBackupProtectionBackupNowSettings
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBackupProtectionBackupNowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBackup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>Name of the container.</p></summary>
-        public virtual string ContainerName { get; internal set; }
-        /// <summary><p>Name of the backed up item.</p></summary>
-        public virtual string ItemName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The date until which this backed up copy will be available for retrieval, in UTC (d-m-Y).</p></summary>
-        public virtual string RetainUntil { get; internal set; }
-        /// <summary><p>Name of the Recovery services vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("backup protection backup-now")
-              .Add("--container-name {value}", ContainerName)
-              .Add("--item-name {value}", ItemName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--retain-until {value}", RetainUntil)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBackupProtectionCheckVmSettings
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBackupProtectionCheckVmSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBackup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>ID of the virtual machine to be checked for protection.</p></summary>
-        public virtual string VmId { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("backup protection check-vm")
-              .Add("--vm-id {value}", VmId)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBackupProtectionDisableSettings
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBackupProtectionDisableSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBackup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>Name of the container.</p></summary>
-        public virtual string ContainerName { get; internal set; }
-        /// <summary><p>Name of the backed up item.</p></summary>
-        public virtual string ItemName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the Recovery services vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Option to delete existing backed up data in the Recovery services vault.</p></summary>
-        public virtual bool? DeleteBackupData { get; internal set; }
-        /// <summary><p>Do not prompt for confirmation.</p></summary>
-        public virtual string Yes { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("backup protection disable")
-              .Add("--container-name {value}", ContainerName)
-              .Add("--item-name {value}", ItemName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--delete-backup-data", DeleteBackupData)
-              .Add("--yes {value}", Yes)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBackupProtectionEnableForVmSettings
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBackupProtectionEnableForVmSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBackup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>Name of the backup policy.</p></summary>
-        public virtual string PolicyName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the Recovery services vault.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Name or ID of the Virtual Machine to be protected.</p></summary>
-        public virtual string Vm { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("backup protection enable-for-vm")
-              .Add("--policy-name {value}", PolicyName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--vm {value}", Vm)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureBackupRecoverypointListSettings
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
@@ -1216,29 +1172,27 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBackupRestoreRestoreDisksSettings
+    #region AzureBackupJobListSettings
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBackupRestoreRestoreDisksSettings : ToolSettings
+    public partial class AzureBackupJobListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBackup executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>Name of the container.</p></summary>
-        public virtual string ContainerName { get; internal set; }
-        /// <summary><p>Name of the backed up item.</p></summary>
-        public virtual string ItemName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the recovery point.</p></summary>
-        public virtual string RpName { get; internal set; }
-        /// <summary><p>Name or ID of the staging storage account. The VM configuration will be restored to this storage account. See the help for --restore-to-staging-storage-account parameter for more info.</p></summary>
-        public virtual string StorageAccount { get; internal set; }
         /// <summary><p>Name of the Recovery services vault.</p></summary>
         public virtual string VaultName { get; internal set; }
-        /// <summary><p>Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false.</p></summary>
-        public virtual bool? RestoreToStagingStorageAccount { get; internal set; }
+        /// <summary><p>The end date of the range in UTC (d-m-Y).</p></summary>
+        public virtual string EndDate { get; internal set; }
+        /// <summary><p>User initiated operation.</p></summary>
+        public virtual BackupJobListOperation Operation { get; internal set; }
+        /// <summary><p>The start date of the range in UTC (d-m-Y).</p></summary>
+        public virtual string StartDate { get; internal set; }
+        /// <summary><p>Status of the Job.</p></summary>
+        public virtual BackupJobListStatus Status { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1252,14 +1206,13 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("backup restore restore-disks")
-              .Add("--container-name {value}", ContainerName)
-              .Add("--item-name {value}", ItemName)
+              .Add("backup job list")
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--rp-name {value}", RpName)
-              .Add("--storage-account {value}", StorageAccount)
               .Add("--vault-name {value}", VaultName)
-              .Add("--restore-to-staging-storage-account", RestoreToStagingStorageAccount)
+              .Add("--end-date {value}", EndDate)
+              .Add("--operation {value}", Operation)
+              .Add("--start-date {value}", StartDate)
+              .Add("--status {value}", Status)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1269,21 +1222,21 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBackupVaultCreateSettings
+    #region AzureBackupJobShowSettings
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBackupVaultCreateSettings : ToolSettings
+    public partial class AzureBackupJobShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBackup executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Name of the Recovery services vault.</p></summary>
+        /// <summary><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Recovery services vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1297,10 +1250,10 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("backup vault create")
-              .Add("--location {value}", Location)
+              .Add("backup job show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vault-name {value}", VaultName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1310,23 +1263,21 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBackupVaultDeleteSettings
+    #region AzureBackupJobStopSettings
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBackupVaultDeleteSettings : ToolSettings
+    public partial class AzureBackupJobStopSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBackup executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>Name of the Recovery services vault.</p></summary>
+        /// <summary><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Force completion of the requested action.</p></summary>
-        public virtual string Force { get; internal set; }
-        /// <summary><p>Do not prompt for confirmation.</p></summary>
-        public virtual string Yes { get; internal set; }
+        /// <summary><p>Name of the Recovery services vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1340,11 +1291,10 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("backup vault delete")
+              .Add("backup job stop")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--force {value}", Force)
-              .Add("--yes {value}", Yes)
+              .Add("--vault-name {value}", VaultName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1354,54 +1304,23 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureBackupVaultListSettings
+    #region AzureBackupJobWaitSettings
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureBackupVaultListSettings : ToolSettings
+    public partial class AzureBackupJobWaitSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureBackup executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("backup vault list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBackupVaultShowSettings
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBackupVaultShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBackup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
-        /// <summary><p>Name of the Recovery services vault.</p></summary>
+        /// <summary><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Recovery services vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Maximum time, in seconds, to wait before aborting.</p></summary>
+        public virtual string Timeout { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1415,9 +1334,90 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("backup vault show")
+              .Add("backup job wait")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--timeout {value}", Timeout)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBackupContainerListSettings
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBackupContainerListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBackup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Recovery services vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("backup container list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBackupContainerShowSettings
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBackupContainerShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBackup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBackupTasks.AzureBackupPath;
+        /// <summary><p>Name of the container. You can use the backup container list command to get the name of a container.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Recovery services vault.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("backup container show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vault-name {value}", VaultName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1690,292 +1690,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureBackupSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureBackupSettings ResetVerbose(this AzureBackupSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBackupContainerListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupContainerListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings SetResourceGroup(this AzureBackupContainerListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings ResetResourceGroup(this AzureBackupContainerListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings SetVaultName(this AzureBackupContainerListSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings ResetVaultName(this AzureBackupContainerListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings SetDebug(this AzureBackupContainerListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings ResetDebug(this AzureBackupContainerListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings SetHelp(this AzureBackupContainerListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings ResetHelp(this AzureBackupContainerListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings SetOutput(this AzureBackupContainerListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings ResetOutput(this AzureBackupContainerListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings SetQuery(this AzureBackupContainerListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings ResetQuery(this AzureBackupContainerListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings SetVerbose(this AzureBackupContainerListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupContainerListSettings ResetVerbose(this AzureBackupContainerListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBackupContainerShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupContainerShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.Name"/>.</em></p><p>Name of the container. You can use the backup container list command to get the name of a container.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings SetName(this AzureBackupContainerShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.Name"/>.</em></p><p>Name of the container. You can use the backup container list command to get the name of a container.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings ResetName(this AzureBackupContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings SetResourceGroup(this AzureBackupContainerShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings ResetResourceGroup(this AzureBackupContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings SetVaultName(this AzureBackupContainerShowSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings ResetVaultName(this AzureBackupContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings SetDebug(this AzureBackupContainerShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings ResetDebug(this AzureBackupContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings SetHelp(this AzureBackupContainerShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings ResetHelp(this AzureBackupContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings SetOutput(this AzureBackupContainerShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings ResetOutput(this AzureBackupContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings SetQuery(this AzureBackupContainerShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings ResetQuery(this AzureBackupContainerShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings SetVerbose(this AzureBackupContainerShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupContainerShowSettings ResetVerbose(this AzureBackupContainerShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -2494,132 +2208,78 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBackupJobListSettingsExtensions
+    #region AzureBackupVaultCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupJobListSettingsExtensions
+    public static partial class AzureBackupVaultCreateSettingsExtensions
     {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupJobListSettings SetResourceGroup(this AzureBackupJobListSettings toolSettings, string resourceGroup)
+        public static AzureBackupVaultCreateSettings SetLocation(this AzureBackupVaultCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupVaultCreateSettings ResetLocation(this AzureBackupVaultCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Name"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupVaultCreateSettings SetName(this AzureBackupVaultCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Name"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupVaultCreateSettings ResetName(this AzureBackupVaultCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupVaultCreateSettings SetResourceGroup(this AzureBackupVaultCreateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupJobListSettings ResetResourceGroup(this AzureBackupJobListSettings toolSettings)
+        public static AzureBackupVaultCreateSettings ResetResourceGroup(this AzureBackupVaultCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupJobListSettings SetVaultName(this AzureBackupJobListSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupJobListSettings ResetVaultName(this AzureBackupJobListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EndDate
-        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.EndDate"/>.</em></p><p>The end date of the range in UTC (d-m-Y).</p></summary>
-        [Pure]
-        public static AzureBackupJobListSettings SetEndDate(this AzureBackupJobListSettings toolSettings, string endDate)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndDate = endDate;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.EndDate"/>.</em></p><p>The end date of the range in UTC (d-m-Y).</p></summary>
-        [Pure]
-        public static AzureBackupJobListSettings ResetEndDate(this AzureBackupJobListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndDate = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Operation
-        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Operation"/>.</em></p><p>User initiated operation.</p></summary>
-        [Pure]
-        public static AzureBackupJobListSettings SetOperation(this AzureBackupJobListSettings toolSettings, BackupJobListOperation operation)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Operation = operation;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Operation"/>.</em></p><p>User initiated operation.</p></summary>
-        [Pure]
-        public static AzureBackupJobListSettings ResetOperation(this AzureBackupJobListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Operation = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StartDate
-        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.StartDate"/>.</em></p><p>The start date of the range in UTC (d-m-Y).</p></summary>
-        [Pure]
-        public static AzureBackupJobListSettings SetStartDate(this AzureBackupJobListSettings toolSettings, string startDate)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartDate = startDate;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.StartDate"/>.</em></p><p>The start date of the range in UTC (d-m-Y).</p></summary>
-        [Pure]
-        public static AzureBackupJobListSettings ResetStartDate(this AzureBackupJobListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartDate = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Status
-        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Status"/>.</em></p><p>Status of the Job.</p></summary>
-        [Pure]
-        public static AzureBackupJobListSettings SetStatus(this AzureBackupJobListSettings toolSettings, BackupJobListStatus status)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = status;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Status"/>.</em></p><p>Status of the Job.</p></summary>
-        [Pure]
-        public static AzureBackupJobListSettings ResetStatus(this AzureBackupJobListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobListSettings SetDebug(this AzureBackupJobListSettings toolSettings, string debug)
+        public static AzureBackupVaultCreateSettings SetDebug(this AzureBackupVaultCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobListSettings ResetDebug(this AzureBackupJobListSettings toolSettings)
+        public static AzureBackupVaultCreateSettings ResetDebug(this AzureBackupVaultCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -2627,17 +2287,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupJobListSettings SetHelp(this AzureBackupJobListSettings toolSettings, string help)
+        public static AzureBackupVaultCreateSettings SetHelp(this AzureBackupVaultCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupJobListSettings ResetHelp(this AzureBackupJobListSettings toolSettings)
+        public static AzureBackupVaultCreateSettings ResetHelp(this AzureBackupVaultCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -2645,17 +2305,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupJobListSettings SetOutput(this AzureBackupJobListSettings toolSettings, AzureOutput output)
+        public static AzureBackupVaultCreateSettings SetOutput(this AzureBackupVaultCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupJobListSettings ResetOutput(this AzureBackupJobListSettings toolSettings)
+        public static AzureBackupVaultCreateSettings ResetOutput(this AzureBackupVaultCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -2663,17 +2323,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupJobListSettings SetQuery(this AzureBackupJobListSettings toolSettings, string query)
+        public static AzureBackupVaultCreateSettings SetQuery(this AzureBackupVaultCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupJobListSettings ResetQuery(this AzureBackupJobListSettings toolSettings)
+        public static AzureBackupVaultCreateSettings ResetQuery(this AzureBackupVaultCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -2681,17 +2341,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobListSettings SetVerbose(this AzureBackupJobListSettings toolSettings, string verbose)
+        public static AzureBackupVaultCreateSettings SetVerbose(this AzureBackupVaultCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobListSettings ResetVerbose(this AzureBackupJobListSettings toolSettings)
+        public static AzureBackupVaultCreateSettings ResetVerbose(this AzureBackupVaultCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -2700,24 +2360,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBackupJobShowSettingsExtensions
+    #region AzureBackupVaultDeleteSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupJobShowSettingsExtensions
+    public static partial class AzureBackupVaultDeleteSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.Name"/>.</em></p><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Name"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings SetName(this AzureBackupJobShowSettings toolSettings, string name)
+        public static AzureBackupVaultDeleteSettings SetName(this AzureBackupVaultDeleteSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.Name"/>.</em></p><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Name"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings ResetName(this AzureBackupJobShowSettings toolSettings)
+        public static AzureBackupVaultDeleteSettings ResetName(this AzureBackupVaultDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -2725,53 +2385,71 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings SetResourceGroup(this AzureBackupJobShowSettings toolSettings, string resourceGroup)
+        public static AzureBackupVaultDeleteSettings SetResourceGroup(this AzureBackupVaultDeleteSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings ResetResourceGroup(this AzureBackupJobShowSettings toolSettings)
+        public static AzureBackupVaultDeleteSettings ResetResourceGroup(this AzureBackupVaultDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        #region Force
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Force"/>.</em></p><p>Force completion of the requested action.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings SetVaultName(this AzureBackupJobShowSettings toolSettings, string vaultName)
+        public static AzureBackupVaultDeleteSettings SetForce(this AzureBackupVaultDeleteSettings toolSettings, string force)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
+            toolSettings.Force = force;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Force"/>.</em></p><p>Force completion of the requested action.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings ResetVaultName(this AzureBackupJobShowSettings toolSettings)
+        public static AzureBackupVaultDeleteSettings ResetForce(this AzureBackupVaultDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
+            toolSettings.Force = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureBackupVaultDeleteSettings SetYes(this AzureBackupVaultDeleteSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureBackupVaultDeleteSettings ResetYes(this AzureBackupVaultDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings SetDebug(this AzureBackupJobShowSettings toolSettings, string debug)
+        public static AzureBackupVaultDeleteSettings SetDebug(this AzureBackupVaultDeleteSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings ResetDebug(this AzureBackupJobShowSettings toolSettings)
+        public static AzureBackupVaultDeleteSettings ResetDebug(this AzureBackupVaultDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -2779,17 +2457,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings SetHelp(this AzureBackupJobShowSettings toolSettings, string help)
+        public static AzureBackupVaultDeleteSettings SetHelp(this AzureBackupVaultDeleteSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings ResetHelp(this AzureBackupJobShowSettings toolSettings)
+        public static AzureBackupVaultDeleteSettings ResetHelp(this AzureBackupVaultDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -2797,17 +2475,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings SetOutput(this AzureBackupJobShowSettings toolSettings, AzureOutput output)
+        public static AzureBackupVaultDeleteSettings SetOutput(this AzureBackupVaultDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings ResetOutput(this AzureBackupJobShowSettings toolSettings)
+        public static AzureBackupVaultDeleteSettings ResetOutput(this AzureBackupVaultDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -2815,17 +2493,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings SetQuery(this AzureBackupJobShowSettings toolSettings, string query)
+        public static AzureBackupVaultDeleteSettings SetQuery(this AzureBackupVaultDeleteSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings ResetQuery(this AzureBackupJobShowSettings toolSettings)
+        public static AzureBackupVaultDeleteSettings ResetQuery(this AzureBackupVaultDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -2833,17 +2511,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings SetVerbose(this AzureBackupJobShowSettings toolSettings, string verbose)
+        public static AzureBackupVaultDeleteSettings SetVerbose(this AzureBackupVaultDeleteSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobShowSettings ResetVerbose(this AzureBackupJobShowSettings toolSettings)
+        public static AzureBackupVaultDeleteSettings ResetVerbose(this AzureBackupVaultDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -2852,78 +2530,42 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBackupJobStopSettingsExtensions
+    #region AzureBackupVaultListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupJobStopSettingsExtensions
+    public static partial class AzureBackupVaultListSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.Name"/>.</em></p><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
-        [Pure]
-        public static AzureBackupJobStopSettings SetName(this AzureBackupJobStopSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.Name"/>.</em></p><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
-        [Pure]
-        public static AzureBackupJobStopSettings ResetName(this AzureBackupJobStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupJobStopSettings SetResourceGroup(this AzureBackupJobStopSettings toolSettings, string resourceGroup)
+        public static AzureBackupVaultListSettings SetResourceGroup(this AzureBackupVaultListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupJobStopSettings ResetResourceGroup(this AzureBackupJobStopSettings toolSettings)
+        public static AzureBackupVaultListSettings ResetResourceGroup(this AzureBackupVaultListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupJobStopSettings SetVaultName(this AzureBackupJobStopSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupJobStopSettings ResetVaultName(this AzureBackupJobStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobStopSettings SetDebug(this AzureBackupJobStopSettings toolSettings, string debug)
+        public static AzureBackupVaultListSettings SetDebug(this AzureBackupVaultListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobStopSettings ResetDebug(this AzureBackupJobStopSettings toolSettings)
+        public static AzureBackupVaultListSettings ResetDebug(this AzureBackupVaultListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -2931,17 +2573,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupJobStopSettings SetHelp(this AzureBackupJobStopSettings toolSettings, string help)
+        public static AzureBackupVaultListSettings SetHelp(this AzureBackupVaultListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupJobStopSettings ResetHelp(this AzureBackupJobStopSettings toolSettings)
+        public static AzureBackupVaultListSettings ResetHelp(this AzureBackupVaultListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -2949,17 +2591,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupJobStopSettings SetOutput(this AzureBackupJobStopSettings toolSettings, AzureOutput output)
+        public static AzureBackupVaultListSettings SetOutput(this AzureBackupVaultListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupJobStopSettings ResetOutput(this AzureBackupJobStopSettings toolSettings)
+        public static AzureBackupVaultListSettings ResetOutput(this AzureBackupVaultListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -2967,17 +2609,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupJobStopSettings SetQuery(this AzureBackupJobStopSettings toolSettings, string query)
+        public static AzureBackupVaultListSettings SetQuery(this AzureBackupVaultListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupJobStopSettings ResetQuery(this AzureBackupJobStopSettings toolSettings)
+        public static AzureBackupVaultListSettings ResetQuery(this AzureBackupVaultListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -2985,17 +2627,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobStopSettings SetVerbose(this AzureBackupJobStopSettings toolSettings, string verbose)
+        public static AzureBackupVaultListSettings SetVerbose(this AzureBackupVaultListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobStopSettings ResetVerbose(this AzureBackupJobStopSettings toolSettings)
+        public static AzureBackupVaultListSettings ResetVerbose(this AzureBackupVaultListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -3004,24 +2646,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBackupJobWaitSettingsExtensions
+    #region AzureBackupVaultShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupJobWaitSettingsExtensions
+    public static partial class AzureBackupVaultShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Name"/>.</em></p><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.Name"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings SetName(this AzureBackupJobWaitSettings toolSettings, string name)
+        public static AzureBackupVaultShowSettings SetName(this AzureBackupVaultShowSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Name"/>.</em></p><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.Name"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings ResetName(this AzureBackupJobWaitSettings toolSettings)
+        public static AzureBackupVaultShowSettings ResetName(this AzureBackupVaultShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -3029,71 +2671,35 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings SetResourceGroup(this AzureBackupJobWaitSettings toolSettings, string resourceGroup)
+        public static AzureBackupVaultShowSettings SetResourceGroup(this AzureBackupVaultShowSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings ResetResourceGroup(this AzureBackupJobWaitSettings toolSettings)
+        public static AzureBackupVaultShowSettings ResetResourceGroup(this AzureBackupVaultShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupJobWaitSettings SetVaultName(this AzureBackupJobWaitSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupJobWaitSettings ResetVaultName(this AzureBackupJobWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Timeout
-        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Timeout"/>.</em></p><p>Maximum time, in seconds, to wait before aborting.</p></summary>
-        [Pure]
-        public static AzureBackupJobWaitSettings SetTimeout(this AzureBackupJobWaitSettings toolSettings, string timeout)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = timeout;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Timeout"/>.</em></p><p>Maximum time, in seconds, to wait before aborting.</p></summary>
-        [Pure]
-        public static AzureBackupJobWaitSettings ResetTimeout(this AzureBackupJobWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings SetDebug(this AzureBackupJobWaitSettings toolSettings, string debug)
+        public static AzureBackupVaultShowSettings SetDebug(this AzureBackupVaultShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings ResetDebug(this AzureBackupJobWaitSettings toolSettings)
+        public static AzureBackupVaultShowSettings ResetDebug(this AzureBackupVaultShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -3101,17 +2707,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings SetHelp(this AzureBackupJobWaitSettings toolSettings, string help)
+        public static AzureBackupVaultShowSettings SetHelp(this AzureBackupVaultShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings ResetHelp(this AzureBackupJobWaitSettings toolSettings)
+        public static AzureBackupVaultShowSettings ResetHelp(this AzureBackupVaultShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -3119,17 +2725,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings SetOutput(this AzureBackupJobWaitSettings toolSettings, AzureOutput output)
+        public static AzureBackupVaultShowSettings SetOutput(this AzureBackupVaultShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings ResetOutput(this AzureBackupJobWaitSettings toolSettings)
+        public static AzureBackupVaultShowSettings ResetOutput(this AzureBackupVaultShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -3137,17 +2743,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings SetQuery(this AzureBackupJobWaitSettings toolSettings, string query)
+        public static AzureBackupVaultShowSettings SetQuery(this AzureBackupVaultShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings ResetQuery(this AzureBackupJobWaitSettings toolSettings)
+        public static AzureBackupVaultShowSettings ResetQuery(this AzureBackupVaultShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -3155,17 +2761,969 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings SetVerbose(this AzureBackupJobWaitSettings toolSettings, string verbose)
+        public static AzureBackupVaultShowSettings SetVerbose(this AzureBackupVaultShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupJobWaitSettings ResetVerbose(this AzureBackupJobWaitSettings toolSettings)
+        public static AzureBackupVaultShowSettings ResetVerbose(this AzureBackupVaultShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBackupProtectionBackupNowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBackupProtectionBackupNowSettingsExtensions
+    {
+        #region ContainerName
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.ContainerName"/>.</em></p><p>Name of the container.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings SetContainerName(this AzureBackupProtectionBackupNowSettings toolSettings, string containerName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = containerName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.ContainerName"/>.</em></p><p>Name of the container.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings ResetContainerName(this AzureBackupProtectionBackupNowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ItemName
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.ItemName"/>.</em></p><p>Name of the backed up item.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings SetItemName(this AzureBackupProtectionBackupNowSettings toolSettings, string itemName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ItemName = itemName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.ItemName"/>.</em></p><p>Name of the backed up item.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings ResetItemName(this AzureBackupProtectionBackupNowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ItemName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings SetResourceGroup(this AzureBackupProtectionBackupNowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings ResetResourceGroup(this AzureBackupProtectionBackupNowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region RetainUntil
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.RetainUntil"/>.</em></p><p>The date until which this backed up copy will be available for retrieval, in UTC (d-m-Y).</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings SetRetainUntil(this AzureBackupProtectionBackupNowSettings toolSettings, string retainUntil)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RetainUntil = retainUntil;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.RetainUntil"/>.</em></p><p>The date until which this backed up copy will be available for retrieval, in UTC (d-m-Y).</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings ResetRetainUntil(this AzureBackupProtectionBackupNowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RetainUntil = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings SetVaultName(this AzureBackupProtectionBackupNowSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings ResetVaultName(this AzureBackupProtectionBackupNowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings SetDebug(this AzureBackupProtectionBackupNowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings ResetDebug(this AzureBackupProtectionBackupNowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings SetHelp(this AzureBackupProtectionBackupNowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings ResetHelp(this AzureBackupProtectionBackupNowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings SetOutput(this AzureBackupProtectionBackupNowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings ResetOutput(this AzureBackupProtectionBackupNowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings SetQuery(this AzureBackupProtectionBackupNowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings ResetQuery(this AzureBackupProtectionBackupNowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings SetVerbose(this AzureBackupProtectionBackupNowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionBackupNowSettings ResetVerbose(this AzureBackupProtectionBackupNowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBackupProtectionCheckVmSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBackupProtectionCheckVmSettingsExtensions
+    {
+        #region VmId
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionCheckVmSettings.VmId"/>.</em></p><p>ID of the virtual machine to be checked for protection.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionCheckVmSettings SetVmId(this AzureBackupProtectionCheckVmSettings toolSettings, string vmId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmId = vmId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionCheckVmSettings.VmId"/>.</em></p><p>ID of the virtual machine to be checked for protection.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionCheckVmSettings ResetVmId(this AzureBackupProtectionCheckVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionCheckVmSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionCheckVmSettings SetDebug(this AzureBackupProtectionCheckVmSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionCheckVmSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionCheckVmSettings ResetDebug(this AzureBackupProtectionCheckVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionCheckVmSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionCheckVmSettings SetHelp(this AzureBackupProtectionCheckVmSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionCheckVmSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionCheckVmSettings ResetHelp(this AzureBackupProtectionCheckVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionCheckVmSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionCheckVmSettings SetOutput(this AzureBackupProtectionCheckVmSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionCheckVmSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionCheckVmSettings ResetOutput(this AzureBackupProtectionCheckVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionCheckVmSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionCheckVmSettings SetQuery(this AzureBackupProtectionCheckVmSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionCheckVmSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionCheckVmSettings ResetQuery(this AzureBackupProtectionCheckVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionCheckVmSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionCheckVmSettings SetVerbose(this AzureBackupProtectionCheckVmSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionCheckVmSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionCheckVmSettings ResetVerbose(this AzureBackupProtectionCheckVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBackupProtectionDisableSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBackupProtectionDisableSettingsExtensions
+    {
+        #region ContainerName
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.ContainerName"/>.</em></p><p>Name of the container.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings SetContainerName(this AzureBackupProtectionDisableSettings toolSettings, string containerName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = containerName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.ContainerName"/>.</em></p><p>Name of the container.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings ResetContainerName(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ItemName
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.ItemName"/>.</em></p><p>Name of the backed up item.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings SetItemName(this AzureBackupProtectionDisableSettings toolSettings, string itemName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ItemName = itemName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.ItemName"/>.</em></p><p>Name of the backed up item.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings ResetItemName(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ItemName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings SetResourceGroup(this AzureBackupProtectionDisableSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings ResetResourceGroup(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings SetVaultName(this AzureBackupProtectionDisableSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings ResetVaultName(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DeleteBackupData
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.DeleteBackupData"/>.</em></p><p>Option to delete existing backed up data in the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings SetDeleteBackupData(this AzureBackupProtectionDisableSettings toolSettings, bool? deleteBackupData)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeleteBackupData = deleteBackupData;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.DeleteBackupData"/>.</em></p><p>Option to delete existing backed up data in the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings ResetDeleteBackupData(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeleteBackupData = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureBackupProtectionDisableSettings.DeleteBackupData"/>.</em></p><p>Option to delete existing backed up data in the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings EnableDeleteBackupData(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeleteBackupData = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureBackupProtectionDisableSettings.DeleteBackupData"/>.</em></p><p>Option to delete existing backed up data in the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings DisableDeleteBackupData(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeleteBackupData = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureBackupProtectionDisableSettings.DeleteBackupData"/>.</em></p><p>Option to delete existing backed up data in the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings ToggleDeleteBackupData(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeleteBackupData = !toolSettings.DeleteBackupData;
+            return toolSettings;
+        }
+        #endregion
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings SetYes(this AzureBackupProtectionDisableSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings ResetYes(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings SetDebug(this AzureBackupProtectionDisableSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings ResetDebug(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings SetHelp(this AzureBackupProtectionDisableSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings ResetHelp(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings SetOutput(this AzureBackupProtectionDisableSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings ResetOutput(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings SetQuery(this AzureBackupProtectionDisableSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings ResetQuery(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings SetVerbose(this AzureBackupProtectionDisableSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionDisableSettings ResetVerbose(this AzureBackupProtectionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBackupProtectionEnableForVmSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBackupProtectionEnableForVmSettingsExtensions
+    {
+        #region PolicyName
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.PolicyName"/>.</em></p><p>Name of the backup policy.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings SetPolicyName(this AzureBackupProtectionEnableForVmSettings toolSettings, string policyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyName = policyName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.PolicyName"/>.</em></p><p>Name of the backup policy.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings ResetPolicyName(this AzureBackupProtectionEnableForVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings SetResourceGroup(this AzureBackupProtectionEnableForVmSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings ResetResourceGroup(this AzureBackupProtectionEnableForVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings SetVaultName(this AzureBackupProtectionEnableForVmSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings ResetVaultName(this AzureBackupProtectionEnableForVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Vm
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.Vm"/>.</em></p><p>Name or ID of the Virtual Machine to be protected.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings SetVm(this AzureBackupProtectionEnableForVmSettings toolSettings, string vm)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Vm = vm;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.Vm"/>.</em></p><p>Name or ID of the Virtual Machine to be protected.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings ResetVm(this AzureBackupProtectionEnableForVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Vm = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings SetDebug(this AzureBackupProtectionEnableForVmSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings ResetDebug(this AzureBackupProtectionEnableForVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings SetHelp(this AzureBackupProtectionEnableForVmSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings ResetHelp(this AzureBackupProtectionEnableForVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings SetOutput(this AzureBackupProtectionEnableForVmSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings ResetOutput(this AzureBackupProtectionEnableForVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings SetQuery(this AzureBackupProtectionEnableForVmSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings ResetQuery(this AzureBackupProtectionEnableForVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings SetVerbose(this AzureBackupProtectionEnableForVmSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupProtectionEnableForVmSettings ResetVerbose(this AzureBackupProtectionEnableForVmSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBackupRestoreRestoreDisksSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBackupRestoreRestoreDisksSettingsExtensions
+    {
+        #region ContainerName
+        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.ContainerName"/>.</em></p><p>Name of the container.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings SetContainerName(this AzureBackupRestoreRestoreDisksSettings toolSettings, string containerName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = containerName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.ContainerName"/>.</em></p><p>Name of the container.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings ResetContainerName(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContainerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ItemName
+        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.ItemName"/>.</em></p><p>Name of the backed up item.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings SetItemName(this AzureBackupRestoreRestoreDisksSettings toolSettings, string itemName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ItemName = itemName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.ItemName"/>.</em></p><p>Name of the backed up item.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings ResetItemName(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ItemName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings SetResourceGroup(this AzureBackupRestoreRestoreDisksSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings ResetResourceGroup(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region RpName
+        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.RpName"/>.</em></p><p>Name of the recovery point.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings SetRpName(this AzureBackupRestoreRestoreDisksSettings toolSettings, string rpName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RpName = rpName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.RpName"/>.</em></p><p>Name of the recovery point.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings ResetRpName(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RpName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StorageAccount
+        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.StorageAccount"/>.</em></p><p>Name or ID of the staging storage account. The VM configuration will be restored to this storage account. See the help for --restore-to-staging-storage-account parameter for more info.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings SetStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings, string storageAccount)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageAccount = storageAccount;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.StorageAccount"/>.</em></p><p>Name or ID of the staging storage account. The VM configuration will be restored to this storage account. See the help for --restore-to-staging-storage-account parameter for more info.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings ResetStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageAccount = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings SetVaultName(this AzureBackupRestoreRestoreDisksSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings ResetVaultName(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region RestoreToStagingStorageAccount
+        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.RestoreToStagingStorageAccount"/>.</em></p><p>Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings SetRestoreToStagingStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings, bool? restoreToStagingStorageAccount)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RestoreToStagingStorageAccount = restoreToStagingStorageAccount;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.RestoreToStagingStorageAccount"/>.</em></p><p>Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings ResetRestoreToStagingStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RestoreToStagingStorageAccount = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureBackupRestoreRestoreDisksSettings.RestoreToStagingStorageAccount"/>.</em></p><p>Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings EnableRestoreToStagingStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RestoreToStagingStorageAccount = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureBackupRestoreRestoreDisksSettings.RestoreToStagingStorageAccount"/>.</em></p><p>Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings DisableRestoreToStagingStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RestoreToStagingStorageAccount = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureBackupRestoreRestoreDisksSettings.RestoreToStagingStorageAccount"/>.</em></p><p>Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings ToggleRestoreToStagingStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RestoreToStagingStorageAccount = !toolSettings.RestoreToStagingStorageAccount;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings SetDebug(this AzureBackupRestoreRestoreDisksSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings ResetDebug(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings SetHelp(this AzureBackupRestoreRestoreDisksSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings ResetHelp(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings SetOutput(this AzureBackupRestoreRestoreDisksSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings ResetOutput(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings SetQuery(this AzureBackupRestoreRestoreDisksSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings ResetQuery(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings SetVerbose(this AzureBackupRestoreRestoreDisksSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupRestoreRestoreDisksSettings ResetVerbose(this AzureBackupRestoreRestoreDisksSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4050,710 +4608,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBackupProtectionBackupNowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupProtectionBackupNowSettingsExtensions
-    {
-        #region ContainerName
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.ContainerName"/>.</em></p><p>Name of the container.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings SetContainerName(this AzureBackupProtectionBackupNowSettings toolSettings, string containerName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ContainerName = containerName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.ContainerName"/>.</em></p><p>Name of the container.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings ResetContainerName(this AzureBackupProtectionBackupNowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ContainerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ItemName
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.ItemName"/>.</em></p><p>Name of the backed up item.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings SetItemName(this AzureBackupProtectionBackupNowSettings toolSettings, string itemName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ItemName = itemName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.ItemName"/>.</em></p><p>Name of the backed up item.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings ResetItemName(this AzureBackupProtectionBackupNowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ItemName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings SetResourceGroup(this AzureBackupProtectionBackupNowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings ResetResourceGroup(this AzureBackupProtectionBackupNowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region RetainUntil
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.RetainUntil"/>.</em></p><p>The date until which this backed up copy will be available for retrieval, in UTC (d-m-Y).</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings SetRetainUntil(this AzureBackupProtectionBackupNowSettings toolSettings, string retainUntil)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RetainUntil = retainUntil;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.RetainUntil"/>.</em></p><p>The date until which this backed up copy will be available for retrieval, in UTC (d-m-Y).</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings ResetRetainUntil(this AzureBackupProtectionBackupNowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RetainUntil = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings SetVaultName(this AzureBackupProtectionBackupNowSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings ResetVaultName(this AzureBackupProtectionBackupNowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings SetDebug(this AzureBackupProtectionBackupNowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings ResetDebug(this AzureBackupProtectionBackupNowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings SetHelp(this AzureBackupProtectionBackupNowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings ResetHelp(this AzureBackupProtectionBackupNowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings SetOutput(this AzureBackupProtectionBackupNowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings ResetOutput(this AzureBackupProtectionBackupNowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings SetQuery(this AzureBackupProtectionBackupNowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings ResetQuery(this AzureBackupProtectionBackupNowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionBackupNowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings SetVerbose(this AzureBackupProtectionBackupNowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionBackupNowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionBackupNowSettings ResetVerbose(this AzureBackupProtectionBackupNowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBackupProtectionCheckVmSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupProtectionCheckVmSettingsExtensions
-    {
-        #region VmId
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionCheckVmSettings.VmId"/>.</em></p><p>ID of the virtual machine to be checked for protection.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionCheckVmSettings SetVmId(this AzureBackupProtectionCheckVmSettings toolSettings, string vmId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmId = vmId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionCheckVmSettings.VmId"/>.</em></p><p>ID of the virtual machine to be checked for protection.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionCheckVmSettings ResetVmId(this AzureBackupProtectionCheckVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionCheckVmSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionCheckVmSettings SetDebug(this AzureBackupProtectionCheckVmSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionCheckVmSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionCheckVmSettings ResetDebug(this AzureBackupProtectionCheckVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionCheckVmSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionCheckVmSettings SetHelp(this AzureBackupProtectionCheckVmSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionCheckVmSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionCheckVmSettings ResetHelp(this AzureBackupProtectionCheckVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionCheckVmSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionCheckVmSettings SetOutput(this AzureBackupProtectionCheckVmSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionCheckVmSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionCheckVmSettings ResetOutput(this AzureBackupProtectionCheckVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionCheckVmSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionCheckVmSettings SetQuery(this AzureBackupProtectionCheckVmSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionCheckVmSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionCheckVmSettings ResetQuery(this AzureBackupProtectionCheckVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionCheckVmSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionCheckVmSettings SetVerbose(this AzureBackupProtectionCheckVmSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionCheckVmSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionCheckVmSettings ResetVerbose(this AzureBackupProtectionCheckVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBackupProtectionDisableSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupProtectionDisableSettingsExtensions
-    {
-        #region ContainerName
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.ContainerName"/>.</em></p><p>Name of the container.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings SetContainerName(this AzureBackupProtectionDisableSettings toolSettings, string containerName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ContainerName = containerName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.ContainerName"/>.</em></p><p>Name of the container.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings ResetContainerName(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ContainerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ItemName
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.ItemName"/>.</em></p><p>Name of the backed up item.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings SetItemName(this AzureBackupProtectionDisableSettings toolSettings, string itemName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ItemName = itemName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.ItemName"/>.</em></p><p>Name of the backed up item.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings ResetItemName(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ItemName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings SetResourceGroup(this AzureBackupProtectionDisableSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings ResetResourceGroup(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings SetVaultName(this AzureBackupProtectionDisableSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings ResetVaultName(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DeleteBackupData
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.DeleteBackupData"/>.</em></p><p>Option to delete existing backed up data in the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings SetDeleteBackupData(this AzureBackupProtectionDisableSettings toolSettings, bool? deleteBackupData)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DeleteBackupData = deleteBackupData;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.DeleteBackupData"/>.</em></p><p>Option to delete existing backed up data in the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings ResetDeleteBackupData(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DeleteBackupData = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureBackupProtectionDisableSettings.DeleteBackupData"/>.</em></p><p>Option to delete existing backed up data in the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings EnableDeleteBackupData(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DeleteBackupData = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureBackupProtectionDisableSettings.DeleteBackupData"/>.</em></p><p>Option to delete existing backed up data in the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings DisableDeleteBackupData(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DeleteBackupData = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureBackupProtectionDisableSettings.DeleteBackupData"/>.</em></p><p>Option to delete existing backed up data in the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings ToggleDeleteBackupData(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DeleteBackupData = !toolSettings.DeleteBackupData;
-            return toolSettings;
-        }
-        #endregion
-        #region Yes
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings SetYes(this AzureBackupProtectionDisableSettings toolSettings, string yes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = yes;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings ResetYes(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings SetDebug(this AzureBackupProtectionDisableSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings ResetDebug(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings SetHelp(this AzureBackupProtectionDisableSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings ResetHelp(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings SetOutput(this AzureBackupProtectionDisableSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings ResetOutput(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings SetQuery(this AzureBackupProtectionDisableSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings ResetQuery(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings SetVerbose(this AzureBackupProtectionDisableSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionDisableSettings ResetVerbose(this AzureBackupProtectionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBackupProtectionEnableForVmSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupProtectionEnableForVmSettingsExtensions
-    {
-        #region PolicyName
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.PolicyName"/>.</em></p><p>Name of the backup policy.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings SetPolicyName(this AzureBackupProtectionEnableForVmSettings toolSettings, string policyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PolicyName = policyName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.PolicyName"/>.</em></p><p>Name of the backup policy.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings ResetPolicyName(this AzureBackupProtectionEnableForVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PolicyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings SetResourceGroup(this AzureBackupProtectionEnableForVmSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings ResetResourceGroup(this AzureBackupProtectionEnableForVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings SetVaultName(this AzureBackupProtectionEnableForVmSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings ResetVaultName(this AzureBackupProtectionEnableForVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Vm
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.Vm"/>.</em></p><p>Name or ID of the Virtual Machine to be protected.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings SetVm(this AzureBackupProtectionEnableForVmSettings toolSettings, string vm)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Vm = vm;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.Vm"/>.</em></p><p>Name or ID of the Virtual Machine to be protected.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings ResetVm(this AzureBackupProtectionEnableForVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Vm = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings SetDebug(this AzureBackupProtectionEnableForVmSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings ResetDebug(this AzureBackupProtectionEnableForVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings SetHelp(this AzureBackupProtectionEnableForVmSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings ResetHelp(this AzureBackupProtectionEnableForVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings SetOutput(this AzureBackupProtectionEnableForVmSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings ResetOutput(this AzureBackupProtectionEnableForVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings SetQuery(this AzureBackupProtectionEnableForVmSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings ResetQuery(this AzureBackupProtectionEnableForVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupProtectionEnableForVmSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings SetVerbose(this AzureBackupProtectionEnableForVmSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupProtectionEnableForVmSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupProtectionEnableForVmSettings ResetVerbose(this AzureBackupProtectionEnableForVmSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureBackupRecoverypointListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
@@ -5148,174 +5002,132 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBackupRestoreRestoreDisksSettingsExtensions
+    #region AzureBackupJobListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupRestoreRestoreDisksSettingsExtensions
+    public static partial class AzureBackupJobListSettingsExtensions
     {
-        #region ContainerName
-        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.ContainerName"/>.</em></p><p>Name of the container.</p></summary>
-        [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings SetContainerName(this AzureBackupRestoreRestoreDisksSettings toolSettings, string containerName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ContainerName = containerName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.ContainerName"/>.</em></p><p>Name of the container.</p></summary>
-        [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings ResetContainerName(this AzureBackupRestoreRestoreDisksSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ContainerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ItemName
-        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.ItemName"/>.</em></p><p>Name of the backed up item.</p></summary>
-        [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings SetItemName(this AzureBackupRestoreRestoreDisksSettings toolSettings, string itemName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ItemName = itemName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.ItemName"/>.</em></p><p>Name of the backed up item.</p></summary>
-        [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings ResetItemName(this AzureBackupRestoreRestoreDisksSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ItemName = null;
-            return toolSettings;
-        }
-        #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings SetResourceGroup(this AzureBackupRestoreRestoreDisksSettings toolSettings, string resourceGroup)
+        public static AzureBackupJobListSettings SetResourceGroup(this AzureBackupJobListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings ResetResourceGroup(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        public static AzureBackupJobListSettings ResetResourceGroup(this AzureBackupJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region RpName
-        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.RpName"/>.</em></p><p>Name of the recovery point.</p></summary>
-        [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings SetRpName(this AzureBackupRestoreRestoreDisksSettings toolSettings, string rpName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RpName = rpName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.RpName"/>.</em></p><p>Name of the recovery point.</p></summary>
-        [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings ResetRpName(this AzureBackupRestoreRestoreDisksSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RpName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StorageAccount
-        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.StorageAccount"/>.</em></p><p>Name or ID of the staging storage account. The VM configuration will be restored to this storage account. See the help for --restore-to-staging-storage-account parameter for more info.</p></summary>
-        [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings SetStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings, string storageAccount)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageAccount = storageAccount;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.StorageAccount"/>.</em></p><p>Name or ID of the staging storage account. The VM configuration will be restored to this storage account. See the help for --restore-to-staging-storage-account parameter for more info.</p></summary>
-        [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings ResetStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageAccount = null;
-            return toolSettings;
-        }
-        #endregion
         #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings SetVaultName(this AzureBackupRestoreRestoreDisksSettings toolSettings, string vaultName)
+        public static AzureBackupJobListSettings SetVaultName(this AzureBackupJobListSettings toolSettings, string vaultName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.VaultName = vaultName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings ResetVaultName(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        public static AzureBackupJobListSettings ResetVaultName(this AzureBackupJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.VaultName = null;
             return toolSettings;
         }
         #endregion
-        #region RestoreToStagingStorageAccount
-        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.RestoreToStagingStorageAccount"/>.</em></p><p>Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false.</p></summary>
+        #region EndDate
+        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.EndDate"/>.</em></p><p>The end date of the range in UTC (d-m-Y).</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings SetRestoreToStagingStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings, bool? restoreToStagingStorageAccount)
+        public static AzureBackupJobListSettings SetEndDate(this AzureBackupJobListSettings toolSettings, string endDate)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.RestoreToStagingStorageAccount = restoreToStagingStorageAccount;
+            toolSettings.EndDate = endDate;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.RestoreToStagingStorageAccount"/>.</em></p><p>Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.EndDate"/>.</em></p><p>The end date of the range in UTC (d-m-Y).</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings ResetRestoreToStagingStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        public static AzureBackupJobListSettings ResetEndDate(this AzureBackupJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.RestoreToStagingStorageAccount = null;
+            toolSettings.EndDate = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureBackupRestoreRestoreDisksSettings.RestoreToStagingStorageAccount"/>.</em></p><p>Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false.</p></summary>
+        #endregion
+        #region Operation
+        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Operation"/>.</em></p><p>User initiated operation.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings EnableRestoreToStagingStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        public static AzureBackupJobListSettings SetOperation(this AzureBackupJobListSettings toolSettings, BackupJobListOperation operation)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.RestoreToStagingStorageAccount = true;
+            toolSettings.Operation = operation;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureBackupRestoreRestoreDisksSettings.RestoreToStagingStorageAccount"/>.</em></p><p>Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Operation"/>.</em></p><p>User initiated operation.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings DisableRestoreToStagingStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        public static AzureBackupJobListSettings ResetOperation(this AzureBackupJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.RestoreToStagingStorageAccount = false;
+            toolSettings.Operation = null;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureBackupRestoreRestoreDisksSettings.RestoreToStagingStorageAccount"/>.</em></p><p>Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false.</p></summary>
+        #endregion
+        #region StartDate
+        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.StartDate"/>.</em></p><p>The start date of the range in UTC (d-m-Y).</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings ToggleRestoreToStagingStorageAccount(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        public static AzureBackupJobListSettings SetStartDate(this AzureBackupJobListSettings toolSettings, string startDate)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.RestoreToStagingStorageAccount = !toolSettings.RestoreToStagingStorageAccount;
+            toolSettings.StartDate = startDate;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.StartDate"/>.</em></p><p>The start date of the range in UTC (d-m-Y).</p></summary>
+        [Pure]
+        public static AzureBackupJobListSettings ResetStartDate(this AzureBackupJobListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartDate = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Status
+        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Status"/>.</em></p><p>Status of the Job.</p></summary>
+        [Pure]
+        public static AzureBackupJobListSettings SetStatus(this AzureBackupJobListSettings toolSettings, BackupJobListStatus status)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = status;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Status"/>.</em></p><p>Status of the Job.</p></summary>
+        [Pure]
+        public static AzureBackupJobListSettings ResetStatus(this AzureBackupJobListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings SetDebug(this AzureBackupRestoreRestoreDisksSettings toolSettings, string debug)
+        public static AzureBackupJobListSettings SetDebug(this AzureBackupJobListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings ResetDebug(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        public static AzureBackupJobListSettings ResetDebug(this AzureBackupJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -5323,17 +5135,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings SetHelp(this AzureBackupRestoreRestoreDisksSettings toolSettings, string help)
+        public static AzureBackupJobListSettings SetHelp(this AzureBackupJobListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings ResetHelp(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        public static AzureBackupJobListSettings ResetHelp(this AzureBackupJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -5341,17 +5153,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings SetOutput(this AzureBackupRestoreRestoreDisksSettings toolSettings, AzureOutput output)
+        public static AzureBackupJobListSettings SetOutput(this AzureBackupJobListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings ResetOutput(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        public static AzureBackupJobListSettings ResetOutput(this AzureBackupJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5359,17 +5171,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings SetQuery(this AzureBackupRestoreRestoreDisksSettings toolSettings, string query)
+        public static AzureBackupJobListSettings SetQuery(this AzureBackupJobListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings ResetQuery(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        public static AzureBackupJobListSettings ResetQuery(this AzureBackupJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5377,17 +5189,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupRestoreRestoreDisksSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings SetVerbose(this AzureBackupRestoreRestoreDisksSettings toolSettings, string verbose)
+        public static AzureBackupJobListSettings SetVerbose(this AzureBackupJobListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupRestoreRestoreDisksSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupRestoreRestoreDisksSettings ResetVerbose(this AzureBackupRestoreRestoreDisksSettings toolSettings)
+        public static AzureBackupJobListSettings ResetVerbose(this AzureBackupJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5396,42 +5208,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBackupVaultCreateSettingsExtensions
+    #region AzureBackupJobShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupVaultCreateSettingsExtensions
+    public static partial class AzureBackupJobShowSettingsExtensions
     {
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupVaultCreateSettings SetLocation(this AzureBackupVaultCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupVaultCreateSettings ResetLocation(this AzureBackupVaultCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Name"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.Name"/>.</em></p><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings SetName(this AzureBackupVaultCreateSettings toolSettings, string name)
+        public static AzureBackupJobShowSettings SetName(this AzureBackupJobShowSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Name"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.Name"/>.</em></p><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings ResetName(this AzureBackupVaultCreateSettings toolSettings)
+        public static AzureBackupJobShowSettings ResetName(this AzureBackupJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -5439,35 +5233,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings SetResourceGroup(this AzureBackupVaultCreateSettings toolSettings, string resourceGroup)
+        public static AzureBackupJobShowSettings SetResourceGroup(this AzureBackupJobShowSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings ResetResourceGroup(this AzureBackupVaultCreateSettings toolSettings)
+        public static AzureBackupJobShowSettings ResetResourceGroup(this AzureBackupJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings SetDebug(this AzureBackupVaultCreateSettings toolSettings, string debug)
+        public static AzureBackupJobShowSettings SetVaultName(this AzureBackupJobShowSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupJobShowSettings ResetVaultName(this AzureBackupJobShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupJobShowSettings SetDebug(this AzureBackupJobShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings ResetDebug(this AzureBackupVaultCreateSettings toolSettings)
+        public static AzureBackupJobShowSettings ResetDebug(this AzureBackupJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -5475,17 +5287,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings SetHelp(this AzureBackupVaultCreateSettings toolSettings, string help)
+        public static AzureBackupJobShowSettings SetHelp(this AzureBackupJobShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings ResetHelp(this AzureBackupVaultCreateSettings toolSettings)
+        public static AzureBackupJobShowSettings ResetHelp(this AzureBackupJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -5493,17 +5305,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings SetOutput(this AzureBackupVaultCreateSettings toolSettings, AzureOutput output)
+        public static AzureBackupJobShowSettings SetOutput(this AzureBackupJobShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings ResetOutput(this AzureBackupVaultCreateSettings toolSettings)
+        public static AzureBackupJobShowSettings ResetOutput(this AzureBackupJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5511,17 +5323,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings SetQuery(this AzureBackupVaultCreateSettings toolSettings, string query)
+        public static AzureBackupJobShowSettings SetQuery(this AzureBackupJobShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings ResetQuery(this AzureBackupVaultCreateSettings toolSettings)
+        public static AzureBackupJobShowSettings ResetQuery(this AzureBackupJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5529,17 +5341,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings SetVerbose(this AzureBackupVaultCreateSettings toolSettings, string verbose)
+        public static AzureBackupJobShowSettings SetVerbose(this AzureBackupJobShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupVaultCreateSettings ResetVerbose(this AzureBackupVaultCreateSettings toolSettings)
+        public static AzureBackupJobShowSettings ResetVerbose(this AzureBackupJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5548,24 +5360,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBackupVaultDeleteSettingsExtensions
+    #region AzureBackupJobStopSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupVaultDeleteSettingsExtensions
+    public static partial class AzureBackupJobStopSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Name"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.Name"/>.</em></p><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings SetName(this AzureBackupVaultDeleteSettings toolSettings, string name)
+        public static AzureBackupJobStopSettings SetName(this AzureBackupJobStopSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Name"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.Name"/>.</em></p><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings ResetName(this AzureBackupVaultDeleteSettings toolSettings)
+        public static AzureBackupJobStopSettings ResetName(this AzureBackupJobStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -5573,71 +5385,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings SetResourceGroup(this AzureBackupVaultDeleteSettings toolSettings, string resourceGroup)
+        public static AzureBackupJobStopSettings SetResourceGroup(this AzureBackupJobStopSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings ResetResourceGroup(this AzureBackupVaultDeleteSettings toolSettings)
+        public static AzureBackupJobStopSettings ResetResourceGroup(this AzureBackupJobStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Force
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Force"/>.</em></p><p>Force completion of the requested action.</p></summary>
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings SetForce(this AzureBackupVaultDeleteSettings toolSettings, string force)
+        public static AzureBackupJobStopSettings SetVaultName(this AzureBackupJobStopSettings toolSettings, string vaultName)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = force;
+            toolSettings.VaultName = vaultName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Force"/>.</em></p><p>Force completion of the requested action.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings ResetForce(this AzureBackupVaultDeleteSettings toolSettings)
+        public static AzureBackupJobStopSettings ResetVaultName(this AzureBackupJobStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Yes
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureBackupVaultDeleteSettings SetYes(this AzureBackupVaultDeleteSettings toolSettings, string yes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = yes;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureBackupVaultDeleteSettings ResetYes(this AzureBackupVaultDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = null;
+            toolSettings.VaultName = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings SetDebug(this AzureBackupVaultDeleteSettings toolSettings, string debug)
+        public static AzureBackupJobStopSettings SetDebug(this AzureBackupJobStopSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings ResetDebug(this AzureBackupVaultDeleteSettings toolSettings)
+        public static AzureBackupJobStopSettings ResetDebug(this AzureBackupJobStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -5645,17 +5439,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings SetHelp(this AzureBackupVaultDeleteSettings toolSettings, string help)
+        public static AzureBackupJobStopSettings SetHelp(this AzureBackupJobStopSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings ResetHelp(this AzureBackupVaultDeleteSettings toolSettings)
+        public static AzureBackupJobStopSettings ResetHelp(this AzureBackupJobStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -5663,17 +5457,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings SetOutput(this AzureBackupVaultDeleteSettings toolSettings, AzureOutput output)
+        public static AzureBackupJobStopSettings SetOutput(this AzureBackupJobStopSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings ResetOutput(this AzureBackupVaultDeleteSettings toolSettings)
+        public static AzureBackupJobStopSettings ResetOutput(this AzureBackupJobStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5681,17 +5475,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings SetQuery(this AzureBackupVaultDeleteSettings toolSettings, string query)
+        public static AzureBackupJobStopSettings SetQuery(this AzureBackupJobStopSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings ResetQuery(this AzureBackupVaultDeleteSettings toolSettings)
+        public static AzureBackupJobStopSettings ResetQuery(this AzureBackupJobStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5699,17 +5493,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings SetVerbose(this AzureBackupVaultDeleteSettings toolSettings, string verbose)
+        public static AzureBackupJobStopSettings SetVerbose(this AzureBackupJobStopSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupVaultDeleteSettings ResetVerbose(this AzureBackupVaultDeleteSettings toolSettings)
+        public static AzureBackupJobStopSettings ResetVerbose(this AzureBackupJobStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5718,140 +5512,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureBackupVaultListSettingsExtensions
+    #region AzureBackupJobWaitSettingsExtensions
     /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupVaultListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupVaultListSettings SetResourceGroup(this AzureBackupVaultListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBackupVaultListSettings ResetResourceGroup(this AzureBackupVaultListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupVaultListSettings SetDebug(this AzureBackupVaultListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupVaultListSettings ResetDebug(this AzureBackupVaultListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupVaultListSettings SetHelp(this AzureBackupVaultListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBackupVaultListSettings ResetHelp(this AzureBackupVaultListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupVaultListSettings SetOutput(this AzureBackupVaultListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBackupVaultListSettings ResetOutput(this AzureBackupVaultListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupVaultListSettings SetQuery(this AzureBackupVaultListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBackupVaultListSettings ResetQuery(this AzureBackupVaultListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupVaultListSettings SetVerbose(this AzureBackupVaultListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBackupVaultListSettings ResetVerbose(this AzureBackupVaultListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBackupVaultShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBackupVaultShowSettingsExtensions
+    public static partial class AzureBackupJobWaitSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.Name"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Name"/>.</em></p><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings SetName(this AzureBackupVaultShowSettings toolSettings, string name)
+        public static AzureBackupJobWaitSettings SetName(this AzureBackupJobWaitSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.Name"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Name"/>.</em></p><p>Name of the job. You can use the backup job list command to get the name of a job.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings ResetName(this AzureBackupVaultShowSettings toolSettings)
+        public static AzureBackupJobWaitSettings ResetName(this AzureBackupJobWaitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -5859,35 +5537,71 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings SetResourceGroup(this AzureBackupVaultShowSettings toolSettings, string resourceGroup)
+        public static AzureBackupJobWaitSettings SetResourceGroup(this AzureBackupJobWaitSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings ResetResourceGroup(this AzureBackupVaultShowSettings toolSettings)
+        public static AzureBackupJobWaitSettings ResetResourceGroup(this AzureBackupJobWaitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings SetDebug(this AzureBackupVaultShowSettings toolSettings, string debug)
+        public static AzureBackupJobWaitSettings SetVaultName(this AzureBackupJobWaitSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupJobWaitSettings ResetVaultName(this AzureBackupJobWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Timeout
+        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Timeout"/>.</em></p><p>Maximum time, in seconds, to wait before aborting.</p></summary>
+        [Pure]
+        public static AzureBackupJobWaitSettings SetTimeout(this AzureBackupJobWaitSettings toolSettings, string timeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = timeout;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Timeout"/>.</em></p><p>Maximum time, in seconds, to wait before aborting.</p></summary>
+        [Pure]
+        public static AzureBackupJobWaitSettings ResetTimeout(this AzureBackupJobWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupJobWaitSettings SetDebug(this AzureBackupJobWaitSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings ResetDebug(this AzureBackupVaultShowSettings toolSettings)
+        public static AzureBackupJobWaitSettings ResetDebug(this AzureBackupJobWaitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -5895,17 +5609,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings SetHelp(this AzureBackupVaultShowSettings toolSettings, string help)
+        public static AzureBackupJobWaitSettings SetHelp(this AzureBackupJobWaitSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings ResetHelp(this AzureBackupVaultShowSettings toolSettings)
+        public static AzureBackupJobWaitSettings ResetHelp(this AzureBackupJobWaitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -5913,17 +5627,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings SetOutput(this AzureBackupVaultShowSettings toolSettings, AzureOutput output)
+        public static AzureBackupJobWaitSettings SetOutput(this AzureBackupJobWaitSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings ResetOutput(this AzureBackupVaultShowSettings toolSettings)
+        public static AzureBackupJobWaitSettings ResetOutput(this AzureBackupJobWaitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5931,17 +5645,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings SetQuery(this AzureBackupVaultShowSettings toolSettings, string query)
+        public static AzureBackupJobWaitSettings SetQuery(this AzureBackupJobWaitSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings ResetQuery(this AzureBackupVaultShowSettings toolSettings)
+        public static AzureBackupJobWaitSettings ResetQuery(this AzureBackupJobWaitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5949,17 +5663,303 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBackupVaultShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBackupJobWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings SetVerbose(this AzureBackupVaultShowSettings toolSettings, string verbose)
+        public static AzureBackupJobWaitSettings SetVerbose(this AzureBackupJobWaitSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBackupVaultShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBackupJobWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureBackupVaultShowSettings ResetVerbose(this AzureBackupVaultShowSettings toolSettings)
+        public static AzureBackupJobWaitSettings ResetVerbose(this AzureBackupJobWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBackupContainerListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBackupContainerListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings SetResourceGroup(this AzureBackupContainerListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings ResetResourceGroup(this AzureBackupContainerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings SetVaultName(this AzureBackupContainerListSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings ResetVaultName(this AzureBackupContainerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings SetDebug(this AzureBackupContainerListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings ResetDebug(this AzureBackupContainerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings SetHelp(this AzureBackupContainerListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings ResetHelp(this AzureBackupContainerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings SetOutput(this AzureBackupContainerListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings ResetOutput(this AzureBackupContainerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings SetQuery(this AzureBackupContainerListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings ResetQuery(this AzureBackupContainerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings SetVerbose(this AzureBackupContainerListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupContainerListSettings ResetVerbose(this AzureBackupContainerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBackupContainerShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBackupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBackupContainerShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.Name"/>.</em></p><p>Name of the container. You can use the backup container list command to get the name of a container.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings SetName(this AzureBackupContainerShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.Name"/>.</em></p><p>Name of the container. You can use the backup container list command to get the name of a container.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings ResetName(this AzureBackupContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings SetResourceGroup(this AzureBackupContainerShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings ResetResourceGroup(this AzureBackupContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings SetVaultName(this AzureBackupContainerShowSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.VaultName"/>.</em></p><p>Name of the Recovery services vault.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings ResetVaultName(this AzureBackupContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings SetDebug(this AzureBackupContainerShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings ResetDebug(this AzureBackupContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings SetHelp(this AzureBackupContainerShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings ResetHelp(this AzureBackupContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings SetOutput(this AzureBackupContainerShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings ResetOutput(this AzureBackupContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings SetQuery(this AzureBackupContainerShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings ResetQuery(this AzureBackupContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBackupContainerShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings SetVerbose(this AzureBackupContainerShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBackupContainerShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBackupContainerShowSettings ResetVerbose(this AzureBackupContainerShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

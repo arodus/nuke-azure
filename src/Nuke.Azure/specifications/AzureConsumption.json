@@ -6,14 +6,14 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/budget.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/marketplace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/pricesheet.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/reservation.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/usage.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/reservation/detail.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/reservation/summary.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/consumption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/consumption/budget.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/consumption/pricesheet.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/consumption/marketplace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/consumption/reservation.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/consumption/usage.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/consumption/reservation/summary.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/consumption/reservation/detail.yml"
   ],
   "name": "AzureConsumption",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest",
@@ -151,6 +151,26 @@
       }
     },
     {
+      "postfix": "PricesheetShow",
+      "definiteArgument": "consumption pricesheet show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "BillingPeriodName",
+            "type": "string",
+            "format": "--billing-period-name {value}",
+            "help": "Name of the billing period to get the price sheet."
+          },
+          {
+            "name": "IncludeMeterDetails",
+            "type": "string",
+            "format": "--include-meter-details {value}",
+            "help": "Include meter details in the price sheet."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "MarketplaceList",
       "definiteArgument": "consumption marketplace list",
       "settingsClass": {
@@ -178,26 +198,6 @@
             "type": "int",
             "format": "--top {value}",
             "help": "Maximum number of items to return. Value range: 1-1000."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "PricesheetShow",
-      "definiteArgument": "consumption pricesheet show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "BillingPeriodName",
-            "type": "string",
-            "format": "--billing-period-name {value}",
-            "help": "Name of the billing period to get the price sheet."
-          },
-          {
-            "name": "IncludeMeterDetails",
-            "type": "string",
-            "format": "--include-meter-details {value}",
-            "help": "Include meter details in the price sheet."
           }
         ]
       }
@@ -252,38 +252,6 @@
       }
     },
     {
-      "postfix": "ReservationDetailList",
-      "definiteArgument": "consumption reservation detail list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EndDate",
-            "type": "string",
-            "format": "--end-date {value}",
-            "help": "End date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --start-date."
-          },
-          {
-            "name": "ReservationOrderId",
-            "type": "string",
-            "format": "--reservation-order-id {value}",
-            "help": "Reservation order id."
-          },
-          {
-            "name": "StartDate",
-            "type": "string",
-            "format": "--start-date {value}",
-            "help": "Start date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --end-date."
-          },
-          {
-            "name": "ReservationId",
-            "type": "string",
-            "format": "--reservation-id {value}",
-            "help": "Reservation id."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "ReservationSummaryList",
       "definiteArgument": "consumption reservation summary list",
       "settingsClass": {
@@ -317,6 +285,38 @@
             "type": "string",
             "format": "--start-date {value}",
             "help": "Start date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --end-date."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReservationDetailList",
+      "definiteArgument": "consumption reservation detail list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EndDate",
+            "type": "string",
+            "format": "--end-date {value}",
+            "help": "End date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --start-date."
+          },
+          {
+            "name": "ReservationOrderId",
+            "type": "string",
+            "format": "--reservation-order-id {value}",
+            "help": "Reservation order id."
+          },
+          {
+            "name": "StartDate",
+            "type": "string",
+            "format": "--start-date {value}",
+            "help": "Start date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --end-date."
+          },
+          {
+            "name": "ReservationId",
+            "type": "string",
+            "format": "--reservation-id {value}",
+            "help": "Reservation id."
           }
         ]
       }

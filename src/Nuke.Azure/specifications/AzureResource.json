@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/resource.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/resource/link.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/resource/lock.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/resource.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/resource/lock.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/resource/link.yml"
   ],
   "name": "AzureResource",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest",
@@ -463,106 +463,6 @@
       }
     },
     {
-      "postfix": "LinkCreate",
-      "definiteArgument": "resource link create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LinkId",
-            "type": "string",
-            "format": "--link-id {value}",
-            "help": ""
-          },
-          {
-            "name": "TargetId",
-            "type": "string",
-            "format": "--target-id {value}",
-            "help": "The id of the resource link target."
-          },
-          {
-            "name": "Notes",
-            "type": "string",
-            "format": "--notes {value}",
-            "help": "Notes for this link."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LinkDelete",
-      "definiteArgument": "resource link delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LinkId",
-            "type": "string",
-            "format": "--link-id {value}",
-            "help": "The fully qualified ID of the resource link. Use the format, /subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/{provider-namespace}/{resource-type}/{resource-name}/Microsoft.Resources/links/{link-name}. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LinkList",
-      "definiteArgument": "resource link list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FilterString",
-            "type": "string",
-            "format": "--filter-string {value}",
-            "help": "A filter for restricting the results."
-          },
-          {
-            "name": "Scope",
-            "type": "string",
-            "format": "--scope {value}",
-            "help": "The scope for the links."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LinkShow",
-      "definiteArgument": "resource link show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LinkId",
-            "type": "string",
-            "format": "--link-id {value}",
-            "help": "The fully qualified Id of the resource link. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LinkUpdate",
-      "definiteArgument": "resource link update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LinkId",
-            "type": "string",
-            "format": "--link-id {value}",
-            "help": ""
-          },
-          {
-            "name": "Notes",
-            "type": "string",
-            "format": "--notes {value}",
-            "help": "Notes for this link."
-          },
-          {
-            "name": "TargetId",
-            "type": "string",
-            "format": "--target-id {value}",
-            "help": "The id of the resource link target."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "LockCreate",
       "definiteArgument": "resource lock create",
       "settingsClass": {
@@ -823,6 +723,106 @@
             "type": "string",
             "format": "--resource-type {value}",
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkCreate",
+      "definiteArgument": "resource link create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkId",
+            "type": "string",
+            "format": "--link-id {value}",
+            "help": ""
+          },
+          {
+            "name": "TargetId",
+            "type": "string",
+            "format": "--target-id {value}",
+            "help": "The id of the resource link target."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes for this link."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkDelete",
+      "definiteArgument": "resource link delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkId",
+            "type": "string",
+            "format": "--link-id {value}",
+            "help": "The fully qualified ID of the resource link. Use the format, /subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/{provider-namespace}/{resource-type}/{resource-name}/Microsoft.Resources/links/{link-name}. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkList",
+      "definiteArgument": "resource link list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilterString",
+            "type": "string",
+            "format": "--filter-string {value}",
+            "help": "A filter for restricting the results."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "The scope for the links."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkShow",
+      "definiteArgument": "resource link show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkId",
+            "type": "string",
+            "format": "--link-id {value}",
+            "help": "The fully qualified Id of the resource link. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkUpdate",
+      "definiteArgument": "resource link update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkId",
+            "type": "string",
+            "format": "--link-id {value}",
+            "help": ""
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes for this link."
+          },
+          {
+            "name": "TargetId",
+            "type": "string",
+            "format": "--target-id {value}",
+            "help": "The id of the resource link target."
           }
         ]
       }

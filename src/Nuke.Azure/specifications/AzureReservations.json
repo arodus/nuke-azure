@@ -6,11 +6,11 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/catalog.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/reservation-order-id.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/reservation-order.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/reservation.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/reservations.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/reservations/reservation-order-id.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/reservations/catalog.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/reservations/reservation-order.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/reservations/reservation.yml"
   ],
   "name": "AzureReservations",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest",
@@ -21,6 +21,20 @@
       "postfix": "",
       "definiteArgument": "reservations",
       "settingsClass": {}
+    },
+    {
+      "postfix": "ReservationOrderIdList",
+      "definiteArgument": "reservations reservation-order-id list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "SubscriptionId",
+            "type": "string",
+            "format": "--subscription-id {value}",
+            "help": "Id of the subscription to look up applied reservations."
+          }
+        ]
+      }
     },
     {
       "postfix": "CatalogShow",
@@ -44,20 +58,6 @@
             "type": "string",
             "format": "--location {value}",
             "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ReservationOrderIdList",
-      "definiteArgument": "reservations reservation-order-id list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "SubscriptionId",
-            "type": "string",
-            "format": "--subscription-id {value}",
-            "help": "Id of the subscription to look up applied reservations."
           }
         ]
       }
@@ -269,6 +269,7 @@
       "name": "ReservationsCatalogShowReservedResourceType",
       "values": [
         "cosmosdb",
+        "redhat",
         "sqldatabases",
         "suselinux",
         "virtualmachines"

@@ -6,16 +6,16 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/functionapp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/functionapp/config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/functionapp/cors.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/functionapp/deployment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/functionapp/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/functionapp/config/appsettings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/functionapp/config/hostname.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/functionapp/config/ssl.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/functionapp/deployment/source.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/functionapp/deployment/user.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/functionapp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/functionapp/cors.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/functionapp/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/functionapp/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/functionapp/config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/functionapp/config/ssl.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/functionapp/config/hostname.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/functionapp/config/appsettings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/functionapp/deployment/source.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/functionapp/deployment/user.yml"
   ],
   "name": "AzureFunctionapp",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest",
@@ -266,142 +266,6 @@
       }
     },
     {
-      "postfix": "ConfigSet",
-      "definiteArgument": "functionapp config set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AlwaysOn",
-            "type": "bool",
-            "format": "--always-on",
-            "help": "Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running."
-          },
-          {
-            "name": "AutoHealEnabled",
-            "type": "bool",
-            "format": "--auto-heal-enabled",
-            "help": "Enable or disable auto heal."
-          },
-          {
-            "name": "FtpsState",
-            "type": "FunctionappConfigSetFtpsState",
-            "format": "--ftps-state {value}",
-            "help": "Set the Ftps state value for an app. Default value is 'AllAllowed'."
-          },
-          {
-            "name": "Http20Enabled",
-            "type": "bool",
-            "format": "--http20-enabled",
-            "help": "Configures a web site to allow clients to connect over http2.0."
-          },
-          {
-            "name": "JavaContainer",
-            "type": "string",
-            "format": "--java-container {value}",
-            "help": "The java container, e.g., Tomcat, Jetty."
-          },
-          {
-            "name": "JavaContainerVersion",
-            "type": "string",
-            "format": "--java-container-version {value}",
-            "help": "The version of the java container, e.g., '8.0.23' for Tomcat."
-          },
-          {
-            "name": "JavaVersion",
-            "type": "string",
-            "format": "--java-version {value}",
-            "help": "The version used to run your web app if using Java, e.g., '1.7' for Java 7, '1.8' for Java 8."
-          },
-          {
-            "name": "LinuxFxVersion",
-            "type": "string",
-            "format": "--linux-fx-version {value}",
-            "help": "The runtime stack used for your linux-based webapp, e.g., \"RUBY|2.3\", \"NODE|6.6\", \"PHP|5.6\", \"DOTNETCORE|1.1.0\". See <a href=\"https://aka.ms/linux-stacks\">https://aka.ms/linux-stacks</a> for more info."
-          },
-          {
-            "name": "MinTlsVersion",
-            "type": "string",
-            "format": "--min-tls-version {value}",
-            "help": "The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'."
-          },
-          {
-            "name": "NetFrameworkVersion",
-            "type": "string",
-            "format": "--net-framework-version {value}",
-            "help": "The version used to run your web app if using .NET Framework, e.g., 'v4.0' for .NET 4.6 and 'v3.0' for .NET 3.5."
-          },
-          {
-            "name": "PhpVersion",
-            "type": "string",
-            "format": "--php-version {value}",
-            "help": "The version used to run your web app if using PHP, e.g., 5.5, 5.6, 7.0."
-          },
-          {
-            "name": "PythonVersion",
-            "type": "string",
-            "format": "--python-version {value}",
-            "help": "The version used to run your web app if using Python, e.g., 2.7, 3.4."
-          },
-          {
-            "name": "RemoteDebuggingEnabled",
-            "type": "bool",
-            "format": "--remote-debugging-enabled",
-            "help": "Enable or disable remote debugging."
-          },
-          {
-            "name": "StartupFile",
-            "type": "string",
-            "format": "--startup-file {value}",
-            "help": "The startup file for linux hosted web apps, e.g. 'process.json' for Node.js web."
-          },
-          {
-            "name": "Use32bitWorkerProcess",
-            "type": "bool",
-            "format": "--use-32bit-worker-process",
-            "help": "Use 32 bits worker process or not."
-          },
-          {
-            "name": "WebSocketsEnabled",
-            "type": "bool",
-            "format": "--web-sockets-enabled",
-            "help": "Enable or disable web sockets."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigShow",
-      "definiteArgument": "functionapp config show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "CorsAdd",
       "definiteArgument": "functionapp cors add",
       "settingsClass": {
@@ -568,8 +432,8 @@
       }
     },
     {
-      "postfix": "ConfigAppsettingsDelete",
-      "definiteArgument": "functionapp config appsettings delete",
+      "postfix": "ConfigSet",
+      "definiteArgument": "functionapp config set",
       "settingsClass": {
         "properties": [
           {
@@ -585,126 +449,107 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "SettingNames",
-            "type": "List<string>",
-            "format": "--setting-names {value}",
-            "separator": " ",
-            "help": "Space-separated app setting names."
+            "name": "AlwaysOn",
+            "type": "bool",
+            "format": "--always-on",
+            "help": "Ensure webapp gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running."
+          },
+          {
+            "name": "AutoHealEnabled",
+            "type": "bool",
+            "format": "--auto-heal-enabled",
+            "help": "Enable or disable auto heal."
+          },
+          {
+            "name": "FtpsState",
+            "type": "FunctionappConfigSetFtpsState",
+            "format": "--ftps-state {value}",
+            "help": "Set the Ftps state value for an app. Default value is 'AllAllowed'."
+          },
+          {
+            "name": "Http20Enabled",
+            "type": "bool",
+            "format": "--http20-enabled",
+            "help": "Configures a web site to allow clients to connect over http2.0."
+          },
+          {
+            "name": "JavaContainer",
+            "type": "string",
+            "format": "--java-container {value}",
+            "help": "The java container, e.g., Tomcat, Jetty."
+          },
+          {
+            "name": "JavaContainerVersion",
+            "type": "string",
+            "format": "--java-container-version {value}",
+            "help": "The version of the java container, e.g., '8.0.23' for Tomcat."
+          },
+          {
+            "name": "JavaVersion",
+            "type": "string",
+            "format": "--java-version {value}",
+            "help": "The version used to run your web app if using Java, e.g., '1.7' for Java 7, '1.8' for Java 8."
+          },
+          {
+            "name": "LinuxFxVersion",
+            "type": "string",
+            "format": "--linux-fx-version {value}",
+            "help": "The runtime stack used for your linux-based webapp, e.g., \"RUBY|2.3\", \"NODE|6.6\", \"PHP|5.6\", \"DOTNETCORE|1.1.0\". See <a href=\"https://aka.ms/linux-stacks\">https://aka.ms/linux-stacks</a> for more info."
+          },
+          {
+            "name": "MinTlsVersion",
+            "type": "string",
+            "format": "--min-tls-version {value}",
+            "help": "The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'."
+          },
+          {
+            "name": "NetFrameworkVersion",
+            "type": "string",
+            "format": "--net-framework-version {value}",
+            "help": "The version used to run your web app if using .NET Framework, e.g., 'v4.0' for .NET 4.6 and 'v3.0' for .NET 3.5."
+          },
+          {
+            "name": "PhpVersion",
+            "type": "string",
+            "format": "--php-version {value}",
+            "help": "The version used to run your web app if using PHP, e.g., 5.5, 5.6, 7.0."
+          },
+          {
+            "name": "PythonVersion",
+            "type": "string",
+            "format": "--python-version {value}",
+            "help": "The version used to run your web app if using Python, e.g., 2.7, 3.4."
+          },
+          {
+            "name": "RemoteDebuggingEnabled",
+            "type": "bool",
+            "format": "--remote-debugging-enabled",
+            "help": "Enable or disable remote debugging."
+          },
+          {
+            "name": "StartupFile",
+            "type": "string",
+            "format": "--startup-file {value}",
+            "help": "The startup file for linux hosted web apps, e.g. 'process.json' for Node.js web."
+          },
+          {
+            "name": "Use32bitWorkerProcess",
+            "type": "bool",
+            "format": "--use-32bit-worker-process",
+            "help": "Use 32 bits worker process or not."
+          },
+          {
+            "name": "WebSocketsEnabled",
+            "type": "bool",
+            "format": "--web-sockets-enabled",
+            "help": "Enable or disable web sockets."
           }
         ]
       }
     },
     {
-      "postfix": "ConfigAppsettingsList",
-      "definiteArgument": "functionapp config appsettings list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigAppsettingsSet",
-      "definiteArgument": "functionapp config appsettings set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Settings",
-            "type": "Dictionary<string, object>",
-            "format": "--settings {value}",
-            "itemFormat": "{key}={value}",
-            "separator": " ",
-            "help": "Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;."
-          },
-          {
-            "name": "SlotSettings",
-            "type": "Dictionary<string, object>",
-            "format": "--slot-settings {value}",
-            "itemFormat": "{key}={value}",
-            "separator": " ",
-            "help": "Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigHostnameAdd",
-      "definiteArgument": "functionapp config hostname add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Hostname",
-            "type": "string",
-            "format": "--hostname {value}",
-            "help": "Hostname assigned to the site, such as custom domains."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigHostnameDelete",
-      "definiteArgument": "functionapp config hostname delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Hostname",
-            "type": "string",
-            "format": "--hostname {value}",
-            "help": "Hostname assigned to the site, such as custom domains."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigHostnameGetExternalIp",
-      "definiteArgument": "functionapp config hostname get-external-ip",
+      "postfix": "ConfigShow",
+      "definiteArgument": "functionapp config show",
       "settingsClass": {
         "properties": [
           {
@@ -718,26 +563,6 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigHostnameList",
-      "definiteArgument": "functionapp config hostname list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WebappName",
-            "type": "string",
-            "format": "--webapp-name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           }
         ]
       }
@@ -863,6 +688,181 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigHostnameAdd",
+      "definiteArgument": "functionapp config hostname add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Hostname",
+            "type": "string",
+            "format": "--hostname {value}",
+            "help": "Hostname assigned to the site, such as custom domains."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigHostnameDelete",
+      "definiteArgument": "functionapp config hostname delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Hostname",
+            "type": "string",
+            "format": "--hostname {value}",
+            "help": "Hostname assigned to the site, such as custom domains."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigHostnameGetExternalIp",
+      "definiteArgument": "functionapp config hostname get-external-ip",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigHostnameList",
+      "definiteArgument": "functionapp config hostname list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WebappName",
+            "type": "string",
+            "format": "--webapp-name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigAppsettingsDelete",
+      "definiteArgument": "functionapp config appsettings delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SettingNames",
+            "type": "List<string>",
+            "format": "--setting-names {value}",
+            "separator": " ",
+            "help": "Space-separated app setting names."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigAppsettingsList",
+      "definiteArgument": "functionapp config appsettings list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigAppsettingsSet",
+      "definiteArgument": "functionapp config appsettings set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Settings",
+            "type": "Dictionary<string, object>",
+            "format": "--settings {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
+            "help": "Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;."
+          },
+          {
+            "name": "SlotSettings",
+            "type": "Dictionary<string, object>",
+            "format": "--slot-settings {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
+            "help": "Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;."
           }
         ]
       }
@@ -1026,6 +1026,12 @@
             "type": "string",
             "format": "--src {value}",
             "help": "A zip file path for deployment."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Configurable timeout in seconds for checking the status of deployment."
           }
         ]
       }

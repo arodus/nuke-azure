@@ -6,10 +6,10 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/billing.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/billing/enrollment-account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/billing/invoice.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/billing/period.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/billing.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/billing/period.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/billing/enrollment-account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/billing/invoice.yml"
   ],
   "name": "AzureBilling",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest",
@@ -20,6 +20,46 @@
       "postfix": "",
       "definiteArgument": "billing",
       "settingsClass": {}
+    },
+    {
+      "postfix": "PeriodList",
+      "definiteArgument": "billing period list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "May be used to filter billing periods by billingPeriodEndDate. The filter supports 'eq', 'lt', 'gt', 'le', 'ge', and 'and'. It does not currently support 'ne', 'or', or 'not'."
+          },
+          {
+            "name": "Skiptoken",
+            "type": "string",
+            "format": "--skiptoken {value}",
+            "help": "Skiptoken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "May be used to limit the number of results to the most recent N billing periods."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PeriodShow",
+      "definiteArgument": "billing period show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the billing period."
+          }
+        ]
+      }
     },
     {
       "postfix": "EnrollmentAccountList",
@@ -64,46 +104,6 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Name of the invoice."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "PeriodList",
-      "definiteArgument": "billing period list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "May be used to filter billing periods by billingPeriodEndDate. The filter supports 'eq', 'lt', 'gt', 'le', 'ge', and 'and'. It does not currently support 'ne', 'or', or 'not'."
-          },
-          {
-            "name": "Skiptoken",
-            "type": "string",
-            "format": "--skiptoken {value}",
-            "help": "Skiptoken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "help": "May be used to limit the number of results to the most recent N billing periods."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "PeriodShow",
-      "definiteArgument": "billing period show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the billing period."
           }
         ]
       }

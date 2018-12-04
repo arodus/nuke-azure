@@ -6,19 +6,19 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/app.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/signed-in-user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/sp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/app/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/app/owner.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/app/permission.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/group/member.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/group/owner.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/sp/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/ad/sp/owner.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ad.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ad/signed-in-user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ad/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ad/app.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ad/group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ad/sp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ad/app/permission.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ad/app/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ad/app/owner.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ad/sp/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ad/sp/owner.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ad/group/member.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/ad/group/owner.yml"
   ],
   "name": "AzureAd",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest",
@@ -29,6 +29,145 @@
       "postfix": "",
       "definiteArgument": "ad",
       "settingsClass": {}
+    },
+    {
+      "postfix": "SignedInUserListOwnedObjects",
+      "definiteArgument": "ad signed-in-user list-owned-objects",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Type",
+            "type": "string",
+            "format": "--type {value}",
+            "help": "Object type filter, e.g. \"application\", \"servicePrincipal\"  \"group\", etc."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SignedInUserShow",
+      "definiteArgument": "ad signed-in-user show",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "UserCreate",
+      "definiteArgument": "ad user create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "help": "Object's display name or its prefix."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": ""
+          },
+          {
+            "name": "UserPrincipalName",
+            "type": "string",
+            "format": "--user-principal-name {value}",
+            "help": "Required. The user principal name (someuser@contoso.com). It must contain one of the verified domains for the tenant."
+          },
+          {
+            "name": "ForceChangePasswordNextLogin",
+            "type": "bool",
+            "format": "--force-change-password-next-login",
+            "secret": true,
+            "help": ""
+          },
+          {
+            "name": "ImmutableId",
+            "type": "string",
+            "format": "--immutable-id {value}",
+            "help": "This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account. It is used to associate an on-premises Active Directory user account with their Azure AD user object."
+          },
+          {
+            "name": "MailNickname",
+            "type": "string",
+            "format": "--mail-nickname {value}",
+            "help": "Mail alias. Defaults to user principal name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UserDelete",
+      "definiteArgument": "ad user delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "UpnOrObjectId",
+            "type": "string",
+            "format": "--upn-or-object-id {value}",
+            "help": "The object ID or principal name of the user to delete."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UserGetMemberGroups",
+      "definiteArgument": "ad user get-member-groups",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "UpnOrObjectId",
+            "type": "string",
+            "format": "--upn-or-object-id {value}",
+            "help": "The object ID or principal name of the user for which to get information."
+          },
+          {
+            "name": "SecurityEnabledOnly",
+            "type": "bool",
+            "format": "--security-enabled-only",
+            "help": "If true, only membership in security-enabled groups should be checked. Otherwise, membership in all groups should be checked."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UserList",
+      "definiteArgument": "ad user list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "help": "Object's display name or its prefix."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "OData filter."
+          },
+          {
+            "name": "Upn",
+            "type": "string",
+            "format": "--upn {value}",
+            "help": "User principal name, e.g. john.doe@contoso.com."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UserShow",
+      "definiteArgument": "ad user show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "UpnOrObjectId",
+            "type": "string",
+            "format": "--upn-or-object-id {value}",
+            "help": "The object ID or principal name of the user for which to get information."
+          }
+        ]
+      }
     },
     {
       "postfix": "AppCreate",
@@ -399,25 +538,6 @@
       }
     },
     {
-      "postfix": "SignedInUserListOwnedObjects",
-      "definiteArgument": "ad signed-in-user list-owned-objects",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Type",
-            "type": "string",
-            "format": "--type {value}",
-            "help": "Object type filter, e.g. \"application\", \"servicePrincipal\"  \"group\", etc."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SignedInUserShow",
-      "definiteArgument": "ad signed-in-user show",
-      "settingsClass": {}
-    },
-    {
       "postfix": "SpCreate",
       "definiteArgument": "ad sp create",
       "settingsClass": {
@@ -556,121 +676,93 @@
       }
     },
     {
-      "postfix": "UserCreate",
-      "definiteArgument": "ad user create",
+      "postfix": "AppPermissionAdd",
+      "definiteArgument": "ad app permission add",
       "settingsClass": {
         "properties": [
           {
-            "name": "DisplayName",
+            "name": "Api",
             "type": "string",
-            "format": "--display-name {value}",
-            "help": "Object's display name or its prefix."
+            "format": "--api {value}",
+            "help": "The target API to access."
           },
           {
-            "name": "Password",
+            "name": "ApiPermissions",
             "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": ""
+            "format": "--api-permissions {value}",
+            "help": "Space seperated list of &lt;resource-access-id&gt;=&lt;type&gt;."
           },
           {
-            "name": "UserPrincipalName",
+            "name": "Id",
             "type": "string",
-            "format": "--user-principal-name {value}",
-            "help": "Required. The user principal name (someuser@contoso.com). It must contain one of the verified domains for the tenant."
-          },
-          {
-            "name": "ForceChangePasswordNextLogin",
-            "type": "bool",
-            "format": "--force-change-password-next-login",
-            "secret": true,
-            "help": ""
-          },
-          {
-            "name": "ImmutableId",
-            "type": "string",
-            "format": "--immutable-id {value}",
-            "help": "This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account. It is used to associate an on-premises Active Directory user account with their Azure AD user object."
-          },
-          {
-            "name": "MailNickname",
-            "type": "string",
-            "format": "--mail-nickname {value}",
-            "help": "Mail alias. Defaults to user principal name."
+            "format": "--id {value}",
+            "help": "Identifier uri, application id, or object id."
           }
         ]
       }
     },
     {
-      "postfix": "UserDelete",
-      "definiteArgument": "ad user delete",
+      "postfix": "AppPermissionDelete",
+      "definiteArgument": "ad app permission delete",
       "settingsClass": {
         "properties": [
           {
-            "name": "UpnOrObjectId",
+            "name": "Api",
             "type": "string",
-            "format": "--upn-or-object-id {value}",
-            "help": "The object ID or principal name of the user to delete."
+            "format": "--api {value}",
+            "help": "The target API to access."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Identifier uri, application id, or object id."
           }
         ]
       }
     },
     {
-      "postfix": "UserGetMemberGroups",
-      "definiteArgument": "ad user get-member-groups",
+      "postfix": "AppPermissionGrant",
+      "definiteArgument": "ad app permission grant",
       "settingsClass": {
         "properties": [
           {
-            "name": "UpnOrObjectId",
+            "name": "Api",
             "type": "string",
-            "format": "--upn-or-object-id {value}",
-            "help": "The object ID or principal name of the user for which to get information."
+            "format": "--api {value}",
+            "help": "The target API to access."
           },
           {
-            "name": "SecurityEnabledOnly",
-            "type": "bool",
-            "format": "--security-enabled-only",
-            "help": "If true, only membership in security-enabled groups should be checked. Otherwise, membership in all groups should be checked."
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Identifier uri, application id, or object id."
+          },
+          {
+            "name": "Expires",
+            "type": "string",
+            "format": "--expires {value}",
+            "help": "Expiry date for the permissions in years. e.g. 1, 2 or \"never\"."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "Oauth scope."
           }
         ]
       }
     },
     {
-      "postfix": "UserList",
-      "definiteArgument": "ad user list",
+      "postfix": "AppPermissionList",
+      "definiteArgument": "ad app permission list",
       "settingsClass": {
         "properties": [
           {
-            "name": "DisplayName",
+            "name": "Id",
             "type": "string",
-            "format": "--display-name {value}",
-            "help": "Object's display name or its prefix."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "OData filter."
-          },
-          {
-            "name": "Upn",
-            "type": "string",
-            "format": "--upn {value}",
-            "help": "User principal name, e.g. john.doe@contoso.com."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "UserShow",
-      "definiteArgument": "ad user show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "UpnOrObjectId",
-            "type": "string",
-            "format": "--upn-or-object-id {value}",
-            "help": "The object ID or principal name of the user for which to get information."
+            "format": "--id {value}",
+            "help": "Identifier uri, application id, or object id of the associated application."
           }
         ]
       }
@@ -827,93 +919,112 @@
       }
     },
     {
-      "postfix": "AppPermissionAdd",
-      "definiteArgument": "ad app permission add",
+      "postfix": "SpCredentialDelete",
+      "definiteArgument": "ad sp credential delete",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Api",
-            "type": "string",
-            "format": "--api {value}",
-            "help": "The target API to access."
-          },
-          {
-            "name": "ApiPermissions",
-            "type": "string",
-            "format": "--api-permissions {value}",
-            "help": "Space seperated list of &lt;resource-access-id&gt;=&lt;type&gt;."
-          },
           {
             "name": "Id",
             "type": "string",
             "format": "--id {value}",
-            "help": "Identifier uri, application id, or object id."
+            "help": "Service principal name, or object id."
+          },
+          {
+            "name": "KeyId",
+            "type": "string",
+            "format": "--key-id {value}",
+            "help": "Credential key id."
+          },
+          {
+            "name": "Cert",
+            "type": "string",
+            "format": "--cert {value}",
+            "help": "A certificate based credential."
           }
         ]
       }
     },
     {
-      "postfix": "AppPermissionDelete",
-      "definiteArgument": "ad app permission delete",
+      "postfix": "SpCredentialList",
+      "definiteArgument": "ad sp credential list",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Api",
-            "type": "string",
-            "format": "--api {value}",
-            "help": "The target API to access."
-          },
           {
             "name": "Id",
             "type": "string",
             "format": "--id {value}",
-            "help": "Identifier uri, application id, or object id."
+            "help": "Service principal name, or object id."
+          },
+          {
+            "name": "Cert",
+            "type": "string",
+            "format": "--cert {value}",
+            "help": "A certificate based credential."
           }
         ]
       }
     },
     {
-      "postfix": "AppPermissionGrant",
-      "definiteArgument": "ad app permission grant",
+      "postfix": "SpCredentialReset",
+      "definiteArgument": "ad sp credential reset",
       "settingsClass": {
         "properties": [
           {
-            "name": "Api",
+            "name": "Name",
             "type": "string",
-            "format": "--api {value}",
-            "help": "The target API to access."
+            "format": "--name {value}",
+            "help": "Name or app URI for the credential."
           },
           {
-            "name": "Id",
+            "name": "Append",
             "type": "string",
-            "format": "--id {value}",
-            "help": "Identifier uri, application id, or object id."
+            "format": "--append {value}",
+            "help": "Append the new credential instead of overwriting."
           },
           {
-            "name": "Expires",
+            "name": "Cert",
             "type": "string",
-            "format": "--expires {value}",
-            "help": "Expiry date for the permissions in years. e.g. 1, 2 or \"never\"."
+            "format": "--cert {value}",
+            "help": "Certificate to use for credentials."
           },
           {
-            "name": "Scope",
+            "name": "CreateCert",
             "type": "string",
-            "format": "--scope {value}",
-            "help": "Oauth scope."
+            "format": "--create-cert {value}",
+            "help": "Create a self-signed certificate to use for the credential."
+          },
+          {
+            "name": "Keyvault",
+            "type": "string",
+            "format": "--keyvault {value}",
+            "help": "Name or ID of a KeyVault to use for creating or retrieving certificates."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "The password used to log in."
+          },
+          {
+            "name": "Years",
+            "type": "int",
+            "format": "--years {value}",
+            "help": "Number of years for which the credentials will be valid. Default: 1 year."
           }
         ]
       }
     },
     {
-      "postfix": "AppPermissionList",
-      "definiteArgument": "ad app permission list",
+      "postfix": "SpOwnerList",
+      "definiteArgument": "ad sp owner list",
       "settingsClass": {
         "properties": [
           {
             "name": "Id",
             "type": "string",
             "format": "--id {value}",
-            "help": "Identifier uri, application id, or object id of the associated application."
+            "help": "Service principal name, or object id or the service principal."
           }
         ]
       }
@@ -1048,117 +1159,6 @@
             "type": "string",
             "format": "--owner-object-id {value}",
             "help": "Owner's object id."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SpCredentialDelete",
-      "definiteArgument": "ad sp credential delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Service principal name, or object id."
-          },
-          {
-            "name": "KeyId",
-            "type": "string",
-            "format": "--key-id {value}",
-            "help": "Credential key id."
-          },
-          {
-            "name": "Cert",
-            "type": "string",
-            "format": "--cert {value}",
-            "help": "A certificate based credential."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SpCredentialList",
-      "definiteArgument": "ad sp credential list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Service principal name, or object id."
-          },
-          {
-            "name": "Cert",
-            "type": "string",
-            "format": "--cert {value}",
-            "help": "A certificate based credential."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SpCredentialReset",
-      "definiteArgument": "ad sp credential reset",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name or app URI for the credential."
-          },
-          {
-            "name": "Append",
-            "type": "string",
-            "format": "--append {value}",
-            "help": "Append the new credential instead of overwriting."
-          },
-          {
-            "name": "Cert",
-            "type": "string",
-            "format": "--cert {value}",
-            "help": "Certificate to use for credentials."
-          },
-          {
-            "name": "CreateCert",
-            "type": "string",
-            "format": "--create-cert {value}",
-            "help": "Create a self-signed certificate to use for the credential."
-          },
-          {
-            "name": "Keyvault",
-            "type": "string",
-            "format": "--keyvault {value}",
-            "help": "Name or ID of a KeyVault to use for creating or retrieving certificates."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "The password used to log in."
-          },
-          {
-            "name": "Years",
-            "type": "int",
-            "format": "--years {value}",
-            "help": "Number of years for which the credentials will be valid. Default: 1 year."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SpOwnerList",
-      "definiteArgument": "ad sp owner list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Service principal name, or object id or the service principal."
           }
         ]
       }

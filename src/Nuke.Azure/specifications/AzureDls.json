@@ -6,13 +6,13 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls/fs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls/account/firewall.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls/account/network-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls/account/trusted-provider.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls/fs/access.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/dls.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/dls/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/dls/fs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/dls/account/firewall.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/dls/account/trusted-provider.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/dls/account/network-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/dls/fs/access.yml"
   ],
   "name": "AzureDls",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest",
@@ -805,6 +805,142 @@
       }
     },
     {
+      "postfix": "AccountTrustedProviderCreate",
+      "definiteArgument": "dls account trusted-provider create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "IdProvider",
+            "type": "string",
+            "format": "--id-provider {value}",
+            "help": "The URL of this trusted identity provider."
+          },
+          {
+            "name": "TrustedIdProviderName",
+            "type": "string",
+            "format": "--trusted-id-provider-name {value}",
+            "help": "The name of the trusted identity provider. This is used for differentiation of providers in the account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountTrustedProviderDelete",
+      "definiteArgument": "dls account trusted-provider delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "TrustedIdProviderName",
+            "type": "string",
+            "format": "--trusted-id-provider-name {value}",
+            "help": "The name of the trusted identity provider to delete."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountTrustedProviderList",
+      "definiteArgument": "dls account trusted-provider list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountTrustedProviderShow",
+      "definiteArgument": "dls account trusted-provider show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "TrustedIdProviderName",
+            "type": "string",
+            "format": "--trusted-id-provider-name {value}",
+            "help": "The name of the trusted identity provider to retrieve."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountTrustedProviderUpdate",
+      "definiteArgument": "dls account trusted-provider update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "TrustedIdProviderName",
+            "type": "string",
+            "format": "--trusted-id-provider-name {value}",
+            "help": "The name of the trusted identity provider. This is used for differentiation of providers in the account."
+          },
+          {
+            "name": "IdProvider",
+            "type": "string",
+            "format": "--id-provider {value}",
+            "help": "The URL of this trusted identity provider."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "AccountNetworkRuleCreate",
       "definiteArgument": "dls account network-rule create",
       "settingsClass": {
@@ -972,142 +1108,6 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountTrustedProviderCreate",
-      "definiteArgument": "dls account trusted-provider create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "IdProvider",
-            "type": "string",
-            "format": "--id-provider {value}",
-            "help": "The URL of this trusted identity provider."
-          },
-          {
-            "name": "TrustedIdProviderName",
-            "type": "string",
-            "format": "--trusted-id-provider-name {value}",
-            "help": "The name of the trusted identity provider. This is used for differentiation of providers in the account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountTrustedProviderDelete",
-      "definiteArgument": "dls account trusted-provider delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "TrustedIdProviderName",
-            "type": "string",
-            "format": "--trusted-id-provider-name {value}",
-            "help": "The name of the trusted identity provider to delete."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountTrustedProviderList",
-      "definiteArgument": "dls account trusted-provider list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountTrustedProviderShow",
-      "definiteArgument": "dls account trusted-provider show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "TrustedIdProviderName",
-            "type": "string",
-            "format": "--trusted-id-provider-name {value}",
-            "help": "The name of the trusted identity provider to retrieve."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountTrustedProviderUpdate",
-      "definiteArgument": "dls account trusted-provider update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "TrustedIdProviderName",
-            "type": "string",
-            "format": "--trusted-id-provider-name {value}",
-            "help": "The name of the trusted identity provider. This is used for differentiation of providers in the account."
-          },
-          {
-            "name": "IdProvider",
-            "type": "string",
-            "format": "--id-provider {value}",
-            "help": "The URL of this trusted identity provider."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
           }
         ]
       }

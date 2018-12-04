@@ -6,12 +6,13 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mariadb.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mariadb/db.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mariadb/server-logs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mariadb/server.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mariadb/server/configuration.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mariadb/server/firewall-rule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/mariadb.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/mariadb/db.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/mariadb/server.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/mariadb/server-logs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/mariadb/server/configuration.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/mariadb/server/firewall-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/mariadb/server/vnet-rule.yml"
   ],
   "name": "AzureMariadb",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest",
@@ -135,71 +136,6 @@
             "type": "string",
             "format": "--server-name {value}",
             "help": "Name of the server."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerLogsDownload",
-      "definiteArgument": "mariadb server-logs download",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "List<string>",
-            "format": "--name {value}",
-            "separator": " ",
-            "help": "Space-separated list of log filenames on the server to download."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerLogsList",
-      "definiteArgument": "mariadb server-logs list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          },
-          {
-            "name": "FileLastWritten",
-            "type": "string",
-            "format": "--file-last-written {value}",
-            "help": "Integer in hours to indicate file last modify time, default value is 72."
-          },
-          {
-            "name": "FilenameContains",
-            "type": "string",
-            "format": "--filename-contains {value}",
-            "help": "The pattern that file name should match."
-          },
-          {
-            "name": "MaxFileSize",
-            "type": "string",
-            "format": "--max-file-size {value}",
-            "help": "The file size limitation to filter files."
           }
         ]
       }
@@ -565,6 +501,71 @@
       }
     },
     {
+      "postfix": "ServerLogsDownload",
+      "definiteArgument": "mariadb server-logs download",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "List<string>",
+            "format": "--name {value}",
+            "separator": " ",
+            "help": "Space-separated list of log filenames on the server to download."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerLogsList",
+      "definiteArgument": "mariadb server-logs list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "FileLastWritten",
+            "type": "string",
+            "format": "--file-last-written {value}",
+            "help": "Integer in hours to indicate file last modify time, default value is 72."
+          },
+          {
+            "name": "FilenameContains",
+            "type": "string",
+            "format": "--filename-contains {value}",
+            "help": "The pattern that file name should match."
+          },
+          {
+            "name": "MaxFileSize",
+            "type": "string",
+            "format": "--max-file-size {value}",
+            "help": "The file size limitation to filter files."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "ServerConfigurationList",
       "definiteArgument": "mariadb server configuration list",
       "settingsClass": {
@@ -792,6 +793,190 @@
             "type": "string",
             "format": "--start-ip-address {value}",
             "help": "The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleCreate",
+      "definiteArgument": "mariadb server vnet-rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the vnet rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided."
+          },
+          {
+            "name": "IgnoreMissingEndpoint",
+            "type": "bool",
+            "format": "--ignore-missing-endpoint",
+            "help": "Create vnet rule before virtual network has vnet service endpoint enabled."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "The virtual network name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleDelete",
+      "definiteArgument": "mariadb server vnet-rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the vnet rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleList",
+      "definiteArgument": "mariadb server vnet-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleShow",
+      "definiteArgument": "mariadb server vnet-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the vnet rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleUpdate",
+      "definiteArgument": "mariadb server vnet-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the vnet rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided."
+          },
+          {
+            "name": "IgnoreMissingEndpoint",
+            "type": "bool",
+            "format": "--ignore-missing-endpoint",
+            "help": "Create vnet rule before virtual network has vnet service endpoint enabled."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "The virtual network name."
           },
           {
             "name": "Add",

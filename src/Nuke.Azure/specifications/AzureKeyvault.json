@@ -6,17 +6,17 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/key.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/network-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/secret.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/storage.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/certificate/contact.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/certificate/issuer.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/certificate/pending.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/storage/sas-definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/certificate/issuer/admin.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/keyvault.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/keyvault/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/keyvault/secret.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/keyvault/storage.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/keyvault/network-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/keyvault/key.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/keyvault/certificate/issuer.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/keyvault/certificate/contact.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/keyvault/certificate/pending.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/keyvault/storage/sas-definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/67b9fd6/latest/docs-ref-autogen/keyvault/certificate/issuer/admin.yml"
   ],
   "name": "AzureKeyvault",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest",
@@ -822,570 +822,6 @@
       }
     },
     {
-      "postfix": "KeyBackup",
-      "definiteArgument": "keyvault key backup",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "help": "Local file path in which to store key backup."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the key.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KeyCreate",
-      "definiteArgument": "keyvault key create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Curve",
-            "type": "KeyvaultKeyCreateCurve",
-            "format": "--curve {value}",
-            "help": "Elliptic curve name. For valid values, see JsonWebKeyCurveName."
-          },
-          {
-            "name": "Disabled",
-            "type": "bool",
-            "format": "--disabled",
-            "help": "Create key in disabled state."
-          },
-          {
-            "name": "Expires",
-            "type": "string",
-            "format": "--expires {value}",
-            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "Kty",
-            "type": "KeyvaultKeyCreateKty",
-            "format": "--kty {value}",
-            "help": "The type of key to create. For valid values, see JsonWebKeyType."
-          },
-          {
-            "name": "NotBefore",
-            "type": "string",
-            "format": "--not-before {value}",
-            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "Ops",
-            "type": "List<KeyvaultKeyOps>",
-            "format": "--ops {value}",
-            "separator": " ",
-            "help": "Space-separated list of permitted JSON web key operations."
-          },
-          {
-            "name": "Protection",
-            "type": "KeyvaultKeyProtection",
-            "format": "--protection {value}",
-            "help": "Specifies the type of key protection."
-          },
-          {
-            "name": "Size",
-            "type": "string",
-            "format": "--size {value}",
-            "help": "The key size in bits. For example: 2048, 3072, or 4096 for RSA."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KeyDelete",
-      "definiteArgument": "keyvault key delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the key.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KeyImport",
-      "definiteArgument": "keyvault key import",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Disabled",
-            "type": "bool",
-            "format": "--disabled",
-            "help": "Create key in disabled state."
-          },
-          {
-            "name": "Expires",
-            "type": "string",
-            "format": "--expires {value}",
-            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "NotBefore",
-            "type": "string",
-            "format": "--not-before {value}",
-            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "Ops",
-            "type": "List<KeyvaultKeyOps>",
-            "format": "--ops {value}",
-            "separator": " ",
-            "help": "Space-separated list of permitted JSON web key operations."
-          },
-          {
-            "name": "Protection",
-            "type": "KeyvaultKeyProtection",
-            "format": "--protection {value}",
-            "help": "Specifies the type of key protection."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "ByokFile",
-            "type": "string",
-            "format": "--byok-file {value}",
-            "help": "BYOK file containing the key to be imported. Must not be password protected."
-          },
-          {
-            "name": "PemFile",
-            "type": "string",
-            "format": "--pem-file {value}",
-            "help": "PEM file containing the key to be imported."
-          },
-          {
-            "name": "PemPassword",
-            "type": "string",
-            "format": "--pem-password {value}",
-            "secret": true,
-            "help": "Password of PEM file."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KeyList",
-      "definiteArgument": "keyvault key list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Maxresults",
-            "type": "int",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KeyListDeleted",
-      "definiteArgument": "keyvault key list-deleted",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Maxresults",
-            "type": "int",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KeyListVersions",
-      "definiteArgument": "keyvault key list-versions",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Maxresults",
-            "type": "int",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KeyPurge",
-      "definiteArgument": "keyvault key purge",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "The recovery id of the key.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KeyRecover",
-      "definiteArgument": "keyvault key recover",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "The recovery id of the key.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KeyRestore",
-      "definiteArgument": "keyvault key restore",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "help": "Local key backup from which to restore key."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KeySetAttributes",
-      "definiteArgument": "keyvault key set-attributes",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Enabled",
-            "type": "bool",
-            "format": "--enabled",
-            "help": "Enable the key."
-          },
-          {
-            "name": "Expires",
-            "type": "string",
-            "format": "--expires {value}",
-            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "NotBefore",
-            "type": "string",
-            "format": "--not-before {value}",
-            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "Ops",
-            "type": "List<KeyvaultKeyOps>",
-            "format": "--ops {value}",
-            "separator": " ",
-            "help": "Space-separated list of permitted JSON web key operations."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the key.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "The key version. If omitted, uses the latest version."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KeyShow",
-      "definiteArgument": "keyvault key show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the key.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "The key version. If omitted, uses the latest version."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KeyShowDeleted",
-      "definiteArgument": "keyvault key show-deleted",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "The recovery id of the key.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NetworkRuleAdd",
-      "definiteArgument": "keyvault network-rule add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "IpAddress",
-            "type": "string",
-            "format": "--ip-address {value}",
-            "help": "IPv4 address or CIDR range."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Proceed only if Key Vault belongs to the specified resource group."
-          },
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
-          },
-          {
-            "name": "VnetName",
-            "type": "string",
-            "format": "--vnet-name {value}",
-            "help": "Name of a virtual network."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NetworkRuleList",
-      "definiteArgument": "keyvault network-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Proceed only if Key Vault belongs to the specified resource group."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NetworkRuleRemove",
-      "definiteArgument": "keyvault network-rule remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "IpAddress",
-            "type": "string",
-            "format": "--ip-address {value}",
-            "help": "IPv4 address or CIDR range."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Proceed only if Key Vault belongs to the specified resource group."
-          },
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
-          },
-          {
-            "name": "VnetName",
-            "type": "string",
-            "format": "--vnet-name {value}",
-            "help": "Name of a virtual network."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "SecretBackup",
       "definiteArgument": "keyvault secret backup",
       "settingsClass": {
@@ -2162,27 +1598,198 @@
       }
     },
     {
-      "postfix": "CertificateContactAdd",
-      "definiteArgument": "keyvault certificate contact add",
+      "postfix": "NetworkRuleAdd",
+      "definiteArgument": "keyvault network-rule add",
       "settingsClass": {
         "properties": [
           {
-            "name": "Email",
+            "name": "Name",
             "type": "string",
-            "format": "--email {value}",
-            "help": "Contact e-mail address. Must be unique."
+            "format": "--name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "IpAddress",
+            "type": "string",
+            "format": "--ip-address {value}",
+            "help": "IPv4 address or CIDR range."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Proceed only if Key Vault belongs to the specified resource group."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "Name of a virtual network."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NetworkRuleList",
+      "definiteArgument": "keyvault network-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Proceed only if Key Vault belongs to the specified resource group."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NetworkRuleRemove",
+      "definiteArgument": "keyvault network-rule remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "IpAddress",
+            "type": "string",
+            "format": "--ip-address {value}",
+            "help": "IPv4 address or CIDR range."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Proceed only if Key Vault belongs to the specified resource group."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "Name of a virtual network."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KeyBackup",
+      "definiteArgument": "keyvault key backup",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "Local file path in which to store key backup."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the key.  If specified all other 'Id' arguments should be omitted."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Full contact name."
+            "help": "Name of the key. Required if --id is not specified."
           },
           {
-            "name": "Phone",
+            "name": "VaultName",
             "type": "string",
-            "format": "--phone {value}",
-            "help": "Contact phone number."
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KeyCreate",
+      "definiteArgument": "keyvault key create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Curve",
+            "type": "KeyvaultKeyCreateCurve",
+            "format": "--curve {value}",
+            "help": "Elliptic curve name. For valid values, see JsonWebKeyCurveName."
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "format": "--disabled",
+            "help": "Create key in disabled state."
+          },
+          {
+            "name": "Expires",
+            "type": "string",
+            "format": "--expires {value}",
+            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "Kty",
+            "type": "KeyvaultKeyCreateKty",
+            "format": "--kty {value}",
+            "help": "The type of key to create. For valid values, see JsonWebKeyType."
+          },
+          {
+            "name": "NotBefore",
+            "type": "string",
+            "format": "--not-before {value}",
+            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "Ops",
+            "type": "List<KeyvaultKeyOps>",
+            "format": "--ops {value}",
+            "separator": " ",
+            "help": "Space-separated list of permitted JSON web key operations."
+          },
+          {
+            "name": "Protection",
+            "type": "KeyvaultKeyProtection",
+            "format": "--protection {value}",
+            "help": "Specifies the type of key protection."
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "format": "--size {value}",
+            "help": "The key size in bits. For example: 2048, 3072, or 4096 for RSA."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key."
           },
           {
             "name": "VaultName",
@@ -2194,15 +1801,117 @@
       }
     },
     {
-      "postfix": "CertificateContactDelete",
-      "definiteArgument": "keyvault certificate contact delete",
+      "postfix": "KeyDelete",
+      "definiteArgument": "keyvault key delete",
       "settingsClass": {
         "properties": [
           {
-            "name": "Email",
+            "name": "Id",
             "type": "string",
-            "format": "--email {value}",
-            "help": "Contact e-mail address. Must be unique."
+            "format": "--id {value}",
+            "help": "Id of the key.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KeyImport",
+      "definiteArgument": "keyvault key import",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "format": "--disabled",
+            "help": "Create key in disabled state."
+          },
+          {
+            "name": "Expires",
+            "type": "string",
+            "format": "--expires {value}",
+            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "NotBefore",
+            "type": "string",
+            "format": "--not-before {value}",
+            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "Ops",
+            "type": "List<KeyvaultKeyOps>",
+            "format": "--ops {value}",
+            "separator": " ",
+            "help": "Space-separated list of permitted JSON web key operations."
+          },
+          {
+            "name": "Protection",
+            "type": "KeyvaultKeyProtection",
+            "format": "--protection {value}",
+            "help": "Specifies the type of key protection."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "ByokFile",
+            "type": "string",
+            "format": "--byok-file {value}",
+            "help": "BYOK file containing the key to be imported. Must not be password protected."
+          },
+          {
+            "name": "PemFile",
+            "type": "string",
+            "format": "--pem-file {value}",
+            "help": "PEM file containing the key to be imported."
+          },
+          {
+            "name": "PemPassword",
+            "type": "string",
+            "format": "--pem-password {value}",
+            "secret": true,
+            "help": "Password of PEM file."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KeyList",
+      "definiteArgument": "keyvault key list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
           },
           {
             "name": "VaultName",
@@ -2214,15 +1923,240 @@
       }
     },
     {
-      "postfix": "CertificateContactList",
-      "definiteArgument": "keyvault certificate contact list",
+      "postfix": "KeyListDeleted",
+      "definiteArgument": "keyvault key list-deleted",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
+          },
           {
             "name": "VaultName",
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KeyListVersions",
+      "definiteArgument": "keyvault key list-versions",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KeyPurge",
+      "definiteArgument": "keyvault key purge",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "The recovery id of the key.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KeyRecover",
+      "definiteArgument": "keyvault key recover",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "The recovery id of the key.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KeyRestore",
+      "definiteArgument": "keyvault key restore",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "Local key backup from which to restore key."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KeySetAttributes",
+      "definiteArgument": "keyvault key set-attributes",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "help": "Enable the key."
+          },
+          {
+            "name": "Expires",
+            "type": "string",
+            "format": "--expires {value}",
+            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "NotBefore",
+            "type": "string",
+            "format": "--not-before {value}",
+            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "Ops",
+            "type": "List<KeyvaultKeyOps>",
+            "format": "--ops {value}",
+            "separator": " ",
+            "help": "Space-separated list of permitted JSON web key operations."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the key.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The key version. If omitted, uses the latest version."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KeyShow",
+      "definiteArgument": "keyvault key show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the key.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The key version. If omitted, uses the latest version."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KeyShowDeleted",
+      "definiteArgument": "keyvault key show-deleted",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "The recovery id of the key.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
           }
         ]
       }
@@ -2385,6 +2319,72 @@
             "type": "string",
             "format": "--organization-id {value}",
             "help": "The organization id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CertificateContactAdd",
+      "definiteArgument": "keyvault certificate contact add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Email",
+            "type": "string",
+            "format": "--email {value}",
+            "help": "Contact e-mail address. Must be unique."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Full contact name."
+          },
+          {
+            "name": "Phone",
+            "type": "string",
+            "format": "--phone {value}",
+            "help": "Contact phone number."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CertificateContactDelete",
+      "definiteArgument": "keyvault certificate contact delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Email",
+            "type": "string",
+            "format": "--email {value}",
+            "help": "Contact e-mail address. Must be unique."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CertificateContactList",
+      "definiteArgument": "keyvault certificate contact list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
           }
         ]
       }

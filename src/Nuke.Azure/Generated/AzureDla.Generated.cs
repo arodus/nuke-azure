@@ -44,6 +44,14 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaCatalog(Configure<AzureDlaCatalogSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureDlaAccountCreate(Configure<AzureDlaAccountCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountCreateSettings());
@@ -79,14 +87,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureDlaAccountUpdate(Configure<AzureDlaAccountUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalog(Configure<AzureDlaCatalogSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -132,46 +132,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaAccountBlobStorageAdd(Configure<AzureDlaAccountBlobStorageAddSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageAddSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaAccountBlobStorageDelete(Configure<AzureDlaAccountBlobStorageDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaAccountBlobStorageList(Configure<AzureDlaAccountBlobStorageListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaAccountBlobStorageShow(Configure<AzureDlaAccountBlobStorageShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaAccountBlobStorageUpdate(Configure<AzureDlaAccountBlobStorageUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureDlaAccountComputePolicyCreate(Configure<AzureDlaAccountComputePolicyCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountComputePolicyCreateSettings());
@@ -207,38 +167,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureDlaAccountComputePolicyUpdate(Configure<AzureDlaAccountComputePolicyUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountComputePolicyUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaAccountDataLakeStoreAdd(Configure<AzureDlaAccountDataLakeStoreAddSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountDataLakeStoreAddSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaAccountDataLakeStoreDelete(Configure<AzureDlaAccountDataLakeStoreDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountDataLakeStoreDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaAccountDataLakeStoreList(Configure<AzureDlaAccountDataLakeStoreListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountDataLakeStoreListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaAccountDataLakeStoreShow(Configure<AzureDlaAccountDataLakeStoreShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountDataLakeStoreShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -284,17 +212,169 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogAssemblyList(Configure<AzureDlaCatalogAssemblyListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureDlaAccountDataLakeStoreAdd(Configure<AzureDlaAccountDataLakeStoreAddSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogAssemblyListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountDataLakeStoreAddSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogAssemblyShow(Configure<AzureDlaCatalogAssemblyShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureDlaAccountDataLakeStoreDelete(Configure<AzureDlaAccountDataLakeStoreDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogAssemblyShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountDataLakeStoreDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaAccountDataLakeStoreList(Configure<AzureDlaAccountDataLakeStoreListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountDataLakeStoreListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaAccountDataLakeStoreShow(Configure<AzureDlaAccountDataLakeStoreShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountDataLakeStoreShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaAccountBlobStorageAdd(Configure<AzureDlaAccountBlobStorageAddSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageAddSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaAccountBlobStorageDelete(Configure<AzureDlaAccountBlobStorageDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaAccountBlobStorageList(Configure<AzureDlaAccountBlobStorageListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaAccountBlobStorageShow(Configure<AzureDlaAccountBlobStorageShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaAccountBlobStorageUpdate(Configure<AzureDlaAccountBlobStorageUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaCatalogProcedureList(Configure<AzureDlaCatalogProcedureListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogProcedureListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaCatalogProcedureShow(Configure<AzureDlaCatalogProcedureShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogProcedureShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaCatalogTablePartitionList(Configure<AzureDlaCatalogTablePartitionListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTablePartitionListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaCatalogTablePartitionShow(Configure<AzureDlaCatalogTablePartitionShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTablePartitionShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaCatalogViewList(Configure<AzureDlaCatalogViewListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogViewListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaCatalogViewShow(Configure<AzureDlaCatalogViewShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogViewShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaCatalogTableTypeList(Configure<AzureDlaCatalogTableTypeListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableTypeListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaCatalogTableTypeShow(Configure<AzureDlaCatalogTableTypeShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableTypeShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaCatalogDatabaseList(Configure<AzureDlaCatalogDatabaseListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogDatabaseListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaCatalogDatabaseShow(Configure<AzureDlaCatalogDatabaseShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogDatabaseShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaCatalogSchemaList(Configure<AzureDlaCatalogSchemaListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogSchemaListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlaCatalogSchemaShow(Configure<AzureDlaCatalogSchemaShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogSchemaShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -340,33 +420,17 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogDatabaseList(Configure<AzureDlaCatalogDatabaseListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureDlaCatalogTvfList(Configure<AzureDlaCatalogTvfListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogDatabaseListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTvfListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogDatabaseShow(Configure<AzureDlaCatalogDatabaseShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureDlaCatalogTvfShow(Configure<AzureDlaCatalogTvfShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogDatabaseShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogExternalDataSourceList(Configure<AzureDlaCatalogExternalDataSourceListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogExternalDataSourceListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogExternalDataSourceShow(Configure<AzureDlaCatalogExternalDataSourceShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogExternalDataSourceShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTvfShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -388,81 +452,33 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogProcedureList(Configure<AzureDlaCatalogProcedureListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureDlaCatalogAssemblyList(Configure<AzureDlaCatalogAssemblyListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogProcedureListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogAssemblyListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogProcedureShow(Configure<AzureDlaCatalogProcedureShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureDlaCatalogAssemblyShow(Configure<AzureDlaCatalogAssemblyShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogProcedureShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogAssemblyShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogSchemaList(Configure<AzureDlaCatalogSchemaListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureDlaCatalogExternalDataSourceList(Configure<AzureDlaCatalogExternalDataSourceListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogSchemaListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogExternalDataSourceListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogSchemaShow(Configure<AzureDlaCatalogSchemaShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureDlaCatalogExternalDataSourceShow(Configure<AzureDlaCatalogExternalDataSourceShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogSchemaShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogTablePartitionList(Configure<AzureDlaCatalogTablePartitionListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTablePartitionListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogTablePartitionShow(Configure<AzureDlaCatalogTablePartitionShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTablePartitionShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogTableStatsList(Configure<AzureDlaCatalogTableStatsListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableStatsListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogTableStatsShow(Configure<AzureDlaCatalogTableStatsShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableStatsShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogTableTypeList(Configure<AzureDlaCatalogTableTypeListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableTypeListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogTableTypeShow(Configure<AzureDlaCatalogTableTypeShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableTypeShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogExternalDataSourceShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -484,33 +500,17 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogTvfList(Configure<AzureDlaCatalogTvfListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureDlaCatalogTableStatsList(Configure<AzureDlaCatalogTableStatsListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTvfListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableStatsListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogTvfShow(Configure<AzureDlaCatalogTvfShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureDlaCatalogTableStatsShow(Configure<AzureDlaCatalogTableStatsShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTvfShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogViewList(Configure<AzureDlaCatalogViewListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogViewListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlaCatalogViewShow(Configure<AzureDlaCatalogViewShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogViewShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableStatsShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -571,6 +571,38 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dla")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaCatalogSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaCatalogSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla catalog")
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -800,38 +832,6 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--tags {value}", Tags)
               .Add("--tier {value}", Tier)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaCatalogSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaCatalogSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla catalog")
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1097,6 +1097,623 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureDlaAccountComputePolicyCreateSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountComputePolicyCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the compute policy to create.</p></summary>
+        public virtual string ComputePolicyName { get; internal set; }
+        /// <summary><p>The Azure Active Directory object ID of the user, group, or service principal to apply the policy to.</p></summary>
+        public virtual string ObjectId { get; internal set; }
+        /// <summary><p>The Azure Active Directory object type associated with the supplied object ID.</p></summary>
+        public virtual string ObjectType { get; internal set; }
+        /// <summary><p>The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
+        public virtual string MaxDopPerJob { get; internal set; }
+        /// <summary><p>The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
+        public virtual string MinPriorityPerJob { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account compute-policy create")
+              .Add("--account {value}", Account)
+              .Add("--compute-policy-name {value}", ComputePolicyName)
+              .Add("--object-id {value}", ObjectId)
+              .Add("--object-type {value}", ObjectType)
+              .Add("--max-dop-per-job {value}", MaxDopPerJob)
+              .Add("--min-priority-per-job {value}", MinPriorityPerJob)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaAccountComputePolicyDeleteSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountComputePolicyDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the compute policy to delete.</p></summary>
+        public virtual string ComputePolicyName { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account compute-policy delete")
+              .Add("--account {value}", Account)
+              .Add("--compute-policy-name {value}", ComputePolicyName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaAccountComputePolicyListSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountComputePolicyListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account compute-policy list")
+              .Add("--account {value}", Account)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaAccountComputePolicyShowSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountComputePolicyShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the compute policy to retrieve.</p></summary>
+        public virtual string ComputePolicyName { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account compute-policy show")
+              .Add("--account {value}", Account)
+              .Add("--compute-policy-name {value}", ComputePolicyName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaAccountComputePolicyUpdateSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountComputePolicyUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the compute policy to update.</p></summary>
+        public virtual string ComputePolicyName { get; internal set; }
+        /// <summary><p>The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
+        public virtual string MaxDopPerJob { get; internal set; }
+        /// <summary><p>The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
+        public virtual string MinPriorityPerJob { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account compute-policy update")
+              .Add("--account {value}", Account)
+              .Add("--compute-policy-name {value}", ComputePolicyName)
+              .Add("--max-dop-per-job {value}", MaxDopPerJob)
+              .Add("--min-priority-per-job {value}", MinPriorityPerJob)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaAccountFirewallCreateSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountFirewallCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The end of the valid IP range for the firewall rule.</p></summary>
+        public virtual string EndIpAddress { get; internal set; }
+        /// <summary><p>The name of the firewall rule.</p></summary>
+        public virtual string FirewallRuleName { get; internal set; }
+        /// <summary><p>The start of the valid IP range for the firewall rule.</p></summary>
+        public virtual string StartIpAddress { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account firewall create")
+              .Add("--account {value}", Account)
+              .Add("--end-ip-address {value}", EndIpAddress)
+              .Add("--firewall-rule-name {value}", FirewallRuleName)
+              .Add("--start-ip-address {value}", StartIpAddress)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaAccountFirewallDeleteSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountFirewallDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the firewall rule to delete.</p></summary>
+        public virtual string FirewallRuleName { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account firewall delete")
+              .Add("--account {value}", Account)
+              .Add("--firewall-rule-name {value}", FirewallRuleName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaAccountFirewallListSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountFirewallListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account firewall list")
+              .Add("--account {value}", Account)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaAccountFirewallShowSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountFirewallShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the firewall rule to retrieve.</p></summary>
+        public virtual string FirewallRuleName { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account firewall show")
+              .Add("--account {value}", Account)
+              .Add("--firewall-rule-name {value}", FirewallRuleName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaAccountFirewallUpdateSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountFirewallUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the firewall rule to update.</p></summary>
+        public virtual string FirewallRuleName { get; internal set; }
+        /// <summary><p>The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
+        public virtual string EndIpAddress { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
+        public virtual string StartIpAddress { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account firewall update")
+              .Add("--account {value}", Account)
+              .Add("--firewall-rule-name {value}", FirewallRuleName)
+              .Add("--end-ip-address {value}", EndIpAddress)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--start-ip-address {value}", StartIpAddress)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaAccountDataLakeStoreAddSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountDataLakeStoreAddSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the Data Lake Store account to add.</p></summary>
+        public virtual string DataLakeStoreAccountName { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The optional suffix for the Data Lake Store account.</p></summary>
+        public virtual string Suffix { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account data-lake-store add")
+              .Add("--account {value}", Account)
+              .Add("--data-lake-store-account-name {value}", DataLakeStoreAccountName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--suffix {value}", Suffix)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaAccountDataLakeStoreDeleteSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountDataLakeStoreDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the Data Lake Store account to remove.</p></summary>
+        public virtual string DataLakeStoreAccountName { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account data-lake-store delete")
+              .Add("--account {value}", Account)
+              .Add("--data-lake-store-account-name {value}", DataLakeStoreAccountName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaAccountDataLakeStoreListSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountDataLakeStoreListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        public virtual string Count { get; internal set; }
+        /// <summary><p>OData filter. Optional.</p></summary>
+        public virtual string Filter { get; internal set; }
+        /// <summary><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        public virtual IReadOnlyList<string> Orderby => OrderbyInternal.AsReadOnly();
+        internal List<string> OrderbyInternal { get; set; } = new List<string>();
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        public virtual string Select { get; internal set; }
+        /// <summary><p>The number of items to skip over before returning elements.</p></summary>
+        public virtual string Skip { get; internal set; }
+        /// <summary><p>Maximum number of items to return.</p></summary>
+        public virtual int? Top { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account data-lake-store list")
+              .Add("--account {value}", Account)
+              .Add("--count {value}", Count)
+              .Add("--filter {value}", Filter)
+              .Add("--orderby {value}", Orderby, separator: ',')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--select {value}", Select)
+              .Add("--skip {value}", Skip)
+              .Add("--top {value}", Top)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaAccountDataLakeStoreShowSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaAccountDataLakeStoreShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the Data Lake Store account to retrieve.</p></summary>
+        public virtual string DataLakeStoreAccountName { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla account data-lake-store show")
+              .Add("--account {value}", Account)
+              .Add("--data-lake-store-account-name {value}", DataLakeStoreAccountName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureDlaAccountBlobStorageAddSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
@@ -1330,322 +1947,21 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaAccountComputePolicyCreateSettings
+    #region AzureDlaCatalogProcedureListSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaAccountComputePolicyCreateSettings : ToolSettings
+    public partial class AzureDlaCatalogProcedureListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the compute policy to create.</p></summary>
-        public virtual string ComputePolicyName { get; internal set; }
-        /// <summary><p>The Azure Active Directory object ID of the user, group, or service principal to apply the policy to.</p></summary>
-        public virtual string ObjectId { get; internal set; }
-        /// <summary><p>The Azure Active Directory object type associated with the supplied object ID.</p></summary>
-        public virtual string ObjectType { get; internal set; }
-        /// <summary><p>The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
-        public virtual string MaxDopPerJob { get; internal set; }
-        /// <summary><p>The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
-        public virtual string MinPriorityPerJob { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla account compute-policy create")
-              .Add("--account {value}", Account)
-              .Add("--compute-policy-name {value}", ComputePolicyName)
-              .Add("--object-id {value}", ObjectId)
-              .Add("--object-type {value}", ObjectType)
-              .Add("--max-dop-per-job {value}", MaxDopPerJob)
-              .Add("--min-priority-per-job {value}", MinPriorityPerJob)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaAccountComputePolicyDeleteSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaAccountComputePolicyDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the compute policy to delete.</p></summary>
-        public virtual string ComputePolicyName { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla account compute-policy delete")
-              .Add("--account {value}", Account)
-              .Add("--compute-policy-name {value}", ComputePolicyName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaAccountComputePolicyListSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaAccountComputePolicyListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla account compute-policy list")
-              .Add("--account {value}", Account)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaAccountComputePolicyShowSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaAccountComputePolicyShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the compute policy to retrieve.</p></summary>
-        public virtual string ComputePolicyName { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla account compute-policy show")
-              .Add("--account {value}", Account)
-              .Add("--compute-policy-name {value}", ComputePolicyName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaAccountComputePolicyUpdateSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaAccountComputePolicyUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the compute policy to update.</p></summary>
-        public virtual string ComputePolicyName { get; internal set; }
-        /// <summary><p>The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
-        public virtual string MaxDopPerJob { get; internal set; }
-        /// <summary><p>The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
-        public virtual string MinPriorityPerJob { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla account compute-policy update")
-              .Add("--account {value}", Account)
-              .Add("--compute-policy-name {value}", ComputePolicyName)
-              .Add("--max-dop-per-job {value}", MaxDopPerJob)
-              .Add("--min-priority-per-job {value}", MinPriorityPerJob)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaAccountDataLakeStoreAddSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaAccountDataLakeStoreAddSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the Data Lake Store account to add.</p></summary>
-        public virtual string DataLakeStoreAccountName { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The optional suffix for the Data Lake Store account.</p></summary>
-        public virtual string Suffix { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla account data-lake-store add")
-              .Add("--account {value}", Account)
-              .Add("--data-lake-store-account-name {value}", DataLakeStoreAccountName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--suffix {value}", Suffix)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaAccountDataLakeStoreDeleteSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaAccountDataLakeStoreDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the Data Lake Store account to remove.</p></summary>
-        public virtual string DataLakeStoreAccountName { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla account data-lake-store delete")
-              .Add("--account {value}", Account)
-              .Add("--data-lake-store-account-name {value}", DataLakeStoreAccountName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaAccountDataLakeStoreListSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaAccountDataLakeStoreListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the database containing the procedures.</p></summary>
+        public virtual string DatabaseName { get; internal set; }
+        /// <summary><p>The name of the schema containing the procedures.</p></summary>
+        public virtual string SchemaName { get; internal set; }
         /// <summary><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
         public virtual string Count { get; internal set; }
         /// <summary><p>OData filter. Optional.</p></summary>
@@ -1653,8 +1969,6 @@ namespace Nuke.Azure
         /// <summary><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         public virtual IReadOnlyList<string> Orderby => OrderbyInternal.AsReadOnly();
         internal List<string> OrderbyInternal { get; set; } = new List<string>();
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
         public virtual string Select { get; internal set; }
         /// <summary><p>The number of items to skip over before returning elements.</p></summary>
@@ -1674,12 +1988,13 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla account data-lake-store list")
+              .Add("dla catalog procedure list")
               .Add("--account {value}", Account)
+              .Add("--database-name {value}", DatabaseName)
+              .Add("--schema-name {value}", SchemaName)
               .Add("--count {value}", Count)
               .Add("--filter {value}", Filter)
               .Add("--orderby {value}", Orderby, separator: ',')
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--select {value}", Select)
               .Add("--skip {value}", Skip)
               .Add("--top {value}", Top)
@@ -1692,21 +2007,23 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaAccountDataLakeStoreShowSettings
+    #region AzureDlaCatalogProcedureShowSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaAccountDataLakeStoreShowSettings : ToolSettings
+    public partial class AzureDlaCatalogProcedureShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the Data Lake Store account to retrieve.</p></summary>
-        public virtual string DataLakeStoreAccountName { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the database containing the procedure.</p></summary>
+        public virtual string DatabaseName { get; internal set; }
+        /// <summary><p>The name of the procedure.</p></summary>
+        public virtual string ProcedureName { get; internal set; }
+        /// <summary><p>The name of the schema containing the procedure.</p></summary>
+        public virtual string SchemaName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1720,10 +2037,11 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla account data-lake-store show")
+              .Add("dla catalog procedure show")
               .Add("--account {value}", Account)
-              .Add("--data-lake-store-account-name {value}", DataLakeStoreAccountName)
-              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--database-name {value}", DatabaseName)
+              .Add("--procedure-name {value}", ProcedureName)
+              .Add("--schema-name {value}", SchemaName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1733,25 +2051,36 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaAccountFirewallCreateSettings
+    #region AzureDlaCatalogTablePartitionListSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaAccountFirewallCreateSettings : ToolSettings
+    public partial class AzureDlaCatalogTablePartitionListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The end of the valid IP range for the firewall rule.</p></summary>
-        public virtual string EndIpAddress { get; internal set; }
-        /// <summary><p>The name of the firewall rule.</p></summary>
-        public virtual string FirewallRuleName { get; internal set; }
-        /// <summary><p>The start of the valid IP range for the firewall rule.</p></summary>
-        public virtual string StartIpAddress { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the database containing the partitions.</p></summary>
+        public virtual string DatabaseName { get; internal set; }
+        /// <summary><p>The name of the schema containing the partitions.</p></summary>
+        public virtual string SchemaName { get; internal set; }
+        /// <summary><p>The name of the table containing the partitions.</p></summary>
+        public virtual string TableName { get; internal set; }
+        /// <summary><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        public virtual string Count { get; internal set; }
+        /// <summary><p>OData filter. Optional.</p></summary>
+        public virtual string Filter { get; internal set; }
+        /// <summary><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        public virtual IReadOnlyList<string> Orderby => OrderbyInternal.AsReadOnly();
+        internal List<string> OrderbyInternal { get; set; } = new List<string>();
+        /// <summary><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        public virtual string Select { get; internal set; }
+        /// <summary><p>The number of items to skip over before returning elements.</p></summary>
+        public virtual string Skip { get; internal set; }
+        /// <summary><p>Maximum number of items to return.</p></summary>
+        public virtual int? Top { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1765,12 +2094,17 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla account firewall create")
+              .Add("dla catalog table-partition list")
               .Add("--account {value}", Account)
-              .Add("--end-ip-address {value}", EndIpAddress)
-              .Add("--firewall-rule-name {value}", FirewallRuleName)
-              .Add("--start-ip-address {value}", StartIpAddress)
-              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--database-name {value}", DatabaseName)
+              .Add("--schema-name {value}", SchemaName)
+              .Add("--table-name {value}", TableName)
+              .Add("--count {value}", Count)
+              .Add("--filter {value}", Filter)
+              .Add("--orderby {value}", Orderby, separator: ',')
+              .Add("--select {value}", Select)
+              .Add("--skip {value}", Skip)
+              .Add("--top {value}", Top)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1780,21 +2114,25 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaAccountFirewallDeleteSettings
+    #region AzureDlaCatalogTablePartitionShowSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaAccountFirewallDeleteSettings : ToolSettings
+    public partial class AzureDlaCatalogTablePartitionShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the firewall rule to delete.</p></summary>
-        public virtual string FirewallRuleName { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the database containing the partition.</p></summary>
+        public virtual string DatabaseName { get; internal set; }
+        /// <summary><p>The name of the table partition.</p></summary>
+        public virtual string PartitionName { get; internal set; }
+        /// <summary><p>The name of the schema containing the partition.</p></summary>
+        public virtual string SchemaName { get; internal set; }
+        /// <summary><p>The name of the table containing the partition.</p></summary>
+        public virtual string TableName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1808,10 +2146,12 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla account firewall delete")
+              .Add("dla catalog table-partition show")
               .Add("--account {value}", Account)
-              .Add("--firewall-rule-name {value}", FirewallRuleName)
-              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--database-name {value}", DatabaseName)
+              .Add("--partition-name {value}", PartitionName)
+              .Add("--schema-name {value}", SchemaName)
+              .Add("--table-name {value}", TableName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1821,19 +2161,21 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaAccountFirewallListSettings
+    #region AzureDlaCatalogViewListSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaAccountFirewallListSettings : ToolSettings
+    public partial class AzureDlaCatalogViewListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the database.</p></summary>
+        public virtual string DatabaseName { get; internal set; }
+        /// <summary><p>The name of the schema associated with the views to list.</p></summary>
+        public virtual string SchemaName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1847,9 +2189,10 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla account firewall list")
+              .Add("dla catalog view list")
               .Add("--account {value}", Account)
-              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--database-name {value}", DatabaseName)
+              .Add("--schema-name {value}", SchemaName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1859,21 +2202,23 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaAccountFirewallShowSettings
+    #region AzureDlaCatalogViewShowSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaAccountFirewallShowSettings : ToolSettings
+    public partial class AzureDlaCatalogViewShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the firewall rule to retrieve.</p></summary>
-        public virtual string FirewallRuleName { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the database containing the view.</p></summary>
+        public virtual string DatabaseName { get; internal set; }
+        /// <summary><p>The name of the schema containing the view.</p></summary>
+        public virtual string SchemaName { get; internal set; }
+        /// <summary><p>The name of the view.</p></summary>
+        public virtual string ViewName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1887,10 +2232,11 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla account firewall show")
+              .Add("dla catalog view show")
               .Add("--account {value}", Account)
-              .Add("--firewall-rule-name {value}", FirewallRuleName)
-              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--database-name {value}", DatabaseName)
+              .Add("--schema-name {value}", SchemaName)
+              .Add("--view-name {value}", ViewName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1900,25 +2246,34 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaAccountFirewallUpdateSettings
+    #region AzureDlaCatalogTableTypeListSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaAccountFirewallUpdateSettings : ToolSettings
+    public partial class AzureDlaCatalogTableTypeListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the firewall rule to update.</p></summary>
-        public virtual string FirewallRuleName { get; internal set; }
-        /// <summary><p>The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
-        public virtual string EndIpAddress { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
-        public virtual string StartIpAddress { get; internal set; }
+        /// <summary><p>The name of the database containing the table types.</p></summary>
+        public virtual string DatabaseName { get; internal set; }
+        /// <summary><p>The name of the schema containing the table types.</p></summary>
+        public virtual string SchemaName { get; internal set; }
+        /// <summary><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        public virtual string Count { get; internal set; }
+        /// <summary><p>OData filter. Optional.</p></summary>
+        public virtual string Filter { get; internal set; }
+        /// <summary><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        public virtual IReadOnlyList<string> Orderby => OrderbyInternal.AsReadOnly();
+        internal List<string> OrderbyInternal { get; set; } = new List<string>();
+        /// <summary><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        public virtual string Select { get; internal set; }
+        /// <summary><p>The number of items to skip over before returning elements.</p></summary>
+        public virtual string Skip { get; internal set; }
+        /// <summary><p>Maximum number of items to return.</p></summary>
+        public virtual int? Top { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1932,12 +2287,16 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla account firewall update")
+              .Add("dla catalog table-type list")
               .Add("--account {value}", Account)
-              .Add("--firewall-rule-name {value}", FirewallRuleName)
-              .Add("--end-ip-address {value}", EndIpAddress)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--start-ip-address {value}", StartIpAddress)
+              .Add("--database-name {value}", DatabaseName)
+              .Add("--schema-name {value}", SchemaName)
+              .Add("--count {value}", Count)
+              .Add("--filter {value}", Filter)
+              .Add("--orderby {value}", Orderby, separator: ',')
+              .Add("--select {value}", Select)
+              .Add("--skip {value}", Skip)
+              .Add("--top {value}", Top)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1947,18 +2306,154 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaCatalogAssemblyListSettings
+    #region AzureDlaCatalogTableTypeShowSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaCatalogAssemblyListSettings : ToolSettings
+    public partial class AzureDlaCatalogTableTypeShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the assembly.</p></summary>
+        /// <summary><p>The name of the database containing the table type.</p></summary>
+        public virtual string DatabaseName { get; internal set; }
+        /// <summary><p>The name of the schema containing the table type.</p></summary>
+        public virtual string SchemaName { get; internal set; }
+        /// <summary><p>The name of the table type to retrieve.</p></summary>
+        public virtual string TableTypeName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla catalog table-type show")
+              .Add("--account {value}", Account)
+              .Add("--database-name {value}", DatabaseName)
+              .Add("--schema-name {value}", SchemaName)
+              .Add("--table-type-name {value}", TableTypeName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaCatalogDatabaseListSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaCatalogDatabaseListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        public virtual string Count { get; internal set; }
+        /// <summary><p>OData filter. Optional.</p></summary>
+        public virtual string Filter { get; internal set; }
+        /// <summary><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        public virtual IReadOnlyList<string> Orderby => OrderbyInternal.AsReadOnly();
+        internal List<string> OrderbyInternal { get; set; } = new List<string>();
+        /// <summary><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        public virtual string Select { get; internal set; }
+        /// <summary><p>The number of items to skip over before returning elements.</p></summary>
+        public virtual string Skip { get; internal set; }
+        /// <summary><p>Maximum number of items to return.</p></summary>
+        public virtual int? Top { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla catalog database list")
+              .Add("--account {value}", Account)
+              .Add("--count {value}", Count)
+              .Add("--filter {value}", Filter)
+              .Add("--orderby {value}", Orderby, separator: ',')
+              .Add("--select {value}", Select)
+              .Add("--skip {value}", Skip)
+              .Add("--top {value}", Top)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaCatalogDatabaseShowSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaCatalogDatabaseShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the database.</p></summary>
+        public virtual string DatabaseName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dla catalog database show")
+              .Add("--account {value}", Account)
+              .Add("--database-name {value}", DatabaseName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlaCatalogSchemaListSettings
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlaCatalogSchemaListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDla executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
+        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The name of the database containing the schema.</p></summary>
         public virtual string DatabaseName { get; internal set; }
         /// <summary><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
         public virtual string Count { get; internal set; }
@@ -1986,7 +2481,7 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla catalog assembly list")
+              .Add("dla catalog schema list")
               .Add("--account {value}", Account)
               .Add("--database-name {value}", DatabaseName)
               .Add("--count {value}", Count)
@@ -2004,21 +2499,21 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaCatalogAssemblyShowSettings
+    #region AzureDlaCatalogSchemaShowSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaCatalogAssemblyShowSettings : ToolSettings
+    public partial class AzureDlaCatalogSchemaShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the assembly.</p></summary>
-        public virtual string AssemblyName { get; internal set; }
-        /// <summary><p>The name of the database containing the assembly.</p></summary>
+        /// <summary><p>The name of the database containing the schema.</p></summary>
         public virtual string DatabaseName { get; internal set; }
+        /// <summary><p>The name of the schema.</p></summary>
+        public virtual string SchemaName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2032,10 +2527,10 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla catalog assembly show")
+              .Add("dla catalog schema show")
               .Add("--account {value}", Account)
-              .Add("--assembly-name {value}", AssemblyName)
               .Add("--database-name {value}", DatabaseName)
+              .Add("--schema-name {value}", SchemaName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2293,66 +2788,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaCatalogDatabaseListSettings
+    #region AzureDlaCatalogTvfListSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaCatalogDatabaseListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
-        public virtual string Count { get; internal set; }
-        /// <summary><p>OData filter. Optional.</p></summary>
-        public virtual string Filter { get; internal set; }
-        /// <summary><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        public virtual IReadOnlyList<string> Orderby => OrderbyInternal.AsReadOnly();
-        internal List<string> OrderbyInternal { get; set; } = new List<string>();
-        /// <summary><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        public virtual string Select { get; internal set; }
-        /// <summary><p>The number of items to skip over before returning elements.</p></summary>
-        public virtual string Skip { get; internal set; }
-        /// <summary><p>Maximum number of items to return.</p></summary>
-        public virtual int? Top { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla catalog database list")
-              .Add("--account {value}", Account)
-              .Add("--count {value}", Count)
-              .Add("--filter {value}", Filter)
-              .Add("--orderby {value}", Orderby, separator: ',')
-              .Add("--select {value}", Select)
-              .Add("--skip {value}", Skip)
-              .Add("--top {value}", Top)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaCatalogDatabaseShowSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaCatalogDatabaseShowSettings : ToolSettings
+    public partial class AzureDlaCatalogTvfListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
@@ -2360,6 +2801,8 @@ namespace Nuke.Azure
         public virtual string Account { get; internal set; }
         /// <summary><p>The name of the database.</p></summary>
         public virtual string DatabaseName { get; internal set; }
+        /// <summary><p>The name of the schema assocated with table valued functions to list.</p></summary>
+        public virtual string SchemaName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2373,9 +2816,10 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla catalog database show")
+              .Add("dla catalog tvf list")
               .Add("--account {value}", Account)
               .Add("--database-name {value}", DatabaseName)
+              .Add("--schema-name {value}", SchemaName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2385,32 +2829,23 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaCatalogExternalDataSourceListSettings
+    #region AzureDlaCatalogTvfShowSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaCatalogExternalDataSourceListSettings : ToolSettings
+    public partial class AzureDlaCatalogTvfShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the external data sources.</p></summary>
+        /// <summary><p>The name of the database containing the table valued function.</p></summary>
         public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
-        public virtual string Count { get; internal set; }
-        /// <summary><p>OData filter. Optional.</p></summary>
-        public virtual string Filter { get; internal set; }
-        /// <summary><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        public virtual IReadOnlyList<string> Orderby => OrderbyInternal.AsReadOnly();
-        internal List<string> OrderbyInternal { get; set; } = new List<string>();
-        /// <summary><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        public virtual string Select { get; internal set; }
-        /// <summary><p>The number of items to skip over before returning elements.</p></summary>
-        public virtual string Skip { get; internal set; }
-        /// <summary><p>Maximum number of items to return.</p></summary>
-        public virtual int? Top { get; internal set; }
+        /// <summary><p>The name of the schema containing the table valued function.</p></summary>
+        public virtual string SchemaName { get; internal set; }
+        /// <summary><p>The name of the tableValuedFunction.</p></summary>
+        public virtual string TableValuedFunctionName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2424,56 +2859,11 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla catalog external-data-source list")
+              .Add("dla catalog tvf show")
               .Add("--account {value}", Account)
               .Add("--database-name {value}", DatabaseName)
-              .Add("--count {value}", Count)
-              .Add("--filter {value}", Filter)
-              .Add("--orderby {value}", Orderby, separator: ',')
-              .Add("--select {value}", Select)
-              .Add("--skip {value}", Skip)
-              .Add("--top {value}", Top)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaCatalogExternalDataSourceShowSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaCatalogExternalDataSourceShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the external data source.</p></summary>
-        public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The name of the external data source.</p></summary>
-        public virtual string ExternalDataSourceName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla catalog external-data-source show")
-              .Add("--account {value}", Account)
-              .Add("--database-name {value}", DatabaseName)
-              .Add("--external-data-source-name {value}", ExternalDataSourceName)
+              .Add("--schema-name {value}", SchemaName)
+              .Add("--table-valued-function-name {value}", TableValuedFunctionName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2587,122 +2977,18 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaCatalogProcedureListSettings
+    #region AzureDlaCatalogAssemblyListSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaCatalogProcedureListSettings : ToolSettings
+    public partial class AzureDlaCatalogAssemblyListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the procedures.</p></summary>
-        public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The name of the schema containing the procedures.</p></summary>
-        public virtual string SchemaName { get; internal set; }
-        /// <summary><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
-        public virtual string Count { get; internal set; }
-        /// <summary><p>OData filter. Optional.</p></summary>
-        public virtual string Filter { get; internal set; }
-        /// <summary><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        public virtual IReadOnlyList<string> Orderby => OrderbyInternal.AsReadOnly();
-        internal List<string> OrderbyInternal { get; set; } = new List<string>();
-        /// <summary><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        public virtual string Select { get; internal set; }
-        /// <summary><p>The number of items to skip over before returning elements.</p></summary>
-        public virtual string Skip { get; internal set; }
-        /// <summary><p>Maximum number of items to return.</p></summary>
-        public virtual int? Top { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla catalog procedure list")
-              .Add("--account {value}", Account)
-              .Add("--database-name {value}", DatabaseName)
-              .Add("--schema-name {value}", SchemaName)
-              .Add("--count {value}", Count)
-              .Add("--filter {value}", Filter)
-              .Add("--orderby {value}", Orderby, separator: ',')
-              .Add("--select {value}", Select)
-              .Add("--skip {value}", Skip)
-              .Add("--top {value}", Top)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaCatalogProcedureShowSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaCatalogProcedureShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the procedure.</p></summary>
-        public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The name of the procedure.</p></summary>
-        public virtual string ProcedureName { get; internal set; }
-        /// <summary><p>The name of the schema containing the procedure.</p></summary>
-        public virtual string SchemaName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla catalog procedure show")
-              .Add("--account {value}", Account)
-              .Add("--database-name {value}", DatabaseName)
-              .Add("--procedure-name {value}", ProcedureName)
-              .Add("--schema-name {value}", SchemaName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaCatalogSchemaListSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaCatalogSchemaListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the schema.</p></summary>
+        /// <summary><p>The name of the database containing the assembly.</p></summary>
         public virtual string DatabaseName { get; internal set; }
         /// <summary><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
         public virtual string Count { get; internal set; }
@@ -2730,7 +3016,7 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla catalog schema list")
+              .Add("dla catalog assembly list")
               .Add("--account {value}", Account)
               .Add("--database-name {value}", DatabaseName)
               .Add("--count {value}", Count)
@@ -2748,21 +3034,21 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaCatalogSchemaShowSettings
+    #region AzureDlaCatalogAssemblyShowSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaCatalogSchemaShowSettings : ToolSettings
+    public partial class AzureDlaCatalogAssemblyShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the schema.</p></summary>
+        /// <summary><p>The name of the assembly.</p></summary>
+        public virtual string AssemblyName { get; internal set; }
+        /// <summary><p>The name of the database containing the assembly.</p></summary>
         public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The name of the schema.</p></summary>
-        public virtual string SchemaName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2776,10 +3062,10 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla catalog schema show")
+              .Add("dla catalog assembly show")
               .Add("--account {value}", Account)
+              .Add("--assembly-name {value}", AssemblyName)
               .Add("--database-name {value}", DatabaseName)
-              .Add("--schema-name {value}", SchemaName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2789,23 +3075,19 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaCatalogTablePartitionListSettings
+    #region AzureDlaCatalogExternalDataSourceListSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaCatalogTablePartitionListSettings : ToolSettings
+    public partial class AzureDlaCatalogExternalDataSourceListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the partitions.</p></summary>
+        /// <summary><p>The name of the database containing the external data sources.</p></summary>
         public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The name of the schema containing the partitions.</p></summary>
-        public virtual string SchemaName { get; internal set; }
-        /// <summary><p>The name of the table containing the partitions.</p></summary>
-        public virtual string TableName { get; internal set; }
         /// <summary><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
         public virtual string Count { get; internal set; }
         /// <summary><p>OData filter. Optional.</p></summary>
@@ -2832,11 +3114,9 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla catalog table-partition list")
+              .Add("dla catalog external-data-source list")
               .Add("--account {value}", Account)
               .Add("--database-name {value}", DatabaseName)
-              .Add("--schema-name {value}", SchemaName)
-              .Add("--table-name {value}", TableName)
               .Add("--count {value}", Count)
               .Add("--filter {value}", Filter)
               .Add("--orderby {value}", Orderby, separator: ',')
@@ -2852,25 +3132,21 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaCatalogTablePartitionShowSettings
+    #region AzureDlaCatalogExternalDataSourceShowSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaCatalogTablePartitionShowSettings : ToolSettings
+    public partial class AzureDlaCatalogExternalDataSourceShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the partition.</p></summary>
+        /// <summary><p>The name of the database containing the external data source.</p></summary>
         public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The name of the table partition.</p></summary>
-        public virtual string PartitionName { get; internal set; }
-        /// <summary><p>The name of the schema containing the partition.</p></summary>
-        public virtual string SchemaName { get; internal set; }
-        /// <summary><p>The name of the table containing the partition.</p></summary>
-        public virtual string TableName { get; internal set; }
+        /// <summary><p>The name of the external data source.</p></summary>
+        public virtual string ExternalDataSourceName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2884,207 +3160,10 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla catalog table-partition show")
+              .Add("dla catalog external-data-source show")
               .Add("--account {value}", Account)
               .Add("--database-name {value}", DatabaseName)
-              .Add("--partition-name {value}", PartitionName)
-              .Add("--schema-name {value}", SchemaName)
-              .Add("--table-name {value}", TableName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaCatalogTableStatsListSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaCatalogTableStatsListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database.</p></summary>
-        public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The schema associated with the tables to list.</p></summary>
-        public virtual string SchemaName { get; internal set; }
-        /// <summary><p>The table to list statistics for. `--schema-name` must also be specified.</p></summary>
-        public virtual string TableName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla catalog table-stats list")
-              .Add("--account {value}", Account)
-              .Add("--database-name {value}", DatabaseName)
-              .Add("--schema-name {value}", SchemaName)
-              .Add("--table-name {value}", TableName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaCatalogTableStatsShowSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaCatalogTableStatsShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the statistics.</p></summary>
-        public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The name of the schema containing the statistics.</p></summary>
-        public virtual string SchemaName { get; internal set; }
-        /// <summary><p>The name of the table statistics.</p></summary>
-        public virtual string StatisticsName { get; internal set; }
-        /// <summary><p>The name of the table containing the statistics.</p></summary>
-        public virtual string TableName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla catalog table-stats show")
-              .Add("--account {value}", Account)
-              .Add("--database-name {value}", DatabaseName)
-              .Add("--schema-name {value}", SchemaName)
-              .Add("--statistics-name {value}", StatisticsName)
-              .Add("--table-name {value}", TableName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaCatalogTableTypeListSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaCatalogTableTypeListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the table types.</p></summary>
-        public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The name of the schema containing the table types.</p></summary>
-        public virtual string SchemaName { get; internal set; }
-        /// <summary><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
-        public virtual string Count { get; internal set; }
-        /// <summary><p>OData filter. Optional.</p></summary>
-        public virtual string Filter { get; internal set; }
-        /// <summary><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        public virtual IReadOnlyList<string> Orderby => OrderbyInternal.AsReadOnly();
-        internal List<string> OrderbyInternal { get; set; } = new List<string>();
-        /// <summary><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        public virtual string Select { get; internal set; }
-        /// <summary><p>The number of items to skip over before returning elements.</p></summary>
-        public virtual string Skip { get; internal set; }
-        /// <summary><p>Maximum number of items to return.</p></summary>
-        public virtual int? Top { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla catalog table-type list")
-              .Add("--account {value}", Account)
-              .Add("--database-name {value}", DatabaseName)
-              .Add("--schema-name {value}", SchemaName)
-              .Add("--count {value}", Count)
-              .Add("--filter {value}", Filter)
-              .Add("--orderby {value}", Orderby, separator: ',')
-              .Add("--select {value}", Select)
-              .Add("--skip {value}", Skip)
-              .Add("--top {value}", Top)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaCatalogTableTypeShowSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaCatalogTableTypeShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the table type.</p></summary>
-        public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The name of the schema containing the table type.</p></summary>
-        public virtual string SchemaName { get; internal set; }
-        /// <summary><p>The name of the table type to retrieve.</p></summary>
-        public virtual string TableTypeName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla catalog table-type show")
-              .Add("--account {value}", Account)
-              .Add("--database-name {value}", DatabaseName)
-              .Add("--schema-name {value}", SchemaName)
-              .Add("--table-type-name {value}", TableTypeName)
+              .Add("--external-data-source-name {value}", ExternalDataSourceName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3179,12 +3258,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaCatalogTvfListSettings
+    #region AzureDlaCatalogTableStatsListSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaCatalogTvfListSettings : ToolSettings
+    public partial class AzureDlaCatalogTableStatsListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
@@ -3192,8 +3271,10 @@ namespace Nuke.Azure
         public virtual string Account { get; internal set; }
         /// <summary><p>The name of the database.</p></summary>
         public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The name of the schema assocated with table valued functions to list.</p></summary>
+        /// <summary><p>The schema associated with the tables to list.</p></summary>
         public virtual string SchemaName { get; internal set; }
+        /// <summary><p>The table to list statistics for. `--schema-name` must also be specified.</p></summary>
+        public virtual string TableName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3207,10 +3288,11 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla catalog tvf list")
+              .Add("dla catalog table-stats list")
               .Add("--account {value}", Account)
               .Add("--database-name {value}", DatabaseName)
               .Add("--schema-name {value}", SchemaName)
+              .Add("--table-name {value}", TableName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3220,23 +3302,25 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlaCatalogTvfShowSettings
+    #region AzureDlaCatalogTableStatsShowSettings
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureDlaCatalogTvfShowSettings : ToolSettings
+    public partial class AzureDlaCatalogTableStatsShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
         /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
         public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the table valued function.</p></summary>
+        /// <summary><p>The name of the database containing the statistics.</p></summary>
         public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The name of the schema containing the table valued function.</p></summary>
+        /// <summary><p>The name of the schema containing the statistics.</p></summary>
         public virtual string SchemaName { get; internal set; }
-        /// <summary><p>The name of the tableValuedFunction.</p></summary>
-        public virtual string TableValuedFunctionName { get; internal set; }
+        /// <summary><p>The name of the table statistics.</p></summary>
+        public virtual string StatisticsName { get; internal set; }
+        /// <summary><p>The name of the table containing the statistics.</p></summary>
+        public virtual string TableName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3250,96 +3334,12 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("dla catalog tvf show")
+              .Add("dla catalog table-stats show")
               .Add("--account {value}", Account)
               .Add("--database-name {value}", DatabaseName)
               .Add("--schema-name {value}", SchemaName)
-              .Add("--table-valued-function-name {value}", TableValuedFunctionName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaCatalogViewListSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaCatalogViewListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database.</p></summary>
-        public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The name of the schema associated with the views to list.</p></summary>
-        public virtual string SchemaName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla catalog view list")
-              .Add("--account {value}", Account)
-              .Add("--database-name {value}", DatabaseName)
-              .Add("--schema-name {value}", SchemaName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlaCatalogViewShowSettings
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlaCatalogViewShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDla executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlaTasks.AzureDlaPath;
-        /// <summary><p>Name of the Data Lake Analytics account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the database containing the view.</p></summary>
-        public virtual string DatabaseName { get; internal set; }
-        /// <summary><p>The name of the schema containing the view.</p></summary>
-        public virtual string SchemaName { get; internal set; }
-        /// <summary><p>The name of the view.</p></summary>
-        public virtual string ViewName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dla catalog view show")
-              .Add("--account {value}", Account)
-              .Add("--database-name {value}", DatabaseName)
-              .Add("--schema-name {value}", SchemaName)
-              .Add("--view-name {value}", ViewName)
+              .Add("--statistics-name {value}", StatisticsName)
+              .Add("--table-name {value}", TableName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3609,6 +3609,104 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureDlaSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureDlaSettings ResetVerbose(this AzureDlaSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaCatalogSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaCatalogSettingsExtensions
+    {
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSettings SetDebug(this AzureDlaCatalogSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSettings ResetDebug(this AzureDlaCatalogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSettings SetHelp(this AzureDlaCatalogSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSettings ResetHelp(this AzureDlaCatalogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSettings SetOutput(this AzureDlaCatalogSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSettings ResetOutput(this AzureDlaCatalogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSettings SetQuery(this AzureDlaCatalogSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSettings ResetQuery(this AzureDlaCatalogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSettings SetVerbose(this AzureDlaCatalogSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSettings ResetVerbose(this AzureDlaCatalogSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4513,104 +4611,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureDlaAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureDlaAccountUpdateSettings ResetVerbose(this AzureDlaAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaCatalogSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogSettingsExtensions
-    {
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogSettings SetDebug(this AzureDlaCatalogSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogSettings ResetDebug(this AzureDlaCatalogSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogSettings SetHelp(this AzureDlaCatalogSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogSettings ResetHelp(this AzureDlaCatalogSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogSettings SetOutput(this AzureDlaCatalogSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogSettings ResetOutput(this AzureDlaCatalogSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogSettings SetQuery(this AzureDlaCatalogSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogSettings ResetQuery(this AzureDlaCatalogSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogSettings SetVerbose(this AzureDlaCatalogSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogSettings ResetVerbose(this AzureDlaCatalogSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5685,6 +5685,2428 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureDlaAccountComputePolicyCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountComputePolicyCreateSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings SetAccount(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings ResetAccount(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ComputePolicyName
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to create.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings SetComputePolicyName(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string computePolicyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ComputePolicyName = computePolicyName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to create.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings ResetComputePolicyName(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ComputePolicyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ObjectId
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.ObjectId"/>.</em></p><p>The Azure Active Directory object ID of the user, group, or service principal to apply the policy to.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings SetObjectId(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string objectId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ObjectId = objectId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.ObjectId"/>.</em></p><p>The Azure Active Directory object ID of the user, group, or service principal to apply the policy to.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings ResetObjectId(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ObjectId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ObjectType
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.ObjectType"/>.</em></p><p>The Azure Active Directory object type associated with the supplied object ID.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings SetObjectType(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string objectType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ObjectType = objectType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.ObjectType"/>.</em></p><p>The Azure Active Directory object type associated with the supplied object ID.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings ResetObjectType(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ObjectType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MaxDopPerJob
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.MaxDopPerJob"/>.</em></p><p>The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings SetMaxDopPerJob(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string maxDopPerJob)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxDopPerJob = maxDopPerJob;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.MaxDopPerJob"/>.</em></p><p>The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings ResetMaxDopPerJob(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxDopPerJob = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MinPriorityPerJob
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.MinPriorityPerJob"/>.</em></p><p>The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings SetMinPriorityPerJob(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string minPriorityPerJob)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MinPriorityPerJob = minPriorityPerJob;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.MinPriorityPerJob"/>.</em></p><p>The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings ResetMinPriorityPerJob(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MinPriorityPerJob = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings SetResourceGroup(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings ResetResourceGroup(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings SetDebug(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings ResetDebug(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings SetHelp(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings ResetHelp(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings SetOutput(this AzureDlaAccountComputePolicyCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings ResetOutput(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings SetQuery(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings ResetQuery(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings SetVerbose(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyCreateSettings ResetVerbose(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaAccountComputePolicyDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountComputePolicyDeleteSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings SetAccount(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings ResetAccount(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ComputePolicyName
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to delete.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings SetComputePolicyName(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string computePolicyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ComputePolicyName = computePolicyName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to delete.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings ResetComputePolicyName(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ComputePolicyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings SetResourceGroup(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings ResetResourceGroup(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings SetDebug(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings ResetDebug(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings SetHelp(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings ResetHelp(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings SetOutput(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings ResetOutput(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings SetQuery(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings ResetQuery(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings SetVerbose(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyDeleteSettings ResetVerbose(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaAccountComputePolicyListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountComputePolicyListSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings SetAccount(this AzureDlaAccountComputePolicyListSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings ResetAccount(this AzureDlaAccountComputePolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings SetResourceGroup(this AzureDlaAccountComputePolicyListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings ResetResourceGroup(this AzureDlaAccountComputePolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings SetDebug(this AzureDlaAccountComputePolicyListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings ResetDebug(this AzureDlaAccountComputePolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings SetHelp(this AzureDlaAccountComputePolicyListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings ResetHelp(this AzureDlaAccountComputePolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings SetOutput(this AzureDlaAccountComputePolicyListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings ResetOutput(this AzureDlaAccountComputePolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings SetQuery(this AzureDlaAccountComputePolicyListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings ResetQuery(this AzureDlaAccountComputePolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings SetVerbose(this AzureDlaAccountComputePolicyListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyListSettings ResetVerbose(this AzureDlaAccountComputePolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaAccountComputePolicyShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountComputePolicyShowSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings SetAccount(this AzureDlaAccountComputePolicyShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings ResetAccount(this AzureDlaAccountComputePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ComputePolicyName
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to retrieve.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings SetComputePolicyName(this AzureDlaAccountComputePolicyShowSettings toolSettings, string computePolicyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ComputePolicyName = computePolicyName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to retrieve.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings ResetComputePolicyName(this AzureDlaAccountComputePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ComputePolicyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings SetResourceGroup(this AzureDlaAccountComputePolicyShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings ResetResourceGroup(this AzureDlaAccountComputePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings SetDebug(this AzureDlaAccountComputePolicyShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings ResetDebug(this AzureDlaAccountComputePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings SetHelp(this AzureDlaAccountComputePolicyShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings ResetHelp(this AzureDlaAccountComputePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings SetOutput(this AzureDlaAccountComputePolicyShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings ResetOutput(this AzureDlaAccountComputePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings SetQuery(this AzureDlaAccountComputePolicyShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings ResetQuery(this AzureDlaAccountComputePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings SetVerbose(this AzureDlaAccountComputePolicyShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyShowSettings ResetVerbose(this AzureDlaAccountComputePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaAccountComputePolicyUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountComputePolicyUpdateSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings SetAccount(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings ResetAccount(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ComputePolicyName
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to update.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings SetComputePolicyName(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string computePolicyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ComputePolicyName = computePolicyName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to update.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings ResetComputePolicyName(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ComputePolicyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MaxDopPerJob
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.MaxDopPerJob"/>.</em></p><p>The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings SetMaxDopPerJob(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string maxDopPerJob)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxDopPerJob = maxDopPerJob;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.MaxDopPerJob"/>.</em></p><p>The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings ResetMaxDopPerJob(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxDopPerJob = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MinPriorityPerJob
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.MinPriorityPerJob"/>.</em></p><p>The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings SetMinPriorityPerJob(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string minPriorityPerJob)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MinPriorityPerJob = minPriorityPerJob;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.MinPriorityPerJob"/>.</em></p><p>The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings ResetMinPriorityPerJob(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MinPriorityPerJob = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings SetResourceGroup(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings ResetResourceGroup(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings SetDebug(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings ResetDebug(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings SetHelp(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings ResetHelp(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings SetOutput(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings ResetOutput(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings SetQuery(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings ResetQuery(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings SetVerbose(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountComputePolicyUpdateSettings ResetVerbose(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaAccountFirewallCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountFirewallCreateSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings SetAccount(this AzureDlaAccountFirewallCreateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings ResetAccount(this AzureDlaAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndIpAddress
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.EndIpAddress"/>.</em></p><p>The end of the valid IP range for the firewall rule.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings SetEndIpAddress(this AzureDlaAccountFirewallCreateSettings toolSettings, string endIpAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndIpAddress = endIpAddress;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.EndIpAddress"/>.</em></p><p>The end of the valid IP range for the firewall rule.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings ResetEndIpAddress(this AzureDlaAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndIpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FirewallRuleName
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings SetFirewallRuleName(this AzureDlaAccountFirewallCreateSettings toolSettings, string firewallRuleName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = firewallRuleName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings ResetFirewallRuleName(this AzureDlaAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StartIpAddress
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.StartIpAddress"/>.</em></p><p>The start of the valid IP range for the firewall rule.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings SetStartIpAddress(this AzureDlaAccountFirewallCreateSettings toolSettings, string startIpAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartIpAddress = startIpAddress;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.StartIpAddress"/>.</em></p><p>The start of the valid IP range for the firewall rule.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings ResetStartIpAddress(this AzureDlaAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartIpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings SetResourceGroup(this AzureDlaAccountFirewallCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings ResetResourceGroup(this AzureDlaAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings SetDebug(this AzureDlaAccountFirewallCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings ResetDebug(this AzureDlaAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings SetHelp(this AzureDlaAccountFirewallCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings ResetHelp(this AzureDlaAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings SetOutput(this AzureDlaAccountFirewallCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings ResetOutput(this AzureDlaAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings SetQuery(this AzureDlaAccountFirewallCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings ResetQuery(this AzureDlaAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings SetVerbose(this AzureDlaAccountFirewallCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallCreateSettings ResetVerbose(this AzureDlaAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaAccountFirewallDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountFirewallDeleteSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings SetAccount(this AzureDlaAccountFirewallDeleteSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings ResetAccount(this AzureDlaAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FirewallRuleName
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to delete.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings SetFirewallRuleName(this AzureDlaAccountFirewallDeleteSettings toolSettings, string firewallRuleName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = firewallRuleName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to delete.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings ResetFirewallRuleName(this AzureDlaAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings SetResourceGroup(this AzureDlaAccountFirewallDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings ResetResourceGroup(this AzureDlaAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings SetDebug(this AzureDlaAccountFirewallDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings ResetDebug(this AzureDlaAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings SetHelp(this AzureDlaAccountFirewallDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings ResetHelp(this AzureDlaAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings SetOutput(this AzureDlaAccountFirewallDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings ResetOutput(this AzureDlaAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings SetQuery(this AzureDlaAccountFirewallDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings ResetQuery(this AzureDlaAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings SetVerbose(this AzureDlaAccountFirewallDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallDeleteSettings ResetVerbose(this AzureDlaAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaAccountFirewallListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountFirewallListSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings SetAccount(this AzureDlaAccountFirewallListSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings ResetAccount(this AzureDlaAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings SetResourceGroup(this AzureDlaAccountFirewallListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings ResetResourceGroup(this AzureDlaAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings SetDebug(this AzureDlaAccountFirewallListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings ResetDebug(this AzureDlaAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings SetHelp(this AzureDlaAccountFirewallListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings ResetHelp(this AzureDlaAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings SetOutput(this AzureDlaAccountFirewallListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings ResetOutput(this AzureDlaAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings SetQuery(this AzureDlaAccountFirewallListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings ResetQuery(this AzureDlaAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings SetVerbose(this AzureDlaAccountFirewallListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallListSettings ResetVerbose(this AzureDlaAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaAccountFirewallShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountFirewallShowSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings SetAccount(this AzureDlaAccountFirewallShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings ResetAccount(this AzureDlaAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FirewallRuleName
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to retrieve.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings SetFirewallRuleName(this AzureDlaAccountFirewallShowSettings toolSettings, string firewallRuleName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = firewallRuleName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to retrieve.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings ResetFirewallRuleName(this AzureDlaAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings SetResourceGroup(this AzureDlaAccountFirewallShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings ResetResourceGroup(this AzureDlaAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings SetDebug(this AzureDlaAccountFirewallShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings ResetDebug(this AzureDlaAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings SetHelp(this AzureDlaAccountFirewallShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings ResetHelp(this AzureDlaAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings SetOutput(this AzureDlaAccountFirewallShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings ResetOutput(this AzureDlaAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings SetQuery(this AzureDlaAccountFirewallShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings ResetQuery(this AzureDlaAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings SetVerbose(this AzureDlaAccountFirewallShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallShowSettings ResetVerbose(this AzureDlaAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaAccountFirewallUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountFirewallUpdateSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings SetAccount(this AzureDlaAccountFirewallUpdateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings ResetAccount(this AzureDlaAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FirewallRuleName
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to update.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings SetFirewallRuleName(this AzureDlaAccountFirewallUpdateSettings toolSettings, string firewallRuleName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = firewallRuleName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to update.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings ResetFirewallRuleName(this AzureDlaAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndIpAddress
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.EndIpAddress"/>.</em></p><p>The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings SetEndIpAddress(this AzureDlaAccountFirewallUpdateSettings toolSettings, string endIpAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndIpAddress = endIpAddress;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.EndIpAddress"/>.</em></p><p>The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings ResetEndIpAddress(this AzureDlaAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndIpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings SetResourceGroup(this AzureDlaAccountFirewallUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings ResetResourceGroup(this AzureDlaAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StartIpAddress
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.StartIpAddress"/>.</em></p><p>The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings SetStartIpAddress(this AzureDlaAccountFirewallUpdateSettings toolSettings, string startIpAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartIpAddress = startIpAddress;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.StartIpAddress"/>.</em></p><p>The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings ResetStartIpAddress(this AzureDlaAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartIpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings SetDebug(this AzureDlaAccountFirewallUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings ResetDebug(this AzureDlaAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings SetHelp(this AzureDlaAccountFirewallUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings ResetHelp(this AzureDlaAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings SetOutput(this AzureDlaAccountFirewallUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings ResetOutput(this AzureDlaAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings SetQuery(this AzureDlaAccountFirewallUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings ResetQuery(this AzureDlaAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings SetVerbose(this AzureDlaAccountFirewallUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountFirewallUpdateSettings ResetVerbose(this AzureDlaAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaAccountDataLakeStoreAddSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountDataLakeStoreAddSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings SetAccount(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings ResetAccount(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DataLakeStoreAccountName
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.DataLakeStoreAccountName"/>.</em></p><p>The name of the Data Lake Store account to add.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings SetDataLakeStoreAccountName(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string dataLakeStoreAccountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DataLakeStoreAccountName = dataLakeStoreAccountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.DataLakeStoreAccountName"/>.</em></p><p>The name of the Data Lake Store account to add.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings ResetDataLakeStoreAccountName(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DataLakeStoreAccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings SetResourceGroup(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings ResetResourceGroup(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Suffix
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Suffix"/>.</em></p><p>The optional suffix for the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings SetSuffix(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string suffix)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Suffix = suffix;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Suffix"/>.</em></p><p>The optional suffix for the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings ResetSuffix(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Suffix = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings SetDebug(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings ResetDebug(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings SetHelp(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings ResetHelp(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings SetOutput(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings ResetOutput(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings SetQuery(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings ResetQuery(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings SetVerbose(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreAddSettings ResetVerbose(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaAccountDataLakeStoreDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountDataLakeStoreDeleteSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings SetAccount(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetAccount(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DataLakeStoreAccountName
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.DataLakeStoreAccountName"/>.</em></p><p>The name of the Data Lake Store account to remove.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings SetDataLakeStoreAccountName(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string dataLakeStoreAccountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DataLakeStoreAccountName = dataLakeStoreAccountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.DataLakeStoreAccountName"/>.</em></p><p>The name of the Data Lake Store account to remove.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetDataLakeStoreAccountName(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DataLakeStoreAccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings SetResourceGroup(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetResourceGroup(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings SetDebug(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetDebug(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings SetHelp(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetHelp(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings SetOutput(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetOutput(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings SetQuery(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetQuery(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings SetVerbose(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetVerbose(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaAccountDataLakeStoreListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountDataLakeStoreListSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetAccount(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings ResetAccount(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Count
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetCount(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string count)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Count = count;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings ResetCount(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Count = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetFilter(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings ResetFilter(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Orderby
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal = orderby.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal = orderby.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings AddOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.AddRange(orderby);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings AddOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.AddRange(orderby);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings ClearOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings RemoveOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(orderby);
+            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings RemoveOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(orderby);
+            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetResourceGroup(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings ResetResourceGroup(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Select
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetSelect(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string select)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = select;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings ResetSelect(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Skip
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetSkip(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string skip)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = skip;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings ResetSkip(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetTop(this AzureDlaAccountDataLakeStoreListSettings toolSettings, int? top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings ResetTop(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetDebug(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings ResetDebug(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetHelp(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings ResetHelp(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetOutput(this AzureDlaAccountDataLakeStoreListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings ResetOutput(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetQuery(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings ResetQuery(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings SetVerbose(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreListSettings ResetVerbose(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaAccountDataLakeStoreShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaAccountDataLakeStoreShowSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings SetAccount(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings ResetAccount(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DataLakeStoreAccountName
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.DataLakeStoreAccountName"/>.</em></p><p>The name of the Data Lake Store account to retrieve.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings SetDataLakeStoreAccountName(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string dataLakeStoreAccountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DataLakeStoreAccountName = dataLakeStoreAccountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.DataLakeStoreAccountName"/>.</em></p><p>The name of the Data Lake Store account to retrieve.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings ResetDataLakeStoreAccountName(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DataLakeStoreAccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings SetResourceGroup(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings ResetResourceGroup(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings SetDebug(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings ResetDebug(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings SetHelp(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings ResetHelp(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings SetOutput(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings ResetOutput(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings SetQuery(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings ResetQuery(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings SetVerbose(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaAccountDataLakeStoreShowSettings ResetVerbose(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureDlaAccountBlobStorageAddSettingsExtensions
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
@@ -6649,2446 +9071,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureDlaAccountComputePolicyCreateSettingsExtensions
+    #region AzureDlaCatalogProcedureListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountComputePolicyCreateSettingsExtensions
+    public static partial class AzureDlaCatalogProcedureListSettingsExtensions
     {
         #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings SetAccount(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string account)
+        public static AzureDlaCatalogProcedureListSettings SetAccount(this AzureDlaCatalogProcedureListSettings toolSettings, string account)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = account;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings ResetAccount(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ComputePolicyName
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to create.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings SetComputePolicyName(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string computePolicyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ComputePolicyName = computePolicyName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to create.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings ResetComputePolicyName(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ComputePolicyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ObjectId
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.ObjectId"/>.</em></p><p>The Azure Active Directory object ID of the user, group, or service principal to apply the policy to.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings SetObjectId(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string objectId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ObjectId = objectId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.ObjectId"/>.</em></p><p>The Azure Active Directory object ID of the user, group, or service principal to apply the policy to.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings ResetObjectId(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ObjectId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ObjectType
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.ObjectType"/>.</em></p><p>The Azure Active Directory object type associated with the supplied object ID.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings SetObjectType(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string objectType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ObjectType = objectType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.ObjectType"/>.</em></p><p>The Azure Active Directory object type associated with the supplied object ID.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings ResetObjectType(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ObjectType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region MaxDopPerJob
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.MaxDopPerJob"/>.</em></p><p>The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings SetMaxDopPerJob(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string maxDopPerJob)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxDopPerJob = maxDopPerJob;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.MaxDopPerJob"/>.</em></p><p>The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings ResetMaxDopPerJob(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxDopPerJob = null;
-            return toolSettings;
-        }
-        #endregion
-        #region MinPriorityPerJob
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.MinPriorityPerJob"/>.</em></p><p>The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings SetMinPriorityPerJob(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string minPriorityPerJob)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MinPriorityPerJob = minPriorityPerJob;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.MinPriorityPerJob"/>.</em></p><p>The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings ResetMinPriorityPerJob(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MinPriorityPerJob = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings SetResourceGroup(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings ResetResourceGroup(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings SetDebug(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings ResetDebug(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings SetHelp(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings ResetHelp(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings SetOutput(this AzureDlaAccountComputePolicyCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings ResetOutput(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings SetQuery(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings ResetQuery(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings SetVerbose(this AzureDlaAccountComputePolicyCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyCreateSettings ResetVerbose(this AzureDlaAccountComputePolicyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaAccountComputePolicyDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountComputePolicyDeleteSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings SetAccount(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings ResetAccount(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ComputePolicyName
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to delete.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings SetComputePolicyName(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string computePolicyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ComputePolicyName = computePolicyName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to delete.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings ResetComputePolicyName(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ComputePolicyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings SetResourceGroup(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings ResetResourceGroup(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings SetDebug(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings ResetDebug(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings SetHelp(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings ResetHelp(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings SetOutput(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings ResetOutput(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings SetQuery(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings ResetQuery(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings SetVerbose(this AzureDlaAccountComputePolicyDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyDeleteSettings ResetVerbose(this AzureDlaAccountComputePolicyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaAccountComputePolicyListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountComputePolicyListSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings SetAccount(this AzureDlaAccountComputePolicyListSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings ResetAccount(this AzureDlaAccountComputePolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings SetResourceGroup(this AzureDlaAccountComputePolicyListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings ResetResourceGroup(this AzureDlaAccountComputePolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings SetDebug(this AzureDlaAccountComputePolicyListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings ResetDebug(this AzureDlaAccountComputePolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings SetHelp(this AzureDlaAccountComputePolicyListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings ResetHelp(this AzureDlaAccountComputePolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings SetOutput(this AzureDlaAccountComputePolicyListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings ResetOutput(this AzureDlaAccountComputePolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings SetQuery(this AzureDlaAccountComputePolicyListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings ResetQuery(this AzureDlaAccountComputePolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings SetVerbose(this AzureDlaAccountComputePolicyListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyListSettings ResetVerbose(this AzureDlaAccountComputePolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaAccountComputePolicyShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountComputePolicyShowSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings SetAccount(this AzureDlaAccountComputePolicyShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings ResetAccount(this AzureDlaAccountComputePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ComputePolicyName
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to retrieve.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings SetComputePolicyName(this AzureDlaAccountComputePolicyShowSettings toolSettings, string computePolicyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ComputePolicyName = computePolicyName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to retrieve.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings ResetComputePolicyName(this AzureDlaAccountComputePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ComputePolicyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings SetResourceGroup(this AzureDlaAccountComputePolicyShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings ResetResourceGroup(this AzureDlaAccountComputePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings SetDebug(this AzureDlaAccountComputePolicyShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings ResetDebug(this AzureDlaAccountComputePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings SetHelp(this AzureDlaAccountComputePolicyShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings ResetHelp(this AzureDlaAccountComputePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings SetOutput(this AzureDlaAccountComputePolicyShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings ResetOutput(this AzureDlaAccountComputePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings SetQuery(this AzureDlaAccountComputePolicyShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings ResetQuery(this AzureDlaAccountComputePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings SetVerbose(this AzureDlaAccountComputePolicyShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyShowSettings ResetVerbose(this AzureDlaAccountComputePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaAccountComputePolicyUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountComputePolicyUpdateSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings SetAccount(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings ResetAccount(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ComputePolicyName
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to update.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings SetComputePolicyName(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string computePolicyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ComputePolicyName = computePolicyName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.ComputePolicyName"/>.</em></p><p>The name of the compute policy to update.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings ResetComputePolicyName(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ComputePolicyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region MaxDopPerJob
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.MaxDopPerJob"/>.</em></p><p>The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings SetMaxDopPerJob(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string maxDopPerJob)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxDopPerJob = maxDopPerJob;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.MaxDopPerJob"/>.</em></p><p>The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings ResetMaxDopPerJob(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxDopPerJob = null;
-            return toolSettings;
-        }
-        #endregion
-        #region MinPriorityPerJob
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.MinPriorityPerJob"/>.</em></p><p>The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings SetMinPriorityPerJob(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string minPriorityPerJob)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MinPriorityPerJob = minPriorityPerJob;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.MinPriorityPerJob"/>.</em></p><p>The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings ResetMinPriorityPerJob(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MinPriorityPerJob = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings SetResourceGroup(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings ResetResourceGroup(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings SetDebug(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings ResetDebug(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings SetHelp(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings ResetHelp(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings SetOutput(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings ResetOutput(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings SetQuery(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings ResetQuery(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings SetVerbose(this AzureDlaAccountComputePolicyUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountComputePolicyUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountComputePolicyUpdateSettings ResetVerbose(this AzureDlaAccountComputePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaAccountDataLakeStoreAddSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountDataLakeStoreAddSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings SetAccount(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings ResetAccount(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DataLakeStoreAccountName
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.DataLakeStoreAccountName"/>.</em></p><p>The name of the Data Lake Store account to add.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings SetDataLakeStoreAccountName(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string dataLakeStoreAccountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DataLakeStoreAccountName = dataLakeStoreAccountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.DataLakeStoreAccountName"/>.</em></p><p>The name of the Data Lake Store account to add.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings ResetDataLakeStoreAccountName(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DataLakeStoreAccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings SetResourceGroup(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings ResetResourceGroup(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Suffix
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Suffix"/>.</em></p><p>The optional suffix for the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings SetSuffix(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string suffix)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Suffix = suffix;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Suffix"/>.</em></p><p>The optional suffix for the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings ResetSuffix(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Suffix = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings SetDebug(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings ResetDebug(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings SetHelp(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings ResetHelp(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings SetOutput(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings ResetOutput(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings SetQuery(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings ResetQuery(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings SetVerbose(this AzureDlaAccountDataLakeStoreAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreAddSettings ResetVerbose(this AzureDlaAccountDataLakeStoreAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaAccountDataLakeStoreDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountDataLakeStoreDeleteSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings SetAccount(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetAccount(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DataLakeStoreAccountName
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.DataLakeStoreAccountName"/>.</em></p><p>The name of the Data Lake Store account to remove.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings SetDataLakeStoreAccountName(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string dataLakeStoreAccountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DataLakeStoreAccountName = dataLakeStoreAccountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.DataLakeStoreAccountName"/>.</em></p><p>The name of the Data Lake Store account to remove.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetDataLakeStoreAccountName(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DataLakeStoreAccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings SetResourceGroup(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetResourceGroup(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings SetDebug(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetDebug(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings SetHelp(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetHelp(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings SetOutput(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetOutput(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings SetQuery(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetQuery(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings SetVerbose(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreDeleteSettings ResetVerbose(this AzureDlaAccountDataLakeStoreDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaAccountDataLakeStoreListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountDataLakeStoreListSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetAccount(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings ResetAccount(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Count
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetCount(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string count)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Count = count;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings ResetCount(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Count = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Filter
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetFilter(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string filter)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = filter;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings ResetFilter(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal = orderby.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal = orderby.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings AddOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.AddRange(orderby);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings AddOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.AddRange(orderby);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings ClearOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings RemoveOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(orderby);
-            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaAccountDataLakeStoreListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings RemoveOrderby(this AzureDlaAccountDataLakeStoreListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(orderby);
-            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetResourceGroup(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings ResetResourceGroup(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Select
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetSelect(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string select)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Select = select;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings ResetSelect(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Select = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Skip
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetSkip(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string skip)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Skip = skip;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings ResetSkip(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Skip = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Top
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetTop(this AzureDlaAccountDataLakeStoreListSettings toolSettings, int? top)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = top;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings ResetTop(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetDebug(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings ResetDebug(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetHelp(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings ResetHelp(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetOutput(this AzureDlaAccountDataLakeStoreListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings ResetOutput(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetQuery(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings ResetQuery(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings SetVerbose(this AzureDlaAccountDataLakeStoreListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreListSettings ResetVerbose(this AzureDlaAccountDataLakeStoreListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaAccountDataLakeStoreShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountDataLakeStoreShowSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings SetAccount(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings ResetAccount(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DataLakeStoreAccountName
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.DataLakeStoreAccountName"/>.</em></p><p>The name of the Data Lake Store account to retrieve.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings SetDataLakeStoreAccountName(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string dataLakeStoreAccountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DataLakeStoreAccountName = dataLakeStoreAccountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.DataLakeStoreAccountName"/>.</em></p><p>The name of the Data Lake Store account to retrieve.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings ResetDataLakeStoreAccountName(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DataLakeStoreAccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings SetResourceGroup(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings ResetResourceGroup(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings SetDebug(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings ResetDebug(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings SetHelp(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings ResetHelp(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings SetOutput(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings ResetOutput(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings SetQuery(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings ResetQuery(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings SetVerbose(this AzureDlaAccountDataLakeStoreShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountDataLakeStoreShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountDataLakeStoreShowSettings ResetVerbose(this AzureDlaAccountDataLakeStoreShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaAccountFirewallCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountFirewallCreateSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings SetAccount(this AzureDlaAccountFirewallCreateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings ResetAccount(this AzureDlaAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EndIpAddress
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.EndIpAddress"/>.</em></p><p>The end of the valid IP range for the firewall rule.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings SetEndIpAddress(this AzureDlaAccountFirewallCreateSettings toolSettings, string endIpAddress)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndIpAddress = endIpAddress;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.EndIpAddress"/>.</em></p><p>The end of the valid IP range for the firewall rule.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings ResetEndIpAddress(this AzureDlaAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndIpAddress = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FirewallRuleName
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings SetFirewallRuleName(this AzureDlaAccountFirewallCreateSettings toolSettings, string firewallRuleName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = firewallRuleName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings ResetFirewallRuleName(this AzureDlaAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StartIpAddress
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.StartIpAddress"/>.</em></p><p>The start of the valid IP range for the firewall rule.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings SetStartIpAddress(this AzureDlaAccountFirewallCreateSettings toolSettings, string startIpAddress)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartIpAddress = startIpAddress;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.StartIpAddress"/>.</em></p><p>The start of the valid IP range for the firewall rule.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings ResetStartIpAddress(this AzureDlaAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartIpAddress = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings SetResourceGroup(this AzureDlaAccountFirewallCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings ResetResourceGroup(this AzureDlaAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings SetDebug(this AzureDlaAccountFirewallCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings ResetDebug(this AzureDlaAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings SetHelp(this AzureDlaAccountFirewallCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings ResetHelp(this AzureDlaAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings SetOutput(this AzureDlaAccountFirewallCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings ResetOutput(this AzureDlaAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings SetQuery(this AzureDlaAccountFirewallCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings ResetQuery(this AzureDlaAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings SetVerbose(this AzureDlaAccountFirewallCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallCreateSettings ResetVerbose(this AzureDlaAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaAccountFirewallDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountFirewallDeleteSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings SetAccount(this AzureDlaAccountFirewallDeleteSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings ResetAccount(this AzureDlaAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FirewallRuleName
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to delete.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings SetFirewallRuleName(this AzureDlaAccountFirewallDeleteSettings toolSettings, string firewallRuleName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = firewallRuleName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to delete.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings ResetFirewallRuleName(this AzureDlaAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings SetResourceGroup(this AzureDlaAccountFirewallDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings ResetResourceGroup(this AzureDlaAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings SetDebug(this AzureDlaAccountFirewallDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings ResetDebug(this AzureDlaAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings SetHelp(this AzureDlaAccountFirewallDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings ResetHelp(this AzureDlaAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings SetOutput(this AzureDlaAccountFirewallDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings ResetOutput(this AzureDlaAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings SetQuery(this AzureDlaAccountFirewallDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings ResetQuery(this AzureDlaAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings SetVerbose(this AzureDlaAccountFirewallDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallDeleteSettings ResetVerbose(this AzureDlaAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaAccountFirewallListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountFirewallListSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings SetAccount(this AzureDlaAccountFirewallListSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings ResetAccount(this AzureDlaAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings SetResourceGroup(this AzureDlaAccountFirewallListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings ResetResourceGroup(this AzureDlaAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings SetDebug(this AzureDlaAccountFirewallListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings ResetDebug(this AzureDlaAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings SetHelp(this AzureDlaAccountFirewallListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings ResetHelp(this AzureDlaAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings SetOutput(this AzureDlaAccountFirewallListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings ResetOutput(this AzureDlaAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings SetQuery(this AzureDlaAccountFirewallListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings ResetQuery(this AzureDlaAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings SetVerbose(this AzureDlaAccountFirewallListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallListSettings ResetVerbose(this AzureDlaAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaAccountFirewallShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountFirewallShowSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings SetAccount(this AzureDlaAccountFirewallShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings ResetAccount(this AzureDlaAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FirewallRuleName
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to retrieve.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings SetFirewallRuleName(this AzureDlaAccountFirewallShowSettings toolSettings, string firewallRuleName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = firewallRuleName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to retrieve.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings ResetFirewallRuleName(this AzureDlaAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings SetResourceGroup(this AzureDlaAccountFirewallShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings ResetResourceGroup(this AzureDlaAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings SetDebug(this AzureDlaAccountFirewallShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings ResetDebug(this AzureDlaAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings SetHelp(this AzureDlaAccountFirewallShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings ResetHelp(this AzureDlaAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings SetOutput(this AzureDlaAccountFirewallShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings ResetOutput(this AzureDlaAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings SetQuery(this AzureDlaAccountFirewallShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings ResetQuery(this AzureDlaAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings SetVerbose(this AzureDlaAccountFirewallShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallShowSettings ResetVerbose(this AzureDlaAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaAccountFirewallUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaAccountFirewallUpdateSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings SetAccount(this AzureDlaAccountFirewallUpdateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings ResetAccount(this AzureDlaAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FirewallRuleName
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to update.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings SetFirewallRuleName(this AzureDlaAccountFirewallUpdateSettings toolSettings, string firewallRuleName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = firewallRuleName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to update.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings ResetFirewallRuleName(this AzureDlaAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EndIpAddress
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.EndIpAddress"/>.</em></p><p>The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings SetEndIpAddress(this AzureDlaAccountFirewallUpdateSettings toolSettings, string endIpAddress)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndIpAddress = endIpAddress;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.EndIpAddress"/>.</em></p><p>The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings ResetEndIpAddress(this AzureDlaAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndIpAddress = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings SetResourceGroup(this AzureDlaAccountFirewallUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings ResetResourceGroup(this AzureDlaAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StartIpAddress
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.StartIpAddress"/>.</em></p><p>The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings SetStartIpAddress(this AzureDlaAccountFirewallUpdateSettings toolSettings, string startIpAddress)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartIpAddress = startIpAddress;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.StartIpAddress"/>.</em></p><p>The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings ResetStartIpAddress(this AzureDlaAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartIpAddress = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings SetDebug(this AzureDlaAccountFirewallUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings ResetDebug(this AzureDlaAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings SetHelp(this AzureDlaAccountFirewallUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings ResetHelp(this AzureDlaAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings SetOutput(this AzureDlaAccountFirewallUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings ResetOutput(this AzureDlaAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings SetQuery(this AzureDlaAccountFirewallUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings ResetQuery(this AzureDlaAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaAccountFirewallUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings SetVerbose(this AzureDlaAccountFirewallUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaAccountFirewallUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaAccountFirewallUpdateSettings ResetVerbose(this AzureDlaAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaCatalogAssemblyListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogAssemblyListSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetAccount(this AzureDlaCatalogAssemblyListSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogAssemblyListSettings ResetAccount(this AzureDlaCatalogAssemblyListSettings toolSettings)
+        public static AzureDlaCatalogProcedureListSettings ResetAccount(this AzureDlaCatalogProcedureListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = null;
@@ -9096,35 +9096,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the assembly.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the procedures.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetDatabaseName(this AzureDlaCatalogAssemblyListSettings toolSettings, string databaseName)
+        public static AzureDlaCatalogProcedureListSettings SetDatabaseName(this AzureDlaCatalogProcedureListSettings toolSettings, string databaseName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = databaseName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the assembly.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the procedures.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings ResetDatabaseName(this AzureDlaCatalogAssemblyListSettings toolSettings)
+        public static AzureDlaCatalogProcedureListSettings ResetDatabaseName(this AzureDlaCatalogProcedureListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = null;
             return toolSettings;
         }
         #endregion
-        #region Count
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        #region SchemaName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.SchemaName"/>.</em></p><p>The name of the schema containing the procedures.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetCount(this AzureDlaCatalogAssemblyListSettings toolSettings, string count)
+        public static AzureDlaCatalogProcedureListSettings SetSchemaName(this AzureDlaCatalogProcedureListSettings toolSettings, string schemaName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = schemaName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.SchemaName"/>.</em></p><p>The name of the schema containing the procedures.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogProcedureListSettings ResetSchemaName(this AzureDlaCatalogProcedureListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Count
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogProcedureListSettings SetCount(this AzureDlaCatalogProcedureListSettings toolSettings, string count)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Count = count;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings ResetCount(this AzureDlaCatalogAssemblyListSettings toolSettings)
+        public static AzureDlaCatalogProcedureListSettings ResetCount(this AzureDlaCatalogProcedureListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Count = null;
@@ -9132,17 +9150,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Filter
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetFilter(this AzureDlaCatalogAssemblyListSettings toolSettings, string filter)
+        public static AzureDlaCatalogProcedureListSettings SetFilter(this AzureDlaCatalogProcedureListSettings toolSettings, string filter)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Filter = filter;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings ResetFilter(this AzureDlaCatalogAssemblyListSettings toolSettings)
+        public static AzureDlaCatalogProcedureListSettings ResetFilter(this AzureDlaCatalogProcedureListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Filter = null;
@@ -9150,58 +9168,58 @@ namespace Nuke.Azure
         }
         #endregion
         #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings, params string[] orderby)
+        public static AzureDlaCatalogProcedureListSettings SetOrderby(this AzureDlaCatalogProcedureListSettings toolSettings, params string[] orderby)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal = orderby.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings, IEnumerable<string> orderby)
+        public static AzureDlaCatalogProcedureListSettings SetOrderby(this AzureDlaCatalogProcedureListSettings toolSettings, IEnumerable<string> orderby)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal = orderby.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings AddOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings, params string[] orderby)
+        public static AzureDlaCatalogProcedureListSettings AddOrderby(this AzureDlaCatalogProcedureListSettings toolSettings, params string[] orderby)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal.AddRange(orderby);
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings AddOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings, IEnumerable<string> orderby)
+        public static AzureDlaCatalogProcedureListSettings AddOrderby(this AzureDlaCatalogProcedureListSettings toolSettings, IEnumerable<string> orderby)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal.AddRange(orderby);
             return toolSettings;
         }
-        /// <summary><p><em>Clears <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings ClearOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings)
+        public static AzureDlaCatalogProcedureListSettings ClearOrderby(this AzureDlaCatalogProcedureListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal.Clear();
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings RemoveOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings, params string[] orderby)
+        public static AzureDlaCatalogProcedureListSettings RemoveOrderby(this AzureDlaCatalogProcedureListSettings toolSettings, params string[] orderby)
         {
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(orderby);
             toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings RemoveOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings, IEnumerable<string> orderby)
+        public static AzureDlaCatalogProcedureListSettings RemoveOrderby(this AzureDlaCatalogProcedureListSettings toolSettings, IEnumerable<string> orderby)
         {
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(orderby);
@@ -9210,17 +9228,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Select
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetSelect(this AzureDlaCatalogAssemblyListSettings toolSettings, string select)
+        public static AzureDlaCatalogProcedureListSettings SetSelect(this AzureDlaCatalogProcedureListSettings toolSettings, string select)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Select = select;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings ResetSelect(this AzureDlaCatalogAssemblyListSettings toolSettings)
+        public static AzureDlaCatalogProcedureListSettings ResetSelect(this AzureDlaCatalogProcedureListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Select = null;
@@ -9228,17 +9246,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Skip
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetSkip(this AzureDlaCatalogAssemblyListSettings toolSettings, string skip)
+        public static AzureDlaCatalogProcedureListSettings SetSkip(this AzureDlaCatalogProcedureListSettings toolSettings, string skip)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Skip = skip;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings ResetSkip(this AzureDlaCatalogAssemblyListSettings toolSettings)
+        public static AzureDlaCatalogProcedureListSettings ResetSkip(this AzureDlaCatalogProcedureListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Skip = null;
@@ -9246,17 +9264,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Top
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetTop(this AzureDlaCatalogAssemblyListSettings toolSettings, int? top)
+        public static AzureDlaCatalogProcedureListSettings SetTop(this AzureDlaCatalogProcedureListSettings toolSettings, int? top)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Top = top;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings ResetTop(this AzureDlaCatalogAssemblyListSettings toolSettings)
+        public static AzureDlaCatalogProcedureListSettings ResetTop(this AzureDlaCatalogProcedureListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Top = null;
@@ -9264,17 +9282,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetDebug(this AzureDlaCatalogAssemblyListSettings toolSettings, string debug)
+        public static AzureDlaCatalogProcedureListSettings SetDebug(this AzureDlaCatalogProcedureListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings ResetDebug(this AzureDlaCatalogAssemblyListSettings toolSettings)
+        public static AzureDlaCatalogProcedureListSettings ResetDebug(this AzureDlaCatalogProcedureListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -9282,17 +9300,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetHelp(this AzureDlaCatalogAssemblyListSettings toolSettings, string help)
+        public static AzureDlaCatalogProcedureListSettings SetHelp(this AzureDlaCatalogProcedureListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings ResetHelp(this AzureDlaCatalogAssemblyListSettings toolSettings)
+        public static AzureDlaCatalogProcedureListSettings ResetHelp(this AzureDlaCatalogProcedureListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -9300,17 +9318,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetOutput(this AzureDlaCatalogAssemblyListSettings toolSettings, AzureOutput output)
+        public static AzureDlaCatalogProcedureListSettings SetOutput(this AzureDlaCatalogProcedureListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings ResetOutput(this AzureDlaCatalogAssemblyListSettings toolSettings)
+        public static AzureDlaCatalogProcedureListSettings ResetOutput(this AzureDlaCatalogProcedureListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -9318,17 +9336,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetQuery(this AzureDlaCatalogAssemblyListSettings toolSettings, string query)
+        public static AzureDlaCatalogProcedureListSettings SetQuery(this AzureDlaCatalogProcedureListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings ResetQuery(this AzureDlaCatalogAssemblyListSettings toolSettings)
+        public static AzureDlaCatalogProcedureListSettings ResetQuery(this AzureDlaCatalogProcedureListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -9336,17 +9354,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings SetVerbose(this AzureDlaCatalogAssemblyListSettings toolSettings, string verbose)
+        public static AzureDlaCatalogProcedureListSettings SetVerbose(this AzureDlaCatalogProcedureListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyListSettings ResetVerbose(this AzureDlaCatalogAssemblyListSettings toolSettings)
+        public static AzureDlaCatalogProcedureListSettings ResetVerbose(this AzureDlaCatalogProcedureListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -9355,78 +9373,96 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureDlaCatalogAssemblyShowSettingsExtensions
+    #region AzureDlaCatalogProcedureShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogAssemblyShowSettingsExtensions
+    public static partial class AzureDlaCatalogProcedureShowSettingsExtensions
     {
         #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings SetAccount(this AzureDlaCatalogAssemblyShowSettings toolSettings, string account)
+        public static AzureDlaCatalogProcedureShowSettings SetAccount(this AzureDlaCatalogProcedureShowSettings toolSettings, string account)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = account;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings ResetAccount(this AzureDlaCatalogAssemblyShowSettings toolSettings)
+        public static AzureDlaCatalogProcedureShowSettings ResetAccount(this AzureDlaCatalogProcedureShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = null;
             return toolSettings;
         }
         #endregion
-        #region AssemblyName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.AssemblyName"/>.</em></p><p>The name of the assembly.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings SetAssemblyName(this AzureDlaCatalogAssemblyShowSettings toolSettings, string assemblyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AssemblyName = assemblyName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.AssemblyName"/>.</em></p><p>The name of the assembly.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings ResetAssemblyName(this AzureDlaCatalogAssemblyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AssemblyName = null;
-            return toolSettings;
-        }
-        #endregion
         #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the assembly.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the procedure.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings SetDatabaseName(this AzureDlaCatalogAssemblyShowSettings toolSettings, string databaseName)
+        public static AzureDlaCatalogProcedureShowSettings SetDatabaseName(this AzureDlaCatalogProcedureShowSettings toolSettings, string databaseName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = databaseName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the assembly.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the procedure.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings ResetDatabaseName(this AzureDlaCatalogAssemblyShowSettings toolSettings)
+        public static AzureDlaCatalogProcedureShowSettings ResetDatabaseName(this AzureDlaCatalogProcedureShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region ProcedureName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.ProcedureName"/>.</em></p><p>The name of the procedure.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings SetDebug(this AzureDlaCatalogAssemblyShowSettings toolSettings, string debug)
+        public static AzureDlaCatalogProcedureShowSettings SetProcedureName(this AzureDlaCatalogProcedureShowSettings toolSettings, string procedureName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProcedureName = procedureName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.ProcedureName"/>.</em></p><p>The name of the procedure.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogProcedureShowSettings ResetProcedureName(this AzureDlaCatalogProcedureShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProcedureName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SchemaName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the procedure.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogProcedureShowSettings SetSchemaName(this AzureDlaCatalogProcedureShowSettings toolSettings, string schemaName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = schemaName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the procedure.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogProcedureShowSettings ResetSchemaName(this AzureDlaCatalogProcedureShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogProcedureShowSettings SetDebug(this AzureDlaCatalogProcedureShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings ResetDebug(this AzureDlaCatalogAssemblyShowSettings toolSettings)
+        public static AzureDlaCatalogProcedureShowSettings ResetDebug(this AzureDlaCatalogProcedureShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -9434,17 +9470,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings SetHelp(this AzureDlaCatalogAssemblyShowSettings toolSettings, string help)
+        public static AzureDlaCatalogProcedureShowSettings SetHelp(this AzureDlaCatalogProcedureShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings ResetHelp(this AzureDlaCatalogAssemblyShowSettings toolSettings)
+        public static AzureDlaCatalogProcedureShowSettings ResetHelp(this AzureDlaCatalogProcedureShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -9452,17 +9488,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings SetOutput(this AzureDlaCatalogAssemblyShowSettings toolSettings, AzureOutput output)
+        public static AzureDlaCatalogProcedureShowSettings SetOutput(this AzureDlaCatalogProcedureShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings ResetOutput(this AzureDlaCatalogAssemblyShowSettings toolSettings)
+        public static AzureDlaCatalogProcedureShowSettings ResetOutput(this AzureDlaCatalogProcedureShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -9470,17 +9506,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings SetQuery(this AzureDlaCatalogAssemblyShowSettings toolSettings, string query)
+        public static AzureDlaCatalogProcedureShowSettings SetQuery(this AzureDlaCatalogProcedureShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings ResetQuery(this AzureDlaCatalogAssemblyShowSettings toolSettings)
+        public static AzureDlaCatalogProcedureShowSettings ResetQuery(this AzureDlaCatalogProcedureShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -9488,17 +9524,2155 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings SetVerbose(this AzureDlaCatalogAssemblyShowSettings toolSettings, string verbose)
+        public static AzureDlaCatalogProcedureShowSettings SetVerbose(this AzureDlaCatalogProcedureShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogAssemblyShowSettings ResetVerbose(this AzureDlaCatalogAssemblyShowSettings toolSettings)
+        public static AzureDlaCatalogProcedureShowSettings ResetVerbose(this AzureDlaCatalogProcedureShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaCatalogTablePartitionListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaCatalogTablePartitionListSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetAccount(this AzureDlaCatalogTablePartitionListSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetAccount(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DatabaseName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the partitions.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetDatabaseName(this AzureDlaCatalogTablePartitionListSettings toolSettings, string databaseName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = databaseName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the partitions.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetDatabaseName(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SchemaName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.SchemaName"/>.</em></p><p>The name of the schema containing the partitions.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetSchemaName(this AzureDlaCatalogTablePartitionListSettings toolSettings, string schemaName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = schemaName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.SchemaName"/>.</em></p><p>The name of the schema containing the partitions.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetSchemaName(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TableName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.TableName"/>.</em></p><p>The name of the table containing the partitions.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetTableName(this AzureDlaCatalogTablePartitionListSettings toolSettings, string tableName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TableName = tableName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.TableName"/>.</em></p><p>The name of the table containing the partitions.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetTableName(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TableName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Count
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetCount(this AzureDlaCatalogTablePartitionListSettings toolSettings, string count)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Count = count;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetCount(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Count = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetFilter(this AzureDlaCatalogTablePartitionListSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetFilter(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Orderby
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal = orderby.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal = orderby.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings AddOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.AddRange(orderby);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings AddOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.AddRange(orderby);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ClearOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings RemoveOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(orderby);
+            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings RemoveOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(orderby);
+            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Select
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetSelect(this AzureDlaCatalogTablePartitionListSettings toolSettings, string select)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = select;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetSelect(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Skip
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetSkip(this AzureDlaCatalogTablePartitionListSettings toolSettings, string skip)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = skip;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetSkip(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetTop(this AzureDlaCatalogTablePartitionListSettings toolSettings, int? top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetTop(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetDebug(this AzureDlaCatalogTablePartitionListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetDebug(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetHelp(this AzureDlaCatalogTablePartitionListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetHelp(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetOutput(this AzureDlaCatalogTablePartitionListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetOutput(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetQuery(this AzureDlaCatalogTablePartitionListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetQuery(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings SetVerbose(this AzureDlaCatalogTablePartitionListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionListSettings ResetVerbose(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaCatalogTablePartitionShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaCatalogTablePartitionShowSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings SetAccount(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings ResetAccount(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DatabaseName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the partition.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings SetDatabaseName(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string databaseName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = databaseName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the partition.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings ResetDatabaseName(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PartitionName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.PartitionName"/>.</em></p><p>The name of the table partition.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings SetPartitionName(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string partitionName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PartitionName = partitionName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.PartitionName"/>.</em></p><p>The name of the table partition.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings ResetPartitionName(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PartitionName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SchemaName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the partition.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings SetSchemaName(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string schemaName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = schemaName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the partition.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings ResetSchemaName(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TableName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.TableName"/>.</em></p><p>The name of the table containing the partition.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings SetTableName(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string tableName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TableName = tableName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.TableName"/>.</em></p><p>The name of the table containing the partition.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings ResetTableName(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TableName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings SetDebug(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings ResetDebug(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings SetHelp(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings ResetHelp(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings SetOutput(this AzureDlaCatalogTablePartitionShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings ResetOutput(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings SetQuery(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings ResetQuery(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings SetVerbose(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTablePartitionShowSettings ResetVerbose(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaCatalogViewListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaCatalogViewListSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings SetAccount(this AzureDlaCatalogViewListSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings ResetAccount(this AzureDlaCatalogViewListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DatabaseName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings SetDatabaseName(this AzureDlaCatalogViewListSettings toolSettings, string databaseName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = databaseName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings ResetDatabaseName(this AzureDlaCatalogViewListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SchemaName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.SchemaName"/>.</em></p><p>The name of the schema associated with the views to list.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings SetSchemaName(this AzureDlaCatalogViewListSettings toolSettings, string schemaName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = schemaName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.SchemaName"/>.</em></p><p>The name of the schema associated with the views to list.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings ResetSchemaName(this AzureDlaCatalogViewListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings SetDebug(this AzureDlaCatalogViewListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings ResetDebug(this AzureDlaCatalogViewListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings SetHelp(this AzureDlaCatalogViewListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings ResetHelp(this AzureDlaCatalogViewListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings SetOutput(this AzureDlaCatalogViewListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings ResetOutput(this AzureDlaCatalogViewListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings SetQuery(this AzureDlaCatalogViewListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings ResetQuery(this AzureDlaCatalogViewListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings SetVerbose(this AzureDlaCatalogViewListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewListSettings ResetVerbose(this AzureDlaCatalogViewListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaCatalogViewShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaCatalogViewShowSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings SetAccount(this AzureDlaCatalogViewShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings ResetAccount(this AzureDlaCatalogViewShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DatabaseName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the view.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings SetDatabaseName(this AzureDlaCatalogViewShowSettings toolSettings, string databaseName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = databaseName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the view.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings ResetDatabaseName(this AzureDlaCatalogViewShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SchemaName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the view.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings SetSchemaName(this AzureDlaCatalogViewShowSettings toolSettings, string schemaName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = schemaName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the view.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings ResetSchemaName(this AzureDlaCatalogViewShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ViewName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.ViewName"/>.</em></p><p>The name of the view.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings SetViewName(this AzureDlaCatalogViewShowSettings toolSettings, string viewName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ViewName = viewName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.ViewName"/>.</em></p><p>The name of the view.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings ResetViewName(this AzureDlaCatalogViewShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ViewName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings SetDebug(this AzureDlaCatalogViewShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings ResetDebug(this AzureDlaCatalogViewShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings SetHelp(this AzureDlaCatalogViewShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings ResetHelp(this AzureDlaCatalogViewShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings SetOutput(this AzureDlaCatalogViewShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings ResetOutput(this AzureDlaCatalogViewShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings SetQuery(this AzureDlaCatalogViewShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings ResetQuery(this AzureDlaCatalogViewShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings SetVerbose(this AzureDlaCatalogViewShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogViewShowSettings ResetVerbose(this AzureDlaCatalogViewShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaCatalogTableTypeListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaCatalogTableTypeListSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetAccount(this AzureDlaCatalogTableTypeListSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ResetAccount(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DatabaseName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table types.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetDatabaseName(this AzureDlaCatalogTableTypeListSettings toolSettings, string databaseName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = databaseName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table types.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ResetDatabaseName(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SchemaName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table types.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetSchemaName(this AzureDlaCatalogTableTypeListSettings toolSettings, string schemaName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = schemaName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table types.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ResetSchemaName(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Count
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetCount(this AzureDlaCatalogTableTypeListSettings toolSettings, string count)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Count = count;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ResetCount(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Count = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetFilter(this AzureDlaCatalogTableTypeListSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ResetFilter(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Orderby
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal = orderby.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal = orderby.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings AddOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.AddRange(orderby);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings AddOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.AddRange(orderby);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ClearOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings RemoveOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(orderby);
+            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings RemoveOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(orderby);
+            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Select
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetSelect(this AzureDlaCatalogTableTypeListSettings toolSettings, string select)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = select;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ResetSelect(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Skip
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetSkip(this AzureDlaCatalogTableTypeListSettings toolSettings, string skip)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = skip;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ResetSkip(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetTop(this AzureDlaCatalogTableTypeListSettings toolSettings, int? top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ResetTop(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetDebug(this AzureDlaCatalogTableTypeListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ResetDebug(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetHelp(this AzureDlaCatalogTableTypeListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ResetHelp(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetOutput(this AzureDlaCatalogTableTypeListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ResetOutput(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetQuery(this AzureDlaCatalogTableTypeListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ResetQuery(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings SetVerbose(this AzureDlaCatalogTableTypeListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeListSettings ResetVerbose(this AzureDlaCatalogTableTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaCatalogTableTypeShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaCatalogTableTypeShowSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings SetAccount(this AzureDlaCatalogTableTypeShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings ResetAccount(this AzureDlaCatalogTableTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DatabaseName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table type.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings SetDatabaseName(this AzureDlaCatalogTableTypeShowSettings toolSettings, string databaseName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = databaseName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table type.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings ResetDatabaseName(this AzureDlaCatalogTableTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SchemaName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table type.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings SetSchemaName(this AzureDlaCatalogTableTypeShowSettings toolSettings, string schemaName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = schemaName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table type.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings ResetSchemaName(this AzureDlaCatalogTableTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TableTypeName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.TableTypeName"/>.</em></p><p>The name of the table type to retrieve.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings SetTableTypeName(this AzureDlaCatalogTableTypeShowSettings toolSettings, string tableTypeName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TableTypeName = tableTypeName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.TableTypeName"/>.</em></p><p>The name of the table type to retrieve.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings ResetTableTypeName(this AzureDlaCatalogTableTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TableTypeName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings SetDebug(this AzureDlaCatalogTableTypeShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings ResetDebug(this AzureDlaCatalogTableTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings SetHelp(this AzureDlaCatalogTableTypeShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings ResetHelp(this AzureDlaCatalogTableTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings SetOutput(this AzureDlaCatalogTableTypeShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings ResetOutput(this AzureDlaCatalogTableTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings SetQuery(this AzureDlaCatalogTableTypeShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings ResetQuery(this AzureDlaCatalogTableTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings SetVerbose(this AzureDlaCatalogTableTypeShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableTypeShowSettings ResetVerbose(this AzureDlaCatalogTableTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaCatalogDatabaseListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaCatalogDatabaseListSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings SetAccount(this AzureDlaCatalogDatabaseListSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings ResetAccount(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Count
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings SetCount(this AzureDlaCatalogDatabaseListSettings toolSettings, string count)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Count = count;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings ResetCount(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Count = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings SetFilter(this AzureDlaCatalogDatabaseListSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings ResetFilter(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Orderby
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings SetOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal = orderby.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings SetOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal = orderby.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings AddOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.AddRange(orderby);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings AddOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.AddRange(orderby);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings ClearOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings RemoveOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(orderby);
+            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings RemoveOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(orderby);
+            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Select
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings SetSelect(this AzureDlaCatalogDatabaseListSettings toolSettings, string select)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = select;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings ResetSelect(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Skip
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings SetSkip(this AzureDlaCatalogDatabaseListSettings toolSettings, string skip)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = skip;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings ResetSkip(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings SetTop(this AzureDlaCatalogDatabaseListSettings toolSettings, int? top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings ResetTop(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings SetDebug(this AzureDlaCatalogDatabaseListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings ResetDebug(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings SetHelp(this AzureDlaCatalogDatabaseListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings ResetHelp(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings SetOutput(this AzureDlaCatalogDatabaseListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings ResetOutput(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings SetQuery(this AzureDlaCatalogDatabaseListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings ResetQuery(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings SetVerbose(this AzureDlaCatalogDatabaseListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseListSettings ResetVerbose(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaCatalogDatabaseShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaCatalogDatabaseShowSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings SetAccount(this AzureDlaCatalogDatabaseShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings ResetAccount(this AzureDlaCatalogDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DatabaseName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings SetDatabaseName(this AzureDlaCatalogDatabaseShowSettings toolSettings, string databaseName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = databaseName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings ResetDatabaseName(this AzureDlaCatalogDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings SetDebug(this AzureDlaCatalogDatabaseShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings ResetDebug(this AzureDlaCatalogDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings SetHelp(this AzureDlaCatalogDatabaseShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings ResetHelp(this AzureDlaCatalogDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings SetOutput(this AzureDlaCatalogDatabaseShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings ResetOutput(this AzureDlaCatalogDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings SetQuery(this AzureDlaCatalogDatabaseShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings ResetQuery(this AzureDlaCatalogDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings SetVerbose(this AzureDlaCatalogDatabaseShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogDatabaseShowSettings ResetVerbose(this AzureDlaCatalogDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaCatalogSchemaListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaCatalogSchemaListSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetAccount(this AzureDlaCatalogSchemaListSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings ResetAccount(this AzureDlaCatalogSchemaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DatabaseName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the schema.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetDatabaseName(this AzureDlaCatalogSchemaListSettings toolSettings, string databaseName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = databaseName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the schema.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings ResetDatabaseName(this AzureDlaCatalogSchemaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Count
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetCount(this AzureDlaCatalogSchemaListSettings toolSettings, string count)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Count = count;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings ResetCount(this AzureDlaCatalogSchemaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Count = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetFilter(this AzureDlaCatalogSchemaListSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings ResetFilter(this AzureDlaCatalogSchemaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Orderby
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetOrderby(this AzureDlaCatalogSchemaListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal = orderby.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetOrderby(this AzureDlaCatalogSchemaListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal = orderby.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings AddOrderby(this AzureDlaCatalogSchemaListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.AddRange(orderby);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings AddOrderby(this AzureDlaCatalogSchemaListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.AddRange(orderby);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings ClearOrderby(this AzureDlaCatalogSchemaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderbyInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings RemoveOrderby(this AzureDlaCatalogSchemaListSettings toolSettings, params string[] orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(orderby);
+            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings RemoveOrderby(this AzureDlaCatalogSchemaListSettings toolSettings, IEnumerable<string> orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(orderby);
+            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Select
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetSelect(this AzureDlaCatalogSchemaListSettings toolSettings, string select)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = select;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings ResetSelect(this AzureDlaCatalogSchemaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Skip
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetSkip(this AzureDlaCatalogSchemaListSettings toolSettings, string skip)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = skip;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings ResetSkip(this AzureDlaCatalogSchemaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetTop(this AzureDlaCatalogSchemaListSettings toolSettings, int? top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings ResetTop(this AzureDlaCatalogSchemaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetDebug(this AzureDlaCatalogSchemaListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings ResetDebug(this AzureDlaCatalogSchemaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetHelp(this AzureDlaCatalogSchemaListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings ResetHelp(this AzureDlaCatalogSchemaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetOutput(this AzureDlaCatalogSchemaListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings ResetOutput(this AzureDlaCatalogSchemaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetQuery(this AzureDlaCatalogSchemaListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings ResetQuery(this AzureDlaCatalogSchemaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings SetVerbose(this AzureDlaCatalogSchemaListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaListSettings ResetVerbose(this AzureDlaCatalogSchemaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaCatalogSchemaShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaCatalogSchemaShowSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings SetAccount(this AzureDlaCatalogSchemaShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings ResetAccount(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DatabaseName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the schema.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings SetDatabaseName(this AzureDlaCatalogSchemaShowSettings toolSettings, string databaseName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = databaseName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the schema.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings ResetDatabaseName(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SchemaName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.SchemaName"/>.</em></p><p>The name of the schema.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings SetSchemaName(this AzureDlaCatalogSchemaShowSettings toolSettings, string schemaName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = schemaName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.SchemaName"/>.</em></p><p>The name of the schema.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings ResetSchemaName(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings SetDebug(this AzureDlaCatalogSchemaShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings ResetDebug(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings SetHelp(this AzureDlaCatalogSchemaShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings ResetHelp(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings SetOutput(this AzureDlaCatalogSchemaShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings ResetOutput(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings SetQuery(this AzureDlaCatalogSchemaShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings ResetQuery(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings SetVerbose(this AzureDlaCatalogSchemaShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogSchemaShowSettings ResetVerbose(this AzureDlaCatalogSchemaShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -10561,192 +12735,78 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureDlaCatalogDatabaseListSettingsExtensions
+    #region AzureDlaCatalogTvfListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogDatabaseListSettingsExtensions
+    public static partial class AzureDlaCatalogTvfListSettingsExtensions
     {
         #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings SetAccount(this AzureDlaCatalogDatabaseListSettings toolSettings, string account)
+        public static AzureDlaCatalogTvfListSettings SetAccount(this AzureDlaCatalogTvfListSettings toolSettings, string account)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = account;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings ResetAccount(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        public static AzureDlaCatalogTvfListSettings ResetAccount(this AzureDlaCatalogTvfListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = null;
             return toolSettings;
         }
         #endregion
-        #region Count
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        #region DatabaseName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings SetCount(this AzureDlaCatalogDatabaseListSettings toolSettings, string count)
+        public static AzureDlaCatalogTvfListSettings SetDatabaseName(this AzureDlaCatalogTvfListSettings toolSettings, string databaseName)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Count = count;
+            toolSettings.DatabaseName = databaseName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings ResetCount(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        public static AzureDlaCatalogTvfListSettings ResetDatabaseName(this AzureDlaCatalogTvfListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Count = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Filter
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogDatabaseListSettings SetFilter(this AzureDlaCatalogDatabaseListSettings toolSettings, string filter)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = filter;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogDatabaseListSettings ResetFilter(this AzureDlaCatalogDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = null;
+            toolSettings.DatabaseName = null;
             return toolSettings;
         }
         #endregion
-        #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        #region SchemaName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.SchemaName"/>.</em></p><p>The name of the schema assocated with table valued functions to list.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings SetOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings, params string[] orderby)
+        public static AzureDlaCatalogTvfListSettings SetSchemaName(this AzureDlaCatalogTvfListSettings toolSettings, string schemaName)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal = orderby.ToList();
+            toolSettings.SchemaName = schemaName;
             return toolSettings;
         }
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.SchemaName"/>.</em></p><p>The name of the schema assocated with table valued functions to list.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings SetOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings, IEnumerable<string> orderby)
+        public static AzureDlaCatalogTvfListSettings ResetSchemaName(this AzureDlaCatalogTvfListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal = orderby.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogDatabaseListSettings AddOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.AddRange(orderby);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogDatabaseListSettings AddOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.AddRange(orderby);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogDatabaseListSettings ClearOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogDatabaseListSettings RemoveOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(orderby);
-            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogDatabaseListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogDatabaseListSettings RemoveOrderby(this AzureDlaCatalogDatabaseListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(orderby);
-            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Select
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogDatabaseListSettings SetSelect(this AzureDlaCatalogDatabaseListSettings toolSettings, string select)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Select = select;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogDatabaseListSettings ResetSelect(this AzureDlaCatalogDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Select = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Skip
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogDatabaseListSettings SetSkip(this AzureDlaCatalogDatabaseListSettings toolSettings, string skip)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Skip = skip;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogDatabaseListSettings ResetSkip(this AzureDlaCatalogDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Skip = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Top
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogDatabaseListSettings SetTop(this AzureDlaCatalogDatabaseListSettings toolSettings, int? top)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = top;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogDatabaseListSettings ResetTop(this AzureDlaCatalogDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = null;
+            toolSettings.SchemaName = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings SetDebug(this AzureDlaCatalogDatabaseListSettings toolSettings, string debug)
+        public static AzureDlaCatalogTvfListSettings SetDebug(this AzureDlaCatalogTvfListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings ResetDebug(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        public static AzureDlaCatalogTvfListSettings ResetDebug(this AzureDlaCatalogTvfListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -10754,17 +12814,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings SetHelp(this AzureDlaCatalogDatabaseListSettings toolSettings, string help)
+        public static AzureDlaCatalogTvfListSettings SetHelp(this AzureDlaCatalogTvfListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings ResetHelp(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        public static AzureDlaCatalogTvfListSettings ResetHelp(this AzureDlaCatalogTvfListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -10772,17 +12832,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings SetOutput(this AzureDlaCatalogDatabaseListSettings toolSettings, AzureOutput output)
+        public static AzureDlaCatalogTvfListSettings SetOutput(this AzureDlaCatalogTvfListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings ResetOutput(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        public static AzureDlaCatalogTvfListSettings ResetOutput(this AzureDlaCatalogTvfListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -10790,17 +12850,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings SetQuery(this AzureDlaCatalogDatabaseListSettings toolSettings, string query)
+        public static AzureDlaCatalogTvfListSettings SetQuery(this AzureDlaCatalogTvfListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings ResetQuery(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        public static AzureDlaCatalogTvfListSettings ResetQuery(this AzureDlaCatalogTvfListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -10808,17 +12868,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings SetVerbose(this AzureDlaCatalogDatabaseListSettings toolSettings, string verbose)
+        public static AzureDlaCatalogTvfListSettings SetVerbose(this AzureDlaCatalogTvfListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseListSettings ResetVerbose(this AzureDlaCatalogDatabaseListSettings toolSettings)
+        public static AzureDlaCatalogTvfListSettings ResetVerbose(this AzureDlaCatalogTvfListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -10827,24 +12887,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureDlaCatalogDatabaseShowSettingsExtensions
+    #region AzureDlaCatalogTvfShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogDatabaseShowSettingsExtensions
+    public static partial class AzureDlaCatalogTvfShowSettingsExtensions
     {
         #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings SetAccount(this AzureDlaCatalogDatabaseShowSettings toolSettings, string account)
+        public static AzureDlaCatalogTvfShowSettings SetAccount(this AzureDlaCatalogTvfShowSettings toolSettings, string account)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = account;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings ResetAccount(this AzureDlaCatalogDatabaseShowSettings toolSettings)
+        public static AzureDlaCatalogTvfShowSettings ResetAccount(this AzureDlaCatalogTvfShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = null;
@@ -10852,35 +12912,71 @@ namespace Nuke.Azure
         }
         #endregion
         #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table valued function.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings SetDatabaseName(this AzureDlaCatalogDatabaseShowSettings toolSettings, string databaseName)
+        public static AzureDlaCatalogTvfShowSettings SetDatabaseName(this AzureDlaCatalogTvfShowSettings toolSettings, string databaseName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = databaseName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table valued function.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings ResetDatabaseName(this AzureDlaCatalogDatabaseShowSettings toolSettings)
+        public static AzureDlaCatalogTvfShowSettings ResetDatabaseName(this AzureDlaCatalogTvfShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region SchemaName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table valued function.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings SetDebug(this AzureDlaCatalogDatabaseShowSettings toolSettings, string debug)
+        public static AzureDlaCatalogTvfShowSettings SetSchemaName(this AzureDlaCatalogTvfShowSettings toolSettings, string schemaName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = schemaName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table valued function.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTvfShowSettings ResetSchemaName(this AzureDlaCatalogTvfShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SchemaName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TableValuedFunctionName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.TableValuedFunctionName"/>.</em></p><p>The name of the tableValuedFunction.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTvfShowSettings SetTableValuedFunctionName(this AzureDlaCatalogTvfShowSettings toolSettings, string tableValuedFunctionName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TableValuedFunctionName = tableValuedFunctionName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.TableValuedFunctionName"/>.</em></p><p>The name of the tableValuedFunction.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTvfShowSettings ResetTableValuedFunctionName(this AzureDlaCatalogTvfShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TableValuedFunctionName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTvfShowSettings SetDebug(this AzureDlaCatalogTvfShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings ResetDebug(this AzureDlaCatalogDatabaseShowSettings toolSettings)
+        public static AzureDlaCatalogTvfShowSettings ResetDebug(this AzureDlaCatalogTvfShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -10888,17 +12984,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings SetHelp(this AzureDlaCatalogDatabaseShowSettings toolSettings, string help)
+        public static AzureDlaCatalogTvfShowSettings SetHelp(this AzureDlaCatalogTvfShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings ResetHelp(this AzureDlaCatalogDatabaseShowSettings toolSettings)
+        public static AzureDlaCatalogTvfShowSettings ResetHelp(this AzureDlaCatalogTvfShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -10906,17 +13002,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings SetOutput(this AzureDlaCatalogDatabaseShowSettings toolSettings, AzureOutput output)
+        public static AzureDlaCatalogTvfShowSettings SetOutput(this AzureDlaCatalogTvfShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings ResetOutput(this AzureDlaCatalogDatabaseShowSettings toolSettings)
+        public static AzureDlaCatalogTvfShowSettings ResetOutput(this AzureDlaCatalogTvfShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -10924,17 +13020,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings SetQuery(this AzureDlaCatalogDatabaseShowSettings toolSettings, string query)
+        public static AzureDlaCatalogTvfShowSettings SetQuery(this AzureDlaCatalogTvfShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings ResetQuery(this AzureDlaCatalogDatabaseShowSettings toolSettings)
+        public static AzureDlaCatalogTvfShowSettings ResetQuery(this AzureDlaCatalogTvfShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -10942,453 +13038,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogDatabaseShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings SetVerbose(this AzureDlaCatalogDatabaseShowSettings toolSettings, string verbose)
+        public static AzureDlaCatalogTvfShowSettings SetVerbose(this AzureDlaCatalogTvfShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogDatabaseShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogDatabaseShowSettings ResetVerbose(this AzureDlaCatalogDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaCatalogExternalDataSourceListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogExternalDataSourceListSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetAccount(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings ResetAccount(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the external data sources.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetDatabaseName(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string databaseName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = databaseName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the external data sources.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings ResetDatabaseName(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Count
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetCount(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string count)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Count = count;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings ResetCount(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Count = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Filter
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetFilter(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string filter)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = filter;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings ResetFilter(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal = orderby.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal = orderby.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings AddOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.AddRange(orderby);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings AddOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.AddRange(orderby);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings ClearOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings RemoveOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(orderby);
-            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings RemoveOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(orderby);
-            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Select
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetSelect(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string select)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Select = select;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings ResetSelect(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Select = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Skip
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetSkip(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string skip)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Skip = skip;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings ResetSkip(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Skip = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Top
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetTop(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, int? top)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = top;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings ResetTop(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetDebug(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings ResetDebug(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetHelp(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings ResetHelp(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetOutput(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings ResetOutput(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetQuery(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings ResetQuery(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings SetVerbose(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceListSettings ResetVerbose(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaCatalogExternalDataSourceShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogExternalDataSourceShowSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings SetAccount(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings ResetAccount(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the external data source.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings SetDatabaseName(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string databaseName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = databaseName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the external data source.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings ResetDatabaseName(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ExternalDataSourceName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.ExternalDataSourceName"/>.</em></p><p>The name of the external data source.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings SetExternalDataSourceName(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string externalDataSourceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ExternalDataSourceName = externalDataSourceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.ExternalDataSourceName"/>.</em></p><p>The name of the external data source.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings ResetExternalDataSourceName(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ExternalDataSourceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings SetDebug(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings ResetDebug(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings SetHelp(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings ResetHelp(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings SetOutput(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings ResetOutput(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings SetQuery(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings ResetQuery(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings SetVerbose(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogExternalDataSourceShowSettings ResetVerbose(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
+        public static AzureDlaCatalogTvfShowSettings ResetVerbose(this AzureDlaCatalogTvfShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -11869,24 +13529,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureDlaCatalogProcedureListSettingsExtensions
+    #region AzureDlaCatalogAssemblyListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogProcedureListSettingsExtensions
+    public static partial class AzureDlaCatalogAssemblyListSettingsExtensions
     {
         #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetAccount(this AzureDlaCatalogProcedureListSettings toolSettings, string account)
+        public static AzureDlaCatalogAssemblyListSettings SetAccount(this AzureDlaCatalogAssemblyListSettings toolSettings, string account)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = account;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings ResetAccount(this AzureDlaCatalogProcedureListSettings toolSettings)
+        public static AzureDlaCatalogAssemblyListSettings ResetAccount(this AzureDlaCatalogAssemblyListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = null;
@@ -11894,53 +13554,35 @@ namespace Nuke.Azure
         }
         #endregion
         #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the procedures.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the assembly.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetDatabaseName(this AzureDlaCatalogProcedureListSettings toolSettings, string databaseName)
+        public static AzureDlaCatalogAssemblyListSettings SetDatabaseName(this AzureDlaCatalogAssemblyListSettings toolSettings, string databaseName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = databaseName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the procedures.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the assembly.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings ResetDatabaseName(this AzureDlaCatalogProcedureListSettings toolSettings)
+        public static AzureDlaCatalogAssemblyListSettings ResetDatabaseName(this AzureDlaCatalogAssemblyListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = null;
             return toolSettings;
         }
         #endregion
-        #region SchemaName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.SchemaName"/>.</em></p><p>The name of the schema containing the procedures.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetSchemaName(this AzureDlaCatalogProcedureListSettings toolSettings, string schemaName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = schemaName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.SchemaName"/>.</em></p><p>The name of the schema containing the procedures.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogProcedureListSettings ResetSchemaName(this AzureDlaCatalogProcedureListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Count
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetCount(this AzureDlaCatalogProcedureListSettings toolSettings, string count)
+        public static AzureDlaCatalogAssemblyListSettings SetCount(this AzureDlaCatalogAssemblyListSettings toolSettings, string count)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Count = count;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings ResetCount(this AzureDlaCatalogProcedureListSettings toolSettings)
+        public static AzureDlaCatalogAssemblyListSettings ResetCount(this AzureDlaCatalogAssemblyListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Count = null;
@@ -11948,17 +13590,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Filter
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetFilter(this AzureDlaCatalogProcedureListSettings toolSettings, string filter)
+        public static AzureDlaCatalogAssemblyListSettings SetFilter(this AzureDlaCatalogAssemblyListSettings toolSettings, string filter)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Filter = filter;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings ResetFilter(this AzureDlaCatalogProcedureListSettings toolSettings)
+        public static AzureDlaCatalogAssemblyListSettings ResetFilter(this AzureDlaCatalogAssemblyListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Filter = null;
@@ -11966,58 +13608,58 @@ namespace Nuke.Azure
         }
         #endregion
         #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetOrderby(this AzureDlaCatalogProcedureListSettings toolSettings, params string[] orderby)
+        public static AzureDlaCatalogAssemblyListSettings SetOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings, params string[] orderby)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal = orderby.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetOrderby(this AzureDlaCatalogProcedureListSettings toolSettings, IEnumerable<string> orderby)
+        public static AzureDlaCatalogAssemblyListSettings SetOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings, IEnumerable<string> orderby)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal = orderby.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings AddOrderby(this AzureDlaCatalogProcedureListSettings toolSettings, params string[] orderby)
+        public static AzureDlaCatalogAssemblyListSettings AddOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings, params string[] orderby)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal.AddRange(orderby);
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings AddOrderby(this AzureDlaCatalogProcedureListSettings toolSettings, IEnumerable<string> orderby)
+        public static AzureDlaCatalogAssemblyListSettings AddOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings, IEnumerable<string> orderby)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal.AddRange(orderby);
             return toolSettings;
         }
-        /// <summary><p><em>Clears <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings ClearOrderby(this AzureDlaCatalogProcedureListSettings toolSettings)
+        public static AzureDlaCatalogAssemblyListSettings ClearOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal.Clear();
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings RemoveOrderby(this AzureDlaCatalogProcedureListSettings toolSettings, params string[] orderby)
+        public static AzureDlaCatalogAssemblyListSettings RemoveOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings, params string[] orderby)
         {
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(orderby);
             toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogProcedureListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogAssemblyListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings RemoveOrderby(this AzureDlaCatalogProcedureListSettings toolSettings, IEnumerable<string> orderby)
+        public static AzureDlaCatalogAssemblyListSettings RemoveOrderby(this AzureDlaCatalogAssemblyListSettings toolSettings, IEnumerable<string> orderby)
         {
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(orderby);
@@ -12026,17 +13668,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Select
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetSelect(this AzureDlaCatalogProcedureListSettings toolSettings, string select)
+        public static AzureDlaCatalogAssemblyListSettings SetSelect(this AzureDlaCatalogAssemblyListSettings toolSettings, string select)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Select = select;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings ResetSelect(this AzureDlaCatalogProcedureListSettings toolSettings)
+        public static AzureDlaCatalogAssemblyListSettings ResetSelect(this AzureDlaCatalogAssemblyListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Select = null;
@@ -12044,17 +13686,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Skip
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetSkip(this AzureDlaCatalogProcedureListSettings toolSettings, string skip)
+        public static AzureDlaCatalogAssemblyListSettings SetSkip(this AzureDlaCatalogAssemblyListSettings toolSettings, string skip)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Skip = skip;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings ResetSkip(this AzureDlaCatalogProcedureListSettings toolSettings)
+        public static AzureDlaCatalogAssemblyListSettings ResetSkip(this AzureDlaCatalogAssemblyListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Skip = null;
@@ -12062,17 +13704,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Top
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetTop(this AzureDlaCatalogProcedureListSettings toolSettings, int? top)
+        public static AzureDlaCatalogAssemblyListSettings SetTop(this AzureDlaCatalogAssemblyListSettings toolSettings, int? top)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Top = top;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings ResetTop(this AzureDlaCatalogProcedureListSettings toolSettings)
+        public static AzureDlaCatalogAssemblyListSettings ResetTop(this AzureDlaCatalogAssemblyListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Top = null;
@@ -12080,17 +13722,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetDebug(this AzureDlaCatalogProcedureListSettings toolSettings, string debug)
+        public static AzureDlaCatalogAssemblyListSettings SetDebug(this AzureDlaCatalogAssemblyListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings ResetDebug(this AzureDlaCatalogProcedureListSettings toolSettings)
+        public static AzureDlaCatalogAssemblyListSettings ResetDebug(this AzureDlaCatalogAssemblyListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -12098,17 +13740,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetHelp(this AzureDlaCatalogProcedureListSettings toolSettings, string help)
+        public static AzureDlaCatalogAssemblyListSettings SetHelp(this AzureDlaCatalogAssemblyListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings ResetHelp(this AzureDlaCatalogProcedureListSettings toolSettings)
+        public static AzureDlaCatalogAssemblyListSettings ResetHelp(this AzureDlaCatalogAssemblyListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -12116,17 +13758,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetOutput(this AzureDlaCatalogProcedureListSettings toolSettings, AzureOutput output)
+        public static AzureDlaCatalogAssemblyListSettings SetOutput(this AzureDlaCatalogAssemblyListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings ResetOutput(this AzureDlaCatalogProcedureListSettings toolSettings)
+        public static AzureDlaCatalogAssemblyListSettings ResetOutput(this AzureDlaCatalogAssemblyListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -12134,17 +13776,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetQuery(this AzureDlaCatalogProcedureListSettings toolSettings, string query)
+        public static AzureDlaCatalogAssemblyListSettings SetQuery(this AzureDlaCatalogAssemblyListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings ResetQuery(this AzureDlaCatalogProcedureListSettings toolSettings)
+        public static AzureDlaCatalogAssemblyListSettings ResetQuery(this AzureDlaCatalogAssemblyListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -12152,17 +13794,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings SetVerbose(this AzureDlaCatalogProcedureListSettings toolSettings, string verbose)
+        public static AzureDlaCatalogAssemblyListSettings SetVerbose(this AzureDlaCatalogAssemblyListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureListSettings ResetVerbose(this AzureDlaCatalogProcedureListSettings toolSettings)
+        public static AzureDlaCatalogAssemblyListSettings ResetVerbose(this AzureDlaCatalogAssemblyListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -12171,96 +13813,78 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureDlaCatalogProcedureShowSettingsExtensions
+    #region AzureDlaCatalogAssemblyShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogProcedureShowSettingsExtensions
+    public static partial class AzureDlaCatalogAssemblyShowSettingsExtensions
     {
         #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings SetAccount(this AzureDlaCatalogProcedureShowSettings toolSettings, string account)
+        public static AzureDlaCatalogAssemblyShowSettings SetAccount(this AzureDlaCatalogAssemblyShowSettings toolSettings, string account)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = account;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings ResetAccount(this AzureDlaCatalogProcedureShowSettings toolSettings)
+        public static AzureDlaCatalogAssemblyShowSettings ResetAccount(this AzureDlaCatalogAssemblyShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = null;
             return toolSettings;
         }
         #endregion
-        #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the procedure.</p></summary>
+        #region AssemblyName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.AssemblyName"/>.</em></p><p>The name of the assembly.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings SetDatabaseName(this AzureDlaCatalogProcedureShowSettings toolSettings, string databaseName)
+        public static AzureDlaCatalogAssemblyShowSettings SetAssemblyName(this AzureDlaCatalogAssemblyShowSettings toolSettings, string assemblyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssemblyName = assemblyName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.AssemblyName"/>.</em></p><p>The name of the assembly.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogAssemblyShowSettings ResetAssemblyName(this AzureDlaCatalogAssemblyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssemblyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DatabaseName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the assembly.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogAssemblyShowSettings SetDatabaseName(this AzureDlaCatalogAssemblyShowSettings toolSettings, string databaseName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = databaseName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the procedure.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the assembly.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings ResetDatabaseName(this AzureDlaCatalogProcedureShowSettings toolSettings)
+        public static AzureDlaCatalogAssemblyShowSettings ResetDatabaseName(this AzureDlaCatalogAssemblyShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = null;
             return toolSettings;
         }
         #endregion
-        #region ProcedureName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.ProcedureName"/>.</em></p><p>The name of the procedure.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogProcedureShowSettings SetProcedureName(this AzureDlaCatalogProcedureShowSettings toolSettings, string procedureName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProcedureName = procedureName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.ProcedureName"/>.</em></p><p>The name of the procedure.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogProcedureShowSettings ResetProcedureName(this AzureDlaCatalogProcedureShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProcedureName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SchemaName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the procedure.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogProcedureShowSettings SetSchemaName(this AzureDlaCatalogProcedureShowSettings toolSettings, string schemaName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = schemaName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the procedure.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogProcedureShowSettings ResetSchemaName(this AzureDlaCatalogProcedureShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings SetDebug(this AzureDlaCatalogProcedureShowSettings toolSettings, string debug)
+        public static AzureDlaCatalogAssemblyShowSettings SetDebug(this AzureDlaCatalogAssemblyShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings ResetDebug(this AzureDlaCatalogProcedureShowSettings toolSettings)
+        public static AzureDlaCatalogAssemblyShowSettings ResetDebug(this AzureDlaCatalogAssemblyShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -12268,17 +13892,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings SetHelp(this AzureDlaCatalogProcedureShowSettings toolSettings, string help)
+        public static AzureDlaCatalogAssemblyShowSettings SetHelp(this AzureDlaCatalogAssemblyShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings ResetHelp(this AzureDlaCatalogProcedureShowSettings toolSettings)
+        public static AzureDlaCatalogAssemblyShowSettings ResetHelp(this AzureDlaCatalogAssemblyShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -12286,17 +13910,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings SetOutput(this AzureDlaCatalogProcedureShowSettings toolSettings, AzureOutput output)
+        public static AzureDlaCatalogAssemblyShowSettings SetOutput(this AzureDlaCatalogAssemblyShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings ResetOutput(this AzureDlaCatalogProcedureShowSettings toolSettings)
+        public static AzureDlaCatalogAssemblyShowSettings ResetOutput(this AzureDlaCatalogAssemblyShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -12304,17 +13928,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings SetQuery(this AzureDlaCatalogProcedureShowSettings toolSettings, string query)
+        public static AzureDlaCatalogAssemblyShowSettings SetQuery(this AzureDlaCatalogAssemblyShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings ResetQuery(this AzureDlaCatalogProcedureShowSettings toolSettings)
+        public static AzureDlaCatalogAssemblyShowSettings ResetQuery(this AzureDlaCatalogAssemblyShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -12322,17 +13946,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogProcedureShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogAssemblyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings SetVerbose(this AzureDlaCatalogProcedureShowSettings toolSettings, string verbose)
+        public static AzureDlaCatalogAssemblyShowSettings SetVerbose(this AzureDlaCatalogAssemblyShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogProcedureShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogAssemblyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogProcedureShowSettings ResetVerbose(this AzureDlaCatalogProcedureShowSettings toolSettings)
+        public static AzureDlaCatalogAssemblyShowSettings ResetVerbose(this AzureDlaCatalogAssemblyShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -12341,24 +13965,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureDlaCatalogSchemaListSettingsExtensions
+    #region AzureDlaCatalogExternalDataSourceListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogSchemaListSettingsExtensions
+    public static partial class AzureDlaCatalogExternalDataSourceListSettingsExtensions
     {
         #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetAccount(this AzureDlaCatalogSchemaListSettings toolSettings, string account)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetAccount(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string account)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = account;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings ResetAccount(this AzureDlaCatalogSchemaListSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceListSettings ResetAccount(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = null;
@@ -12366,17 +13990,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the schema.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the external data sources.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetDatabaseName(this AzureDlaCatalogSchemaListSettings toolSettings, string databaseName)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetDatabaseName(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string databaseName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = databaseName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the schema.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the external data sources.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings ResetDatabaseName(this AzureDlaCatalogSchemaListSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceListSettings ResetDatabaseName(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = null;
@@ -12384,17 +14008,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Count
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetCount(this AzureDlaCatalogSchemaListSettings toolSettings, string count)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetCount(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string count)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Count = count;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings ResetCount(this AzureDlaCatalogSchemaListSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceListSettings ResetCount(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Count = null;
@@ -12402,17 +14026,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Filter
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetFilter(this AzureDlaCatalogSchemaListSettings toolSettings, string filter)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetFilter(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string filter)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Filter = filter;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings ResetFilter(this AzureDlaCatalogSchemaListSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceListSettings ResetFilter(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Filter = null;
@@ -12420,58 +14044,58 @@ namespace Nuke.Azure
         }
         #endregion
         #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetOrderby(this AzureDlaCatalogSchemaListSettings toolSettings, params string[] orderby)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, params string[] orderby)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal = orderby.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetOrderby(this AzureDlaCatalogSchemaListSettings toolSettings, IEnumerable<string> orderby)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, IEnumerable<string> orderby)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal = orderby.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings AddOrderby(this AzureDlaCatalogSchemaListSettings toolSettings, params string[] orderby)
+        public static AzureDlaCatalogExternalDataSourceListSettings AddOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, params string[] orderby)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal.AddRange(orderby);
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings AddOrderby(this AzureDlaCatalogSchemaListSettings toolSettings, IEnumerable<string> orderby)
+        public static AzureDlaCatalogExternalDataSourceListSettings AddOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, IEnumerable<string> orderby)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal.AddRange(orderby);
             return toolSettings;
         }
-        /// <summary><p><em>Clears <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings ClearOrderby(this AzureDlaCatalogSchemaListSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceListSettings ClearOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OrderbyInternal.Clear();
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings RemoveOrderby(this AzureDlaCatalogSchemaListSettings toolSettings, params string[] orderby)
+        public static AzureDlaCatalogExternalDataSourceListSettings RemoveOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, params string[] orderby)
         {
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(orderby);
             toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogSchemaListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogExternalDataSourceListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings RemoveOrderby(this AzureDlaCatalogSchemaListSettings toolSettings, IEnumerable<string> orderby)
+        public static AzureDlaCatalogExternalDataSourceListSettings RemoveOrderby(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, IEnumerable<string> orderby)
         {
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(orderby);
@@ -12480,17 +14104,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Select
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetSelect(this AzureDlaCatalogSchemaListSettings toolSettings, string select)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetSelect(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string select)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Select = select;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings ResetSelect(this AzureDlaCatalogSchemaListSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceListSettings ResetSelect(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Select = null;
@@ -12498,17 +14122,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Skip
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetSkip(this AzureDlaCatalogSchemaListSettings toolSettings, string skip)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetSkip(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string skip)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Skip = skip;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings ResetSkip(this AzureDlaCatalogSchemaListSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceListSettings ResetSkip(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Skip = null;
@@ -12516,17 +14140,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Top
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetTop(this AzureDlaCatalogSchemaListSettings toolSettings, int? top)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetTop(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, int? top)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Top = top;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings ResetTop(this AzureDlaCatalogSchemaListSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceListSettings ResetTop(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Top = null;
@@ -12534,17 +14158,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetDebug(this AzureDlaCatalogSchemaListSettings toolSettings, string debug)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetDebug(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings ResetDebug(this AzureDlaCatalogSchemaListSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceListSettings ResetDebug(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -12552,17 +14176,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetHelp(this AzureDlaCatalogSchemaListSettings toolSettings, string help)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetHelp(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings ResetHelp(this AzureDlaCatalogSchemaListSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceListSettings ResetHelp(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -12570,17 +14194,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetOutput(this AzureDlaCatalogSchemaListSettings toolSettings, AzureOutput output)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetOutput(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings ResetOutput(this AzureDlaCatalogSchemaListSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceListSettings ResetOutput(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -12588,17 +14212,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetQuery(this AzureDlaCatalogSchemaListSettings toolSettings, string query)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetQuery(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings ResetQuery(this AzureDlaCatalogSchemaListSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceListSettings ResetQuery(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -12606,17 +14230,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings SetVerbose(this AzureDlaCatalogSchemaListSettings toolSettings, string verbose)
+        public static AzureDlaCatalogExternalDataSourceListSettings SetVerbose(this AzureDlaCatalogExternalDataSourceListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaListSettings ResetVerbose(this AzureDlaCatalogSchemaListSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceListSettings ResetVerbose(this AzureDlaCatalogExternalDataSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -12625,24 +14249,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureDlaCatalogSchemaShowSettingsExtensions
+    #region AzureDlaCatalogExternalDataSourceShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogSchemaShowSettingsExtensions
+    public static partial class AzureDlaCatalogExternalDataSourceShowSettingsExtensions
     {
         #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings SetAccount(this AzureDlaCatalogSchemaShowSettings toolSettings, string account)
+        public static AzureDlaCatalogExternalDataSourceShowSettings SetAccount(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string account)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = account;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings ResetAccount(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceShowSettings ResetAccount(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = null;
@@ -12650,17 +14274,169 @@ namespace Nuke.Azure
         }
         #endregion
         #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the schema.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the external data source.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings SetDatabaseName(this AzureDlaCatalogSchemaShowSettings toolSettings, string databaseName)
+        public static AzureDlaCatalogExternalDataSourceShowSettings SetDatabaseName(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string databaseName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = databaseName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the schema.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the external data source.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings ResetDatabaseName(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        public static AzureDlaCatalogExternalDataSourceShowSettings ResetDatabaseName(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ExternalDataSourceName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.ExternalDataSourceName"/>.</em></p><p>The name of the external data source.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogExternalDataSourceShowSettings SetExternalDataSourceName(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string externalDataSourceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExternalDataSourceName = externalDataSourceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.ExternalDataSourceName"/>.</em></p><p>The name of the external data source.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogExternalDataSourceShowSettings ResetExternalDataSourceName(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExternalDataSourceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogExternalDataSourceShowSettings SetDebug(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogExternalDataSourceShowSettings ResetDebug(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogExternalDataSourceShowSettings SetHelp(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogExternalDataSourceShowSettings ResetHelp(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogExternalDataSourceShowSettings SetOutput(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogExternalDataSourceShowSettings ResetOutput(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogExternalDataSourceShowSettings SetQuery(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogExternalDataSourceShowSettings ResetQuery(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogExternalDataSourceShowSettings SetVerbose(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogExternalDataSourceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogExternalDataSourceShowSettings ResetVerbose(this AzureDlaCatalogExternalDataSourceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlaCatalogTableListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlaCatalogTableListSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableListSettings SetAccount(this AzureDlaCatalogTableListSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableListSettings ResetAccount(this AzureDlaCatalogTableListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DatabaseName
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableListSettings SetDatabaseName(this AzureDlaCatalogTableListSettings toolSettings, string databaseName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DatabaseName = databaseName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureDlaCatalogTableListSettings ResetDatabaseName(this AzureDlaCatalogTableListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = null;
@@ -12668,17 +14444,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region SchemaName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.SchemaName"/>.</em></p><p>The name of the schema.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.SchemaName"/>.</em></p><p>The schema assocated with the tables to list.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings SetSchemaName(this AzureDlaCatalogSchemaShowSettings toolSettings, string schemaName)
+        public static AzureDlaCatalogTableListSettings SetSchemaName(this AzureDlaCatalogTableListSettings toolSettings, string schemaName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SchemaName = schemaName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.SchemaName"/>.</em></p><p>The name of the schema.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.SchemaName"/>.</em></p><p>The schema assocated with the tables to list.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings ResetSchemaName(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        public static AzureDlaCatalogTableListSettings ResetSchemaName(this AzureDlaCatalogTableListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SchemaName = null;
@@ -12686,17 +14462,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings SetDebug(this AzureDlaCatalogSchemaShowSettings toolSettings, string debug)
+        public static AzureDlaCatalogTableListSettings SetDebug(this AzureDlaCatalogTableListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings ResetDebug(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        public static AzureDlaCatalogTableListSettings ResetDebug(this AzureDlaCatalogTableListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -12704,17 +14480,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings SetHelp(this AzureDlaCatalogSchemaShowSettings toolSettings, string help)
+        public static AzureDlaCatalogTableListSettings SetHelp(this AzureDlaCatalogTableListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings ResetHelp(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        public static AzureDlaCatalogTableListSettings ResetHelp(this AzureDlaCatalogTableListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -12722,17 +14498,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings SetOutput(this AzureDlaCatalogSchemaShowSettings toolSettings, AzureOutput output)
+        public static AzureDlaCatalogTableListSettings SetOutput(this AzureDlaCatalogTableListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings ResetOutput(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        public static AzureDlaCatalogTableListSettings ResetOutput(this AzureDlaCatalogTableListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -12740,17 +14516,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings SetQuery(this AzureDlaCatalogSchemaShowSettings toolSettings, string query)
+        public static AzureDlaCatalogTableListSettings SetQuery(this AzureDlaCatalogTableListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings ResetQuery(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        public static AzureDlaCatalogTableListSettings ResetQuery(this AzureDlaCatalogTableListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -12758,17 +14534,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogSchemaShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings SetVerbose(this AzureDlaCatalogSchemaShowSettings toolSettings, string verbose)
+        public static AzureDlaCatalogTableListSettings SetVerbose(this AzureDlaCatalogTableListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogSchemaShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogSchemaShowSettings ResetVerbose(this AzureDlaCatalogSchemaShowSettings toolSettings)
+        public static AzureDlaCatalogTableListSettings ResetVerbose(this AzureDlaCatalogTableListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -12777,24 +14553,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureDlaCatalogTablePartitionListSettingsExtensions
+    #region AzureDlaCatalogTableShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogTablePartitionListSettingsExtensions
+    public static partial class AzureDlaCatalogTableShowSettingsExtensions
     {
         #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetAccount(this AzureDlaCatalogTablePartitionListSettings toolSettings, string account)
+        public static AzureDlaCatalogTableShowSettings SetAccount(this AzureDlaCatalogTableShowSettings toolSettings, string account)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = account;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetAccount(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        public static AzureDlaCatalogTableShowSettings ResetAccount(this AzureDlaCatalogTableShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Account = null;
@@ -12802,17 +14578,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the partitions.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetDatabaseName(this AzureDlaCatalogTablePartitionListSettings toolSettings, string databaseName)
+        public static AzureDlaCatalogTableShowSettings SetDatabaseName(this AzureDlaCatalogTableShowSettings toolSettings, string databaseName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = databaseName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the partitions.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetDatabaseName(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        public static AzureDlaCatalogTableShowSettings ResetDatabaseName(this AzureDlaCatalogTableShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DatabaseName = null;
@@ -12820,17 +14596,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region SchemaName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.SchemaName"/>.</em></p><p>The name of the schema containing the partitions.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetSchemaName(this AzureDlaCatalogTablePartitionListSettings toolSettings, string schemaName)
+        public static AzureDlaCatalogTableShowSettings SetSchemaName(this AzureDlaCatalogTableShowSettings toolSettings, string schemaName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SchemaName = schemaName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.SchemaName"/>.</em></p><p>The name of the schema containing the partitions.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetSchemaName(this AzureDlaCatalogTablePartitionListSettings toolSettings)
+        public static AzureDlaCatalogTableShowSettings ResetSchemaName(this AzureDlaCatalogTableShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SchemaName = null;
@@ -12838,355 +14614,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region TableName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.TableName"/>.</em></p><p>The name of the table containing the partitions.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.TableName"/>.</em></p><p>The name of the table.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetTableName(this AzureDlaCatalogTablePartitionListSettings toolSettings, string tableName)
+        public static AzureDlaCatalogTableShowSettings SetTableName(this AzureDlaCatalogTableShowSettings toolSettings, string tableName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.TableName = tableName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.TableName"/>.</em></p><p>The name of the table containing the partitions.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.TableName"/>.</em></p><p>The name of the table.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetTableName(this AzureDlaCatalogTablePartitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TableName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Count
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetCount(this AzureDlaCatalogTablePartitionListSettings toolSettings, string count)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Count = count;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetCount(this AzureDlaCatalogTablePartitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Count = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Filter
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetFilter(this AzureDlaCatalogTablePartitionListSettings toolSettings, string filter)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = filter;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetFilter(this AzureDlaCatalogTablePartitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal = orderby.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal = orderby.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings AddOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.AddRange(orderby);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings AddOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.AddRange(orderby);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ClearOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings RemoveOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(orderby);
-            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogTablePartitionListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings RemoveOrderby(this AzureDlaCatalogTablePartitionListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(orderby);
-            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Select
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetSelect(this AzureDlaCatalogTablePartitionListSettings toolSettings, string select)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Select = select;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetSelect(this AzureDlaCatalogTablePartitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Select = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Skip
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetSkip(this AzureDlaCatalogTablePartitionListSettings toolSettings, string skip)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Skip = skip;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetSkip(this AzureDlaCatalogTablePartitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Skip = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Top
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetTop(this AzureDlaCatalogTablePartitionListSettings toolSettings, int? top)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = top;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetTop(this AzureDlaCatalogTablePartitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetDebug(this AzureDlaCatalogTablePartitionListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetDebug(this AzureDlaCatalogTablePartitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetHelp(this AzureDlaCatalogTablePartitionListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetHelp(this AzureDlaCatalogTablePartitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetOutput(this AzureDlaCatalogTablePartitionListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetOutput(this AzureDlaCatalogTablePartitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetQuery(this AzureDlaCatalogTablePartitionListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetQuery(this AzureDlaCatalogTablePartitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings SetVerbose(this AzureDlaCatalogTablePartitionListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionListSettings ResetVerbose(this AzureDlaCatalogTablePartitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaCatalogTablePartitionShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogTablePartitionShowSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings SetAccount(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings ResetAccount(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the partition.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings SetDatabaseName(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string databaseName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = databaseName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the partition.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings ResetDatabaseName(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PartitionName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.PartitionName"/>.</em></p><p>The name of the table partition.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings SetPartitionName(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string partitionName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PartitionName = partitionName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.PartitionName"/>.</em></p><p>The name of the table partition.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings ResetPartitionName(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PartitionName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SchemaName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the partition.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings SetSchemaName(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string schemaName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = schemaName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the partition.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings ResetSchemaName(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TableName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.TableName"/>.</em></p><p>The name of the table containing the partition.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings SetTableName(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string tableName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TableName = tableName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.TableName"/>.</em></p><p>The name of the table containing the partition.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings ResetTableName(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        public static AzureDlaCatalogTableShowSettings ResetTableName(this AzureDlaCatalogTableShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.TableName = null;
@@ -13194,17 +14632,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings SetDebug(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string debug)
+        public static AzureDlaCatalogTableShowSettings SetDebug(this AzureDlaCatalogTableShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings ResetDebug(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        public static AzureDlaCatalogTableShowSettings ResetDebug(this AzureDlaCatalogTableShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -13212,17 +14650,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings SetHelp(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string help)
+        public static AzureDlaCatalogTableShowSettings SetHelp(this AzureDlaCatalogTableShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings ResetHelp(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        public static AzureDlaCatalogTableShowSettings ResetHelp(this AzureDlaCatalogTableShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -13230,17 +14668,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings SetOutput(this AzureDlaCatalogTablePartitionShowSettings toolSettings, AzureOutput output)
+        public static AzureDlaCatalogTableShowSettings SetOutput(this AzureDlaCatalogTableShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings ResetOutput(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        public static AzureDlaCatalogTableShowSettings ResetOutput(this AzureDlaCatalogTableShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -13248,17 +14686,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings SetQuery(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string query)
+        public static AzureDlaCatalogTableShowSettings SetQuery(this AzureDlaCatalogTableShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings ResetQuery(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        public static AzureDlaCatalogTableShowSettings ResetQuery(this AzureDlaCatalogTableShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -13266,17 +14704,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTablePartitionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings SetVerbose(this AzureDlaCatalogTablePartitionShowSettings toolSettings, string verbose)
+        public static AzureDlaCatalogTableShowSettings SetVerbose(this AzureDlaCatalogTableShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTablePartitionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureDlaCatalogTablePartitionShowSettings ResetVerbose(this AzureDlaCatalogTablePartitionShowSettings toolSettings)
+        public static AzureDlaCatalogTableShowSettings ResetVerbose(this AzureDlaCatalogTableShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -13635,1444 +15073,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableStatsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureDlaCatalogTableStatsShowSettings ResetVerbose(this AzureDlaCatalogTableStatsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaCatalogTableTypeListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogTableTypeListSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetAccount(this AzureDlaCatalogTableTypeListSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ResetAccount(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table types.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetDatabaseName(this AzureDlaCatalogTableTypeListSettings toolSettings, string databaseName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = databaseName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table types.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ResetDatabaseName(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SchemaName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table types.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetSchemaName(this AzureDlaCatalogTableTypeListSettings toolSettings, string schemaName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = schemaName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table types.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ResetSchemaName(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Count
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetCount(this AzureDlaCatalogTableTypeListSettings toolSettings, string count)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Count = count;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Count"/>.</em></p><p>The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ResetCount(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Count = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Filter
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetFilter(this AzureDlaCatalogTableTypeListSettings toolSettings, string filter)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = filter;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Filter"/>.</em></p><p>OData filter. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ResetFilter(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal = orderby.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/> to a new list.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal = orderby.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings AddOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.AddRange(orderby);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings AddOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.AddRange(orderby);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ClearOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OrderbyInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings RemoveOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings, params string[] orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(orderby);
-            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureDlaCatalogTableTypeListSettings.Orderby"/>.</em></p><p>OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings RemoveOrderby(this AzureDlaCatalogTableTypeListSettings toolSettings, IEnumerable<string> orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(orderby);
-            toolSettings.OrderbyInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Select
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetSelect(this AzureDlaCatalogTableTypeListSettings toolSettings, string select)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Select = select;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Select"/>.</em></p><p>OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ResetSelect(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Select = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Skip
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetSkip(this AzureDlaCatalogTableTypeListSettings toolSettings, string skip)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Skip = skip;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Skip"/>.</em></p><p>The number of items to skip over before returning elements.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ResetSkip(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Skip = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Top
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetTop(this AzureDlaCatalogTableTypeListSettings toolSettings, int? top)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = top;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Top"/>.</em></p><p>Maximum number of items to return.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ResetTop(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetDebug(this AzureDlaCatalogTableTypeListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ResetDebug(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetHelp(this AzureDlaCatalogTableTypeListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ResetHelp(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetOutput(this AzureDlaCatalogTableTypeListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ResetOutput(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetQuery(this AzureDlaCatalogTableTypeListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ResetQuery(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings SetVerbose(this AzureDlaCatalogTableTypeListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeListSettings ResetVerbose(this AzureDlaCatalogTableTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaCatalogTableTypeShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogTableTypeShowSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings SetAccount(this AzureDlaCatalogTableTypeShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings ResetAccount(this AzureDlaCatalogTableTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table type.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings SetDatabaseName(this AzureDlaCatalogTableTypeShowSettings toolSettings, string databaseName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = databaseName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table type.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings ResetDatabaseName(this AzureDlaCatalogTableTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SchemaName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table type.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings SetSchemaName(this AzureDlaCatalogTableTypeShowSettings toolSettings, string schemaName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = schemaName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table type.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings ResetSchemaName(this AzureDlaCatalogTableTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TableTypeName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.TableTypeName"/>.</em></p><p>The name of the table type to retrieve.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings SetTableTypeName(this AzureDlaCatalogTableTypeShowSettings toolSettings, string tableTypeName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TableTypeName = tableTypeName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.TableTypeName"/>.</em></p><p>The name of the table type to retrieve.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings ResetTableTypeName(this AzureDlaCatalogTableTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TableTypeName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings SetDebug(this AzureDlaCatalogTableTypeShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings ResetDebug(this AzureDlaCatalogTableTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings SetHelp(this AzureDlaCatalogTableTypeShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings ResetHelp(this AzureDlaCatalogTableTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings SetOutput(this AzureDlaCatalogTableTypeShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings ResetOutput(this AzureDlaCatalogTableTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings SetQuery(this AzureDlaCatalogTableTypeShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings ResetQuery(this AzureDlaCatalogTableTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableTypeShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings SetVerbose(this AzureDlaCatalogTableTypeShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableTypeShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableTypeShowSettings ResetVerbose(this AzureDlaCatalogTableTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaCatalogTableListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogTableListSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings SetAccount(this AzureDlaCatalogTableListSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings ResetAccount(this AzureDlaCatalogTableListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings SetDatabaseName(this AzureDlaCatalogTableListSettings toolSettings, string databaseName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = databaseName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings ResetDatabaseName(this AzureDlaCatalogTableListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SchemaName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.SchemaName"/>.</em></p><p>The schema assocated with the tables to list.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings SetSchemaName(this AzureDlaCatalogTableListSettings toolSettings, string schemaName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = schemaName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.SchemaName"/>.</em></p><p>The schema assocated with the tables to list.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings ResetSchemaName(this AzureDlaCatalogTableListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings SetDebug(this AzureDlaCatalogTableListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings ResetDebug(this AzureDlaCatalogTableListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings SetHelp(this AzureDlaCatalogTableListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings ResetHelp(this AzureDlaCatalogTableListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings SetOutput(this AzureDlaCatalogTableListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings ResetOutput(this AzureDlaCatalogTableListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings SetQuery(this AzureDlaCatalogTableListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings ResetQuery(this AzureDlaCatalogTableListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings SetVerbose(this AzureDlaCatalogTableListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableListSettings ResetVerbose(this AzureDlaCatalogTableListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaCatalogTableShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogTableShowSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings SetAccount(this AzureDlaCatalogTableShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings ResetAccount(this AzureDlaCatalogTableShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings SetDatabaseName(this AzureDlaCatalogTableShowSettings toolSettings, string databaseName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = databaseName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings ResetDatabaseName(this AzureDlaCatalogTableShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SchemaName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings SetSchemaName(this AzureDlaCatalogTableShowSettings toolSettings, string schemaName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = schemaName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings ResetSchemaName(this AzureDlaCatalogTableShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TableName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.TableName"/>.</em></p><p>The name of the table.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings SetTableName(this AzureDlaCatalogTableShowSettings toolSettings, string tableName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TableName = tableName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.TableName"/>.</em></p><p>The name of the table.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings ResetTableName(this AzureDlaCatalogTableShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TableName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings SetDebug(this AzureDlaCatalogTableShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings ResetDebug(this AzureDlaCatalogTableShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings SetHelp(this AzureDlaCatalogTableShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings ResetHelp(this AzureDlaCatalogTableShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings SetOutput(this AzureDlaCatalogTableShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings ResetOutput(this AzureDlaCatalogTableShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings SetQuery(this AzureDlaCatalogTableShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings ResetQuery(this AzureDlaCatalogTableShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTableShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings SetVerbose(this AzureDlaCatalogTableShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTableShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTableShowSettings ResetVerbose(this AzureDlaCatalogTableShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaCatalogTvfListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogTvfListSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings SetAccount(this AzureDlaCatalogTvfListSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings ResetAccount(this AzureDlaCatalogTvfListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings SetDatabaseName(this AzureDlaCatalogTvfListSettings toolSettings, string databaseName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = databaseName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings ResetDatabaseName(this AzureDlaCatalogTvfListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SchemaName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.SchemaName"/>.</em></p><p>The name of the schema assocated with table valued functions to list.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings SetSchemaName(this AzureDlaCatalogTvfListSettings toolSettings, string schemaName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = schemaName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.SchemaName"/>.</em></p><p>The name of the schema assocated with table valued functions to list.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings ResetSchemaName(this AzureDlaCatalogTvfListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings SetDebug(this AzureDlaCatalogTvfListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings ResetDebug(this AzureDlaCatalogTvfListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings SetHelp(this AzureDlaCatalogTvfListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings ResetHelp(this AzureDlaCatalogTvfListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings SetOutput(this AzureDlaCatalogTvfListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings ResetOutput(this AzureDlaCatalogTvfListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings SetQuery(this AzureDlaCatalogTvfListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings ResetQuery(this AzureDlaCatalogTvfListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings SetVerbose(this AzureDlaCatalogTvfListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfListSettings ResetVerbose(this AzureDlaCatalogTvfListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaCatalogTvfShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogTvfShowSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings SetAccount(this AzureDlaCatalogTvfShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings ResetAccount(this AzureDlaCatalogTvfShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table valued function.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings SetDatabaseName(this AzureDlaCatalogTvfShowSettings toolSettings, string databaseName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = databaseName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the table valued function.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings ResetDatabaseName(this AzureDlaCatalogTvfShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SchemaName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table valued function.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings SetSchemaName(this AzureDlaCatalogTvfShowSettings toolSettings, string schemaName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = schemaName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the table valued function.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings ResetSchemaName(this AzureDlaCatalogTvfShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TableValuedFunctionName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.TableValuedFunctionName"/>.</em></p><p>The name of the tableValuedFunction.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings SetTableValuedFunctionName(this AzureDlaCatalogTvfShowSettings toolSettings, string tableValuedFunctionName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TableValuedFunctionName = tableValuedFunctionName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.TableValuedFunctionName"/>.</em></p><p>The name of the tableValuedFunction.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings ResetTableValuedFunctionName(this AzureDlaCatalogTvfShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TableValuedFunctionName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings SetDebug(this AzureDlaCatalogTvfShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings ResetDebug(this AzureDlaCatalogTvfShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings SetHelp(this AzureDlaCatalogTvfShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings ResetHelp(this AzureDlaCatalogTvfShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings SetOutput(this AzureDlaCatalogTvfShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings ResetOutput(this AzureDlaCatalogTvfShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings SetQuery(this AzureDlaCatalogTvfShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings ResetQuery(this AzureDlaCatalogTvfShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogTvfShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings SetVerbose(this AzureDlaCatalogTvfShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogTvfShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogTvfShowSettings ResetVerbose(this AzureDlaCatalogTvfShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaCatalogViewListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogViewListSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings SetAccount(this AzureDlaCatalogViewListSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings ResetAccount(this AzureDlaCatalogViewListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings SetDatabaseName(this AzureDlaCatalogViewListSettings toolSettings, string databaseName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = databaseName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.DatabaseName"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings ResetDatabaseName(this AzureDlaCatalogViewListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SchemaName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.SchemaName"/>.</em></p><p>The name of the schema associated with the views to list.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings SetSchemaName(this AzureDlaCatalogViewListSettings toolSettings, string schemaName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = schemaName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.SchemaName"/>.</em></p><p>The name of the schema associated with the views to list.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings ResetSchemaName(this AzureDlaCatalogViewListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings SetDebug(this AzureDlaCatalogViewListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings ResetDebug(this AzureDlaCatalogViewListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings SetHelp(this AzureDlaCatalogViewListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings ResetHelp(this AzureDlaCatalogViewListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings SetOutput(this AzureDlaCatalogViewListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings ResetOutput(this AzureDlaCatalogViewListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings SetQuery(this AzureDlaCatalogViewListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings ResetQuery(this AzureDlaCatalogViewListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings SetVerbose(this AzureDlaCatalogViewListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewListSettings ResetVerbose(this AzureDlaCatalogViewListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlaCatalogViewShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlaTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlaCatalogViewShowSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings SetAccount(this AzureDlaCatalogViewShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.Account"/>.</em></p><p>Name of the Data Lake Analytics account.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings ResetAccount(this AzureDlaCatalogViewShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DatabaseName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the view.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings SetDatabaseName(this AzureDlaCatalogViewShowSettings toolSettings, string databaseName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = databaseName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.DatabaseName"/>.</em></p><p>The name of the database containing the view.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings ResetDatabaseName(this AzureDlaCatalogViewShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DatabaseName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SchemaName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the view.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings SetSchemaName(this AzureDlaCatalogViewShowSettings toolSettings, string schemaName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = schemaName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.SchemaName"/>.</em></p><p>The name of the schema containing the view.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings ResetSchemaName(this AzureDlaCatalogViewShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SchemaName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ViewName
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.ViewName"/>.</em></p><p>The name of the view.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings SetViewName(this AzureDlaCatalogViewShowSettings toolSettings, string viewName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ViewName = viewName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.ViewName"/>.</em></p><p>The name of the view.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings ResetViewName(this AzureDlaCatalogViewShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ViewName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings SetDebug(this AzureDlaCatalogViewShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings ResetDebug(this AzureDlaCatalogViewShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings SetHelp(this AzureDlaCatalogViewShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings ResetHelp(this AzureDlaCatalogViewShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings SetOutput(this AzureDlaCatalogViewShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings ResetOutput(this AzureDlaCatalogViewShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings SetQuery(this AzureDlaCatalogViewShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings ResetQuery(this AzureDlaCatalogViewShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlaCatalogViewShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings SetVerbose(this AzureDlaCatalogViewShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlaCatalogViewShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlaCatalogViewShowSettings ResetVerbose(this AzureDlaCatalogViewShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

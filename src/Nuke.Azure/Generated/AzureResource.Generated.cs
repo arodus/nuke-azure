@@ -100,46 +100,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureResourceLinkCreate(Configure<AzureResourceLinkCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureResourceLinkCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureResourceLinkDelete(Configure<AzureResourceLinkDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureResourceLinkDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureResourceLinkList(Configure<AzureResourceLinkListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureResourceLinkListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureResourceLinkShow(Configure<AzureResourceLinkShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureResourceLinkShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureResourceLinkUpdate(Configure<AzureResourceLinkUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureResourceLinkUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureResourceLockCreate(Configure<AzureResourceLockCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLockCreateSettings());
@@ -175,6 +135,46 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureResourceLockUpdate(Configure<AzureResourceLockUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLockUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureResourceLinkCreate(Configure<AzureResourceLinkCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureResourceLinkCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureResourceLinkDelete(Configure<AzureResourceLinkDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureResourceLinkDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureResourceLinkList(Configure<AzureResourceLinkListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureResourceLinkListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureResourceLinkShow(Configure<AzureResourceLinkShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureResourceLinkShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureResourceLinkUpdate(Configure<AzureResourceLinkUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureResourceLinkUpdateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -630,196 +630,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureResourceLinkCreateSettings
-    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureResourceLinkCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureResource executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
-        /// <summary><p></p></summary>
-        public virtual string LinkId { get; internal set; }
-        /// <summary><p>The id of the resource link target.</p></summary>
-        public virtual string TargetId { get; internal set; }
-        /// <summary><p>Notes for this link.</p></summary>
-        public virtual string Notes { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("resource link create")
-              .Add("--link-id {value}", LinkId)
-              .Add("--target-id {value}", TargetId)
-              .Add("--notes {value}", Notes)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureResourceLinkDeleteSettings
-    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureResourceLinkDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureResource executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
-        /// <summary><p>The fully qualified ID of the resource link. Use the format, /subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/{provider-namespace}/{resource-type}/{resource-name}/Microsoft.Resources/links/{link-name}. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
-        public virtual string LinkId { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("resource link delete")
-              .Add("--link-id {value}", LinkId)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureResourceLinkListSettings
-    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureResourceLinkListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureResource executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
-        /// <summary><p>A filter for restricting the results.</p></summary>
-        public virtual string FilterString { get; internal set; }
-        /// <summary><p>The scope for the links.</p></summary>
-        public virtual string Scope { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("resource link list")
-              .Add("--filter-string {value}", FilterString)
-              .Add("--scope {value}", Scope)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureResourceLinkShowSettings
-    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureResourceLinkShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureResource executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
-        /// <summary><p>The fully qualified Id of the resource link. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
-        public virtual string LinkId { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("resource link show")
-              .Add("--link-id {value}", LinkId)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureResourceLinkUpdateSettings
-    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureResourceLinkUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureResource executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
-        /// <summary><p></p></summary>
-        public virtual string LinkId { get; internal set; }
-        /// <summary><p>Notes for this link.</p></summary>
-        public virtual string Notes { get; internal set; }
-        /// <summary><p>The id of the resource link target.</p></summary>
-        public virtual string TargetId { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("resource link update")
-              .Add("--link-id {value}", LinkId)
-              .Add("--notes {value}", Notes)
-              .Add("--target-id {value}", TargetId)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureResourceLockCreateSettings
     /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
     [PublicAPI]
@@ -1085,6 +895,196 @@ namespace Nuke.Azure
               .Add("--parent {value}", Parent)
               .Add("--resource {value}", Resource)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureResourceLinkCreateSettings
+    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureResourceLinkCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureResource executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
+        /// <summary><p></p></summary>
+        public virtual string LinkId { get; internal set; }
+        /// <summary><p>The id of the resource link target.</p></summary>
+        public virtual string TargetId { get; internal set; }
+        /// <summary><p>Notes for this link.</p></summary>
+        public virtual string Notes { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("resource link create")
+              .Add("--link-id {value}", LinkId)
+              .Add("--target-id {value}", TargetId)
+              .Add("--notes {value}", Notes)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureResourceLinkDeleteSettings
+    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureResourceLinkDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureResource executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
+        /// <summary><p>The fully qualified ID of the resource link. Use the format, /subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/{provider-namespace}/{resource-type}/{resource-name}/Microsoft.Resources/links/{link-name}. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
+        public virtual string LinkId { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("resource link delete")
+              .Add("--link-id {value}", LinkId)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureResourceLinkListSettings
+    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureResourceLinkListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureResource executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
+        /// <summary><p>A filter for restricting the results.</p></summary>
+        public virtual string FilterString { get; internal set; }
+        /// <summary><p>The scope for the links.</p></summary>
+        public virtual string Scope { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("resource link list")
+              .Add("--filter-string {value}", FilterString)
+              .Add("--scope {value}", Scope)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureResourceLinkShowSettings
+    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureResourceLinkShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureResource executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
+        /// <summary><p>The fully qualified Id of the resource link. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
+        public virtual string LinkId { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("resource link show")
+              .Add("--link-id {value}", LinkId)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureResourceLinkUpdateSettings
+    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureResourceLinkUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureResource executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
+        /// <summary><p></p></summary>
+        public virtual string LinkId { get; internal set; }
+        /// <summary><p>Notes for this link.</p></summary>
+        public virtual string Notes { get; internal set; }
+        /// <summary><p>The id of the resource link target.</p></summary>
+        public virtual string TargetId { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("resource link update")
+              .Add("--link-id {value}", LinkId)
+              .Add("--notes {value}", Notes)
+              .Add("--target-id {value}", TargetId)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3270,676 +3270,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureResourceLinkCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureResourceLinkCreateSettingsExtensions
-    {
-        #region LinkId
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.LinkId"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings SetLinkId(this AzureResourceLinkCreateSettings toolSettings, string linkId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LinkId = linkId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.LinkId"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings ResetLinkId(this AzureResourceLinkCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LinkId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TargetId
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.TargetId"/>.</em></p><p>The id of the resource link target.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings SetTargetId(this AzureResourceLinkCreateSettings toolSettings, string targetId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetId = targetId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.TargetId"/>.</em></p><p>The id of the resource link target.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings ResetTargetId(this AzureResourceLinkCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Notes
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Notes"/>.</em></p><p>Notes for this link.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings SetNotes(this AzureResourceLinkCreateSettings toolSettings, string notes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Notes = notes;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.Notes"/>.</em></p><p>Notes for this link.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings ResetNotes(this AzureResourceLinkCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Notes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings SetDebug(this AzureResourceLinkCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings ResetDebug(this AzureResourceLinkCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings SetHelp(this AzureResourceLinkCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings ResetHelp(this AzureResourceLinkCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings SetOutput(this AzureResourceLinkCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings ResetOutput(this AzureResourceLinkCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings SetQuery(this AzureResourceLinkCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings ResetQuery(this AzureResourceLinkCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings SetVerbose(this AzureResourceLinkCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkCreateSettings ResetVerbose(this AzureResourceLinkCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureResourceLinkDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureResourceLinkDeleteSettingsExtensions
-    {
-        #region LinkId
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.LinkId"/>.</em></p><p>The fully qualified ID of the resource link. Use the format, /subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/{provider-namespace}/{resource-type}/{resource-name}/Microsoft.Resources/links/{link-name}. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
-        [Pure]
-        public static AzureResourceLinkDeleteSettings SetLinkId(this AzureResourceLinkDeleteSettings toolSettings, string linkId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LinkId = linkId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkDeleteSettings.LinkId"/>.</em></p><p>The fully qualified ID of the resource link. Use the format, /subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/{provider-namespace}/{resource-type}/{resource-name}/Microsoft.Resources/links/{link-name}. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
-        [Pure]
-        public static AzureResourceLinkDeleteSettings ResetLinkId(this AzureResourceLinkDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LinkId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkDeleteSettings SetDebug(this AzureResourceLinkDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkDeleteSettings ResetDebug(this AzureResourceLinkDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureResourceLinkDeleteSettings SetHelp(this AzureResourceLinkDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureResourceLinkDeleteSettings ResetHelp(this AzureResourceLinkDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureResourceLinkDeleteSettings SetOutput(this AzureResourceLinkDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureResourceLinkDeleteSettings ResetOutput(this AzureResourceLinkDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureResourceLinkDeleteSettings SetQuery(this AzureResourceLinkDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureResourceLinkDeleteSettings ResetQuery(this AzureResourceLinkDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkDeleteSettings SetVerbose(this AzureResourceLinkDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkDeleteSettings ResetVerbose(this AzureResourceLinkDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureResourceLinkListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureResourceLinkListSettingsExtensions
-    {
-        #region FilterString
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.FilterString"/>.</em></p><p>A filter for restricting the results.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings SetFilterString(this AzureResourceLinkListSettings toolSettings, string filterString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilterString = filterString;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.FilterString"/>.</em></p><p>A filter for restricting the results.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings ResetFilterString(this AzureResourceLinkListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilterString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Scope
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Scope"/>.</em></p><p>The scope for the links.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings SetScope(this AzureResourceLinkListSettings toolSettings, string scope)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = scope;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.Scope"/>.</em></p><p>The scope for the links.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings ResetScope(this AzureResourceLinkListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings SetDebug(this AzureResourceLinkListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings ResetDebug(this AzureResourceLinkListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings SetHelp(this AzureResourceLinkListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings ResetHelp(this AzureResourceLinkListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings SetOutput(this AzureResourceLinkListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings ResetOutput(this AzureResourceLinkListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings SetQuery(this AzureResourceLinkListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings ResetQuery(this AzureResourceLinkListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings SetVerbose(this AzureResourceLinkListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkListSettings ResetVerbose(this AzureResourceLinkListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureResourceLinkShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureResourceLinkShowSettingsExtensions
-    {
-        #region LinkId
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.LinkId"/>.</em></p><p>The fully qualified Id of the resource link. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
-        [Pure]
-        public static AzureResourceLinkShowSettings SetLinkId(this AzureResourceLinkShowSettings toolSettings, string linkId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LinkId = linkId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkShowSettings.LinkId"/>.</em></p><p>The fully qualified Id of the resource link. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
-        [Pure]
-        public static AzureResourceLinkShowSettings ResetLinkId(this AzureResourceLinkShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LinkId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkShowSettings SetDebug(this AzureResourceLinkShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkShowSettings ResetDebug(this AzureResourceLinkShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureResourceLinkShowSettings SetHelp(this AzureResourceLinkShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureResourceLinkShowSettings ResetHelp(this AzureResourceLinkShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureResourceLinkShowSettings SetOutput(this AzureResourceLinkShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureResourceLinkShowSettings ResetOutput(this AzureResourceLinkShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureResourceLinkShowSettings SetQuery(this AzureResourceLinkShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureResourceLinkShowSettings ResetQuery(this AzureResourceLinkShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkShowSettings SetVerbose(this AzureResourceLinkShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkShowSettings ResetVerbose(this AzureResourceLinkShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureResourceLinkUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureResourceLinkUpdateSettingsExtensions
-    {
-        #region LinkId
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.LinkId"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings SetLinkId(this AzureResourceLinkUpdateSettings toolSettings, string linkId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LinkId = linkId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.LinkId"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings ResetLinkId(this AzureResourceLinkUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LinkId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Notes
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Notes"/>.</em></p><p>Notes for this link.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings SetNotes(this AzureResourceLinkUpdateSettings toolSettings, string notes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Notes = notes;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.Notes"/>.</em></p><p>Notes for this link.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings ResetNotes(this AzureResourceLinkUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Notes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TargetId
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.TargetId"/>.</em></p><p>The id of the resource link target.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings SetTargetId(this AzureResourceLinkUpdateSettings toolSettings, string targetId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetId = targetId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.TargetId"/>.</em></p><p>The id of the resource link target.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings ResetTargetId(this AzureResourceLinkUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings SetDebug(this AzureResourceLinkUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings ResetDebug(this AzureResourceLinkUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings SetHelp(this AzureResourceLinkUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings ResetHelp(this AzureResourceLinkUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings SetOutput(this AzureResourceLinkUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings ResetOutput(this AzureResourceLinkUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings SetQuery(this AzureResourceLinkUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings ResetQuery(this AzureResourceLinkUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings SetVerbose(this AzureResourceLinkUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureResourceLinkUpdateSettings ResetVerbose(this AzureResourceLinkUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureResourceLockCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
     [PublicAPI]
@@ -5214,6 +4544,676 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureResourceLockUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureResourceLockUpdateSettings ResetVerbose(this AzureResourceLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureResourceLinkCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureResourceLinkCreateSettingsExtensions
+    {
+        #region LinkId
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.LinkId"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings SetLinkId(this AzureResourceLinkCreateSettings toolSettings, string linkId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LinkId = linkId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.LinkId"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings ResetLinkId(this AzureResourceLinkCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LinkId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TargetId
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.TargetId"/>.</em></p><p>The id of the resource link target.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings SetTargetId(this AzureResourceLinkCreateSettings toolSettings, string targetId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetId = targetId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.TargetId"/>.</em></p><p>The id of the resource link target.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings ResetTargetId(this AzureResourceLinkCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Notes
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Notes"/>.</em></p><p>Notes for this link.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings SetNotes(this AzureResourceLinkCreateSettings toolSettings, string notes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Notes = notes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.Notes"/>.</em></p><p>Notes for this link.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings ResetNotes(this AzureResourceLinkCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Notes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings SetDebug(this AzureResourceLinkCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings ResetDebug(this AzureResourceLinkCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings SetHelp(this AzureResourceLinkCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings ResetHelp(this AzureResourceLinkCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings SetOutput(this AzureResourceLinkCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings ResetOutput(this AzureResourceLinkCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings SetQuery(this AzureResourceLinkCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings ResetQuery(this AzureResourceLinkCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings SetVerbose(this AzureResourceLinkCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings ResetVerbose(this AzureResourceLinkCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureResourceLinkDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureResourceLinkDeleteSettingsExtensions
+    {
+        #region LinkId
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.LinkId"/>.</em></p><p>The fully qualified ID of the resource link. Use the format, /subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/{provider-namespace}/{resource-type}/{resource-name}/Microsoft.Resources/links/{link-name}. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings SetLinkId(this AzureResourceLinkDeleteSettings toolSettings, string linkId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LinkId = linkId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkDeleteSettings.LinkId"/>.</em></p><p>The fully qualified ID of the resource link. Use the format, /subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/{provider-namespace}/{resource-type}/{resource-name}/Microsoft.Resources/links/{link-name}. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings ResetLinkId(this AzureResourceLinkDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LinkId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings SetDebug(this AzureResourceLinkDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings ResetDebug(this AzureResourceLinkDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings SetHelp(this AzureResourceLinkDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings ResetHelp(this AzureResourceLinkDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings SetOutput(this AzureResourceLinkDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings ResetOutput(this AzureResourceLinkDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings SetQuery(this AzureResourceLinkDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings ResetQuery(this AzureResourceLinkDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings SetVerbose(this AzureResourceLinkDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings ResetVerbose(this AzureResourceLinkDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureResourceLinkListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureResourceLinkListSettingsExtensions
+    {
+        #region FilterString
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.FilterString"/>.</em></p><p>A filter for restricting the results.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings SetFilterString(this AzureResourceLinkListSettings toolSettings, string filterString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilterString = filterString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.FilterString"/>.</em></p><p>A filter for restricting the results.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings ResetFilterString(this AzureResourceLinkListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilterString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Scope
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Scope"/>.</em></p><p>The scope for the links.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings SetScope(this AzureResourceLinkListSettings toolSettings, string scope)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = scope;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.Scope"/>.</em></p><p>The scope for the links.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings ResetScope(this AzureResourceLinkListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings SetDebug(this AzureResourceLinkListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings ResetDebug(this AzureResourceLinkListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings SetHelp(this AzureResourceLinkListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings ResetHelp(this AzureResourceLinkListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings SetOutput(this AzureResourceLinkListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings ResetOutput(this AzureResourceLinkListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings SetQuery(this AzureResourceLinkListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings ResetQuery(this AzureResourceLinkListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings SetVerbose(this AzureResourceLinkListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings ResetVerbose(this AzureResourceLinkListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureResourceLinkShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureResourceLinkShowSettingsExtensions
+    {
+        #region LinkId
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.LinkId"/>.</em></p><p>The fully qualified Id of the resource link. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings SetLinkId(this AzureResourceLinkShowSettings toolSettings, string linkId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LinkId = linkId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkShowSettings.LinkId"/>.</em></p><p>The fully qualified Id of the resource link. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings ResetLinkId(this AzureResourceLinkShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LinkId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings SetDebug(this AzureResourceLinkShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings ResetDebug(this AzureResourceLinkShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings SetHelp(this AzureResourceLinkShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings ResetHelp(this AzureResourceLinkShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings SetOutput(this AzureResourceLinkShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings ResetOutput(this AzureResourceLinkShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings SetQuery(this AzureResourceLinkShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings ResetQuery(this AzureResourceLinkShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings SetVerbose(this AzureResourceLinkShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings ResetVerbose(this AzureResourceLinkShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureResourceLinkUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureResourceLinkUpdateSettingsExtensions
+    {
+        #region LinkId
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.LinkId"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings SetLinkId(this AzureResourceLinkUpdateSettings toolSettings, string linkId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LinkId = linkId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.LinkId"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings ResetLinkId(this AzureResourceLinkUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LinkId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Notes
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Notes"/>.</em></p><p>Notes for this link.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings SetNotes(this AzureResourceLinkUpdateSettings toolSettings, string notes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Notes = notes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.Notes"/>.</em></p><p>Notes for this link.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings ResetNotes(this AzureResourceLinkUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Notes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TargetId
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.TargetId"/>.</em></p><p>The id of the resource link target.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings SetTargetId(this AzureResourceLinkUpdateSettings toolSettings, string targetId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetId = targetId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.TargetId"/>.</em></p><p>The id of the resource link target.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings ResetTargetId(this AzureResourceLinkUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings SetDebug(this AzureResourceLinkUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings ResetDebug(this AzureResourceLinkUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings SetHelp(this AzureResourceLinkUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings ResetHelp(this AzureResourceLinkUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings SetOutput(this AzureResourceLinkUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings ResetOutput(this AzureResourceLinkUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings SetQuery(this AzureResourceLinkUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings ResetQuery(this AzureResourceLinkUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings SetVerbose(this AzureResourceLinkUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings ResetVerbose(this AzureResourceLinkUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
