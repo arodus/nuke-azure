@@ -6,18 +6,18 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/application.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/application/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/client-certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/durability.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/node-type.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/reliability.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/setting.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/upgrade-type.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/sf.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/sf/application.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/sf/cluster.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/sf/application/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/sf/cluster/upgrade-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/sf/cluster/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/sf/cluster/node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/sf/cluster/node-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/sf/cluster/durability.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/sf/cluster/setting.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/sf/cluster/reliability.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/sf/cluster/client-certificate.yml"
   ],
   "name": "AzureSf",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest",
@@ -143,6 +143,12 @@
             "type": "string",
             "format": "--vm-user-name {value}",
             "help": "The user name for logging to Vm. Default will be adminuser."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -157,6 +163,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -177,6 +189,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -241,6 +259,50 @@
             "type": "string",
             "format": "--vault-resource-group {value}",
             "help": "Key vault resource group name,if not given it will be cluster resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterUpgradeTypeSet",
+      "definiteArgument": "sf cluster upgrade-type set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "UpgradeMode",
+            "type": "SfClusterUpgradeTypeSetUpgradeMode",
+            "format": "--upgrade-mode {value}",
+            "help": "Cluster upgrade mode."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "Cluster code version."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -305,6 +367,12 @@
             "type": "string",
             "format": "--vault-resource-group {value}",
             "help": "Key vault resource group name,if not given it will be cluster resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -331,13 +399,19 @@
             "type": "string",
             "format": "--thumbprint {value}",
             "help": "The cluster certificate thumbprint to be removed."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "ClusterClientCertificateAdd",
-      "definiteArgument": "sf cluster client-certificate add",
+      "postfix": "ClusterNodeAdd",
+      "definiteArgument": "sf cluster node add",
       "settingsClass": {
         "properties": [
           {
@@ -345,119 +419,6 @@
             "type": "string",
             "format": "--cluster-name {value}",
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          },
-          {
-            "name": "AdminClientThumbprints",
-            "type": "string",
-            "format": "--admin-client-thumbprints {value}",
-            "help": "Client certificate thumbprint that only has admin permission."
-          },
-          {
-            "name": "CertificateCommonName",
-            "type": "string",
-            "format": "--certificate-common-name {value}",
-            "help": "Client certificate common name."
-          },
-          {
-            "name": "CertificateIssuerThumbprint",
-            "type": "string",
-            "format": "--certificate-issuer-thumbprint {value}",
-            "help": "Client certificate issuer thumbprint."
-          },
-          {
-            "name": "ClientCertificateCommonNames",
-            "type": "string",
-            "format": "--client-certificate-common-names {value}",
-            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"isAdmin\":true, \"certificateCommonName\": \"test.com\", \"certificateIssuerThumbprint\": \"22B4AE296B504E512DF880A77A2CAE20200FF922\"}]."
-          },
-          {
-            "name": "IsAdmin",
-            "type": "string",
-            "format": "--is-admin {value}",
-            "help": "Client authentication type."
-          },
-          {
-            "name": "ReadonlyClientThumbprints",
-            "type": "List<string>",
-            "format": "--readonly-client-thumbprints {value}",
-            "separator": " ",
-            "help": "Space-separated list of client certificate thumbprint that has read only permission."
-          },
-          {
-            "name": "Thumbprint",
-            "type": "string",
-            "format": "--thumbprint {value}",
-            "help": "Client certificate thumbprint."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterClientCertificateRemove",
-      "definiteArgument": "sf cluster client-certificate remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          },
-          {
-            "name": "CertificateCommonName",
-            "type": "string",
-            "format": "--certificate-common-name {value}",
-            "help": "Client certificate common name."
-          },
-          {
-            "name": "CertificateIssuerThumbprint",
-            "type": "string",
-            "format": "--certificate-issuer-thumbprint {value}",
-            "help": "Client certificate issuer thumbprint."
-          },
-          {
-            "name": "ClientCertificateCommonNames",
-            "type": "string",
-            "format": "--client-certificate-common-names {value}",
-            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"certificateCommonName\": \"test.com\",\"certificateIssuerThumbprint\": \"22B4AE296B504E512DF880A77A2CAE20200FF922\"}]."
-          },
-          {
-            "name": "Thumbprints",
-            "type": "string",
-            "format": "--thumbprints {value}",
-            "help": "A single or Space-separated list of client certificate thumbprint(s) to be remove."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterDurabilityUpdate",
-      "definiteArgument": "sf cluster durability update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "DurabilityLevel",
-            "type": "SfClusterDurabilityUpdateDurabilityLevel",
-            "format": "--durability-level {value}",
-            "help": "Durability level."
           },
           {
             "name": "NodeType",
@@ -466,10 +427,60 @@
             "help": "The Node type name."
           },
           {
+            "name": "NumberOfNodesToAdd",
+            "type": "int",
+            "format": "--number-of-nodes-to-add {value}",
+            "help": "Number of nodes to add."
+          },
+          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterNodeRemove",
+      "definiteArgument": "sf cluster node remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "NodeType",
+            "type": "string",
+            "format": "--node-type {value}",
+            "help": "The Node type name."
+          },
+          {
+            "name": "NumberOfNodesToRemove",
+            "type": "int",
+            "format": "--number-of-nodes-to-remove {value}",
+            "help": "Number of nodes to remove."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -533,13 +544,19 @@
             "type": "string",
             "format": "--vm-tier {value}",
             "help": ""
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "ClusterNodeAdd",
-      "definiteArgument": "sf cluster node add",
+      "postfix": "ClusterDurabilityUpdate",
+      "definiteArgument": "sf cluster durability update",
       "settingsClass": {
         "properties": [
           {
@@ -549,86 +566,28 @@
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
-            "name": "NodeType",
-            "type": "string",
-            "format": "--node-type {value}",
-            "help": "The Node type name."
-          },
-          {
-            "name": "NumberOfNodesToAdd",
-            "type": "int",
-            "format": "--number-of-nodes-to-add {value}",
-            "help": "Number of nodes to add."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterNodeRemove",
-      "definiteArgument": "sf cluster node remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "NodeType",
-            "type": "string",
-            "format": "--node-type {value}",
-            "help": "The Node type name."
-          },
-          {
-            "name": "NumberOfNodesToRemove",
-            "type": "int",
-            "format": "--number-of-nodes-to-remove {value}",
-            "help": "Number of nodes to remove."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterReliabilityUpdate",
-      "definiteArgument": "sf cluster reliability update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "ReliabilityLevel",
+            "name": "DurabilityLevel",
             "type": "SfClusterDurabilityUpdateDurabilityLevel",
-            "format": "--reliability-level {value}",
+            "format": "--durability-level {value}",
             "help": "Durability level."
           },
           {
+            "name": "NodeType",
+            "type": "string",
+            "format": "--node-type {value}",
+            "help": "The Node type name."
+          },
+          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "The resource group name."
           },
           {
-            "name": "AutoAddNode",
+            "name": "Subscription",
             "type": "string",
-            "format": "--auto-add-node {value}",
-            "help": "Add node count automatically when changing reliability."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -667,6 +626,12 @@
             "type": "string",
             "format": "--settings-section-description {value}",
             "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\"}]."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -711,13 +676,57 @@
             "type": "string",
             "format": "--value {value}",
             "help": "Specify the value."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "ClusterUpgradeTypeSet",
-      "definiteArgument": "sf cluster upgrade-type set",
+      "postfix": "ClusterReliabilityUpdate",
+      "definiteArgument": "sf cluster reliability update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "ReliabilityLevel",
+            "type": "SfClusterDurabilityUpdateDurabilityLevel",
+            "format": "--reliability-level {value}",
+            "help": "Durability level."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "AutoAddNode",
+            "type": "string",
+            "format": "--auto-add-node {value}",
+            "help": "Add node count automatically when changing reliability."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterClientCertificateAdd",
+      "definiteArgument": "sf cluster client-certificate add",
       "settingsClass": {
         "properties": [
           {
@@ -733,16 +742,103 @@
             "help": "The resource group name."
           },
           {
-            "name": "UpgradeMode",
-            "type": "SfClusterUpgradeTypeSetUpgradeMode",
-            "format": "--upgrade-mode {value}",
-            "help": "Cluster upgrade mode."
+            "name": "AdminClientThumbprints",
+            "type": "string",
+            "format": "--admin-client-thumbprints {value}",
+            "help": "Client certificate thumbprint that only has admin permission."
           },
           {
-            "name": "Version",
+            "name": "CertificateCommonName",
             "type": "string",
-            "format": "--version {value}",
-            "help": "Cluster code version."
+            "format": "--certificate-common-name {value}",
+            "help": "Client certificate common name."
+          },
+          {
+            "name": "CertificateIssuerThumbprint",
+            "type": "string",
+            "format": "--certificate-issuer-thumbprint {value}",
+            "help": "Client certificate issuer thumbprint."
+          },
+          {
+            "name": "ClientCertificateCommonNames",
+            "type": "string",
+            "format": "--client-certificate-common-names {value}",
+            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"isAdmin\":true, \"certificateCommonName\": \"test.com\", \"certificateIssuerThumbprint\": \"22B4AE296B504E512DF880A77A2CAE20200FF922\"}]."
+          },
+          {
+            "name": "IsAdmin",
+            "type": "string",
+            "format": "--is-admin {value}",
+            "help": "Client authentication type."
+          },
+          {
+            "name": "ReadonlyClientThumbprints",
+            "type": "List<string>",
+            "format": "--readonly-client-thumbprints {value}",
+            "separator": " ",
+            "help": "Space-separated list of client certificate thumbprint that has read only permission."
+          },
+          {
+            "name": "Thumbprint",
+            "type": "string",
+            "format": "--thumbprint {value}",
+            "help": "Client certificate thumbprint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterClientCertificateRemove",
+      "definiteArgument": "sf cluster client-certificate remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "CertificateCommonName",
+            "type": "string",
+            "format": "--certificate-common-name {value}",
+            "help": "Client certificate common name."
+          },
+          {
+            "name": "CertificateIssuerThumbprint",
+            "type": "string",
+            "format": "--certificate-issuer-thumbprint {value}",
+            "help": "Client certificate issuer thumbprint."
+          },
+          {
+            "name": "ClientCertificateCommonNames",
+            "type": "string",
+            "format": "--client-certificate-common-names {value}",
+            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"certificateCommonName\": \"test.com\",\"certificateIssuerThumbprint\": \"22B4AE296B504E512DF880A77A2CAE20200FF922\"}]."
+          },
+          {
+            "name": "Thumbprints",
+            "type": "string",
+            "format": "--thumbprints {value}",
+            "help": "A single or Space-separated list of client certificate thumbprint(s) to be remove."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -791,18 +887,18 @@
       ]
     },
     {
+      "name": "SfClusterUpgradeTypeSetUpgradeMode",
+      "values": [
+        "automatic",
+        "manual"
+      ]
+    },
+    {
       "name": "SfClusterDurabilityUpdateDurabilityLevel",
       "values": [
         "bronze",
         "gold",
         "silver"
-      ]
-    },
-    {
-      "name": "SfClusterUpgradeTypeSetUpgradeMode",
-      "values": [
-        "automatic",
-        "manual"
       ]
     }
   ]

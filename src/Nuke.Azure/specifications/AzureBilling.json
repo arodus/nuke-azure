@@ -6,10 +6,10 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/billing.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/billing/enrollment-account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/billing/invoice.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/billing/period.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/billing.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/billing/period.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/billing/enrollment-account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/billing/invoice.yml"
   ],
   "name": "AzureBilling",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest",
@@ -20,53 +20,6 @@
       "postfix": "",
       "definiteArgument": "billing",
       "settingsClass": {}
-    },
-    {
-      "postfix": "EnrollmentAccountList",
-      "definiteArgument": "billing enrollment-account list",
-      "settingsClass": {}
-    },
-    {
-      "postfix": "EnrollmentAccountShow",
-      "definiteArgument": "billing enrollment-account show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the enrollment account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "InvoiceList",
-      "definiteArgument": "billing invoice list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "GenerateDownloadUrl",
-            "type": "string",
-            "format": "--generate-download-url {value}",
-            "help": "Generate download url of the invoice."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "InvoiceShow",
-      "definiteArgument": "billing invoice show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the invoice."
-          }
-        ]
-      }
     },
     {
       "postfix": "PeriodList",
@@ -90,6 +43,12 @@
             "type": "string",
             "format": "--top {value}",
             "help": "May be used to limit the number of results to the most recent N billing periods."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -104,6 +63,86 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Name of the billing period."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EnrollmentAccountList",
+      "definiteArgument": "billing enrollment-account list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EnrollmentAccountShow",
+      "definiteArgument": "billing enrollment-account show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the enrollment account."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "InvoiceList",
+      "definiteArgument": "billing invoice list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GenerateDownloadUrl",
+            "type": "string",
+            "format": "--generate-download-url {value}",
+            "help": "Generate download url of the invoice."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "InvoiceShow",
+      "definiteArgument": "billing invoice show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the invoice."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

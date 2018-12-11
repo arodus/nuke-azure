@@ -236,46 +236,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleCreate(Configure<AzureDlsAccountNetworkRuleCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleDelete(Configure<AzureDlsAccountNetworkRuleDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleList(Configure<AzureDlsAccountNetworkRuleListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleShow(Configure<AzureDlsAccountNetworkRuleShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleUpdate(Configure<AzureDlsAccountNetworkRuleUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureDlsAccountTrustedProviderCreate(Configure<AzureDlsAccountTrustedProviderCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderCreateSettings());
@@ -311,6 +271,46 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureDlsAccountTrustedProviderUpdate(Configure<AzureDlsAccountTrustedProviderUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleCreate(Configure<AzureDlsAccountNetworkRuleCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleDelete(Configure<AzureDlsAccountNetworkRuleDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleList(Configure<AzureDlsAccountNetworkRuleListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleShow(Configure<AzureDlsAccountNetworkRuleShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleUpdate(Configure<AzureDlsAccountNetworkRuleUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountNetworkRuleUpdateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -435,6 +435,8 @@ namespace Nuke.Azure
         public virtual string Tags { get; internal set; }
         /// <summary><p>The desired commitment tier for this account to use.</p></summary>
         public virtual DlsAccountTier Tier { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -460,6 +462,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--tags {value}", Tags)
               .Add("--tier {value}", Tier)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -478,10 +481,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -496,8 +504,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls account delete")
-              .Add("--account {value}", Account)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -516,10 +526,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -534,8 +549,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls account enable-key-vault")
-              .Add("--account {value}", Account)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -556,6 +573,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -571,6 +590,7 @@ namespace Nuke.Azure
             arguments
               .Add("dls account list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -589,10 +609,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -607,8 +632,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls account show")
-              .Add("--account {value}", Account)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -627,8 +654,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>Allow/block Azure originating IPs through the firewall.</p></summary>
         public virtual DlsAccountUpdateAllowAzureIps AllowAzureIps { get; internal set; }
         /// <summary><p></p></summary>
@@ -645,6 +670,13 @@ namespace Nuke.Azure
         public virtual DlsAccountTier Tier { get; internal set; }
         /// <summary><p>Enable/disable the existing trusted ID providers.</p></summary>
         public virtual DlsAccountUpdateAllowAzureIps TrustedIdProviderState { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -659,7 +691,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls account update")
-              .Add("--account {value}", Account)
               .Add("--allow-azure-ips {value}", AllowAzureIps)
               .Add("--default-group {value}", DefaultGroup)
               .Add("--firewall-state {value}", FirewallState)
@@ -668,6 +699,9 @@ namespace Nuke.Azure
               .Add("--tags {value}", Tags)
               .Add("--tier {value}", Tier)
               .Add("--trusted-id-provider-state {value}", TrustedIdProviderState)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -686,12 +720,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>Content to be appended to the file.</p></summary>
         public virtual string Content { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -706,9 +745,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs append")
-              .Add("--account {value}", Account)
               .Add("--content {value}", Content)
               .Add("--path {value}", Path)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -737,6 +778,8 @@ namespace Nuke.Azure
         public virtual string Folder { get; internal set; }
         /// <summary><p>Indicates that, if the file or folder exists, it should be overwritten.</p></summary>
         public virtual string Force { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -756,6 +799,7 @@ namespace Nuke.Azure
               .Add("--content {value}", Content)
               .Add("--folder {value}", Folder)
               .Add("--force {value}", Force)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -774,12 +818,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
         /// <summary><p>Indicates this should be a recursive delete of the folder.</p></summary>
         public virtual string Recurse { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -794,9 +843,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs delete")
-              .Add("--account {value}", Account)
               .Add("--path {value}", Path)
               .Add("--recurse {value}", Recurse)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -815,8 +866,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The local path where the file or folder will be downloaded to.</p></summary>
         public virtual string DestinationPath { get; internal set; }
         /// <summary><p>The full path in the Data Lake Store filesystem to download the file or folder from.</p></summary>
@@ -833,6 +882,13 @@ namespace Nuke.Azure
         public virtual string ProgressCallback { get; internal set; }
         /// <summary><p>Parallelism of the download. Default: The number of cores in the local machine.</p></summary>
         public virtual string ThreadCount { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -847,7 +903,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs download")
-              .Add("--account {value}", Account)
               .Add("--destination-path {value}", DestinationPath)
               .Add("--source-path {value}", SourcePath)
               .Add("--block-size {value}", BlockSize)
@@ -856,6 +911,9 @@ namespace Nuke.Azure
               .Add("--overwrite {value}", Overwrite)
               .Add("--progress-callback {value}", ProgressCallback)
               .Add("--thread-count {value}", ThreadCount)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -874,14 +932,19 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The destination path in the Data Lake Store account.</p></summary>
         public virtual string DestinationPath { get; internal set; }
         /// <summary><p>The space-separated list of files in the Data Lake Store account to join.</p></summary>
         public virtual string SourcePaths { get; internal set; }
         /// <summary><p>Indicates that, if the destination file already exists, it should be overwritten.</p></summary>
         public virtual string Force { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -896,10 +959,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs join")
-              .Add("--account {value}", Account)
               .Add("--destination-path {value}", DestinationPath)
               .Add("--source-paths {value}", SourcePaths)
               .Add("--force {value}", Force)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -918,10 +983,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -936,8 +1006,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs list")
-              .Add("--account {value}", Account)
               .Add("--path {value}", Path)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -956,14 +1028,19 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The destination path in the Data Lake Store account.</p></summary>
         public virtual string DestinationPath { get; internal set; }
         /// <summary><p>The file or folder to move.</p></summary>
         public virtual string SourcePath { get; internal set; }
         /// <summary><p>Indicates that, if the destination file or folder already exists, it should be overwritten and replaced with the file or folder being moved.</p></summary>
         public virtual string Force { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -978,10 +1055,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs move")
-              .Add("--account {value}", Account)
               .Add("--destination-path {value}", DestinationPath)
               .Add("--source-path {value}", SourcePath)
               .Add("--force {value}", Force)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1000,8 +1079,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
         /// <summary><p>Indicates that, if the preview is larger than 1MB, still retrieve it. This can potentially be very slow, depending on how large the file is.</p></summary>
@@ -1010,6 +1087,13 @@ namespace Nuke.Azure
         public virtual string Length { get; internal set; }
         /// <summary><p>The position in bytes to start the preview from.</p></summary>
         public virtual string Offset { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1024,11 +1108,13 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs preview")
-              .Add("--account {value}", Account)
               .Add("--path {value}", Path)
               .Add("--force {value}", Force)
               .Add("--length {value}", Length)
               .Add("--offset {value}", Offset)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1047,10 +1133,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1065,8 +1156,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs remove-expiry")
-              .Add("--account {value}", Account)
               .Add("--path {value}", Path)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1085,12 +1178,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The absolute value of the expiration time expressed as milliseconds since the epoch.</p></summary>
         public virtual string ExpirationTime { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1105,9 +1203,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs set-expiry")
-              .Add("--account {value}", Account)
               .Add("--expiration-time {value}", ExpirationTime)
               .Add("--path {value}", Path)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1126,10 +1226,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1144,8 +1249,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs show")
-              .Add("--account {value}", Account)
               .Add("--path {value}", Path)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1164,10 +1271,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1182,8 +1294,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs test")
-              .Add("--account {value}", Account)
               .Add("--path {value}", Path)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1202,8 +1316,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The full path in the Data Lake Store filesystem to upload the file or folder to.</p></summary>
         public virtual string DestinationPath { get; internal set; }
         /// <summary><p>The path to the file or folder to upload.</p></summary>
@@ -1220,6 +1332,13 @@ namespace Nuke.Azure
         public virtual string ProgressCallback { get; internal set; }
         /// <summary><p>Parallelism of the upload. Default: The number of cores in the local machine.</p></summary>
         public virtual string ThreadCount { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1234,7 +1353,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs upload")
-              .Add("--account {value}", Account)
               .Add("--destination-path {value}", DestinationPath)
               .Add("--source-path {value}", SourcePath)
               .Add("--block-size {value}", BlockSize)
@@ -1243,6 +1361,9 @@ namespace Nuke.Azure
               .Add("--overwrite {value}", Overwrite)
               .Add("--progress-callback {value}", ProgressCallback)
               .Add("--thread-count {value}", ThreadCount)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1271,6 +1392,8 @@ namespace Nuke.Azure
         public virtual string StartIpAddress { get; internal set; }
         /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1290,6 +1413,7 @@ namespace Nuke.Azure
               .Add("--firewall-rule-name {value}", FirewallRuleName)
               .Add("--start-ip-address {value}", StartIpAddress)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1308,12 +1432,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The name of the firewall rule to delete.</p></summary>
         public virtual string FirewallRuleName { get; internal set; }
         /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1328,9 +1457,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls account firewall delete")
-              .Add("--account {value}", Account)
               .Add("--firewall-rule-name {value}", FirewallRuleName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1349,10 +1480,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1367,8 +1503,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls account firewall list")
-              .Add("--account {value}", Account)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1387,12 +1525,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The name of the firewall rule to retrieve.</p></summary>
         public virtual string FirewallRuleName { get; internal set; }
         /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1407,9 +1550,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls account firewall show")
-              .Add("--account {value}", Account)
               .Add("--firewall-rule-name {value}", FirewallRuleName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1428,8 +1573,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The name of the firewall rule to update.</p></summary>
         public virtual string FirewallRuleName { get; internal set; }
         /// <summary><p>The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
@@ -1438,6 +1581,13 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p></summary>
         public virtual string StartIpAddress { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1452,11 +1602,252 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls account firewall update")
-              .Add("--account {value}", Account)
               .Add("--firewall-rule-name {value}", FirewallRuleName)
               .Add("--end-ip-address {value}", EndIpAddress)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--start-ip-address {value}", StartIpAddress)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderCreateSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountTrustedProviderCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>The URL of this trusted identity provider.</p></summary>
+        public virtual string IdProvider { get; internal set; }
+        /// <summary><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
+        public virtual string TrustedIdProviderName { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account trusted-provider create")
+              .Add("--account {value}", Account)
+              .Add("--id-provider {value}", IdProvider)
+              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderDeleteSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountTrustedProviderDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>The name of the trusted identity provider to delete.</p></summary>
+        public virtual string TrustedIdProviderName { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account trusted-provider delete")
+              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderListSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountTrustedProviderListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account trusted-provider list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderShowSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountTrustedProviderShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>The name of the trusted identity provider to retrieve.</p></summary>
+        public virtual string TrustedIdProviderName { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account trusted-provider show")
+              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderUpdateSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountTrustedProviderUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
+        public virtual string TrustedIdProviderName { get; internal set; }
+        /// <summary><p>The URL of this trusted identity provider.</p></summary>
+        public virtual string IdProvider { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account trusted-provider update")
+              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
+              .Add("--id-provider {value}", IdProvider)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1485,6 +1876,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The name of the virtual network rule.</p></summary>
         public virtual string VnetName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1504,6 +1897,7 @@ namespace Nuke.Azure
               .Add("--subnet {value}", Subnet)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--vnet-name {value}", VnetName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1524,10 +1918,15 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
         /// <summary><p>Name of the Data Lake Store account.</p></summary>
         public virtual string AccountName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The virtual network rule name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1543,8 +1942,10 @@ namespace Nuke.Azure
             arguments
               .Add("dls account network-rule delete")
               .Add("--account-name {value}", AccountName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1567,6 +1968,8 @@ namespace Nuke.Azure
         public virtual string AccountName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1583,6 +1986,7 @@ namespace Nuke.Azure
               .Add("dls account network-rule list")
               .Add("--account-name {value}", AccountName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1603,10 +2007,15 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
         /// <summary><p>Name of the Data Lake Store account.</p></summary>
         public virtual string AccountName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The virtual network rule name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1622,8 +2031,10 @@ namespace Nuke.Azure
             arguments
               .Add("dls account network-rule show")
               .Add("--account-name {value}", AccountName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1644,14 +2055,19 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
         /// <summary><p>Name of the Data Lake Store account.</p></summary>
         public virtual string AccountName { get; internal set; }
-        /// <summary><p>The virtual network rule name.</p></summary>
-        public virtual string Name { get; internal set; }
         /// <summary><p>Name or ID of the subnet that allows access to DLS. If subnet name is provided, --name must be provided.</p></summary>
         public virtual string Subnet { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The virtual network rule name.</p></summary>
         public virtual string VnetName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>The virtual network rule name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
@@ -1675,222 +2091,16 @@ namespace Nuke.Azure
             arguments
               .Add("dls account network-rule update")
               .Add("--account-name {value}", AccountName)
-              .Add("--name {value}", Name)
               .Add("--subnet {value}", Subnet)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--vnet-name {value}", VnetName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderCreateSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountTrustedProviderCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The URL of this trusted identity provider.</p></summary>
-        public virtual string IdProvider { get; internal set; }
-        /// <summary><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
-        public virtual string TrustedIdProviderName { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account trusted-provider create")
-              .Add("--account {value}", Account)
-              .Add("--id-provider {value}", IdProvider)
-              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderDeleteSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountTrustedProviderDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the trusted identity provider to delete.</p></summary>
-        public virtual string TrustedIdProviderName { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account trusted-provider delete")
-              .Add("--account {value}", Account)
-              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderListSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountTrustedProviderListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account trusted-provider list")
-              .Add("--account {value}", Account)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderShowSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountTrustedProviderShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the trusted identity provider to retrieve.</p></summary>
-        public virtual string TrustedIdProviderName { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account trusted-provider show")
-              .Add("--account {value}", Account)
-              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderUpdateSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountTrustedProviderUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
-        public virtual string TrustedIdProviderName { get; internal set; }
-        /// <summary><p>The URL of this trusted identity provider.</p></summary>
-        public virtual string IdProvider { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account trusted-provider update")
-              .Add("--account {value}", Account)
-              .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
-              .Add("--id-provider {value}", IdProvider)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1909,12 +2119,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
         /// <summary><p>A switch that, if specified, indicates that the remove ACL operation should remove the default ACL of the folder. Otherwise the regular ACL is removed.</p></summary>
         public virtual string DefaultAcl { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1929,9 +2144,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs access remove-all")
-              .Add("--account {value}", Account)
               .Add("--path {value}", Path)
               .Add("--default-acl {value}", DefaultAcl)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1950,12 +2167,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The ACL specification to set on the path in the format '[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,...'.</p></summary>
         public virtual string AclSpec { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1970,9 +2192,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs access remove-entry")
-              .Add("--account {value}", Account)
               .Add("--acl-spec {value}", AclSpec)
               .Add("--path {value}", Path)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1991,12 +2215,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The ACL specification to set on the path in the format '[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,...'.</p></summary>
         public virtual string AclSpec { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2011,9 +2240,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs access set")
-              .Add("--account {value}", Account)
               .Add("--acl-spec {value}", AclSpec)
               .Add("--path {value}", Path)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2032,12 +2263,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The ACL specification to set on the path in the format '[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,...'.</p></summary>
         public virtual string AclSpec { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2052,9 +2288,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs access set-entry")
-              .Add("--account {value}", Account)
               .Add("--acl-spec {value}", AclSpec)
               .Add("--path {value}", Path)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2073,14 +2311,19 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
         /// <summary><p>The group Azure Active Directory object ID or user principal name to set as the owning group.</p></summary>
         public virtual string Group { get; internal set; }
         /// <summary><p>The user Azure Active Directory object ID or user principal name to set as the owner.</p></summary>
         public virtual string Owner { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2095,10 +2338,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs access set-owner")
-              .Add("--account {value}", Account)
               .Add("--path {value}", Path)
               .Add("--group {value}", Group)
               .Add("--owner {value}", Owner)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2117,12 +2362,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
         /// <summary><p>The octal representation of the permissions for user, group and mask.</p></summary>
         public virtual string Permission { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2137,9 +2387,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs access set-permission")
-              .Add("--account {value}", Account)
               .Add("--path {value}", Path)
               .Add("--permission {value}", Permission)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2158,10 +2410,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDls executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
         /// <summary><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2176,8 +2433,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls fs access show")
-              .Add("--account {value}", Account)
               .Add("--path {value}", Path)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2489,6 +2748,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings SetSubscription(this AzureDlsAccountCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountCreateSettings ResetSubscription(this AzureDlsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2587,6 +2864,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsAccountDeleteSettingsExtensions
     {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings SetResourceGroup(this AzureDlsAccountDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings ResetResourceGroup(this AzureDlsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
         #region Account
         /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
         [Pure]
@@ -2605,21 +2900,81 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsAccountDeleteSettings SetResourceGroup(this AzureDlsAccountDeleteSettings toolSettings, string resourceGroup)
+        public static AzureDlsAccountDeleteSettings SetIds(this AzureDlsAccountDeleteSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsAccountDeleteSettings ResetResourceGroup(this AzureDlsAccountDeleteSettings toolSettings)
+        public static AzureDlsAccountDeleteSettings SetIds(this AzureDlsAccountDeleteSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings AddIds(this AzureDlsAccountDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings AddIds(this AzureDlsAccountDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings ClearIds(this AzureDlsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings RemoveIds(this AzureDlsAccountDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings RemoveIds(this AzureDlsAccountDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings SetSubscription(this AzureDlsAccountDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountDeleteSettings ResetSubscription(this AzureDlsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2721,6 +3076,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsAccountEnableKeyVaultSettingsExtensions
     {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings SetResourceGroup(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings ResetResourceGroup(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
         #region Account
         /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
         [Pure]
@@ -2739,21 +3112,81 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings SetResourceGroup(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string resourceGroup)
+        public static AzureDlsAccountEnableKeyVaultSettings SetIds(this AzureDlsAccountEnableKeyVaultSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsAccountEnableKeyVaultSettings ResetResourceGroup(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
+        public static AzureDlsAccountEnableKeyVaultSettings SetIds(this AzureDlsAccountEnableKeyVaultSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountEnableKeyVaultSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings AddIds(this AzureDlsAccountEnableKeyVaultSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountEnableKeyVaultSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings AddIds(this AzureDlsAccountEnableKeyVaultSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountEnableKeyVaultSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings ClearIds(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountEnableKeyVaultSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings RemoveIds(this AzureDlsAccountEnableKeyVaultSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountEnableKeyVaultSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings RemoveIds(this AzureDlsAccountEnableKeyVaultSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings SetSubscription(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountEnableKeyVaultSettings ResetSubscription(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2873,6 +3306,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings SetSubscription(this AzureDlsAccountListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountListSettings ResetSubscription(this AzureDlsAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2971,6 +3422,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsAccountShowSettingsExtensions
     {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings SetResourceGroup(this AzureDlsAccountShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings ResetResourceGroup(this AzureDlsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
         #region Account
         /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
         [Pure]
@@ -2989,21 +3458,81 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsAccountShowSettings SetResourceGroup(this AzureDlsAccountShowSettings toolSettings, string resourceGroup)
+        public static AzureDlsAccountShowSettings SetIds(this AzureDlsAccountShowSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsAccountShowSettings ResetResourceGroup(this AzureDlsAccountShowSettings toolSettings)
+        public static AzureDlsAccountShowSettings SetIds(this AzureDlsAccountShowSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings AddIds(this AzureDlsAccountShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings AddIds(this AzureDlsAccountShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings ClearIds(this AzureDlsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings RemoveIds(this AzureDlsAccountShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings RemoveIds(this AzureDlsAccountShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings SetSubscription(this AzureDlsAccountShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountShowSettings ResetSubscription(this AzureDlsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3105,24 +3634,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsAccountUpdateSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings SetAccount(this AzureDlsAccountUpdateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountUpdateSettings ResetAccount(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region AllowAzureIps
         /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.AllowAzureIps"/>.</em></p><p>Allow/block Azure originating IPs through the firewall.</p></summary>
         [Pure]
@@ -3267,6 +3778,102 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetAccount(this AzureDlsAccountUpdateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetAccount(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetIds(this AzureDlsAccountUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetIds(this AzureDlsAccountUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings AddIds(this AzureDlsAccountUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings AddIds(this AzureDlsAccountUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ClearIds(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings RemoveIds(this AzureDlsAccountUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings RemoveIds(this AzureDlsAccountUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings SetSubscription(this AzureDlsAccountUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountUpdateSettings ResetSubscription(this AzureDlsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3365,24 +3972,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsAppendSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings SetAccount(this AzureDlsFsAppendSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings ResetAccount(this AzureDlsFsAppendSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region Content
         /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Content"/>.</em></p><p>Content to be appended to the file.</p></summary>
         [Pure]
@@ -3416,6 +4005,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings SetAccount(this AzureDlsFsAppendSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings ResetAccount(this AzureDlsFsAppendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings SetIds(this AzureDlsFsAppendSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings SetIds(this AzureDlsFsAppendSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAppendSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings AddIds(this AzureDlsFsAppendSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAppendSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings AddIds(this AzureDlsFsAppendSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsAppendSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings ClearIds(this AzureDlsFsAppendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAppendSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings RemoveIds(this AzureDlsFsAppendSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAppendSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings RemoveIds(this AzureDlsFsAppendSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings SetSubscription(this AzureDlsFsAppendSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings ResetSubscription(this AzureDlsFsAppendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3607,6 +4292,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings SetSubscription(this AzureDlsFsCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings ResetSubscription(this AzureDlsFsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3705,24 +4408,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsDeleteSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings SetAccount(this AzureDlsFsDeleteSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings ResetAccount(this AzureDlsFsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region Path
         /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         [Pure]
@@ -3756,6 +4441,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Recurse = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings SetAccount(this AzureDlsFsDeleteSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings ResetAccount(this AzureDlsFsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings SetIds(this AzureDlsFsDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings SetIds(this AzureDlsFsDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings AddIds(this AzureDlsFsDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings AddIds(this AzureDlsFsDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings ClearIds(this AzureDlsFsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings RemoveIds(this AzureDlsFsDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings RemoveIds(this AzureDlsFsDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings SetSubscription(this AzureDlsFsDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings ResetSubscription(this AzureDlsFsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3857,24 +4638,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsDownloadSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetAccount(this AzureDlsFsDownloadSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetAccount(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region DestinationPath
         /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.DestinationPath"/>.</em></p><p>The local path where the file or folder will be downloaded to.</p></summary>
         [Pure]
@@ -4019,6 +4782,102 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetAccount(this AzureDlsFsDownloadSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetAccount(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetIds(this AzureDlsFsDownloadSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetIds(this AzureDlsFsDownloadSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsDownloadSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings AddIds(this AzureDlsFsDownloadSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsDownloadSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings AddIds(this AzureDlsFsDownloadSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsDownloadSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ClearIds(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsDownloadSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings RemoveIds(this AzureDlsFsDownloadSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsDownloadSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings RemoveIds(this AzureDlsFsDownloadSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetSubscription(this AzureDlsFsDownloadSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetSubscription(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4117,24 +4976,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsJoinSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings SetAccount(this AzureDlsFsJoinSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings ResetAccount(this AzureDlsFsJoinSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region DestinationPath
         /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.DestinationPath"/>.</em></p><p>The destination path in the Data Lake Store account.</p></summary>
         [Pure]
@@ -4186,6 +5027,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Force = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings SetAccount(this AzureDlsFsJoinSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings ResetAccount(this AzureDlsFsJoinSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings SetIds(this AzureDlsFsJoinSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings SetIds(this AzureDlsFsJoinSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsJoinSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings AddIds(this AzureDlsFsJoinSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsJoinSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings AddIds(this AzureDlsFsJoinSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsJoinSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings ClearIds(this AzureDlsFsJoinSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsJoinSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings RemoveIds(this AzureDlsFsJoinSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsJoinSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings RemoveIds(this AzureDlsFsJoinSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings SetSubscription(this AzureDlsFsJoinSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings ResetSubscription(this AzureDlsFsJoinSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4287,6 +5224,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsListSettingsExtensions
     {
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings SetPath(this AzureDlsFsListSettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings ResetPath(this AzureDlsFsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
         #region Account
         /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
         [Pure]
@@ -4305,21 +5260,81 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsFsListSettings SetPath(this AzureDlsFsListSettings toolSettings, string path)
+        public static AzureDlsFsListSettings SetIds(this AzureDlsFsListSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsFsListSettings ResetPath(this AzureDlsFsListSettings toolSettings)
+        public static AzureDlsFsListSettings SetIds(this AzureDlsFsListSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings AddIds(this AzureDlsFsListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings AddIds(this AzureDlsFsListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings ClearIds(this AzureDlsFsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings RemoveIds(this AzureDlsFsListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings RemoveIds(this AzureDlsFsListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings SetSubscription(this AzureDlsFsListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings ResetSubscription(this AzureDlsFsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4421,24 +5436,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsMoveSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings SetAccount(this AzureDlsFsMoveSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings ResetAccount(this AzureDlsFsMoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region DestinationPath
         /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.DestinationPath"/>.</em></p><p>The destination path in the Data Lake Store account.</p></summary>
         [Pure]
@@ -4490,6 +5487,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Force = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings SetAccount(this AzureDlsFsMoveSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings ResetAccount(this AzureDlsFsMoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings SetIds(this AzureDlsFsMoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings SetIds(this AzureDlsFsMoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsMoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings AddIds(this AzureDlsFsMoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsMoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings AddIds(this AzureDlsFsMoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsMoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings ClearIds(this AzureDlsFsMoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsMoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings RemoveIds(this AzureDlsFsMoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsMoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings RemoveIds(this AzureDlsFsMoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings SetSubscription(this AzureDlsFsMoveSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings ResetSubscription(this AzureDlsFsMoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4591,24 +5684,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsPreviewSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings SetAccount(this AzureDlsFsPreviewSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings ResetAccount(this AzureDlsFsPreviewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region Path
         /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         [Pure]
@@ -4678,6 +5753,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Offset = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetAccount(this AzureDlsFsPreviewSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings ResetAccount(this AzureDlsFsPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetIds(this AzureDlsFsPreviewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetIds(this AzureDlsFsPreviewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsPreviewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings AddIds(this AzureDlsFsPreviewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsPreviewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings AddIds(this AzureDlsFsPreviewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsPreviewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings ClearIds(this AzureDlsFsPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsPreviewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings RemoveIds(this AzureDlsFsPreviewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsPreviewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings RemoveIds(this AzureDlsFsPreviewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetSubscription(this AzureDlsFsPreviewSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings ResetSubscription(this AzureDlsFsPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4779,6 +5950,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsRemoveExpirySettingsExtensions
     {
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings SetPath(this AzureDlsFsRemoveExpirySettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings ResetPath(this AzureDlsFsRemoveExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
         #region Account
         /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
         [Pure]
@@ -4797,21 +5986,81 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsFsRemoveExpirySettings SetPath(this AzureDlsFsRemoveExpirySettings toolSettings, string path)
+        public static AzureDlsFsRemoveExpirySettings SetIds(this AzureDlsFsRemoveExpirySettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsFsRemoveExpirySettings ResetPath(this AzureDlsFsRemoveExpirySettings toolSettings)
+        public static AzureDlsFsRemoveExpirySettings SetIds(this AzureDlsFsRemoveExpirySettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsRemoveExpirySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings AddIds(this AzureDlsFsRemoveExpirySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsRemoveExpirySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings AddIds(this AzureDlsFsRemoveExpirySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsRemoveExpirySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings ClearIds(this AzureDlsFsRemoveExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsRemoveExpirySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings RemoveIds(this AzureDlsFsRemoveExpirySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsRemoveExpirySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings RemoveIds(this AzureDlsFsRemoveExpirySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings SetSubscription(this AzureDlsFsRemoveExpirySettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings ResetSubscription(this AzureDlsFsRemoveExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4913,24 +6162,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsSetExpirySettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings SetAccount(this AzureDlsFsSetExpirySettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings ResetAccount(this AzureDlsFsSetExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region ExpirationTime
         /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.ExpirationTime"/>.</em></p><p>The absolute value of the expiration time expressed as milliseconds since the epoch.</p></summary>
         [Pure]
@@ -4964,6 +6195,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings SetAccount(this AzureDlsFsSetExpirySettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings ResetAccount(this AzureDlsFsSetExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings SetIds(this AzureDlsFsSetExpirySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings SetIds(this AzureDlsFsSetExpirySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsSetExpirySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings AddIds(this AzureDlsFsSetExpirySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsSetExpirySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings AddIds(this AzureDlsFsSetExpirySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsSetExpirySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings ClearIds(this AzureDlsFsSetExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsSetExpirySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings RemoveIds(this AzureDlsFsSetExpirySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsSetExpirySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings RemoveIds(this AzureDlsFsSetExpirySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings SetSubscription(this AzureDlsFsSetExpirySettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings ResetSubscription(this AzureDlsFsSetExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5065,6 +6392,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsShowSettingsExtensions
     {
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings SetPath(this AzureDlsFsShowSettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings ResetPath(this AzureDlsFsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
         #region Account
         /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
         [Pure]
@@ -5083,21 +6428,81 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsFsShowSettings SetPath(this AzureDlsFsShowSettings toolSettings, string path)
+        public static AzureDlsFsShowSettings SetIds(this AzureDlsFsShowSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsFsShowSettings ResetPath(this AzureDlsFsShowSettings toolSettings)
+        public static AzureDlsFsShowSettings SetIds(this AzureDlsFsShowSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings AddIds(this AzureDlsFsShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings AddIds(this AzureDlsFsShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings ClearIds(this AzureDlsFsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings RemoveIds(this AzureDlsFsShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings RemoveIds(this AzureDlsFsShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings SetSubscription(this AzureDlsFsShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings ResetSubscription(this AzureDlsFsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5199,6 +6604,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsTestSettingsExtensions
     {
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings SetPath(this AzureDlsFsTestSettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings ResetPath(this AzureDlsFsTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
         #region Account
         /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
         [Pure]
@@ -5217,21 +6640,81 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsFsTestSettings SetPath(this AzureDlsFsTestSettings toolSettings, string path)
+        public static AzureDlsFsTestSettings SetIds(this AzureDlsFsTestSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsFsTestSettings ResetPath(this AzureDlsFsTestSettings toolSettings)
+        public static AzureDlsFsTestSettings SetIds(this AzureDlsFsTestSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsTestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings AddIds(this AzureDlsFsTestSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsTestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings AddIds(this AzureDlsFsTestSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsTestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings ClearIds(this AzureDlsFsTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsTestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings RemoveIds(this AzureDlsFsTestSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsTestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings RemoveIds(this AzureDlsFsTestSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings SetSubscription(this AzureDlsFsTestSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings ResetSubscription(this AzureDlsFsTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5333,24 +6816,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsUploadSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetAccount(this AzureDlsFsUploadSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetAccount(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region DestinationPath
         /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.DestinationPath"/>.</em></p><p>The full path in the Data Lake Store filesystem to upload the file or folder to.</p></summary>
         [Pure]
@@ -5492,6 +6957,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ThreadCount = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetAccount(this AzureDlsFsUploadSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetAccount(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetIds(this AzureDlsFsUploadSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetIds(this AzureDlsFsUploadSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsUploadSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings AddIds(this AzureDlsFsUploadSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsUploadSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings AddIds(this AzureDlsFsUploadSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsUploadSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ClearIds(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsUploadSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings RemoveIds(this AzureDlsFsUploadSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsUploadSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings RemoveIds(this AzureDlsFsUploadSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetSubscription(this AzureDlsFsUploadSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetSubscription(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5683,6 +7244,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings SetSubscription(this AzureDlsAccountFirewallCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings ResetSubscription(this AzureDlsAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -5781,24 +7360,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsAccountFirewallDeleteSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings SetAccount(this AzureDlsAccountFirewallDeleteSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings ResetAccount(this AzureDlsAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region FirewallRuleName
         /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to delete.</p></summary>
         [Pure]
@@ -5832,6 +7393,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetAccount(this AzureDlsAccountFirewallDeleteSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings ResetAccount(this AzureDlsAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings AddIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings AddIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings ClearIds(this AzureDlsAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings RemoveIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings RemoveIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetSubscription(this AzureDlsAccountFirewallDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings ResetSubscription(this AzureDlsAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5933,6 +7590,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsAccountFirewallListSettingsExtensions
     {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings SetResourceGroup(this AzureDlsAccountFirewallListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings ResetResourceGroup(this AzureDlsAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
         #region Account
         /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
         [Pure]
@@ -5951,21 +7626,81 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsAccountFirewallListSettings SetResourceGroup(this AzureDlsAccountFirewallListSettings toolSettings, string resourceGroup)
+        public static AzureDlsAccountFirewallListSettings SetIds(this AzureDlsAccountFirewallListSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsAccountFirewallListSettings ResetResourceGroup(this AzureDlsAccountFirewallListSettings toolSettings)
+        public static AzureDlsAccountFirewallListSettings SetIds(this AzureDlsAccountFirewallListSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountFirewallListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings AddIds(this AzureDlsAccountFirewallListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountFirewallListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings AddIds(this AzureDlsAccountFirewallListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountFirewallListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings ClearIds(this AzureDlsAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountFirewallListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings RemoveIds(this AzureDlsAccountFirewallListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountFirewallListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings RemoveIds(this AzureDlsAccountFirewallListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings SetSubscription(this AzureDlsAccountFirewallListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings ResetSubscription(this AzureDlsAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6067,24 +7802,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsAccountFirewallShowSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings SetAccount(this AzureDlsAccountFirewallShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings ResetAccount(this AzureDlsAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region FirewallRuleName
         /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to retrieve.</p></summary>
         [Pure]
@@ -6118,6 +7835,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetAccount(this AzureDlsAccountFirewallShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings ResetAccount(this AzureDlsAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetIds(this AzureDlsAccountFirewallShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetIds(this AzureDlsAccountFirewallShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountFirewallShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings AddIds(this AzureDlsAccountFirewallShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountFirewallShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings AddIds(this AzureDlsAccountFirewallShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountFirewallShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings ClearIds(this AzureDlsAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountFirewallShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings RemoveIds(this AzureDlsAccountFirewallShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountFirewallShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings RemoveIds(this AzureDlsAccountFirewallShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetSubscription(this AzureDlsAccountFirewallShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings ResetSubscription(this AzureDlsAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6219,24 +8032,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsAccountFirewallUpdateSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetAccount(this AzureDlsAccountFirewallUpdateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings ResetAccount(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region FirewallRuleName
         /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.FirewallRuleName"/>.</em></p><p>The name of the firewall rule to update.</p></summary>
         [Pure]
@@ -6306,6 +8101,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.StartIpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetAccount(this AzureDlsAccountFirewallUpdateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ResetAccount(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings AddIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings AddIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ClearIds(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings RemoveIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings RemoveIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetSubscription(this AzureDlsAccountFirewallUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ResetSubscription(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6393,6 +8284,1114 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureDlsAccountFirewallUpdateSettings ResetVerbose(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountTrustedProviderCreateSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetAccount(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetAccount(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IdProvider
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetIdProvider(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string idProvider)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdProvider = idProvider;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetIdProvider(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdProvider = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TrustedIdProviderName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string trustedIdProviderName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = trustedIdProviderName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetResourceGroup(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetSubscription(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetSubscription(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetDebug(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetDebug(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetHelp(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetHelp(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetOutput(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetOutput(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetQuery(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetQuery(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings SetVerbose(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderCreateSettings ResetVerbose(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountTrustedProviderDeleteSettingsExtensions
+    {
+        #region TrustedIdProviderName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to delete.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string trustedIdProviderName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = trustedIdProviderName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to delete.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetResourceGroup(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetAccount(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetAccount(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetIds(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetIds(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings AddIds(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings AddIds(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ClearIds(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings RemoveIds(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings RemoveIds(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetSubscription(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetSubscription(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetDebug(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetDebug(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetHelp(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetHelp(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetOutput(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetOutput(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetQuery(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetQuery(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings SetVerbose(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderDeleteSettings ResetVerbose(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountTrustedProviderListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetResourceGroup(this AzureDlsAccountTrustedProviderListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetAccount(this AzureDlsAccountTrustedProviderListSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetAccount(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetIds(this AzureDlsAccountTrustedProviderListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetIds(this AzureDlsAccountTrustedProviderListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountTrustedProviderListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings AddIds(this AzureDlsAccountTrustedProviderListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountTrustedProviderListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings AddIds(this AzureDlsAccountTrustedProviderListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountTrustedProviderListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ClearIds(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountTrustedProviderListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings RemoveIds(this AzureDlsAccountTrustedProviderListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountTrustedProviderListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings RemoveIds(this AzureDlsAccountTrustedProviderListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetSubscription(this AzureDlsAccountTrustedProviderListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetSubscription(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetDebug(this AzureDlsAccountTrustedProviderListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetDebug(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetHelp(this AzureDlsAccountTrustedProviderListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetHelp(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetOutput(this AzureDlsAccountTrustedProviderListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetOutput(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetQuery(this AzureDlsAccountTrustedProviderListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetQuery(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings SetVerbose(this AzureDlsAccountTrustedProviderListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderListSettings ResetVerbose(this AzureDlsAccountTrustedProviderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountTrustedProviderShowSettingsExtensions
+    {
+        #region TrustedIdProviderName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to retrieve.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string trustedIdProviderName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = trustedIdProviderName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to retrieve.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetResourceGroup(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetAccount(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetAccount(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetIds(this AzureDlsAccountTrustedProviderShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetIds(this AzureDlsAccountTrustedProviderShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountTrustedProviderShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings AddIds(this AzureDlsAccountTrustedProviderShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountTrustedProviderShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings AddIds(this AzureDlsAccountTrustedProviderShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountTrustedProviderShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ClearIds(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountTrustedProviderShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings RemoveIds(this AzureDlsAccountTrustedProviderShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountTrustedProviderShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings RemoveIds(this AzureDlsAccountTrustedProviderShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetSubscription(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetSubscription(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetDebug(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetDebug(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetHelp(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetHelp(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetOutput(this AzureDlsAccountTrustedProviderShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetOutput(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetQuery(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetQuery(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings SetVerbose(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderShowSettings ResetVerbose(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountTrustedProviderUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountTrustedProviderUpdateSettingsExtensions
+    {
+        #region TrustedIdProviderName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string trustedIdProviderName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = trustedIdProviderName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TrustedIdProviderName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IdProvider
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetIdProvider(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string idProvider)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdProvider = idProvider;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetIdProvider(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdProvider = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetResourceGroup(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetAccount(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetAccount(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetIds(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetIds(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings AddIds(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings AddIds(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ClearIds(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings RemoveIds(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings RemoveIds(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetSubscription(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetSubscription(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetDebug(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetDebug(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetHelp(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetHelp(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetOutput(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetOutput(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetQuery(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetQuery(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings SetVerbose(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsAccountTrustedProviderUpdateSettings ResetVerbose(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -6494,6 +9493,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.VnetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings SetSubscription(this AzureDlsAccountNetworkRuleCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleCreateSettings ResetSubscription(this AzureDlsAccountNetworkRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6613,6 +9630,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings SetIds(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings SetIds(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings AddIds(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings AddIds(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings ClearIds(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings RemoveIds(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings RemoveIds(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
         [Pure]
@@ -6646,6 +9723,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings SetSubscription(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleDeleteSettings ResetSubscription(this AzureDlsAccountNetworkRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6783,6 +9878,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings SetSubscription(this AzureDlsAccountNetworkRuleListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleListSettings ResetSubscription(this AzureDlsAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -6899,6 +10012,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings SetIds(this AzureDlsAccountNetworkRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings SetIds(this AzureDlsAccountNetworkRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountNetworkRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings AddIds(this AzureDlsAccountNetworkRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountNetworkRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings AddIds(this AzureDlsAccountNetworkRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountNetworkRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings ClearIds(this AzureDlsAccountNetworkRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountNetworkRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings RemoveIds(this AzureDlsAccountNetworkRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountNetworkRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings RemoveIds(this AzureDlsAccountNetworkRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleShowSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
         [Pure]
@@ -6932,6 +10105,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings SetSubscription(this AzureDlsAccountNetworkRuleShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleShowSettings ResetSubscription(this AzureDlsAccountNetworkRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7051,24 +10242,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
-        [Pure]
-        public static AzureDlsAccountNetworkRuleUpdateSettings SetName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
-        [Pure]
-        public static AzureDlsAccountNetworkRuleUpdateSettings ResetName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
         #region Subnet
         /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Subnet"/>.</em></p><p>Name or ID of the subnet that allows access to DLS. If subnet name is provided, --name must be provided.</p></summary>
         [Pure]
@@ -7084,6 +10257,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Subnet = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetName
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.VnetName"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetVnetName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string vnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = vnetName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.VnetName"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetVnetName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetIds(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetIds(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings AddIds(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings AddIds(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ClearIds(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings RemoveIds(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings RemoveIds(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Name"/>.</em></p><p>The virtual network rule name.</p></summary>
+        [Pure]
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
             return toolSettings;
         }
         #endregion
@@ -7105,21 +10374,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region VnetName
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.VnetName"/>.</em></p><p>The virtual network rule name.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureDlsAccountNetworkRuleUpdateSettings SetVnetName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string vnetName)
+        public static AzureDlsAccountNetworkRuleUpdateSettings SetSubscription(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = vnetName;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.VnetName"/>.</em></p><p>The virtual network rule name.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountNetworkRuleUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureDlsAccountNetworkRuleUpdateSettings ResetVnetName(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
+        public static AzureDlsAccountNetworkRuleUpdateSettings ResetSubscription(this AzureDlsAccountNetworkRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7287,808 +10556,12 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureDlsAccountTrustedProviderCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountTrustedProviderCreateSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetAccount(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetAccount(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region IdProvider
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetIdProvider(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string idProvider)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdProvider = idProvider;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetIdProvider(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdProvider = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TrustedIdProviderName
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string trustedIdProviderName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = trustedIdProviderName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetResourceGroup(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetDebug(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetDebug(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetHelp(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetHelp(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetOutput(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetOutput(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetQuery(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetQuery(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings SetVerbose(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderCreateSettings ResetVerbose(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountTrustedProviderDeleteSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetAccount(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetAccount(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TrustedIdProviderName
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to delete.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string trustedIdProviderName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = trustedIdProviderName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to delete.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetResourceGroup(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetDebug(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetDebug(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetHelp(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetHelp(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetOutput(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetOutput(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetQuery(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetQuery(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings SetVerbose(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderDeleteSettings ResetVerbose(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountTrustedProviderListSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetAccount(this AzureDlsAccountTrustedProviderListSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetAccount(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetResourceGroup(this AzureDlsAccountTrustedProviderListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetDebug(this AzureDlsAccountTrustedProviderListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetDebug(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetHelp(this AzureDlsAccountTrustedProviderListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetHelp(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetOutput(this AzureDlsAccountTrustedProviderListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetOutput(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetQuery(this AzureDlsAccountTrustedProviderListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetQuery(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings SetVerbose(this AzureDlsAccountTrustedProviderListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderListSettings ResetVerbose(this AzureDlsAccountTrustedProviderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountTrustedProviderShowSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetAccount(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetAccount(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TrustedIdProviderName
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to retrieve.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string trustedIdProviderName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = trustedIdProviderName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider to retrieve.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetResourceGroup(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetDebug(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetDebug(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetHelp(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetHelp(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetOutput(this AzureDlsAccountTrustedProviderShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetOutput(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetQuery(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetQuery(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings SetVerbose(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderShowSettings ResetVerbose(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountTrustedProviderUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountTrustedProviderUpdateSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetAccount(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetAccount(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TrustedIdProviderName
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetTrustedIdProviderName(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string trustedIdProviderName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = trustedIdProviderName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.TrustedIdProviderName"/>.</em></p><p>The name of the trusted identity provider. This is used for differentiation of providers in the account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetTrustedIdProviderName(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TrustedIdProviderName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region IdProvider
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetIdProvider(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string idProvider)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdProvider = idProvider;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.IdProvider"/>.</em></p><p>The URL of this trusted identity provider.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetIdProvider(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdProvider = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetResourceGroup(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.ResourceGroup"/>.</em></p><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetResourceGroup(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetDebug(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetDebug(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetHelp(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetHelp(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetOutput(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetOutput(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetQuery(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetQuery(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings SetVerbose(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsAccountTrustedProviderUpdateSettings ResetVerbose(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureDlsFsAccessRemoveAllSettingsExtensions
     /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsAccessRemoveAllSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveAllSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAccessRemoveAllSettings SetAccount(this AzureDlsFsAccessRemoveAllSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessRemoveAllSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAccessRemoveAllSettings ResetAccount(this AzureDlsFsAccessRemoveAllSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region Path
         /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveAllSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         [Pure]
@@ -8122,6 +10595,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DefaultAcl = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveAllSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveAllSettings SetAccount(this AzureDlsFsAccessRemoveAllSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessRemoveAllSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveAllSettings ResetAccount(this AzureDlsFsAccessRemoveAllSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveAllSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveAllSettings SetIds(this AzureDlsFsAccessRemoveAllSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveAllSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveAllSettings SetIds(this AzureDlsFsAccessRemoveAllSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessRemoveAllSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveAllSettings AddIds(this AzureDlsFsAccessRemoveAllSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessRemoveAllSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveAllSettings AddIds(this AzureDlsFsAccessRemoveAllSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsAccessRemoveAllSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveAllSettings ClearIds(this AzureDlsFsAccessRemoveAllSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessRemoveAllSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveAllSettings RemoveIds(this AzureDlsFsAccessRemoveAllSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessRemoveAllSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveAllSettings RemoveIds(this AzureDlsFsAccessRemoveAllSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveAllSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveAllSettings SetSubscription(this AzureDlsFsAccessRemoveAllSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessRemoveAllSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveAllSettings ResetSubscription(this AzureDlsFsAccessRemoveAllSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8223,24 +10792,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsAccessRemoveEntrySettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveEntrySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAccessRemoveEntrySettings SetAccount(this AzureDlsFsAccessRemoveEntrySettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessRemoveEntrySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAccessRemoveEntrySettings ResetAccount(this AzureDlsFsAccessRemoveEntrySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region AclSpec
         /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveEntrySettings.AclSpec"/>.</em></p><p>The ACL specification to set on the path in the format '[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,...'.</p></summary>
         [Pure]
@@ -8274,6 +10825,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveEntrySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveEntrySettings SetAccount(this AzureDlsFsAccessRemoveEntrySettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessRemoveEntrySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveEntrySettings ResetAccount(this AzureDlsFsAccessRemoveEntrySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveEntrySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveEntrySettings SetIds(this AzureDlsFsAccessRemoveEntrySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveEntrySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveEntrySettings SetIds(this AzureDlsFsAccessRemoveEntrySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessRemoveEntrySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveEntrySettings AddIds(this AzureDlsFsAccessRemoveEntrySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessRemoveEntrySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveEntrySettings AddIds(this AzureDlsFsAccessRemoveEntrySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsAccessRemoveEntrySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveEntrySettings ClearIds(this AzureDlsFsAccessRemoveEntrySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessRemoveEntrySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveEntrySettings RemoveIds(this AzureDlsFsAccessRemoveEntrySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessRemoveEntrySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveEntrySettings RemoveIds(this AzureDlsFsAccessRemoveEntrySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveEntrySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveEntrySettings SetSubscription(this AzureDlsFsAccessRemoveEntrySettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessRemoveEntrySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessRemoveEntrySettings ResetSubscription(this AzureDlsFsAccessRemoveEntrySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8375,24 +11022,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsAccessSetSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAccessSetSettings SetAccount(this AzureDlsFsAccessSetSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAccessSetSettings ResetAccount(this AzureDlsFsAccessSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region AclSpec
         /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetSettings.AclSpec"/>.</em></p><p>The ACL specification to set on the path in the format '[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,...'.</p></summary>
         [Pure]
@@ -8426,6 +11055,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetSettings SetAccount(this AzureDlsFsAccessSetSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetSettings ResetAccount(this AzureDlsFsAccessSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetSettings SetIds(this AzureDlsFsAccessSetSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetSettings SetIds(this AzureDlsFsAccessSetSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetSettings AddIds(this AzureDlsFsAccessSetSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetSettings AddIds(this AzureDlsFsAccessSetSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsAccessSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetSettings ClearIds(this AzureDlsFsAccessSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetSettings RemoveIds(this AzureDlsFsAccessSetSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetSettings RemoveIds(this AzureDlsFsAccessSetSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetSettings SetSubscription(this AzureDlsFsAccessSetSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetSettings ResetSubscription(this AzureDlsFsAccessSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8527,24 +11252,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsAccessSetEntrySettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetEntrySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAccessSetEntrySettings SetAccount(this AzureDlsFsAccessSetEntrySettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetEntrySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAccessSetEntrySettings ResetAccount(this AzureDlsFsAccessSetEntrySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region AclSpec
         /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetEntrySettings.AclSpec"/>.</em></p><p>The ACL specification to set on the path in the format '[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,...'.</p></summary>
         [Pure]
@@ -8578,6 +11285,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetEntrySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetEntrySettings SetAccount(this AzureDlsFsAccessSetEntrySettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetEntrySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetEntrySettings ResetAccount(this AzureDlsFsAccessSetEntrySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetEntrySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetEntrySettings SetIds(this AzureDlsFsAccessSetEntrySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetEntrySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetEntrySettings SetIds(this AzureDlsFsAccessSetEntrySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessSetEntrySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetEntrySettings AddIds(this AzureDlsFsAccessSetEntrySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessSetEntrySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetEntrySettings AddIds(this AzureDlsFsAccessSetEntrySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsAccessSetEntrySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetEntrySettings ClearIds(this AzureDlsFsAccessSetEntrySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessSetEntrySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetEntrySettings RemoveIds(this AzureDlsFsAccessSetEntrySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessSetEntrySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetEntrySettings RemoveIds(this AzureDlsFsAccessSetEntrySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetEntrySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetEntrySettings SetSubscription(this AzureDlsFsAccessSetEntrySettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetEntrySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetEntrySettings ResetSubscription(this AzureDlsFsAccessSetEntrySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8679,24 +11482,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsAccessSetOwnerSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetOwnerSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAccessSetOwnerSettings SetAccount(this AzureDlsFsAccessSetOwnerSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetOwnerSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAccessSetOwnerSettings ResetAccount(this AzureDlsFsAccessSetOwnerSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region Path
         /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetOwnerSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         [Pure]
@@ -8748,6 +11533,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Owner = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetOwnerSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetOwnerSettings SetAccount(this AzureDlsFsAccessSetOwnerSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetOwnerSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetOwnerSettings ResetAccount(this AzureDlsFsAccessSetOwnerSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetOwnerSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetOwnerSettings SetIds(this AzureDlsFsAccessSetOwnerSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetOwnerSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetOwnerSettings SetIds(this AzureDlsFsAccessSetOwnerSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessSetOwnerSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetOwnerSettings AddIds(this AzureDlsFsAccessSetOwnerSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessSetOwnerSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetOwnerSettings AddIds(this AzureDlsFsAccessSetOwnerSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsAccessSetOwnerSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetOwnerSettings ClearIds(this AzureDlsFsAccessSetOwnerSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessSetOwnerSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetOwnerSettings RemoveIds(this AzureDlsFsAccessSetOwnerSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessSetOwnerSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetOwnerSettings RemoveIds(this AzureDlsFsAccessSetOwnerSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetOwnerSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetOwnerSettings SetSubscription(this AzureDlsFsAccessSetOwnerSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetOwnerSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetOwnerSettings ResetSubscription(this AzureDlsFsAccessSetOwnerSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8849,24 +11730,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsAccessSetPermissionSettingsExtensions
     {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetPermissionSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAccessSetPermissionSettings SetAccount(this AzureDlsFsAccessSetPermissionSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetPermissionSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAccessSetPermissionSettings ResetAccount(this AzureDlsFsAccessSetPermissionSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
         #region Path
         /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetPermissionSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
         [Pure]
@@ -8900,6 +11763,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Permission = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetPermissionSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetPermissionSettings SetAccount(this AzureDlsFsAccessSetPermissionSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetPermissionSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetPermissionSettings ResetAccount(this AzureDlsFsAccessSetPermissionSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetPermissionSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetPermissionSettings SetIds(this AzureDlsFsAccessSetPermissionSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetPermissionSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetPermissionSettings SetIds(this AzureDlsFsAccessSetPermissionSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessSetPermissionSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetPermissionSettings AddIds(this AzureDlsFsAccessSetPermissionSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessSetPermissionSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetPermissionSettings AddIds(this AzureDlsFsAccessSetPermissionSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsAccessSetPermissionSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetPermissionSettings ClearIds(this AzureDlsFsAccessSetPermissionSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessSetPermissionSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetPermissionSettings RemoveIds(this AzureDlsFsAccessSetPermissionSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessSetPermissionSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetPermissionSettings RemoveIds(this AzureDlsFsAccessSetPermissionSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetPermissionSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetPermissionSettings SetSubscription(this AzureDlsFsAccessSetPermissionSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetPermissionSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessSetPermissionSettings ResetSubscription(this AzureDlsFsAccessSetPermissionSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -9001,6 +11960,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureDlsFsAccessShowSettingsExtensions
     {
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessShowSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessShowSettings SetPath(this AzureDlsFsAccessShowSettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessShowSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessShowSettings ResetPath(this AzureDlsFsAccessShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
         #region Account
         /// <summary><p><em>Sets <see cref="AzureDlsFsAccessShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
         [Pure]
@@ -9019,21 +11996,81 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessShowSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsFsAccessShowSettings SetPath(this AzureDlsFsAccessShowSettings toolSettings, string path)
+        public static AzureDlsFsAccessShowSettings SetIds(this AzureDlsFsAccessShowSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessShowSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureDlsFsAccessShowSettings ResetPath(this AzureDlsFsAccessShowSettings toolSettings)
+        public static AzureDlsFsAccessShowSettings SetIds(this AzureDlsFsAccessShowSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessShowSettings AddIds(this AzureDlsFsAccessShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureDlsFsAccessShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessShowSettings AddIds(this AzureDlsFsAccessShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureDlsFsAccessShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessShowSettings ClearIds(this AzureDlsFsAccessShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessShowSettings RemoveIds(this AzureDlsFsAccessShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureDlsFsAccessShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessShowSettings RemoveIds(this AzureDlsFsAccessShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessShowSettings SetSubscription(this AzureDlsFsAccessShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDlsFsAccessShowSettings ResetSubscription(this AzureDlsFsAccessShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion

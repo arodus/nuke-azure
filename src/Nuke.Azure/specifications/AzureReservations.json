@@ -6,11 +6,11 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/catalog.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/reservation-order-id.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/reservation-order.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/reservation.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/reservations.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/reservations/reservation-order-id.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/reservations/catalog.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/reservations/reservation-order.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/reservations/reservation.yml"
   ],
   "name": "AzureReservations",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest",
@@ -21,6 +21,26 @@
       "postfix": "",
       "definiteArgument": "reservations",
       "settingsClass": {}
+    },
+    {
+      "postfix": "ReservationOrderIdList",
+      "definiteArgument": "reservations reservation-order-id list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "SubscriptionId",
+            "type": "string",
+            "format": "--subscription-id {value}",
+            "help": "Id of the subscription to look up applied reservations."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "CatalogShow",
@@ -44,20 +64,12 @@
             "type": "string",
             "format": "--location {value}",
             "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ReservationOrderIdList",
-      "definiteArgument": "reservations reservation-order-id list",
-      "settingsClass": {
-        "properties": [
+          },
           {
-            "name": "SubscriptionId",
+            "name": "Subscription",
             "type": "string",
-            "format": "--subscription-id {value}",
-            "help": "Id of the subscription to look up applied reservations."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -65,7 +77,16 @@
     {
       "postfix": "ReservationOrderList",
       "definiteArgument": "reservations reservation-order list",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "ReservationOrderShow",
@@ -77,6 +98,12 @@
             "type": "string",
             "format": "--reservation-order-id {value}",
             "help": "Id of reservation order to look up."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -91,6 +118,12 @@
             "type": "string",
             "format": "--reservation-order-id {value}",
             "help": "Id of container reservation order."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -111,6 +144,12 @@
             "type": "string",
             "format": "--reservation-order-id {value}",
             "help": "Order id of the reservation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -137,6 +176,12 @@
             "type": "string",
             "format": "--reservation-order-id {value}",
             "help": "Reservation order id of the reservations to merge."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -157,6 +202,12 @@
             "type": "string",
             "format": "--reservation-order-id {value}",
             "help": "Order id of reservation to look up."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -189,6 +240,12 @@
             "type": "string",
             "format": "--reservation-order-id {value}",
             "help": "Reservation order id of the reservation to split."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -227,6 +284,12 @@
             "type": "ReservationsReservationUpdateInstanceFlexibility",
             "format": "--instance-flexibility {value}",
             "help": "Type of the Instance Flexibility to update the reservation with."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -269,6 +332,7 @@
       "name": "ReservationsCatalogShowReservedResourceType",
       "values": [
         "cosmosdb",
+        "redhat",
         "sqldatabases",
         "suselinux",
         "virtualmachines"

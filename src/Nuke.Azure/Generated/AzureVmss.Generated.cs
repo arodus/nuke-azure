@@ -204,38 +204,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureVmssDiagnosticsGetDefaultConfig(Configure<AzureVmssDiagnosticsGetDefaultConfigSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmssDiagnosticsGetDefaultConfigSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureVmssDiagnosticsSet(Configure<AzureVmssDiagnosticsSetSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmssDiagnosticsSetSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureVmssDiskAttach(Configure<AzureVmssDiskAttachSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmssDiskAttachSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureVmssDiskDetach(Configure<AzureVmssDiskDetachSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmssDiskDetachSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureVmssEncryptionDisable(Configure<AzureVmssEncryptionDisableSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssEncryptionDisableSettings());
@@ -255,6 +223,62 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureVmssEncryptionShow(Configure<AzureVmssEncryptionShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssEncryptionShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureVmssDiagnosticsGetDefaultConfig(Configure<AzureVmssDiagnosticsGetDefaultConfigSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmssDiagnosticsGetDefaultConfigSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureVmssDiagnosticsSet(Configure<AzureVmssDiagnosticsSetSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmssDiagnosticsSetSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureVmssRollingUpgradeCancel(Configure<AzureVmssRollingUpgradeCancelSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmssRollingUpgradeCancelSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureVmssRollingUpgradeGetLatest(Configure<AzureVmssRollingUpgradeGetLatestSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmssRollingUpgradeGetLatestSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureVmssRollingUpgradeStart(Configure<AzureVmssRollingUpgradeStartSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmssRollingUpgradeStartSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureVmssDiskAttach(Configure<AzureVmssDiskAttachSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmssDiskAttachSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureVmssDiskDetach(Configure<AzureVmssDiskDetachSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmssDiskDetachSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -340,30 +364,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureVmssRollingUpgradeCancel(Configure<AzureVmssRollingUpgradeCancelSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmssRollingUpgradeCancelSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureVmssRollingUpgradeGetLatest(Configure<AzureVmssRollingUpgradeGetLatestSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmssRollingUpgradeGetLatestSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureVmssRollingUpgradeStart(Configure<AzureVmssRollingUpgradeStartSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmssRollingUpgradeStartSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureVmssExtensionImageList(Configure<AzureVmssExtensionImageListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssExtensionImageListSettings());
@@ -415,7 +415,7 @@ namespace Nuke.Azure
         public virtual string CustomData { get; internal set; }
         /// <summary><p>Overprovision option (see <a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machine-scale-sets-overview/">https://azure.microsoft.com/en-us/documentation/articles/virtual-machine-scale-sets-overview/</a> for details).</p></summary>
         public virtual string DisableOverprovision { get; internal set; }
-        /// <summary><p>(PREVIEW) the eviction policy for virtual machines in a low priority scale set.</p></summary>
+        /// <summary><p>(PREVIEW) The eviction policy for virtual machines in a low priority scale set.</p></summary>
         public virtual VmssCreateEvictionPolicy EvictionPolicy { get; internal set; }
         /// <summary><p>(Preview) probe name from the existing load balancer, mainly used for rolling upgrade.</p></summary>
         public virtual string HealthProbe { get; internal set; }
@@ -429,7 +429,7 @@ namespace Nuke.Azure
         public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Fault Domain count for each placement group in the availability zone.</p></summary>
         public virtual string PlatformFaultDomainCount { get; internal set; }
-        /// <summary><p>(PREVIEW)Priority. Use 'Low' to run short-lived workloads in a cost-effective way.</p></summary>
+        /// <summary><p>Priority. Use 'Low' to run short-lived workloads in a cost-effective way.</p></summary>
         public virtual VmssCreatePriority Priority { get; internal set; }
         /// <summary><p>One or many Key Vault secrets as JSON strings or files via `@{path}` containing `[{ "sourceVault": { "id": "value" }, "vaultCertificates": [{ "certificateUrl": "value", "certificateStore": "cert store name (only on windows)"}] }]`.</p></summary>
         public virtual string Secrets { get; internal set; }
@@ -450,7 +450,7 @@ namespace Nuke.Azure
         public virtual string AdminPassword { get; internal set; }
         /// <summary><p>Username for the VM.</p></summary>
         public virtual string AdminUsername { get; internal set; }
-        /// <summary><p>Type of authentication to use with the VM. Defaults to password for Windows and SSH public key for Linux.</p></summary>
+        /// <summary><p>Type of authentication to use with the VM. Defaults to password for Windows and SSH public key for Linux. "all" enables both ssh and password authentication.</p></summary>
         public virtual VmssCreateAuthenticationType AuthenticationType { get; internal set; }
         /// <summary><p>Generate SSH public and private key files if missing. The keys will be stored in the ~/.ssh directory.</p></summary>
         public virtual string GenerateSshKeys { get; internal set; }
@@ -523,6 +523,8 @@ namespace Nuke.Azure
         /// <summary><p>Space-separated empty managed data disk sizes in GB to create.</p></summary>
         public virtual IReadOnlyList<string> DataDiskSizesGb => DataDiskSizesGbInternal.AsReadOnly();
         internal List<string> DataDiskSizesGbInternal { get; set; } = new List<string>();
+        /// <summary><p>(Preview) Allows you to create an OS disk directly on the host node, providing local disk performance and faster VM/VMSS reimage time.</p></summary>
+        public virtual bool? EphemeralOsDisk { get; internal set; }
         /// <summary><p>Storage caching type for the VM OS disk. Default: ReadWrite.</p></summary>
         public virtual VmssCreateOsDiskCaching OsDiskCaching { get; internal set; }
         /// <summary><p>The name of the new VM OS disk.</p></summary>
@@ -531,12 +533,15 @@ namespace Nuke.Azure
         public virtual VmssCreateOsType OsType { get; internal set; }
         /// <summary><p>Only applicable when used with `--use-unmanaged-disk`. Name of the storage container for the VM OS disk. Default: vhds.</p></summary>
         public virtual string StorageContainerName { get; internal set; }
-        /// <summary><p>The SKU of the storage account with which to persist VM.</p></summary>
-        public virtual VmssCreateStorageSku StorageSku { get; internal set; }
-        /// <summary><p>(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
+        /// <summary><p>The SKU of the storage account with which to persist VM. Use a singular sku that would be applied across all disks, or specify individual disks. Usage: [--storage-sku SKU | --storage-sku ID=SKU ID=SKU ID=SKU...], where each ID is "os" or a 0-indexed lun. Allowed values: Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS.</p></summary>
+        public virtual IReadOnlyList<string> StorageSku => StorageSkuInternal.AsReadOnly();
+        internal List<string> StorageSkuInternal { get; set; } = new List<string>();
+        /// <summary><p>(PREVIEW) Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
         public virtual bool? UltraSsdEnabled { get; internal set; }
         /// <summary><p>Do not use managed disk to persist VM.</p></summary>
         public virtual string UseUnmanagedDisk { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -608,13 +613,15 @@ namespace Nuke.Azure
               .Add("--lb-sku {value}", LbSku)
               .Add("--data-disk-caching {value}", DataDiskCaching)
               .Add("--data-disk-sizes-gb {value}", DataDiskSizesGb, separator: ' ')
+              .Add("--ephemeral-os-disk", EphemeralOsDisk)
               .Add("--os-disk-caching {value}", OsDiskCaching)
               .Add("--os-disk-name {value}", OsDiskName)
               .Add("--os-type {value}", OsType)
               .Add("--storage-container-name {value}", StorageContainerName)
-              .Add("--storage-sku {value}", StorageSku)
+              .Add("--storage-sku {value}", StorageSku, separator: ' ')
               .Add("--ultra-ssd-enabled", UltraSsdEnabled)
               .Add("--use-unmanaged-disk {value}", UseUnmanagedDisk)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -642,6 +649,8 @@ namespace Nuke.Azure
         internal List<string> InstanceIdsInternal { get; set; } = new List<string>();
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -660,6 +669,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--instance-ids {value}", InstanceIds, separator: ' ')
               .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -678,12 +688,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -698,9 +713,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss delete")
+              .Add("--no-wait", NoWait)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -728,6 +745,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -746,6 +765,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -764,12 +784,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>A VM instance ID or "*" to list instance view for all VMs in a scale set.</p></summary>
+        public virtual string InstanceId { get; internal set; }
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>A VM instance ID or "*" to list instance view for all VMs in a scale set.</p></summary>
-        public virtual string InstanceId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -784,9 +809,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss get-instance-view")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--instance-id {value}", InstanceId)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--instance-id {value}", InstanceId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -805,10 +832,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -823,8 +855,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss get-os-upgrade-history")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -845,6 +879,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -860,6 +896,7 @@ namespace Nuke.Azure
             arguments
               .Add("vmss list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -878,10 +915,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -896,8 +938,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss list-instance-connection-info")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -916,10 +960,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -934,8 +983,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss list-instance-public-ips")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -954,16 +1005,21 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
-        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The expand expression to apply to the operation.</p></summary>
         public virtual string Expand { get; internal set; }
         /// <summary><p>The filter to apply to the operation.</p></summary>
         public virtual string Filter { get; internal set; }
         /// <summary><p>The list parameters.</p></summary>
         public virtual string Select { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -978,11 +1034,13 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss list-instances")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
               .Add("--filter {value}", Filter)
               .Add("--select {value}", Select)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1001,10 +1059,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1019,8 +1082,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss list-skus")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1039,13 +1104,18 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.</p></summary>
+        public virtual IReadOnlyList<string> InstanceIds => InstanceIdsInternal.AsReadOnly();
+        internal List<string> InstanceIdsInternal { get; set; } = new List<string>();
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.</p></summary>
-        public virtual IReadOnlyList<string> InstanceIds => InstanceIdsInternal.AsReadOnly();
-        internal List<string> InstanceIdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1060,9 +1130,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss perform-maintenance")
+              .Add("--instance-ids {value}", InstanceIds, separator: ' ')
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--instance-ids {value}", InstanceIds, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1081,14 +1153,19 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>VM instance ID. If missing, reimage all instances.</p></summary>
+        public virtual string InstanceId { get; internal set; }
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>VM instance ID. If missing, reimage all instances.</p></summary>
-        public virtual string InstanceId { get; internal set; }
-        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1103,10 +1180,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss reimage")
+              .Add("--no-wait", NoWait)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--instance-id {value}", InstanceId)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--instance-id {value}", InstanceId)
-              .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1134,6 +1213,8 @@ namespace Nuke.Azure
         internal List<string> InstanceIdsInternal { get; set; } = new List<string>();
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1152,6 +1233,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--instance-ids {value}", InstanceIds, separator: ' ')
               .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1170,14 +1252,19 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
-        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
         /// <summary><p>Number of VMs in the VMSS.</p></summary>
         public virtual int? NewCapacity { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1192,10 +1279,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss scale")
-              .Add("--name {value}", Name)
               .Add("--new-capacity {value}", NewCapacity)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1220,6 +1309,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>VM instance ID. If missing, show the VMSS.</p></summary>
         public virtual string InstanceId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1237,6 +1328,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--instance-id {value}", InstanceId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1264,6 +1356,8 @@ namespace Nuke.Azure
         internal List<string> InstanceIdsInternal { get; set; } = new List<string>();
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1282,6 +1376,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--instance-ids {value}", InstanceIds, separator: ' ')
               .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1309,6 +1404,8 @@ namespace Nuke.Azure
         internal List<string> InstanceIdsInternal { get; set; } = new List<string>();
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1327,6 +1424,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--instance-ids {value}", InstanceIds, separator: ' ')
               .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1345,14 +1443,19 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
-        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>License type if the Windows image or disk used was licensed on-premises.</p></summary>
         public virtual VmssLicenseType LicenseType { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
@@ -1375,10 +1478,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--license-type {value}", LicenseType)
               .Add("--no-wait", NoWait)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
@@ -1410,6 +1515,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1428,6 +1535,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1446,10 +1554,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Wait until created with 'provisioningState' at 'Succeeded'.</p></summary>
         public virtual string Created { get; internal set; }
         /// <summary><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
@@ -1478,8 +1591,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss wait")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--created {value}", Created)
               .Add("--custom {value}", Custom)
               .Add("--deleted {value}", Deleted)
@@ -1487,6 +1602,165 @@ namespace Nuke.Azure
               .Add("--interval {value}", Interval)
               .Add("--timeout {value}", Timeout)
               .Add("--updated {value}", Updated)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmssEncryptionDisableSettings
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmssEncryptionDisableSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVmss executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>Continue by ignoring client side validation errors.</p></summary>
+        public virtual string Force { get; internal set; }
+        /// <summary><p>Type of volume that the encryption operation is performed on.</p></summary>
+        public virtual VmssEncryptionVolumeType VolumeType { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vmss encryption disable")
+              .Add("--force {value}", Force)
+              .Add("--volume-type {value}", VolumeType)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmssEncryptionEnableSettings
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmssEncryptionEnableSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVmss executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>The key vault where the generated encryption key will be placed.</p></summary>
+        public virtual string DiskEncryptionKeyvault { get; internal set; }
+        /// <summary><p>Continue by ignoring client side validation errors.</p></summary>
+        public virtual string Force { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string KeyEncryptionAlgorithm { get; internal set; }
+        /// <summary><p>Key vault key name or URL used to encrypt the disk encryption key.</p></summary>
+        public virtual string KeyEncryptionKey { get; internal set; }
+        /// <summary><p>The key vault containing the key encryption key used to encrypt the disk encryption key. If missing, CLI will use `--disk-encryption-keyvault`.</p></summary>
+        public virtual string KeyEncryptionKeyvault { get; internal set; }
+        /// <summary><p>Type of volume that the encryption operation is performed on.</p></summary>
+        public virtual VmssEncryptionVolumeType VolumeType { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vmss encryption enable")
+              .Add("--disk-encryption-keyvault {value}", DiskEncryptionKeyvault)
+              .Add("--force {value}", Force)
+              .Add("--key-encryption-algorithm {value}", KeyEncryptionAlgorithm)
+              .Add("--key-encryption-key {value}", KeyEncryptionKey)
+              .Add("--key-encryption-keyvault {value}", KeyEncryptionKeyvault)
+              .Add("--volume-type {value}", VolumeType)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmssEncryptionShowSettings
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmssEncryptionShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVmss executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vmss encryption show")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1507,6 +1781,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
         /// <summary><p>For Windows VMs.</p></summary>
         public virtual string IsWindowsOs { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1522,6 +1798,7 @@ namespace Nuke.Azure
             arguments
               .Add("vmss diagnostics get-default-config")
               .Add("--is-windows-os {value}", IsWindowsOs)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1552,6 +1829,8 @@ namespace Nuke.Azure
         public virtual string ProtectedSettings { get; internal set; }
         /// <summary><p>Version of the diagnostics extension. Will use the latest if not specfied.</p></summary>
         public virtual string Version { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1572,6 +1851,142 @@ namespace Nuke.Azure
               .Add("--no-auto-upgrade", NoAutoUpgrade)
               .Add("--protected-settings {value}", ProtectedSettings)
               .Add("--version {value}", Version)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmssRollingUpgradeCancelSettings
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmssRollingUpgradeCancelSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVmss executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vmss rolling-upgrade cancel")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmssRollingUpgradeGetLatestSettings
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmssRollingUpgradeGetLatestSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVmss executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vmss rolling-upgrade get-latest")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmssRollingUpgradeStartSettings
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmssRollingUpgradeStartSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVmss executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vmss rolling-upgrade start")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1590,22 +2005,27 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
-        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Disk caching policy.</p></summary>
         public virtual VmssCreateOsDiskCaching Caching { get; internal set; }
         /// <summary><p>Existing disk name or ID to attach or detach from VM instances.</p></summary>
         public virtual string Disk { get; internal set; }
-        /// <summary><p>Scale set VM instance id.</p></summary>
-        public virtual string InstanceId { get; internal set; }
         /// <summary><p>0-based logical unit number (LUN). Max value depends on the Virtual Machine instance size.</p></summary>
         public virtual string Lun { get; internal set; }
         /// <summary><p>Size in GB.</p></summary>
         public virtual string SizeGb { get; internal set; }
         /// <summary><p>Underlying storage SKU.</p></summary>
-        public virtual VmssCreateStorageSku Sku { get; internal set; }
+        public virtual VmssDiskAttachSku Sku { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Scale set VM instance id.</p></summary>
+        public virtual string InstanceId { get; internal set; }
+        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1620,14 +2040,16 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss disk attach")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--caching {value}", Caching)
               .Add("--disk {value}", Disk)
-              .Add("--instance-id {value}", InstanceId)
               .Add("--lun {value}", Lun)
               .Add("--size-gb {value}", SizeGb)
               .Add("--sku {value}", Sku)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--instance-id {value}", InstanceId)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1648,12 +2070,17 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
         /// <summary><p>0-based logical unit number (LUN). Max value depends on the Virtual Machine instance size.</p></summary>
         public virtual string Lun { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Scale set VM instance id.</p></summary>
+        public virtual string InstanceId { get; internal set; }
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Scale set VM instance id.</p></summary>
-        public virtual string InstanceId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1669,147 +2096,11 @@ namespace Nuke.Azure
             arguments
               .Add("vmss disk detach")
               .Add("--lun {value}", Lun)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--instance-id {value}", InstanceId)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmssEncryptionDisableSettings
-    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmssEncryptionDisableSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVmss executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
-        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Continue by ignoring client side validation errors.</p></summary>
-        public virtual string Force { get; internal set; }
-        /// <summary><p>Type of volume that the encryption operation is performed on.</p></summary>
-        public virtual VmssEncryptionVolumeType VolumeType { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vmss encryption disable")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--force {value}", Force)
-              .Add("--volume-type {value}", VolumeType)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmssEncryptionEnableSettings
-    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmssEncryptionEnableSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVmss executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
-        /// <summary><p>The key vault where the generated encryption key will be placed.</p></summary>
-        public virtual string DiskEncryptionKeyvault { get; internal set; }
-        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Continue by ignoring client side validation errors.</p></summary>
-        public virtual string Force { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string KeyEncryptionAlgorithm { get; internal set; }
-        /// <summary><p>Key vault key name or URL used to encrypt the disk encryption key.</p></summary>
-        public virtual string KeyEncryptionKey { get; internal set; }
-        /// <summary><p>The key vault containing the key encryption key used to encrypt the disk encryption key. If missing, CLI will use `--disk-encryption-keyvault`.</p></summary>
-        public virtual string KeyEncryptionKeyvault { get; internal set; }
-        /// <summary><p>Type of volume that the encryption operation is performed on.</p></summary>
-        public virtual VmssEncryptionVolumeType VolumeType { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vmss encryption enable")
-              .Add("--disk-encryption-keyvault {value}", DiskEncryptionKeyvault)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--force {value}", Force)
-              .Add("--key-encryption-algorithm {value}", KeyEncryptionAlgorithm)
-              .Add("--key-encryption-key {value}", KeyEncryptionKey)
-              .Add("--key-encryption-keyvault {value}", KeyEncryptionKeyvault)
-              .Add("--volume-type {value}", VolumeType)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmssEncryptionShowSettings
-    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmssEncryptionShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVmss executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
-        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vmss encryption show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1836,6 +2127,8 @@ namespace Nuke.Azure
         public virtual string VmssName { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1854,6 +2147,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--vmss-name {value}", VmssName)
               .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1876,6 +2170,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string VmssName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1892,6 +2188,7 @@ namespace Nuke.Azure
               .Add("vmss extension list")
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--vmss-name {value}", VmssName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1918,6 +2215,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string VmssName { get; internal set; }
+        /// <summary><p>Instance name of the extension. Default: name of the extension.</p></summary>
+        public virtual string ExtensionInstanceName { get; internal set; }
         /// <summary><p>Force to update even if the extension configuration has not changed.</p></summary>
         public virtual string ForceUpdate { get; internal set; }
         /// <summary><p>By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future.</p></summary>
@@ -1930,6 +2229,8 @@ namespace Nuke.Azure
         public virtual string Settings { get; internal set; }
         /// <summary><p>The version of the extension.</p></summary>
         public virtual string Version { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1948,12 +2249,14 @@ namespace Nuke.Azure
               .Add("--publisher {value}", Publisher)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--vmss-name {value}", VmssName)
+              .Add("--extension-instance-name {value}", ExtensionInstanceName)
               .Add("--force-update {value}", ForceUpdate)
               .Add("--no-auto-upgrade", NoAutoUpgrade)
               .Add("--no-wait", NoWait)
               .Add("--protected-settings {value}", ProtectedSettings)
               .Add("--settings {value}", Settings)
               .Add("--version {value}", Version)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1978,6 +2281,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string VmssName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1995,6 +2300,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--vmss-name {value}", VmssName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2013,16 +2319,21 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
-        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The identities to assign.</p></summary>
         public virtual string Identities { get; internal set; }
         /// <summary><p>Role name or id the system assigned identity will have.</p></summary>
         public virtual string Role { get; internal set; }
         /// <summary><p>Scope that the system assigned identity can access.</p></summary>
         public virtual string Scope { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2037,11 +2348,13 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss identity assign")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--identities {value}", Identities)
               .Add("--role {value}", Role)
               .Add("--scope {value}", Scope)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2060,13 +2373,18 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>Space-separated identities to remove. Use '[system]' to refer system assigned identity.</p></summary>
+        public virtual IReadOnlyList<string> Identities => IdentitiesInternal.AsReadOnly();
+        internal List<string> IdentitiesInternal { get; set; } = new List<string>();
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated identities to remove. Use '[system]' to refer system assigned identity.</p></summary>
-        public virtual IReadOnlyList<string> Identities => IdentitiesInternal.AsReadOnly();
-        internal List<string> IdentitiesInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2081,9 +2399,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss identity remove")
+              .Add("--identities {value}", Identities, separator: ' ')
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--identities {value}", Identities, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2102,10 +2422,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2120,8 +2445,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss identity show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2144,6 +2471,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string VmssName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2160,6 +2489,7 @@ namespace Nuke.Azure
               .Add("vmss nic list")
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--vmss-name {value}", VmssName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2178,10 +2508,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The virtual machine index.</p></summary>
         public virtual string InstanceId { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Scale set name.</p></summary>
         public virtual string VmssName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -2198,8 +2533,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss nic list-vm-nics")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--instance-id {value}", InstanceId)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--vmss-name {value}", VmssName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -2219,16 +2556,21 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>Expands referenced resources.</p></summary>
+        public virtual string Expand { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The virtual machine index.</p></summary>
         public virtual string InstanceId { get; internal set; }
         /// <summary><p>The network interface (NIC).</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Scale set name.</p></summary>
         public virtual string VmssName { get; internal set; }
-        /// <summary><p>Expands referenced resources.</p></summary>
-        public virtual string Expand { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2243,125 +2585,13 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vmss nic show")
+              .Add("--expand {value}", Expand)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--instance-id {value}", InstanceId)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--vmss-name {value}", VmssName)
-              .Add("--expand {value}", Expand)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmssRollingUpgradeCancelSettings
-    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmssRollingUpgradeCancelSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVmss executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
-        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vmss rolling-upgrade cancel")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmssRollingUpgradeGetLatestSettings
-    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmssRollingUpgradeGetLatestSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVmss executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
-        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vmss rolling-upgrade get-latest")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmssRollingUpgradeStartSettings
-    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmssRollingUpgradeStartSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVmss executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
-        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vmss rolling-upgrade start")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2390,6 +2620,8 @@ namespace Nuke.Azure
         public virtual string Publisher { get; internal set; }
         /// <summary><p>Extension version.</p></summary>
         public virtual string Version { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2409,6 +2641,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--publisher {value}", Publisher)
               .Add("--version {value}", Version)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2431,6 +2664,8 @@ namespace Nuke.Azure
         public virtual string Location { get; internal set; }
         /// <summary><p>Image publisher name.</p></summary>
         public virtual string Publisher { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2447,6 +2682,7 @@ namespace Nuke.Azure
               .Add("vmss extension image list-names")
               .Add("--location {value}", Location)
               .Add("--publisher {value}", Publisher)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2477,6 +2713,8 @@ namespace Nuke.Azure
         public virtual string Orderby { get; internal set; }
         /// <summary><p>The $top odata query option.</p></summary>
         public virtual string Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2497,6 +2735,7 @@ namespace Nuke.Azure
               .Add("--filter {value}", Filter)
               .Add("--orderby {value}", Orderby)
               .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2523,6 +2762,8 @@ namespace Nuke.Azure
         public virtual string Publisher { get; internal set; }
         /// <summary><p>Extension version.</p></summary>
         public virtual string Version { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2541,6 +2782,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--publisher {value}", Publisher)
               .Add("--version {value}", Version)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2647,7 +2889,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region EvictionPolicy
-        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.EvictionPolicy"/>.</em></p><p>(PREVIEW) the eviction policy for virtual machines in a low priority scale set.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.EvictionPolicy"/>.</em></p><p>(PREVIEW) The eviction policy for virtual machines in a low priority scale set.</p></summary>
         [Pure]
         public static AzureVmssCreateSettings SetEvictionPolicy(this AzureVmssCreateSettings toolSettings, VmssCreateEvictionPolicy evictionPolicy)
         {
@@ -2655,7 +2897,7 @@ namespace Nuke.Azure
             toolSettings.EvictionPolicy = evictionPolicy;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.EvictionPolicy"/>.</em></p><p>(PREVIEW) the eviction policy for virtual machines in a low priority scale set.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.EvictionPolicy"/>.</em></p><p>(PREVIEW) The eviction policy for virtual machines in a low priority scale set.</p></summary>
         [Pure]
         public static AzureVmssCreateSettings ResetEvictionPolicy(this AzureVmssCreateSettings toolSettings)
         {
@@ -2797,7 +3039,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Priority
-        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.Priority"/>.</em></p><p>(PREVIEW)Priority. Use 'Low' to run short-lived workloads in a cost-effective way.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.Priority"/>.</em></p><p>Priority. Use 'Low' to run short-lived workloads in a cost-effective way.</p></summary>
         [Pure]
         public static AzureVmssCreateSettings SetPriority(this AzureVmssCreateSettings toolSettings, VmssCreatePriority priority)
         {
@@ -2805,7 +3047,7 @@ namespace Nuke.Azure
             toolSettings.Priority = priority;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.Priority"/>.</em></p><p>(PREVIEW)Priority. Use 'Low' to run short-lived workloads in a cost-effective way.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.Priority"/>.</em></p><p>Priority. Use 'Low' to run short-lived workloads in a cost-effective way.</p></summary>
         [Pure]
         public static AzureVmssCreateSettings ResetPriority(this AzureVmssCreateSettings toolSettings)
         {
@@ -3043,7 +3285,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region AuthenticationType
-        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.AuthenticationType"/>.</em></p><p>Type of authentication to use with the VM. Defaults to password for Windows and SSH public key for Linux.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.AuthenticationType"/>.</em></p><p>Type of authentication to use with the VM. Defaults to password for Windows and SSH public key for Linux. "all" enables both ssh and password authentication.</p></summary>
         [Pure]
         public static AzureVmssCreateSettings SetAuthenticationType(this AzureVmssCreateSettings toolSettings, VmssCreateAuthenticationType authenticationType)
         {
@@ -3051,7 +3293,7 @@ namespace Nuke.Azure
             toolSettings.AuthenticationType = authenticationType;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.AuthenticationType"/>.</em></p><p>Type of authentication to use with the VM. Defaults to password for Windows and SSH public key for Linux.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.AuthenticationType"/>.</em></p><p>Type of authentication to use with the VM. Defaults to password for Windows and SSH public key for Linux. "all" enables both ssh and password authentication.</p></summary>
         [Pure]
         public static AzureVmssCreateSettings ResetAuthenticationType(this AzureVmssCreateSettings toolSettings)
         {
@@ -3822,6 +4064,48 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region EphemeralOsDisk
+        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.EphemeralOsDisk"/>.</em></p><p>(Preview) Allows you to create an OS disk directly on the host node, providing local disk performance and faster VM/VMSS reimage time.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings SetEphemeralOsDisk(this AzureVmssCreateSettings toolSettings, bool? ephemeralOsDisk)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EphemeralOsDisk = ephemeralOsDisk;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.EphemeralOsDisk"/>.</em></p><p>(Preview) Allows you to create an OS disk directly on the host node, providing local disk performance and faster VM/VMSS reimage time.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings ResetEphemeralOsDisk(this AzureVmssCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EphemeralOsDisk = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureVmssCreateSettings.EphemeralOsDisk"/>.</em></p><p>(Preview) Allows you to create an OS disk directly on the host node, providing local disk performance and faster VM/VMSS reimage time.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings EnableEphemeralOsDisk(this AzureVmssCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EphemeralOsDisk = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureVmssCreateSettings.EphemeralOsDisk"/>.</em></p><p>(Preview) Allows you to create an OS disk directly on the host node, providing local disk performance and faster VM/VMSS reimage time.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings DisableEphemeralOsDisk(this AzureVmssCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EphemeralOsDisk = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureVmssCreateSettings.EphemeralOsDisk"/>.</em></p><p>(Preview) Allows you to create an OS disk directly on the host node, providing local disk performance and faster VM/VMSS reimage time.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings ToggleEphemeralOsDisk(this AzureVmssCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EphemeralOsDisk = !toolSettings.EphemeralOsDisk;
+            return toolSettings;
+        }
+        #endregion
         #region OsDiskCaching
         /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.OsDiskCaching"/>.</em></p><p>Storage caching type for the VM OS disk. Default: ReadWrite.</p></summary>
         [Pure]
@@ -3895,25 +4179,67 @@ namespace Nuke.Azure
         }
         #endregion
         #region StorageSku
-        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.StorageSku"/>.</em></p><p>The SKU of the storage account with which to persist VM.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.StorageSku"/> to a new list.</em></p><p>The SKU of the storage account with which to persist VM. Use a singular sku that would be applied across all disks, or specify individual disks. Usage: [--storage-sku SKU | --storage-sku ID=SKU ID=SKU ID=SKU...], where each ID is "os" or a 0-indexed lun. Allowed values: Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS.</p></summary>
         [Pure]
-        public static AzureVmssCreateSettings SetStorageSku(this AzureVmssCreateSettings toolSettings, VmssCreateStorageSku storageSku)
+        public static AzureVmssCreateSettings SetStorageSku(this AzureVmssCreateSettings toolSettings, params string[] storageSku)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageSku = storageSku;
+            toolSettings.StorageSkuInternal = storageSku.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.StorageSku"/>.</em></p><p>The SKU of the storage account with which to persist VM.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.StorageSku"/> to a new list.</em></p><p>The SKU of the storage account with which to persist VM. Use a singular sku that would be applied across all disks, or specify individual disks. Usage: [--storage-sku SKU | --storage-sku ID=SKU ID=SKU ID=SKU...], where each ID is "os" or a 0-indexed lun. Allowed values: Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS.</p></summary>
         [Pure]
-        public static AzureVmssCreateSettings ResetStorageSku(this AzureVmssCreateSettings toolSettings)
+        public static AzureVmssCreateSettings SetStorageSku(this AzureVmssCreateSettings toolSettings, IEnumerable<string> storageSku)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageSku = null;
+            toolSettings.StorageSkuInternal = storageSku.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssCreateSettings.StorageSku"/>.</em></p><p>The SKU of the storage account with which to persist VM. Use a singular sku that would be applied across all disks, or specify individual disks. Usage: [--storage-sku SKU | --storage-sku ID=SKU ID=SKU ID=SKU...], where each ID is "os" or a 0-indexed lun. Allowed values: Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings AddStorageSku(this AzureVmssCreateSettings toolSettings, params string[] storageSku)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageSkuInternal.AddRange(storageSku);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssCreateSettings.StorageSku"/>.</em></p><p>The SKU of the storage account with which to persist VM. Use a singular sku that would be applied across all disks, or specify individual disks. Usage: [--storage-sku SKU | --storage-sku ID=SKU ID=SKU ID=SKU...], where each ID is "os" or a 0-indexed lun. Allowed values: Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings AddStorageSku(this AzureVmssCreateSettings toolSettings, IEnumerable<string> storageSku)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageSkuInternal.AddRange(storageSku);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssCreateSettings.StorageSku"/>.</em></p><p>The SKU of the storage account with which to persist VM. Use a singular sku that would be applied across all disks, or specify individual disks. Usage: [--storage-sku SKU | --storage-sku ID=SKU ID=SKU ID=SKU...], where each ID is "os" or a 0-indexed lun. Allowed values: Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings ClearStorageSku(this AzureVmssCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageSkuInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssCreateSettings.StorageSku"/>.</em></p><p>The SKU of the storage account with which to persist VM. Use a singular sku that would be applied across all disks, or specify individual disks. Usage: [--storage-sku SKU | --storage-sku ID=SKU ID=SKU ID=SKU...], where each ID is "os" or a 0-indexed lun. Allowed values: Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings RemoveStorageSku(this AzureVmssCreateSettings toolSettings, params string[] storageSku)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(storageSku);
+            toolSettings.StorageSkuInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssCreateSettings.StorageSku"/>.</em></p><p>The SKU of the storage account with which to persist VM. Use a singular sku that would be applied across all disks, or specify individual disks. Usage: [--storage-sku SKU | --storage-sku ID=SKU ID=SKU ID=SKU...], where each ID is "os" or a 0-indexed lun. Allowed values: Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings RemoveStorageSku(this AzureVmssCreateSettings toolSettings, IEnumerable<string> storageSku)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(storageSku);
+            toolSettings.StorageSkuInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
         #region UltraSsdEnabled
-        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW) Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
         [Pure]
         public static AzureVmssCreateSettings SetUltraSsdEnabled(this AzureVmssCreateSettings toolSettings, bool? ultraSsdEnabled)
         {
@@ -3921,7 +4247,7 @@ namespace Nuke.Azure
             toolSettings.UltraSsdEnabled = ultraSsdEnabled;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW) Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
         [Pure]
         public static AzureVmssCreateSettings ResetUltraSsdEnabled(this AzureVmssCreateSettings toolSettings)
         {
@@ -3929,7 +4255,7 @@ namespace Nuke.Azure
             toolSettings.UltraSsdEnabled = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureVmssCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureVmssCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW) Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
         [Pure]
         public static AzureVmssCreateSettings EnableUltraSsdEnabled(this AzureVmssCreateSettings toolSettings)
         {
@@ -3937,7 +4263,7 @@ namespace Nuke.Azure
             toolSettings.UltraSsdEnabled = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureVmssCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureVmssCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW) Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
         [Pure]
         public static AzureVmssCreateSettings DisableUltraSsdEnabled(this AzureVmssCreateSettings toolSettings)
         {
@@ -3945,7 +4271,7 @@ namespace Nuke.Azure
             toolSettings.UltraSsdEnabled = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureVmssCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW)Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureVmssCreateSettings.UltraSsdEnabled"/>.</em></p><p>(PREVIEW) Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.</p></summary>
         [Pure]
         public static AzureVmssCreateSettings ToggleUltraSsdEnabled(this AzureVmssCreateSettings toolSettings)
         {
@@ -3969,6 +4295,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.UseUnmanagedDisk = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings SetSubscription(this AzureVmssCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings ResetSubscription(this AzureVmssCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4208,6 +4552,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssDeallocateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssDeallocateSettings SetSubscription(this AzureVmssDeallocateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssDeallocateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssDeallocateSettings ResetSubscription(this AzureVmssDeallocateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureVmssDeallocateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4306,42 +4668,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssDeleteSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssDeleteSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssDeleteSettings SetName(this AzureVmssDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssDeleteSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssDeleteSettings ResetName(this AzureVmssDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssDeleteSettings SetResourceGroup(this AzureVmssDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssDeleteSettings ResetResourceGroup(this AzureVmssDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureVmssDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
@@ -4381,6 +4707,120 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteSettings SetIds(this AzureVmssDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteSettings SetIds(this AzureVmssDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteSettings AddIds(this AzureVmssDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteSettings AddIds(this AzureVmssDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteSettings ClearIds(this AzureVmssDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteSettings RemoveIds(this AzureVmssDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteSettings RemoveIds(this AzureVmssDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssDeleteSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteSettings SetName(this AzureVmssDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssDeleteSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteSettings ResetName(this AzureVmssDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteSettings SetResourceGroup(this AzureVmssDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteSettings ResetResourceGroup(this AzureVmssDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteSettings SetSubscription(this AzureVmssDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteSettings ResetSubscription(this AzureVmssDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4620,6 +5060,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssDeleteInstancesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteInstancesSettings SetSubscription(this AzureVmssDeleteInstancesSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssDeleteInstancesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssDeleteInstancesSettings ResetSubscription(this AzureVmssDeleteInstancesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureVmssDeleteInstancesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4718,6 +5176,84 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssGetInstanceViewSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssGetInstanceViewSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetInstanceViewSettings SetIds(this AzureVmssGetInstanceViewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssGetInstanceViewSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetInstanceViewSettings SetIds(this AzureVmssGetInstanceViewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssGetInstanceViewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetInstanceViewSettings AddIds(this AzureVmssGetInstanceViewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssGetInstanceViewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetInstanceViewSettings AddIds(this AzureVmssGetInstanceViewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssGetInstanceViewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetInstanceViewSettings ClearIds(this AzureVmssGetInstanceViewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssGetInstanceViewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetInstanceViewSettings RemoveIds(this AzureVmssGetInstanceViewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssGetInstanceViewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetInstanceViewSettings RemoveIds(this AzureVmssGetInstanceViewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region InstanceId
+        /// <summary><p><em>Sets <see cref="AzureVmssGetInstanceViewSettings.InstanceId"/>.</em></p><p>A VM instance ID or "*" to list instance view for all VMs in a scale set.</p></summary>
+        [Pure]
+        public static AzureVmssGetInstanceViewSettings SetInstanceId(this AzureVmssGetInstanceViewSettings toolSettings, string instanceId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstanceId = instanceId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssGetInstanceViewSettings.InstanceId"/>.</em></p><p>A VM instance ID or "*" to list instance view for all VMs in a scale set.</p></summary>
+        [Pure]
+        public static AzureVmssGetInstanceViewSettings ResetInstanceId(this AzureVmssGetInstanceViewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstanceId = null;
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureVmssGetInstanceViewSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -4754,21 +5290,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region InstanceId
-        /// <summary><p><em>Sets <see cref="AzureVmssGetInstanceViewSettings.InstanceId"/>.</em></p><p>A VM instance ID or "*" to list instance view for all VMs in a scale set.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssGetInstanceViewSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureVmssGetInstanceViewSettings SetInstanceId(this AzureVmssGetInstanceViewSettings toolSettings, string instanceId)
+        public static AzureVmssGetInstanceViewSettings SetSubscription(this AzureVmssGetInstanceViewSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.InstanceId = instanceId;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssGetInstanceViewSettings.InstanceId"/>.</em></p><p>A VM instance ID or "*" to list instance view for all VMs in a scale set.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssGetInstanceViewSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureVmssGetInstanceViewSettings ResetInstanceId(this AzureVmssGetInstanceViewSettings toolSettings)
+        public static AzureVmssGetInstanceViewSettings ResetSubscription(this AzureVmssGetInstanceViewSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.InstanceId = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4870,6 +5406,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssGetOsUpgradeHistorySettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssGetOsUpgradeHistorySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetOsUpgradeHistorySettings SetIds(this AzureVmssGetOsUpgradeHistorySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssGetOsUpgradeHistorySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetOsUpgradeHistorySettings SetIds(this AzureVmssGetOsUpgradeHistorySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssGetOsUpgradeHistorySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetOsUpgradeHistorySettings AddIds(this AzureVmssGetOsUpgradeHistorySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssGetOsUpgradeHistorySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetOsUpgradeHistorySettings AddIds(this AzureVmssGetOsUpgradeHistorySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssGetOsUpgradeHistorySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetOsUpgradeHistorySettings ClearIds(this AzureVmssGetOsUpgradeHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssGetOsUpgradeHistorySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetOsUpgradeHistorySettings RemoveIds(this AzureVmssGetOsUpgradeHistorySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssGetOsUpgradeHistorySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssGetOsUpgradeHistorySettings RemoveIds(this AzureVmssGetOsUpgradeHistorySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureVmssGetOsUpgradeHistorySettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -4903,6 +5499,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssGetOsUpgradeHistorySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssGetOsUpgradeHistorySettings SetSubscription(this AzureVmssGetOsUpgradeHistorySettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssGetOsUpgradeHistorySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssGetOsUpgradeHistorySettings ResetSubscription(this AzureVmssGetOsUpgradeHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5022,6 +5636,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssListSettings SetSubscription(this AzureVmssListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssListSettings ResetSubscription(this AzureVmssListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureVmssListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -5120,6 +5752,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssListInstanceConnectionInfoSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssListInstanceConnectionInfoSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstanceConnectionInfoSettings SetIds(this AzureVmssListInstanceConnectionInfoSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssListInstanceConnectionInfoSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstanceConnectionInfoSettings SetIds(this AzureVmssListInstanceConnectionInfoSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssListInstanceConnectionInfoSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstanceConnectionInfoSettings AddIds(this AzureVmssListInstanceConnectionInfoSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssListInstanceConnectionInfoSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstanceConnectionInfoSettings AddIds(this AzureVmssListInstanceConnectionInfoSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssListInstanceConnectionInfoSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstanceConnectionInfoSettings ClearIds(this AzureVmssListInstanceConnectionInfoSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssListInstanceConnectionInfoSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstanceConnectionInfoSettings RemoveIds(this AzureVmssListInstanceConnectionInfoSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssListInstanceConnectionInfoSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstanceConnectionInfoSettings RemoveIds(this AzureVmssListInstanceConnectionInfoSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureVmssListInstanceConnectionInfoSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -5153,6 +5845,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssListInstanceConnectionInfoSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssListInstanceConnectionInfoSettings SetSubscription(this AzureVmssListInstanceConnectionInfoSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssListInstanceConnectionInfoSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssListInstanceConnectionInfoSettings ResetSubscription(this AzureVmssListInstanceConnectionInfoSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5254,6 +5964,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssListInstancePublicIpsSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssListInstancePublicIpsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancePublicIpsSettings SetIds(this AzureVmssListInstancePublicIpsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssListInstancePublicIpsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancePublicIpsSettings SetIds(this AzureVmssListInstancePublicIpsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssListInstancePublicIpsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancePublicIpsSettings AddIds(this AzureVmssListInstancePublicIpsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssListInstancePublicIpsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancePublicIpsSettings AddIds(this AzureVmssListInstancePublicIpsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssListInstancePublicIpsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancePublicIpsSettings ClearIds(this AzureVmssListInstancePublicIpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssListInstancePublicIpsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancePublicIpsSettings RemoveIds(this AzureVmssListInstancePublicIpsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssListInstancePublicIpsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancePublicIpsSettings RemoveIds(this AzureVmssListInstancePublicIpsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureVmssListInstancePublicIpsSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -5287,6 +6057,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssListInstancePublicIpsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancePublicIpsSettings SetSubscription(this AzureVmssListInstancePublicIpsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssListInstancePublicIpsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancePublicIpsSettings ResetSubscription(this AzureVmssListInstancePublicIpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5388,42 +6176,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssListInstancesSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssListInstancesSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssListInstancesSettings SetName(this AzureVmssListInstancesSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssListInstancesSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssListInstancesSettings ResetName(this AzureVmssListInstancesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssListInstancesSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssListInstancesSettings SetResourceGroup(this AzureVmssListInstancesSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssListInstancesSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssListInstancesSettings ResetResourceGroup(this AzureVmssListInstancesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region Expand
         /// <summary><p><em>Sets <see cref="AzureVmssListInstancesSettings.Expand"/>.</em></p><p>The expand expression to apply to the operation.</p></summary>
         [Pure]
@@ -5475,6 +6227,120 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Select = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssListInstancesSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancesSettings SetIds(this AzureVmssListInstancesSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssListInstancesSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancesSettings SetIds(this AzureVmssListInstancesSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssListInstancesSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancesSettings AddIds(this AzureVmssListInstancesSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssListInstancesSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancesSettings AddIds(this AzureVmssListInstancesSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssListInstancesSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancesSettings ClearIds(this AzureVmssListInstancesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssListInstancesSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancesSettings RemoveIds(this AzureVmssListInstancesSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssListInstancesSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancesSettings RemoveIds(this AzureVmssListInstancesSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssListInstancesSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancesSettings SetName(this AzureVmssListInstancesSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssListInstancesSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancesSettings ResetName(this AzureVmssListInstancesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssListInstancesSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancesSettings SetResourceGroup(this AzureVmssListInstancesSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssListInstancesSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancesSettings ResetResourceGroup(this AzureVmssListInstancesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssListInstancesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancesSettings SetSubscription(this AzureVmssListInstancesSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssListInstancesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssListInstancesSettings ResetSubscription(this AzureVmssListInstancesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5576,6 +6442,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssListSkusSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssListSkusSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListSkusSettings SetIds(this AzureVmssListSkusSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssListSkusSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListSkusSettings SetIds(this AzureVmssListSkusSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssListSkusSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListSkusSettings AddIds(this AzureVmssListSkusSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssListSkusSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListSkusSettings AddIds(this AzureVmssListSkusSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssListSkusSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListSkusSettings ClearIds(this AzureVmssListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssListSkusSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListSkusSettings RemoveIds(this AzureVmssListSkusSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssListSkusSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssListSkusSettings RemoveIds(this AzureVmssListSkusSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureVmssListSkusSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -5609,6 +6535,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssListSkusSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssListSkusSettings SetSubscription(this AzureVmssListSkusSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssListSkusSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssListSkusSettings ResetSubscription(this AzureVmssListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5710,42 +6654,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssPerformMaintenanceSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssPerformMaintenanceSettings SetName(this AzureVmssPerformMaintenanceSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssPerformMaintenanceSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssPerformMaintenanceSettings ResetName(this AzureVmssPerformMaintenanceSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssPerformMaintenanceSettings SetResourceGroup(this AzureVmssPerformMaintenanceSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssPerformMaintenanceSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssPerformMaintenanceSettings ResetResourceGroup(this AzureVmssPerformMaintenanceSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region InstanceIds
         /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.InstanceIds"/> to a new list.</em></p><p>Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.</p></summary>
         [Pure]
@@ -5803,6 +6711,120 @@ namespace Nuke.Azure
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(instanceIds);
             toolSettings.InstanceIdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetIds(this AzureVmssPerformMaintenanceSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetIds(this AzureVmssPerformMaintenanceSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssPerformMaintenanceSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings AddIds(this AzureVmssPerformMaintenanceSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssPerformMaintenanceSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings AddIds(this AzureVmssPerformMaintenanceSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssPerformMaintenanceSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings ClearIds(this AzureVmssPerformMaintenanceSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssPerformMaintenanceSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings RemoveIds(this AzureVmssPerformMaintenanceSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssPerformMaintenanceSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings RemoveIds(this AzureVmssPerformMaintenanceSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetName(this AzureVmssPerformMaintenanceSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssPerformMaintenanceSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings ResetName(this AzureVmssPerformMaintenanceSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetResourceGroup(this AzureVmssPerformMaintenanceSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssPerformMaintenanceSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings ResetResourceGroup(this AzureVmssPerformMaintenanceSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetSubscription(this AzureVmssPerformMaintenanceSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssPerformMaintenanceSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings ResetSubscription(this AzureVmssPerformMaintenanceSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5904,60 +6926,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssReimageSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssReimageSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssReimageSettings SetName(this AzureVmssReimageSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssReimageSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssReimageSettings ResetName(this AzureVmssReimageSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssReimageSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssReimageSettings SetResourceGroup(this AzureVmssReimageSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssReimageSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssReimageSettings ResetResourceGroup(this AzureVmssReimageSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region InstanceId
-        /// <summary><p><em>Sets <see cref="AzureVmssReimageSettings.InstanceId"/>.</em></p><p>VM instance ID. If missing, reimage all instances.</p></summary>
-        [Pure]
-        public static AzureVmssReimageSettings SetInstanceId(this AzureVmssReimageSettings toolSettings, string instanceId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.InstanceId = instanceId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssReimageSettings.InstanceId"/>.</em></p><p>VM instance ID. If missing, reimage all instances.</p></summary>
-        [Pure]
-        public static AzureVmssReimageSettings ResetInstanceId(this AzureVmssReimageSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.InstanceId = null;
-            return toolSettings;
-        }
-        #endregion
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureVmssReimageSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
@@ -5997,6 +6965,138 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssReimageSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings SetIds(this AzureVmssReimageSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssReimageSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings SetIds(this AzureVmssReimageSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssReimageSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings AddIds(this AzureVmssReimageSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssReimageSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings AddIds(this AzureVmssReimageSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssReimageSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings ClearIds(this AzureVmssReimageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssReimageSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings RemoveIds(this AzureVmssReimageSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssReimageSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings RemoveIds(this AzureVmssReimageSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region InstanceId
+        /// <summary><p><em>Sets <see cref="AzureVmssReimageSettings.InstanceId"/>.</em></p><p>VM instance ID. If missing, reimage all instances.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings SetInstanceId(this AzureVmssReimageSettings toolSettings, string instanceId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstanceId = instanceId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssReimageSettings.InstanceId"/>.</em></p><p>VM instance ID. If missing, reimage all instances.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings ResetInstanceId(this AzureVmssReimageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstanceId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssReimageSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings SetName(this AzureVmssReimageSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssReimageSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings ResetName(this AzureVmssReimageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssReimageSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings SetResourceGroup(this AzureVmssReimageSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssReimageSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings ResetResourceGroup(this AzureVmssReimageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssReimageSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings SetSubscription(this AzureVmssReimageSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssReimageSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssReimageSettings ResetSubscription(this AzureVmssReimageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6236,6 +7336,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssRestartSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssRestartSettings SetSubscription(this AzureVmssRestartSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRestartSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssRestartSettings ResetSubscription(this AzureVmssRestartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureVmssRestartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -6334,24 +7452,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssScaleSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssScaleSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssScaleSettings SetName(this AzureVmssScaleSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssScaleSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssScaleSettings ResetName(this AzureVmssScaleSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
         #region NewCapacity
         /// <summary><p><em>Sets <see cref="AzureVmssScaleSettings.NewCapacity"/>.</em></p><p>Number of VMs in the VMSS.</p></summary>
         [Pure]
@@ -6367,24 +7467,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NewCapacity = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssScaleSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssScaleSettings SetResourceGroup(this AzureVmssScaleSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssScaleSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssScaleSettings ResetResourceGroup(this AzureVmssScaleSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
@@ -6427,6 +7509,120 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssScaleSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssScaleSettings SetIds(this AzureVmssScaleSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssScaleSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssScaleSettings SetIds(this AzureVmssScaleSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssScaleSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssScaleSettings AddIds(this AzureVmssScaleSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssScaleSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssScaleSettings AddIds(this AzureVmssScaleSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssScaleSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssScaleSettings ClearIds(this AzureVmssScaleSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssScaleSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssScaleSettings RemoveIds(this AzureVmssScaleSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssScaleSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssScaleSettings RemoveIds(this AzureVmssScaleSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssScaleSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssScaleSettings SetName(this AzureVmssScaleSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssScaleSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssScaleSettings ResetName(this AzureVmssScaleSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssScaleSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssScaleSettings SetResourceGroup(this AzureVmssScaleSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssScaleSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssScaleSettings ResetResourceGroup(this AzureVmssScaleSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssScaleSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssScaleSettings SetSubscription(this AzureVmssScaleSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssScaleSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssScaleSettings ResetSubscription(this AzureVmssScaleSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6579,6 +7775,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.InstanceId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssShowSettings SetSubscription(this AzureVmssShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssShowSettings ResetSubscription(this AzureVmssShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6818,6 +8032,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssStartSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssStartSettings SetSubscription(this AzureVmssStartSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssStartSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssStartSettings ResetSubscription(this AzureVmssStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureVmssStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -7054,6 +8286,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssStopSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssStopSettings SetSubscription(this AzureVmssStopSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssStopSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssStopSettings ResetSubscription(this AzureVmssStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureVmssStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -7152,42 +8402,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssUpdateSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssUpdateSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssUpdateSettings SetName(this AzureVmssUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssUpdateSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssUpdateSettings ResetName(this AzureVmssUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssUpdateSettings SetResourceGroup(this AzureVmssUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssUpdateSettings ResetResourceGroup(this AzureVmssUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region LicenseType
         /// <summary><p><em>Sets <see cref="AzureVmssUpdateSettings.LicenseType"/>.</em></p><p>License type if the Windows image or disk used was licensed on-premises.</p></summary>
         [Pure]
@@ -7245,6 +8459,120 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings SetIds(this AzureVmssUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings SetIds(this AzureVmssUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings AddIds(this AzureVmssUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings AddIds(this AzureVmssUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings ClearIds(this AzureVmssUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings RemoveIds(this AzureVmssUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings RemoveIds(this AzureVmssUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssUpdateSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings SetName(this AzureVmssUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssUpdateSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings ResetName(this AzureVmssUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings SetResourceGroup(this AzureVmssUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings ResetResourceGroup(this AzureVmssUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings SetSubscription(this AzureVmssUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings ResetSubscription(this AzureVmssUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7556,6 +8884,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssUpdateInstancesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateInstancesSettings SetSubscription(this AzureVmssUpdateInstancesSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssUpdateInstancesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateInstancesSettings ResetSubscription(this AzureVmssUpdateInstancesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureVmssUpdateInstancesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -7654,6 +9000,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssWaitSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssWaitSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssWaitSettings SetIds(this AzureVmssWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssWaitSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssWaitSettings SetIds(this AzureVmssWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssWaitSettings AddIds(this AzureVmssWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssWaitSettings AddIds(this AzureVmssWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssWaitSettings ClearIds(this AzureVmssWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssWaitSettings RemoveIds(this AzureVmssWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssWaitSettings RemoveIds(this AzureVmssWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureVmssWaitSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -7687,6 +9093,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssWaitSettings SetSubscription(this AzureVmssWaitSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssWaitSettings ResetSubscription(this AzureVmssWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7908,6 +9332,786 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureVmssEncryptionDisableSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmssEncryptionDisableSettingsExtensions
+    {
+        #region Force
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Force"/>.</em></p><p>Continue by ignoring client side validation errors.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings SetForce(this AzureVmssEncryptionDisableSettings toolSettings, string force)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = force;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Force"/>.</em></p><p>Continue by ignoring client side validation errors.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings ResetForce(this AzureVmssEncryptionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VolumeType
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.VolumeType"/>.</em></p><p>Type of volume that the encryption operation is performed on.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings SetVolumeType(this AzureVmssEncryptionDisableSettings toolSettings, VmssEncryptionVolumeType volumeType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VolumeType = volumeType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.VolumeType"/>.</em></p><p>Type of volume that the encryption operation is performed on.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings ResetVolumeType(this AzureVmssEncryptionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VolumeType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings SetIds(this AzureVmssEncryptionDisableSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings SetIds(this AzureVmssEncryptionDisableSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssEncryptionDisableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings AddIds(this AzureVmssEncryptionDisableSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssEncryptionDisableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings AddIds(this AzureVmssEncryptionDisableSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssEncryptionDisableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings ClearIds(this AzureVmssEncryptionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssEncryptionDisableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings RemoveIds(this AzureVmssEncryptionDisableSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssEncryptionDisableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings RemoveIds(this AzureVmssEncryptionDisableSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings SetName(this AzureVmssEncryptionDisableSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings ResetName(this AzureVmssEncryptionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings SetResourceGroup(this AzureVmssEncryptionDisableSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings ResetResourceGroup(this AzureVmssEncryptionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings SetSubscription(this AzureVmssEncryptionDisableSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings ResetSubscription(this AzureVmssEncryptionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings SetDebug(this AzureVmssEncryptionDisableSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings ResetDebug(this AzureVmssEncryptionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings SetHelp(this AzureVmssEncryptionDisableSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings ResetHelp(this AzureVmssEncryptionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings SetOutput(this AzureVmssEncryptionDisableSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings ResetOutput(this AzureVmssEncryptionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings SetQuery(this AzureVmssEncryptionDisableSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings ResetQuery(this AzureVmssEncryptionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings SetVerbose(this AzureVmssEncryptionDisableSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionDisableSettings ResetVerbose(this AzureVmssEncryptionDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmssEncryptionEnableSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmssEncryptionEnableSettingsExtensions
+    {
+        #region DiskEncryptionKeyvault
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.DiskEncryptionKeyvault"/>.</em></p><p>The key vault where the generated encryption key will be placed.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetDiskEncryptionKeyvault(this AzureVmssEncryptionEnableSettings toolSettings, string diskEncryptionKeyvault)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskEncryptionKeyvault = diskEncryptionKeyvault;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.DiskEncryptionKeyvault"/>.</em></p><p>The key vault where the generated encryption key will be placed.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetDiskEncryptionKeyvault(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskEncryptionKeyvault = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Force
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Force"/>.</em></p><p>Continue by ignoring client side validation errors.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetForce(this AzureVmssEncryptionEnableSettings toolSettings, string force)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = force;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Force"/>.</em></p><p>Continue by ignoring client side validation errors.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetForce(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyEncryptionAlgorithm
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.KeyEncryptionAlgorithm"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetKeyEncryptionAlgorithm(this AzureVmssEncryptionEnableSettings toolSettings, string keyEncryptionAlgorithm)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyEncryptionAlgorithm = keyEncryptionAlgorithm;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.KeyEncryptionAlgorithm"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetKeyEncryptionAlgorithm(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyEncryptionAlgorithm = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyEncryptionKey
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.KeyEncryptionKey"/>.</em></p><p>Key vault key name or URL used to encrypt the disk encryption key.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetKeyEncryptionKey(this AzureVmssEncryptionEnableSettings toolSettings, string keyEncryptionKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyEncryptionKey = keyEncryptionKey;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.KeyEncryptionKey"/>.</em></p><p>Key vault key name or URL used to encrypt the disk encryption key.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetKeyEncryptionKey(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyEncryptionKey = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyEncryptionKeyvault
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.KeyEncryptionKeyvault"/>.</em></p><p>The key vault containing the key encryption key used to encrypt the disk encryption key. If missing, CLI will use `--disk-encryption-keyvault`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetKeyEncryptionKeyvault(this AzureVmssEncryptionEnableSettings toolSettings, string keyEncryptionKeyvault)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyEncryptionKeyvault = keyEncryptionKeyvault;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.KeyEncryptionKeyvault"/>.</em></p><p>The key vault containing the key encryption key used to encrypt the disk encryption key. If missing, CLI will use `--disk-encryption-keyvault`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetKeyEncryptionKeyvault(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyEncryptionKeyvault = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VolumeType
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.VolumeType"/>.</em></p><p>Type of volume that the encryption operation is performed on.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetVolumeType(this AzureVmssEncryptionEnableSettings toolSettings, VmssEncryptionVolumeType volumeType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VolumeType = volumeType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.VolumeType"/>.</em></p><p>Type of volume that the encryption operation is performed on.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetVolumeType(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VolumeType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetIds(this AzureVmssEncryptionEnableSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetIds(this AzureVmssEncryptionEnableSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssEncryptionEnableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings AddIds(this AzureVmssEncryptionEnableSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssEncryptionEnableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings AddIds(this AzureVmssEncryptionEnableSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssEncryptionEnableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ClearIds(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssEncryptionEnableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings RemoveIds(this AzureVmssEncryptionEnableSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssEncryptionEnableSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings RemoveIds(this AzureVmssEncryptionEnableSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetName(this AzureVmssEncryptionEnableSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetName(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetResourceGroup(this AzureVmssEncryptionEnableSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetResourceGroup(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetSubscription(this AzureVmssEncryptionEnableSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetSubscription(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetDebug(this AzureVmssEncryptionEnableSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetDebug(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetHelp(this AzureVmssEncryptionEnableSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetHelp(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetOutput(this AzureVmssEncryptionEnableSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetOutput(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetQuery(this AzureVmssEncryptionEnableSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetQuery(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings SetVerbose(this AzureVmssEncryptionEnableSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionEnableSettings ResetVerbose(this AzureVmssEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmssEncryptionShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmssEncryptionShowSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings SetIds(this AzureVmssEncryptionShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings SetIds(this AzureVmssEncryptionShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssEncryptionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings AddIds(this AzureVmssEncryptionShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssEncryptionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings AddIds(this AzureVmssEncryptionShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssEncryptionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings ClearIds(this AzureVmssEncryptionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssEncryptionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings RemoveIds(this AzureVmssEncryptionShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssEncryptionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings RemoveIds(this AzureVmssEncryptionShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings SetName(this AzureVmssEncryptionShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings ResetName(this AzureVmssEncryptionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings SetResourceGroup(this AzureVmssEncryptionShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings ResetResourceGroup(this AzureVmssEncryptionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings SetSubscription(this AzureVmssEncryptionShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings ResetSubscription(this AzureVmssEncryptionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings SetDebug(this AzureVmssEncryptionShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings ResetDebug(this AzureVmssEncryptionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings SetHelp(this AzureVmssEncryptionShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings ResetHelp(this AzureVmssEncryptionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings SetOutput(this AzureVmssEncryptionShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings ResetOutput(this AzureVmssEncryptionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings SetQuery(this AzureVmssEncryptionShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings ResetQuery(this AzureVmssEncryptionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings SetVerbose(this AzureVmssEncryptionShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssEncryptionShowSettings ResetVerbose(this AzureVmssEncryptionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureVmssDiagnosticsGetDefaultConfigSettingsExtensions
     /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
     [PublicAPI]
@@ -7929,6 +10133,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IsWindowsOs = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssDiagnosticsGetDefaultConfigSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssDiagnosticsGetDefaultConfigSettings SetSubscription(this AzureVmssDiagnosticsGetDefaultConfigSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssDiagnosticsGetDefaultConfigSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssDiagnosticsGetDefaultConfigSettings ResetSubscription(this AzureVmssDiagnosticsGetDefaultConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8162,6 +10384,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssDiagnosticsSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssDiagnosticsSetSettings SetSubscription(this AzureVmssDiagnosticsSetSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssDiagnosticsSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssDiagnosticsSetSettings ResetSubscription(this AzureVmssDiagnosticsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureVmssDiagnosticsSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -8254,24 +10494,84 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureVmssDiskAttachSettingsExtensions
+    #region AzureVmssRollingUpgradeCancelSettingsExtensions
     /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureVmssDiskAttachSettingsExtensions
+    public static partial class AzureVmssRollingUpgradeCancelSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssDiskAttachSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureVmssDiskAttachSettings SetName(this AzureVmssDiskAttachSettings toolSettings, string name)
+        public static AzureVmssRollingUpgradeCancelSettings SetIds(this AzureVmssRollingUpgradeCancelSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings SetIds(this AzureVmssRollingUpgradeCancelSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssRollingUpgradeCancelSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings AddIds(this AzureVmssRollingUpgradeCancelSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssRollingUpgradeCancelSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings AddIds(this AzureVmssRollingUpgradeCancelSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssRollingUpgradeCancelSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings ClearIds(this AzureVmssRollingUpgradeCancelSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssRollingUpgradeCancelSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings RemoveIds(this AzureVmssRollingUpgradeCancelSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssRollingUpgradeCancelSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings RemoveIds(this AzureVmssRollingUpgradeCancelSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings SetName(this AzureVmssRollingUpgradeCancelSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssDiskAttachSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureVmssDiskAttachSettings ResetName(this AzureVmssDiskAttachSettings toolSettings)
+        public static AzureVmssRollingUpgradeCancelSettings ResetName(this AzureVmssRollingUpgradeCancelSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -8279,23 +10579,563 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssDiskAttachSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureVmssDiskAttachSettings SetResourceGroup(this AzureVmssDiskAttachSettings toolSettings, string resourceGroup)
+        public static AzureVmssRollingUpgradeCancelSettings SetResourceGroup(this AzureVmssRollingUpgradeCancelSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssDiskAttachSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureVmssDiskAttachSettings ResetResourceGroup(this AzureVmssDiskAttachSettings toolSettings)
+        public static AzureVmssRollingUpgradeCancelSettings ResetResourceGroup(this AzureVmssRollingUpgradeCancelSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings SetSubscription(this AzureVmssRollingUpgradeCancelSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings ResetSubscription(this AzureVmssRollingUpgradeCancelSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings SetDebug(this AzureVmssRollingUpgradeCancelSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings ResetDebug(this AzureVmssRollingUpgradeCancelSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings SetHelp(this AzureVmssRollingUpgradeCancelSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings ResetHelp(this AzureVmssRollingUpgradeCancelSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings SetOutput(this AzureVmssRollingUpgradeCancelSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings ResetOutput(this AzureVmssRollingUpgradeCancelSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings SetQuery(this AzureVmssRollingUpgradeCancelSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings ResetQuery(this AzureVmssRollingUpgradeCancelSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings SetVerbose(this AzureVmssRollingUpgradeCancelSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeCancelSettings ResetVerbose(this AzureVmssRollingUpgradeCancelSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmssRollingUpgradeGetLatestSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmssRollingUpgradeGetLatestSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings SetIds(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings SetIds(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssRollingUpgradeGetLatestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings AddIds(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssRollingUpgradeGetLatestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings AddIds(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssRollingUpgradeGetLatestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings ClearIds(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssRollingUpgradeGetLatestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings RemoveIds(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssRollingUpgradeGetLatestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings RemoveIds(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings SetName(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings ResetName(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings SetResourceGroup(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings ResetResourceGroup(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings SetSubscription(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings ResetSubscription(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings SetDebug(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings ResetDebug(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings SetHelp(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings ResetHelp(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings SetOutput(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings ResetOutput(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings SetQuery(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings ResetQuery(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings SetVerbose(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeGetLatestSettings ResetVerbose(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmssRollingUpgradeStartSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmssRollingUpgradeStartSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings SetIds(this AzureVmssRollingUpgradeStartSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings SetIds(this AzureVmssRollingUpgradeStartSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssRollingUpgradeStartSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings AddIds(this AzureVmssRollingUpgradeStartSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssRollingUpgradeStartSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings AddIds(this AzureVmssRollingUpgradeStartSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssRollingUpgradeStartSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings ClearIds(this AzureVmssRollingUpgradeStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssRollingUpgradeStartSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings RemoveIds(this AzureVmssRollingUpgradeStartSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssRollingUpgradeStartSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings RemoveIds(this AzureVmssRollingUpgradeStartSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings SetName(this AzureVmssRollingUpgradeStartSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings ResetName(this AzureVmssRollingUpgradeStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings SetResourceGroup(this AzureVmssRollingUpgradeStartSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings ResetResourceGroup(this AzureVmssRollingUpgradeStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings SetSubscription(this AzureVmssRollingUpgradeStartSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings ResetSubscription(this AzureVmssRollingUpgradeStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings SetDebug(this AzureVmssRollingUpgradeStartSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings ResetDebug(this AzureVmssRollingUpgradeStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings SetHelp(this AzureVmssRollingUpgradeStartSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings ResetHelp(this AzureVmssRollingUpgradeStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings SetOutput(this AzureVmssRollingUpgradeStartSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings ResetOutput(this AzureVmssRollingUpgradeStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings SetQuery(this AzureVmssRollingUpgradeStartSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings ResetQuery(this AzureVmssRollingUpgradeStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings SetVerbose(this AzureVmssRollingUpgradeStartSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssRollingUpgradeStartSettings ResetVerbose(this AzureVmssRollingUpgradeStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmssDiskAttachSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmssDiskAttachSettingsExtensions
+    {
         #region Caching
         /// <summary><p><em>Sets <see cref="AzureVmssDiskAttachSettings.Caching"/>.</em></p><p>Disk caching policy.</p></summary>
         [Pure]
@@ -8329,24 +11169,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Disk = null;
-            return toolSettings;
-        }
-        #endregion
-        #region InstanceId
-        /// <summary><p><em>Sets <see cref="AzureVmssDiskAttachSettings.InstanceId"/>.</em></p><p>Scale set VM instance id.</p></summary>
-        [Pure]
-        public static AzureVmssDiskAttachSettings SetInstanceId(this AzureVmssDiskAttachSettings toolSettings, string instanceId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.InstanceId = instanceId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssDiskAttachSettings.InstanceId"/>.</em></p><p>Scale set VM instance id.</p></summary>
-        [Pure]
-        public static AzureVmssDiskAttachSettings ResetInstanceId(this AzureVmssDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.InstanceId = null;
             return toolSettings;
         }
         #endregion
@@ -8389,7 +11211,7 @@ namespace Nuke.Azure
         #region Sku
         /// <summary><p><em>Sets <see cref="AzureVmssDiskAttachSettings.Sku"/>.</em></p><p>Underlying storage SKU.</p></summary>
         [Pure]
-        public static AzureVmssDiskAttachSettings SetSku(this AzureVmssDiskAttachSettings toolSettings, VmssCreateStorageSku sku)
+        public static AzureVmssDiskAttachSettings SetSku(this AzureVmssDiskAttachSettings toolSettings, VmssDiskAttachSku sku)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Sku = sku;
@@ -8401,6 +11223,138 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Sku = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssDiskAttachSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings SetIds(this AzureVmssDiskAttachSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssDiskAttachSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings SetIds(this AzureVmssDiskAttachSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssDiskAttachSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings AddIds(this AzureVmssDiskAttachSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssDiskAttachSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings AddIds(this AzureVmssDiskAttachSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssDiskAttachSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings ClearIds(this AzureVmssDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssDiskAttachSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings RemoveIds(this AzureVmssDiskAttachSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssDiskAttachSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings RemoveIds(this AzureVmssDiskAttachSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region InstanceId
+        /// <summary><p><em>Sets <see cref="AzureVmssDiskAttachSettings.InstanceId"/>.</em></p><p>Scale set VM instance id.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings SetInstanceId(this AzureVmssDiskAttachSettings toolSettings, string instanceId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstanceId = instanceId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssDiskAttachSettings.InstanceId"/>.</em></p><p>Scale set VM instance id.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings ResetInstanceId(this AzureVmssDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstanceId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssDiskAttachSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings SetName(this AzureVmssDiskAttachSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssDiskAttachSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings ResetName(this AzureVmssDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssDiskAttachSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings SetResourceGroup(this AzureVmssDiskAttachSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssDiskAttachSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings ResetResourceGroup(this AzureVmssDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssDiskAttachSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings SetSubscription(this AzureVmssDiskAttachSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssDiskAttachSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssDiskAttachSettings ResetSubscription(this AzureVmssDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8520,6 +11474,84 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssDiskDetachSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskDetachSettings SetIds(this AzureVmssDiskDetachSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssDiskDetachSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskDetachSettings SetIds(this AzureVmssDiskDetachSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssDiskDetachSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskDetachSettings AddIds(this AzureVmssDiskDetachSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssDiskDetachSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskDetachSettings AddIds(this AzureVmssDiskDetachSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssDiskDetachSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskDetachSettings ClearIds(this AzureVmssDiskDetachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssDiskDetachSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskDetachSettings RemoveIds(this AzureVmssDiskDetachSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssDiskDetachSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssDiskDetachSettings RemoveIds(this AzureVmssDiskDetachSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region InstanceId
+        /// <summary><p><em>Sets <see cref="AzureVmssDiskDetachSettings.InstanceId"/>.</em></p><p>Scale set VM instance id.</p></summary>
+        [Pure]
+        public static AzureVmssDiskDetachSettings SetInstanceId(this AzureVmssDiskDetachSettings toolSettings, string instanceId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstanceId = instanceId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssDiskDetachSettings.InstanceId"/>.</em></p><p>Scale set VM instance id.</p></summary>
+        [Pure]
+        public static AzureVmssDiskDetachSettings ResetInstanceId(this AzureVmssDiskDetachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstanceId = null;
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureVmssDiskDetachSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -8556,21 +11588,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region InstanceId
-        /// <summary><p><em>Sets <see cref="AzureVmssDiskDetachSettings.InstanceId"/>.</em></p><p>Scale set VM instance id.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssDiskDetachSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureVmssDiskDetachSettings SetInstanceId(this AzureVmssDiskDetachSettings toolSettings, string instanceId)
+        public static AzureVmssDiskDetachSettings SetSubscription(this AzureVmssDiskDetachSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.InstanceId = instanceId;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssDiskDetachSettings.InstanceId"/>.</em></p><p>Scale set VM instance id.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssDiskDetachSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureVmssDiskDetachSettings ResetInstanceId(this AzureVmssDiskDetachSettings toolSettings)
+        public static AzureVmssDiskDetachSettings ResetSubscription(this AzureVmssDiskDetachSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.InstanceId = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8658,552 +11690,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureVmssDiskDetachSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureVmssDiskDetachSettings ResetVerbose(this AzureVmssDiskDetachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmssEncryptionDisableSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmssEncryptionDisableSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings SetName(this AzureVmssEncryptionDisableSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings ResetName(this AzureVmssEncryptionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings SetResourceGroup(this AzureVmssEncryptionDisableSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings ResetResourceGroup(this AzureVmssEncryptionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Force
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Force"/>.</em></p><p>Continue by ignoring client side validation errors.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings SetForce(this AzureVmssEncryptionDisableSettings toolSettings, string force)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = force;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Force"/>.</em></p><p>Continue by ignoring client side validation errors.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings ResetForce(this AzureVmssEncryptionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VolumeType
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.VolumeType"/>.</em></p><p>Type of volume that the encryption operation is performed on.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings SetVolumeType(this AzureVmssEncryptionDisableSettings toolSettings, VmssEncryptionVolumeType volumeType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VolumeType = volumeType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.VolumeType"/>.</em></p><p>Type of volume that the encryption operation is performed on.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings ResetVolumeType(this AzureVmssEncryptionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VolumeType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings SetDebug(this AzureVmssEncryptionDisableSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings ResetDebug(this AzureVmssEncryptionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings SetHelp(this AzureVmssEncryptionDisableSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings ResetHelp(this AzureVmssEncryptionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings SetOutput(this AzureVmssEncryptionDisableSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings ResetOutput(this AzureVmssEncryptionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings SetQuery(this AzureVmssEncryptionDisableSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings ResetQuery(this AzureVmssEncryptionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings SetVerbose(this AzureVmssEncryptionDisableSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionDisableSettings ResetVerbose(this AzureVmssEncryptionDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmssEncryptionEnableSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmssEncryptionEnableSettingsExtensions
-    {
-        #region DiskEncryptionKeyvault
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.DiskEncryptionKeyvault"/>.</em></p><p>The key vault where the generated encryption key will be placed.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings SetDiskEncryptionKeyvault(this AzureVmssEncryptionEnableSettings toolSettings, string diskEncryptionKeyvault)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DiskEncryptionKeyvault = diskEncryptionKeyvault;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.DiskEncryptionKeyvault"/>.</em></p><p>The key vault where the generated encryption key will be placed.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings ResetDiskEncryptionKeyvault(this AzureVmssEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DiskEncryptionKeyvault = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings SetName(this AzureVmssEncryptionEnableSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings ResetName(this AzureVmssEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings SetResourceGroup(this AzureVmssEncryptionEnableSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings ResetResourceGroup(this AzureVmssEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Force
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Force"/>.</em></p><p>Continue by ignoring client side validation errors.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings SetForce(this AzureVmssEncryptionEnableSettings toolSettings, string force)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = force;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Force"/>.</em></p><p>Continue by ignoring client side validation errors.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings ResetForce(this AzureVmssEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = null;
-            return toolSettings;
-        }
-        #endregion
-        #region KeyEncryptionAlgorithm
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.KeyEncryptionAlgorithm"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings SetKeyEncryptionAlgorithm(this AzureVmssEncryptionEnableSettings toolSettings, string keyEncryptionAlgorithm)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyEncryptionAlgorithm = keyEncryptionAlgorithm;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.KeyEncryptionAlgorithm"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings ResetKeyEncryptionAlgorithm(this AzureVmssEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyEncryptionAlgorithm = null;
-            return toolSettings;
-        }
-        #endregion
-        #region KeyEncryptionKey
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.KeyEncryptionKey"/>.</em></p><p>Key vault key name or URL used to encrypt the disk encryption key.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings SetKeyEncryptionKey(this AzureVmssEncryptionEnableSettings toolSettings, string keyEncryptionKey)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyEncryptionKey = keyEncryptionKey;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.KeyEncryptionKey"/>.</em></p><p>Key vault key name or URL used to encrypt the disk encryption key.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings ResetKeyEncryptionKey(this AzureVmssEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyEncryptionKey = null;
-            return toolSettings;
-        }
-        #endregion
-        #region KeyEncryptionKeyvault
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.KeyEncryptionKeyvault"/>.</em></p><p>The key vault containing the key encryption key used to encrypt the disk encryption key. If missing, CLI will use `--disk-encryption-keyvault`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings SetKeyEncryptionKeyvault(this AzureVmssEncryptionEnableSettings toolSettings, string keyEncryptionKeyvault)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyEncryptionKeyvault = keyEncryptionKeyvault;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.KeyEncryptionKeyvault"/>.</em></p><p>The key vault containing the key encryption key used to encrypt the disk encryption key. If missing, CLI will use `--disk-encryption-keyvault`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings ResetKeyEncryptionKeyvault(this AzureVmssEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyEncryptionKeyvault = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VolumeType
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.VolumeType"/>.</em></p><p>Type of volume that the encryption operation is performed on.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings SetVolumeType(this AzureVmssEncryptionEnableSettings toolSettings, VmssEncryptionVolumeType volumeType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VolumeType = volumeType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.VolumeType"/>.</em></p><p>Type of volume that the encryption operation is performed on.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings ResetVolumeType(this AzureVmssEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VolumeType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings SetDebug(this AzureVmssEncryptionEnableSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings ResetDebug(this AzureVmssEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings SetHelp(this AzureVmssEncryptionEnableSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings ResetHelp(this AzureVmssEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings SetOutput(this AzureVmssEncryptionEnableSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings ResetOutput(this AzureVmssEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings SetQuery(this AzureVmssEncryptionEnableSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings ResetQuery(this AzureVmssEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionEnableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings SetVerbose(this AzureVmssEncryptionEnableSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionEnableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionEnableSettings ResetVerbose(this AzureVmssEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmssEncryptionShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmssEncryptionShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings SetName(this AzureVmssEncryptionShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings ResetName(this AzureVmssEncryptionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings SetResourceGroup(this AzureVmssEncryptionShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings ResetResourceGroup(this AzureVmssEncryptionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings SetDebug(this AzureVmssEncryptionShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings ResetDebug(this AzureVmssEncryptionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings SetHelp(this AzureVmssEncryptionShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings ResetHelp(this AzureVmssEncryptionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings SetOutput(this AzureVmssEncryptionShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings ResetOutput(this AzureVmssEncryptionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings SetQuery(this AzureVmssEncryptionShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings ResetQuery(this AzureVmssEncryptionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmssEncryptionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings SetVerbose(this AzureVmssEncryptionShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssEncryptionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssEncryptionShowSettings ResetVerbose(this AzureVmssEncryptionShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -9311,6 +11797,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssExtensionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionDeleteSettings SetSubscription(this AzureVmssExtensionDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssExtensionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionDeleteSettings ResetSubscription(this AzureVmssExtensionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -9445,6 +11949,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.VmssName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssExtensionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionListSettings SetSubscription(this AzureVmssExtensionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssExtensionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionListSettings ResetSubscription(this AzureVmssExtensionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -9618,6 +12140,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ExtensionInstanceName
+        /// <summary><p><em>Sets <see cref="AzureVmssExtensionSetSettings.ExtensionInstanceName"/>.</em></p><p>Instance name of the extension. Default: name of the extension.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionSetSettings SetExtensionInstanceName(this AzureVmssExtensionSetSettings toolSettings, string extensionInstanceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExtensionInstanceName = extensionInstanceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssExtensionSetSettings.ExtensionInstanceName"/>.</em></p><p>Instance name of the extension. Default: name of the extension.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionSetSettings ResetExtensionInstanceName(this AzureVmssExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExtensionInstanceName = null;
+            return toolSettings;
+        }
+        #endregion
         #region ForceUpdate
         /// <summary><p><em>Sets <see cref="AzureVmssExtensionSetSettings.ForceUpdate"/>.</em></p><p>Force to update even if the extension configuration has not changed.</p></summary>
         [Pure]
@@ -9774,6 +12314,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssExtensionSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionSetSettings SetSubscription(this AzureVmssExtensionSetSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssExtensionSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionSetSettings ResetSubscription(this AzureVmssExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureVmssExtensionSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -9926,6 +12484,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssExtensionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionShowSettings SetSubscription(this AzureVmssExtensionShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssExtensionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionShowSettings ResetSubscription(this AzureVmssExtensionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureVmssExtensionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -10024,42 +12600,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssIdentityAssignSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssIdentityAssignSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssIdentityAssignSettings SetName(this AzureVmssIdentityAssignSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssIdentityAssignSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssIdentityAssignSettings ResetName(this AzureVmssIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssIdentityAssignSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssIdentityAssignSettings SetResourceGroup(this AzureVmssIdentityAssignSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssIdentityAssignSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssIdentityAssignSettings ResetResourceGroup(this AzureVmssIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region Identities
         /// <summary><p><em>Sets <see cref="AzureVmssIdentityAssignSettings.Identities"/>.</em></p><p>The identities to assign.</p></summary>
         [Pure]
@@ -10111,6 +12651,120 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssIdentityAssignSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityAssignSettings SetIds(this AzureVmssIdentityAssignSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssIdentityAssignSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityAssignSettings SetIds(this AzureVmssIdentityAssignSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssIdentityAssignSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityAssignSettings AddIds(this AzureVmssIdentityAssignSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssIdentityAssignSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityAssignSettings AddIds(this AzureVmssIdentityAssignSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssIdentityAssignSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityAssignSettings ClearIds(this AzureVmssIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssIdentityAssignSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityAssignSettings RemoveIds(this AzureVmssIdentityAssignSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssIdentityAssignSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityAssignSettings RemoveIds(this AzureVmssIdentityAssignSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssIdentityAssignSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityAssignSettings SetName(this AzureVmssIdentityAssignSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssIdentityAssignSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityAssignSettings ResetName(this AzureVmssIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssIdentityAssignSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityAssignSettings SetResourceGroup(this AzureVmssIdentityAssignSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssIdentityAssignSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityAssignSettings ResetResourceGroup(this AzureVmssIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssIdentityAssignSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityAssignSettings SetSubscription(this AzureVmssIdentityAssignSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssIdentityAssignSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityAssignSettings ResetSubscription(this AzureVmssIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -10212,42 +12866,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssIdentityRemoveSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssIdentityRemoveSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssIdentityRemoveSettings SetName(this AzureVmssIdentityRemoveSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssIdentityRemoveSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssIdentityRemoveSettings ResetName(this AzureVmssIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssIdentityRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssIdentityRemoveSettings SetResourceGroup(this AzureVmssIdentityRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssIdentityRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssIdentityRemoveSettings ResetResourceGroup(this AzureVmssIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region Identities
         /// <summary><p><em>Sets <see cref="AzureVmssIdentityRemoveSettings.Identities"/> to a new list.</em></p><p>Space-separated identities to remove. Use '[system]' to refer system assigned identity.</p></summary>
         [Pure]
@@ -10305,6 +12923,120 @@ namespace Nuke.Azure
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(identities);
             toolSettings.IdentitiesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssIdentityRemoveSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityRemoveSettings SetIds(this AzureVmssIdentityRemoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssIdentityRemoveSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityRemoveSettings SetIds(this AzureVmssIdentityRemoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssIdentityRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityRemoveSettings AddIds(this AzureVmssIdentityRemoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssIdentityRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityRemoveSettings AddIds(this AzureVmssIdentityRemoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssIdentityRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityRemoveSettings ClearIds(this AzureVmssIdentityRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssIdentityRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityRemoveSettings RemoveIds(this AzureVmssIdentityRemoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssIdentityRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityRemoveSettings RemoveIds(this AzureVmssIdentityRemoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssIdentityRemoveSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityRemoveSettings SetName(this AzureVmssIdentityRemoveSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssIdentityRemoveSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityRemoveSettings ResetName(this AzureVmssIdentityRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssIdentityRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityRemoveSettings SetResourceGroup(this AzureVmssIdentityRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssIdentityRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityRemoveSettings ResetResourceGroup(this AzureVmssIdentityRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssIdentityRemoveSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityRemoveSettings SetSubscription(this AzureVmssIdentityRemoveSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssIdentityRemoveSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityRemoveSettings ResetSubscription(this AzureVmssIdentityRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -10406,6 +13138,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssIdentityShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssIdentityShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityShowSettings SetIds(this AzureVmssIdentityShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssIdentityShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityShowSettings SetIds(this AzureVmssIdentityShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssIdentityShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityShowSettings AddIds(this AzureVmssIdentityShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssIdentityShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityShowSettings AddIds(this AzureVmssIdentityShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssIdentityShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityShowSettings ClearIds(this AzureVmssIdentityShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssIdentityShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityShowSettings RemoveIds(this AzureVmssIdentityShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssIdentityShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityShowSettings RemoveIds(this AzureVmssIdentityShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureVmssIdentityShowSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -10439,6 +13231,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssIdentityShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityShowSettings SetSubscription(this AzureVmssIdentityShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssIdentityShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssIdentityShowSettings ResetSubscription(this AzureVmssIdentityShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -10576,6 +13386,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssNicListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssNicListSettings SetSubscription(this AzureVmssNicListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssNicListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssNicListSettings ResetSubscription(this AzureVmssNicListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureVmssNicListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -10674,6 +13502,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssNicListVmNicsSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssNicListVmNicsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicListVmNicsSettings SetIds(this AzureVmssNicListVmNicsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssNicListVmNicsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicListVmNicsSettings SetIds(this AzureVmssNicListVmNicsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssNicListVmNicsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicListVmNicsSettings AddIds(this AzureVmssNicListVmNicsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssNicListVmNicsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicListVmNicsSettings AddIds(this AzureVmssNicListVmNicsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssNicListVmNicsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicListVmNicsSettings ClearIds(this AzureVmssNicListVmNicsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssNicListVmNicsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicListVmNicsSettings RemoveIds(this AzureVmssNicListVmNicsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssNicListVmNicsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicListVmNicsSettings RemoveIds(this AzureVmssNicListVmNicsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region InstanceId
         /// <summary><p><em>Sets <see cref="AzureVmssNicListVmNicsSettings.InstanceId"/>.</em></p><p>The virtual machine index.</p></summary>
         [Pure]
@@ -10707,6 +13595,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssNicListVmNicsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssNicListVmNicsSettings SetSubscription(this AzureVmssNicListVmNicsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssNicListVmNicsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssNicListVmNicsSettings ResetSubscription(this AzureVmssNicListVmNicsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -10826,6 +13732,84 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmssNicShowSettingsExtensions
     {
+        #region Expand
+        /// <summary><p><em>Sets <see cref="AzureVmssNicShowSettings.Expand"/>.</em></p><p>Expands referenced resources.</p></summary>
+        [Pure]
+        public static AzureVmssNicShowSettings SetExpand(this AzureVmssNicShowSettings toolSettings, string expand)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = expand;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssNicShowSettings.Expand"/>.</em></p><p>Expands referenced resources.</p></summary>
+        [Pure]
+        public static AzureVmssNicShowSettings ResetExpand(this AzureVmssNicShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureVmssNicShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicShowSettings SetIds(this AzureVmssNicShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssNicShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicShowSettings SetIds(this AzureVmssNicShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssNicShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicShowSettings AddIds(this AzureVmssNicShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssNicShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicShowSettings AddIds(this AzureVmssNicShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssNicShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicShowSettings ClearIds(this AzureVmssNicShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssNicShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicShowSettings RemoveIds(this AzureVmssNicShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssNicShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureVmssNicShowSettings RemoveIds(this AzureVmssNicShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region InstanceId
         /// <summary><p><em>Sets <see cref="AzureVmssNicShowSettings.InstanceId"/>.</em></p><p>The virtual machine index.</p></summary>
         [Pure]
@@ -10880,6 +13864,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssNicShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssNicShowSettings SetSubscription(this AzureVmssNicShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssNicShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssNicShowSettings ResetSubscription(this AzureVmssNicShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region VmssName
         /// <summary><p><em>Sets <see cref="AzureVmssNicShowSettings.VmssName"/>.</em></p><p>Scale set name.</p></summary>
         [Pure]
@@ -10895,24 +13897,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.VmssName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Expand
-        /// <summary><p><em>Sets <see cref="AzureVmssNicShowSettings.Expand"/>.</em></p><p>Expands referenced resources.</p></summary>
-        [Pure]
-        public static AzureVmssNicShowSettings SetExpand(this AzureVmssNicShowSettings toolSettings, string expand)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = expand;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssNicShowSettings.Expand"/>.</em></p><p>Expands referenced resources.</p></summary>
-        [Pure]
-        public static AzureVmssNicShowSettings ResetExpand(this AzureVmssNicShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = null;
             return toolSettings;
         }
         #endregion
@@ -11000,408 +13984,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureVmssNicShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureVmssNicShowSettings ResetVerbose(this AzureVmssNicShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmssRollingUpgradeCancelSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmssRollingUpgradeCancelSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings SetName(this AzureVmssRollingUpgradeCancelSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings ResetName(this AzureVmssRollingUpgradeCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings SetResourceGroup(this AzureVmssRollingUpgradeCancelSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings ResetResourceGroup(this AzureVmssRollingUpgradeCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings SetDebug(this AzureVmssRollingUpgradeCancelSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings ResetDebug(this AzureVmssRollingUpgradeCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings SetHelp(this AzureVmssRollingUpgradeCancelSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings ResetHelp(this AzureVmssRollingUpgradeCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings SetOutput(this AzureVmssRollingUpgradeCancelSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings ResetOutput(this AzureVmssRollingUpgradeCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings SetQuery(this AzureVmssRollingUpgradeCancelSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings ResetQuery(this AzureVmssRollingUpgradeCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeCancelSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings SetVerbose(this AzureVmssRollingUpgradeCancelSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeCancelSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeCancelSettings ResetVerbose(this AzureVmssRollingUpgradeCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmssRollingUpgradeGetLatestSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmssRollingUpgradeGetLatestSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings SetName(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings ResetName(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings SetResourceGroup(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings ResetResourceGroup(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings SetDebug(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings ResetDebug(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings SetHelp(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings ResetHelp(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings SetOutput(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings ResetOutput(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings SetQuery(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings ResetQuery(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings SetVerbose(this AzureVmssRollingUpgradeGetLatestSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeGetLatestSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeGetLatestSettings ResetVerbose(this AzureVmssRollingUpgradeGetLatestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmssRollingUpgradeStartSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmssRollingUpgradeStartSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings SetName(this AzureVmssRollingUpgradeStartSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings ResetName(this AzureVmssRollingUpgradeStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings SetResourceGroup(this AzureVmssRollingUpgradeStartSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings ResetResourceGroup(this AzureVmssRollingUpgradeStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings SetDebug(this AzureVmssRollingUpgradeStartSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings ResetDebug(this AzureVmssRollingUpgradeStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings SetHelp(this AzureVmssRollingUpgradeStartSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings ResetHelp(this AzureVmssRollingUpgradeStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings SetOutput(this AzureVmssRollingUpgradeStartSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings ResetOutput(this AzureVmssRollingUpgradeStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings SetQuery(this AzureVmssRollingUpgradeStartSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings ResetQuery(this AzureVmssRollingUpgradeStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmssRollingUpgradeStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings SetVerbose(this AzureVmssRollingUpgradeStartSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssRollingUpgradeStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmssRollingUpgradeStartSettings ResetVerbose(this AzureVmssRollingUpgradeStartSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -11527,6 +14109,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Version = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssExtensionImageListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionImageListSettings SetSubscription(this AzureVmssExtensionImageListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssExtensionImageListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionImageListSettings ResetSubscription(this AzureVmssExtensionImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -11661,6 +14261,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Publisher = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssExtensionImageListNamesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionImageListNamesSettings SetSubscription(this AzureVmssExtensionImageListNamesSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssExtensionImageListNamesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionImageListNamesSettings ResetSubscription(this AzureVmssExtensionImageListNamesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -11870,6 +14488,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssExtensionImageListVersionsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionImageListVersionsSettings SetSubscription(this AzureVmssExtensionImageListVersionsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssExtensionImageListVersionsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionImageListVersionsSettings ResetSubscription(this AzureVmssExtensionImageListVersionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureVmssExtensionImageListVersionsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -12040,6 +14676,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureVmssExtensionImageShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionImageShowSettings SetSubscription(this AzureVmssExtensionImageShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssExtensionImageShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureVmssExtensionImageShowSettings ResetSubscription(this AzureVmssExtensionImageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureVmssExtensionImageShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -12197,6 +14851,7 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public partial class VmssCreateAuthenticationType : Enumeration
     {
+        public static VmssCreateAuthenticationType all = new VmssCreateAuthenticationType { Value = "all" };
         public static VmssCreateAuthenticationType password = new VmssCreateAuthenticationType { Value = "password" };
         public static VmssCreateAuthenticationType ssh = new VmssCreateAuthenticationType { Value = "ssh" };
     }
@@ -12246,19 +14901,6 @@ namespace Nuke.Azure
         public static VmssCreateOsType windows = new VmssCreateOsType { Value = "windows" };
     }
     #endregion
-    #region VmssCreateStorageSku
-    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    public partial class VmssCreateStorageSku : Enumeration
-    {
-        public static VmssCreateStorageSku premium_lrs = new VmssCreateStorageSku { Value = "premium_lrs" };
-        public static VmssCreateStorageSku standardssd_lrs = new VmssCreateStorageSku { Value = "standardssd_lrs" };
-        public static VmssCreateStorageSku standard_lrs = new VmssCreateStorageSku { Value = "standard_lrs" };
-        public static VmssCreateStorageSku ultrassd_lrs = new VmssCreateStorageSku { Value = "ultrassd_lrs" };
-    }
-    #endregion
     #region VmssEncryptionVolumeType
     /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
     [PublicAPI]
@@ -12269,6 +14911,19 @@ namespace Nuke.Azure
         public static VmssEncryptionVolumeType all = new VmssEncryptionVolumeType { Value = "all" };
         public static VmssEncryptionVolumeType data = new VmssEncryptionVolumeType { Value = "data" };
         public static VmssEncryptionVolumeType os = new VmssEncryptionVolumeType { Value = "os" };
+    }
+    #endregion
+    #region VmssDiskAttachSku
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class VmssDiskAttachSku : Enumeration
+    {
+        public static VmssDiskAttachSku premium_lrs = new VmssDiskAttachSku { Value = "premium_lrs" };
+        public static VmssDiskAttachSku standardssd_lrs = new VmssDiskAttachSku { Value = "standardssd_lrs" };
+        public static VmssDiskAttachSku standard_lrs = new VmssDiskAttachSku { Value = "standard_lrs" };
+        public static VmssDiskAttachSku ultrassd_lrs = new VmssDiskAttachSku { Value = "ultrassd_lrs" };
     }
     #endregion
 }

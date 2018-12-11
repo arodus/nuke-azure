@@ -6,29 +6,29 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/job.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/account/blob-storage.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/account/compute-policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/account/data-lake-store.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/account/firewall.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog/assembly.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog/database.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog/external-data-source.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog/package.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog/procedure.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog/schema.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog/table-partition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog/table-stats.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog/table-type.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog/table.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog/tvf.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/catalog/view.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/job/pipeline.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dla/job/recurrence.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/account/compute-policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/account/firewall.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/account/data-lake-store.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/account/blob-storage.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog/procedure.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog/table-partition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog/view.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog/table-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog/database.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog/schema.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog/tvf.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog/package.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog/assembly.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog/external-data-source.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog/table.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/catalog/table-stats.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/job/pipeline.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/dla/job/recurrence.yml"
   ],
   "name": "AzureDla",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest",
@@ -38,6 +38,11 @@
     {
       "postfix": "",
       "definiteArgument": "dla",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "Catalog",
+      "definiteArgument": "dla catalog",
       "settingsClass": {}
     },
     {
@@ -98,6 +103,12 @@
             "type": "DlaAccountTier",
             "format": "--tier {value}",
             "help": "The desired commitment tier for this account to use."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -108,16 +119,29 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
             "name": "Account",
             "type": "string",
             "format": "--account {value}",
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "ResourceGroup",
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -132,6 +156,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -142,16 +172,29 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
             "name": "Account",
             "type": "string",
             "format": "--account {value}",
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "ResourceGroup",
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -161,12 +204,6 @@
       "definiteArgument": "dla account update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "AllowAzureIps",
             "type": "DlaAccountUpdateAllowAzureIps",
@@ -214,20 +251,7 @@
             "type": "DlaAccountTier",
             "format": "--tier {value}",
             "help": "The desired commitment tier for this account to use."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "Catalog",
-      "definiteArgument": "dla catalog",
-      "settingsClass": {}
-    },
-    {
-      "postfix": "JobCancel",
-      "definiteArgument": "dla job cancel",
-      "settingsClass": {
-        "properties": [
+          },
           {
             "name": "Account",
             "type": "string",
@@ -235,10 +259,50 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobCancel",
+      "definiteArgument": "dla job cancel",
+      "settingsClass": {
+        "properties": [
+          {
             "name": "JobIdentity",
             "type": "string",
             "format": "--job-identity {value}",
             "help": "JobInfo ID to cancel."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -248,12 +312,6 @@
       "definiteArgument": "dla job list",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "Name",
             "type": "string",
@@ -307,6 +365,25 @@
             "type": "int",
             "format": "--top {value}",
             "help": "Maximum number of items to return."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -317,16 +394,29 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "JobIdentity",
+            "type": "string",
+            "format": "--job-identity {value}",
+            "help": "JobInfo ID."
+          },
+          {
             "name": "Account",
             "type": "string",
             "format": "--account {value}",
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "JobIdentity",
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
             "type": "string",
-            "format": "--job-identity {value}",
-            "help": "JobInfo ID."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -336,12 +426,6 @@
       "definiteArgument": "dla job submit",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "JobName",
             "type": "string",
@@ -419,6 +503,25 @@
             "type": "string",
             "format": "--runtime-version {value}",
             "help": "The runtime version to use."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -428,12 +531,6 @@
       "definiteArgument": "dla job wait",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "JobId",
             "type": "string",
@@ -451,20 +548,6 @@
             "type": "string",
             "format": "--wait-interval-sec {value}",
             "help": "The polling interval between checks for the job status, in seconds."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountBlobStorageAdd",
-      "definiteArgument": "dla account blob-storage add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccessKey",
-            "type": "string",
-            "format": "--access-key {value}",
-            "help": "The access key associated with this Azure Storage account that will be used to connect to it."
           },
           {
             "name": "Account",
@@ -473,169 +556,17 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "StorageAccountName",
-            "type": "string",
-            "format": "--storage-account-name {value}",
-            "help": ""
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          },
-          {
-            "name": "Suffix",
-            "type": "string",
-            "format": "--suffix {value}",
-            "help": "The optional suffix for the storage account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountBlobStorageDelete",
-      "definiteArgument": "dla account blob-storage delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "StorageAccountName",
-            "type": "string",
-            "format": "--storage-account-name {value}",
-            "help": "The name of the Azure Storage account to remove."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountBlobStorageList",
-      "definiteArgument": "dla account blob-storage list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "Count",
-            "type": "string",
-            "format": "--count {value}",
-            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "The OData filter. Optional."
-          },
-          {
-            "name": "Orderby",
+            "name": "Ids",
             "type": "List<string>",
-            "format": "--orderby {value}",
-            "separator": ",",
-            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
-            "name": "ResourceGroup",
+            "name": "Subscription",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "The number of items to skip over before returning elements."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "help": "Maximum number of items to return."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountBlobStorageShow",
-      "definiteArgument": "dla account blob-storage show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "StorageAccountName",
-            "type": "string",
-            "format": "--storage-account-name {value}",
-            "help": "The name of the Azure Storage account for which to retrieve the details."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountBlobStorageUpdate",
-      "definiteArgument": "dla account blob-storage update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccessKey",
-            "type": "string",
-            "format": "--access-key {value}",
-            "help": "The access key associated with this Azure Storage account that will be used to connect to it."
-          },
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "StorageAccountName",
-            "type": "string",
-            "format": "--storage-account-name {value}",
-            "help": ""
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          },
-          {
-            "name": "Suffix",
-            "type": "string",
-            "format": "--suffix {value}",
-            "help": "The optional suffix for the storage account."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -686,6 +617,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -695,12 +632,6 @@
       "definiteArgument": "dla account compute-policy delete",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "ComputePolicyName",
             "type": "string",
@@ -712,6 +643,25 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -722,16 +672,29 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
             "name": "Account",
             "type": "string",
             "format": "--account {value}",
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "ResourceGroup",
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -741,12 +704,6 @@
       "definiteArgument": "dla account compute-policy show",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "ComputePolicyName",
             "type": "string",
@@ -758,6 +715,25 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -767,12 +743,6 @@
       "definiteArgument": "dla account compute-policy update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "ComputePolicyName",
             "type": "string",
@@ -796,15 +766,7 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountDataLakeStoreAdd",
-      "definiteArgument": "dla account data-lake-store add",
-      "settingsClass": {
-        "properties": [
+          },
           {
             "name": "Account",
             "type": "string",
@@ -812,131 +774,17 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "DataLakeStoreAccountName",
-            "type": "string",
-            "format": "--data-lake-store-account-name {value}",
-            "help": "The name of the Data Lake Store account to add."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          },
-          {
-            "name": "Suffix",
-            "type": "string",
-            "format": "--suffix {value}",
-            "help": "The optional suffix for the Data Lake Store account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountDataLakeStoreDelete",
-      "definiteArgument": "dla account data-lake-store delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DataLakeStoreAccountName",
-            "type": "string",
-            "format": "--data-lake-store-account-name {value}",
-            "help": "The name of the Data Lake Store account to remove."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountDataLakeStoreList",
-      "definiteArgument": "dla account data-lake-store list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "Count",
-            "type": "string",
-            "format": "--count {value}",
-            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "OData filter. Optional."
-          },
-          {
-            "name": "Orderby",
+            "name": "Ids",
             "type": "List<string>",
-            "format": "--orderby {value}",
-            "separator": ",",
-            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
-            "name": "ResourceGroup",
+            "name": "Subscription",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "The number of items to skip over before returning elements."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "help": "Maximum number of items to return."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountDataLakeStoreShow",
-      "definiteArgument": "dla account data-lake-store show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DataLakeStoreAccountName",
-            "type": "string",
-            "format": "--data-lake-store-account-name {value}",
-            "help": "The name of the Data Lake Store account to retrieve."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -975,6 +823,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -984,12 +838,6 @@
       "definiteArgument": "dla account firewall delete",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "FirewallRuleName",
             "type": "string",
@@ -1001,6 +849,25 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1011,16 +878,29 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
             "name": "Account",
             "type": "string",
             "format": "--account {value}",
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "ResourceGroup",
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1030,12 +910,6 @@
       "definiteArgument": "dla account firewall show",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "FirewallRuleName",
             "type": "string",
@@ -1047,6 +921,25 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1056,12 +949,6 @@
       "definiteArgument": "dla account firewall update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "FirewallRuleName",
             "type": "string",
@@ -1085,15 +972,7 @@
             "type": "string",
             "format": "--start-ip-address {value}",
             "help": "The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogAssemblyList",
-      "definiteArgument": "dla catalog assembly list",
-      "settingsClass": {
-        "properties": [
+          },
           {
             "name": "Account",
             "type": "string",
@@ -1101,11 +980,110 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the assembly."
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountDataLakeStoreAdd",
+      "definiteArgument": "dla account data-lake-store add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DataLakeStoreAccountName",
+            "type": "string",
+            "format": "--data-lake-store-account-name {value}",
+            "help": "The name of the Data Lake Store account to add."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Suffix",
+            "type": "string",
+            "format": "--suffix {value}",
+            "help": "The optional suffix for the Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountDataLakeStoreDelete",
+      "definiteArgument": "dla account data-lake-store delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DataLakeStoreAccountName",
+            "type": "string",
+            "format": "--data-lake-store-account-name {value}",
+            "help": "The name of the Data Lake Store account to remove."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountDataLakeStoreList",
+      "definiteArgument": "dla account data-lake-store list",
+      "settingsClass": {
+        "properties": [
           {
             "name": "Count",
             "type": "string",
@@ -1126,6 +1104,12 @@
             "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
           },
           {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
             "name": "Select",
             "type": "string",
             "format": "--select {value}",
@@ -1142,15 +1126,7 @@
             "type": "int",
             "format": "--top {value}",
             "help": "Maximum number of items to return."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogAssemblyShow",
-      "definiteArgument": "dla catalog assembly show",
-      "settingsClass": {
-        "properties": [
+          },
           {
             "name": "Account",
             "type": "string",
@@ -1158,25 +1134,38 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "AssemblyName",
-            "type": "string",
-            "format": "--assembly-name {value}",
-            "help": "The name of the assembly."
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
-            "name": "DatabaseName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the assembly."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "CatalogCredentialCreate",
-      "definiteArgument": "dla catalog credential create",
+      "postfix": "AccountDataLakeStoreShow",
+      "definiteArgument": "dla account data-lake-store show",
       "settingsClass": {
         "properties": [
+          {
+            "name": "DataLakeStoreAccountName",
+            "type": "string",
+            "format": "--data-lake-store-account-name {value}",
+            "help": "The name of the Data Lake Store account to retrieve."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
           {
             "name": "Account",
             "type": "string",
@@ -1184,44 +1173,50 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "CredentialName",
-            "type": "string",
-            "format": "--credential-name {value}",
-            "help": "The name of the credential."
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
-            "name": "DatabaseName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database in which to create the credential."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountBlobStorageAdd",
+      "definiteArgument": "dla account blob-storage add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccessKey",
+            "type": "string",
+            "format": "--access-key {value}",
+            "help": "The access key associated with this Azure Storage account that will be used to connect to it."
           },
           {
-            "name": "Uri",
+            "name": "StorageAccountName",
             "type": "string",
-            "format": "--uri {value}",
+            "format": "--storage-account-name {value}",
             "help": ""
           },
           {
-            "name": "UserName",
+            "name": "ResourceGroup",
             "type": "string",
-            "format": "--user-name {value}",
-            "help": "The user name that will be used when authenticating with this credential."
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
           },
           {
-            "name": "Password",
+            "name": "Suffix",
             "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "Password for the credential user. Will prompt if not given."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogCredentialDelete",
-      "definiteArgument": "dla catalog credential delete",
-      "settingsClass": {
-        "properties": [
+            "format": "--suffix {value}",
+            "help": "The optional suffix for the storage account."
+          },
           {
             "name": "Account",
             "type": "string",
@@ -1229,38 +1224,38 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "CredentialName",
-            "type": "string",
-            "format": "--credential-name {value}",
-            "help": "The name of the credential to delete."
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
-            "name": "DatabaseName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the credential."
-          },
-          {
-            "name": "Cascade",
-            "type": "string",
-            "format": "--cascade {value}",
-            "help": "Indicates if the delete should be a cascading delete (which deletes all resources dependent on the credential as well as the credential) or not. If false will fail if there are any resources relying on the credential."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "The current password for the credential and user with access to the data source. This is required if the requester is not the account owner."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "CatalogCredentialList",
-      "definiteArgument": "dla catalog credential list",
+      "postfix": "AccountBlobStorageDelete",
+      "definiteArgument": "dla account blob-storage delete",
       "settingsClass": {
         "properties": [
+          {
+            "name": "StorageAccountName",
+            "type": "string",
+            "format": "--storage-account-name {value}",
+            "help": "The name of the Azure Storage account to remove."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
           {
             "name": "Account",
             "type": "string",
@@ -1268,11 +1263,26 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the schema."
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountBlobStorageList",
+      "definiteArgument": "dla account blob-storage list",
+      "settingsClass": {
+        "properties": [
           {
             "name": "Count",
             "type": "string",
@@ -1283,7 +1293,7 @@
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
-            "help": "OData filter. Optional."
+            "help": "The OData filter. Optional."
           },
           {
             "name": "Orderby",
@@ -1291,6 +1301,12 @@
             "format": "--orderby {value}",
             "separator": ",",
             "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
           },
           {
             "name": "Select",
@@ -1309,15 +1325,7 @@
             "type": "int",
             "format": "--top {value}",
             "help": "Maximum number of items to return."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogCredentialShow",
-      "definiteArgument": "dla catalog credential show",
-      "settingsClass": {
-        "properties": [
+          },
           {
             "name": "Account",
             "type": "string",
@@ -1325,25 +1333,38 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "CredentialName",
-            "type": "string",
-            "format": "--credential-name {value}",
-            "help": "The name of the credential."
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
-            "name": "DatabaseName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the schema."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "CatalogCredentialUpdate",
-      "definiteArgument": "dla catalog credential update",
+      "postfix": "AccountBlobStorageShow",
+      "definiteArgument": "dla account blob-storage show",
       "settingsClass": {
         "properties": [
+          {
+            "name": "StorageAccountName",
+            "type": "string",
+            "format": "--storage-account-name {value}",
+            "help": "The name of the Azure Storage account for which to retrieve the details."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
           {
             "name": "Account",
             "type": "string",
@@ -1351,51 +1372,50 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "CredentialName",
-            "type": "string",
-            "format": "--credential-name {value}",
-            "help": "The name of the credential to update."
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
-            "name": "DatabaseName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database in which the credential exists."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountBlobStorageUpdate",
+      "definiteArgument": "dla account blob-storage update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccessKey",
+            "type": "string",
+            "format": "--access-key {value}",
+            "help": "The access key associated with this Azure Storage account that will be used to connect to it."
           },
           {
-            "name": "Uri",
+            "name": "StorageAccountName",
             "type": "string",
-            "format": "--uri {value}",
+            "format": "--storage-account-name {value}",
             "help": ""
           },
           {
-            "name": "UserName",
+            "name": "ResourceGroup",
             "type": "string",
-            "format": "--user-name {value}",
-            "help": "The user name associated with the credential that will have its password updated."
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
           },
           {
-            "name": "NewPassword",
+            "name": "Suffix",
             "type": "string",
-            "format": "--new-password {value}",
-            "secret": true,
-            "help": "New password for the credential user. Will prompt if not given."
+            "format": "--suffix {value}",
+            "help": "The optional suffix for the storage account."
           },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "Current password for the credential user. Will prompt if not given."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogDatabaseList",
-      "definiteArgument": "dla catalog database list",
-      "settingsClass": {
-        "properties": [
           {
             "name": "Account",
             "type": "string",
@@ -1403,239 +1423,17 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "Count",
-            "type": "string",
-            "format": "--count {value}",
-            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "OData filter. Optional."
-          },
-          {
-            "name": "Orderby",
+            "name": "Ids",
             "type": "List<string>",
-            "format": "--orderby {value}",
-            "separator": ",",
-            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
-            "name": "Select",
+            "name": "Subscription",
             "type": "string",
-            "format": "--select {value}",
-            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "The number of items to skip over before returning elements."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "help": "Maximum number of items to return."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogDatabaseShow",
-      "definiteArgument": "dla catalog database show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogExternalDataSourceList",
-      "definiteArgument": "dla catalog external-data-source list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the external data sources."
-          },
-          {
-            "name": "Count",
-            "type": "string",
-            "format": "--count {value}",
-            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "OData filter. Optional."
-          },
-          {
-            "name": "Orderby",
-            "type": "List<string>",
-            "format": "--orderby {value}",
-            "separator": ",",
-            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "The number of items to skip over before returning elements."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "help": "Maximum number of items to return."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogExternalDataSourceShow",
-      "definiteArgument": "dla catalog external-data-source show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the external data source."
-          },
-          {
-            "name": "ExternalDataSourceName",
-            "type": "string",
-            "format": "--external-data-source-name {value}",
-            "help": "The name of the external data source."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogPackageList",
-      "definiteArgument": "dla catalog package list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the packages."
-          },
-          {
-            "name": "SchemaName",
-            "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The name of the schema containing the packages."
-          },
-          {
-            "name": "Count",
-            "type": "string",
-            "format": "--count {value}",
-            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "OData filter. Optional."
-          },
-          {
-            "name": "Orderby",
-            "type": "List<string>",
-            "format": "--orderby {value}",
-            "separator": ",",
-            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "The number of items to skip over before returning elements."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "help": "Maximum number of items to return."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogPackageShow",
-      "definiteArgument": "dla catalog package show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the package."
-          },
-          {
-            "name": "PackageName",
-            "type": "string",
-            "format": "--package-name {value}",
-            "help": "The name of the package."
-          },
-          {
-            "name": "SchemaName",
-            "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The name of the schema containing the package."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1645,12 +1443,6 @@
       "definiteArgument": "dla catalog procedure list",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "DatabaseName",
             "type": "string",
@@ -1699,6 +1491,25 @@
             "type": "int",
             "format": "--top {value}",
             "help": "Maximum number of items to return."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1708,12 +1519,6 @@
       "definiteArgument": "dla catalog procedure show",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "DatabaseName",
             "type": "string",
@@ -1731,15 +1536,7 @@
             "type": "string",
             "format": "--schema-name {value}",
             "help": "The name of the schema containing the procedure."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogSchemaList",
-      "definiteArgument": "dla catalog schema list",
-      "settingsClass": {
-        "properties": [
+          },
           {
             "name": "Account",
             "type": "string",
@@ -1747,73 +1544,17 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the schema."
-          },
-          {
-            "name": "Count",
-            "type": "string",
-            "format": "--count {value}",
-            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "OData filter. Optional."
-          },
-          {
-            "name": "Orderby",
+            "name": "Ids",
             "type": "List<string>",
-            "format": "--orderby {value}",
-            "separator": ",",
-            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
-            "name": "Select",
+            "name": "Subscription",
             "type": "string",
-            "format": "--select {value}",
-            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "The number of items to skip over before returning elements."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "help": "Maximum number of items to return."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogSchemaShow",
-      "definiteArgument": "dla catalog schema show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the schema."
-          },
-          {
-            "name": "SchemaName",
-            "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The name of the schema."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1823,12 +1564,6 @@
       "definiteArgument": "dla catalog table-partition list",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "DatabaseName",
             "type": "string",
@@ -1883,6 +1618,25 @@
             "type": "int",
             "format": "--top {value}",
             "help": "Maximum number of items to return."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1892,12 +1646,6 @@
       "definiteArgument": "dla catalog table-partition show",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "DatabaseName",
             "type": "string",
@@ -1921,21 +1669,34 @@
             "type": "string",
             "format": "--table-name {value}",
             "help": "The name of the table containing the partition."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogTableStatsList",
-      "definiteArgument": "dla catalog table-stats list",
-      "settingsClass": {
-        "properties": [
+          },
           {
             "name": "Account",
             "type": "string",
             "format": "--account {value}",
             "help": "Name of the Data Lake Analytics account."
           },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogViewList",
+      "definiteArgument": "dla catalog view list",
+      "settingsClass": {
+        "properties": [
           {
             "name": "DatabaseName",
             "type": "string",
@@ -1946,22 +1707,8 @@
             "name": "SchemaName",
             "type": "string",
             "format": "--schema-name {value}",
-            "help": "The schema associated with the tables to list."
+            "help": "The name of the schema associated with the views to list."
           },
-          {
-            "name": "TableName",
-            "type": "string",
-            "format": "--table-name {value}",
-            "help": "The table to list statistics for. `--schema-name` must also be specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogTableStatsShow",
-      "definiteArgument": "dla catalog table-stats show",
-      "settingsClass": {
-        "properties": [
           {
             "name": "Account",
             "type": "string",
@@ -1969,28 +1716,62 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogViewShow",
+      "definiteArgument": "dla catalog view show",
+      "settingsClass": {
+        "properties": [
+          {
             "name": "DatabaseName",
             "type": "string",
             "format": "--database-name {value}",
-            "help": "The name of the database containing the statistics."
+            "help": "The name of the database containing the view."
           },
           {
             "name": "SchemaName",
             "type": "string",
             "format": "--schema-name {value}",
-            "help": "The name of the schema containing the statistics."
+            "help": "The name of the schema containing the view."
           },
           {
-            "name": "StatisticsName",
+            "name": "ViewName",
             "type": "string",
-            "format": "--statistics-name {value}",
-            "help": "The name of the table statistics."
+            "format": "--view-name {value}",
+            "help": "The name of the view."
           },
           {
-            "name": "TableName",
+            "name": "Account",
             "type": "string",
-            "format": "--table-name {value}",
-            "help": "The name of the table containing the statistics."
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2000,12 +1781,6 @@
       "definiteArgument": "dla catalog table-type list",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "DatabaseName",
             "type": "string",
@@ -2054,6 +1829,25 @@
             "type": "int",
             "format": "--top {value}",
             "help": "Maximum number of items to return."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2063,12 +1857,6 @@
       "definiteArgument": "dla catalog table-type show",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "DatabaseName",
             "type": "string",
@@ -2086,21 +1874,98 @@
             "type": "string",
             "format": "--table-type-name {value}",
             "help": "The name of the table type to retrieve."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogTableList",
-      "definiteArgument": "dla catalog table list",
-      "settingsClass": {
-        "properties": [
+          },
           {
             "name": "Account",
             "type": "string",
             "format": "--account {value}",
             "help": "Name of the Data Lake Analytics account."
           },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogDatabaseList",
+      "definiteArgument": "dla catalog database list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "OData filter. Optional."
+          },
+          {
+            "name": "Orderby",
+            "type": "List<string>",
+            "format": "--orderby {value}",
+            "separator": ",",
+            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "The number of items to skip over before returning elements."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "help": "Maximum number of items to return."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogDatabaseShow",
+      "definiteArgument": "dla catalog database show",
+      "settingsClass": {
+        "properties": [
           {
             "name": "DatabaseName",
             "type": "string",
@@ -2108,17 +1973,139 @@
             "help": "The name of the database."
           },
           {
-            "name": "SchemaName",
+            "name": "Account",
             "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The schema assocated with the tables to list."
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "CatalogTableShow",
-      "definiteArgument": "dla catalog table show",
+      "postfix": "CatalogSchemaList",
+      "definiteArgument": "dla catalog schema list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the schema."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "OData filter. Optional."
+          },
+          {
+            "name": "Orderby",
+            "type": "List<string>",
+            "format": "--orderby {value}",
+            "separator": ",",
+            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "The number of items to skip over before returning elements."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "help": "Maximum number of items to return."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogSchemaShow",
+      "definiteArgument": "dla catalog schema show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the schema."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The name of the schema."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogCredentialCreate",
+      "definiteArgument": "dla catalog credential create",
       "settingsClass": {
         "properties": [
           {
@@ -2128,22 +2115,267 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
+            "name": "CredentialName",
+            "type": "string",
+            "format": "--credential-name {value}",
+            "help": "The name of the credential."
+          },
+          {
             "name": "DatabaseName",
             "type": "string",
             "format": "--database-name {value}",
-            "help": "The name of the database containing the table."
+            "help": "The name of the database in which to create the credential."
           },
           {
-            "name": "SchemaName",
+            "name": "Uri",
             "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The name of the schema containing the table."
+            "format": "--uri {value}",
+            "help": ""
           },
           {
-            "name": "TableName",
+            "name": "UserName",
             "type": "string",
-            "format": "--table-name {value}",
-            "help": "The name of the table."
+            "format": "--user-name {value}",
+            "help": "The user name that will be used when authenticating with this credential."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "Password for the credential user. Will prompt if not given."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogCredentialDelete",
+      "definiteArgument": "dla catalog credential delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CredentialName",
+            "type": "string",
+            "format": "--credential-name {value}",
+            "help": "The name of the credential to delete."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the credential."
+          },
+          {
+            "name": "Cascade",
+            "type": "string",
+            "format": "--cascade {value}",
+            "help": "Indicates if the delete should be a cascading delete (which deletes all resources dependent on the credential as well as the credential) or not. If false will fail if there are any resources relying on the credential."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "The current password for the credential and user with access to the data source. This is required if the requester is not the account owner."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogCredentialList",
+      "definiteArgument": "dla catalog credential list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the schema."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "OData filter. Optional."
+          },
+          {
+            "name": "Orderby",
+            "type": "List<string>",
+            "format": "--orderby {value}",
+            "separator": ",",
+            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "The number of items to skip over before returning elements."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "help": "Maximum number of items to return."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogCredentialShow",
+      "definiteArgument": "dla catalog credential show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CredentialName",
+            "type": "string",
+            "format": "--credential-name {value}",
+            "help": "The name of the credential."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the schema."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogCredentialUpdate",
+      "definiteArgument": "dla catalog credential update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CredentialName",
+            "type": "string",
+            "format": "--credential-name {value}",
+            "help": "The name of the credential to update."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database in which the credential exists."
+          },
+          {
+            "name": "Uri",
+            "type": "string",
+            "format": "--uri {value}",
+            "help": ""
+          },
+          {
+            "name": "UserName",
+            "type": "string",
+            "format": "--user-name {value}",
+            "help": "The user name associated with the credential that will have its password updated."
+          },
+          {
+            "name": "NewPassword",
+            "type": "string",
+            "format": "--new-password {value}",
+            "secret": true,
+            "help": "New password for the credential user. Will prompt if not given."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "Current password for the credential user. Will prompt if not given."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2153,12 +2385,6 @@
       "definiteArgument": "dla catalog tvf list",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "DatabaseName",
             "type": "string",
@@ -2170,6 +2396,25 @@
             "type": "string",
             "format": "--schema-name {value}",
             "help": "The name of the schema assocated with table valued functions to list."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2179,12 +2424,6 @@
       "definiteArgument": "dla catalog tvf show",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "DatabaseName",
             "type": "string",
@@ -2202,21 +2441,373 @@
             "type": "string",
             "format": "--table-valued-function-name {value}",
             "help": "The name of the tableValuedFunction."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogViewList",
-      "definiteArgument": "dla catalog view list",
-      "settingsClass": {
-        "properties": [
+          },
           {
             "name": "Account",
             "type": "string",
             "format": "--account {value}",
             "help": "Name of the Data Lake Analytics account."
           },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogPackageList",
+      "definiteArgument": "dla catalog package list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the packages."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The name of the schema containing the packages."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "OData filter. Optional."
+          },
+          {
+            "name": "Orderby",
+            "type": "List<string>",
+            "format": "--orderby {value}",
+            "separator": ",",
+            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "The number of items to skip over before returning elements."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "help": "Maximum number of items to return."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogPackageShow",
+      "definiteArgument": "dla catalog package show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the package."
+          },
+          {
+            "name": "PackageName",
+            "type": "string",
+            "format": "--package-name {value}",
+            "help": "The name of the package."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The name of the schema containing the package."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogAssemblyList",
+      "definiteArgument": "dla catalog assembly list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the assembly."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "OData filter. Optional."
+          },
+          {
+            "name": "Orderby",
+            "type": "List<string>",
+            "format": "--orderby {value}",
+            "separator": ",",
+            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "The number of items to skip over before returning elements."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "help": "Maximum number of items to return."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogAssemblyShow",
+      "definiteArgument": "dla catalog assembly show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AssemblyName",
+            "type": "string",
+            "format": "--assembly-name {value}",
+            "help": "The name of the assembly."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the assembly."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogExternalDataSourceList",
+      "definiteArgument": "dla catalog external-data-source list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the external data sources."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "OData filter. Optional."
+          },
+          {
+            "name": "Orderby",
+            "type": "List<string>",
+            "format": "--orderby {value}",
+            "separator": ",",
+            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "The number of items to skip over before returning elements."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "help": "Maximum number of items to return."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogExternalDataSourceShow",
+      "definiteArgument": "dla catalog external-data-source show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the external data source."
+          },
+          {
+            "name": "ExternalDataSourceName",
+            "type": "string",
+            "format": "--external-data-source-name {value}",
+            "help": "The name of the external data source."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogTableList",
+      "definiteArgument": "dla catalog table list",
+      "settingsClass": {
+        "properties": [
           {
             "name": "DatabaseName",
             "type": "string",
@@ -2227,16 +2818,8 @@
             "name": "SchemaName",
             "type": "string",
             "format": "--schema-name {value}",
-            "help": "The name of the schema associated with the views to list."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogViewShow",
-      "definiteArgument": "dla catalog view show",
-      "settingsClass": {
-        "properties": [
+            "help": "The schema assocated with the tables to list."
+          },
           {
             "name": "Account",
             "type": "string",
@@ -2244,22 +2827,158 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogTableShow",
+      "definiteArgument": "dla catalog table show",
+      "settingsClass": {
+        "properties": [
+          {
             "name": "DatabaseName",
             "type": "string",
             "format": "--database-name {value}",
-            "help": "The name of the database containing the view."
+            "help": "The name of the database containing the table."
           },
           {
             "name": "SchemaName",
             "type": "string",
             "format": "--schema-name {value}",
-            "help": "The name of the schema containing the view."
+            "help": "The name of the schema containing the table."
           },
           {
-            "name": "ViewName",
+            "name": "TableName",
             "type": "string",
-            "format": "--view-name {value}",
-            "help": "The name of the view."
+            "format": "--table-name {value}",
+            "help": "The name of the table."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogTableStatsList",
+      "definiteArgument": "dla catalog table-stats list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The schema associated with the tables to list."
+          },
+          {
+            "name": "TableName",
+            "type": "string",
+            "format": "--table-name {value}",
+            "help": "The table to list statistics for. `--schema-name` must also be specified."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogTableStatsShow",
+      "definiteArgument": "dla catalog table-stats show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the statistics."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The name of the schema containing the statistics."
+          },
+          {
+            "name": "StatisticsName",
+            "type": "string",
+            "format": "--statistics-name {value}",
+            "help": "The name of the table statistics."
+          },
+          {
+            "name": "TableName",
+            "type": "string",
+            "format": "--table-name {value}",
+            "help": "The name of the table containing the statistics."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2269,12 +2988,6 @@
       "definiteArgument": "dla job pipeline list",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "EndDateTime",
             "type": "string",
@@ -2286,6 +2999,25 @@
             "type": "string",
             "format": "--start-date-time {value}",
             "help": "The start date for when to get the list of pipelines. The startDateTime and endDateTime can be no more than 30 days apart."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2295,12 +3027,6 @@
       "definiteArgument": "dla job pipeline show",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "PipelineIdentity",
             "type": "string",
@@ -2318,6 +3044,25 @@
             "type": "string",
             "format": "--start-date-time {value}",
             "help": "The start date for when to get the pipeline and aggregate its data. The startDateTime and endDateTime can be no more than 30 days apart."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2327,12 +3072,6 @@
       "definiteArgument": "dla job recurrence list",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "EndDateTime",
             "type": "string",
@@ -2344,6 +3083,25 @@
             "type": "string",
             "format": "--start-date-time {value}",
             "help": "The start date for when to get the list of recurrences. The startDateTime and endDateTime can be no more than 30 days apart."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2353,12 +3111,6 @@
       "definiteArgument": "dla job recurrence show",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
           {
             "name": "RecurrenceIdentity",
             "type": "string",
@@ -2376,6 +3128,25 @@
             "type": "string",
             "format": "--start-date-time {value}",
             "help": "The start date for when to get the recurrence and aggregate its data. The startDateTime and endDateTime can be no more than 30 days apart."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

@@ -183,6 +183,8 @@ namespace Nuke.Azure
         public virtual string Location { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -202,6 +204,7 @@ namespace Nuke.Azure
               .Add("--description {value}", Description)
               .Add("--location {value}", Location)
               .Add("--tags {value}", Tags)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -224,6 +227,8 @@ namespace Nuke.Azure
         public virtual string GalleryName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -240,6 +245,7 @@ namespace Nuke.Azure
               .Add("sig delete")
               .Add("--gallery-name {value}", GalleryName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -260,6 +266,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -275,6 +283,7 @@ namespace Nuke.Azure
             arguments
               .Add("sig list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -295,8 +304,13 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -312,7 +326,9 @@ namespace Nuke.Azure
             arguments
               .Add("sig show")
               .Add("--gallery-name {value}", GalleryName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -343,6 +359,8 @@ namespace Nuke.Azure
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -363,6 +381,7 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -425,6 +444,8 @@ namespace Nuke.Azure
         public virtual string MinimumCpuCore { get; internal set; }
         /// <summary><p>Minimum memory in MB.</p></summary>
         public virtual string MinimumMemory { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -461,6 +482,7 @@ namespace Nuke.Azure
               .Add("--maximum-memory {value}", MaximumMemory)
               .Add("--minimum-cpu-core {value}", MinimumCpuCore)
               .Add("--minimum-memory {value}", MinimumMemory)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -483,8 +505,13 @@ namespace Nuke.Azure
         public virtual string GalleryImageDefinition { get; internal set; }
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -501,7 +528,9 @@ namespace Nuke.Azure
               .Add("sig image-definition delete")
               .Add("--gallery-image-definition {value}", GalleryImageDefinition)
               .Add("--gallery-name {value}", GalleryName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -524,6 +553,8 @@ namespace Nuke.Azure
         public virtual string GalleryName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -540,6 +571,7 @@ namespace Nuke.Azure
               .Add("sig image-definition list")
               .Add("--gallery-name {value}", GalleryName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -562,8 +594,13 @@ namespace Nuke.Azure
         public virtual string GalleryImageDefinition { get; internal set; }
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -580,7 +617,9 @@ namespace Nuke.Azure
               .Add("sig image-definition show")
               .Add("--gallery-image-definition {value}", GalleryImageDefinition)
               .Add("--gallery-name {value}", GalleryName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -613,6 +652,8 @@ namespace Nuke.Azure
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -634,6 +675,7 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -677,6 +719,8 @@ namespace Nuke.Azure
         /// <summary><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
         public virtual IReadOnlyList<string> TargetRegions => TargetRegionsInternal.AsReadOnly();
         internal List<string> TargetRegionsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -703,6 +747,7 @@ namespace Nuke.Azure
               .Add("--replica-count {value}", ReplicaCount)
               .Add("--tags {value}", Tags)
               .Add("--target-regions {value}", TargetRegions, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -724,11 +769,13 @@ namespace Nuke.Azure
         /// <summary><p>Gallery image definition.</p></summary>
         public virtual string GalleryImageDefinition { get; internal set; }
         /// <summary><p>The name of the gallery Image Version to be deleted.</p></summary>
-        public virtual string GalleryImageVersionName { get; internal set; }
+        public virtual string GalleryImageVersion { get; internal set; }
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -744,9 +791,10 @@ namespace Nuke.Azure
             arguments
               .Add("sig image-version delete")
               .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-image-version-name {value}", GalleryImageVersionName)
+              .Add("--gallery-image-version {value}", GalleryImageVersion)
               .Add("--gallery-name {value}", GalleryName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -771,6 +819,8 @@ namespace Nuke.Azure
         public virtual string GalleryName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -788,6 +838,7 @@ namespace Nuke.Azure
               .Add("--gallery-image-definition {value}", GalleryImageDefinition)
               .Add("--gallery-name {value}", GalleryName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -809,13 +860,15 @@ namespace Nuke.Azure
         /// <summary><p>Gallery image definition.</p></summary>
         public virtual string GalleryImageDefinition { get; internal set; }
         /// <summary><p>The name of the gallery Image Version to be retrieved.</p></summary>
-        public virtual string GalleryImageVersionName { get; internal set; }
+        public virtual string GalleryImageVersion { get; internal set; }
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The expand expression to apply on the operation, e.g. 'ReplicationStatus'.</p></summary>
         public virtual string Expand { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -831,10 +884,11 @@ namespace Nuke.Azure
             arguments
               .Add("sig image-version show")
               .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-image-version-name {value}", GalleryImageVersionName)
+              .Add("--gallery-image-version {value}", GalleryImageVersion)
               .Add("--gallery-name {value}", GalleryName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -856,7 +910,7 @@ namespace Nuke.Azure
         /// <summary><p>Gallery image definition.</p></summary>
         public virtual string GalleryImageDefinition { get; internal set; }
         /// <summary><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
-        public virtual string GalleryImageVersionName { get; internal set; }
+        public virtual string GalleryImageVersion { get; internal set; }
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
@@ -874,6 +928,8 @@ namespace Nuke.Azure
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -889,7 +945,7 @@ namespace Nuke.Azure
             arguments
               .Add("sig image-version update")
               .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-image-version-name {value}", GalleryImageVersionName)
+              .Add("--gallery-image-version {value}", GalleryImageVersion)
               .Add("--gallery-name {value}", GalleryName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
@@ -898,6 +954,7 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -919,7 +976,7 @@ namespace Nuke.Azure
         /// <summary><p>Gallery image definition.</p></summary>
         public virtual string GalleryImageDefinition { get; internal set; }
         /// <summary><p>The name of the gallery Image Version to be retrieved.</p></summary>
-        public virtual string GalleryImageVersionName { get; internal set; }
+        public virtual string GalleryImageVersion { get; internal set; }
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
@@ -940,6 +997,8 @@ namespace Nuke.Azure
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
         public virtual string Updated { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -955,7 +1014,7 @@ namespace Nuke.Azure
             arguments
               .Add("sig image-version wait")
               .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-image-version-name {value}", GalleryImageVersionName)
+              .Add("--gallery-image-version {value}", GalleryImageVersion)
               .Add("--gallery-name {value}", GalleryName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
@@ -966,6 +1025,7 @@ namespace Nuke.Azure
               .Add("--interval {value}", Interval)
               .Add("--timeout {value}", Timeout)
               .Add("--updated {value}", Updated)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1068,6 +1128,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigCreateSettings SetSubscription(this AzureSigCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigCreateSettings ResetSubscription(this AzureSigCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1205,6 +1283,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigDeleteSettings SetSubscription(this AzureSigDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigDeleteSettings ResetSubscription(this AzureSigDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureSigDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1318,6 +1414,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigListSettings SetSubscription(this AzureSigListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigListSettings ResetSubscription(this AzureSigListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1437,6 +1551,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureSigShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings SetIds(this AzureSigShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureSigShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings SetIds(this AzureSigShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings AddIds(this AzureSigShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings AddIds(this AzureSigShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureSigShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings ClearIds(this AzureSigShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings RemoveIds(this AzureSigShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings RemoveIds(this AzureSigShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureSigShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -1452,6 +1626,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings SetSubscription(this AzureSigShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings ResetSubscription(this AzureSigShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1658,6 +1850,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigUpdateSettings SetSubscription(this AzureSigUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigUpdateSettings ResetSubscription(this AzureSigUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2155,6 +2365,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionCreateSettings SetSubscription(this AzureSigImageDefinitionCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageDefinitionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionCreateSettings ResetSubscription(this AzureSigImageDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2289,6 +2517,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings SetIds(this AzureSigImageDefinitionDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings SetIds(this AzureSigImageDefinitionDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings AddIds(this AzureSigImageDefinitionDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings AddIds(this AzureSigImageDefinitionDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings ClearIds(this AzureSigImageDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings RemoveIds(this AzureSigImageDefinitionDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings RemoveIds(this AzureSigImageDefinitionDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -2304,6 +2592,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings SetSubscription(this AzureSigImageDefinitionDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageDefinitionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings ResetSubscription(this AzureSigImageDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2441,6 +2747,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionListSettings SetSubscription(this AzureSigImageDefinitionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageDefinitionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionListSettings ResetSubscription(this AzureSigImageDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2575,6 +2899,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings SetIds(this AzureSigImageDefinitionShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings SetIds(this AzureSigImageDefinitionShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigImageDefinitionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings AddIds(this AzureSigImageDefinitionShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigImageDefinitionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings AddIds(this AzureSigImageDefinitionShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureSigImageDefinitionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings ClearIds(this AzureSigImageDefinitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigImageDefinitionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings RemoveIds(this AzureSigImageDefinitionShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigImageDefinitionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings RemoveIds(this AzureSigImageDefinitionShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -2590,6 +2974,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings SetSubscription(this AzureSigImageDefinitionShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageDefinitionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings ResetSubscription(this AzureSigImageDefinitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2814,6 +3216,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionUpdateSettings SetSubscription(this AzureSigImageDefinitionUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageDefinitionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionUpdateSettings ResetSubscription(this AzureSigImageDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3221,6 +3641,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetSubscription(this AzureSigImageVersionCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetSubscription(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3337,21 +3775,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region GalleryImageVersionName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be deleted.</p></summary>
+        #region GalleryImageVersion
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be deleted.</p></summary>
         [Pure]
-        public static AzureSigImageVersionDeleteSettings SetGalleryImageVersionName(this AzureSigImageVersionDeleteSettings toolSettings, string galleryImageVersionName)
+        public static AzureSigImageVersionDeleteSettings SetGalleryImageVersion(this AzureSigImageVersionDeleteSettings toolSettings, string galleryImageVersion)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = galleryImageVersionName;
+            toolSettings.GalleryImageVersion = galleryImageVersion;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be deleted.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be deleted.</p></summary>
         [Pure]
-        public static AzureSigImageVersionDeleteSettings ResetGalleryImageVersionName(this AzureSigImageVersionDeleteSettings toolSettings)
+        public static AzureSigImageVersionDeleteSettings ResetGalleryImageVersion(this AzureSigImageVersionDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = null;
+            toolSettings.GalleryImageVersion = null;
             return toolSettings;
         }
         #endregion
@@ -3388,6 +3826,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings SetSubscription(this AzureSigImageVersionDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings ResetSubscription(this AzureSigImageVersionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3543,6 +3999,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings SetSubscription(this AzureSigImageVersionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings ResetSubscription(this AzureSigImageVersionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3659,21 +4133,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region GalleryImageVersionName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        #region GalleryImageVersion
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
         [Pure]
-        public static AzureSigImageVersionShowSettings SetGalleryImageVersionName(this AzureSigImageVersionShowSettings toolSettings, string galleryImageVersionName)
+        public static AzureSigImageVersionShowSettings SetGalleryImageVersion(this AzureSigImageVersionShowSettings toolSettings, string galleryImageVersion)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = galleryImageVersionName;
+            toolSettings.GalleryImageVersion = galleryImageVersion;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
         [Pure]
-        public static AzureSigImageVersionShowSettings ResetGalleryImageVersionName(this AzureSigImageVersionShowSettings toolSettings)
+        public static AzureSigImageVersionShowSettings ResetGalleryImageVersion(this AzureSigImageVersionShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = null;
+            toolSettings.GalleryImageVersion = null;
             return toolSettings;
         }
         #endregion
@@ -3728,6 +4202,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Expand = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings SetSubscription(this AzureSigImageVersionShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings ResetSubscription(this AzureSigImageVersionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3847,21 +4339,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region GalleryImageVersionName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
+        #region GalleryImageVersion
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
         [Pure]
-        public static AzureSigImageVersionUpdateSettings SetGalleryImageVersionName(this AzureSigImageVersionUpdateSettings toolSettings, string galleryImageVersionName)
+        public static AzureSigImageVersionUpdateSettings SetGalleryImageVersion(this AzureSigImageVersionUpdateSettings toolSettings, string galleryImageVersion)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = galleryImageVersionName;
+            toolSettings.GalleryImageVersion = galleryImageVersion;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
         [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetGalleryImageVersionName(this AzureSigImageVersionUpdateSettings toolSettings)
+        public static AzureSigImageVersionUpdateSettings ResetGalleryImageVersion(this AzureSigImageVersionUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = null;
+            toolSettings.GalleryImageVersion = null;
             return toolSettings;
         }
         #endregion
@@ -4075,6 +4567,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetSubscription(this AzureSigImageVersionUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetSubscription(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4191,21 +4701,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region GalleryImageVersionName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        #region GalleryImageVersion
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
         [Pure]
-        public static AzureSigImageVersionWaitSettings SetGalleryImageVersionName(this AzureSigImageVersionWaitSettings toolSettings, string galleryImageVersionName)
+        public static AzureSigImageVersionWaitSettings SetGalleryImageVersion(this AzureSigImageVersionWaitSettings toolSettings, string galleryImageVersion)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = galleryImageVersionName;
+            toolSettings.GalleryImageVersion = galleryImageVersion;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
         [Pure]
-        public static AzureSigImageVersionWaitSettings ResetGalleryImageVersionName(this AzureSigImageVersionWaitSettings toolSettings)
+        public static AzureSigImageVersionWaitSettings ResetGalleryImageVersion(this AzureSigImageVersionWaitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = null;
+            toolSettings.GalleryImageVersion = null;
             return toolSettings;
         }
         #endregion
@@ -4386,6 +4896,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Updated = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetSubscription(this AzureSigImageVersionWaitSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetSubscription(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion

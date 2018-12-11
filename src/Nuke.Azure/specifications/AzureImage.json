@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/image.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1648b65/latest/docs-ref-autogen/image.yml"
   ],
   "name": "AzureImage",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest",
@@ -50,6 +50,12 @@
             "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
+            "name": "OsDiskCaching",
+            "type": "ImageCreateOsDiskCaching",
+            "format": "--os-disk-caching {value}",
+            "help": "Storage caching type for the image's OS disk."
+          },
+          {
             "name": "OsType",
             "type": "ImageCreateOsType",
             "format": "--os-type {value}",
@@ -72,6 +78,12 @@
             "type": "bool",
             "format": "--zone-resilient",
             "help": "Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -81,6 +93,13 @@
       "definiteArgument": "image delete",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -92,6 +111,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -106,6 +131,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -115,6 +146,19 @@
       "definiteArgument": "image show",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "The expand expression to apply on the operation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -128,10 +172,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Expand",
+            "name": "Subscription",
             "type": "string",
-            "format": "--expand {value}",
-            "help": "The expand expression to apply on the operation."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -170,6 +214,14 @@
     }
   ],
   "enumerations": [
+    {
+      "name": "ImageCreateOsDiskCaching",
+      "values": [
+        "none",
+        "readonly",
+        "readwrite"
+      ]
+    },
     {
       "name": "ImageCreateOsType",
       "values": [
