@@ -6,10 +6,10 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/account/lock.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/account/management-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/account/management-group/subscription.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/account/lock.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/account/management-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/account/management-group/subscription.yml"
   ],
   "name": "AzureAccount",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest",
@@ -19,7 +19,16 @@
     {
       "postfix": "Clear",
       "definiteArgument": "account clear",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "GetAccessToken",
@@ -57,6 +66,12 @@
             "type": "string",
             "format": "--refresh {value}",
             "help": "Retrieve up-to-date subscriptions from server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -64,7 +79,16 @@
     {
       "postfix": "ListLocations",
       "definiteArgument": "account list-locations",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "Set",
@@ -122,6 +146,12 @@
             "type": "string",
             "format": "--notes {value}",
             "help": "Notes about this lock."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -143,6 +173,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Name of the lock."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -157,6 +193,12 @@
             "type": "string",
             "format": "--filter-string {value}",
             "help": "A query filter to use to restrict the results."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -178,6 +220,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Name of the lock."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -211,6 +259,12 @@
             "type": "string",
             "format": "--notes {value}",
             "help": "Notes about this lock."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -237,6 +291,12 @@
             "type": "string",
             "format": "--parent {value}",
             "help": "Sets the parent of the management group. Can be the fully qualified id or the name of the management group. If null, the root tenant group is set as the parent."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -251,6 +311,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Name of the management group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -258,7 +324,16 @@
     {
       "postfix": "ManagementGroupList",
       "definiteArgument": "account management-group list",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "ManagementGroupShow",
@@ -282,6 +357,12 @@
             "type": "string",
             "format": "--recurse {value}",
             "help": "If given, lists the children in all levels of hierarchy."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -332,6 +413,12 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

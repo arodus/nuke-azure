@@ -6,29 +6,29 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/auth.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/cors.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/deleted.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/deployment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/log.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/traffic-routing.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/webjob.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/config/appsettings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/config/backup.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/config/connection-string.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/config/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/config/hostname.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/config/ssl.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/config/storage-account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/deployment/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/deployment/slot.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/deployment/source.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/deployment/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/webjob/continuous.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/webapp/webjob/triggered.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/log.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/cors.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/webjob.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/deleted.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/auth.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/traffic-routing.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/config/storage-account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/config/backup.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/config/ssl.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/config/connection-string.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/config/hostname.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/config/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/config/appsettings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/deployment/source.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/deployment/slot.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/deployment/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/deployment/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/webjob/triggered.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/webapp/webjob/continuous.yml"
   ],
   "name": "AzureWebapp",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest",
@@ -40,6 +40,25 @@
       "definiteArgument": "webapp browse",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Logs",
+            "type": "string",
+            "format": "--logs {value}",
+            "help": "Enable viewing the log stream immediately after launching the web app."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -53,16 +72,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Logs",
+            "name": "Subscription",
             "type": "string",
-            "format": "--logs {value}",
-            "help": "Enable viewing the log stream immediately after launching the web app."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -143,6 +156,12 @@
             "type": "string",
             "format": "--tags {value}",
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -152,18 +171,6 @@
       "definiteArgument": "webapp delete",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
           {
             "name": "KeepDnsRegistration",
             "type": "string",
@@ -187,6 +194,31 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -201,6 +233,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -215,6 +253,12 @@
             "type": "string",
             "format": "--linux {value}",
             "help": "List runtime stacks for linux based webapps."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -225,6 +269,19 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -237,10 +294,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Slot",
+            "name": "Subscription",
             "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -251,6 +308,19 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -263,10 +333,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Slot",
+            "name": "Subscription",
             "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -277,6 +347,19 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -289,10 +372,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Slot",
+            "name": "Subscription",
             "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -303,6 +386,19 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -315,10 +411,55 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Slot",
+            "name": "Subscription",
             "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Up",
+      "definiteArgument": "webapp up",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Dryrun",
+            "type": "string",
+            "format": "--dryrun {value}",
+            "help": "Show summary of the create and deploy operation instead of executing it."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Sku",
+            "type": "WebappUpSku",
+            "format": "--sku {value}",
+            "help": "The pricing tiers, e.g., F1(Free), D1(Shared), B1(Basic Small), B2(Basic Medium), B3(Basic Large), S1(Standard Small), P1(Premium Small), P1V2(Premium V2 Small), PC2 (Premium Container Small), PC3 (Premium Container Medium), PC4 (Premium Container Large)."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -328,18 +469,6 @@
       "definiteArgument": "webapp update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
           {
             "name": "ClientAffinityEnabled",
             "type": "bool",
@@ -383,6 +512,31 @@
             "help": "Time to live in seconds for web app's default domain name."
           },
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
@@ -410,8 +564,348 @@
       }
     },
     {
-      "postfix": "AuthShow",
-      "definiteArgument": "webapp auth show",
+      "postfix": "LogConfig",
+      "definiteArgument": "webapp log config",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ApplicationLogging",
+            "type": "bool",
+            "format": "--application-logging",
+            "help": "Configure application logging to file system."
+          },
+          {
+            "name": "DetailedErrorMessages",
+            "type": "bool",
+            "format": "--detailed-error-messages",
+            "help": "Configure detailed error messages."
+          },
+          {
+            "name": "DockerContainerLogging",
+            "type": "WebappLogConfigDockerContainerLogging",
+            "format": "--docker-container-logging {value}",
+            "help": "Configure gathering STDOUT and STDERR output from container."
+          },
+          {
+            "name": "FailedRequestTracing",
+            "type": "bool",
+            "format": "--failed-request-tracing",
+            "help": "Configure failed request tracing."
+          },
+          {
+            "name": "Level",
+            "type": "WebappLogConfigLevel",
+            "format": "--level {value}",
+            "help": "Logging level."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "WebServerLogging",
+            "type": "WebappLogConfigDockerContainerLogging",
+            "format": "--web-server-logging {value}",
+            "help": "Configure Web server logging."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogDownload",
+      "definiteArgument": "webapp log download",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LogFile",
+            "type": "string",
+            "format": "--log-file {value}",
+            "help": "The downloaded zipped log file path."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogShow",
+      "definiteArgument": "webapp log show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogTail",
+      "definiteArgument": "webapp log tail",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Provider",
+            "type": "string",
+            "format": "--provider {value}",
+            "help": "By default all live traces configured by 'az webapp log config' will be shown, but you can scope to certain providers/folders, e.g. 'application', 'http', etc. For details, check out <a href=\"https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream\">https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream</a>."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CorsAdd",
+      "definiteArgument": "webapp cors add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AllowedOrigins",
+            "type": "List<string>",
+            "format": "--allowed-origins {value}",
+            "separator": " ",
+            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"*\" and remove all other origins from the list."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CorsRemove",
+      "definiteArgument": "webapp cors remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AllowedOrigins",
+            "type": "List<string>",
+            "format": "--allowed-origins {value}",
+            "separator": " ",
+            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"*\" and remove all other origins from the list."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CorsShow",
+      "definiteArgument": "webapp cors show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Webjob",
+      "definiteArgument": "webapp webjob",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "DeletedList",
+      "definiteArgument": "webapp deleted list",
       "settingsClass": {
         "properties": [
           {
@@ -430,16 +924,86 @@
             "name": "Slot",
             "type": "string",
             "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "help": "Name of the deleted web app slot."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "AuthUpdate",
-      "definiteArgument": "webapp auth update",
+      "postfix": "DeletedRestore",
+      "definiteArgument": "webapp deleted restore",
       "settingsClass": {
         "properties": [
+          {
+            "name": "DeletedId",
+            "type": "string",
+            "format": "--deleted-id {value}",
+            "help": "Resource ID of the deleted web app."
+          },
+          {
+            "name": "RestoreContentOnly",
+            "type": "string",
+            "format": "--restore-content-only {value}",
+            "help": "Restore only deleted files without web app settings."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "Slot to restore the deleted content to."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the web app to restore the deleted content to."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AuthShow",
+      "definiteArgument": "webapp auth show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -452,6 +1016,20 @@
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AuthUpdate",
+      "definiteArgument": "webapp auth update",
+      "settingsClass": {
+        "properties": [
           {
             "name": "Action",
             "type": "WebappAuthUpdateAction",
@@ -488,6 +1066,31 @@
             "type": "bool",
             "format": "--token-store",
             "help": "Use App Service Token Store."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "AadAllowedTokenAudiences",
@@ -592,10 +1195,17 @@
       }
     },
     {
-      "postfix": "ConfigSet",
-      "definiteArgument": "webapp config set",
+      "postfix": "TrafficRoutingClear",
+      "definiteArgument": "webapp traffic-routing clear",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -608,6 +1218,261 @@
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TrafficRoutingSet",
+      "definiteArgument": "webapp traffic-routing set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Distribution",
+            "type": "List<string>",
+            "format": "--distribution {value}",
+            "separator": " ",
+            "help": "Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TrafficRoutingShow",
+      "definiteArgument": "webapp traffic-routing show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentListPublishingProfiles",
+      "definiteArgument": "webapp deployment list-publishing-profiles",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityAssign",
+      "definiteArgument": "webapp identity assign",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "help": "Role name or id the managed identity will be assigned."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "The scope the managed identity has access to."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityRemove",
+      "definiteArgument": "webapp identity remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityShow",
+      "definiteArgument": "webapp identity show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSet",
+      "definiteArgument": "webapp config set",
+      "settingsClass": {
+        "properties": [
           {
             "name": "AlwaysOn",
             "type": "bool",
@@ -715,6 +1580,31 @@
             "type": "string",
             "format": "--windows-fx-version {value}",
             "help": "(Preview) a docker image name used for your windows ontainer webapp, e.g., microsoft/nanoserver:ltsc2016."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -725,37 +1615,17 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
             "name": "Slot",
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CorsAdd",
-      "definiteArgument": "webapp cors add",
-      "settingsClass": {
-        "properties": [
+          },
           {
-            "name": "AllowedOrigins",
+            "name": "Ids",
             "type": "List<string>",
-            "format": "--allowed-origins {value}",
+            "format": "--ids {value}",
             "separator": " ",
-            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"*\" and remove all other origins from the list."
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
@@ -770,25 +1640,73 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Slot",
+            "name": "Subscription",
             "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "CorsRemove",
-      "definiteArgument": "webapp cors remove",
+      "postfix": "ConfigStorageAccountAdd",
+      "definiteArgument": "webapp config storage-account add",
       "settingsClass": {
         "properties": [
           {
-            "name": "AllowedOrigins",
+            "name": "AccessKey",
+            "type": "string",
+            "format": "--access-key {value}",
+            "help": "Storage account access key."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Storage account name."
+          },
+          {
+            "name": "CustomId",
+            "type": "string",
+            "format": "--custom-id {value}",
+            "help": "Custom identifier."
+          },
+          {
+            "name": "ShareName",
+            "type": "string",
+            "format": "--share-name {value}",
+            "help": "Share name (Azure Files) or container name (Azure Blob Storage)."
+          },
+          {
+            "name": "StorageType",
+            "type": "WebappConfigStorageAccountStorageType",
+            "format": "--storage-type {value}",
+            "help": "Storage type."
+          },
+          {
+            "name": "MountPath",
+            "type": "string",
+            "format": "--mount-path {value}",
+            "help": "Path to mount storage volume within web app."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "SlotSetting",
+            "type": "string",
+            "format": "--slot-setting {value}",
+            "help": "Slot setting."
+          },
+          {
+            "name": "Ids",
             "type": "List<string>",
-            "format": "--allowed-origins {value}",
+            "format": "--ids {value}",
             "separator": " ",
-            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"*\" and remove all other origins from the list."
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
@@ -803,266 +1721,24 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Slot",
+            "name": "Subscription",
             "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "CorsShow",
-      "definiteArgument": "webapp cors show",
+      "postfix": "ConfigStorageAccountDelete",
+      "definiteArgument": "webapp config storage-account delete",
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
+            "name": "CustomId",
             "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeletedList",
-      "definiteArgument": "webapp deleted list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "Name of the deleted web app slot."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeletedRestore",
-      "definiteArgument": "webapp deleted restore",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "DeletedId",
-            "type": "string",
-            "format": "--deleted-id {value}",
-            "help": "Resource ID of the deleted web app."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web app to restore the deleted content to."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "RestoreContentOnly",
-            "type": "string",
-            "format": "--restore-content-only {value}",
-            "help": "Restore only deleted files without web app settings."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "Slot to restore the deleted content to."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentListPublishingProfiles",
-      "definiteArgument": "webapp deployment list-publishing-profiles",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityAssign",
-      "definiteArgument": "webapp identity assign",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Role",
-            "type": "string",
-            "format": "--role {value}",
-            "help": "Role name or id the managed identity will be assigned."
-          },
-          {
-            "name": "Scope",
-            "type": "string",
-            "format": "--scope {value}",
-            "help": "The scope the managed identity has access to."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityRemove",
-      "definiteArgument": "webapp identity remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityShow",
-      "definiteArgument": "webapp identity show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LogConfig",
-      "definiteArgument": "webapp log config",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ApplicationLogging",
-            "type": "bool",
-            "format": "--application-logging",
-            "help": "Configure application logging to file system."
-          },
-          {
-            "name": "DetailedErrorMessages",
-            "type": "bool",
-            "format": "--detailed-error-messages",
-            "help": "Configure detailed error messages."
-          },
-          {
-            "name": "DockerContainerLogging",
-            "type": "WebappLogConfigDockerContainerLogging",
-            "format": "--docker-container-logging {value}",
-            "help": "Configure gathering STDOUT and STDERR output from container."
-          },
-          {
-            "name": "FailedRequestTracing",
-            "type": "bool",
-            "format": "--failed-request-tracing",
-            "help": "Configure failed request tracing."
-          },
-          {
-            "name": "Level",
-            "type": "WebappLogConfigLevel",
-            "format": "--level {value}",
-            "help": "Logging level."
+            "format": "--custom-id {value}",
+            "help": "Custom identifier."
           },
           {
             "name": "Slot",
@@ -1071,135 +1747,11 @@
             "help": "The name of the slot. Default to the productions slot if not specified."
           },
           {
-            "name": "WebServerLogging",
-            "type": "WebappLogConfigDockerContainerLogging",
-            "format": "--web-server-logging {value}",
-            "help": "Configure Web server logging."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LogDownload",
-      "definiteArgument": "webapp log download",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "LogFile",
-            "type": "string",
-            "format": "--log-file {value}",
-            "help": "The downloaded zipped log file path."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LogShow",
-      "definiteArgument": "webapp log show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LogTail",
-      "definiteArgument": "webapp log tail",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Provider",
-            "type": "string",
-            "format": "--provider {value}",
-            "help": "By default all live traces configured by 'az webapp log config' will be shown, but you can scope to certain providers/folders, e.g. 'application', 'http', etc. For details, check out <a href=\"https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream\">https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream</a>."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TrafficRoutingClear",
-      "definiteArgument": "webapp traffic-routing clear",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TrafficRoutingSet",
-      "definiteArgument": "webapp traffic-routing set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Distribution",
+            "name": "Ids",
             "type": "List<string>",
-            "format": "--distribution {value}",
+            "format": "--ids {value}",
             "separator": " ",
-            "help": "Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot."
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
@@ -1212,38 +1764,19 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TrafficRoutingShow",
-      "definiteArgument": "webapp traffic-routing show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
-            "name": "ResourceGroup",
+            "name": "Subscription",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "Webjob",
-      "definiteArgument": "webapp webjob",
-      "settingsClass": {}
-    },
-    {
-      "postfix": "ConfigAppsettingsDelete",
-      "definiteArgument": "webapp config appsettings delete",
+      "postfix": "ConfigStorageAccountList",
+      "definiteArgument": "webapp config storage-account list",
       "settingsClass": {
         "properties": [
           {
@@ -1259,26 +1792,80 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "SettingNames",
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigStorageAccountUpdate",
+      "definiteArgument": "webapp config storage-account update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CustomId",
+            "type": "string",
+            "format": "--custom-id {value}",
+            "help": "Custom identifier."
+          },
+          {
+            "name": "AccessKey",
+            "type": "string",
+            "format": "--access-key {value}",
+            "help": "Storage account access key."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Storage account name."
+          },
+          {
+            "name": "MountPath",
+            "type": "string",
+            "format": "--mount-path {value}",
+            "help": "Path to mount storage volume within web app."
+          },
+          {
+            "name": "ShareName",
+            "type": "string",
+            "format": "--share-name {value}",
+            "help": "Share name (Azure Files) or container name (Azure Blob Storage)."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "SlotSetting",
+            "type": "string",
+            "format": "--slot-setting {value}",
+            "help": "Slot setting."
+          },
+          {
+            "name": "StorageType",
+            "type": "WebappConfigStorageAccountStorageType",
+            "format": "--storage-type {value}",
+            "help": "Storage type."
+          },
+          {
+            "name": "Ids",
             "type": "List<string>",
-            "format": "--setting-names {value}",
+            "format": "--ids {value}",
             "separator": " ",
-            "help": "Space-separated appsettings names."
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigAppsettingsList",
-      "definiteArgument": "webapp config appsettings list",
-      "settingsClass": {
-        "properties": [
           {
             "name": "Name",
             "type": "string",
@@ -1292,52 +1879,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Slot",
+            "name": "Subscription",
             "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigAppsettingsSet",
-      "definiteArgument": "webapp config appsettings set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Settings",
-            "type": "Dictionary<string, object>",
-            "format": "--settings {value}",
-            "itemFormat": "{key}={value}",
-            "separator": " ",
-            "help": "Space-separated appsettings in a format of &lt;name&gt;=&lt;value&gt;."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "SlotSettings",
-            "type": "Dictionary<string, object>",
-            "format": "--slot-settings {value}",
-            "itemFormat": "{key}={value}",
-            "separator": " ",
-            "help": "Space-separated slot appsettings in a format of &lt;name&gt;=&lt;value&gt;."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1394,6 +1939,12 @@
             "type": "WebappConfigBackupDbType",
             "format": "--db-type {value}",
             "help": "Type of database in the backup."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1420,6 +1971,12 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1494,6 +2051,12 @@
             "type": "WebappConfigBackupDbType",
             "format": "--db-type {value}",
             "help": "Type of database in the backup."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1520,6 +2083,12 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1594,15 +2163,46 @@
             "type": "WebappConfigBackupDbType",
             "format": "--db-type {value}",
             "help": "Type of database in the backup."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "ConfigConnectionStringDelete",
-      "definiteArgument": "webapp config connection-string delete",
+      "postfix": "ConfigSslBind",
+      "definiteArgument": "webapp config ssl bind",
       "settingsClass": {
         "properties": [
+          {
+            "name": "CertificateThumbprint",
+            "type": "string",
+            "format": "--certificate-thumbprint {value}",
+            "help": "The ssl cert thumbprint."
+          },
+          {
+            "name": "SslType",
+            "type": "WebappConfigSslBindSslType",
+            "format": "--ssl-type {value}",
+            "help": "The ssl cert type."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -1616,6 +2216,157 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslDelete",
+      "definiteArgument": "webapp config ssl delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CertificateThumbprint",
+            "type": "string",
+            "format": "--certificate-thumbprint {value}",
+            "help": "The ssl cert thumbprint."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslList",
+      "definiteArgument": "webapp config ssl list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslUnbind",
+      "definiteArgument": "webapp config ssl unbind",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CertificateThumbprint",
+            "type": "string",
+            "format": "--certificate-thumbprint {value}",
+            "help": "The ssl cert thumbprint."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslUpload",
+      "definiteArgument": "webapp config ssl upload",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CertificateFile",
+            "type": "string",
+            "format": "--certificate-file {value}",
+            "help": "The filepath for the .pfx file."
+          },
+          {
+            "name": "CertificatePassword",
+            "type": "string",
+            "format": "--certificate-password {value}",
+            "secret": true,
+            "help": "The ssl cert password."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigConnectionStringDelete",
+      "definiteArgument": "webapp config connection-string delete",
+      "settingsClass": {
+        "properties": [
+          {
             "name": "SettingNames",
             "type": "List<string>",
             "format": "--setting-names {value}",
@@ -1627,6 +2378,31 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1653,6 +2429,12 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1667,18 +2449,6 @@
             "type": "WebappConfigConnectionStringSetConnectionStringType",
             "format": "--connection-string-type {value}",
             "help": "Connection string type."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Settings",
@@ -1701,6 +2471,186 @@
             "itemFormat": "{key}={value}",
             "separator": " ",
             "help": "Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigHostnameAdd",
+      "definiteArgument": "webapp config hostname add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Hostname",
+            "type": "string",
+            "format": "--hostname {value}",
+            "help": "Hostname assigned to the site, such as custom domains."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "WebappName",
+            "type": "string",
+            "format": "--webapp-name {value}",
+            "help": "Webapp name. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigHostnameDelete",
+      "definiteArgument": "webapp config hostname delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Hostname",
+            "type": "string",
+            "format": "--hostname {value}",
+            "help": "Hostname assigned to the site, such as custom domains."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "WebappName",
+            "type": "string",
+            "format": "--webapp-name {value}",
+            "help": "Webapp name. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigHostnameGetExternalIp",
+      "definiteArgument": "webapp config hostname get-external-ip",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "WebappName",
+            "type": "string",
+            "format": "--webapp-name {value}",
+            "help": "Webapp name. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigHostnameList",
+      "definiteArgument": "webapp config hostname list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WebappName",
+            "type": "string",
+            "format": "--webapp-name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1711,6 +2661,19 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -1723,10 +2686,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Slot",
+            "name": "Subscription",
             "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1736,18 +2699,6 @@
       "definiteArgument": "webapp config container set",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
           {
             "name": "DockerCustomImageName",
             "type": "string",
@@ -1796,15 +2747,14 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigContainerShow",
-      "definiteArgument": "webapp config container show",
-      "settingsClass": {
-        "properties": [
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -1817,6 +2767,20 @@
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigContainerShow",
+      "definiteArgument": "webapp config container show",
+      "settingsClass": {
+        "properties": [
           {
             "name": "ShowMulticontainerConfig",
             "type": "string",
@@ -1828,130 +2792,13 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigHostnameAdd",
-      "definiteArgument": "webapp config hostname add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Hostname",
-            "type": "string",
-            "format": "--hostname {value}",
-            "help": "Hostname assigned to the site, such as custom domains."
           },
           {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WebappName",
-            "type": "string",
-            "format": "--webapp-name {value}",
-            "help": "Webapp name. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigHostnameDelete",
-      "definiteArgument": "webapp config hostname delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Hostname",
-            "type": "string",
-            "format": "--hostname {value}",
-            "help": "Hostname assigned to the site, such as custom domains."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WebappName",
-            "type": "string",
-            "format": "--webapp-name {value}",
-            "help": "Webapp name. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigHostnameGetExternalIp",
-      "definiteArgument": "webapp config hostname get-external-ip",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WebappName",
-            "type": "string",
-            "format": "--webapp-name {value}",
-            "help": "Webapp name. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigHostnameList",
-      "definiteArgument": "webapp config hostname list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WebappName",
-            "type": "string",
-            "format": "--webapp-name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigSslBind",
-      "definiteArgument": "webapp config ssl bind",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "CertificateThumbprint",
-            "type": "string",
-            "format": "--certificate-thumbprint {value}",
-            "help": "The ssl cert thumbprint."
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
@@ -1966,64 +2813,38 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "SslType",
-            "type": "WebappConfigSslBindSslType",
-            "format": "--ssl-type {value}",
-            "help": "The ssl cert type."
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigAppsettingsDelete",
+      "definiteArgument": "webapp config appsettings delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "SettingNames",
+            "type": "List<string>",
+            "format": "--setting-names {value}",
+            "separator": " ",
+            "help": "Space-separated appsettings names."
           },
           {
             "name": "Slot",
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigSslDelete",
-      "definiteArgument": "webapp config ssl delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "CertificateThumbprint",
-            "type": "string",
-            "format": "--certificate-thumbprint {value}",
-            "help": "The ssl cert thumbprint."
           },
           {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigSslList",
-      "definiteArgument": "webapp config ssl list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigSslUnbind",
-      "definiteArgument": "webapp config ssl unbind",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "CertificateThumbprint",
-            "type": "string",
-            "format": "--certificate-thumbprint {value}",
-            "help": "The ssl cert thumbprint."
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
@@ -2038,150 +2859,17 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Slot",
+            "name": "Subscription",
             "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "ConfigSslUpload",
-      "definiteArgument": "webapp config ssl upload",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "CertificateFile",
-            "type": "string",
-            "format": "--certificate-file {value}",
-            "help": "The filepath for the .pfx file."
-          },
-          {
-            "name": "CertificatePassword",
-            "type": "string",
-            "format": "--certificate-password {value}",
-            "secret": true,
-            "help": "The ssl cert password."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigStorageAccountAdd",
-      "definiteArgument": "webapp config storage-account add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccessKey",
-            "type": "string",
-            "format": "--access-key {value}",
-            "help": "Storage account access key."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Storage account name."
-          },
-          {
-            "name": "CustomId",
-            "type": "string",
-            "format": "--custom-id {value}",
-            "help": "Custom identifier."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ShareName",
-            "type": "string",
-            "format": "--share-name {value}",
-            "help": "Share name (Azure Files) or container name (Azure Blob Storage)."
-          },
-          {
-            "name": "StorageType",
-            "type": "WebappConfigStorageAccountStorageType",
-            "format": "--storage-type {value}",
-            "help": "Storage type."
-          },
-          {
-            "name": "MountPath",
-            "type": "string",
-            "format": "--mount-path {value}",
-            "help": "Path to mount storage volume within web app."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "SlotSetting",
-            "type": "string",
-            "format": "--slot-setting {value}",
-            "help": "Slot setting."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigStorageAccountDelete",
-      "definiteArgument": "webapp config storage-account delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "CustomId",
-            "type": "string",
-            "format": "--custom-id {value}",
-            "help": "Custom identifier."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigStorageAccountList",
-      "definiteArgument": "webapp config storage-account list",
+      "postfix": "ConfigAppsettingsList",
+      "definiteArgument": "webapp config appsettings list",
       "settingsClass": {
         "properties": [
           {
@@ -2201,20 +2889,49 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "ConfigStorageAccountUpdate",
-      "definiteArgument": "webapp config storage-account update",
+      "postfix": "ConfigAppsettingsSet",
+      "definiteArgument": "webapp config appsettings set",
       "settingsClass": {
         "properties": [
           {
-            "name": "CustomId",
+            "name": "Settings",
+            "type": "Dictionary<string, object>",
+            "format": "--settings {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
+            "help": "Space-separated appsettings in a format of &lt;name&gt;=&lt;value&gt;."
+          },
+          {
+            "name": "Slot",
             "type": "string",
-            "format": "--custom-id {value}",
-            "help": "Custom identifier."
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "SlotSettings",
+            "type": "Dictionary<string, object>",
+            "format": "--slot-settings {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
+            "help": "Space-separated slot appsettings in a format of &lt;name&gt;=&lt;value&gt;."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
@@ -2229,258 +2946,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "AccessKey",
+            "name": "Subscription",
             "type": "string",
-            "format": "--access-key {value}",
-            "help": "Storage account access key."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Storage account name."
-          },
-          {
-            "name": "MountPath",
-            "type": "string",
-            "format": "--mount-path {value}",
-            "help": "Path to mount storage volume within web app."
-          },
-          {
-            "name": "ShareName",
-            "type": "string",
-            "format": "--share-name {value}",
-            "help": "Share name (Azure Files) or container name (Azure Blob Storage)."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "SlotSetting",
-            "type": "string",
-            "format": "--slot-setting {value}",
-            "help": "Slot setting."
-          },
-          {
-            "name": "StorageType",
-            "type": "WebappConfigStorageAccountStorageType",
-            "format": "--storage-type {value}",
-            "help": "Storage type."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentContainerConfig",
-      "definiteArgument": "webapp deployment container config",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EnableCd",
-            "type": "bool",
-            "format": "--enable-cd",
-            "help": "Enable/disable continuous deployment."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentContainerShowCdUrl",
-      "definiteArgument": "webapp deployment container show-cd-url",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentSlotAutoSwap",
-      "definiteArgument": "webapp deployment slot auto-swap",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot."
-          },
-          {
-            "name": "AutoSwapSlot",
-            "type": "string",
-            "format": "--auto-swap-slot {value}",
-            "help": "Target slot to auto swap."
-          },
-          {
-            "name": "Disable",
-            "type": "string",
-            "format": "--disable {value}",
-            "help": "Disable auto swap."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentSlotCreate",
-      "definiteArgument": "webapp deployment slot create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot."
-          },
-          {
-            "name": "ConfigurationSource",
-            "type": "string",
-            "format": "--configuration-source {value}",
-            "help": "Source slot to clone configurations from. Use webapp's name to refer to the production slot."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentSlotDelete",
-      "definiteArgument": "webapp deployment slot delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentSlotList",
-      "definiteArgument": "webapp deployment slot list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentSlotSwap",
-      "definiteArgument": "webapp deployment slot swap",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot."
-          },
-          {
-            "name": "Action",
-            "type": "WebappDeploymentSlotSwapAction",
-            "format": "--action {value}",
-            "help": "Swap types. use 'preview' to apply target slot's settings on the source slot first; use 'swap' to complete it; use 'reset' to reset the swap."
-          },
-          {
-            "name": "TargetSlot",
-            "type": "string",
-            "format": "--target-slot {value}",
-            "help": "Target slot to swap, default to 'production'."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2491,22 +2960,10 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
             "name": "RepoUrl",
             "type": "string",
             "format": "--repo-url {value}",
             "help": "Repository url to pull the latest source from, e.g. <a href=\"https://github.com/foo/foo-web\">https://github.com/foo/foo-web</a>."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Branch",
@@ -2537,6 +2994,31 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "AppWorkingDir",
@@ -2614,6 +3096,19 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -2626,10 +3121,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Slot",
+            "name": "Subscription",
             "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2639,18 +3134,6 @@
       "definiteArgument": "webapp deployment source config-zip",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
           {
             "name": "Src",
             "type": "string",
@@ -2662,6 +3145,37 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Configurable timeout in seconds for checking the status of deployment."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2672,6 +3186,19 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -2684,10 +3211,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Slot",
+            "name": "Subscription",
             "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2698,6 +3225,19 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -2710,10 +3250,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Slot",
+            "name": "Subscription",
             "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2724,6 +3264,19 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -2736,10 +3289,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Slot",
+            "name": "Subscription",
             "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2754,6 +3307,224 @@
             "type": "string",
             "format": "--git-token {value}",
             "help": "Git access token required for auto sync."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSlotAutoSwap",
+      "definiteArgument": "webapp deployment slot auto-swap",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot."
+          },
+          {
+            "name": "AutoSwapSlot",
+            "type": "string",
+            "format": "--auto-swap-slot {value}",
+            "help": "Target slot to auto swap."
+          },
+          {
+            "name": "Disable",
+            "type": "string",
+            "format": "--disable {value}",
+            "help": "Disable auto swap."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSlotCreate",
+      "definiteArgument": "webapp deployment slot create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot."
+          },
+          {
+            "name": "ConfigurationSource",
+            "type": "string",
+            "format": "--configuration-source {value}",
+            "help": "Source slot to clone configurations from. Use webapp's name to refer to the production slot."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSlotDelete",
+      "definiteArgument": "webapp deployment slot delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSlotList",
+      "definiteArgument": "webapp deployment slot list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSlotSwap",
+      "definiteArgument": "webapp deployment slot swap",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot."
+          },
+          {
+            "name": "Action",
+            "type": "WebappDeploymentSlotSwapAction",
+            "format": "--action {value}",
+            "help": "Swap types. use 'preview' to apply target slot's settings on the source slot first; use 'swap' to complete it; use 'reset' to reset the swap."
+          },
+          {
+            "name": "TargetSlot",
+            "type": "string",
+            "format": "--target-slot {value}",
+            "help": "Target slot to swap, default to 'production'."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2775,6 +3546,12 @@
             "format": "--password {value}",
             "secret": true,
             "help": "Password, will prompt if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2782,39 +3559,41 @@
     {
       "postfix": "DeploymentUserShow",
       "definiteArgument": "webapp deployment user show",
-      "settingsClass": {}
-    },
-    {
-      "postfix": "WebjobContinuousList",
-      "definiteArgument": "webapp webjob continuous list",
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
+            "name": "Subscription",
             "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "WebjobContinuousRemove",
-      "definiteArgument": "webapp webjob continuous remove",
+      "postfix": "DeploymentContainerConfig",
+      "definiteArgument": "webapp deployment container config",
       "settingsClass": {
         "properties": [
+          {
+            "name": "EnableCd",
+            "type": "bool",
+            "format": "--enable-cd",
+            "help": "Enable/disable continuous deployment."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -2828,25 +3607,32 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "WebjobName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--webjob-name {value}",
-            "help": "The name of the webjob."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "WebjobContinuousStart",
-      "definiteArgument": "webapp webjob continuous start",
+      "postfix": "DeploymentContainerShowCdUrl",
+      "definiteArgument": "webapp deployment container show-cd-url",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -2860,48 +3646,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "WebjobName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--webjob-name {value}",
-            "help": "The name of the webjob."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "WebjobContinuousStop",
-      "definiteArgument": "webapp webjob continuous stop",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WebjobName",
-            "type": "string",
-            "format": "--webjob-name {value}",
-            "help": "The name of the webjob."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2928,6 +3676,12 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2938,6 +3692,25 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "WebjobName",
+            "type": "string",
+            "format": "--webjob-name {value}",
+            "help": "The name of the webjob."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -2950,16 +3723,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "WebjobName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--webjob-name {value}",
-            "help": "The name of the webjob."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2970,6 +3737,25 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "WebjobName",
+            "type": "string",
+            "format": "--webjob-name {value}",
+            "help": "The name of the webjob."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -2982,6 +3768,20 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "WebjobTriggeredRun",
+      "definiteArgument": "webapp webjob triggered run",
+      "settingsClass": {
+        "properties": [
+          {
             "name": "WebjobName",
             "type": "string",
             "format": "--webjob-name {value}",
@@ -2992,13 +3792,38 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "WebjobTriggeredRun",
-      "definiteArgument": "webapp webjob triggered run",
+      "postfix": "WebjobContinuousList",
+      "definiteArgument": "webapp webjob continuous list",
       "settingsClass": {
         "properties": [
           {
@@ -3014,6 +3839,26 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "WebjobContinuousRemove",
+      "definiteArgument": "webapp webjob continuous remove",
+      "settingsClass": {
+        "properties": [
+          {
             "name": "WebjobName",
             "type": "string",
             "format": "--webjob-name {value}",
@@ -3024,6 +3869,121 @@
             "type": "string",
             "format": "--slot {value}",
             "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "WebjobContinuousStart",
+      "definiteArgument": "webapp webjob continuous start",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "WebjobName",
+            "type": "string",
+            "format": "--webjob-name {value}",
+            "help": "The name of the webjob."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "WebjobContinuousStop",
+      "definiteArgument": "webapp webjob continuous stop",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "WebjobName",
+            "type": "string",
+            "format": "--webjob-name {value}",
+            "help": "The name of the webjob."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -3070,6 +4030,46 @@
       ]
     },
     {
+      "name": "WebappUpSku",
+      "values": [
+        "b1",
+        "b2",
+        "b3",
+        "d1",
+        "f1",
+        "free",
+        "p1",
+        "p1v2",
+        "p2",
+        "p2v2",
+        "p3",
+        "p3v2",
+        "pc2",
+        "pc3",
+        "pc4",
+        "s1",
+        "s2",
+        "s3",
+        "shared"
+      ]
+    },
+    {
+      "name": "WebappLogConfigDockerContainerLogging",
+      "values": [
+        "filesystem",
+        "off"
+      ]
+    },
+    {
+      "name": "WebappLogConfigLevel",
+      "values": [
+        "error",
+        "information",
+        "verbose",
+        "warning"
+      ]
+    },
+    {
       "name": "WebappAuthUpdateAction",
       "values": [
         "allowanonymous",
@@ -3097,19 +4097,10 @@
       ]
     },
     {
-      "name": "WebappLogConfigDockerContainerLogging",
+      "name": "WebappConfigStorageAccountStorageType",
       "values": [
-        "filesystem",
-        "off"
-      ]
-    },
-    {
-      "name": "WebappLogConfigLevel",
-      "values": [
-        "error",
-        "information",
-        "verbose",
-        "warning"
+        "azureblob",
+        "azurefiles"
       ]
     },
     {
@@ -3119,6 +4110,13 @@
         "mysql",
         "postgresql",
         "sqlazure"
+      ]
+    },
+    {
+      "name": "WebappConfigSslBindSslType",
+      "values": [
+        "ip",
+        "sni"
       ]
     },
     {
@@ -3135,20 +4133,6 @@
         "sqlazure",
         "sqlserver",
         "servicebus"
-      ]
-    },
-    {
-      "name": "WebappConfigSslBindSslType",
-      "values": [
-        "ip",
-        "sni"
-      ]
-    },
-    {
-      "name": "WebappConfigStorageAccountStorageType",
-      "values": [
-        "azureblob",
-        "azurefiles"
       ]
     },
     {

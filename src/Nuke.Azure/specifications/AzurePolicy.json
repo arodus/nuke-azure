@@ -6,12 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/policy/assignment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/policy/definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/policy/event.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/policy/set-definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/policy/state.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/policy/assignment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/policy/event.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/policy/state.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/policy/definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/policy/set-definition.yml"
   ],
   "name": "AzurePolicy",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest",
@@ -82,6 +82,12 @@
             "type": "PolicyAssignmentCreateSku",
             "format": "--sku {value}",
             "help": "Policy sku."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -108,6 +114,12 @@
             "type": "string",
             "format": "--scope {value}",
             "help": "Scope to which this policy assignment applies."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -134,6 +146,12 @@
             "type": "string",
             "format": "--scope {value}",
             "help": "Scope to which this policy assignment applies."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -160,6 +178,330 @@
             "type": "string",
             "format": "--scope {value}",
             "help": "Scope to which this policy assignment applies."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EventList",
+      "definiteArgument": "policy event list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Apply",
+            "type": "string",
+            "format": "--apply {value}",
+            "help": "Apply expression for aggregations using OData notation."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "Filter expression using OData notation."
+          },
+          {
+            "name": "From",
+            "type": "string",
+            "format": "--from {value}",
+            "help": "ISO 8601 formatted timestamp specifying the start time of the interval to query."
+          },
+          {
+            "name": "OrderBy",
+            "type": "string",
+            "format": "--order-by {value}",
+            "help": "Ordering expression using OData notation."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "Select expression using OData notation."
+          },
+          {
+            "name": "To",
+            "type": "string",
+            "format": "--to {value}",
+            "help": "ISO 8601 formatted timestamp specifying the end time of the interval to query."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "help": "Maximum number of records to return."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: Microsoft.Provider)."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: resA/myA/resB/myB)."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Resource type (Ex: resC)."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "Name of management group."
+          },
+          {
+            "name": "PolicyAssignment",
+            "type": "string",
+            "format": "--policy-assignment {value}",
+            "help": "Name of policy assignment."
+          },
+          {
+            "name": "PolicyDefinition",
+            "type": "string",
+            "format": "--policy-definition {value}",
+            "help": "Name of policy definition."
+          },
+          {
+            "name": "PolicySetDefinition",
+            "type": "string",
+            "format": "--policy-set-definition {value}",
+            "help": "Name of policy set definition."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StateList",
+      "definiteArgument": "policy state list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "All",
+            "type": "string",
+            "format": "--all {value}",
+            "help": "Within the specified time interval, get all policy states instead of the latest only."
+          },
+          {
+            "name": "Apply",
+            "type": "string",
+            "format": "--apply {value}",
+            "help": "Apply expression for aggregations using OData notation."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "Filter expression using OData notation."
+          },
+          {
+            "name": "From",
+            "type": "string",
+            "format": "--from {value}",
+            "help": "ISO 8601 formatted timestamp specifying the start time of the interval to query."
+          },
+          {
+            "name": "OrderBy",
+            "type": "string",
+            "format": "--order-by {value}",
+            "help": "Ordering expression using OData notation."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "Select expression using OData notation."
+          },
+          {
+            "name": "To",
+            "type": "string",
+            "format": "--to {value}",
+            "help": "ISO 8601 formatted timestamp specifying the end time of the interval to query."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "help": "Maximum number of records to return."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: Microsoft.Provider)."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: resA/myA/resB/myB)."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Resource type (Ex: resC)."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "Name of management group."
+          },
+          {
+            "name": "PolicyAssignment",
+            "type": "string",
+            "format": "--policy-assignment {value}",
+            "help": "Name of policy assignment."
+          },
+          {
+            "name": "PolicyDefinition",
+            "type": "string",
+            "format": "--policy-definition {value}",
+            "help": "Name of policy definition."
+          },
+          {
+            "name": "PolicySetDefinition",
+            "type": "string",
+            "format": "--policy-set-definition {value}",
+            "help": "Name of policy set definition."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StateSummarize",
+      "definiteArgument": "policy state summarize",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "Filter expression using OData notation."
+          },
+          {
+            "name": "From",
+            "type": "string",
+            "format": "--from {value}",
+            "help": "ISO 8601 formatted timestamp specifying the start time of the interval to query."
+          },
+          {
+            "name": "To",
+            "type": "string",
+            "format": "--to {value}",
+            "help": "ISO 8601 formatted timestamp specifying the end time of the interval to query."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "help": "Maximum number of records to return."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: Microsoft.Provider)."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: resA/myA/resB/myB)."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Resource type (Ex: resC)."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "Name of management group."
+          },
+          {
+            "name": "PolicyAssignment",
+            "type": "string",
+            "format": "--policy-assignment {value}",
+            "help": "Name of policy assignment."
+          },
+          {
+            "name": "PolicyDefinition",
+            "type": "string",
+            "format": "--policy-definition {value}",
+            "help": "Name of policy definition."
+          },
+          {
+            "name": "PolicySetDefinition",
+            "type": "string",
+            "format": "--policy-set-definition {value}",
+            "help": "Name of policy set definition."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -365,110 +707,6 @@
       }
     },
     {
-      "postfix": "EventList",
-      "definiteArgument": "policy event list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Apply",
-            "type": "string",
-            "format": "--apply {value}",
-            "help": "Apply expression for aggregations using OData notation."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "Filter expression using OData notation."
-          },
-          {
-            "name": "From",
-            "type": "string",
-            "format": "--from {value}",
-            "help": "ISO 8601 formatted timestamp specifying the start time of the interval to query."
-          },
-          {
-            "name": "OrderBy",
-            "type": "string",
-            "format": "--order-by {value}",
-            "help": "Ordering expression using OData notation."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "Select expression using OData notation."
-          },
-          {
-            "name": "To",
-            "type": "string",
-            "format": "--to {value}",
-            "help": "ISO 8601 formatted timestamp specifying the end time of the interval to query."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "help": "Maximum number of records to return."
-          },
-          {
-            "name": "Namespace",
-            "type": "string",
-            "format": "--namespace {value}",
-            "help": "Provider namespace (Ex: Microsoft.Provider)."
-          },
-          {
-            "name": "Parent",
-            "type": "string",
-            "format": "--parent {value}",
-            "help": "The parent path (Ex: resA/myA/resB/myB)."
-          },
-          {
-            "name": "Resource",
-            "type": "string",
-            "format": "--resource {value}",
-            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
-          },
-          {
-            "name": "ResourceType",
-            "type": "string",
-            "format": "--resource-type {value}",
-            "help": "Resource type (Ex: resC)."
-          },
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "help": "Name of management group."
-          },
-          {
-            "name": "PolicyAssignment",
-            "type": "string",
-            "format": "--policy-assignment {value}",
-            "help": "Name of policy assignment."
-          },
-          {
-            "name": "PolicyDefinition",
-            "type": "string",
-            "format": "--policy-definition {value}",
-            "help": "Name of policy definition."
-          },
-          {
-            "name": "PolicySetDefinition",
-            "type": "string",
-            "format": "--policy-set-definition {value}",
-            "help": "Name of policy set definition."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "SetDefinitionCreate",
       "definiteArgument": "policy set-definition create",
       "settingsClass": {
@@ -636,202 +874,6 @@
             "type": "string",
             "format": "--subscription {value}",
             "help": "The subscription id of the policy [set] definition."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StateList",
-      "definiteArgument": "policy state list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "All",
-            "type": "string",
-            "format": "--all {value}",
-            "help": "Within the specified time interval, get all policy states instead of the latest only."
-          },
-          {
-            "name": "Apply",
-            "type": "string",
-            "format": "--apply {value}",
-            "help": "Apply expression for aggregations using OData notation."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "Filter expression using OData notation."
-          },
-          {
-            "name": "From",
-            "type": "string",
-            "format": "--from {value}",
-            "help": "ISO 8601 formatted timestamp specifying the start time of the interval to query."
-          },
-          {
-            "name": "OrderBy",
-            "type": "string",
-            "format": "--order-by {value}",
-            "help": "Ordering expression using OData notation."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "Select expression using OData notation."
-          },
-          {
-            "name": "To",
-            "type": "string",
-            "format": "--to {value}",
-            "help": "ISO 8601 formatted timestamp specifying the end time of the interval to query."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "help": "Maximum number of records to return."
-          },
-          {
-            "name": "Namespace",
-            "type": "string",
-            "format": "--namespace {value}",
-            "help": "Provider namespace (Ex: Microsoft.Provider)."
-          },
-          {
-            "name": "Parent",
-            "type": "string",
-            "format": "--parent {value}",
-            "help": "The parent path (Ex: resA/myA/resB/myB)."
-          },
-          {
-            "name": "Resource",
-            "type": "string",
-            "format": "--resource {value}",
-            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
-          },
-          {
-            "name": "ResourceType",
-            "type": "string",
-            "format": "--resource-type {value}",
-            "help": "Resource type (Ex: resC)."
-          },
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "help": "Name of management group."
-          },
-          {
-            "name": "PolicyAssignment",
-            "type": "string",
-            "format": "--policy-assignment {value}",
-            "help": "Name of policy assignment."
-          },
-          {
-            "name": "PolicyDefinition",
-            "type": "string",
-            "format": "--policy-definition {value}",
-            "help": "Name of policy definition."
-          },
-          {
-            "name": "PolicySetDefinition",
-            "type": "string",
-            "format": "--policy-set-definition {value}",
-            "help": "Name of policy set definition."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StateSummarize",
-      "definiteArgument": "policy state summarize",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "Filter expression using OData notation."
-          },
-          {
-            "name": "From",
-            "type": "string",
-            "format": "--from {value}",
-            "help": "ISO 8601 formatted timestamp specifying the start time of the interval to query."
-          },
-          {
-            "name": "To",
-            "type": "string",
-            "format": "--to {value}",
-            "help": "ISO 8601 formatted timestamp specifying the end time of the interval to query."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "help": "Maximum number of records to return."
-          },
-          {
-            "name": "Namespace",
-            "type": "string",
-            "format": "--namespace {value}",
-            "help": "Provider namespace (Ex: Microsoft.Provider)."
-          },
-          {
-            "name": "Parent",
-            "type": "string",
-            "format": "--parent {value}",
-            "help": "The parent path (Ex: resA/myA/resB/myB)."
-          },
-          {
-            "name": "Resource",
-            "type": "string",
-            "format": "--resource {value}",
-            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
-          },
-          {
-            "name": "ResourceType",
-            "type": "string",
-            "format": "--resource-type {value}",
-            "help": "Resource type (Ex: resC)."
-          },
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "help": "Name of management group."
-          },
-          {
-            "name": "PolicyAssignment",
-            "type": "string",
-            "format": "--policy-assignment {value}",
-            "help": "Name of policy assignment."
-          },
-          {
-            "name": "PolicyDefinition",
-            "type": "string",
-            "format": "--policy-definition {value}",
-            "help": "Name of policy definition."
-          },
-          {
-            "name": "PolicySetDefinition",
-            "type": "string",
-            "format": "--policy-set-definition {value}",
-            "help": "Name of policy set definition."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           }
         ]
       }

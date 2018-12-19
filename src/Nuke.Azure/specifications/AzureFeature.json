@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/feature.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/f40bd06/latest/docs-ref-autogen/feature.yml"
   ],
   "name": "AzureFeature",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/feature?view=azure-cli-latest",
@@ -23,6 +23,12 @@
             "type": "string",
             "format": "--namespace {value}",
             "help": "The resource namespace, aka 'provider'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -43,6 +49,12 @@
             "type": "string",
             "format": "--namespace {value}",
             "help": "The resource namespace, aka 'provider'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -63,6 +75,12 @@
             "type": "string",
             "format": "--namespace {value}",
             "help": "The resource namespace, aka 'provider'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
